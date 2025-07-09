@@ -1,0 +1,15 @@
+# description : Read metadata from Python packages
+# depends : python-zipp
+
+name=python-importlib-metadata
+version=8.7.0
+release=1
+
+source="https://github.com/python/importlib_metadata/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

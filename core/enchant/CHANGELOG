@@ -1,0 +1,259 @@
+Date: Wed 29 Sep 2021 07:25:11 AM EDT
+
+enchant
+Version=2.3.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.2.11 to version 2.3.1
+
+----------------------------------------------------------------
+
+Date: Sun 05 Dec 2021 10:28:44 AM EST
+
+Version=2.3.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.1 to version 2.3.2
+
+----------------------------------------------------------------
+
+Date: Sat 16 Apr 2022 04:14:19 PM EDT
+
+Version=2.3.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.2 to version 2.3.3
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:06 PM EST
+
+Version=2.3.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.3 to version 2.3.4
+
+----------------------------------------------------------------
+
+Date: Tue 23 May 2023 08:25:58 AM EDT
+
+Version=2.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.4 to version 2.4.0
+
+----------------------------------------------------------------
+
+Date: Thu 25 May 2023 05:23:59 AM EDT
+
+Version=2.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.0 to version 2.5.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:30 AM EDT
+
+Version=2.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.0 to version 2.6.1
+
+----------------------------------------------------------------
+
+Date: Mon 30 Oct 2023 07:50:31 PM EDT
+
+Version=2.6.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.1 to version 2.6.2
+
+----------------------------------------------------------------
+
+Date: Sat 02 Dec 2023 09:19:02 PM EST
+
+Version=2.6.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.2 to version 2.6.3
+
+----------------------------------------------------------------
+
+Date: Tue 12 Dec 2023 03:57:32 AM EST
+
+Version=2.6.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.3 to version 2.6.4
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:34 AM EST
+
+Version=2.6.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.4 to version 2.6.5
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:03 AM EST
+
+Version=2.6.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.5 to version 2.6.6
+
+----------------------------------------------------------------
+
+Date: Mon 12 Feb 2024 01:33:51 PM EST
+
+Version=2.6.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.6 to version 2.6.7
+
+----------------------------------------------------------------
+
+Date: Mon 25 Mar 2024 10:23:47 AM EDT
+
+Version=2.6.8
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.7 to version 2.6.8
+
+----------------------------------------------------------------
+
+Date: Thu 11 Apr 2024 01:21:28 PM EDT
+
+Version=2.6.9
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.8 to version 2.6.9
+
+----------------------------------------------------------------
+
+Date: Tue 23 Apr 2024 08:33:25 AM EDT
+
+Version=2.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.9 to version 2.7.0
+
+----------------------------------------------------------------
+
+Date: Wed 08 May 2024 01:16:17 PM EDT
+
+Version=2.7.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.0 to version 2.7.3
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jun 2024 05:48:28 PM EDT
+
+Version=2.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.3 to version 2.8.0
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=2.8.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.0 to version 2.8.1
+
+----------------------------------------------------------------
+
+Date: Tue 20 Aug 2024 12:22:53 PM EDT
+
+Version=2.8.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.1 to version 2.8.2
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:21 AM EDT
+
+Version=2.8.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.2 to version 2.8.4
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:22 PM EDT
+
+Version=2.8.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.4 to version 2.8.5
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:26 PM EDT
+
+Version=2.8.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.5 to version 2.8.6
+
+----------------------------------------------------------------
+
+Date: Tue 17 Jun 2025 08:42:52 AM EDT
+
+Version=2.8.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.6 to version 2.8.7
+
+----------------------------------------------------------------
+
+Date: Wed 18 Jun 2025 11:22:01 AM EDT
+
+Version=2.8.8
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.7 to version 2.8.8
+
+----------------------------------------------------------------
+
+Date: Mon 23 Jun 2025 01:25:43 PM EDT
+
+Version=2.8.10
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.8 to version 2.8.10

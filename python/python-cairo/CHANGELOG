@@ -1,0 +1,99 @@
+Date: Wed 29 Sep 2021 07:38:50 AM EDT
+
+python-cairo
+Version=1.20.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.18.2 to version 1.20.1
+
+----------------------------------------------------------------
+
+Date: Wed 09 Mar 2022 07:23:40 AM EST
+
+Version=1.21.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.20.1 to version 1.21.0
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=1.22.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.21.0 to version 1.22.0
+
+----------------------------------------------------------------
+
+Date: Tue 29 Nov 2022 07:42:35 AM EST
+
+Version=1.23.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.0 to version 1.23.0
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:45 PM EDT
+
+Version=1.24.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.23.0 to version 1.24.0
+
+----------------------------------------------------------------
+
+Date: Thu 28 Sep 2023 07:27:31 AM EDT
+
+Version=1.25.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.24.0 to version 1.25.0
+
+----------------------------------------------------------------
+
+Date: Sat 21 Oct 2023 07:25:49 PM EDT
+
+Version=1.25.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.0 to version 1.25.1
+
+----------------------------------------------------------------
+
+Date: Tue 13 Feb 2024 10:04:21 AM EST
+
+Version=1.26.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.1 to version 1.26.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=1.27.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.0 to version 1.27.0
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:55 PM EDT
+
+Version=1.28.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.27.0 to version 1.28.0

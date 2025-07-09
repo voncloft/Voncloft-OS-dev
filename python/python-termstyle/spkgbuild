@@ -1,0 +1,15 @@
+# description : Console colouring for python
+# depends : python-setuptools
+
+name=python-termstyle
+version=0.1.11
+release=7
+
+source="https://github.com/timbertson/termstyle/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

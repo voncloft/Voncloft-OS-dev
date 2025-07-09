@@ -1,0 +1,15 @@
+# description : Provides an uniform layer to support PyQt5, PyQt4 and PySide with a single codebase
+# depends : python
+
+name=python-qtpy
+version=2.4.3
+release=5
+
+source="https://github.com/spyder-ide/qtpy/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

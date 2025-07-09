@@ -1,0 +1,39 @@
+Date: Wed 13 Apr 2022 04:34:17 PM EDT
+
+iw
+Version=5.16
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 5.8 to version 5.16
+
+----------------------------------------------------------------
+
+Date: Fri 27 May 2022 05:57:11 PM EDT
+
+Version=5.19
+Release=1
+
+Synopsis:
+Upgraded from version 5.16 to version 5.19
+
+----------------------------------------------------------------
+
+Date: Mon 25 Dec 2023 07:51:23 AM EST
+
+Version=6.7
+Release=1
+
+Synopsis:
+Upgraded from version 5.19 to version 6.7
+
+----------------------------------------------------------------
+
+Date: Mon 20 May 2024 12:36:23 PM EDT
+
+Version=6.9
+Release=1
+
+Synopsis:
+Upgraded from version 6.7 to version 6.9

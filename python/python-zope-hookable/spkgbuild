@@ -1,0 +1,15 @@
+# description : Represents the core of the Zope hookable Architecture
+# depends : python-setuptools
+
+name=python-zope-hookable
+version=7.0
+release=3
+
+source="https://github.com/zopefoundation/zope.hookable/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

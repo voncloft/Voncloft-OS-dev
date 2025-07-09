@@ -1,0 +1,15 @@
+# description : Comprehensive HTTP client library, supporting many features
+# depends : python make-ca
+
+name=python-httplib2
+version=0.22.0
+release=4
+
+source="https://github.com/httplib2/httplib2/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,15 @@
+# description : Python with the SmartyPants
+# depends : python
+
+name=python-smartypants
+version=2.0.2
+release=7
+
+source="https://github.com/leohemsted/smartypants.py/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

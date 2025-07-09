@@ -1,0 +1,49 @@
+Date: Wed 13 Apr 2022 04:34:18 PM EDT
+
+os-prober
+Version=1.79
+Release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.77 to version 1.79
+
+----------------------------------------------------------------
+
+Date: Fri 27 May 2022 05:57:11 PM EDT
+
+Version=1.80
+Release=2
+
+Synopsis:
+Upgraded from version 1.79 to version 1.80
+
+----------------------------------------------------------------
+
+Date: Tue 19 Jul 2022 05:25:16 AM EDT
+
+Version=1.81
+Release=2
+
+Synopsis:
+Upgraded from version 1.80 to version 1.81
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=1.82
+Release=2
+
+Synopsis:
+Upgraded from version 1.81 to version 1.82
+
+----------------------------------------------------------------
+
+Date: Wed 04 Sep 2024 10:14:48 AM EDT
+
+Version=1.83
+Release=2
+
+Synopsis:
+Upgraded from version 1.82 to version 1.83

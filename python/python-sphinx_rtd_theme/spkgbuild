@@ -1,0 +1,15 @@
+# description : Read the Docs theme for Sphinx
+# depends : python-sphinx
+
+name=python-sphinx_rtd_theme
+version=3.0.2
+release=2
+
+source="https://github.com/readthedocs/sphinx_rtd_theme/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

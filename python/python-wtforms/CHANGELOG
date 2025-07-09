@@ -1,0 +1,109 @@
+Date: Mon 12 Jul 2021 10:47:57 AM EDT
+
+name=python-wtforms
+version=3.0.0
+release=10
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.2.1 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:38:40 PM EDT
+
+version=3.0.0
+release=10
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:19 AM EDT
+
+version=3.0.0
+release=10
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:08 EDT 2021
+
+version=3.0.0
+release=10
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:00 EDT 2021
+
+version=3.0.0
+release=10
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:20:56 EDT 2021
+
+version=3.0.0
+release=10
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 23 Dec 2021 04:42:54 PM EST
+
+Version=3.0.1
+Release=10
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Thu 12 Oct 2023 10:15:33 AM EDT
+
+Version=3.1.0
+Release=10
+
+Synopsis:
+Upgraded from version 3.0.1 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 04 Nov 2023 05:20:30 PM EDT
+
+Version=3.1.1
+Release=10
+
+Synopsis:
+Upgraded from version 3.1.0 to version 3.1.1
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:38 AM EST
+
+Version=3.1.2
+Release=10
+
+Synopsis:
+Upgraded from version 3.1.1 to version 3.1.2
+
+----------------------------------------------------------------
+
+Date: Tue 22 Oct 2024 07:52:57 AM EDT
+
+Version=3.2.1
+Release=10
+
+Synopsis:
+Upgraded from version 3.1.2 to version 3.2.1

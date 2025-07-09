@@ -1,0 +1,7 @@
+liblinear-243-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/linear.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/liblinear.so -> liblinear.so.4
+-rwxr-xr-x root/root    usr/lib/liblinear.so.4

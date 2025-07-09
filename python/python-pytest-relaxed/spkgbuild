@@ -1,0 +1,15 @@
+# description : Relaxed test discovery for pytest
+# depends : python-pytest python-decorator python-six
+
+name=python-pytest-relaxed
+version=2.0.2
+release=5
+
+source="https://github.com/bitprophet/pytest-relaxed/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

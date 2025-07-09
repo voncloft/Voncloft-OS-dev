@@ -1,0 +1,15 @@
+# description : Easily create navigation for Flask applications
+# depends : python-flask python-visitor python-dominate
+
+name=python-flask-nav
+version=0.6
+release=4
+
+source="https://github.com/mbr/flask-nav/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

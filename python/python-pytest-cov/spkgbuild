@@ -1,0 +1,15 @@
+# description : py.test plugin for coverage reporting with support for both centralised and distributed testing, including subprocesses and multiprocessing
+  # depends : python-pytest python-coverage
+
+name=python-pytest-cov
+version=6.2.1
+release=1
+
+source="https://github.com/pytest-dev/pytest-cov/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

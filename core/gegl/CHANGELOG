@@ -1,0 +1,159 @@
+Date: Mon May 10 04:03:55 EDT 2021
+
+name=gegl
+version=libarchive
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.4.30 to version libarchive
+
+----------------------------------------------------------------
+
+Date: Sun Sep  5 15:14:29 EDT 2021
+
+version=0.4.32
+release=1
+
+Synopsis:
+Upgraded from version 0.4.30 to version 0.4.32
+
+----------------------------------------------------------------
+
+Date: Mon 20 Dec 2021 04:22:12 AM EST
+
+Version=0.4.34
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.32 to version 0.4.34
+
+----------------------------------------------------------------
+
+Date: Wed 23 Feb 2022 06:59:43 AM EST
+
+Version=0.4.36
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.34 to version 0.4.36
+
+----------------------------------------------------------------
+
+Date: Sat 16 Jul 2022 04:58:47 PM EDT
+
+Version=0.4.38
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.36 to version 0.4.38
+
+----------------------------------------------------------------
+
+Date: Mon 14 Nov 2022 08:48:16 AM EST
+
+Version=0.4.40
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.38 to version 0.4.40
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:07 PM EST
+
+Version=0.4.42
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.40 to version 0.4.42
+
+----------------------------------------------------------------
+
+Date: Mon 27 Mar 2023 09:57:27 AM EDT
+
+Version=0.4.44
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.42 to version 0.4.44
+
+----------------------------------------------------------------
+
+Date: Tue 27 Jun 2023 08:54:05 PM EDT
+
+Version=0.4.46
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.44 to version 0.4.46
+
+----------------------------------------------------------------
+
+Date: Tue 13 Feb 2024 10:04:21 AM EST
+
+Version=0.4.48
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.46 to version 0.4.48
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:37 PM EST
+
+Version=0.4.50
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.48 to version 0.4.50
+
+----------------------------------------------------------------
+
+Date: Sun 29 Dec 2024 11:57:30 AM EST
+
+Version=0.4.52
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.50 to version 0.4.52
+
+----------------------------------------------------------------
+
+Date: Mon 10 Feb 2025 01:09:17 PM EST
+
+Version=0.4.54
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.52 to version 0.4.54
+
+----------------------------------------------------------------
+
+Date: Tue 18 Mar 2025 09:57:44 AM EDT
+
+Version=0.4.56
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.54 to version 0.4.56
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:44 AM EDT
+
+Version=0.4.58
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.56 to version 0.4.58
+
+----------------------------------------------------------------
+
+Date: Wed 14 May 2025 05:33:06 AM EDT
+
+Version=0.4.62
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.58 to version 0.4.62

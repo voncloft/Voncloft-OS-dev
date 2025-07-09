@@ -1,0 +1,85 @@
+libmnl-1.0.5-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/libmnl/
+-rw-r--r-- root/root    usr/include/libmnl/libmnl.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/libmnl.so -> libmnl.so.0.2.0
+lrwxrwxrwx root/root    usr/lib/libmnl.so.0 -> libmnl.so.0.2.0
+-rwxr-xr-x root/root    usr/lib/libmnl.so.0.2.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libmnl.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-rw-r--r-- root/root    usr/share/man/man3/LIST_ENTRY.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/bytes.3.gz -> LIST_ENTRY.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_payload.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_payload_len.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_str.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_type.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_u16.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_u32.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_u64.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_get_u8.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_nest_cancel.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_nest_end.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_nest_start.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_nest_start_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_next.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_ok.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_parse.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_parse_nested.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_parse_payload.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_str.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_str_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_strz.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_strz_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u16.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u16_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u32.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u32_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u64.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u64_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u8.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_put_u8_check.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_type_valid.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_validate.3.gz -> mnl_attr_get_len.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_attr_validate2.3.gz -> mnl_attr_get_len.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/mnl_cb_run.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_cb_run2.3.gz -> mnl_cb_run.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/mnl_nlmsg_batch_current.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_batch_head.3.gz -> mnl_nlmsg_batch_current.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_batch_is_empty.3.gz -> mnl_nlmsg_batch_current.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_batch_next.3.gz -> mnl_nlmsg_batch_current.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_batch_reset.3.gz -> mnl_nlmsg_batch_current.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_batch_size.3.gz -> mnl_nlmsg_batch_current.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_batch_start.3.gz -> mnl_nlmsg_batch_current.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_batch_stop.3.gz -> mnl_nlmsg_batch_current.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_get_payload.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_get_payload_len.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_get_payload_offset.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_get_payload_tail.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_next.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_ok.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_portid_ok.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_put_extra_header.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_put_header.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_seq_ok.3.gz -> mnl_nlmsg_fprintf.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_nlmsg_size.3.gz -> mnl_nlmsg_fprintf.3.gz
+-rw-r--r-- root/root    usr/share/man/man3/mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_close.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_fdopen.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_get_fd.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_get_portid.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_getsockopt.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_open.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_open2.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_recvfrom.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_sendto.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/mnl_socket_setsockopt.3.gz -> mnl_socket_bind.3.gz
+lrwxrwxrwx root/root    usr/share/man/man3/pkts.3.gz -> LIST_ENTRY.3.gz

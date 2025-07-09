@@ -1,0 +1,108 @@
+Date: Wed 21 Apr 2021 07:34:27 AM EDT
+
+name=ruby-tins
+version=1.26.0
+release=2
+
+Synopsis:
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 18 Aug 2021 08:12:12 PM EDT
+
+version=1.29.1
+release=2
+
+Synopsis:
+Upgraded from version 1.26.0 to version 1.29.1
+
+----------------------------------------------------------------
+
+Date: Mon 27 Dec 2021 07:42:38 AM EST
+
+Version=1.30.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.29.1 to version 1.30.0
+
+----------------------------------------------------------------
+
+Date: Sat 08 Jan 2022 03:41:23 PM EST
+
+Version=1.31.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.30.0 to version 1.31.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 May 2022 09:14:00 PM EDT
+
+Version=1.31.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.31.0 to version 1.31.1
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=1.32.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.31.1 to version 1.32.0
+
+----------------------------------------------------------------
+
+Date: Tue 22 Nov 2022 07:01:46 AM EST
+
+Version=1.32.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.32.0 to version 1.32.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=1.36.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.32.1 to version 1.36.1
+
+----------------------------------------------------------------
+
+Date: Tue 22 Oct 2024 07:52:58 AM EDT
+
+Version=1.37.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.36.1 to version 1.37.0
+
+----------------------------------------------------------------
+
+Date: Sun 15 Dec 2024 11:48:24 AM EST
+
+Version=1.37.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.37.0 to version 1.37.1
+
+----------------------------------------------------------------
+
+Date: Wed 08 Jan 2025 10:16:23 AM EST
+
+Version=1.38.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.37.1 to version 1.38.0

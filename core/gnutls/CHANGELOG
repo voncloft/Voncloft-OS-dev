@@ -1,0 +1,108 @@
+Date: Wed 29 Sep 2021 07:25:39 AM EDT
+
+gnutls
+Version=3.6.16
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.6.15 to version 3.6.16
+____________________________________________________________________
+
+Date: Thu 09 Dec 2021 08:49:52 AM EST
+
+Version=3.7.2
+Release=1
+
+Synopsis:
+upgraded to 3.7.2
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jan 2022 10:04:26 AM EST
+
+Version=3.7.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.2 to version 3.7.3
+
+----------------------------------------------------------------
+
+Date: Fri 18 Mar 2022 05:25:46 AM EDT
+
+Version=3.7.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.3 to version 3.7.4
+
+----------------------------------------------------------------
+
+Date: Thu 12 May 2022 04:53:34 PM EDT
+
+Version=3.7.5
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.4 to version 3.7.5
+
+----------------------------------------------------------------
+
+Date: Fri 27 May 2022 05:57:11 PM EDT
+
+Version=3.7.6
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.5 to version 3.7.6
+
+----------------------------------------------------------------
+
+Date: Fri 29 Jul 2022 09:49:03 PM EDT
+
+Version=3.7.7
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.6 to version 3.7.7
+
+----------------------------------------------------------------
+
+Date: Wed 28 Sep 2022 05:30:55 PM EDT
+
+Version=3.7.8
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.7 to version 3.7.8
+
+----------------------------------------------------------------
+
+Date: Sun 12 Feb 2023 06:27:12 AM EST
+
+Version=3.7.9
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.8 to version 3.7.9
+
+----------------------------------------------------------------
+
+Date: Sun 06 Aug 2023 02:07:01 PM EDT
+
+Version=3.7.10
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.9 to version 3.7.10
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jun 2024 05:48:28 PM EDT
+
+Version=3.7.11
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.10 to version 3.7.11

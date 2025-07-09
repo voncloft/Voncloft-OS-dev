@@ -1,0 +1,15 @@
+# description : Small footprint and configurable Ethernet core
+# depends : python-migen python-litex
+
+name=python-liteeth
+version=2025.04
+release=1
+
+source="https://github.com/enjoy-digital/liteeth/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

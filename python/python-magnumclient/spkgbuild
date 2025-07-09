@@ -1,0 +1,15 @@
+# description : Client library for Magnum API
+# depends : python-pbr python-babel python-keystoneauth1 python-stevedore python-requests
+
+name=python-magnumclient
+version=4.8.1
+release=1
+
+source="https://github.com/openstack/python-magnumclient/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,15 @@
+# description : Python ASN.1 library with a focus on performance and a pythonic API
+# depends : python
+
+name=python-asn1crypto
+version=1.5.1
+release=3
+
+source="https://github.com/wbond/asn1crypto/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

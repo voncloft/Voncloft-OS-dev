@@ -1,0 +1,26 @@
+# description	: Modern toolset used for generating Makefiles
+# depends	: curl libarchive libuv
+
+name=cmake
+version=4.0.3
+release=1
+source="https://www.cmake.org/files/v${version%.*}/$name-$version.tar.gz"
+options="!checksum"
+build() {
+	cd $name-$version
+
+	sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
+
+	./bootstrap --prefix=/usr        \
+            --system-libs        \
+            --mandir=/share/man  \
+            --no-system-jsoncpp  \
+            --no-system-cppdap   \
+            --no-system-librhash \
+            --docdir=/share/doc/cmake-$version \
+            --system-libs
+            
+	make
+	make DESTDIR=$PKG install
+
+}

@@ -1,0 +1,15 @@
+# description : General parsing module for Python
+  # depends : python
+
+name=python-pyparsing
+version=3.2.3
+release=3
+
+source="https://github.com/pyparsing/pyparsing/archive/refs/tags/pyparsing_$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

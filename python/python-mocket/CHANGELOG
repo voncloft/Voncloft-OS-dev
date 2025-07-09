@@ -1,0 +1,309 @@
+Date: Sun 11 Jul 2021 01:12:55 PM EDT
+
+name=python-mocket
+version=3.9.42
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.9.40 to version 3.9.42
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:29:59 PM EDT
+
+version=3.9.42
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:43 AM EDT
+
+version=3.9.42
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:12:06 EDT 2021
+
+version=3.9.42
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:15:00 EDT 2021
+
+version=3.9.42
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:34 EDT 2021
+
+version=3.9.42
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue Aug 31 15:19:01 EDT 2021
+
+version=3.9.44
+release=1
+
+Synopsis:
+Upgraded from version 3.9.42 to version 3.9.44
+
+----------------------------------------------------------------
+
+Date: Thu 30 Sep 2021 05:45:03 AM EDT
+
+Version=3.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.9.44 to version 3.10.0
+
+----------------------------------------------------------------
+
+Date: Fri 26 Nov 2021 08:53:25 AM EST
+
+Version=3.10.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.0 to version 3.10.1
+
+----------------------------------------------------------------
+
+Date: Thu 02 Dec 2021 05:28:48 PM EST
+
+Version=3.10.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.1 to version 3.10.2
+
+----------------------------------------------------------------
+
+Date: Sat 08 Jan 2022 03:41:23 PM EST
+
+Version=3.10.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.2 to version 3.10.3
+
+----------------------------------------------------------------
+
+Date: Mon 10 Jan 2022 06:35:42 AM EST
+
+Version=3.10.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.3 to version 3.10.4
+
+----------------------------------------------------------------
+
+Date: Mon 25 Apr 2022 07:41:35 PM EDT
+
+Version=3.10.5
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.4 to version 3.10.5
+
+----------------------------------------------------------------
+
+Date: Fri 20 May 2022 06:33:19 PM EDT
+
+Version=3.10.6
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.5 to version 3.10.6
+
+----------------------------------------------------------------
+
+Date: Wed 17 Aug 2022 10:17:47 AM EDT
+
+Version=3.10.7
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.6 to version 3.10.7
+
+----------------------------------------------------------------
+
+Date: Tue 23 Aug 2022 09:59:32 PM EDT
+
+Version=3.10.8
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.7 to version 3.10.8
+
+----------------------------------------------------------------
+
+Date: Mon 05 Dec 2022 05:36:33 AM EST
+
+Version=3.10.9
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.8 to version 3.10.9
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:08 PM EST
+
+Version=3.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.9 to version 3.11.0
+
+----------------------------------------------------------------
+
+Date: Sat 13 May 2023 04:05:06 PM EDT
+
+Version=3.11.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.11.0 to version 3.11.1
+
+----------------------------------------------------------------
+
+Date: Mon 30 Oct 2023 07:50:37 PM EDT
+
+Version=3.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.11.1 to version 3.12.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Dec 2023 10:38:14 AM EST
+
+Version=3.12.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.12.0 to version 3.12.2
+
+----------------------------------------------------------------
+
+Date: Mon 22 Jan 2024 05:56:49 PM EST
+
+Version=3.12.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.12.2 to version 3.12.3
+
+----------------------------------------------------------------
+
+Date: Wed 07 Feb 2024 06:35:28 AM EST
+
+Version=3.12.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.12.3 to version 3.12.4
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=3.13.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.12.4 to version 3.13.0
+
+----------------------------------------------------------------
+
+Date: Tue 22 Oct 2024 07:52:57 AM EDT
+
+Version=3.13.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.13.0 to version 3.13.2
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:05 AM EST
+
+Version=3.13.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.13.2 to version 3.13.3
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:46 AM EDT
+
+Version=3.13.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.13.3 to version 3.13.4
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:22 AM EDT
+
+Version=3.13.5
+Release=1
+
+Synopsis:
+Upgraded from version 3.13.4 to version 3.13.5
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:24 PM EDT
+
+Version=3.13.7
+Release=1
+
+Synopsis:
+Upgraded from version 3.13.5 to version 3.13.7
+
+----------------------------------------------------------------
+
+Date: Wed 11 Jun 2025 10:13:59 AM EDT
+
+Version=3.13.8
+Release=1
+
+Synopsis:
+Upgraded from version 3.13.7 to version 3.13.8
+
+----------------------------------------------------------------
+
+Date: Mon 16 Jun 2025 10:49:51 AM EDT
+
+Version=3.13.9
+Release=1
+
+Synopsis:
+Upgraded from version 3.13.8 to version 3.13.9

@@ -1,0 +1,15 @@
+# description : Asynchronous Python 3 Bindings for Qt5
+# depends : python qt5-base qt5-declarative qt5-svg
+
+name=python-pyotherside
+version=1.6.2
+release=3
+
+source="https://github.com/thp/pyotherside/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

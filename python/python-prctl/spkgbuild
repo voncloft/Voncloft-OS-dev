@@ -1,0 +1,15 @@
+# description : Pythonic interface to the linux prctl syscall
+# depends : python libcap
+
+name=python-prctl
+version=1.8.1
+release=1
+
+source="https://github.com/seveas/python-prctl/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

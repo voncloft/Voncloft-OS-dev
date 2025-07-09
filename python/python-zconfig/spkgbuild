@@ -1,0 +1,14 @@
+# description : Structured Configuration Library
+
+name=python-zconfig
+version=4.2
+release=5
+
+source="https://github.com/zopefoundation/ZConfig/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

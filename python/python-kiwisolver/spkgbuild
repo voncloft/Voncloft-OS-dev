@@ -1,0 +1,15 @@
+# description : A fast implementation of the Cassowary constraint solver
+# depends : python
+
+name=python-kiwisolver
+version=1.4.8
+release=3
+
+source="https://github.com/nucleic/kiwi/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

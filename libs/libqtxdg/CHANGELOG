@@ -1,0 +1,89 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libqtxdg
+Version=3.8.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.5.0 to version 3.8.0
+
+----------------------------------------------------------------
+
+Date: Sat 16 Apr 2022 04:14:19 PM EDT
+
+Version=3.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.8.0 to version 3.9.0
+
+----------------------------------------------------------------
+
+Date: Sun 08 May 2022 07:45:35 PM EDT
+
+Version=3.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.9.0 to version 3.9.1
+
+----------------------------------------------------------------
+
+Date: Sat 05 Nov 2022 03:56:35 PM EDT
+
+Version=3.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.9.1 to version 3.10.0
+
+----------------------------------------------------------------
+
+Date: Sat 15 Apr 2023 08:07:09 PM EDT
+
+Version=3.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.0 to version 3.11.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 09:39:10 AM EST
+
+Version=3.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.11.0 to version 3.12.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=4.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.12.0 to version 4.0.1
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:42 PM EST
+
+Version=4.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.1 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:54 PM EDT
+
+Version=4.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.2.0

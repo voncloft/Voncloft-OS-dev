@@ -1,0 +1,79 @@
+Date: Sat 03 Sep 2022 11:13:50 AM EDT
+
+cracklib
+Version=2.9.8
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.9.7 to version 2.9.8
+
+----------------------------------------------------------------
+
+Date: Tue 07 Mar 2023 08:50:40 AM EST
+
+Version=2.9.9
+Release=1
+
+Synopsis:
+Upgraded from version 2.9.8 to version 2.9.9
+
+----------------------------------------------------------------
+
+Date: Fri 17 Mar 2023 04:11:34 PM EDT
+
+Version=2.9.10
+Release=1
+
+Synopsis:
+Upgraded from version 2.9.9 to version 2.9.10
+
+----------------------------------------------------------------
+
+Date: Tue 04 Apr 2023 03:49:38 PM EDT
+
+Version=2.9.11
+Release=1
+
+Synopsis:
+Upgraded from version 2.9.10 to version 2.9.11
+
+----------------------------------------------------------------
+
+Date: Wed 17 Jul 2024 11:45:24 AM EDT
+
+Version=2.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.9.11 to version 2.10.0
+
+----------------------------------------------------------------
+
+Date: Sun 28 Jul 2024 09:04:11 AM EDT
+
+Version=2.10.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.10.0 to version 2.10.1
+
+----------------------------------------------------------------
+
+Date: Wed 07 Aug 2024 10:30:58 AM EDT
+
+Version=2.10.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.10.1 to version 2.10.2
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:04 AM EST
+
+Version=2.10.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.10.2 to version 2.10.3

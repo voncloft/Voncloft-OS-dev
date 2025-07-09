@@ -1,0 +1,22 @@
+# description : simple and fast XML parser for C++
+# depends : gcc
+
+name=pugixml
+version=1.15
+release=1
+
+source="https://github.com/zeux/pugixml/releases/download/v${version}/${name}-${version}.tar.gz"
+options="!checksum"
+
+build() {
+	cd *
+	mkdir build
+	cd build
+	cmake .. \
+	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DCMAKE_INSTALL_LIBDIR=/usr/lib \
+        -DBUILD_SHARED_LIBS=ON
+
+        make
+        make DESTDIR=$PKG install
+}

@@ -1,0 +1,15 @@
+# description : Python File metadata and streaming library
+# depends : python python-dbus
+
+name=python-libcharon
+version=5.0.0
+release=1
+
+source="https://github.com/Ultimaker/libCharon/archive/refs/tags/d$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

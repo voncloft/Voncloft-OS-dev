@@ -1,0 +1,139 @@
+Date: Wed 29 Sep 2021 07:42:05 AM EDT
+
+python-neutronclient
+Version=7.6.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 7.3.0 to version 7.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 24 Nov 2021 06:52:29 AM EST
+
+Version=7.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.6.0 to version 7.7.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Feb 2022 08:47:39 AM EST
+
+Version=7.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.7.0 to version 7.8.0
+
+----------------------------------------------------------------
+
+Date: Sat 16 Jul 2022 04:58:48 PM EDT
+
+Version=8.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.8.0 to version 8.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 01 Sep 2022 06:27:32 AM EDT
+
+Version=8.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.0.0 to version 8.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=8.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.1.0 to version 8.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 05:32:12 AM EST
+
+Version=8.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 8.2.0 to version 8.2.1
+
+----------------------------------------------------------------
+
+Date: Sat 18 Feb 2023 07:22:10 PM EST
+
+Version=9.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.2.1 to version 9.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 11 May 2023 07:03:23 PM EDT
+
+Version=10.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 9.0.0 to version 10.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jul 2023 09:41:09 PM EDT
+
+Version=11.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 10.0.0 to version 11.0.0
+
+----------------------------------------------------------------
+
+Date: Sun 19 Nov 2023 02:05:57 PM EST
+
+Version=11.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.0.0 to version 11.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=11.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 11.1.0 to version 11.3.1
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jan 2025 10:18:15 AM EST
+
+Version=11.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.3.1 to version 11.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:24 PM EDT
+
+Version=11.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.4.0 to version 11.5.0

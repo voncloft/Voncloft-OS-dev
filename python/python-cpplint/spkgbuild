@@ -1,0 +1,15 @@
+# description : Command-line tool to check C/C++ files for style issues following Googles C++ style guide.
+# depends : python
+
+name=python-cpplint
+version=2.0.2
+release=1
+
+source="https://github.com/cpplint/cpplint/archive/refs/tags/f$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

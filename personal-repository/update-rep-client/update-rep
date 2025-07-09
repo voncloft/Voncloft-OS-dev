@@ -1,0 +1,7 @@
+cd /home/von/Desktop/VPacman
+
+git init
+git add .
+git commit -m "added update for VPacman"
+git remote set-url origin git@github.com:voncloft/VPacman.git
+git push -u origin master

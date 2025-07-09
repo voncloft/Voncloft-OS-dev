@@ -1,0 +1,15 @@
+# description : A pure Python interface for the Telegram Bot AP
+# depends : python-apscheduler python-cryptography python-decorator python-tornado
+
+name=python-telegram-bot
+version=22.2
+release=1
+
+source="https://github.com/python-telegram-bot/python-telegram-bot/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

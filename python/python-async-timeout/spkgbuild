@@ -1,0 +1,15 @@
+# description : Asyncio-compatible timeout class
+# depends : python
+
+name=python-async-timeout
+version=5.0.1
+release=5
+
+source="https://github.com/aio-libs/async-timeout/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

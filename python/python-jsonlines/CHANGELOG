@@ -1,0 +1,89 @@
+Date: Sun 11 Jul 2021 01:12:45 PM EDT
+
+name=python-jsonlines
+version=2.0.0
+release=7
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.2.0 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:28:37 PM EDT
+
+version=2.0.0
+release=7
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:52:23 AM EDT
+
+version=2.0.0
+release=7
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:10:46 EDT 2021
+
+version=2.0.0
+release=7
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:13:29 EDT 2021
+
+version=2.0.0
+release=7
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:18 EDT 2021
+
+version=2.0.0
+release=7
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sun 05 Dec 2021 10:28:44 AM EST
+
+Version=3.0.0
+Release=7
+
+Synopsis:
+Upgraded from version 2.0.0 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 01 Jul 2022 08:08:42 PM EDT
+
+Version=3.1.0
+Release=7
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:43 PM EDT
+
+Version=4.0.0
+Release=7
+
+Synopsis:
+Upgraded from version 3.1.0 to version 4.0.0

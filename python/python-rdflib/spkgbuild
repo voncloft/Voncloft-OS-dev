@@ -1,0 +1,15 @@
+# description : A Python library for working with RDF, a simple yet powerful language for representing information
+# depends : python-isodate python-pyparsing
+
+name=python-rdflib
+version=7.1.4
+release=3
+
+source="https://github.com/RDFLib/rdflib/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,17 @@
+# description	: A complete rewrite of the NASM-2.13.01 assembler, supports the x86 and AMD64 instruction sets
+
+name=yasm
+version=1.3.0
+release=1
+source="https://www.tortall.net/projects/$name/releases/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	sed -e 's/def __cplusplus/ defined(__cplusplus) || __STDC_VERSION__ >= 202311L/' \
+    -i libyasm/bitvect.h
+
+    	sed -i 's#) ytasm.*#)#' Makefile.in 
+    	./configure --prefix=/usr
+	make DESTDIR=$PKG install
+}
+

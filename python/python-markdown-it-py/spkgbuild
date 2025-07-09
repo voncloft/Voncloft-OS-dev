@@ -1,0 +1,15 @@
+# description : Python port of markdown-it. Markdown parsing, done right!
+# depends : python-attrs
+
+name=python-markdown-it-py
+version=3.0.0
+release=1
+
+source="https://github.com/executablebooks/markdown-it-py/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

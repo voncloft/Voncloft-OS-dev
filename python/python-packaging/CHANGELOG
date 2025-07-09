@@ -1,0 +1,159 @@
+Date: Sun 11 Jul 2021 01:13:03 PM EDT
+
+name=python-packaging
+version=21.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 20.9 to version 21.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:31:08 PM EDT
+
+version=21.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:54:52 AM EDT
+
+version=21.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:16 EDT 2021
+
+version=21.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:16:17 EDT 2021
+
+version=21.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:13:41 EDT 2021
+
+version=21.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:23 PM EDT
+
+Version=21.2
+Release=1
+
+Synopsis:
+Upgraded from version 21.0 to version 21.2
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:24 PM EDT
+
+Version=21.2
+Release=1
+
+Synopsis:
+Upgraded from version 21.0 to version 21.2
+
+----------------------------------------------------------------
+
+Date: Fri 19 Nov 2021 06:25:32 PM EST
+
+Version=21.3
+Release=1
+
+Synopsis:
+Upgraded from version 21.2 to version 21.3
+
+----------------------------------------------------------------
+
+Date: Thu 08 Dec 2022 04:10:43 PM EST
+
+Version=22.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.3 to version 22.0
+
+----------------------------------------------------------------
+
+Date: Sun 08 Jan 2023 08:10:12 PM EST
+
+Version=23.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.0 to version 23.0
+
+----------------------------------------------------------------
+
+Date: Thu 13 Apr 2023 03:44:17 PM EDT
+
+Version=23.1
+Release=1
+
+Synopsis:
+Upgraded from version 23.0 to version 23.1
+
+----------------------------------------------------------------
+
+Date: Mon 02 Oct 2023 07:28:26 AM EDT
+
+Version=23.2
+Release=1
+
+Synopsis:
+Upgraded from version 23.1 to version 23.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=24.1
+Release=1
+
+Synopsis:
+Upgraded from version 23.2 to version 24.1
+
+----------------------------------------------------------------
+
+Date: Mon 11 Nov 2024 05:44:40 AM EST
+
+Version=24.2
+Release=1
+
+Synopsis:
+Upgraded from version 24.1 to version 24.2
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:55 PM EDT
+
+Version=25.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.2 to version 25.0

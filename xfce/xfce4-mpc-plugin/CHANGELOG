@@ -1,0 +1,29 @@
+Date: Mon 01 May 2023 10:41:52 AM EDT
+
+xfce4-mpc-plugin
+Version=0.5.3
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.5.2 to version 0.5.3
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:06 AM EST
+
+Version=0.5.5
+Release=1
+
+Synopsis:
+Upgraded from version 0.5.3 to version 0.5.5
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:26 PM EDT
+
+Version=0.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.5.5 to version 0.6.0

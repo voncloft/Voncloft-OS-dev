@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:30:19 PM EDT
+
+name=python-natsort
+version=7.1.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:54:03 AM EDT
+
+version=7.1.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:12:26 EDT 2021
+
+version=7.1.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:15:23 EDT 2021
+
+version=7.1.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:53 EDT 2021
+
+version=7.1.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 04 Nov 2021 06:36:21 PM EDT
+
+Version=8.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.1.1 to version 8.0.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Dec 2021 06:24:03 AM EST
+
+Version=8.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 8.0.0 to version 8.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 15 Dec 2021 04:03:10 AM EST
+
+Version=8.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 8.0.1 to version 8.0.2

@@ -1,0 +1,189 @@
+Date: Sun 11 Jul 2021 01:12:01 PM EDT
+
+name=python-aiogram
+version=2.14.3
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.11.2 to version 2.14.3
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:22:14 PM EDT
+
+version=2.14.3
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:46:14 AM EDT
+
+version=2.14.3
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:04:27 EDT 2021
+
+version=2.14.3
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:04:33 EDT 2021
+
+version=2.14.3
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:04:53 EDT 2021
+
+version=2.14.3
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sun Aug  1 15:14:35 EDT 2021
+
+version=3.0.0
+release=3
+
+Synopsis:
+Upgraded from version 2.14.3 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:32 AM EDT
+
+Version=3.1.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.1.1
+
+----------------------------------------------------------------
+
+Date: Sun 26 Nov 2023 11:28:12 AM EST
+
+Version=3.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.1.1 to version 3.2.0
+
+----------------------------------------------------------------
+
+Date: Sun 31 Dec 2023 09:54:06 PM EST
+
+Version=3.3.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:36 AM EST
+
+Version=3.4.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=3.13.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.1 to version 3.13.1
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:44 PM EST
+
+Version=3.14.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.13.1 to version 3.14.0
+
+----------------------------------------------------------------
+
+Date: Tue 19 Nov 2024 04:50:45 AM EST
+
+Version=3.15.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.0 to version 3.15.0
+
+----------------------------------------------------------------
+
+Date: Mon 23 Dec 2024 07:20:44 AM EST
+
+Version=3.16.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.15.0 to version 3.16.0
+
+----------------------------------------------------------------
+
+Date: Sun 05 Jan 2025 01:15:40 PM EST
+
+Version=3.17.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.16.0 to version 3.17.0
+
+----------------------------------------------------------------
+
+Date: Mon 17 Feb 2025 06:55:42 AM EST
+
+Version=3.18.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.17.0 to version 3.18.0
+
+----------------------------------------------------------------
+
+Date: Thu 20 Mar 2025 08:53:48 AM EDT
+
+Version=3.19.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.18.0 to version 3.19.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Apr 2025 08:40:14 AM EDT
+
+Version=3.20.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.19.0 to version 3.20.0

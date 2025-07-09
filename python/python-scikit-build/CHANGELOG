@@ -1,0 +1,249 @@
+Date: Mon 12 Jul 2021 03:35:42 PM EDT
+
+name=python-scikit-build
+version=0.11.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:59:23 AM EDT
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:18:10 EDT 2021
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:21:38 EDT 2021
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:18:04 EDT 2021
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Aug 11 15:21:56 EDT 2021
+
+version=0.12.0
+release=3
+
+Synopsis:
+Upgraded from version 0.11.1 to version 0.12.0
+
+----------------------------------------------------------------
+
+Date: Wed 02 Feb 2022 03:48:48 PM EST
+
+Version=0.13.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.12.0 to version 0.13.0
+
+----------------------------------------------------------------
+
+Date: Wed 09 Feb 2022 03:48:21 PM EST
+
+Version=0.13.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.13.0 to version 0.13.1
+
+----------------------------------------------------------------
+
+Date: Wed 06 Apr 2022 05:17:24 AM EDT
+
+Version=0.14.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.13.1 to version 0.14.0
+
+----------------------------------------------------------------
+
+Date: Fri 08 Apr 2022 03:47:08 PM EDT
+
+Version=0.14.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.14.0 to version 0.14.1
+
+----------------------------------------------------------------
+
+Date: Fri 20 May 2022 06:33:20 PM EDT
+
+Version=0.15.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.14.1 to version 0.15.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:06 AM EDT
+
+Version=0.16.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.15.0 to version 0.16.1
+
+----------------------------------------------------------------
+
+Date: Sat 05 Nov 2022 03:56:36 PM EDT
+
+Version=0.16.2
+Release=3
+
+Synopsis:
+Upgraded from version 0.16.1 to version 0.16.2
+
+----------------------------------------------------------------
+
+Date: Fri 02 Dec 2022 06:10:55 AM EST
+
+Version=0.16.3
+Release=3
+
+Synopsis:
+Upgraded from version 0.16.2 to version 0.16.3
+
+----------------------------------------------------------------
+
+Date: Sun 18 Dec 2022 06:50:52 AM EST
+
+Version=0.16.4
+Release=3
+
+Synopsis:
+Upgraded from version 0.16.3 to version 0.16.4
+
+----------------------------------------------------------------
+
+Date: Fri 20 Jan 2023 05:10:27 PM EST
+
+Version=0.16.6
+Release=3
+
+Synopsis:
+Upgraded from version 0.16.4 to version 0.16.6
+
+----------------------------------------------------------------
+
+Date: Sat 18 Feb 2023 07:22:10 PM EST
+
+Version=0.16.7
+Release=3
+
+Synopsis:
+Upgraded from version 0.16.6 to version 0.16.7
+
+----------------------------------------------------------------
+
+Date: Wed 12 Apr 2023 07:22:19 AM EDT
+
+Version=0.17.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.16.7 to version 0.17.0
+
+----------------------------------------------------------------
+
+Date: Thu 13 Apr 2023 03:44:18 PM EDT
+
+Version=0.17.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.17.0 to version 0.17.1
+
+----------------------------------------------------------------
+
+Date: Thu 20 Apr 2023 04:13:51 PM EDT
+
+Version=0.17.2
+Release=3
+
+Synopsis:
+Upgraded from version 0.17.1 to version 0.17.2
+
+----------------------------------------------------------------
+
+Date: Mon 01 May 2023 10:41:52 AM EDT
+
+Version=0.17.3
+Release=3
+
+Synopsis:
+Upgraded from version 0.17.2 to version 0.17.3
+
+----------------------------------------------------------------
+
+Date: Thu 11 May 2023 07:03:23 PM EDT
+
+Version=0.17.4
+Release=3
+
+Synopsis:
+Upgraded from version 0.17.3 to version 0.17.4
+
+----------------------------------------------------------------
+
+Date: Tue 16 May 2023 05:08:04 PM EDT
+
+Version=0.17.5
+Release=3
+
+Synopsis:
+Upgraded from version 0.17.4 to version 0.17.5
+
+----------------------------------------------------------------
+
+Date: Thu 01 Jun 2023 09:18:26 AM EDT
+
+Version=0.17.6
+Release=3
+
+Synopsis:
+Upgraded from version 0.17.5 to version 0.17.6
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=0.18.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.17.6 to version 0.18.1

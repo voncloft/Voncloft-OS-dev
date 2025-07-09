@@ -1,0 +1,15 @@
+# description : Miscellaneous utilities for dealing with filesystems, paths, projects, subprocesses, and more
+# depends : python-colorama python-requests python-six
+
+name=python-vistir
+version=0.8.0
+release=3
+
+source="https://github.com/sarugaku/vistir/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

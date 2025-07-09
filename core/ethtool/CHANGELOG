@@ -1,0 +1,159 @@
+Date: Wed 13 Apr 2022 04:34:17 PM EDT
+
+ethtool
+Version=5.17
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 5.8 to version 5.17
+
+----------------------------------------------------------------
+
+Date: Tue 14 Jun 2022 05:05:20 PM EDT
+
+Version=5.18
+Release=1
+
+Synopsis:
+Upgraded from version 5.17 to version 5.18
+
+----------------------------------------------------------------
+
+Date: Mon 22 Aug 2022 08:01:02 PM EDT
+
+Version=5.19
+Release=1
+
+Synopsis:
+Upgraded from version 5.18 to version 5.19
+
+----------------------------------------------------------------
+
+Date: Mon 10 Oct 2022 07:04:22 PM EDT
+
+Version=6.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.19 to version 6.0
+
+----------------------------------------------------------------
+
+Date: Wed 21 Dec 2022 03:40:49 AM EST
+
+Version=6.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.0 to version 6.1
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:07 PM EST
+
+Version=6.2
+Release=1
+
+Synopsis:
+Upgraded from version 6.1 to version 6.2
+
+----------------------------------------------------------------
+
+Date: Tue 09 May 2023 05:38:54 PM EDT
+
+Version=6.3
+Release=1
+
+Synopsis:
+Upgraded from version 6.2 to version 6.3
+
+----------------------------------------------------------------
+
+Date: Mon 03 Jul 2023 08:38:25 AM EDT
+
+Version=6.4
+Release=1
+
+Synopsis:
+Upgraded from version 6.3 to version 6.4
+
+----------------------------------------------------------------
+
+Date: Thu 14 Sep 2023 08:13:00 PM EDT
+
+Version=6.5
+Release=1
+
+Synopsis:
+Upgraded from version 6.4 to version 6.5
+
+----------------------------------------------------------------
+
+Date: Sun 26 Nov 2023 11:28:11 AM EST
+
+Version=6.6
+Release=1
+
+Synopsis:
+Upgraded from version 6.5 to version 6.6
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:30 AM EST
+
+Version=6.7
+Release=1
+
+Synopsis:
+Upgraded from version 6.6 to version 6.7
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jun 2024 05:48:28 PM EDT
+
+Version=6.9
+Release=1
+
+Synopsis:
+Upgraded from version 6.7 to version 6.9
+
+----------------------------------------------------------------
+
+Date: Tue 20 Aug 2024 12:22:53 PM EDT
+
+Version=6.10
+Release=1
+
+Synopsis:
+Upgraded from version 6.9 to version 6.10
+
+----------------------------------------------------------------
+
+Date: Wed 09 Oct 2024 03:20:32 PM EDT
+
+Version=6.11
+Release=1
+
+Synopsis:
+Upgraded from version 6.10 to version 6.11
+
+----------------------------------------------------------------
+
+Date: Wed 09 Apr 2025 08:57:57 AM EDT
+
+Version=6.14
+Release=1
+
+Synopsis:
+Upgraded from version 6.11 to version 6.14
+
+----------------------------------------------------------------
+
+Date: Tue 24 Jun 2025 05:40:08 AM EDT
+
+Version=6.15
+Release=1
+
+Synopsis:
+Upgraded from version 6.14 to version 6.15

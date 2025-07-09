@@ -1,0 +1,189 @@
+Date: Mon 12 Jul 2021 10:47:35 AM EDT
+
+name=python-twisted
+version=21.7.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 20.3.0 to version 21.7.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:11:54 PM EDT
+
+version=21.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:37:45 PM EDT
+
+version=21.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:24 AM EDT
+
+version=21.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:14 EDT 2021
+
+version=21.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:56 EDT 2021
+
+version=21.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:20:04 EDT 2021
+
+version=21.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 27 Jan 2022 06:36:38 PM EST
+
+Version=22.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.7.0 to version 22.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 09 Feb 2022 03:48:22 PM EST
+
+Version=22.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.1.0 to version 22.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 06 Apr 2022 05:17:24 AM EDT
+
+Version=22.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.2.0 to version 22.4.0
+
+----------------------------------------------------------------
+
+Date: Mon 29 Aug 2022 07:23:58 AM EDT
+
+Version=22.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.4.0 to version 22.8.0
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:36 PM EDT
+
+Version=22.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.8.0 to version 22.10.0
+
+----------------------------------------------------------------
+
+Date: Fri 18 Aug 2023 07:13:15 PM EDT
+
+Version=23.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.10.0 to version 23.8.0
+
+----------------------------------------------------------------
+
+Date: Wed 25 Oct 2023 06:05:50 PM EDT
+
+Version=23.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.8.0 to version 23.10.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:40 AM EST
+
+Version=24.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.10.0 to version 24.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=24.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.2.0 to version 24.7.0
+
+----------------------------------------------------------------
+
+Date: Tue 22 Oct 2024 07:52:57 AM EDT
+
+Version=24.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.7.0 to version 24.10.0
+
+----------------------------------------------------------------
+
+Date: Fri 22 Nov 2024 10:11:11 PM EST
+
+Version=24.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.10.0 to version 24.11.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 May 2025 09:02:43 AM EDT
+
+Version=25.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.11.0 to version 25.5.0

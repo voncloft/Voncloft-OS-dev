@@ -1,0 +1,15 @@
+# description : Links recognition library with full unicode support
+# depends : python-uc-micro-py
+
+name=python-linkify-it-py
+version=2.0.3
+release=1
+
+source="https://github.com/tsutsu3/linkify-it-py/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

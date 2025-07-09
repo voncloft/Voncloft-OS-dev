@@ -1,0 +1,22 @@
+# description	: Provides a user space library for accessing the DRM, direct rendering manager, on operating systems that support the ioctl interface
+# depends	: libpciaccess meson
+# optdepends	: xorg-libraries
+
+name=libdrm
+version=2.4.125
+release=1
+source="https://dri.freedesktop.org/$name/$name-$version.tar.xz"
+options="!checksum"
+build() {
+	cd $name-$version
+
+	mkdir build
+	cd build
+	meson setup --prefix=$XORG_PREFIX \
+            --buildtype=release   \
+            -D udev=true          \
+            -D valgrind=disabled  \
+            ..   
+        ninja
+	DESTDIR=$PKG ninja install
+}

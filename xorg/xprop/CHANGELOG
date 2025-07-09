@@ -1,0 +1,39 @@
+Date: Tue 05 Oct 2021 06:58:39 AM EDT
+
+xprop
+Version=1.2.5
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.2.4 to version 1.2.5
+
+----------------------------------------------------------------
+
+Date: Mon 05 Dec 2022 05:36:34 AM EST
+
+Version=1.2.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.5 to version 1.2.6
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:07 AM EST
+
+Version=1.2.7
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.6 to version 1.2.7
+
+----------------------------------------------------------------
+
+Date: Sun 17 Nov 2024 12:02:44 PM EST
+
+Version=1.2.8
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.7 to version 1.2.8

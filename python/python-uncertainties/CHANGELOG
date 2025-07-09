@@ -1,0 +1,89 @@
+Date: Sun Jul 11 20:09:45 EDT 2021
+
+name=python-uncertainties
+version=3.1.6
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.1.5 to version 3.1.6
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:37:56 PM EDT
+
+version=3.1.6
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:35 AM EDT
+
+version=3.1.6
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:25 EDT 2021
+
+version=3.1.6
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:24:09 EDT 2021
+
+version=3.1.6
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:20:14 EDT 2021
+
+version=3.1.6
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 20 Jun 2022 04:16:28 PM EDT
+
+Version=3.1.7
+Release=1
+
+Synopsis:
+Upgraded from version 3.1.6 to version 3.1.7
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=3.2.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.1.7 to version 3.2.2
+
+----------------------------------------------------------------
+
+Date: Wed 23 Apr 2025 07:13:11 AM EDT
+
+Version=3.2.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.2 to version 3.2.3

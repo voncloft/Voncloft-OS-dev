@@ -1,0 +1,49 @@
+Date: Wed 13 Apr 2022 04:34:18 PM EDT
+
+libpcap
+Version=1.10.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.9.1 to version 1.10.1
+
+----------------------------------------------------------------
+
+Date: Mon 02 Jan 2023 02:52:36 PM EST
+
+Version=1.10.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.1 to version 1.10.2
+
+----------------------------------------------------------------
+
+Date: Sat 14 Jan 2023 03:41:36 PM EST
+
+Version=1.10.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.2 to version 1.10.3
+
+----------------------------------------------------------------
+
+Date: Tue 11 Apr 2023 08:08:15 AM EDT
+
+Version=1.10.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.3 to version 1.10.4
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=1.10.5
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.4 to version 1.10.5

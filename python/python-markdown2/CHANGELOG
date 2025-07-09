@@ -1,0 +1,209 @@
+Date: Sun 11 Jul 2021 01:12:53 PM EDT
+
+name=python-markdown2
+version=2.4.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.3.10 to version 2.4.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:29:39 PM EDT
+
+version=2.4.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:24 AM EDT
+
+version=2.4.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:47 EDT 2021
+
+version=2.4.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:39 EDT 2021
+
+version=2.4.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:16 EDT 2021
+
+version=2.4.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Aug 18 15:22:10 EDT 2021
+
+version=2.4.1
+release=1
+
+Synopsis:
+Upgraded from version 2.4.0 to version 2.4.1
+
+----------------------------------------------------------------
+
+Date: Thu 02 Dec 2021 05:28:48 PM EST
+
+Version=2.4.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.1 to version 2.4.2
+
+----------------------------------------------------------------
+
+Date: Fri 29 Apr 2022 07:04:24 AM EDT
+
+Version=2.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.2 to version 2.4.3
+
+----------------------------------------------------------------
+
+Date: Wed 28 Sep 2022 05:30:56 PM EDT
+
+Version=2.4.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.3 to version 2.4.5
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=2.4.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.5 to version 2.4.6
+
+----------------------------------------------------------------
+
+Date: Mon 23 Jan 2023 08:26:23 PM EST
+
+Version=2.4.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.6 to version 2.4.7
+
+----------------------------------------------------------------
+
+Date: Tue 14 Feb 2023 04:52:08 PM EST
+
+Version=2.4.8
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.7 to version 2.4.8
+
+----------------------------------------------------------------
+
+Date: Fri 23 Jun 2023 04:10:41 PM EDT
+
+Version=2.4.9
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.8 to version 2.4.9
+
+----------------------------------------------------------------
+
+Date: Wed 26 Jul 2023 09:28:02 AM EDT
+
+Version=2.4.10
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.9 to version 2.4.10
+
+----------------------------------------------------------------
+
+Date: Mon 04 Dec 2023 03:44:24 AM EST
+
+Version=2.4.11
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.10 to version 2.4.11
+
+----------------------------------------------------------------
+
+Date: Tue 19 Dec 2023 06:24:49 AM EST
+
+Version=2.4.12
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.11 to version 2.4.12
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:38 AM EST
+
+Version=2.4.13
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.12 to version 2.4.13
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=2.5.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.13 to version 2.5.1
+
+----------------------------------------------------------------
+
+Date: Thu 12 Dec 2024 04:37:06 PM EST
+
+Version=2.5.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.1 to version 2.5.2
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:39 AM EST
+
+Version=2.5.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.2 to version 2.5.3

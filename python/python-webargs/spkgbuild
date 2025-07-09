@@ -1,0 +1,15 @@
+# description : A friendly library for parsing HTTP request arguments, with built-in support for popular web frameworks
+# depends : python-marshmallow
+
+name=python-webargs
+version=8.7.0
+release=3
+
+source="https://github.com/marshmallow-code/webargs/archive/refs/tags/d$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

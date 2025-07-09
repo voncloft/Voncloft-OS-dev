@@ -1,0 +1,109 @@
+Date: Mon 12 Jul 2021 03:39:15 PM EDT
+
+name=python-zope-schema
+version=6.0.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:54 AM EDT
+
+version=6.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:43 EDT 2021
+
+version=6.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:40 EDT 2021
+
+version=6.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:30 EDT 2021
+
+version=6.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:46:18 AM EDT
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.1 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 13 Oct 2021 06:52:46 PM EDT
+
+Version=6.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.1.1
+
+----------------------------------------------------------------
+
+Date: Mon 18 Oct 2021 08:23:17 PM EDT
+
+Version=6.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.1 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 14 Sep 2022 07:05:47 PM EDT
+
+Version=6.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.0 to version 6.2.1
+
+----------------------------------------------------------------
+
+Date: Mon 02 Jan 2023 02:52:37 PM EST
+
+Version=7.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.1 to version 7.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 03 Jan 2023 09:07:31 AM EST
+
+Version=7.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.0 to version 7.0.1

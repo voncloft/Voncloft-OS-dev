@@ -1,0 +1,15 @@
+# description : File-based locks for Python
+# depends : python
+
+name=python-locket
+version=1.0.0
+release=1
+
+source="https://github.com/mwilliamson/locket.py/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

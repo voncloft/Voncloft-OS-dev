@@ -1,0 +1,139 @@
+Date: Mon 12 Jul 2021 10:43:03 AM EDT
+
+name=python-flask-dance
+version=5.0.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.2.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:26:25 PM EDT
+
+version=5.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:50:12 AM EDT
+
+version=5.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:32 EDT 2021
+
+version=5.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:11:01 EDT 2021
+
+version=5.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:09:11 EDT 2021
+
+version=5.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 01 Nov 2021 09:39:21 PM EDT
+
+Version=5.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 06 Apr 2022 05:17:24 AM EDT
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.0 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Sat 06 Aug 2022 05:11:46 PM EDT
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Mon 22 Aug 2022 08:01:02 PM EDT
+
+Version=6.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.1.1
+
+----------------------------------------------------------------
+
+Date: Fri 14 Oct 2022 05:47:56 AM EDT
+
+Version=6.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.1 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 11 May 2023 07:03:23 PM EDT
+
+Version=7.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.0 to version 7.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:37 AM EST
+
+Version=7.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.0 to version 7.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=7.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.1 to version 7.1.0

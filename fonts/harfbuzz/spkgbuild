@@ -1,0 +1,22 @@
+# description	: OpenType text shaping engine
+# depends	: glib freetype2 graphite2 icu
+
+name=harfbuzz
+version=11.2.1
+release=1
+source="https://github.com/harfbuzz/harfbuzz/releases/download/$version/harfbuzz-$version.tar.xz"
+
+build() {
+	cd *
+
+	mkdir build &&
+	cd    build &&
+
+	meson setup ..             \
+      --prefix=/usr        \
+      --buildtype=release  \
+      -D graphite2=enabled &&
+	ninja
+	DESTDIR=$PKG ninja install
+	
+}

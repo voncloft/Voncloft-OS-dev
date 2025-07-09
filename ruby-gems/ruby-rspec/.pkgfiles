@@ -1,0 +1,22 @@
+ruby-rspec-3.13.1-4
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/ruby/
+drwxr-xr-x root/root    usr/lib/ruby/gems/
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/build_info/
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/cache/
+-rw-r--r-- root/root    usr/lib/ruby/gems/3.4.0/cache/rspec-3.13.1.gem
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/doc/
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/extensions/
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/gems/
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/gems/rspec-3.13.1/
+-rw-r--r-- root/root    usr/lib/ruby/gems/3.4.0/gems/rspec-3.13.1/LICENSE.md
+-rw-r--r-- root/root    usr/lib/ruby/gems/3.4.0/gems/rspec-3.13.1/README.md
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/gems/rspec-3.13.1/lib/
+-rw-r--r-- root/root    usr/lib/ruby/gems/3.4.0/gems/rspec-3.13.1/lib/rspec.rb
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/gems/rspec-3.13.1/lib/rspec/
+-rw-r--r-- root/root    usr/lib/ruby/gems/3.4.0/gems/rspec-3.13.1/lib/rspec/version.rb
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/plugins/
+drwxr-xr-x root/root    usr/lib/ruby/gems/3.4.0/specifications/
+-rw-r--r-- root/root    usr/lib/ruby/gems/3.4.0/specifications/rspec-3.13.1.gemspec

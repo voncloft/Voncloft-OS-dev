@@ -1,0 +1,89 @@
+Date: Mon 12 Jul 2021 10:43:04 AM EDT
+
+name=python-flask-htmlmin
+version=2.1.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.0.2 to version 2.1.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:26:27 PM EDT
+
+version=2.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:50:14 AM EDT
+
+version=2.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:34 EDT 2021
+
+version=2.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:11:04 EDT 2021
+
+version=2.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:09:13 EDT 2021
+
+version=2.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 18 Oct 2021 08:23:17 PM EDT
+
+Version=2.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.0 to version 2.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:35 PM EDT
+
+Version=2.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.0 to version 2.2.1
+
+----------------------------------------------------------------
+
+Date: Sun 05 Jan 2025 01:15:40 PM EST
+
+Version=3.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.1 to version 3.0.0

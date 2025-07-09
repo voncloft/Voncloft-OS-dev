@@ -1,0 +1,99 @@
+Date: Sun 11 Jul 2021 01:12:27 PM EDT
+
+name=python-fasteners
+version=0.16.3
+release=5
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.15 to version 0.16.3
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:26:03 PM EDT
+
+version=0.16.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:49:50 AM EDT
+
+version=0.16.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:09 EDT 2021
+
+version=0.16.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:10:34 EDT 2021
+
+version=0.16.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:08:49 EDT 2021
+
+version=0.16.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 18 Jan 2022 07:46:23 AM EST
+
+Version=0.17.2
+Release=5
+
+Synopsis:
+Upgraded from version 0.16.3 to version 0.17.2
+
+----------------------------------------------------------------
+
+Date: Wed 26 Jan 2022 05:17:44 AM EST
+
+Version=0.17.3
+Release=5
+
+Synopsis:
+Upgraded from version 0.17.2 to version 0.17.3
+
+----------------------------------------------------------------
+
+Date: Wed 14 Sep 2022 07:05:46 PM EDT
+
+Version=0.18
+Release=5
+
+Synopsis:
+Upgraded from version 0.17.3 to version 0.18
+
+----------------------------------------------------------------
+
+Date: Wed 20 Sep 2023 06:15:20 AM EDT
+
+Version=0.19
+Release=5
+
+Synopsis:
+Upgraded from version 0.18 to version 0.19

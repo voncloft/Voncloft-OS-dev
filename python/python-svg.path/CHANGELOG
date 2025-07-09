@@ -1,0 +1,129 @@
+Date: Sun 11 Jul 2021 01:13:45 PM EDT
+
+name=python-svg.path
+version=5.0.0
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.0.2 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:37:00 PM EDT
+
+version=5.0.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:40 AM EDT
+
+version=5.0.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:29 EDT 2021
+
+version=5.0.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:08 EDT 2021
+
+version=5.0.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:20 EDT 2021
+
+version=5.0.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 22 Mar 2022 10:28:03 AM EDT
+
+Version=5.0.1
+Release=2
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.0.1
+
+----------------------------------------------------------------
+
+Date: Thu 24 Mar 2022 05:27:37 AM EDT
+
+Version=5.1
+Release=2
+
+Synopsis:
+Upgraded from version 5.0.1 to version 5.1
+
+----------------------------------------------------------------
+
+Date: Sun 03 Apr 2022 08:25:30 AM EDT
+
+Version=6.0
+Release=2
+
+Synopsis:
+Upgraded from version 5.1 to version 6.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Jun 2022 08:20:08 PM EDT
+
+Version=6.1
+Release=2
+
+Synopsis:
+Upgraded from version 6.0 to version 6.1
+
+----------------------------------------------------------------
+
+Date: Fri 17 Jun 2022 07:30:33 PM EDT
+
+Version=6.2
+Release=2
+
+Synopsis:
+Upgraded from version 6.1 to version 6.2
+
+----------------------------------------------------------------
+
+Date: Mon 01 May 2023 10:41:52 AM EDT
+
+Version=6.3
+Release=2
+
+Synopsis:
+Upgraded from version 6.2 to version 6.3
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:32 AM EST
+
+Version=6.4
+Release=2
+
+Synopsis:
+Upgraded from version 6.3 to version 6.4

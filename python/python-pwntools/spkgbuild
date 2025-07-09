@@ -1,0 +1,15 @@
+# description : CTF framework and exploit development library
+# depends : python
+
+name=python-pwntools
+version=4.15.0
+release=3
+
+source="https://github.com/Gallopsled/pwntools/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,15 @@
+# description : Oslo i18n library
+# depends : python-six python-pbr python-babel
+
+name=python-oslo-i18n
+version=6.5.1
+release=3
+
+source="https://github.com/openstack/oslo.i18n/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

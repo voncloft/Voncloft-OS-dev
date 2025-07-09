@@ -1,0 +1,189 @@
+Date: Wed 29 Sep 2021 07:23:47 AM EDT
+
+cinnamon-settings-daemon
+Version=5.0.4
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.8.5 to version 5.0.4
+
+----------------------------------------------------------------
+
+Date: Tue 16 Nov 2021 03:14:56 AM EST
+
+Version=5.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.4 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 10 Jun 2022 03:40:40 PM EDT
+
+Version=5.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 21 Jun 2022 09:14:25 PM EDT
+
+Version=5.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.0 to version 5.4.1
+
+----------------------------------------------------------------
+
+Date: Sat 16 Jul 2022 04:58:47 PM EDT
+
+Version=5.4.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.1 to version 5.4.2
+
+----------------------------------------------------------------
+
+Date: Mon 25 Jul 2022 05:34:22 AM EDT
+
+Version=5.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.2 to version 5.4.3
+
+----------------------------------------------------------------
+
+Date: Mon 01 Aug 2022 06:36:00 PM EDT
+
+Version=5.4.4
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.3 to version 5.4.4
+
+----------------------------------------------------------------
+
+Date: Wed 10 Aug 2022 07:48:16 AM EDT
+
+Version=5.4.5
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.4 to version 5.4.5
+
+----------------------------------------------------------------
+
+Date: Wed 16 Nov 2022 05:56:18 PM EST
+
+Version=5.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.5 to version 5.6.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Jan 2023 05:57:10 PM EST
+
+Version=5.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.6.0 to version 5.6.1
+
+----------------------------------------------------------------
+
+Date: Fri 17 Mar 2023 04:11:34 PM EDT
+
+Version=5.6.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.6.1 to version 5.6.2
+
+----------------------------------------------------------------
+
+Date: Mon 05 Jun 2023 10:17:50 AM EDT
+
+Version=5.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.6.2 to version 5.8.0
+
+----------------------------------------------------------------
+
+Date: Fri 16 Jun 2023 08:23:36 PM EDT
+
+Version=5.8.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.8.0 to version 5.8.1
+
+----------------------------------------------------------------
+
+Date: Mon 20 Nov 2023 09:44:51 AM EST
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.8.1 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:51 AM EDT
+
+Version=6.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 29 Nov 2024 06:39:35 AM EST
+
+Version=6.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.0 to version 6.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 04 Dec 2024 06:29:21 AM EST
+
+Version=6.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.0 to version 6.4.1
+
+----------------------------------------------------------------
+
+Date: Thu 12 Dec 2024 07:07:46 AM EST
+
+Version=6.4.2
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.1 to version 6.4.2
+
+----------------------------------------------------------------
+
+Date: Sun 29 Dec 2024 11:57:30 AM EST
+
+Version=6.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.2 to version 6.4.3

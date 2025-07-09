@@ -1,0 +1,109 @@
+Date: Sat 01 Jan 2022 04:49:21 PM EST
+
+tumbler
+Version=4.17.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.16.0 to version 4.17.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jun 2022 03:41:56 PM EDT
+
+Version=4.17.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.0 to version 4.17.1
+
+----------------------------------------------------------------
+
+Date: Mon 20 Jun 2022 04:16:28 PM EDT
+
+Version=4.17.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.1 to version 4.17.2
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:06 AM EDT
+
+Version=4.17.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.2 to version 4.17.3
+
+----------------------------------------------------------------
+
+Date: Fri 16 Dec 2022 06:35:10 AM EST
+
+Version=4.18.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.3 to version 4.18.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Apr 2023 07:52:11 AM EDT
+
+Version=4.19.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.18.0 to version 4.19.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Feb 2024 06:46:36 AM EST
+
+Version=4.19.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.0 to version 4.19.1
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:47 PM EST
+
+Version=4.19.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.1 to version 4.19.2
+
+----------------------------------------------------------------
+
+Date: Wed 04 Dec 2024 06:29:22 AM EST
+
+Version=4.19.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.2 to version 4.19.3
+
+----------------------------------------------------------------
+
+Date: Mon 16 Dec 2024 03:57:47 AM EST
+
+Version=4.20.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.3 to version 4.20.0
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:24 AM EDT
+
+Version=4.21.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.20.0 to version 4.21.0

@@ -1,0 +1,15 @@
+# description : Flask extension to help writing external scripts for Flask applications
+# depends : python-flask
+
+name=python-flask-script
+version=2.0.6
+release=7
+
+source="https://github.com/smurfix/flask-script/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

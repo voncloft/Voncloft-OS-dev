@@ -1,0 +1,79 @@
+Date: Wed 29 Sep 2021 07:24:59 AM EDT
+
+deadbeef
+Version=1.8.8
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.8.4 to version 1.8.8
+
+----------------------------------------------------------------
+
+Date: Sat 14 May 2022 03:45:52 PM EDT
+
+Version=1.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.8 to version 1.9.1
+
+----------------------------------------------------------------
+
+Date: Wed 21 Sep 2022 04:41:34 PM EDT
+
+Version=1.9.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.1 to version 1.9.2
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:02 PM EST
+
+Version=1.9.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.2 to version 1.9.3
+
+----------------------------------------------------------------
+
+Date: Sun 18 Dec 2022 06:50:52 AM EST
+
+Version=1.9.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.3 to version 1.9.4
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:06 PM EST
+
+Version=1.9.5
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.4 to version 1.9.5
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 09:39:08 AM EST
+
+Version=1.9.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.5 to version 1.9.6
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:44 AM EDT
+
+Version=1.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.6 to version 1.10.0

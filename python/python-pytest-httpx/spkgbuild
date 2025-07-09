@@ -1,0 +1,15 @@
+# description : Send responses to httpx
+# depends : python-httpx python-pytest
+
+name=python-pytest-httpx
+version=0.35.0
+release=1
+
+source="https://github.com/Colin-b/pytest_httpx/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

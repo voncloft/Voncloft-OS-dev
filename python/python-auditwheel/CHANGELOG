@@ -1,0 +1,179 @@
+Date: Sun 11 Jul 2021 01:12:05 PM EDT
+
+name=python-auditwheel
+version=4.0.0.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.3.1 to version 4.0.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:22:52 PM EDT
+
+version=4.0.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:46:52 AM EDT
+
+version=4.0.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:05:06 EDT 2021
+
+version=4.0.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:05:15 EDT 2021
+
+version=4.0.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:05:37 EDT 2021
+
+version=4.0.0.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 30 Sep 2021 05:40:38 AM EDT
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.0.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 04 Jan 2022 04:07:55 PM EST
+
+Version=5.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.1.1
+
+----------------------------------------------------------------
+
+Date: Sat 08 Jan 2022 03:41:23 PM EST
+
+Version=5.1.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.1 to version 5.1.2
+
+----------------------------------------------------------------
+
+Date: Mon 24 Oct 2022 05:23:30 AM EDT
+
+Version=5.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.2 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:04 AM EDT
+
+Version=5.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.2.1
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=5.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.1 to version 5.3.0
+
+----------------------------------------------------------------
+
+Date: Mon 01 May 2023 07:53:52 PM EDT
+
+Version=5.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.3.0 to version 5.4.0
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:05 AM EST
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.0 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Sun 05 Jan 2025 01:15:40 PM EST
+
+Version=6.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Mar 2025 09:57:44 AM EDT
+
+Version=6.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.0 to version 6.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:23 PM EDT
+
+Version=6.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.3.0 to version 6.4.0

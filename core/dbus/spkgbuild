@@ -1,0 +1,25 @@
+# description	: Message bus system, a simple way for applications to talk to one another
+# depends	: expat libx11 libsm libice
+
+name=dbus
+version=1.16.2
+release=1
+source="https://dbus.freedesktop.org/releases/$name/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+	mkdir build
+	cd build
+	
+	meson setup --prefix=/usr          \
+            --buildtype=release    \
+            --wrap-mode=nofallback \
+            -D systemd=disabled    \
+            .. 
+        ninja
+        DESTDIR=$PKG ninja install
+        chown -v root:messagebus $PKG/usr/libexec/dbus-daemon-launch-helper    
+	chmod -v      4750       $PKG/usr/libexec/dbus-daemon-launch-helper
+	
+}

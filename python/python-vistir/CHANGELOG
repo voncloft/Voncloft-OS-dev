@@ -1,0 +1,109 @@
+Date: Mon 12 Jul 2021 03:38:17 PM EDT
+
+name=python-vistir
+version=0.5.2
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:56 AM EDT
+
+version=0.5.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:45 EDT 2021
+
+version=0.5.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:24:32 EDT 2021
+
+version=0.5.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:20:34 EDT 2021
+
+version=0.5.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 29 Jul 2022 09:49:04 PM EDT
+
+Version=0.5.6
+Release=3
+
+Synopsis:
+Upgraded from version 0.5.2 to version 0.5.6
+
+----------------------------------------------------------------
+
+Date: Tue 30 Aug 2022 08:54:25 PM EDT
+
+Version=0.6.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.5.6 to version 0.6.1
+
+----------------------------------------------------------------
+
+Date: Tue 11 Oct 2022 03:41:24 PM EDT
+
+Version=0.7.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.6.1 to version 0.7.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Nov 2022 04:50:47 AM EST
+
+Version=0.7.4
+Release=3
+
+Synopsis:
+Upgraded from version 0.7.0 to version 0.7.4
+
+----------------------------------------------------------------
+
+Date: Mon 05 Dec 2022 05:36:33 AM EST
+
+Version=0.7.5
+Release=3
+
+Synopsis:
+Upgraded from version 0.7.4 to version 0.7.5
+
+----------------------------------------------------------------
+
+Date: Fri 03 Mar 2023 03:43:01 PM EST
+
+Version=0.8.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.7.5 to version 0.8.0

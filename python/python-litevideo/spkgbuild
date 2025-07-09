@@ -1,0 +1,15 @@
+# description : Small footprint and configurable video cores
+# depends : python-migen python-litex
+
+name=python-litevideo
+version=2021.08
+release=1
+
+source="https://github.com/enjoy-digital/litevideo/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

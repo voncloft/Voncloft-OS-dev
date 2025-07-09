@@ -1,0 +1,139 @@
+Date: Mon 31 May 2021 11:07:34 AM EDT
+
+name=alsa-lib
+version=1.2.5
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.2.4 to version 1.2.5
+
+----------------------------------------------------------------
+
+Date: Mon Jun 14 12:02:29 EDT 2021
+
+version=1.2.5.1
+release=1
+
+Synopsis:
+Upgraded from version 1.2.5 to version 1.2.5.1
+
+----------------------------------------------------------------
+
+Date: Wed 08 Dec 2021 09:53:47 AM EST
+
+Version=1.2.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.5.1 to version 1.2.6
+
+----------------------------------------------------------------
+
+Date: Thu 09 Dec 2021 04:09:25 PM EST
+
+Version=1.2.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.6 to version 1.2.6.1
+
+----------------------------------------------------------------
+
+Date: Wed 01 Jun 2022 04:56:02 AM EDT
+
+Version=1.2.7
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.6.1 to version 1.2.7
+
+----------------------------------------------------------------
+
+Date: Fri 17 Jun 2022 07:30:33 PM EDT
+
+Version=1.2.7.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.7 to version 1.2.7.1
+
+----------------------------------------------------------------
+
+Date: Fri 08 Jul 2022 04:05:48 PM EDT
+
+Version=1.2.7.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.7.1 to version 1.2.7.2
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:32 PM EDT
+
+Version=1.2.8
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.7.2 to version 1.2.8
+
+----------------------------------------------------------------
+
+Date: Sat 06 May 2023 05:18:16 PM EDT
+
+Version=1.2.9
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.8 to version 1.2.9
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:08 AM EDT
+
+Version=1.2.10
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.9 to version 1.2.10
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:31 AM EST
+
+Version=1.2.11
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.10 to version 1.2.11
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=1.2.12
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.11 to version 1.2.12
+
+----------------------------------------------------------------
+
+Date: Wed 13 Nov 2024 05:29:35 AM EST
+
+Version=1.2.13
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.12 to version 1.2.13
+
+----------------------------------------------------------------
+
+Date: Tue 15 Apr 2025 08:40:13 AM EDT
+
+Version=1.2.14
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.13 to version 1.2.14

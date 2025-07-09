@@ -1,0 +1,89 @@
+Date: Sun 11 Jul 2021 01:12:58 PM EDT
+
+name=python-nltk
+version=3.6.2
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.5 to version 3.6.2
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:42:06 AM EDT
+
+Version=3.6.3
+Release=3
+
+Synopsis:
+Upgraded from version 3.6.2 to version 3.6.3
+
+----------------------------------------------------------------
+
+Date: Sat 02 Oct 2021 01:16:19 PM EDT
+
+Version=3.6.4
+Release=3
+
+Synopsis:
+Upgraded from version 3.6.3 to version 3.6.4
+
+----------------------------------------------------------------
+
+Date: Tue 21 Dec 2021 08:57:18 PM EST
+
+Version=3.6.6
+Release=3
+
+Synopsis:
+Upgraded from version 3.6.5 to version 3.6.6
+
+----------------------------------------------------------------
+
+Date: Fri 31 Dec 2021 12:47:22 AM EST
+
+Version=3.6.7
+Release=3
+
+Synopsis:
+Upgraded from version 3.6.6 to version 3.6.7
+
+----------------------------------------------------------------
+
+Date: Wed 09 Feb 2022 03:48:21 PM EST
+
+Version=3.7
+Release=3
+
+Synopsis:
+Upgraded from version 3.6.7 to version 3.7
+
+----------------------------------------------------------------
+
+Date: Tue 13 Dec 2022 03:48:21 AM EST
+
+Version=3.8
+Release=3
+
+Synopsis:
+Upgraded from version 3.7 to version 3.8
+
+----------------------------------------------------------------
+
+Date: Tue 04 Apr 2023 03:49:39 PM EDT
+
+Version=3.8.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.8 to version 3.8.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=3.9.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.8.1 to version 3.9.1

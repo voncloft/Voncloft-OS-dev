@@ -1,0 +1,14 @@
+# description : a program to create new programs to my repository
+# depends : 
+
+name=createpackage
+version=1
+release=1
+
+source="createpackage"
+options="!checksum"
+
+build() {
+	mkdir -pv $PKG/usr/bin
+	install -m755 $SRC/createpackage $PKG/usr/bin
+}

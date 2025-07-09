@@ -1,0 +1,15 @@
+# description : A module for monitoring memory usage of a python program
+# depends : python-psutil
+
+name=python-memory-profiler
+version=0.61
+release=1
+
+source="https://github.com/pythonprofilers/memory_profiler/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,15 @@
+# description : ANTLR4 runtime for Python
+# depends : python
+
+name=python-antlr4
+version=4.12.0
+release=1
+
+source="https://github.com/antlr/antlr4/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

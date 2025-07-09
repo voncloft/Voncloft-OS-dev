@@ -1,0 +1,15 @@
+# description : A Python module for creating Excel XLSX files
+# depends : python
+
+name=python-xlsxwriter
+version=3.2.5
+release=1
+
+source="https://github.com/jmcnamara/XlsxWriter/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

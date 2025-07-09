@@ -1,0 +1,19 @@
+Date: Tue Jun  8 16:01:34 EDT 2021
+
+name=grub
+version=2.06
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.04 to version 2.06
+
+----------------------------------------------------------------
+
+Date: Thu 21 Dec 2023 04:54:41 AM EST
+
+Version=2.12
+Release=2
+
+Synopsis:
+Upgraded from version 2.06 to version 2.12

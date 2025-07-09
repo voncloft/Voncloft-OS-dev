@@ -1,0 +1,59 @@
+Date: Wed 08 Dec 2021 09:53:47 AM EST
+
+blas
+Version=3.10.0
+Release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.9.0 to version 3.10.0
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 04:34:18 PM EDT
+
+Version=3.10.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.10.0 to version 3.10.1
+
+----------------------------------------------------------------
+
+Date: Mon 14 Nov 2022 08:48:16 AM EST
+
+Version=3.11
+Release=3
+
+Synopsis:
+Upgraded from version 3.10.1 to version 3.11
+
+----------------------------------------------------------------
+
+Date: Wed 16 Nov 2022 05:56:18 PM EST
+
+Version=3.11.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.11 to version 3.11.0
+
+----------------------------------------------------------------
+
+Date: Sun 26 Nov 2023 11:28:12 AM EST
+
+Version=3.12.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.11.0 to version 3.12.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Jan 2025 10:31:50 AM EST
+
+Version=3.12.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.12.0 to version 3.12.1

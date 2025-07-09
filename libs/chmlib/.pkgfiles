@@ -1,0 +1,16 @@
+chmlib-0.40-6
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/chm_http
+-rwxr-xr-x root/root    usr/bin/enum_chmLib
+-rwxr-xr-x root/root    usr/bin/enumdir_chmLib
+-rwxr-xr-x root/root    usr/bin/extract_chmLib
+-rwxr-xr-x root/root    usr/bin/test_chmLib
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/chm_lib.h
+-rw-r--r-- root/root    usr/include/lzx.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libchm.a
+lrwxrwxrwx root/root    usr/lib/libchm.so -> libchm.so.0.0.0
+lrwxrwxrwx root/root    usr/lib/libchm.so.0 -> libchm.so.0.0.0
+-rwxr-xr-x root/root    usr/lib/libchm.so.0.0.0

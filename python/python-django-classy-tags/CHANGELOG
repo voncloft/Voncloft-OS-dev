@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:25:17 PM EDT
+
+name=python-django-classy-tags
+version=2.0.0
+release=4
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:49:05 AM EDT
+
+version=2.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:07:21 EDT 2021
+
+version=2.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:09:38 EDT 2021
+
+version=2.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:08:05 EDT 2021
+
+version=2.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 04:34:19 PM EDT
+
+Version=3.0.1
+Release=4
+
+Synopsis:
+Upgraded from version 2.0.0 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Fri 02 Dec 2022 06:10:55 AM EST
+
+Version=4.0.0
+Release=4
+
+Synopsis:
+Upgraded from version 3.0.1 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 31 Jul 2023 01:13:00 PM EDT
+
+Version=4.1.0
+Release=4
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.1.0

@@ -1,0 +1,139 @@
+Date: Mon 12 Jul 2021 03:25:36 PM EDT
+
+name=python-dotenv
+version=0.15.0
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:49:24 AM EDT
+
+version=0.15.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:07:41 EDT 2021
+
+version=0.15.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:09:59 EDT 2021
+
+version=0.15.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:08:22 EDT 2021
+
+version=0.15.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:39:45 AM EDT
+
+Version=0.19.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.15.0 to version 0.19.0
+
+----------------------------------------------------------------
+
+Date: Thu 11 Nov 2021 09:45:04 PM EST
+
+Version=0.19.2
+Release=3
+
+Synopsis:
+Upgraded from version 0.19.1 to version 0.19.2
+
+----------------------------------------------------------------
+
+Date: Fri 25 Mar 2022 08:49:32 PM EDT
+
+Version=0.20.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.19.2 to version 0.20.0
+
+----------------------------------------------------------------
+
+Date: Sun 04 Sep 2022 03:55:38 PM EDT
+
+Version=0.21.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.20.0 to version 0.21.0
+
+----------------------------------------------------------------
+
+Date: Sat 21 Jan 2023 10:44:56 PM EST
+
+Version=0.21.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.21.0 to version 0.21.1
+
+----------------------------------------------------------------
+
+Date: Fri 24 Feb 2023 03:46:04 PM EST
+
+Version=1.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.21.1 to version 1.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 25 Jan 2024 09:18:55 AM EST
+
+Version=1.0.1
+Release=3
+
+Synopsis:
+Upgraded from version 1.0.0 to version 1.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:46 AM EDT
+
+Version=1.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 1.0.1 to version 1.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 25 Jun 2025 10:32:11 AM EDT
+
+Version=1.1.1
+Release=3
+
+Synopsis:
+Upgraded from version 1.1.0 to version 1.1.1

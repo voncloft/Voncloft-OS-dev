@@ -1,0 +1,15 @@
+# description : Python @deprecated decorator to deprecate old python classes, functions or methods
+# depends : python-wrapt
+
+name=python-deprecated
+version=1.2.18
+release=1
+
+source="https://github.com/tantale/deprecated/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

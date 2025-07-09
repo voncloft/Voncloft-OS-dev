@@ -1,0 +1,15 @@
+# description : Merge a series of JSON documents
+# depends : python-jsonschema
+
+name=python-jsonmerge
+version=1.9.2
+release=3
+
+source="https://github.com/avian2/jsonmerge/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

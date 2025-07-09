@@ -1,0 +1,219 @@
+Date: Wed 08 Dec 2021 09:47:29 AM EST
+
+libqalculate
+Version=3.22.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.21.0 to version 3.22.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Feb 2022 08:47:39 AM EST
+
+Version=4.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.22.0 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Mar 2022 05:20:09 AM EDT
+
+Version=4.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 06 Apr 2022 05:17:23 AM EDT
+
+Version=4.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.1.1
+
+----------------------------------------------------------------
+
+Date: Thu 26 May 2022 05:31:37 AM EDT
+
+Version=4.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.1 to version 4.2.0
+
+----------------------------------------------------------------
+
+Date: Mon 22 Aug 2022 08:01:02 PM EDT
+
+Version=4.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.2.0 to version 4.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Oct 2022 08:44:46 AM EDT
+
+Version=4.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.0 to version 4.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 20 Dec 2022 07:35:43 AM EST
+
+Version=4.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.0 to version 4.5.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 05:32:11 AM EST
+
+Version=4.5.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.5.0 to version 4.5.1
+
+----------------------------------------------------------------
+
+Date: Tue 07 Mar 2023 08:50:40 AM EST
+
+Version=4.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.5.1 to version 4.6.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Apr 2023 07:52:10 AM EDT
+
+Version=4.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.6.0 to version 4.6.1
+
+----------------------------------------------------------------
+
+Date: Wed 05 Jul 2023 09:02:36 AM EDT
+
+Version=4.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.6.1 to version 4.7.0
+
+----------------------------------------------------------------
+
+Date: Mon 21 Aug 2023 04:04:41 PM EDT
+
+Version=4.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.7.0 to version 4.8.0
+
+----------------------------------------------------------------
+
+Date: Tue 19 Sep 2023 09:04:25 AM EDT
+
+Version=4.8.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.8.0 to version 4.8.1
+
+----------------------------------------------------------------
+
+Date: Mon 27 Nov 2023 06:28:41 AM EST
+
+Version=4.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.8.1 to version 4.9.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=5.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.9.0 to version 5.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Nov 2024 10:14:06 AM EST
+
+Version=5.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.3.0 to version 5.4.0
+
+----------------------------------------------------------------
+
+Date: Fri 29 Nov 2024 06:39:35 AM EST
+
+Version=5.4.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.0 to version 5.4.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 14 Jan 2025 05:37:19 AM EST
+
+Version=5.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.0.1 to version 5.5.0
+
+----------------------------------------------------------------
+
+Date: Tue 25 Feb 2025 09:17:26 AM EST
+
+Version=5.5.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.5.0 to version 5.5.1
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:30 AM EST
+
+Version=5.5.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.5.1 to version 5.5.2
+
+----------------------------------------------------------------
+
+Date: Fri 04 Jul 2025 04:43:33 PM EDT
+
+Version=5.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.5.2 to version 5.6.0

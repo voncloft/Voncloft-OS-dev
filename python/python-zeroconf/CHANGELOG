@@ -1,0 +1,1039 @@
+Date: Sun 11 Jul 2021 01:14:00 PM EDT
+
+name=python-zeroconf
+version=0.32.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.28.8 to version 0.32.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:39:02 PM EDT
+
+version=0.32.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:41 AM EDT
+
+version=0.32.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:29 EDT 2021
+
+version=0.32.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:24 EDT 2021
+
+version=0.32.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:17 EDT 2021
+
+version=0.32.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 19 Jul 2021 04:17:36 PM EDT
+
+version=0.33.1
+release=1
+
+Synopsis:
+Upgraded from version 0.32.1 to version 0.33.1
+
+----------------------------------------------------------------
+
+Date: Wed Jul 28 15:21:39 EDT 2021
+
+version=0.33.2
+release=1
+
+Synopsis:
+Upgraded from version 0.33.1 to version 0.33.2
+
+----------------------------------------------------------------
+
+Date: Fri Aug  6 15:24:46 EDT 2021
+
+version=0.33.4
+release=1
+
+Synopsis:
+Upgraded from version 0.33.2 to version 0.33.4
+
+----------------------------------------------------------------
+
+Date: Mon Aug  9 15:19:48 EDT 2021
+
+version=0.34.3
+release=1
+
+Synopsis:
+Upgraded from version 0.33.4 to version 0.34.3
+
+----------------------------------------------------------------
+
+Date: Sat Aug 14 15:17:25 EDT 2021
+
+version=0.35.0
+release=1
+
+Synopsis:
+Upgraded from version 0.34.3 to version 0.35.0
+
+----------------------------------------------------------------
+
+Date: Mon Aug 16 15:20:42 EDT 2021
+
+version=0.35.1
+release=1
+
+Synopsis:
+Upgraded from version 0.35.0 to version 0.35.1
+
+----------------------------------------------------------------
+
+Date: Tue Aug 17 15:19:36 EDT 2021
+
+version=0.36.0
+release=1
+
+Synopsis:
+Upgraded from version 0.35.1 to version 0.36.0
+
+----------------------------------------------------------------
+
+Date: Sun Aug 29 15:19:22 EDT 2021
+
+version=0.36.1
+release=1
+
+Synopsis:
+Upgraded from version 0.36.0 to version 0.36.1
+
+----------------------------------------------------------------
+
+Date: Mon Aug 30 15:20:12 EDT 2021
+
+version=0.36.2
+release=1
+
+Synopsis:
+Upgraded from version 0.36.1 to version 0.36.2
+
+----------------------------------------------------------------
+
+Date: Wed Sep 15 15:17:44 EDT 2021
+
+version=0.36.3
+release=1
+
+Synopsis:
+Upgraded from version 0.36.2 to version 0.36.3
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:46:12 AM EDT
+
+Version=0.36.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.3 to version 0.36.4
+
+----------------------------------------------------------------
+
+Date: Thu 30 Sep 2021 05:50:59 AM EDT
+
+Version=0.36.7
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.4 to version 0.36.7
+
+----------------------------------------------------------------
+
+Date: Mon 25 Oct 2021 05:40:34 PM EDT
+
+Version=0.36.9
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.8 to version 0.36.9
+
+----------------------------------------------------------------
+
+Date: Mon 25 Oct 2021 05:40:35 PM EDT
+
+Version=0.36.9
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.8 to version 0.36.9
+
+----------------------------------------------------------------
+
+Date: Mon 25 Oct 2021 05:40:35 PM EDT
+
+Version=0.36.9
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.8 to version 0.36.9
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:24 PM EDT
+
+Version=0.36.11
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.9 to version 0.36.11
+
+----------------------------------------------------------------
+
+Date: Sun 07 Nov 2021 09:00:08 AM EST
+
+Version=0.36.12
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.11 to version 0.36.12
+
+----------------------------------------------------------------
+
+Date: Sat 13 Nov 2021 04:03:53 PM EST
+
+Version=0.36.13
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.12 to version 0.36.13
+
+----------------------------------------------------------------
+
+Date: Fri 19 Nov 2021 06:25:33 PM EST
+
+Version=0.37.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.36.13 to version 0.37.0
+
+----------------------------------------------------------------
+
+Date: Fri 24 Dec 2021 03:44:41 PM EST
+
+Version=0.38.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.37.0 to version 0.38.1
+
+----------------------------------------------------------------
+
+Date: Wed 02 Feb 2022 03:48:49 PM EST
+
+Version=0.38.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.38.1 to version 0.38.3
+
+----------------------------------------------------------------
+
+Date: Wed 02 Mar 2022 08:20:29 AM EST
+
+Version=0.38.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.38.3 to version 0.38.4
+
+----------------------------------------------------------------
+
+Date: Mon 02 May 2022 06:34:21 AM EDT
+
+Version=0.38.5
+Release=1
+
+Synopsis:
+Upgraded from version 0.38.4 to version 0.38.5
+
+----------------------------------------------------------------
+
+Date: Sat 07 May 2022 09:14:00 PM EDT
+
+Version=0.38.6
+Release=1
+
+Synopsis:
+Upgraded from version 0.38.5 to version 0.38.6
+
+----------------------------------------------------------------
+
+Date: Tue 14 Jun 2022 05:05:22 PM EDT
+
+Version=0.38.7
+Release=1
+
+Synopsis:
+Upgraded from version 0.38.6 to version 0.38.7
+
+----------------------------------------------------------------
+
+Date: Sat 06 Aug 2022 05:11:47 PM EDT
+
+Version=0.39.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.38.7 to version 0.39.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Sep 2022 08:01:22 PM EDT
+
+Version=0.39.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.39.0 to version 0.39.1
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=0.39.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.39.1 to version 0.39.2
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:36 PM EDT
+
+Version=0.39.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.39.2 to version 0.39.3
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:06 AM EDT
+
+Version=0.39.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.39.3 to version 0.39.4
+
+----------------------------------------------------------------
+
+Date: Mon 19 Dec 2022 04:53:05 AM EST
+
+Version=0.44.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.39.4 to version 0.44.0
+
+----------------------------------------------------------------
+
+Date: Thu 22 Dec 2022 04:29:33 AM EST
+
+Version=0.45.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.44.0 to version 0.45.0
+
+----------------------------------------------------------------
+
+Date: Mon 26 Dec 2022 09:10:04 AM EST
+
+Version=0.47.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.45.0 to version 0.47.1
+
+----------------------------------------------------------------
+
+Date: Tue 14 Feb 2023 04:52:08 PM EST
+
+Version=0.47.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.47.1 to version 0.47.3
+
+----------------------------------------------------------------
+
+Date: Mon 20 Mar 2023 03:51:57 PM EDT
+
+Version=0.47.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.47.3 to version 0.47.4
+
+----------------------------------------------------------------
+
+Date: Tue 04 Apr 2023 03:49:39 PM EDT
+
+Version=0.54.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.47.4 to version 0.54.0
+
+----------------------------------------------------------------
+
+Date: Fri 07 Apr 2023 03:59:36 PM EDT
+
+Version=0.55.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.54.0 to version 0.55.0
+
+----------------------------------------------------------------
+
+Date: Sun 09 Apr 2023 05:53:34 PM EDT
+
+Version=0.56.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.55.0 to version 0.56.0
+
+----------------------------------------------------------------
+
+Date: Mon 24 Apr 2023 05:33:48 AM EDT
+
+Version=0.57.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.56.0 to version 0.57.0
+
+----------------------------------------------------------------
+
+Date: Wed 26 Apr 2023 08:00:46 AM EDT
+
+Version=0.58.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.57.0 to version 0.58.0
+
+----------------------------------------------------------------
+
+Date: Wed 26 Apr 2023 04:39:11 PM EDT
+
+Version=0.58.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.58.0 to version 0.58.2
+
+----------------------------------------------------------------
+
+Date: Mon 01 May 2023 07:53:54 PM EDT
+
+Version=0.60.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.58.2 to version 0.60.0
+
+----------------------------------------------------------------
+
+Date: Sat 06 May 2023 05:18:17 PM EDT
+
+Version=0.62.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.60.0 to version 0.62.0
+
+----------------------------------------------------------------
+
+Date: Sun 28 May 2023 11:32:10 AM EDT
+
+Version=0.63.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.62.0 to version 0.63.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Jun 2023 05:30:09 AM EDT
+
+Version=0.64.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.63.0 to version 0.64.1
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jun 2023 08:23:14 AM EDT
+
+Version=0.66.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.64.1 to version 0.66.0
+
+----------------------------------------------------------------
+
+Date: Sat 17 Jun 2023 07:31:34 PM EDT
+
+Version=0.68.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.66.0 to version 0.68.0
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:46 PM EDT
+
+Version=0.69.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.68.0 to version 0.69.0
+
+----------------------------------------------------------------
+
+Date: Mon 03 Jul 2023 08:38:26 AM EDT
+
+Version=0.70.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.69.0 to version 0.70.0
+
+----------------------------------------------------------------
+
+Date: Sun 09 Jul 2023 08:04:58 PM EDT
+
+Version=0.71.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.70.0 to version 0.71.0
+
+----------------------------------------------------------------
+
+Date: Tue 25 Jul 2023 10:08:52 AM EDT
+
+Version=0.71.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.71.0 to version 0.71.4
+
+----------------------------------------------------------------
+
+Date: Thu 03 Aug 2023 10:48:32 AM EDT
+
+Version=0.72.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.71.4 to version 0.72.0
+
+----------------------------------------------------------------
+
+Date: Sun 06 Aug 2023 02:07:02 PM EDT
+
+Version=0.74.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.72.0 to version 0.74.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:18 AM EDT
+
+Version=0.78.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.74.0 to version 0.78.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Aug 2023 10:22:48 AM EDT
+
+Version=0.79.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.78.0 to version 0.79.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Aug 2023 09:03:42 PM EDT
+
+Version=0.80.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.79.0 to version 0.80.0
+
+----------------------------------------------------------------
+
+Date: Wed 23 Aug 2023 03:43:42 PM EDT
+
+Version=0.82.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.80.0 to version 0.82.1
+
+----------------------------------------------------------------
+
+Date: Mon 28 Aug 2023 10:16:06 AM EDT
+
+Version=0.85.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.82.1 to version 0.85.0
+
+----------------------------------------------------------------
+
+Date: Tue 29 Aug 2023 05:56:57 PM EDT
+
+Version=0.88.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.85.0 to version 0.88.0
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:10 AM EDT
+
+Version=0.97.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.88.0 to version 0.97.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Sep 2023 09:02:40 AM EDT
+
+Version=0.98.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.97.0 to version 0.98.0
+
+----------------------------------------------------------------
+
+Date: Mon 11 Sep 2023 09:19:16 AM EDT
+
+Version=0.104.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.98.0 to version 0.104.0
+
+----------------------------------------------------------------
+
+Date: Tue 12 Sep 2023 09:56:38 AM EDT
+
+Version=0.108.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.104.0 to version 0.108.0
+
+----------------------------------------------------------------
+
+Date: Thu 14 Sep 2023 08:13:05 PM EDT
+
+Version=0.112.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.108.0 to version 0.112.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:34 AM EDT
+
+Version=0.113.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.112.0 to version 0.113.0
+
+----------------------------------------------------------------
+
+Date: Thu 28 Sep 2023 07:27:32 AM EDT
+
+Version=0.115.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.113.0 to version 0.115.0
+
+----------------------------------------------------------------
+
+Date: Mon 02 Oct 2023 07:28:26 AM EDT
+
+Version=0.115.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.115.0 to version 0.115.1
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:43 PM EDT
+
+Version=0.115.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.115.1 to version 0.115.2
+
+----------------------------------------------------------------
+
+Date: Tue 17 Oct 2023 11:50:06 AM EDT
+
+Version=0.118.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.115.2 to version 0.118.0
+
+----------------------------------------------------------------
+
+Date: Sat 21 Oct 2023 07:25:50 PM EDT
+
+Version=0.119.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.118.0 to version 0.119.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 09:39:14 AM EST
+
+Version=0.121.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.119.0 to version 0.121.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 11:32:34 PM EST
+
+Version=0.122.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.121.0 to version 0.122.3
+
+----------------------------------------------------------------
+
+Date: Mon 13 Nov 2023 11:16:20 AM EST
+
+Version=0.125.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.122.3 to version 0.125.0
+
+----------------------------------------------------------------
+
+Date: Wed 15 Nov 2023 08:46:38 AM EST
+
+Version=0.126.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.125.0 to version 0.126.0
+
+----------------------------------------------------------------
+
+Date: Thu 16 Nov 2023 10:06:46 AM EST
+
+Version=0.127.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.126.0 to version 0.127.0
+
+----------------------------------------------------------------
+
+Date: Mon 04 Dec 2023 03:44:25 AM EST
+
+Version=0.128.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.127.0 to version 0.128.0
+
+----------------------------------------------------------------
+
+Date: Tue 12 Dec 2023 03:57:34 AM EST
+
+Version=0.128.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.128.0 to version 0.128.4
+
+----------------------------------------------------------------
+
+Date: Thu 14 Dec 2023 05:39:14 PM EST
+
+Version=0.129.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.128.4 to version 0.129.0
+
+----------------------------------------------------------------
+
+Date: Sun 17 Dec 2023 11:10:45 AM EST
+
+Version=0.130.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.129.0 to version 0.130.0
+
+----------------------------------------------------------------
+
+Date: Wed 20 Dec 2023 03:59:29 AM EST
+
+Version=0.131.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.130.0 to version 0.131.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=0.135.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.131.0 to version 0.135.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:46 PM EST
+
+Version=0.136.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.135.0 to version 0.136.0
+
+----------------------------------------------------------------
+
+Date: Fri 22 Nov 2024 10:11:11 PM EST
+
+Version=0.136.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.136.0 to version 0.136.2
+
+----------------------------------------------------------------
+
+Date: Wed 08 Jan 2025 10:16:23 AM EST
+
+Version=0.137.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.136.2 to version 0.137.2
+
+----------------------------------------------------------------
+
+Date: Thu 09 Jan 2025 10:31:51 AM EST
+
+Version=0.138.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.137.2 to version 0.138.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:54 AM EST
+
+Version=0.139.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.138.0 to version 0.139.0
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jan 2025 10:18:16 AM EST
+
+Version=0.140.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.139.0 to version 0.140.1
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:40 AM EST
+
+Version=0.141.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.140.1 to version 0.141.0
+
+----------------------------------------------------------------
+
+Date: Mon 03 Feb 2025 07:16:03 AM EST
+
+Version=0.143.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.141.0 to version 0.143.0
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:57 PM EST
+
+Version=0.144.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.143.0 to version 0.144.3
+
+----------------------------------------------------------------
+
+Date: Mon 17 Feb 2025 06:55:43 AM EST
+
+Version=0.145.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.144.3 to version 0.145.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Feb 2025 04:03:54 PM EST
+
+Version=0.145.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.145.0 to version 0.145.1
+
+----------------------------------------------------------------
+
+Date: Sun 09 Mar 2025 09:49:57 AM EDT
+
+Version=0.146.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.145.1 to version 0.146.1
+
+----------------------------------------------------------------
+
+Date: Wed 02 Apr 2025 05:43:02 AM EDT
+
+Version=0.146.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.146.1 to version 0.146.2
+
+----------------------------------------------------------------
+
+Date: Thu 03 Apr 2025 09:37:03 AM EDT
+
+Version=0.146.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.146.2 to version 0.146.3
+
+----------------------------------------------------------------
+
+Date: Tue 15 Apr 2025 08:40:15 AM EDT
+
+Version=0.146.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.146.3 to version 0.146.4
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:55 PM EDT
+
+Version=0.146.5
+Release=1
+
+Synopsis:
+Upgraded from version 0.146.4 to version 0.146.5
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:23 AM EDT
+
+Version=0.147.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.146.5 to version 0.147.0

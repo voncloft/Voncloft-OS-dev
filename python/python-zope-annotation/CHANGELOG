@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:39:05 PM EDT
+
+name=python-zope-annotation
+version=4.7.0
+release=4
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:44 AM EDT
+
+version=4.7.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:33 EDT 2021
+
+version=4.7.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:28 EDT 2021
+
+version=4.7.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:20 EDT 2021
+
+version=4.7.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 06 Sep 2022 08:01:22 PM EDT
+
+Version=4.8
+Release=4
+
+Synopsis:
+Upgraded from version 4.7.0 to version 4.8
+
+----------------------------------------------------------------
+
+Date: Tue 28 Mar 2023 09:58:59 AM EDT
+
+Version=5.0
+Release=4
+
+Synopsis:
+Upgraded from version 4.8 to version 5.0
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:58 PM EST
+
+Version=5.1
+Release=4
+
+Synopsis:
+Upgraded from version 5.0 to version 5.1

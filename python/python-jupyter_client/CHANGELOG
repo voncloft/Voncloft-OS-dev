@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:28:45 PM EDT
+
+name=python-jupyter_client
+version=6.1.7
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:52:31 AM EDT
+
+version=6.1.7
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:10:53 EDT 2021
+
+version=6.1.7
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:13:36 EDT 2021
+
+version=6.1.7
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:24 EDT 2021
+
+version=6.1.7
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:41:18 AM EDT
+
+Version=6.1.12
+Release=3
+
+Synopsis:
+Upgraded from version 6.1.7 to version 6.1.12
+
+----------------------------------------------------------------
+
+Date: Tue 23 Nov 2021 04:22:01 AM EST
+
+Version=7.0.6
+Release=3
+
+Synopsis:
+Upgraded from version 6.1.12 to version 7.0.6
+
+----------------------------------------------------------------
+
+Date: Wed 24 Nov 2021 06:52:29 AM EST
+
+Version=7.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 7.0.6 to version 7.1.0

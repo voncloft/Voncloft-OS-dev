@@ -1,0 +1,49 @@
+Date: Wed 29 Sep 2021 07:27:01 AM EDT
+
+pcre2
+Version=10.37
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 10.35 to version 10.37
+
+----------------------------------------------------------------
+
+Date: Tue 16 Nov 2021 03:14:56 AM EST
+
+Version=10.39
+Release=1
+
+Synopsis:
+Upgraded from version 10.37 to version 10.39
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:25 AM EST
+
+Version=10.43
+Release=1
+
+Synopsis:
+Upgraded from version 10.42 to version 10.43
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=10.44
+Release=1
+
+Synopsis:
+Upgraded from version 10.43 to version 10.44
+
+----------------------------------------------------------------
+
+Date: Thu 06 Feb 2025 11:08:01 AM EST
+
+Version=10.45
+Release=1
+
+Synopsis:
+Upgraded from version 10.44 to version 10.45

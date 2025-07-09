@@ -1,0 +1,29 @@
+Date: Mon 05 Dec 2022 05:36:33 AM EST
+
+xinit
+Version=1.4.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.4.1 to version 1.4.2
+
+----------------------------------------------------------------
+
+Date: Mon 06 Jan 2025 07:00:27 AM EST
+
+Version=1.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.4.2 to version 1.4.3
+
+----------------------------------------------------------------
+
+Date: Tue 11 Mar 2025 11:32:03 AM EDT
+
+Version=1.4.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.4.3 to version 1.4.4

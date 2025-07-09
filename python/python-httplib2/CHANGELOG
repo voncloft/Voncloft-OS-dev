@@ -1,0 +1,109 @@
+Date: Sun 11 Jul 2021 01:12:38 PM EDT
+
+name=python-httplib2
+version=0.19.1
+release=4
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.18.1 to version 0.19.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:27:41 PM EDT
+
+version=0.19.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:51:28 AM EDT
+
+version=0.19.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:09:50 EDT 2021
+
+version=0.19.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:12:26 EDT 2021
+
+version=0.19.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:10:25 EDT 2021
+
+version=0.19.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 03 Nov 2021 11:03:39 AM EDT
+
+Version=0.20.2
+Release=4
+
+Synopsis:
+Upgraded from version 0.20.1 to version 0.20.2
+
+----------------------------------------------------------------
+
+Date: Fri 19 Nov 2021 06:25:32 PM EST
+
+Version=0.20.3
+Release=4
+
+Synopsis:
+Upgraded from version 0.20.2 to version 0.20.3
+
+----------------------------------------------------------------
+
+Date: Thu 03 Feb 2022 06:49:51 PM EST
+
+Version=0.20.4
+Release=4
+
+Synopsis:
+Upgraded from version 0.20.3 to version 0.20.4
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:05 AM EDT
+
+Version=0.21.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.20.4 to version 0.21.0
+
+----------------------------------------------------------------
+
+Date: Wed 22 Mar 2023 04:50:31 PM EDT
+
+Version=0.22.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.21.0 to version 0.22.0

@@ -1,0 +1,99 @@
+Date: Sun 11 Jul 2021 01:12:12 PM EDT
+
+name=python-cleo
+version=1.0.0
+release=4
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.7.6 to version 1.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:24:01 PM EDT
+
+version=1.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:47:51 AM EDT
+
+version=1.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:06:07 EDT 2021
+
+version=1.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:06:25 EDT 2021
+
+version=1.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:06:46 EDT 2021
+
+version=1.0.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 23 Nov 2022 04:32:50 AM EST
+
+Version=2.0.0
+Release=4
+
+Synopsis:
+Upgraded from version 1.0.0 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Nov 2022 05:01:54 AM EST
+
+Version=2.0.1
+Release=4
+
+Synopsis:
+Upgraded from version 2.0.0 to version 2.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 30 Oct 2023 07:50:36 PM EDT
+
+Version=2.1.0
+Release=4
+
+Synopsis:
+Upgraded from version 2.0.1 to version 2.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 19 Nov 2024 04:50:45 AM EST
+
+Version=2.2.1
+Release=4
+
+Synopsis:
+Upgraded from version 2.1.0 to version 2.2.1

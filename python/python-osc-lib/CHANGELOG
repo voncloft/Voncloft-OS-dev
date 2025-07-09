@@ -1,0 +1,209 @@
+Date: Sun 11 Jul 2021 01:13:02 PM EDT
+
+name=python-osc-lib
+version=2.4.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.2.1 to version 2.4.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:30:54 PM EDT
+
+version=2.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:54:38 AM EDT
+
+version=2.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:03 EDT 2021
+
+version=2.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:16:02 EDT 2021
+
+version=2.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:13:29 EDT 2021
+
+version=2.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Aug 25 15:22:24 EDT 2021
+
+version=2.4.2
+release=3
+
+Synopsis:
+Upgraded from version 2.4.1 to version 2.4.2
+
+----------------------------------------------------------------
+
+Date: Fri 18 Feb 2022 10:17:05 PM EST
+
+Version=2.5.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.4.2 to version 2.5.0
+
+----------------------------------------------------------------
+
+Date: Sun 22 May 2022 01:37:35 PM EDT
+
+Version=2.6.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.5.0 to version 2.6.0
+
+----------------------------------------------------------------
+
+Date: Sat 16 Jul 2022 04:58:48 PM EDT
+
+Version=2.6.1
+Release=3
+
+Synopsis:
+Upgraded from version 2.6.0 to version 2.6.1
+
+----------------------------------------------------------------
+
+Date: Thu 25 Aug 2022 11:01:51 AM EDT
+
+Version=2.6.2
+Release=3
+
+Synopsis:
+Upgraded from version 2.6.1 to version 2.6.2
+
+----------------------------------------------------------------
+
+Date: Tue 14 Feb 2023 04:52:08 PM EST
+
+Version=2.7.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.6.2 to version 2.7.0
+
+----------------------------------------------------------------
+
+Date: Tue 09 May 2023 05:38:55 PM EDT
+
+Version=2.8.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.7.0 to version 2.8.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Aug 2023 02:15:26 PM EDT
+
+Version=2.8.1
+Release=3
+
+Synopsis:
+Upgraded from version 2.8.0 to version 2.8.1
+
+----------------------------------------------------------------
+
+Date: Wed 15 Nov 2023 08:46:38 AM EST
+
+Version=2.9.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.8.1 to version 2.9.0
+
+----------------------------------------------------------------
+
+Date: Tue 16 Jan 2024 10:26:27 AM EST
+
+Version=3.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.9.0 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:38 AM EST
+
+Version=3.0.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=3.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.0.1 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Thu 21 Nov 2024 04:12:42 AM EST
+
+Version=3.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.1.0 to version 3.2.0
+
+----------------------------------------------------------------
+
+Date: Sun 13 Apr 2025 11:34:42 AM EDT
+
+Version=4.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.2.0 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:24 PM EDT
+
+Version=4.0.2
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.0.2

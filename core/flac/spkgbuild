@@ -1,0 +1,15 @@
+# description	: Audio CODEC similar to MP3, but lossless
+# depends	: libogg
+
+name=flac
+version=1.5.0
+release=1
+source="https://github.com/xiph/flac/releases/download/$version/flac-$version.tar.xz"
+build() {
+	cd *
+	./configure --prefix=/usr            \
+            --disable-thorough-tests \
+            --docdir=/usr/share/doc/flac-$version
+	make
+	make DESTDIR=$PKG install
+}

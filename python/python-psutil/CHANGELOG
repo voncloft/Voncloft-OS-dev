@@ -1,0 +1,179 @@
+Date: Mon 12 Jul 2021 03:32:16 PM EDT
+
+name=python-psutil
+version=5.8.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:55:59 AM EDT
+
+version=5.8.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:14:23 EDT 2021
+
+version=5.8.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:17:39 EDT 2021
+
+version=5.8.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:14:46 EDT 2021
+
+version=5.8.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 31 Dec 2021 12:47:22 AM EST
+
+Version=5.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.8.0 to version 5.9.0
+
+----------------------------------------------------------------
+
+Date: Sun 22 May 2022 01:37:35 PM EDT
+
+Version=5.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.0 to version 5.9.1
+
+----------------------------------------------------------------
+
+Date: Tue 06 Sep 2022 08:01:22 PM EDT
+
+Version=5.9.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.1 to version 5.9.2
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=5.9.3
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.2 to version 5.9.3
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=5.9.4
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.3 to version 5.9.4
+
+----------------------------------------------------------------
+
+Date: Tue 18 Apr 2023 07:52:11 AM EDT
+
+Version=5.9.5
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.4 to version 5.9.5
+
+----------------------------------------------------------------
+
+Date: Tue 17 Oct 2023 11:50:05 AM EDT
+
+Version=5.9.6
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.5 to version 5.9.6
+
+----------------------------------------------------------------
+
+Date: Mon 18 Dec 2023 04:53:27 AM EST
+
+Version=5.9.7
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.6 to version 5.9.7
+
+----------------------------------------------------------------
+
+Date: Mon 22 Jan 2024 05:56:49 PM EST
+
+Version=5.9.8
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.7 to version 5.9.8
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.8 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 22 Oct 2024 07:52:57 AM EDT
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 20 Dec 2024 06:55:16 AM EST
+
+Version=6.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.1.1
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:57 PM EST
+
+Version=7.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.1 to version 7.0.0

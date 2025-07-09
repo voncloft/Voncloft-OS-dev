@@ -1,0 +1,15 @@
+# description : In-process task scheduler with Cron-like capabilities
+# depends : python-setuptools python-six python-pytz python-tzlocal
+
+name=python-apscheduler
+version=4.0.0
+release=1
+
+source="https://github.com/agronholm/apscheduler/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

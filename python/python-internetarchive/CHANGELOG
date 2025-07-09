@@ -1,0 +1,289 @@
+Date: Sun 11 Jul 2021 01:12:41 PM EDT
+
+name=python-internetarchive
+version=2.0.3
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.9.9 to version 2.0.3
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:28:05 PM EDT
+
+version=2.0.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:51:52 AM EDT
+
+version=2.0.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:10:13 EDT 2021
+
+version=2.0.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:12:52 EDT 2021
+
+version=2.0.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:10:46 EDT 2021
+
+version=2.0.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Aug 27 15:18:08 EDT 2021
+
+version=2.1.0
+release=1
+
+Synopsis:
+Upgraded from version 2.0.3 to version 2.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 24 Nov 2021 06:52:29 AM EST
+
+Version=2.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.0 to version 2.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Jan 2022 04:36:32 PM EST
+
+Version=2.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.0 to version 2.3.0
+
+----------------------------------------------------------------
+
+Date: Sun 20 Mar 2022 06:17:15 AM EDT
+
+Version=3.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.0 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 03 Jun 2022 08:42:57 AM EDT
+
+Version=3.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Thu 16 Jun 2022 04:01:02 PM EDT
+
+Version=3.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.1 to version 3.0.2
+
+----------------------------------------------------------------
+
+Date: Fri 06 Jan 2023 05:20:26 PM EST
+
+Version=3.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.2 to version 3.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 01 Feb 2023 05:23:42 AM EST
+
+Version=3.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Fri 07 Apr 2023 12:06:54 AM EDT
+
+Version=3.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 09 May 2023 05:38:55 PM EDT
+
+Version=3.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.0 to version 3.5.0
+
+----------------------------------------------------------------
+
+Date: Thu 28 Dec 2023 08:57:42 AM EST
+
+Version=3.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.0 to version 3.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=4.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.6.0 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:45 PM EST
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 11 Nov 2024 05:44:40 AM EST
+
+Version=5.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 12 Nov 2024 09:45:11 AM EST
+
+Version=5.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.1 to version 5.0.2
+
+----------------------------------------------------------------
+
+Date: Wed 13 Nov 2024 05:29:35 AM EST
+
+Version=5.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.2 to version 5.0.3
+
+----------------------------------------------------------------
+
+Date: Sun 17 Nov 2024 12:02:43 PM EST
+
+Version=5.0.4
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.3 to version 5.0.4
+
+----------------------------------------------------------------
+
+Date: Wed 11 Dec 2024 03:57:22 AM EST
+
+Version=5.0.5
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.4 to version 5.0.5
+
+----------------------------------------------------------------
+
+Date: Thu 09 Jan 2025 10:31:50 AM EST
+
+Version=5.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.5 to version 5.1.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:54 AM EST
+
+Version=5.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.0 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:56 PM EST
+
+Version=5.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.2.1
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:46 AM EDT
+
+Version=5.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.1 to version 5.3.1
+
+----------------------------------------------------------------
+
+Date: Wed 30 Apr 2025 07:42:56 AM EDT
+
+Version=5.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.3.1 to version 5.4.0

@@ -1,0 +1,29 @@
+Date: Tue 05 Oct 2021 06:54:05 AM EDT
+
+xkbcomp
+Version=1.4.5
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.4.3 to version 1.4.5
+
+----------------------------------------------------------------
+
+Date: Thu 08 Dec 2022 04:10:08 PM EST
+
+Version=1.4.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.4.5 to version 1.4.6
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:03 AM EST
+
+Version=1.4.7
+Release=1
+
+Synopsis:
+Upgraded from version 1.4.6 to version 1.4.7

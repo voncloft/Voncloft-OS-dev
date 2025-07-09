@@ -1,0 +1,15 @@
+# description : Mock/Stub/Spy library for Python
+# depends : python
+
+name=python-flexmock
+version=0.12.2
+release=6
+
+source="https://github.com/bkabrda/flexmock/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,219 @@
+Date: Sun 11 Jul 2021 01:13:50 PM EDT
+
+name=python-tqdm
+version=4.61.2
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.56.0 to version 4.61.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:37:35 PM EDT
+
+version=4.61.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:15 AM EDT
+
+version=4.61.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:04 EDT 2021
+
+version=4.61.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:46 EDT 2021
+
+version=4.61.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:54 EDT 2021
+
+version=4.61.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat Jul 31 15:19:05 EDT 2021
+
+version=4.62.0
+release=1
+
+Synopsis:
+Upgraded from version 4.61.2 to version 4.62.0
+
+----------------------------------------------------------------
+
+Date: Sun Aug 15 15:18:37 EDT 2021
+
+version=4.62.1
+release=1
+
+Synopsis:
+Upgraded from version 4.62.0 to version 4.62.1
+
+----------------------------------------------------------------
+
+Date: Mon Aug 23 15:22:51 EDT 2021
+
+version=4.62.2
+release=1
+
+Synopsis:
+Upgraded from version 4.62.1 to version 4.62.2
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:45:31 AM EDT
+
+Version=4.62.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.62.2 to version 4.62.3
+
+----------------------------------------------------------------
+
+Date: Wed 02 Mar 2022 08:20:29 AM EST
+
+Version=4.63.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.62.3 to version 4.63.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Mar 2022 08:49:32 PM EDT
+
+Version=4.63.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.63.0 to version 4.63.1
+
+----------------------------------------------------------------
+
+Date: Wed 06 Apr 2022 05:17:24 AM EDT
+
+Version=4.64.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.63.1 to version 4.64.0
+
+----------------------------------------------------------------
+
+Date: Sun 04 Sep 2022 03:55:38 PM EDT
+
+Version=4.64.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.64.0 to version 4.64.1
+
+----------------------------------------------------------------
+
+Date: Tue 07 Mar 2023 08:50:41 AM EST
+
+Version=4.65.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.64.1 to version 4.65.0
+
+----------------------------------------------------------------
+
+Date: Wed 09 Aug 2023 08:12:31 AM EDT
+
+Version=4.65.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.65.0 to version 4.65.1
+
+----------------------------------------------------------------
+
+Date: Thu 10 Aug 2023 07:37:23 AM EDT
+
+Version=4.66.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.65.1 to version 4.66.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:18 AM EDT
+
+Version=4.66.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.66.0 to version 4.66.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Feb 2024 01:33:55 PM EST
+
+Version=4.66.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.66.1 to version 4.66.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=4.66.5
+Release=1
+
+Synopsis:
+Upgraded from version 4.66.2 to version 4.66.5
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:46 PM EST
+
+Version=4.67.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.66.5 to version 4.67.0
+
+----------------------------------------------------------------
+
+Date: Mon 25 Nov 2024 07:17:24 AM EST
+
+Version=4.67.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.67.0 to version 4.67.1

@@ -1,0 +1,89 @@
+Date: Mon 12 Jul 2021 03:39:01 PM EDT
+
+name=python-zeep
+version=4.0.0
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:40 AM EDT
+
+version=4.0.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:29 EDT 2021
+
+version=4.0.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:24 EDT 2021
+
+version=4.0.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:17 EDT 2021
+
+version=4.0.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sun Aug 15 15:18:48 EDT 2021
+
+version=4.1.0
+release=3
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 11:19:26 PM EDT
+
+Version=4.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=4.2.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.2.0 to version 4.2.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=4.3.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.2.1 to version 4.3.1

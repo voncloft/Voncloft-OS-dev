@@ -1,0 +1,15 @@
+# description : Python object model built on JSON schema and JSON patch.
+# depends : python-jsonschema python-jsonpatch python-six
+
+name=python-warlock
+version=2.1.0
+release=5
+
+source="https://github.com/bcwaldon/warlock/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,139 @@
+Date: Sun 11 Jul 2021 01:13:41 PM EDT
+
+name=python-soupsieve
+version=2.2.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.1.0 to version 2.2.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:36:21 PM EDT
+
+version=2.2.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:01 AM EDT
+
+version=2.2.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:18:49 EDT 2021
+
+version=2.2.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:22:21 EDT 2021
+
+version=2.2.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:18:42 EDT 2021
+
+version=2.2.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 04 Nov 2021 06:36:22 PM EDT
+
+Version=2.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.1 to version 2.3
+
+----------------------------------------------------------------
+
+Date: Thu 11 Nov 2021 09:45:05 PM EST
+
+Version=2.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.3 to version 2.3.1
+
+----------------------------------------------------------------
+
+Date: Fri 08 Apr 2022 12:41:45 PM EDT
+
+Version=2.3.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.1 to version 2.3.2
+
+----------------------------------------------------------------
+
+Date: Tue 14 Feb 2023 04:52:08 PM EST
+
+Version=2.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.2 to version 2.4
+
+----------------------------------------------------------------
+
+Date: Tue 18 Apr 2023 07:52:11 AM EDT
+
+Version=2.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.4 to version 2.4.1
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:10 AM EDT
+
+Version=2.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.1 to version 2.5
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=2.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.5 to version 2.6
+
+----------------------------------------------------------------
+
+Date: Mon 21 Apr 2025 08:11:36 AM EDT
+
+Version=2.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.6 to version 2.7

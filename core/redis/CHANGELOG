@@ -1,0 +1,288 @@
+Date: Mon 19 Apr 2021 07:12:29 AM EDT
+
+name=redis
+version=6.2.1
+release=2
+
+Synopsis:
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:27:21 AM EDT
+
+Version=6.2.5
+Release=2
+
+Synopsis:
+Upgraded from version 6.2.1 to version 6.2.5
+
+----------------------------------------------------------------
+
+Date: Tue 05 Oct 2021 06:57:34 AM EDT
+
+Version=6.2.6
+Release=2
+
+Synopsis:
+Upgraded from version 6.2.5 to version 6.2.6
+
+----------------------------------------------------------------
+
+Date: Thu 28 Apr 2022 10:24:07 AM EDT
+
+Version=7.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 6.2.6 to version 7.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 08 Jun 2022 07:53:59 PM EDT
+
+Version=7.0.1
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.0 to version 7.0.1
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jun 2022 03:41:53 PM EDT
+
+Version=7.0.2
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.1 to version 7.0.2
+
+----------------------------------------------------------------
+
+Date: Tue 12 Jul 2022 05:33:24 AM EDT
+
+Version=7.0.3
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.2 to version 7.0.3
+
+----------------------------------------------------------------
+
+Date: Tue 19 Jul 2022 05:25:16 AM EDT
+
+Version=7.0.4
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.3 to version 7.0.4
+
+----------------------------------------------------------------
+
+Date: Sat 24 Sep 2022 02:20:02 PM EDT
+
+Version=7.0.5
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.4 to version 7.0.5
+
+----------------------------------------------------------------
+
+Date: Tue 13 Dec 2022 03:48:19 AM EST
+
+Version=7.0.6
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.5 to version 7.0.6
+
+----------------------------------------------------------------
+
+Date: Sun 18 Dec 2022 06:50:52 AM EST
+
+Version=7.0.7
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.6 to version 7.0.7
+
+----------------------------------------------------------------
+
+Date: Tue 17 Jan 2023 08:06:28 AM EST
+
+Version=7.0.8
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.7 to version 7.0.8
+
+----------------------------------------------------------------
+
+Date: Tue 28 Feb 2023 05:29:02 PM EST
+
+Version=7.0.9
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.8 to version 7.0.9
+
+----------------------------------------------------------------
+
+Date: Mon 20 Mar 2023 03:51:56 PM EDT
+
+Version=7.0.10
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.9 to version 7.0.10
+
+----------------------------------------------------------------
+
+Date: Tue 18 Apr 2023 07:52:10 AM EDT
+
+Version=7.0.11
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.10 to version 7.0.11
+
+----------------------------------------------------------------
+
+Date: Mon 10 Jul 2023 06:52:36 PM EDT
+
+Version=7.0.12
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.11 to version 7.0.12
+
+----------------------------------------------------------------
+
+Date: Wed 16 Aug 2023 10:22:47 AM EDT
+
+Version=7.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 7.0.12 to version 7.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Sep 2023 09:02:40 AM EDT
+
+Version=7.2.1
+Release=2
+
+Synopsis:
+Upgraded from version 7.2.0 to version 7.2.1
+
+----------------------------------------------------------------
+
+Date: Sat 21 Oct 2023 07:25:47 PM EDT
+
+Version=7.2.2
+Release=2
+
+Synopsis:
+Upgraded from version 7.2.1 to version 7.2.2
+
+----------------------------------------------------------------
+
+Date: Sat 04 Nov 2023 05:20:29 PM EDT
+
+Version=7.2.3
+Release=2
+
+Synopsis:
+Upgraded from version 7.2.2 to version 7.2.3
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:34 AM EST
+
+Version=7.2.4
+Release=2
+
+Synopsis:
+Upgraded from version 7.2.3 to version 7.2.4
+
+----------------------------------------------------------------
+
+Date: Mon 20 May 2024 12:36:23 PM EDT
+
+Version=7.2.5
+Release=2
+
+Synopsis:
+Upgraded from version 7.2.4 to version 7.2.5
+
+----------------------------------------------------------------
+
+Date: Wed 07 Aug 2024 10:30:59 AM EDT
+
+Version=7.4.0
+Release=2
+
+Synopsis:
+Upgraded from version 7.2.5 to version 7.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 09 Oct 2024 03:20:32 PM EDT
+
+Version=7.4.1
+Release=2
+
+Synopsis:
+Upgraded from version 7.4.0 to version 7.4.1
+
+----------------------------------------------------------------
+
+Date: Wed 08 Jan 2025 10:16:22 AM EST
+
+Version=7.4.2
+Release=2
+
+Synopsis:
+Upgraded from version 7.4.1 to version 7.4.2
+
+----------------------------------------------------------------
+
+Date: Thu 24 Apr 2025 09:26:35 AM EDT
+
+Version=7.4.3
+Release=2
+
+Synopsis:
+Upgraded from version 7.4.2 to version 7.4.3
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:21 AM EDT
+
+Version=8.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 7.4.3 to version 8.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 14 May 2025 05:33:06 AM EDT
+
+Version=8.0.1
+Release=2
+
+Synopsis:
+Upgraded from version 8.0.0 to version 8.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:22 PM EDT
+
+Version=8.0.2
+Release=2
+
+Synopsis:
+Upgraded from version 8.0.1 to version 8.0.2

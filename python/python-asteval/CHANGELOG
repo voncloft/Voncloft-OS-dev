@@ -1,0 +1,119 @@
+Date: Sun 11 Jul 2021 01:12:04 PM EDT
+
+name=python-asteval
+version=0.9.25
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.9.21 to version 0.9.25
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:22:43 PM EDT
+
+version=0.9.25
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:46:43 AM EDT
+
+version=0.9.25
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:04:57 EDT 2021
+
+version=0.9.25
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:05:05 EDT 2021
+
+version=0.9.25
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:05:27 EDT 2021
+
+version=0.9.25
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 17 Jan 2022 04:56:44 AM EST
+
+Version=0.9.26
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.25 to version 0.9.26
+
+----------------------------------------------------------------
+
+Date: Wed 25 May 2022 05:30:44 AM EDT
+
+Version=0.9.27
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.26 to version 0.9.27
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=0.9.28
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.27 to version 0.9.28
+
+----------------------------------------------------------------
+
+Date: Mon 13 Feb 2023 06:47:46 AM EST
+
+Version=0.9.29
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.28 to version 0.9.29
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:45 PM EDT
+
+Version=0.9.30
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.29 to version 0.9.30
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jul 2023 08:27:18 PM EDT
+
+Version=0.9.31
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.30 to version 0.9.31

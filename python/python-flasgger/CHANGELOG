@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:26:19 PM EDT
+
+name=python-flasgger
+version=0.9.5
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:50:06 AM EDT
+
+version=0.9.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:26 EDT 2021
+
+version=0.9.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:10:52 EDT 2021
+
+version=0.9.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:09:04 EDT 2021
+
+version=0.9.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 06 May 2023 05:18:17 PM EDT
+
+Version=0.9.6
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.5 to version 0.9.6
+
+----------------------------------------------------------------
+
+Date: Thu 11 May 2023 07:03:23 PM EDT
+
+Version=0.9.7
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.6 to version 0.9.7
+
+----------------------------------------------------------------
+
+Date: Mon 22 May 2023 08:08:12 AM EDT
+
+Version=0.9.7.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.7 to version 0.9.7.1

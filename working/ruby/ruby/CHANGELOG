@@ -1,0 +1,199 @@
+Date: Wed Jul  7 12:01:39 EDT 2021
+
+name=ruby
+version=3.0.2
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.0.1 to version 3.0.2
+
+----------------------------------------------------------------
+
+Date: Fri 26 Nov 2021 08:53:25 AM EST
+
+Version=3.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.2 to version 3.0.3
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 05:26:31 AM EDT
+
+Version=3.0.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.3 to version 3.0.4
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 08:42:38 AM EDT
+
+Version=3.1.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.4 to version 3.1.2
+
+----------------------------------------------------------------
+
+Date: Fri 25 Nov 2022 05:01:53 AM EST
+
+Version=3.1.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.1.2 to version 3.1.3
+
+----------------------------------------------------------------
+
+Date: Wed 07 Dec 2022 05:20:41 AM EST
+
+Version=3.2.0.rc1
+Release=1
+
+Synopsis:
+Upgraded from version 3.1.3 to version 3.2.0.rc1
+
+----------------------------------------------------------------
+
+Date: Wed 08 Feb 2023 10:52:49 PM EST
+
+Version=3.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.0.rc1 to version 3.2.1
+
+----------------------------------------------------------------
+
+Date: Thu 30 Mar 2023 04:03:50 PM EDT
+
+Version=3.2.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.1 to version 3.2.2
+
+----------------------------------------------------------------
+
+Date: Tue 12 Dec 2023 03:57:32 AM EST
+
+Version=3.3.0.rc1
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.2 to version 3.3.0.rc1
+
+----------------------------------------------------------------
+
+Date: Wed 27 Dec 2023 06:23:05 AM EST
+
+Version=3.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.2 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 08 May 2024 01:16:17 PM EDT
+
+Version=3.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.3.1
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jun 2024 05:48:28 PM EDT
+
+Version=3.3.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.1 to version 3.3.2
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=3.3.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.2 to version 3.3.3
+
+----------------------------------------------------------------
+
+Date: Wed 17 Jul 2024 11:45:24 AM EDT
+
+Version=3.3.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.3 to version 3.3.4
+
+----------------------------------------------------------------
+
+Date: Wed 04 Sep 2024 10:14:48 AM EDT
+
+Version=3.3.5
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.4 to version 3.3.5
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:36 PM EST
+
+Version=3.3.6
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.5 to version 3.3.6
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:04 AM EST
+
+Version=3.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.6 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:48 PM EST
+
+Version=3.4.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.1 to version 3.4.2
+
+----------------------------------------------------------------
+
+Date: Tue 15 Apr 2025 08:40:12 AM EDT
+
+Version=3.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.2 to version 3.4.3
+
+----------------------------------------------------------------
+
+Date: Thu 15 May 2025 10:41:33 AM EDT
+
+Version=3.4.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.3 to version 3.4.4

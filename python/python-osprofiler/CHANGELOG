@@ -1,0 +1,119 @@
+Date: Sun 11 Jul 2021 01:13:03 PM EDT
+
+name=python-osprofiler
+version=3.4.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.4.0 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:31:05 PM EDT
+
+version=3.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:54:48 AM EDT
+
+version=3.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:13 EDT 2021
+
+version=3.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:16:14 EDT 2021
+
+version=3.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:13:38 EDT 2021
+
+version=3.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon Sep  6 15:16:49 EDT 2021
+
+version=3.4.2
+release=3
+
+Synopsis:
+Upgraded from version 3.4.1 to version 3.4.2
+
+----------------------------------------------------------------
+
+Date: Sat 07 May 2022 09:13:59 PM EDT
+
+Version=3.4.3
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.2 to version 3.4.3
+
+----------------------------------------------------------------
+
+Date: Fri 23 Jun 2023 02:38:49 PM EDT
+
+Version=4.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.3 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 13 Jul 2023 11:28:06 PM EDT
+
+Version=4.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=4.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 29 May 2025 10:30:15 AM EDT
+
+Version=4.3.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.2.0 to version 4.3.0

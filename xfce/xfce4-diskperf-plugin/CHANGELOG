@@ -1,0 +1,29 @@
+Date: Fri 04 Mar 2022 02:35:56 PM EST
+
+xfce4-diskperf-plugin
+Version=2.7.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.6.3 to version 2.7.0
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:06 AM EST
+
+Version=2.7.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.0 to version 2.7.1
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:25 PM EDT
+
+Version=2.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.1 to version 2.8.0

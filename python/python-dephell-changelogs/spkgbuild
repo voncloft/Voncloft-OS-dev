@@ -1,0 +1,15 @@
+# description : Find changelog for github repository, local dir, parse changelog
+# depends : python-requests
+
+name=python-dephell-changelogs
+version=0.0.1
+release=3
+
+source="https://github.com/packages/source/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

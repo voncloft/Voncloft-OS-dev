@@ -1,0 +1,29 @@
+Date: Mon 07 Feb 2022 01:00:49 PM EST
+
+freeglut
+Version=3.2.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.2.1 to version 3.2.2
+
+----------------------------------------------------------------
+
+Date: Fri 07 Oct 2022 05:41:15 PM EDT
+
+Version=3.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.2 to version 3.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=3.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.0 to version 3.6.0

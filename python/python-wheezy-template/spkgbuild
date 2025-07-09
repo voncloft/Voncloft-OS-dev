@@ -1,0 +1,15 @@
+# description : lightweight template library
+# depends : python
+
+name=python-wheezy-template
+version=3.2.3
+release=1
+
+source=https://github.com/akornatskyy/wheezy.template/archive/refs/tags/$version.tar.gz
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

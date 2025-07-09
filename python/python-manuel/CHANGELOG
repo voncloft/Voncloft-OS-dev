@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:29:38 PM EDT
+
+name=python-manuel
+version=1.10.1
+release=5
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:23 AM EDT
+
+version=1.10.1
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:44 EDT 2021
+
+version=1.10.1
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:36 EDT 2021
+
+version=1.10.1
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:14 EDT 2021
+
+version=1.10.1
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 17 May 2022 10:18:30 AM EDT
+
+Version=1.11.2
+Release=5
+
+Synopsis:
+Upgraded from version 1.10.1 to version 1.11.2
+
+----------------------------------------------------------------
+
+Date: Fri 24 Jun 2022 11:16:43 PM EDT
+
+Version=1.12.4
+Release=5
+
+Synopsis:
+Upgraded from version 1.11.2 to version 1.12.4
+
+----------------------------------------------------------------
+
+Date: Wed 13 Nov 2024 05:29:35 AM EST
+
+Version=1.13.0
+Release=5
+
+Synopsis:
+Upgraded from version 1.12.4 to version 1.13.0

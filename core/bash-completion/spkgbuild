@@ -1,0 +1,45 @@
+# description   : Programmable completion for the bash shell
+# depends       : 
+
+name=bash-completion
+version=2.11.0
+release=1
+
+source="profile
+	bash_completion.sh
+	dircolors.sh
+	extrapaths.sh
+	readline.sh
+	umask.sh
+	i18n.sh
+	bashrc
+	.bash_profile
+	.profile
+	.bashrc
+	.bash_logout
+	.nanorc"
+
+build()
+{
+	mkdir $PKG/etc
+	install --directory --mode=0755 --owner=root --group=root $PKG/etc/profile.d
+	install -Dm644 $SRC/profile $PKG/etc/profile
+	install --directory --mode=0755 --owner=root --group=root $PKG/etc/bash_completion.d
+	mkdir -pv $PKG/etc/profile.d/
+	install -Dm644 $SRC/bash_completion.sh $PKG/etc/profile.d/bash_completion.sh
+	install -Dm644 $SRC/dircolors.sh $PKG/etc/profile.d/dircolors.sh
+	install -Dm644 $SRC/extrapaths.sh $PKG/etc/profile.d/extrapaths.sh
+	install -Dm644 $SRC/readline.sh $PKG/etc/profile.d/readline.sh
+	install -Dm644 $SRC/umask.sh $PKG/etc/profile.d/umask.sh
+	install -Dm644 $SRC/i18n.sh $PKG/etc/profile.d/i18n.sh
+	install -Dm644 $SRC/bashrc $PKG/etc/bashrc
+
+	mkdir -pv $PKG/etc/skel
+	install -Dm644 $SRC/.bash_profile $PKG/etc/skel/.bash_profile
+	install -Dm644 $SRC/.profile $PKG/etc/skel/.profile
+	install -Dm644 $SRC/.bashrc $PKG/etc/skel/.bashrc
+	install -Dm644 $SRC/.bash_logout $PKG/etc/skel/.bash_logout
+	install -Dm644 $SRC/.nanorc $PKG/etc/skel/.nanorc
+	dircolors -p > $PKG/etc/dircolors
+	
+}

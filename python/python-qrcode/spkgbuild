@@ -1,0 +1,15 @@
+# description : Python library to generate QR codes
+# depends : python-pillow python-six python-setuptools
+
+name=python-qrcode
+version=8.2
+release=6
+
+source="https://github.com/lincolnloop/python-qrcode/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,79 @@
+Date: Wed 29 Sep 2021 07:28:15 AM EDT
+
+wpebackend-fdo
+Version=1.10.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.7.1 to version 1.10.0
+
+----------------------------------------------------------------
+
+Date: Tue 19 Oct 2021 06:49:04 PM EDT
+
+Version=1.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.0 to version 1.12.0
+
+----------------------------------------------------------------
+
+Date: Wed 10 Aug 2022 07:48:16 AM EDT
+
+Version=1.13.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.0 to version 1.13.1
+
+----------------------------------------------------------------
+
+Date: Tue 20 Sep 2022 05:53:49 PM EDT
+
+Version=1.14.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.13.1 to version 1.14.0
+
+----------------------------------------------------------------
+
+Date: Tue 07 Mar 2023 08:50:40 AM EST
+
+Version=1.14.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.14.0 to version 1.14.1
+
+----------------------------------------------------------------
+
+Date: Wed 22 Mar 2023 04:50:31 PM EDT
+
+Version=1.14.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.14.1 to version 1.14.2
+
+----------------------------------------------------------------
+
+Date: Mon 16 Sep 2024 10:46:15 AM EDT
+
+Version=1.15.90
+Release=1
+
+Synopsis:
+Upgraded from version 1.14.2 to version 1.15.90
+
+----------------------------------------------------------------
+
+Date: Sun 16 Mar 2025 08:54:22 AM EDT
+
+Version=1.16.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.15.90 to version 1.16.0

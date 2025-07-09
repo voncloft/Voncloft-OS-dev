@@ -1,0 +1,15 @@
+# description : CloudFormation Linter
+# depends : python python-yaml python-six python-aws-sam-translator
+
+name=python-cfn-lint
+version=1.37.0
+release=1
+
+source="https://github.com/aws-cloudformation/cfn-lint/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

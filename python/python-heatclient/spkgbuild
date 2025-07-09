@@ -1,0 +1,15 @@
+# description : OpenStack Orchestration API Client Library
+# depends : python-babel python-pbr python-cliff python-iso8601 python-osc-lib
+
+name=python-heatclient
+version=4.2.0
+release=1
+
+source="https://github.com/openstack/python-heatclient/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

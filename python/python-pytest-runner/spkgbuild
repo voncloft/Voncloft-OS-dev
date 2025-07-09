@@ -1,0 +1,15 @@
+# description : Invoke py.test as distutils command with dependency resolution
+  # depends : python-pytest
+
+name=python-pytest-runner
+version=6.0.1
+release=3
+
+source="https://github.com/pytest-dev/pytest-runner/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

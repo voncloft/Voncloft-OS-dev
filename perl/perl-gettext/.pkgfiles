@@ -1,0 +1,16 @@
+perl-gettext-1.07-10
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/Gettext.pm
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Gettext/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/auto/Gettext/autosplit.ix
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/demo.pl
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/Gettext.3.gz

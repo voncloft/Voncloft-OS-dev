@@ -1,0 +1,39 @@
+Date: Wed 29 Sep 2021 07:43:31 AM EDT
+
+python-pyotherside
+Version=1.5.9
+Release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.5.8 to version 1.5.9
+
+----------------------------------------------------------------
+
+Date: Sat 06 Aug 2022 05:11:47 PM EDT
+
+Version=1.6.0
+Release=3
+
+Synopsis:
+Upgraded from version 1.5.9 to version 1.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=1.6.1
+Release=3
+
+Synopsis:
+Upgraded from version 1.6.0 to version 1.6.1
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:57 PM EST
+
+Version=1.6.2
+Release=3
+
+Synopsis:
+Upgraded from version 1.6.1 to version 1.6.2

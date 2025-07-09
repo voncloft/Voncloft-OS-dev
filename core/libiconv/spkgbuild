@@ -1,0 +1,17 @@
+# description : blah
+# depends :
+
+name=libiconv
+version=1.18
+release=1
+
+source="https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz"
+options="!checksum"
+
+build()
+{
+	cd *
+	./configure --prefix=/usr
+make
+make DESTDIR=$PKG install
+}

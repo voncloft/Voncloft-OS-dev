@@ -1,0 +1,119 @@
+Date: Sun 11 Jul 2021 01:12:14 PM EDT
+
+name=python-colorlog
+version=6.3.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.7.2 to version 6.3.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:24:19 PM EDT
+
+version=6.3.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:48:08 AM EDT
+
+version=6.3.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:06:23 EDT 2021
+
+version=6.3.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:06:44 EDT 2021
+
+version=6.3.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:07:06 EDT 2021
+
+version=6.3.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon Aug 23 15:21:06 EDT 2021
+
+version=6.4.1
+release=1
+
+Synopsis:
+Upgraded from version 6.3.0 to version 6.4.1
+
+----------------------------------------------------------------
+
+Date: Tue 09 Nov 2021 11:41:07 AM EST
+
+Version=6.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.5.0 to version 6.6.0
+
+----------------------------------------------------------------
+
+Date: Mon 29 Aug 2022 03:53:05 PM EDT
+
+Version=6.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.6.0 to version 6.7.0
+
+----------------------------------------------------------------
+
+Date: Sat 02 Dec 2023 09:19:02 PM EST
+
+Version=6.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.7.0 to version 6.8.0
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:32 AM EST
+
+Version=6.8.2
+Release=1
+
+Synopsis:
+Upgraded from version 6.8.0 to version 6.8.2
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:45 PM EST
+
+Version=6.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.8.2 to version 6.9.0

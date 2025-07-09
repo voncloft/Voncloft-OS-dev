@@ -1,0 +1,249 @@
+Date: Mon 12 Jul 2021 03:30:59 PM EDT
+
+name=python-oslo-db
+version=8.5.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:54:43 AM EDT
+
+version=8.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:08 EDT 2021
+
+version=8.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:16:08 EDT 2021
+
+version=8.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:13:33 EDT 2021
+
+version=8.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:42:22 AM EDT
+
+Version=11.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.5.0 to version 11.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 19 Nov 2021 06:25:32 PM EST
+
+Version=11.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.0.0 to version 11.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Feb 2022 03:38:37 PM EST
+
+Version=11.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.1.0 to version 11.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 28 Apr 2022 10:24:08 AM EDT
+
+Version=11.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.2.0 to version 11.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 12 Jul 2022 06:35:13 PM EDT
+
+Version=12.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.3.0 to version 12.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 30 Aug 2022 08:54:25 PM EDT
+
+Version=12.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 12.0.0 to version 12.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=12.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 12.1.0 to version 12.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 04:29:44 PM EST
+
+Version=12.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 12.2.0 to version 12.3.0
+
+----------------------------------------------------------------
+
+Date: Fri 20 Jan 2023 05:10:27 PM EST
+
+Version=12.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 12.3.0 to version 12.3.1
+
+----------------------------------------------------------------
+
+Date: Wed 19 Apr 2023 07:16:58 AM EDT
+
+Version=13.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 12.3.1 to version 13.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 23 Jun 2023 02:38:49 PM EDT
+
+Version=13.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 13.0.0 to version 13.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 03 Jul 2023 08:38:26 AM EDT
+
+Version=13.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 13.0.1 to version 13.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 29 Aug 2023 05:56:57 PM EDT
+
+Version=14.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 13.1.0 to version 14.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:33 AM EDT
+
+Version=14.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 14.0.0 to version 14.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:38 AM EST
+
+Version=15.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 14.1.0 to version 15.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=16.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 15.0.0 to version 16.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 22 Nov 2024 10:11:11 PM EST
+
+Version=17.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 16.0.0 to version 17.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 12 Dec 2024 07:07:47 AM EST
+
+Version=17.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 17.0.0 to version 17.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 22 Feb 2025 06:35:42 PM EST
+
+Version=17.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 17.1.0 to version 17.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:32 AM EST
+
+Version=17.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 17.2.0 to version 17.2.1

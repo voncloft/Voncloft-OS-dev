@@ -1,0 +1,109 @@
+Date: Mon 12 Jul 2021 03:25:27 PM EDT
+
+name=python-django-rest-framework
+version=3.12.2
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:49:15 AM EDT
+
+version=3.12.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:07:31 EDT 2021
+
+version=3.12.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:09:49 EDT 2021
+
+version=3.12.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:08:14 EDT 2021
+
+version=3.12.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:39:40 AM EDT
+
+Version=3.12.4
+Release=3
+
+Synopsis:
+Upgraded from version 3.12.2 to version 3.12.4
+
+----------------------------------------------------------------
+
+Date: Tue 14 Dec 2021 04:38:17 AM EST
+
+Version=3.13.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.12.4 to version 3.13.0
+
+----------------------------------------------------------------
+
+Date: Thu 16 Dec 2021 07:30:48 AM EST
+
+Version=3.13.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.13.0 to version 3.13.1
+
+----------------------------------------------------------------
+
+Date: Sat 24 Sep 2022 02:20:03 PM EDT
+
+Version=3.14.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.13.1 to version 3.14.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=3.15.2
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.0 to version 3.15.2
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:46 AM EDT
+
+Version=3.16.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.15.2 to version 3.16.0

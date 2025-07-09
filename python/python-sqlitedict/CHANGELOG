@@ -1,0 +1,59 @@
+Date: Mon 12 Jul 2021 03:36:47 PM EDT
+
+name=python-sqlitedict
+version=1.7.0
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:27 AM EDT
+
+version=1.7.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:16 EDT 2021
+
+version=1.7.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:22:52 EDT 2021
+
+version=1.7.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:08 EDT 2021
+
+version=1.7.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sun 04 Dec 2022 10:34:37 AM EST
+
+Version=2.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 1.7.0 to version 2.1.0

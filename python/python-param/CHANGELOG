@@ -1,0 +1,169 @@
+Date: Sun 11 Jul 2021 01:13:04 PM EDT
+
+name=python-param
+version=1.11.2
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.10.0 to version 1.11.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:31:14 PM EDT
+
+version=1.11.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:54:57 AM EDT
+
+version=1.11.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:21 EDT 2021
+
+version=1.11.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:16:23 EDT 2021
+
+version=1.11.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:13:46 EDT 2021
+
+version=1.11.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 02 Oct 2021 01:16:50 PM EDT
+
+Version=1.11.22
+Release=1
+
+Synopsis:
+Upgraded from version 1.11.2 to version 1.11.22
+
+----------------------------------------------------------------
+
+Date: Fri 19 Nov 2021 06:25:32 PM EST
+
+Version=1.12.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.0 to version 1.12.1
+
+----------------------------------------------------------------
+
+Date: Fri 03 Jun 2022 08:42:57 AM EDT
+
+Version=1.12.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.1 to version 1.12.2
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=1.12.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.2 to version 1.12.3
+
+----------------------------------------------------------------
+
+Date: Tue 14 Mar 2023 04:05:54 PM EDT
+
+Version=1.13.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.3 to version 1.13.0
+
+----------------------------------------------------------------
+
+Date: Fri 23 Jun 2023 04:10:41 PM EDT
+
+Version=2.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.13.0 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 09:39:13 AM EST
+
+Version=2.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.0.0 to version 2.0.1
+
+----------------------------------------------------------------
+
+Date: Thu 18 Jan 2024 05:27:52 AM EST
+
+Version=2.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.0.1 to version 2.0.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=2.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.0.2 to version 2.1.1
+
+----------------------------------------------------------------
+
+Date: Tue 17 Dec 2024 07:42:18 AM EST
+
+Version=2.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.1 to version 2.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 12 Jun 2025 05:38:17 AM EDT
+
+Version=2.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.0 to version 2.2.1

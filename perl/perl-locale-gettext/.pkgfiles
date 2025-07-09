@@ -1,0 +1,17 @@
+perl-locale-gettext-1.07-10
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/Locale/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/Locale/gettext.pm
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Locale/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Locale/gettext/
+-r-xr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Locale/gettext/gettext.so
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/Locale::gettext.3.gz

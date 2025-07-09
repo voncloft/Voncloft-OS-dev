@@ -1,0 +1,54 @@
+# description	: Collection of modular and reusable compiler and toolchain technologies
+# depends	: cmake ninja libffi python3 libxml2
+
+name=llvm
+version=20.1.7
+release=1
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-${version}.src.tar.xz
+https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-20.1.7.src.tar.xz
+https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-20.1.7.src.tar.xz
+https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/clang-20.1.7.src.tar.xz"
+noextract="llvm-cmake-20.1.7.src.tar.xz llvm-third-party-20.1.7.src.tar.xz clang-20.1.7.src.tar.xz"
+
+build() {
+	cd $name-$version.src
+
+	# The upstream expects them extracted at the same level as the llvm tarball, and 
+	# the extracted directories renamed to cmake and third-party:
+	tar -xf $SRC/llvm-cmake-20.1.7.src.tar.xz                              &&
+	tar -xf $SRC/llvm-third-party-20.1.7.src.tar.xz                        &&
+sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-20.1.7.src@'          \
+    -i CMakeLists.txt                                                &&
+sed '/LLVM_THIRD_PARTY_DIR/s@../third-party@third-party-20.1.7.src@' \
+    -i cmake/modules/HandleLLVMOptions.cmake
+
+	tar -xf $SRC/clang-20.1.7.src.tar.xz -C tools &&
+	mv tools/clang-20.1.7.src tools/clang
+
+	# Fix Python scripts which use /usr/bin/env python to access the system Python:
+		grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
+		sed 's/utility/tool/' -i utils/FileCheck/CMakeLists.txt
+	mkdir build
+	cd build
+	
+CC=gcc CXX=g++                               \
+cmake -D CMAKE_INSTALL_PREFIX=/usr           \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON         \
+      -D LLVM_ENABLE_FFI=ON                  \
+      -D CMAKE_BUILD_TYPE=Release            \
+      -D LLVM_BUILD_LLVM_DYLIB=ON            \
+      -D LLVM_LINK_LLVM_DYLIB=ON             \
+      -D LLVM_ENABLE_RTTI=ON                 \
+      -D LLVM_TARGETS_TO_BUILD="host;AMDGPU" \
+      -D LLVM_BINUTILS_INCDIR=/usr/include   \
+      -D LLVM_INCLUDE_BENCHMARKS=OFF         \
+      -D CLANG_DEFAULT_PIE_ON_LINUX=ON       \
+      -D CLANG_CONFIG_FILE_SYSTEM_DIR=/etc/clang \
+      -W no-dev -G Ninja ..
+      ninja
+      DESTDIR=$PKG ninja install
+	mkdir -pv $PKG/etc/clang
+	for i in clang clang++; do
+  echo -fstack-protector-strong > $PKG/etc/clang/$i.cfg
+done
+}

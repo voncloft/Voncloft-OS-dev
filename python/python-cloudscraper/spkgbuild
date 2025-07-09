@@ -1,0 +1,15 @@
+# description : Python module to bypass Cloudflares anti-bot page
+# depends : python-pyparsing python-requests python-requests-toolbelt
+
+name=python-cloudscraper
+version=3.0.0
+release=1
+
+source="https://github.com/VeNoMouS/cloudscraper/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

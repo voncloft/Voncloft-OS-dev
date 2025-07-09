@@ -1,0 +1,89 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libnma
+Version=1.8.32
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.8.30 to version 1.8.32
+
+----------------------------------------------------------------
+
+Date: Thu 20 Jan 2022 05:20:28 AM EST
+
+Version=1.8.34
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.32 to version 1.8.34
+
+----------------------------------------------------------------
+
+Date: Fri 25 Mar 2022 08:49:31 PM EDT
+
+Version=1.8.36
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.34 to version 1.8.36
+
+----------------------------------------------------------------
+
+Date: Fri 08 Apr 2022 12:41:44 PM EDT
+
+Version=1.8.38
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.36 to version 1.8.38
+
+----------------------------------------------------------------
+
+Date: Thu 16 Jun 2022 04:01:02 PM EDT
+
+Version=1.8.40
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.38 to version 1.8.40
+
+----------------------------------------------------------------
+
+Date: Wed 07 Sep 2022 10:32:01 PM EDT
+
+Version=1.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.40 to version 1.10.0
+
+----------------------------------------------------------------
+
+Date: Fri 09 Sep 2022 03:42:11 PM EDT
+
+Version=1.10.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.0 to version 1.10.2
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:02 PM EST
+
+Version=1.10.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.2 to version 1.10.4
+
+----------------------------------------------------------------
+
+Date: Tue 10 Jan 2023 05:35:35 PM EST
+
+Version=1.10.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.4 to version 1.10.6

@@ -1,0 +1,15 @@
+# description : PugJS syntax adapter for Django, Jinja2 and Mako templates
+# depends : python python-six python-chardet
+
+name=python-pypugjs
+version=5.12.0
+release=1
+
+source="https://github.com/kakulukia/pypugjs/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

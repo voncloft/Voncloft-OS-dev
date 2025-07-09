@@ -1,0 +1,15 @@
+# description : Add inline tabbed content to your Sphinx documentation
+# depends : python-sphinx
+
+name=python-sphinx-inline-tabs
+version=2023.04.21
+release=3
+
+source="https://github.com/pradyunsg/sphinx-inline-tabs/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

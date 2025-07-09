@@ -1,0 +1,21 @@
+# description	: Streaming media framework that enables applications to share a common set of plugins
+# depends	: glib
+
+name=gstreamer
+version=1.26.3
+release=1
+source="http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
+options="!checksum"
+build() {
+	cd $name-$version
+
+	mkdir build
+        cd build
+
+	meson setup ..            \
+      --prefix=/usr       \
+      --buildtype=release \
+      -D gst_debug=false 
+	ninja
+	DESTDIR=$PKG ninja install
+}

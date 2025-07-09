@@ -1,0 +1,15 @@
+# description : Google Authentication Library
+# depends : make-ca python-pyasn1-modules python-rsa python-setuptools
+
+name=python-google-auth
+version=2.40.3
+release=1
+
+source="https://github.com/GoogleCloudPlatform/google-auth-library-python/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

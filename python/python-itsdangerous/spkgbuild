@@ -1,0 +1,15 @@
+# description : Various helpers to pass trusted data to untrusted environments
+depends+=python
+
+name=python-itsdangerous
+version=2.2.0
+release=6
+
+source="https://github.com/mitsuhiko/itsdangerous/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

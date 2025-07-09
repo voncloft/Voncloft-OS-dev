@@ -1,0 +1,15 @@
+# description : Statistical computations and models for use with SciPy
+# depends : python-scipy python-pandas python-patsy
+
+name=python-statsmodels
+version=0.15.0
+release=2
+
+source="https://github.com/statsmodels/statsmodels/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

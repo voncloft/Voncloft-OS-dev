@@ -1,0 +1,109 @@
+Date: Sun 11 Jul 2021 01:12:49 PM EDT
+
+name=python-lazy-object-proxy
+version=1.6.0
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.5.2 to version 1.6.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:29:08 PM EDT
+
+version=1.6.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:52:53 AM EDT
+
+version=1.6.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:15 EDT 2021
+
+version=1.6.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:03 EDT 2021
+
+version=1.6.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:46 EDT 2021
+
+version=1.6.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 16 Dec 2021 07:30:49 AM EST
+
+Version=1.7.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.6.0 to version 1.7.1
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:35 PM EDT
+
+Version=1.8.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.7.1 to version 1.8.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 05:32:12 AM EST
+
+Version=1.9.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.8.0 to version 1.9.0
+
+----------------------------------------------------------------
+
+Date: Sun 17 Dec 2023 11:10:45 AM EST
+
+Version=1.10.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.9.0 to version 1.10.0
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:55 PM EDT
+
+Version=1.11.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.10.0 to version 1.11.0

@@ -1,0 +1,15 @@
+# description : Oslo Utility library
+# depends : python-six python-pbr python-iso8601 python-oslo-i18n python-pytz
+
+name=python-oslo-utils
+version=9.0.0
+release=3
+
+source="https://github.com/openstack/oslo.utils/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

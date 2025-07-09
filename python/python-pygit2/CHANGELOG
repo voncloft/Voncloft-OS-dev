@@ -1,0 +1,279 @@
+Date: Sun 11 Jul 2021 01:13:17 PM EDT
+
+name=python-pygit2
+version=1.6.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.5.0 to version 1.6.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:33:02 PM EDT
+
+version=1.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:56:45 AM EDT
+
+version=1.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:15:16 EDT 2021
+
+version=1.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:18:34 EDT 2021
+
+version=1.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:15:31 EDT 2021
+
+version=1.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 19 Nov 2021 06:25:32 PM EST
+
+Version=1.7.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.0 to version 1.7.1
+
+----------------------------------------------------------------
+
+Date: Tue 07 Dec 2021 05:22:56 AM EST
+
+Version=1.7.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.1 to version 1.7.2
+
+----------------------------------------------------------------
+
+Date: Fri 04 Feb 2022 05:19:39 PM EST
+
+Version=1.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.2 to version 1.8.0
+
+----------------------------------------------------------------
+
+Date: Wed 23 Feb 2022 06:59:45 AM EST
+
+Version=1.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.0 to version 1.9.0
+
+----------------------------------------------------------------
+
+Date: Tue 22 Mar 2022 11:03:54 PM EDT
+
+Version=1.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.0 to version 1.9.1
+
+----------------------------------------------------------------
+
+Date: Wed 25 May 2022 05:30:45 AM EDT
+
+Version=1.9.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.1 to version 1.9.2
+
+----------------------------------------------------------------
+
+Date: Mon 25 Jul 2022 05:34:22 AM EDT
+
+Version=1.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.2 to version 1.10.0
+
+----------------------------------------------------------------
+
+Date: Mon 29 Aug 2022 07:23:58 AM EDT
+
+Version=1.10.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.0 to version 1.10.1
+
+----------------------------------------------------------------
+
+Date: Mon 07 Nov 2022 08:41:58 AM EST
+
+Version=1.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.1 to version 1.11.0
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=1.11.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.11.0 to version 1.11.1
+
+----------------------------------------------------------------
+
+Date: Tue 04 Apr 2023 03:49:39 PM EDT
+
+Version=1.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.11.1 to version 1.12.0
+
+----------------------------------------------------------------
+
+Date: Mon 08 May 2023 08:57:40 AM EDT
+
+Version=1.12.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.0 to version 1.12.1
+
+----------------------------------------------------------------
+
+Date: Mon 26 Jun 2023 10:02:07 AM EDT
+
+Version=1.12.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.1 to version 1.12.2
+
+----------------------------------------------------------------
+
+Date: Mon 11 Sep 2023 09:19:16 AM EDT
+
+Version=1.13.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.12.2 to version 1.13.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:34 AM EDT
+
+Version=1.13.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.13.0 to version 1.13.1
+
+----------------------------------------------------------------
+
+Date: Mon 30 Oct 2023 07:50:38 PM EDT
+
+Version=1.13.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.13.1 to version 1.13.2
+
+----------------------------------------------------------------
+
+Date: Sun 26 Nov 2023 11:28:13 AM EST
+
+Version=1.13.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.13.2 to version 1.13.3
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:32 AM EST
+
+Version=1.14.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.13.3 to version 1.14.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Feb 2024 01:33:55 PM EST
+
+Version=1.14.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.14.0 to version 1.14.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=1.16.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.14.1 to version 1.16.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Jan 2025 10:31:51 AM EST
+
+Version=1.17.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.16.0 to version 1.17.0
+
+----------------------------------------------------------------
+
+Date: Mon 28 Apr 2025 05:29:54 AM EDT
+
+Version=1.18.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.17.0 to version 1.18.0

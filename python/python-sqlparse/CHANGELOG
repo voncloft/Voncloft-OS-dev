@@ -1,0 +1,109 @@
+Date: Mon 12 Jul 2021 03:36:49 PM EDT
+
+name=python-sqlparse
+version=0.4.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:29 AM EDT
+
+version=0.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:17 EDT 2021
+
+version=0.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:22:54 EDT 2021
+
+version=0.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:09 EDT 2021
+
+version=0.4.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Sep 10 15:31:54 EDT 2021
+
+version=0.4.2
+release=3
+
+Synopsis:
+Upgraded from version 0.4.1 to version 0.4.2
+
+----------------------------------------------------------------
+
+Date: Sat 24 Sep 2022 02:20:03 PM EDT
+
+Version=0.4.3
+Release=3
+
+Synopsis:
+Upgraded from version 0.4.2 to version 0.4.3
+
+----------------------------------------------------------------
+
+Date: Wed 19 Apr 2023 07:16:59 AM EDT
+
+Version=0.4.4
+Release=3
+
+Synopsis:
+Upgraded from version 0.4.3 to version 0.4.4
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=0.5.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.4.4 to version 0.5.1
+
+----------------------------------------------------------------
+
+Date: Sun 17 Nov 2024 12:02:44 PM EST
+
+Version=0.5.2
+Release=3
+
+Synopsis:
+Upgraded from version 0.5.1 to version 0.5.2
+
+----------------------------------------------------------------
+
+Date: Wed 11 Dec 2024 03:57:22 AM EST
+
+Version=0.5.3
+Release=3
+
+Synopsis:
+Upgraded from version 0.5.2 to version 0.5.3

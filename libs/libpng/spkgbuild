@@ -1,0 +1,17 @@
+# description	: A collection of routines used to create PNG format graphics files
+# depends	: zlib
+
+name=libpng
+version=1.6.50
+release=1
+source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz
+	https://downloads.sourceforge.net/sourceforge/$name-apng/$name-$version-apng.patch.gz"
+build() {
+	cd $name-$version
+
+  	gzip -cd $SRC/$name-$version-apng.patch.gz | patch -p1
+
+	./configure --prefix=/usr --disable-static
+	make
+	make DESTDIR=$PKG install
+}

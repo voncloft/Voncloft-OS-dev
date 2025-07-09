@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:38:22 PM EDT
+
+name=python-warlock
+version=1.3.3
+release=5
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:01 AM EDT
+
+version=1.3.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:50 EDT 2021
+
+version=1.3.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:24:39 EDT 2021
+
+version=1.3.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:20:39 EDT 2021
+
+version=1.3.3
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 16 Jun 2022 04:01:02 PM EDT
+
+Version=2.0.0
+Release=5
+
+Synopsis:
+Upgraded from version 1.3.3 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 17 Jun 2022 07:30:33 PM EDT
+
+Version=2.0.1
+Release=5
+
+Synopsis:
+Upgraded from version 2.0.0 to version 2.0.1
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:27 PM EDT
+
+Version=2.1.0
+Release=5
+
+Synopsis:
+Upgraded from version 2.0.1 to version 2.1.0

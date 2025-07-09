@@ -1,0 +1,29 @@
+Date: Wed 05 Mar 2025 08:42:30 AM EST
+
+libcec
+Version=7.0.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 6.0.2 to version 7.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 23 Jun 2025 01:25:44 PM EDT
+
+Version=7.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.0 to version 7.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 24 Jun 2025 05:40:08 AM EDT
+
+Version=7.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 7.1.0 to version 7.1.1

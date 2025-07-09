@@ -1,0 +1,15 @@
+# description : A tool for measuring code coverage of Python programs
+# depends : python-setuptools
+
+name=python-coverage
+version=7.9.2
+release=1
+
+source="https://github.com/nedbat/coveragepy/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

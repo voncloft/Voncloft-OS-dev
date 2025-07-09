@@ -1,0 +1,15 @@
+# description : Zope Configuration Markup Language ZCML
+# depends : python-setuptools python-zope-interface python-zope-schema python-zope-i18nmessageid
+
+name=python-zope-configuration
+version=6.0
+release=3
+
+source="https://github.com/zopefoundation/zope.configuration/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

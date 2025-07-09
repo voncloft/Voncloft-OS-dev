@@ -1,0 +1,15 @@
+# description : Tree widgets for urwid.
+# depends : python python-urwid>=1.1.0
+
+name=python-urwidtrees
+version=1.0.4
+release=5
+
+source="https://github.com/pazz/urwidtrees/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

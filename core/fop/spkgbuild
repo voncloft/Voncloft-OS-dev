@@ -1,0 +1,43 @@
+# description : XSL Formatting
+# depends : apache-ant
+
+name=fop
+version=2.11
+release=1
+pdf=2.0.25
+maven=3.8.4
+offo=2.2
+source="https://archive.apache.org/dist/xmlgraphics/fop/source/$name-$version-src.tar.gz
+	http://archive.apache.org/dist/pdfbox/$pdf/pdfbox-$pdf.jar
+	http://archive.apache.org/dist/pdfbox/$pdf/fontbox-$pdf.jar
+	http://archive.apache.org/dist/maven/maven-3/$maven/binaries/apache-maven-$maven-bin.tar.gz
+	https://downloads.sourceforge.net/offo/$offo/offo-hyphenation.zip"
+
+build() {
+	cd $name-$version
+	cp $SRC/offo-hyphenation/hyph/* fop/hyph
+
+
+	sed -i '\@</javad@i\
+	<arg value="-Xdoclint:none"/>\
+	<arg value="--allow-script-in-comments"/>\
+	<arg value="--ignore-source-errors"/>' \
+    	fop/build.xml
+
+
+	cp $SRC/{pdf,font}box-$pdf.jar fop/lib
+
+	cd fop 
+
+	LC_ALL=en_US.UTF-8                     \
+	PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/sbin:/usr/sbin:/opt/ant/bin:/usr/lib64/pkgconfig:/opt/fop:/opt/jdk/bin:/bin:$SRC/apache-maven-3.8.4/bin \
+	ant all javadocs
+
+	mv build/javadocs .
+
+	install -v -d -m755 -o root -g root          $PKG/opt/$name-$version
+	cp -vR build conf examples fop* javadocs lib $PKG/opt/$name-$version
+	chmod a+x $PKG/opt/$name-$version/$name
+	ln -v -sfn $name-$version $PKG/opt/$name
+	
+}

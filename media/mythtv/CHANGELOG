@@ -1,0 +1,68 @@
+Date: Tue 16 Mar 2021 06:38:49 PM EDT
+
+name=mythtv
+version=20210314
+release=1
+
+Synopsis:
+Initial creation of package to repository
+
+----------------------------------------------------------------
+
+Date: Fri 07 May 2021 09:18:30 AM EDT
+
+version=31.0
+release=1
+
+Synopsis:
+Upgraded from version 1.0 to version 31.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Feb 2022 06:35:49 PM EST
+
+Version=32.0
+Release=1
+
+Synopsis:
+Upgraded from version 31.0 to version 32.0
+
+----------------------------------------------------------------
+
+Date: Thu 02 Feb 2023 07:33:37 AM EST
+
+Version=33.0
+Release=1
+
+Synopsis:
+Upgraded from version 32.0 to version 33.0
+
+----------------------------------------------------------------
+
+Date: Mon 06 Feb 2023 09:55:53 PM EST
+
+Version=33.1
+Release=1
+
+Synopsis:
+Upgraded from version 33.0 to version 33.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Feb 2024 01:33:53 PM EST
+
+Version=34.0
+Release=1
+
+Synopsis:
+Upgraded from version 33.1 to version 34.0
+
+----------------------------------------------------------------
+
+Date: Tue 25 Feb 2025 09:17:26 AM EST
+
+Version=35.0
+Release=1
+
+Synopsis:
+Upgraded from version 34.0 to version 35.0

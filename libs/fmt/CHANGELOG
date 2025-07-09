@@ -1,0 +1,179 @@
+Date: Sat 08 May 2021 04:37:53 PM EDT
+
+name=fmt
+version=7.1.3
+release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 08 Dec 2021 09:53:47 AM EST
+
+Version=8.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 7.1.3 to version 8.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 03 Jan 2022 04:20:12 AM EST
+
+Version=8.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.0.1 to version 8.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 07 Jan 2022 06:46:37 PM EST
+
+Version=8.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 8.1.0 to version 8.1.1
+
+----------------------------------------------------------------
+
+Date: Tue 05 Jul 2022 06:34:59 PM EDT
+
+Version=9.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.1.1 to version 9.0.0
+
+----------------------------------------------------------------
+
+Date: Sat 27 Aug 2022 09:17:03 PM EDT
+
+Version=9.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 9.0.0 to version 9.1.0
+
+----------------------------------------------------------------
+
+Date: Thu 11 May 2023 07:03:23 PM EDT
+
+Version=10.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 9.1.0 to version 10.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:17 AM EDT
+
+Version=10.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 10.0.0 to version 10.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 29 Aug 2023 05:56:57 PM EDT
+
+Version=10.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 10.1.0 to version 10.1.1
+
+----------------------------------------------------------------
+
+Date: Mon 01 Jan 2024 04:27:34 PM EST
+
+Version=10.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 10.1.1 to version 10.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:35 AM EST
+
+Version=10.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 10.2.0 to version 10.2.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=11.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 10.2.1 to version 11.0.2
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:05 AM EST
+
+Version=11.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.0.2 to version 11.1.0
+
+----------------------------------------------------------------
+
+Date: Sun 29 Dec 2024 11:57:31 AM EST
+
+Version=11.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 11.1.0 to version 11.1.1
+
+----------------------------------------------------------------
+
+Date: Mon 13 Jan 2025 08:35:02 AM EST
+
+Version=11.1.2
+Release=1
+
+Synopsis:
+Upgraded from version 11.1.1 to version 11.1.2
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:39 AM EST
+
+Version=11.1.3
+Release=1
+
+Synopsis:
+Upgraded from version 11.1.2 to version 11.1.3
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:30 AM EST
+
+Version=11.1.4
+Release=1
+
+Synopsis:
+Upgraded from version 11.1.3 to version 11.1.4
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:21 AM EDT
+
+Version=11.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 11.1.4 to version 11.2.0

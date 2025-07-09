@@ -1,0 +1,15 @@
+# description : Pure-Python PostgreSQL database driver, DB-API compatible
+# depends : python python-scramp
+
+name=python-pg8000
+version=1.23.0
+release=3
+
+source="https://files.pythonhosted.org/packages/source/p/pg8000/pg8000-1.23.0.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

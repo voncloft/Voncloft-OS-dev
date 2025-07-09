@@ -1,0 +1,15 @@
+# description : Python library for serializing any arbitrary object graph into JSON
+# depends : python
+
+name=python-jsonpickle
+version=5.0.0
+release=1
+
+source="https://github.com/jsonpickle/jsonpickle/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

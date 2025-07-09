@@ -1,0 +1,21 @@
+# description	: Ruby development environment
+# depends	: gdbm readline ncurses openssl libffi zlib yaml gmp yaml
+
+name=ruby
+version=3.4.4
+rverz=$(echo $version | sed "s/\./\_/g")
+release=1
+source="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.4.tar.xz"
+options="!checksum"
+build() {
+	cd *
+	./configure --prefix=/usr         \
+            --disable-rpath       \
+            --enable-shared       \
+            --without-valgrind    \
+            --without-baseruby    \
+            ac_cv_func_qsort_r=no \
+            --docdir=/usr/share/doc/ruby-$version
+	make
+	make DESTDIR=$PKG install
+}

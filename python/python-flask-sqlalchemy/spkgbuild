@@ -1,0 +1,15 @@
+# description : Adds SQLAlchemy support to your Flask application
+# depends : python-flask python-sqlalchemy
+
+name=python-flask-sqlalchemy
+version=3.1.1
+release=3
+
+source="https://github.com/mitsuhiko/flask-sqlalchemy/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

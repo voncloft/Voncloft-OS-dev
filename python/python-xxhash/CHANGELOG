@@ -1,0 +1,119 @@
+Date: Sun 11 Jul 2021 01:13:59 PM EDT
+
+name=python-xxhash
+version=2.0.2
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.0.0 to version 2.0.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:38:54 PM EDT
+
+version=2.0.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:32 AM EDT
+
+version=2.0.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:22 EDT 2021
+
+version=2.0.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:15 EDT 2021
+
+version=2.0.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:09 EDT 2021
+
+version=2.0.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 25 Feb 2022 06:35:51 PM EST
+
+Version=3.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.0.2 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=3.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Thu 29 Dec 2022 10:09:37 AM EST
+
+Version=3.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.1.0 to version 3.2.0
+
+----------------------------------------------------------------
+
+Date: Mon 31 Jul 2023 01:13:01 PM EDT
+
+Version=3.3.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:43 PM EDT
+
+Version=3.4.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=3.5.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.1 to version 3.5.0

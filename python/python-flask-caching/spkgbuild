@@ -1,0 +1,15 @@
+# description : Adds caching support to your Flask application
+# depends : python-flask
+
+name=python-flask-caching
+version=2.3.0
+release=3
+
+source="https://github.com/sh4nks/flask-caching/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

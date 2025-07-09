@@ -1,0 +1,59 @@
+Date: Wed Jul 28 15:18:16 EDT 2021
+
+name=pulseaudio
+version=15.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 14.2 to version 15.0
+
+----------------------------------------------------------------
+
+Date: Tue 22 Feb 2022 09:21:08 AM EST
+
+Version=15.99.1
+Release=1
+
+Synopsis:
+Upgraded from version 15.0 to version 15.99.1
+
+----------------------------------------------------------------
+
+Date: Mon 30 May 2022 10:42:14 AM EDT
+
+Version=16.0
+Release=1
+
+Synopsis:
+Upgraded from version 15.99.1 to version 16.0
+
+----------------------------------------------------------------
+
+Date: Wed 22 Jun 2022 06:40:00 PM EDT
+
+Version=16.1
+Release=1
+
+Synopsis:
+Upgraded from version 16.0 to version 16.1
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:17 AM EDT
+
+Version=16.99.1
+Release=1
+
+Synopsis:
+Upgraded from version 16.1 to version 16.99.1
+
+----------------------------------------------------------------
+
+Date: Tue 16 Jan 2024 10:26:25 AM EST
+
+Version=17.0
+Release=1
+
+Synopsis:
+Upgraded from version 16.99.1 to version 17.0

@@ -1,0 +1,48 @@
+Date: Wed 21 Apr 2021 07:29:40 AM EDT
+
+name=ruby-rake
+version=13.0.3
+release=2
+
+Synopsis:
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 18 Aug 2021 08:12:11 PM EDT
+
+version=13.0.6
+release=2
+
+Synopsis:
+Upgraded from version 13.0.3 to version 13.0.6
+
+----------------------------------------------------------------
+
+Date: Mon 30 Oct 2023 07:50:38 PM EDT
+
+Version=13.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 13.0.6 to version 13.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=13.2.1
+Release=2
+
+Synopsis:
+Upgraded from version 13.1.0 to version 13.2.1
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:27 PM EDT
+
+Version=13.3.0
+Release=2
+
+Synopsis:
+Upgraded from version 13.2.1 to version 13.3.0

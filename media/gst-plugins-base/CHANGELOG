@@ -1,0 +1,299 @@
+Date: Wed 13 Apr 2022 04:34:18 PM EDT
+
+gst-plugins-base
+Version=1.20.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.18.0 to version 1.20.1
+
+----------------------------------------------------------------
+
+Date: Wed 04 May 2022 07:21:02 AM EDT
+
+Version=1.20.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.20.1 to version 1.20.2
+
+----------------------------------------------------------------
+
+Date: Thu 16 Jun 2022 04:01:02 PM EDT
+
+Version=1.20.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.20.2 to version 1.20.3
+
+----------------------------------------------------------------
+
+Date: Thu 06 Oct 2022 06:17:49 AM EDT
+
+Version=1.21.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.20.3 to version 1.21.1
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:02 PM EST
+
+Version=1.21.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.21.1 to version 1.21.2
+
+----------------------------------------------------------------
+
+Date: Tue 06 Dec 2022 08:12:21 AM EST
+
+Version=1.21.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.21.2 to version 1.21.3
+
+----------------------------------------------------------------
+
+Date: Sat 14 Jan 2023 03:41:36 PM EST
+
+Version=1.21.90
+Release=1
+
+Synopsis:
+Upgraded from version 1.21.3 to version 1.21.90
+
+----------------------------------------------------------------
+
+Date: Tue 24 Jan 2023 04:42:00 PM EST
+
+Version=1.22.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.21.90 to version 1.22.0
+
+----------------------------------------------------------------
+
+Date: Tue 07 Mar 2023 08:50:40 AM EST
+
+Version=1.22.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.0 to version 1.22.1
+
+----------------------------------------------------------------
+
+Date: Wed 12 Apr 2023 07:22:19 AM EDT
+
+Version=1.22.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.1 to version 1.22.2
+
+----------------------------------------------------------------
+
+Date: Mon 22 May 2023 08:08:11 AM EDT
+
+Version=1.22.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.2 to version 1.22.3
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:43 PM EDT
+
+Version=1.22.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.3 to version 1.22.4
+
+----------------------------------------------------------------
+
+Date: Thu 20 Jul 2023 04:54:13 PM EDT
+
+Version=1.22.5
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.4 to version 1.22.5
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:31 AM EDT
+
+Version=1.22.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.5 to version 1.22.6
+
+----------------------------------------------------------------
+
+Date: Wed 15 Nov 2023 08:46:38 AM EST
+
+Version=1.22.7
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.6 to version 1.22.7
+
+----------------------------------------------------------------
+
+Date: Tue 19 Dec 2023 06:24:48 AM EST
+
+Version=1.22.8
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.7 to version 1.22.8
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:31 AM EST
+
+Version=1.22.9
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.8 to version 1.22.9
+
+----------------------------------------------------------------
+
+Date: Wed 07 Feb 2024 06:35:26 AM EST
+
+Version=1.23.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.9 to version 1.23.1
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:35 AM EST
+
+Version=1.23.90
+Release=1
+
+Synopsis:
+Upgraded from version 1.23.1 to version 1.23.90
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=1.24.8
+Release=1
+
+Synopsis:
+Upgraded from version 1.23.90 to version 1.24.8
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:42 PM EST
+
+Version=1.24.9
+Release=1
+
+Synopsis:
+Upgraded from version 1.24.8 to version 1.24.9
+
+----------------------------------------------------------------
+
+Date: Thu 05 Dec 2024 11:45:06 AM EST
+
+Version=1.24.10
+Release=1
+
+Synopsis:
+Upgraded from version 1.24.9 to version 1.24.10
+
+----------------------------------------------------------------
+
+Date: Wed 08 Jan 2025 10:16:22 AM EST
+
+Version=1.24.11
+Release=1
+
+Synopsis:
+Upgraded from version 1.24.10 to version 1.24.11
+
+----------------------------------------------------------------
+
+Date: Wed 15 Jan 2025 09:15:42 AM EST
+
+Version=1.25.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.24.11 to version 1.25.1
+
+----------------------------------------------------------------
+
+Date: Tue 11 Feb 2025 05:33:46 AM EST
+
+Version=1.25.50
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.1 to version 1.25.50
+
+----------------------------------------------------------------
+
+Date: Tue 25 Feb 2025 09:17:26 AM EST
+
+Version=1.25.90
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.50 to version 1.25.90
+
+----------------------------------------------------------------
+
+Date: Thu 13 Mar 2025 10:21:23 AM EDT
+
+Version=1.26.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.90 to version 1.26.0
+
+----------------------------------------------------------------
+
+Date: Mon 28 Apr 2025 05:29:52 AM EDT
+
+Version=1.26.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.0 to version 1.26.1
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:26 PM EDT
+
+Version=1.26.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.1 to version 1.26.2
+
+----------------------------------------------------------------
+
+Date: Fri 04 Jul 2025 04:43:33 PM EDT
+
+Version=1.26.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.2 to version 1.26.3

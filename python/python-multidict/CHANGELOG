@@ -1,0 +1,219 @@
+Date: Mon 12 Jul 2021 03:30:10 PM EDT
+
+name=python-multidict
+version=5.1.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:55 AM EDT
+
+version=5.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:12:18 EDT 2021
+
+version=5.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:15:13 EDT 2021
+
+version=5.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:45 EDT 2021
+
+version=5.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 02 Oct 2021 01:16:10 PM EDT
+
+Version=5.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.0 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Mon 24 Jan 2022 06:39:27 AM EST
+
+Version=6.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.0 to version 6.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 24 Jan 2022 04:55:03 PM EST
+
+Version=6.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.1 to version 6.0.2
+
+----------------------------------------------------------------
+
+Date: Sun 04 Dec 2022 10:34:37 AM EST
+
+Version=6.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.2 to version 6.0.3
+
+----------------------------------------------------------------
+
+Date: Mon 26 Dec 2022 09:10:03 AM EST
+
+Version=6.0.4
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.3 to version 6.0.4
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:06 AM EST
+
+Version=6.0.5
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.4 to version 6.0.5
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.5 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Mar 2025 09:57:45 AM EDT
+
+Version=6.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:46 AM EDT
+
+Version=6.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.0 to version 6.3.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Apr 2025 09:37:02 AM EDT
+
+Version=6.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.3.0 to version 6.3.1
+
+----------------------------------------------------------------
+
+Date: Tue 08 Apr 2025 10:08:57 AM EDT
+
+Version=6.3.2
+Release=1
+
+Synopsis:
+Upgraded from version 6.3.1 to version 6.3.2
+
+----------------------------------------------------------------
+
+Date: Thu 10 Apr 2025 12:56:02 PM EDT
+
+Version=6.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.3.2 to version 6.4.1
+
+----------------------------------------------------------------
+
+Date: Sun 13 Apr 2025 11:34:41 AM EDT
+
+Version=6.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.1 to version 6.4.3
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:24 PM EDT
+
+Version=6.4.4
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.3 to version 6.4.4
+
+----------------------------------------------------------------
+
+Date: Wed 18 Jun 2025 11:22:03 AM EDT
+
+Version=6.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.4 to version 6.5.0
+
+----------------------------------------------------------------
+
+Date: Thu 26 Jun 2025 10:25:20 AM EDT
+
+Version=6.5.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.5.0 to version 6.5.1
+
+----------------------------------------------------------------
+
+Date: Fri 04 Jul 2025 04:43:34 PM EDT
+
+Version=6.6.3
+Release=1
+
+Synopsis:
+Upgraded from version 6.5.1 to version 6.6.3

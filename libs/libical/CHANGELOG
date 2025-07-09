@@ -1,0 +1,99 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libical
+Version=3.0.11
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.0.8 to version 3.0.11
+
+----------------------------------------------------------------
+
+Date: Thu 09 Dec 2021 04:09:25 PM EST
+
+Version=3.0.12
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.11 to version 3.0.12
+
+----------------------------------------------------------------
+
+Date: Tue 18 Jan 2022 07:46:23 AM EST
+
+Version=3.0.13
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.12 to version 3.0.13
+
+----------------------------------------------------------------
+
+Date: Sat 05 Feb 2022 03:42:22 PM EST
+
+Version=3.0.14
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.13 to version 3.0.14
+
+----------------------------------------------------------------
+
+Date: Fri 07 Oct 2022 05:41:15 PM EDT
+
+Version=3.0.15
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.14 to version 3.0.15
+
+----------------------------------------------------------------
+
+Date: Wed 19 Oct 2022 08:20:38 AM EDT
+
+Version=3.0.16
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.15 to version 3.0.16
+
+----------------------------------------------------------------
+
+Date: Tue 17 Oct 2023 11:50:04 AM EDT
+
+Version=3.0.17
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.16 to version 3.0.17
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=3.0.18
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.17 to version 3.0.18
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:05 AM EST
+
+Version=3.0.19
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.18 to version 3.0.19
+
+----------------------------------------------------------------
+
+Date: Tue 11 Mar 2025 11:32:02 AM EDT
+
+Version=3.0.20
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.19 to version 3.0.20

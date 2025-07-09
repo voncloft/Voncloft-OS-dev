@@ -1,0 +1,15 @@
+# description : Application tools
+# depends : python-traits
+
+name=python-apptools
+version=5.3.1
+release=3
+
+source="https://github.com/enthought/apptools/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

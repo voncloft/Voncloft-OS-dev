@@ -1,0 +1,138 @@
+Date: Mon 12 Apr 2021 07:58:51 AM EDT
+
+name=openssh
+version=8.3p1
+release=1
+
+Synopsis:
+Added changelog
+
+----------------------------------------------------------------
+
+Date: Fri 16 Apr 2021 06:51:26 PM EDT
+
+version=8.5p1
+release=1
+
+Synopsis:
+upgraded version and rewrote install script
+
+----------------------------------------------------------------
+
+Date: Fri Aug 20 15:15:07 EDT 2021
+
+version=8.7p1
+release=1
+
+Synopsis:
+Upgraded from version 8.6p1 to version 8.7p1
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:33:17 AM EDT
+
+Version=8.8
+Release=1
+
+Synopsis:
+Upgraded from version 8.7p1 to version 8.8
+
+----------------------------------------------------------------
+
+Date: Fri 25 Feb 2022 06:35:50 PM EST
+
+Version=8.9
+Release=1
+
+Synopsis:
+Upgraded from version 8.8 to version 8.9
+
+----------------------------------------------------------------
+
+Date: Fri 08 Apr 2022 03:47:08 PM EDT
+
+Version=9.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.9 to version 9.0
+
+----------------------------------------------------------------
+
+Date: Thu 06 Oct 2022 06:17:49 AM EDT
+
+Version=9.1
+Release=1
+
+Synopsis:
+Upgraded from version 9.0 to version 9.1
+
+----------------------------------------------------------------
+
+Date: Thu 02 Feb 2023 03:55:32 PM EST
+
+Version=9.2
+Release=1
+
+Synopsis:
+Upgraded from version 9.1 to version 9.2
+
+----------------------------------------------------------------
+
+Date: Fri 17 Mar 2023 04:11:35 PM EDT
+
+Version=9.3
+Release=1
+
+Synopsis:
+Upgraded from version 9.2p1 to version 9.3
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:17 AM EDT
+
+Version=9.4
+Release=1
+
+Synopsis:
+Upgraded from version 9.3 to version 9.4
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:42 PM EDT
+
+Version=9.5
+Release=1
+
+Synopsis:
+Upgraded from version 9.4 to version 9.5
+
+----------------------------------------------------------------
+
+Date: Tue 19 Dec 2023 06:24:49 AM EST
+
+Version=9.6
+Release=1
+
+Synopsis:
+Upgraded from version 9.5 to version 9.6
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=9.9
+Release=1
+
+Synopsis:
+Upgraded from version 9.6 to version 9.9
+
+----------------------------------------------------------------
+
+Date: Thu 10 Apr 2025 12:56:01 PM EDT
+
+Version=10.0
+Release=1
+
+Synopsis:
+Upgraded from version 9.9 to version 10.0

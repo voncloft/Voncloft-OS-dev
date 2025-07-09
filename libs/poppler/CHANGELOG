@@ -1,0 +1,369 @@
+Date: Wed 08 Dec 2021 09:53:49 AM EST
+
+poppler
+Version=21.12.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 20.08.0 to version 21.12.0
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jan 2022 03:23:01 AM EST
+
+Version=22.01.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.12.0 to version 22.01.0
+
+----------------------------------------------------------------
+
+Date: Wed 02 Feb 2022 03:48:48 PM EST
+
+Version=22.02.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.01.0 to version 22.02.0
+
+----------------------------------------------------------------
+
+Date: Fri 04 Mar 2022 02:35:55 PM EST
+
+Version=22.03.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.02.0 to version 22.03.0
+
+----------------------------------------------------------------
+
+Date: Sat 02 Apr 2022 12:49:49 PM EDT
+
+Version=22.04.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.03.0 to version 22.04.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 May 2022 07:42:44 AM EDT
+
+Version=22.05.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.04.0 to version 22.05.0
+
+----------------------------------------------------------------
+
+Date: Wed 01 Jun 2022 05:41:03 PM EDT
+
+Version=22.06.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.05.0 to version 22.06.0
+
+----------------------------------------------------------------
+
+Date: Mon 04 Jul 2022 09:00:25 PM EDT
+
+Version=22.07.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.06.0 to version 22.07.0
+
+----------------------------------------------------------------
+
+Date: Tue 02 Aug 2022 04:55:55 PM EDT
+
+Version=22.08.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.07.0 to version 22.08.0
+
+----------------------------------------------------------------
+
+Date: Thu 01 Sep 2022 11:52:49 PM EDT
+
+Version=22.09.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.08.0 to version 22.09.0
+
+----------------------------------------------------------------
+
+Date: Mon 03 Oct 2022 07:12:57 PM EDT
+
+Version=22.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.09.0 to version 22.10.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:04 AM EDT
+
+Version=22.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.10.0 to version 22.11.0
+
+----------------------------------------------------------------
+
+Date: Sat 03 Dec 2022 11:41:37 AM EST
+
+Version=22.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.11.0 to version 22.12.0
+
+----------------------------------------------------------------
+
+Date: Mon 02 Jan 2023 02:52:36 PM EST
+
+Version=23.01.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.12.0 to version 23.01.0
+
+----------------------------------------------------------------
+
+Date: Thu 02 Feb 2023 07:33:37 AM EST
+
+Version=23.02.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.01.0 to version 23.02.0
+
+----------------------------------------------------------------
+
+Date: Thu 02 Mar 2023 04:31:06 PM EST
+
+Version=23.03.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.02.0 to version 23.03.0
+
+----------------------------------------------------------------
+
+Date: Tue 04 Apr 2023 03:49:38 PM EDT
+
+Version=23.04.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.03.0 to version 23.04.0
+
+----------------------------------------------------------------
+
+Date: Thu 04 May 2023 09:04:04 AM EDT
+
+Version=23.05.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.04.0 to version 23.05.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Jun 2023 05:30:09 AM EDT
+
+Version=23.06.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.05.0 to version 23.06.0
+
+----------------------------------------------------------------
+
+Date: Wed 05 Jul 2023 09:02:36 AM EDT
+
+Version=23.07.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.06.0 to version 23.07.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Aug 2023 10:48:31 AM EDT
+
+Version=23.08.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.07.0 to version 23.08.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Sep 2023 09:02:40 AM EDT
+
+Version=23.09.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.08.0 to version 23.09.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:42 PM EDT
+
+Version=23.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.09.0 to version 23.10.0
+
+----------------------------------------------------------------
+
+Date: Fri 03 Nov 2023 03:17:49 PM EDT
+
+Version=23.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.10.0 to version 23.11.0
+
+----------------------------------------------------------------
+
+Date: Sat 02 Dec 2023 09:19:02 PM EST
+
+Version=23.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.11.0 to version 23.12.0
+
+----------------------------------------------------------------
+
+Date: Wed 03 Jan 2024 06:21:26 PM EST
+
+Version=24.01.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.12.0 to version 24.01.0
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:04 AM EST
+
+Version=24.02.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.01.0 to version 24.02.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=24.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.02.0 to version 24.10.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:43 PM EST
+
+Version=24.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.10.0 to version 24.11.0
+
+----------------------------------------------------------------
+
+Date: Wed 04 Dec 2024 06:29:21 AM EST
+
+Version=24.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.11.0 to version 24.12.0
+
+----------------------------------------------------------------
+
+Date: Sun 05 Jan 2025 01:15:39 PM EST
+
+Version=25.01.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.12.0 to version 25.01.0
+
+----------------------------------------------------------------
+
+Date: Wed 05 Feb 2025 08:40:57 AM EST
+
+Version=25.02.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.01.0 to version 25.02.0
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:30 AM EST
+
+Version=25.03.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.02.0 to version 25.03.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Apr 2025 09:36:59 AM EDT
+
+Version=25.04.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.03.0 to version 25.04.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:22 AM EDT
+
+Version=25.05.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.04.0 to version 25.05.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jun 2025 07:36:15 AM EDT
+
+Version=25.06.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.05.0 to version 25.06.0
+
+----------------------------------------------------------------
+
+Date: Fri 04 Jul 2025 04:43:33 PM EDT
+
+Version=25.07.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.06.0 to version 25.07.0

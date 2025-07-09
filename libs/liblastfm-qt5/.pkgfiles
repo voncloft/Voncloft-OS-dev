@@ -1,0 +1,40 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/lastfm/
+-rw-r--r-- root/root    usr/include/lastfm/AbstractType.h
+-rw-r--r-- root/root    usr/include/lastfm/Album.h
+-rw-r--r-- root/root    usr/include/lastfm/Artist.h
+-rw-r--r-- root/root    usr/include/lastfm/Audioscrobbler.h
+-rw-r--r-- root/root    usr/include/lastfm/Auth.h
+-rw-r--r-- root/root    usr/include/lastfm/Chart.h
+-rw-r--r-- root/root    usr/include/lastfm/Fingerprint.h
+-rw-r--r-- root/root    usr/include/lastfm/FingerprintId.h
+-rw-r--r-- root/root    usr/include/lastfm/FingerprintableSource.h
+-rw-r--r-- root/root    usr/include/lastfm/InternetConnectionMonitor.h
+-rw-r--r-- root/root    usr/include/lastfm/Library.h
+-rw-r--r-- root/root    usr/include/lastfm/Mbid.h
+-rw-r--r-- root/root    usr/include/lastfm/NetworkAccessManager.h
+-rw-r--r-- root/root    usr/include/lastfm/NetworkConnectionMonitor.h
+-rw-r--r-- root/root    usr/include/lastfm/Playlist.h
+-rw-r--r-- root/root    usr/include/lastfm/RadioStation.h
+-rw-r--r-- root/root    usr/include/lastfm/RadioTuner.h
+-rw-r--r-- root/root    usr/include/lastfm/ScrobbleCache.h
+-rw-r--r-- root/root    usr/include/lastfm/ScrobblePoint.h
+-rw-r--r-- root/root    usr/include/lastfm/Tag.h
+-rw-r--r-- root/root    usr/include/lastfm/Tasteometer.h
+-rw-r--r-- root/root    usr/include/lastfm/Track.h
+-rw-r--r-- root/root    usr/include/lastfm/Url.h
+-rw-r--r-- root/root    usr/include/lastfm/UrlBuilder.h
+-rw-r--r-- root/root    usr/include/lastfm/User.h
+-rw-r--r-- root/root    usr/include/lastfm/XmlQuery.h
+-rw-r--r-- root/root    usr/include/lastfm/Xspf.h
+-rw-r--r-- root/root    usr/include/lastfm/global.h
+-rw-r--r-- root/root    usr/include/lastfm/misc.h
+-rw-r--r-- root/root    usr/include/lastfm/ws.h
+drwxr-xr-x root/root    usr/lib/
+lrwxrwxrwx root/root    usr/lib/liblastfm5.so -> liblastfm5.so.1
+lrwxrwxrwx root/root    usr/lib/liblastfm5.so.1 -> liblastfm5.so.1.0.9
+-rwxr-xr-x root/root    usr/lib/liblastfm5.so.1.0.9
+lrwxrwxrwx root/root    usr/lib/liblastfm_fingerprint5.so -> liblastfm_fingerprint5.so.1
+lrwxrwxrwx root/root    usr/lib/liblastfm_fingerprint5.so.1 -> liblastfm_fingerprint5.so.1.0.9
+-rwxr-xr-x root/root    usr/lib/liblastfm_fingerprint5.so.1.0.9

@@ -1,0 +1,89 @@
+Date: Mon 12 Jul 2021 03:25:59 PM EDT
+
+name=python-factory-boy
+version=3.2.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:49:47 AM EDT
+
+version=3.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:06 EDT 2021
+
+version=3.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:10:29 EDT 2021
+
+version=3.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:08:45 EDT 2021
+
+version=3.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 26 Oct 2021 04:33:02 PM EDT
+
+Version=3.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.2.1
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jul 2023 08:27:18 PM EDT
+
+Version=3.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.1 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=3.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.3.1
+
+----------------------------------------------------------------
+
+Date: Tue 04 Feb 2025 09:34:19 AM EST
+
+Version=3.3.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.1 to version 3.3.3

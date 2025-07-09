@@ -1,0 +1,129 @@
+Date: Sun 11 Jul 2021 01:12:14 PM EDT
+
+name=python-cloudscraper
+version=1.2.58
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.2.56 to version 1.2.58
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:24:12 PM EDT
+
+version=1.2.58
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:48:02 AM EDT
+
+version=1.2.58
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:06:17 EDT 2021
+
+version=1.2.58
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:06:37 EDT 2021
+
+version=1.2.58
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:06:58 EDT 2021
+
+version=1.2.58
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 16 Mar 2022 08:49:01 AM EDT
+
+Version=1.2.60
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.58 to version 1.2.60
+
+----------------------------------------------------------------
+
+Date: Sat 27 Aug 2022 09:17:03 PM EDT
+
+Version=1.2.62
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.60 to version 1.2.62
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=1.2.65
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.62 to version 1.2.65
+
+----------------------------------------------------------------
+
+Date: Fri 06 Jan 2023 05:20:26 PM EST
+
+Version=1.2.67
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.65 to version 1.2.67
+
+----------------------------------------------------------------
+
+Date: Tue 10 Jan 2023 05:35:35 PM EST
+
+Version=1.2.68
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.67 to version 1.2.68
+
+----------------------------------------------------------------
+
+Date: Sat 25 Feb 2023 05:16:51 PM EST
+
+Version=1.2.69
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.68 to version 1.2.69
+
+----------------------------------------------------------------
+
+Date: Wed 11 Jun 2025 10:13:59 AM EDT
+
+Version=3.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.69 to version 3.0.0

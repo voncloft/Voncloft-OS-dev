@@ -1,0 +1,15 @@
+# description : The PyPA recommended tool for installing Python packages
+  # depends : ${_deps[@]/#/python-}
+
+name=python-pip
+version=25.1.1
+release=1
+
+source="https://github.com/pypa/pip/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

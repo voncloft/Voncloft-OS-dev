@@ -1,0 +1,159 @@
+Date: Mon 12 Jul 2021 03:39:16 PM EDT
+
+name=python-zope-security
+version=5.1.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:55 AM EDT
+
+version=5.1.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:43 EDT 2021
+
+version=5.1.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:41 EDT 2021
+
+version=5.1.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:31 EDT 2021
+
+version=5.1.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 12 Mar 2022 05:14:07 PM EST
+
+Version=5.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.1.1 to version 5.2
+
+----------------------------------------------------------------
+
+Date: Thu 28 Apr 2022 10:24:08 AM EDT
+
+Version=5.3
+Release=3
+
+Synopsis:
+Upgraded from version 5.2 to version 5.3
+
+----------------------------------------------------------------
+
+Date: Thu 15 Sep 2022 09:15:49 PM EDT
+
+Version=5.4
+Release=3
+
+Synopsis:
+Upgraded from version 5.3 to version 5.4
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=5.5
+Release=3
+
+Synopsis:
+Upgraded from version 5.4 to version 5.5
+
+----------------------------------------------------------------
+
+Date: Wed 16 Nov 2022 05:56:19 PM EST
+
+Version=5.6
+Release=3
+
+Synopsis:
+Upgraded from version 5.5 to version 5.6
+
+----------------------------------------------------------------
+
+Date: Tue 22 Nov 2022 07:01:46 AM EST
+
+Version=5.7
+Release=3
+
+Synopsis:
+Upgraded from version 5.6 to version 5.7
+
+----------------------------------------------------------------
+
+Date: Thu 01 Dec 2022 03:26:05 AM EST
+
+Version=5.8
+Release=3
+
+Synopsis:
+Upgraded from version 5.7 to version 5.8
+
+----------------------------------------------------------------
+
+Date: Tue 17 Jan 2023 08:06:29 AM EST
+
+Version=6.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.8 to version 6.0
+
+----------------------------------------------------------------
+
+Date: Wed 18 Jan 2023 08:32:29 PM EST
+
+Version=6.1
+Release=3
+
+Synopsis:
+Upgraded from version 6.0 to version 6.1
+
+----------------------------------------------------------------
+
+Date: Thu 20 Apr 2023 04:13:51 PM EDT
+
+Version=6.2
+Release=3
+
+Synopsis:
+Upgraded from version 6.1 to version 6.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=7.3
+Release=3
+
+Synopsis:
+Upgraded from version 6.2 to version 7.3

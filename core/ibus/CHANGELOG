@@ -1,0 +1,79 @@
+Date: Fri Aug 20 15:13:20 EDT 2021
+
+name=ibus
+version=1.5.25
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.5.24 to version 1.5.25
+
+----------------------------------------------------------------
+
+Date: Tue 15 Mar 2022 05:20:09 AM EDT
+
+Version=1.5.26
+Release=1
+
+Synopsis:
+Upgraded from version 1.5.25 to version 1.5.26
+
+----------------------------------------------------------------
+
+Date: Mon 22 Aug 2022 08:01:02 PM EDT
+
+Version=1.5.27
+Release=1
+
+Synopsis:
+Upgraded from version 1.5.26 to version 1.5.27
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:07 PM EST
+
+Version=1.5.28
+Release=1
+
+Synopsis:
+Upgraded from version 1.5.27 to version 1.5.28
+
+----------------------------------------------------------------
+
+Date: Sun 19 Nov 2023 02:05:57 PM EST
+
+Version=1.5.29
+Release=1
+
+Synopsis:
+Upgraded from version 1.5.28 to version 1.5.29
+
+----------------------------------------------------------------
+
+Date: Wed 08 May 2024 01:16:17 PM EDT
+
+Version=1.5.30
+Release=1
+
+Synopsis:
+Upgraded from version 1.5.29 to version 1.5.30
+
+----------------------------------------------------------------
+
+Date: Mon 11 Nov 2024 05:44:38 AM EST
+
+Version=1.5.31
+Release=1
+
+Synopsis:
+Upgraded from version 1.5.30 to version 1.5.31
+
+----------------------------------------------------------------
+
+Date: Wed 09 Apr 2025 08:57:57 AM EDT
+
+Version=1.5.32
+Release=1
+
+Synopsis:
+Upgraded from version 1.5.31 to version 1.5.32

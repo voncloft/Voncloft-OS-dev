@@ -1,0 +1,15 @@
+# description : Bindings for the scrypt key derivation function library
+# depends : python glibc openssl
+
+name=python-scrypt
+version=0.8.27
+release=3
+
+source="https://github.com/holgern/py-scrypt/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

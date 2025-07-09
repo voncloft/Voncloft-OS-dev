@@ -1,0 +1,99 @@
+Date: Sun 11 Jul 2021 01:12:09 PM EDT
+
+name=python-blosc
+version=1.10.4
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.10.2 to version 1.10.4
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:23:26 PM EDT
+
+version=1.10.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:47:19 AM EDT
+
+version=1.10.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:05:33 EDT 2021
+
+version=1.10.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:05:46 EDT 2021
+
+version=1.10.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:06:08 EDT 2021
+
+version=1.10.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 08 Dec 2022 07:57:30 AM EST
+
+Version=1.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.10.6 to version 1.11.0
+
+----------------------------------------------------------------
+
+Date: Fri 16 Dec 2022 06:35:09 AM EST
+
+Version=1.11.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.11.0 to version 1.11.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=1.11.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.11.1 to version 1.11.2
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:23 PM EDT
+
+Version=1.11.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.11.2 to version 1.11.3

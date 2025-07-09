@@ -1,0 +1,139 @@
+Date: Sun 11 Jul 2021 01:13:24 PM EDT
+
+name=python-pytest-cov
+version=2.12.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.11.1 to version 2.12.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:34:04 PM EDT
+
+version=2.12.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:57:47 AM EDT
+
+version=2.12.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:16:32 EDT 2021
+
+version=2.12.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:19:47 EDT 2021
+
+version=2.12.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:16:31 EDT 2021
+
+version=2.12.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 05 Oct 2021 07:19:58 AM EDT
+
+Version=3.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.12.1 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Sep 2022 05:30:56 PM EDT
+
+Version=4.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.0 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 25 May 2023 05:23:59 AM EDT
+
+Version=4.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:45 PM EST
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 02 Apr 2025 05:43:02 AM EDT
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 08 Apr 2025 10:08:58 AM EDT
+
+Version=6.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.1.1
+
+----------------------------------------------------------------
+
+Date: Mon 16 Jun 2025 10:49:51 AM EDT
+
+Version=6.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.1 to version 6.2.1

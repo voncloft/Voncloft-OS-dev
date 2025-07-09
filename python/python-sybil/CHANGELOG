@@ -1,0 +1,179 @@
+Date: Mon 12 Jul 2021 03:37:02 PM EDT
+
+name=python-sybil
+version=2.0.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:42 AM EDT
+
+version=2.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:31 EDT 2021
+
+version=2.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:10 EDT 2021
+
+version=2.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:23 EDT 2021
+
+version=2.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 04:34:20 PM EDT
+
+Version=3.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.0.1 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 26 Dec 2022 09:10:04 AM EST
+
+Version=4.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.1 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 08 Feb 2023 10:52:50 PM EST
+
+Version=4.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 27 Mar 2023 09:57:27 AM EDT
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.1 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 09 May 2023 05:38:55 PM EDT
+
+Version=5.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 22 May 2023 08:08:12 AM EDT
+
+Version=5.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.1 to version 5.0.2
+
+----------------------------------------------------------------
+
+Date: Sat 15 Jul 2023 07:27:38 PM EDT
+
+Version=5.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.2 to version 5.0.3
+
+----------------------------------------------------------------
+
+Date: Sun 26 Nov 2023 11:28:13 AM EST
+
+Version=6.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.3 to version 6.0.2
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:33 AM EST
+
+Version=6.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.2 to version 6.0.3
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=8.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.3 to version 8.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:46 PM EST
+
+Version=8.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 8.0.0 to version 8.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 13 Nov 2024 05:29:36 AM EST
+
+Version=9.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.0.1 to version 9.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Feb 2025 04:03:54 PM EST
+
+Version=9.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 9.0.0 to version 9.1.0

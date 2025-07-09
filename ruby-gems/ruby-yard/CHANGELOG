@@ -1,0 +1,70 @@
+Date: Wed 18 Aug 2021 08:12:12 PM EDT
+
+_name=yard
+name=ruby-$_name
+version=0.9.26
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.9.25 to version 0.9.26
+
+----------------------------------------------------------------
+
+Date: Tue 30 Nov 2021 05:39:54 PM EST
+
+Version=0.9.27
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.26 to version 0.9.27
+
+----------------------------------------------------------------
+
+Date: Wed 01 Jun 2022 05:41:04 PM EDT
+
+Version=0.9.28
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.27 to version 0.9.28
+
+----------------------------------------------------------------
+
+Date: Sun 09 Apr 2023 05:53:34 PM EDT
+
+Version=0.9.32
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.28 to version 0.9.32
+
+----------------------------------------------------------------
+
+Date: Thu 13 Apr 2023 03:44:18 PM EDT
+
+Version=0.9.34
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.32 to version 0.9.34
+
+----------------------------------------------------------------
+
+Date: Thu 29 Feb 2024 01:51:34 AM EST
+
+Version=0.9.35
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.34 to version 0.9.35
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=0.9.37
+Release=1
+
+Synopsis:
+Upgraded from version 0.9.35 to version 0.9.37

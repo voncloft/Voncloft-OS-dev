@@ -1,0 +1,15 @@
+# description : ctypes based libraw bindings 
+# depends : libraw python
+
+name=python-rawkit
+version=0.6.0
+release=9
+
+source="https://github.com/photoshell/rawkit/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

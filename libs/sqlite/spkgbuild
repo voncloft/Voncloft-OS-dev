@@ -1,0 +1,21 @@
+# description	: Software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine
+# depends	: zlib readline ncurses
+
+name=sqlite
+version=3500200
+release=1
+source="https://sqlite.org/2025/sqlite-autoconf-$version.tar.gz"
+options="!checksum"
+build() {
+	cd *
+
+	./configure --prefix=/usr     \
+            --disable-static  \
+            --enable-fts{4,5} \
+            CPPFLAGS="-D SQLITE_ENABLE_COLUMN_METADATA=1 \
+                      -D SQLITE_ENABLE_UNLOCK_NOTIFY=1   \
+                      -D SQLITE_ENABLE_DBSTAT_VTAB=1     \
+                      -D SQLITE_SECURE_DELETE=1" 
+	make
+	make DESTDIR=$PKG install
+}

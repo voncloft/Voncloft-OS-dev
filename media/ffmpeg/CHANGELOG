@@ -1,0 +1,109 @@
+Date: Mon 25 Oct 2021 05:40:35 PM EDT
+
+ffmpeg
+Version=4.4.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.4 to version 4.4.1
+
+----------------------------------------------------------------
+
+Date: Sat 15 Jan 2022 01:18:11 AM EST
+
+Version=5.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.1 to version 5.0
+
+----------------------------------------------------------------
+
+Date: Wed 06 Apr 2022 05:17:23 AM EDT
+
+Version=5.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.0 to version 5.0.1
+
+----------------------------------------------------------------
+
+Date: Sun 24 Jul 2022 10:55:43 AM EDT
+
+Version=5.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.1 to version 5.1
+
+----------------------------------------------------------------
+
+Date: Thu 01 Sep 2022 11:52:49 PM EDT
+
+Version=5.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.1 to version 5.1.1
+
+----------------------------------------------------------------
+
+Date: Mon 26 Sep 2022 09:10:51 AM EDT
+
+Version=5.1.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.1 to version 5.1.2
+
+----------------------------------------------------------------
+
+Date: Tue 28 Feb 2023 05:29:02 PM EST
+
+Version=6.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.2 to version 6.0
+
+----------------------------------------------------------------
+
+Date: Mon 13 Nov 2023 11:16:18 AM EST
+
+Version=6.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.0 to version 6.1
+
+----------------------------------------------------------------
+
+Date: Sun 31 Dec 2023 09:54:06 PM EST
+
+Version=6.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.1 to version 6.1.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=7.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.1 to version 7.1
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:30 AM EST
+
+Version=7.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 7.1 to version 7.1.1

@@ -1,0 +1,15 @@
+# description : Lazy attributes for Python objects
+# depends : python
+
+name=python-lazy
+version=1.6
+release=5
+
+source="https://github.com/stefanholek/lazy/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

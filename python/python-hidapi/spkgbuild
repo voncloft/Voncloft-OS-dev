@@ -1,0 +1,15 @@
+# description : A Cython interface to the hidapi from signal11/hidapi
+# depends : python hidapi
+
+name=python-hidapi
+version=0.11.0.2
+release=1
+
+source="https://pypi.org/packages/source/h/hidapi/hidapi-0.11.0.post2.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,15 @@
+# description : Python wrapper for the Cloudflare v4 API
+# depends : python-requests python-future python-yaml python-jsonlines python-beautifulsoup4
+
+name=python-cloudflare
+version=2.20.0
+release=1
+
+source="https://github.com/cloudflare/python-cloudflare/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

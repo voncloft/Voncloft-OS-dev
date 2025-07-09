@@ -1,0 +1,27 @@
+# description	: Free version of the SSH connectivity tools
+# depends	: 
+
+name=openssh
+version=10.0p1
+release=1
+
+#backup="etc/ssh/sshd_config"
+source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz
+	sshd"
+options="!checksum"
+
+build() {
+	cd $name-$version
+	install -v -g sys -m700 -d $PKG/var/lib/sshd
+	./configure --prefix=/usr                            \
+            --sysconfdir=/etc/ssh                    \
+            --with-privsep-path=/var/lib/sshd        \
+            --with-default-path=/usr/bin             \
+            --with-superuser-path=/usr/sbin:/usr/bin \
+            --with-pid-dir=/run 
+      make 
+      make DESTDIR=$PKG install
+      #mkdir $PKG/usr/bin
+      install -v -m755    contrib/ssh-copy-id $PKG/usr/bin
+#      create_startup_directories sshd K30sshd S30sshd $SRC $PKG
+}

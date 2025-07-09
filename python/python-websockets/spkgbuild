@@ -1,0 +1,15 @@
+# description : Python implementation of the WebSocket Protocol RFC 6455
+# depends : python
+
+name=python-websockets
+version=15.0.1
+release=3
+
+source="https://github.com/aaugustin/websockets/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

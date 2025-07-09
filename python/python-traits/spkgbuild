@@ -1,0 +1,15 @@
+# description : Explicitly typed attributes for Python
+# depends : python
+
+name=python-traits
+version=7.0.2
+release=1
+
+source="https://github.com/enthought/traits/archive/refs/tags/o$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

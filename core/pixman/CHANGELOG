@@ -1,0 +1,89 @@
+Date: Wed 19 Oct 2022 08:20:37 AM EDT
+
+pixman
+Version=0.42.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.40.0 to version 0.42.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:03 AM EDT
+
+Version=0.42.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.42.0 to version 0.42.2
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:34 AM EST
+
+Version=0.43.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.42.2 to version 0.43.0
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:30 AM EST
+
+Version=0.43.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.43.0 to version 0.43.2
+
+----------------------------------------------------------------
+
+Date: Mon 04 Mar 2024 05:39:25 AM EST
+
+Version=0.43.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.43.2 to version 0.43.4
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:37 PM EST
+
+Version=0.44.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.43.4 to version 0.44.0
+
+----------------------------------------------------------------
+
+Date: Wed 04 Dec 2024 06:29:21 AM EST
+
+Version=0.44.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.44.0 to version 0.44.2
+
+----------------------------------------------------------------
+
+Date: Thu 01 May 2025 12:47:48 PM EDT
+
+Version=0.46.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.44.2 to version 0.46.0
+
+----------------------------------------------------------------
+
+Date: Wed 11 Jun 2025 10:13:59 AM EDT
+
+Version=0.46.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.46.0 to version 0.46.2

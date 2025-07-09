@@ -1,0 +1,39 @@
+Date: Wed 08 Dec 2021 09:53:47 AM EST
+
+gnu-efi
+Version=3.0.14
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.0.12 to version 3.0.14
+
+----------------------------------------------------------------
+
+Date: Tue 09 Aug 2022 05:29:26 AM EDT
+
+Version=3.0.15
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.14 to version 3.0.15
+
+----------------------------------------------------------------
+
+Date: Wed 03 May 2023 08:53:52 AM EDT
+
+Version=3.0.17
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.15 to version 3.0.17
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=3.0.18
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.17 to version 3.0.18

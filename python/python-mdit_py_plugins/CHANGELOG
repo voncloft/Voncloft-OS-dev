@@ -1,0 +1,139 @@
+Date: Mon 12 Jul 2021 03:29:47 PM EDT
+
+name=python-mdit_py_plugins
+version=0.2.4
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:32 AM EDT
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:54 EDT 2021
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:47 EDT 2021
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:23 EDT 2021
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:41:48 AM EDT
+
+Version=0.2.8
+Release=1
+
+Synopsis:
+Upgraded from version 0.2.4 to version 0.2.8
+
+----------------------------------------------------------------
+
+Date: Sun 05 Dec 2021 10:28:44 AM EST
+
+Version=0.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.2.8 to version 0.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Sep 2022 05:30:56 PM EDT
+
+Version=0.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.3.0 to version 0.3.1
+
+----------------------------------------------------------------
+
+Date: Tue 06 Dec 2022 08:12:21 AM EST
+
+Version=0.3.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.3.1 to version 0.3.2
+
+----------------------------------------------------------------
+
+Date: Wed 07 Dec 2022 05:20:41 AM EST
+
+Version=0.3.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.3.2 to version 0.3.3
+
+----------------------------------------------------------------
+
+Date: Sat 18 Feb 2023 07:22:10 PM EST
+
+Version=0.3.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.3.3 to version 0.3.4
+
+----------------------------------------------------------------
+
+Date: Thu 02 Mar 2023 04:31:06 PM EST
+
+Version=0.3.5
+Release=1
+
+Synopsis:
+Upgraded from version 0.3.4 to version 0.3.5
+
+----------------------------------------------------------------
+
+Date: Tue 06 Jun 2023 05:30:09 AM EDT
+
+Version=0.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.3.5 to version 0.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=0.4.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.0 to version 0.4.2

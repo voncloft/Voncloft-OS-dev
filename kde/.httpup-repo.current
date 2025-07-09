@@ -1,0 +1,8 @@
+kde6
+kde-deps-installer
+kde-deps
+kde6/spkgbuild
+kde-deps-installer/kf-package-installer
+kde-deps-installer/plasma-package-installer
+kde-deps-installer/spkgbuild
+kde-deps/spkgbuild

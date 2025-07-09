@@ -1,0 +1,15 @@
+# description : PKI security
+# depends : 
+
+name=make-ca
+version=1.16.1
+release=1
+
+source="https://github.com/lfs-book/make-ca/archive/v1.16.1/make-ca-1.16.1.tar.gz"
+options="!checksum"
+
+build() {
+	cd $name-$version
+	make DESTDIR=$PKG install
+	install -vdm755 $PKG/etc/ssl/local
+}

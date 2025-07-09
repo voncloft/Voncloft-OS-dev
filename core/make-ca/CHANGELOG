@@ -1,0 +1,59 @@
+Date: Wed 29 Sep 2021 07:33:14 AM EDT
+
+make-ca
+Version=1.8.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.7 to version 1.8.1
+
+----------------------------------------------------------------
+
+Date: Thu 28 Sep 2023 07:27:30 AM EDT
+
+Version=1.13
+Release=1
+
+Synopsis:
+Upgraded from version 1.12 to version 1.13
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=1.14
+Release=1
+
+Synopsis:
+Upgraded from version 1.13 to version 1.14
+
+----------------------------------------------------------------
+
+Date: Mon 10 Feb 2025 01:09:18 PM EST
+
+Version=1.15
+Release=1
+
+Synopsis:
+Upgraded from version 1.14 to version 1.15
+
+----------------------------------------------------------------
+
+Date: Wed 09 Apr 2025 08:57:57 AM EDT
+
+Version=1.16
+Release=1
+
+Synopsis:
+Upgraded from version 1.15 to version 1.16
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jun 2025 07:36:15 AM EDT
+
+Version=1.16.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.16 to version 1.16.1

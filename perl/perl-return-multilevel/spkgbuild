@@ -1,0 +1,16 @@
+# description : Return across multiple call levels
+# depends : perl-data-munge
+
+name=perl-return-multilevel
+version=0.06
+release=3
+
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Return-MultiLevel-0.06.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   perl Makefile.PL
+   make
+   make DESTDIR=$PKG install
+}

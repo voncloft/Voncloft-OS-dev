@@ -1,0 +1,159 @@
+Date: Mon 12 Jul 2021 10:41:56 AM EDT
+
+name=python-btrees
+version=4.9.2
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.7.2 to version 4.9.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:23:38 PM EDT
+
+version=4.9.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:47:29 AM EDT
+
+version=4.9.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:05:43 EDT 2021
+
+version=4.9.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:05:58 EDT 2021
+
+version=4.9.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:06:20 EDT 2021
+
+version=4.9.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 10 Mar 2022 11:41:17 AM EST
+
+Version=4.10.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.9.2 to version 4.10.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Sep 2022 06:57:59 PM EDT
+
+Version=4.10.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.10.0 to version 4.10.1
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 11:19:25 PM EDT
+
+Version=4.11.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.10.1 to version 4.11.0
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=4.11.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.11.0 to version 4.11.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Nov 2022 05:56:18 PM EST
+
+Version=4.11.2
+Release=3
+
+Synopsis:
+Upgraded from version 4.11.1 to version 4.11.2
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=4.11.3
+Release=3
+
+Synopsis:
+Upgraded from version 4.11.2 to version 4.11.3
+
+----------------------------------------------------------------
+
+Date: Sun 12 Feb 2023 06:27:13 AM EST
+
+Version=5.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.11.3 to version 5.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:43 PM EDT
+
+Version=5.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.0 to version 5.1
+
+----------------------------------------------------------------
+
+Date: Thu 08 Feb 2024 09:02:47 AM EST
+
+Version=5.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.1 to version 5.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=6.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.2 to version 6.1

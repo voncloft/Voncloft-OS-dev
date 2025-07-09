@@ -1,0 +1,119 @@
+Date: Sun 11 Jul 2021 01:13:16 PM EDT
+
+name=python-pydot
+version=1.4.2
+release=5
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.4.1 to version 1.4.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:32:52 PM EDT
+
+version=1.4.2
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:56:34 AM EDT
+
+version=1.4.2
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:14:59 EDT 2021
+
+version=1.4.2
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:18:23 EDT 2021
+
+version=1.4.2
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:15:21 EDT 2021
+
+version=1.4.2
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sun 31 Dec 2023 09:54:07 PM EST
+
+Version=2.0.0
+Release=5
+
+Synopsis:
+Upgraded from version 1.4.2 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=3.0.2
+Release=5
+
+Synopsis:
+Upgraded from version 2.0.0 to version 3.0.2
+
+----------------------------------------------------------------
+
+Date: Wed 04 Dec 2024 06:29:22 AM EST
+
+Version=3.0.3
+Release=5
+
+Synopsis:
+Upgraded from version 3.0.2 to version 3.0.3
+
+----------------------------------------------------------------
+
+Date: Mon 06 Jan 2025 07:00:26 AM EST
+
+Version=3.0.4
+Release=5
+
+Synopsis:
+Upgraded from version 3.0.3 to version 3.0.4
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:22 AM EDT
+
+Version=4.0.0
+Release=5
+
+Synopsis:
+Upgraded from version 3.0.4 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 23 Jun 2025 01:25:44 PM EDT
+
+Version=4.0.1
+Release=5
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.0.1

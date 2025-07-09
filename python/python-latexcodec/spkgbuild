@@ -1,0 +1,15 @@
+# description : A lexer and codec to work with LaTeX code in Python
+# depends : python-six
+
+name=python-latexcodec
+version=3.0.1
+release=3
+
+source="https://github.com/mcmtroffaes/latexcodec/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

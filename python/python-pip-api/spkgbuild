@@ -1,0 +1,15 @@
+# description : An unofficial, importable pip API
+# depends : python-packaging python-pyparsing python-pip
+
+name=python-pip-api
+version=0.0.34
+release=3
+
+source="https://github.com/di/pip-api/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

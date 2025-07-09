@@ -1,0 +1,14 @@
+# description : A sphinx theme by Typlog
+
+name=python-sphinx-typlog-theme
+version=0.8.0
+release=3
+
+source="https://github.com/typlog/sphinx-typlog-theme/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

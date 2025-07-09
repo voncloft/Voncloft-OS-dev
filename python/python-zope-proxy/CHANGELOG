@@ -1,0 +1,139 @@
+Date: Mon 12 Jul 2021 03:39:14 PM EDT
+
+name=python-zope-proxy
+version=4.3.5
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:53 AM EDT
+
+version=4.3.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:42 EDT 2021
+
+version=4.3.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:39 EDT 2021
+
+version=4.3.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:29 EDT 2021
+
+version=4.3.5
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:46:18 AM EDT
+
+Version=4.4.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.3.5 to version 4.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 17 Nov 2021 05:27:52 PM EST
+
+Version=4.5.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.4.0 to version 4.5.0
+
+----------------------------------------------------------------
+
+Date: Thu 15 Sep 2022 09:15:48 PM EDT
+
+Version=4.5.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.5.0 to version 4.5.1
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 11:19:26 PM EDT
+
+Version=4.6.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.5.1 to version 4.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Nov 2022 05:56:19 PM EST
+
+Version=4.6.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.6.0 to version 4.6.1
+
+----------------------------------------------------------------
+
+Date: Wed 18 Jan 2023 08:32:29 PM EST
+
+Version=5.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.6.1 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:43 PM EDT
+
+Version=5.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Feb 2024 01:33:55 PM EST
+
+Version=5.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.1 to version 5.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=6.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.2 to version 6.1

@@ -1,0 +1,109 @@
+Date: Sun 11 Jul 2021 01:12:37 PM EDT
+
+name=python-hacking
+version=4.1.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.0.0 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:27:27 PM EDT
+
+version=4.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:51:14 AM EDT
+
+version=4.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:09:35 EDT 2021
+
+version=4.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:12:10 EDT 2021
+
+version=4.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:10:10 EDT 2021
+
+version=4.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 07 Oct 2022 05:41:15 PM EDT
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 20 Apr 2023 12:56:52 PM EDT
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 27 Apr 2023 07:01:46 PM EDT
+
+Version=6.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.0.1
+
+----------------------------------------------------------------
+
+Date: Fri 08 Dec 2023 04:22:24 PM EST
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.1 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=7.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 7.0.0

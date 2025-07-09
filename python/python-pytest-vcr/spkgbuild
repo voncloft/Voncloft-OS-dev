@@ -1,0 +1,15 @@
+# description : Py.test plugin for managing VCR.py cassettes
+# depends : python-pytest python-vcrpy
+
+name=python-pytest-vcr
+version=1.0.2
+release=4
+
+source="https://github.com/ktosiek/pytest-vcr/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

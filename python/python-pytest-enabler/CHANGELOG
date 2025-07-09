@@ -1,0 +1,149 @@
+Date: Mon 12 Jul 2021 03:34:06 PM EDT
+
+name=python-pytest-enabler
+version=1.2.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:57:49 AM EDT
+
+version=1.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:16:34 EDT 2021
+
+version=1.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:19:50 EDT 2021
+
+version=1.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:16:33 EDT 2021
+
+version=1.2.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 09 Nov 2021 06:52:45 PM EST
+
+Version=1.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.0 to version 1.2.1
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jun 2022 04:37:00 PM EDT
+
+Version=1.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.1 to version 1.3.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Nov 2022 05:01:54 AM EST
+
+Version=2.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.3.0 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Sat 28 Jan 2023 08:53:46 PM EST
+
+Version=2.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.0.0 to version 2.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 13 May 2023 04:05:06 PM EDT
+
+Version=2.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.0 to version 2.1.1
+
+----------------------------------------------------------------
+
+Date: Tue 27 Jun 2023 08:54:06 PM EDT
+
+Version=2.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.1 to version 2.2.0
+
+----------------------------------------------------------------
+
+Date: Sat 15 Jul 2023 07:27:38 PM EDT
+
+Version=2.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.0 to version 2.3.1
+
+----------------------------------------------------------------
+
+Date: Mon 25 Dec 2023 07:51:24 AM EST
+
+Version=3.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.1 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=3.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:24 PM EDT
+
+Version=3.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.4.0

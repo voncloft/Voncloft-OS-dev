@@ -1,0 +1,15 @@
+# description : Fast, correct Python JSON library supporting dataclasses and datetimes
+# depends : python
+
+name=python-orjson
+version=3.10.18
+release=1
+
+source="https://github.com/ijl/orjson/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

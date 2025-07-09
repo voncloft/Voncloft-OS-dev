@@ -1,0 +1,89 @@
+Date: Sun 11 Jul 2021 01:12:33 PM EDT
+
+name=python-funcy
+version=1.16
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.15 to version 1.16
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:26:52 PM EDT
+
+version=1.16
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:50:39 AM EDT
+
+version=1.16
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:59 EDT 2021
+
+version=1.16
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:11:32 EDT 2021
+
+version=1.16
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:09:36 EDT 2021
+
+version=1.16
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 21 Dec 2021 07:53:51 AM EST
+
+Version=1.17
+Release=2
+
+Synopsis:
+Upgraded from version 1.16 to version 1.17
+
+----------------------------------------------------------------
+
+Date: Fri 27 Jan 2023 05:23:36 PM EST
+
+Version=1.18
+Release=2
+
+Synopsis:
+Upgraded from version 1.17 to version 1.18
+
+----------------------------------------------------------------
+
+Date: Thu 30 Mar 2023 04:03:51 PM EDT
+
+Version=2.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.18 to version 2.0

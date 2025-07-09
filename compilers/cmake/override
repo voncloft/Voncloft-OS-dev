@@ -1,0 +1,16 @@
+source=https://cmake.org/download/
+
+get_generic()
+{
+	uversion=$(grep -i "href" index.html \
+	| grep -Po '(?<=href=")[^"]*' \
+	| grep .tar.gz \
+	| cut -d / -f9 \
+	| sed "s/cmake-//g" \
+	| sed "s/.tar.gz//g" \
+	| sort -V -r \
+	| grep -v macos \
+	| grep -v linux \
+	| sort -V -r \
+	| head -n1)
+}

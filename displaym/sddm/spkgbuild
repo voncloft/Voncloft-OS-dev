@@ -1,0 +1,74 @@
+# description	: Lightweight display manager based upon Qt and QML
+# depends	: extra-cmake-modules qt5 linux-pam upower consolekit2 libxcb
+
+name=sddm
+version=0.21.0
+release=6
+backup="usr/share/sddm/scripts/Xsetup
+	etc/sddm.conf
+	sddm"
+source="https://github.com/sddm/sddm/releases/download/v$version/sddm-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+	sed -e '/UPOWER_SERVICE)/ s:^://:' \
+	    -i src/daemon/PowerManager.cpp
+	
+	sed -e '/\$@$/s/exec/& ck-launch-session/' \
+	    -i data/scripts/Xsession
+
+	mkdir build
+	cd    build
+	cmake -DCMAKE_INSTALL_PREFIX=/usr \
+      		-DCMAKE_BUILD_TYPE=Release  \
+      		-DENABLE_JOURNALD=OFF       \
+      		-DDBUS_CONFIG_FILENAME=sddm_org.freedesktop.DisplayManager.conf \
+      		-Wno-dev ..	
+	make
+	make DESTDIR=$PKG install
+	install -dm755 $PKG/var/lib/sddm
+
+	
+	install -d $PKG/etc/pam.d/
+
+cat > $PKG/etc/pam.d/sddm << "EOF"
+auth     requisite      pam_nologin.so
+auth     required       pam_env.so
+
+auth     required       pam_succeed_if.so uid >= 1000 quiet
+auth     include        system-auth
+
+account  include        system-account
+password include        system-password
+
+session  required       pam_limits.so
+session  include        system-session
+EOF
+
+cat > $PKG/etc/pam.d/sddm-autologin << "EOF"
+auth     requisite      pam_nologin.so
+auth     required       pam_env.so
+
+auth     required       pam_succeed_if.so uid >= 1000 quiet
+auth     required       pam_permit.so
+
+account  include        system-account
+
+password required       pam_deny.so
+
+session  required       pam_limits.so
+session  include        system-session
+	EOF
+
+cat > $PKG/etc/pam.d/sddm-greeter << "EOF"
+auth     required       pam_env.so
+auth     required       pam_permit.so
+
+account  required       pam_permit.so
+password required       pam_deny.so
+session  required       pam_unix.so
+-session optional       pam_systemd.so
+EOF
+create_boot_directory sddm K95sddm S95sddm $SRC $PKG
+}

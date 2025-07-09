@@ -1,0 +1,179 @@
+Date: Wed 08 Dec 2021 09:53:49 AM EST
+
+libwacom
+Version=1.12
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.9 to version 1.12
+
+----------------------------------------------------------------
+
+Date: Tue 14 Dec 2021 04:38:17 AM EST
+
+Version=1.99.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.12 to version 1.99.1
+
+----------------------------------------------------------------
+
+Date: Tue 18 Jan 2022 07:46:23 AM EST
+
+Version=2.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.99.1 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 11 Feb 2022 03:47:00 PM EST
+
+Version=2.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.0.0 to version 2.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Mar 2022 08:49:31 PM EDT
+
+Version=2.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.0 to version 2.2.0
+
+----------------------------------------------------------------
+
+Date: Mon 20 Jun 2022 04:16:27 PM EDT
+
+Version=2.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.0 to version 2.3.0
+
+----------------------------------------------------------------
+
+Date: Fri 29 Jul 2022 09:49:03 PM EDT
+
+Version=2.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.0 to version 2.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Oct 2022 08:44:46 AM EDT
+
+Version=2.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.0 to version 2.5.0
+
+----------------------------------------------------------------
+
+Date: Mon 23 Jan 2023 08:26:23 PM EST
+
+Version=2.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.0 to version 2.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 17 May 2023 07:06:19 PM EDT
+
+Version=2.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.0 to version 2.7.0
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:08 AM EDT
+
+Version=2.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.0 to version 2.8.0
+
+----------------------------------------------------------------
+
+Date: Tue 28 Nov 2023 06:20:20 AM EST
+
+Version=2.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.8.0 to version 2.9.0
+
+----------------------------------------------------------------
+
+Date: Thu 08 Feb 2024 09:02:47 AM EST
+
+Version=2.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.9.0 to version 2.10.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=2.13.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.10.0 to version 2.13.0
+
+----------------------------------------------------------------
+
+Date: Sun 08 Dec 2024 11:23:51 AM EST
+
+Version=2.14.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.13.0 to version 2.14.0
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:21 AM EDT
+
+Version=2.15.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.14.0 to version 2.15.0
+
+----------------------------------------------------------------
+
+Date: Mon 16 Jun 2025 10:49:50 AM EDT
+
+Version=2.16.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.15.0 to version 2.16.0
+
+----------------------------------------------------------------
+
+Date: Tue 17 Jun 2025 08:42:52 AM EDT
+
+Version=2.16.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.16.0 to version 2.16.1

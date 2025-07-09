@@ -1,0 +1,209 @@
+Date: Sun 11 Jul 2021 01:13:30 PM EDT
+
+name=python-qtconsole
+version=5.1.1
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 5.0.1 to version 5.1.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:34:54 PM EDT
+
+version=5.1.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:58:36 AM EDT
+
+version=5.1.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:17:23 EDT 2021
+
+version=5.1.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:20:46 EDT 2021
+
+version=5.1.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:17:20 EDT 2021
+
+version=5.1.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 09 Nov 2021 11:41:08 AM EST
+
+Version=5.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 5.1.1 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 24 Nov 2021 06:52:29 AM EST
+
+Version=5.2.1
+Release=2
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.2.1
+
+----------------------------------------------------------------
+
+Date: Tue 14 Dec 2021 04:38:17 AM EST
+
+Version=5.2.2
+Release=2
+
+Synopsis:
+Upgraded from version 5.2.1 to version 5.2.2
+
+----------------------------------------------------------------
+
+Date: Wed 30 Mar 2022 10:37:18 AM EDT
+
+Version=5.3.0
+Release=2
+
+Synopsis:
+Upgraded from version 5.2.2 to version 5.3.0
+
+----------------------------------------------------------------
+
+Date: Mon 06 Jun 2022 05:33:48 AM EDT
+
+Version=5.3.1
+Release=2
+
+Synopsis:
+Upgraded from version 5.3.0 to version 5.3.1
+
+----------------------------------------------------------------
+
+Date: Mon 29 Aug 2022 07:23:58 AM EDT
+
+Version=5.3.2
+Release=2
+
+Synopsis:
+Upgraded from version 5.3.1 to version 5.3.2
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:06 AM EDT
+
+Version=5.4.0
+Release=2
+
+Synopsis:
+Upgraded from version 5.3.2 to version 5.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 14 Mar 2023 04:05:54 PM EDT
+
+Version=5.4.1
+Release=2
+
+Synopsis:
+Upgraded from version 5.4.0 to version 5.4.1
+
+----------------------------------------------------------------
+
+Date: Tue 04 Apr 2023 03:49:39 PM EDT
+
+Version=5.4.2
+Release=2
+
+Synopsis:
+Upgraded from version 5.4.1 to version 5.4.2
+
+----------------------------------------------------------------
+
+Date: Sat 06 May 2023 05:18:17 PM EDT
+
+Version=5.4.3
+Release=2
+
+Synopsis:
+Upgraded from version 5.4.2 to version 5.4.3
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:10 AM EDT
+
+Version=5.4.4
+Release=2
+
+Synopsis:
+Upgraded from version 5.4.3 to version 5.4.4
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 09:39:13 AM EST
+
+Version=5.5.0
+Release=2
+
+Synopsis:
+Upgraded from version 5.4.4 to version 5.5.0
+
+----------------------------------------------------------------
+
+Date: Sun 19 Nov 2023 02:05:57 PM EST
+
+Version=5.5.1
+Release=2
+
+Synopsis:
+Upgraded from version 5.5.0 to version 5.5.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=5.6.0
+Release=2
+
+Synopsis:
+Upgraded from version 5.5.1 to version 5.6.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:46 PM EST
+
+Version=5.6.1
+Release=2
+
+Synopsis:
+Upgraded from version 5.6.0 to version 5.6.1

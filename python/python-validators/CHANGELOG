@@ -1,0 +1,149 @@
+Date: Sun 11 Jul 2021 01:13:54 PM EDT
+
+name=python-validators
+version=0.18.2
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.18.1 to version 0.18.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:38:10 PM EDT
+
+version=0.18.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:50 AM EDT
+
+version=0.18.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:39 EDT 2021
+
+version=0.18.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:24:25 EDT 2021
+
+version=0.18.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:20:28 EDT 2021
+
+version=0.18.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 05 May 2022 07:42:45 AM EDT
+
+Version=0.19.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.18.2 to version 0.19.0
+
+----------------------------------------------------------------
+
+Date: Mon 06 Jun 2022 05:33:48 AM EDT
+
+Version=0.20.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.19.0 to version 0.20.0
+
+----------------------------------------------------------------
+
+Date: Sun 26 Mar 2023 12:35:21 PM EDT
+
+Version=0.20.9
+Release=3
+
+Synopsis:
+Upgraded from version 0.20.0 to version 0.20.9
+
+----------------------------------------------------------------
+
+Date: Tue 28 Mar 2023 09:58:59 AM EDT
+
+Version=0.21.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.20.9 to version 0.21.0
+
+----------------------------------------------------------------
+
+Date: Thu 13 Apr 2023 03:44:18 PM EDT
+
+Version=0.21.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.21.0 to version 0.21.1
+
+----------------------------------------------------------------
+
+Date: Tue 08 Aug 2023 08:14:59 AM EDT
+
+Version=0.21.2
+Release=3
+
+Synopsis:
+Upgraded from version 0.21.1 to version 0.21.2
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:10 AM EDT
+
+Version=0.22.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.21.2 to version 0.22.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=0.34.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.22.0 to version 0.34.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:22 AM EDT
+
+Version=0.35.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.34.0 to version 0.35.0

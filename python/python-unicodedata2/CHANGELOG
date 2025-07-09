@@ -1,0 +1,89 @@
+Date: Mon 12 Jul 2021 03:37:57 PM EDT
+
+name=python-unicodedata2
+version=13.0.0.post2
+release=2
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:37 AM EDT
+
+version=13.0.0.post2
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:26 EDT 2021
+
+version=13.0.0.post2
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:24:11 EDT 2021
+
+version=13.0.0.post2
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:20:16 EDT 2021
+
+version=13.0.0.post2
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 04:34:20 PM EDT
+
+Version=14.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 13.0.0.post2 to version 14.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:06 AM EDT
+
+Version=15.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 14.0.0 to version 15.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 28 Sep 2023 07:27:32 AM EDT
+
+Version=15.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 15.0.0 to version 15.1.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:54 AM EST
+
+Version=16.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 15.1.0 to version 16.0.0

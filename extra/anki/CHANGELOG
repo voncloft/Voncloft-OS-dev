@@ -1,0 +1,159 @@
+Date: Tue 01 Aug 2023 07:22:32 AM EDT
+
+anki
+Version=2.1.65
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Sun 20 Aug 2023 06:12:41 PM EDT
+
+Version=2.1.66
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.65 to version 2.1.66
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:31 AM EDT
+
+Version=23.10
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.66 to version 23.10
+
+----------------------------------------------------------------
+
+Date: Sat 04 Nov 2023 05:20:29 PM EDT
+
+Version=23.10.1
+Release=1
+
+Synopsis:
+Upgraded from version 23.10 to version 23.10.1
+
+----------------------------------------------------------------
+
+Date: Sat 02 Dec 2023 09:19:02 PM EST
+
+Version=23.12
+Release=1
+
+Synopsis:
+Upgraded from version 23.10.1 to version 23.12
+
+----------------------------------------------------------------
+
+Date: Wed 20 Dec 2023 05:17:09 AM EST
+
+Version=23.10.1
+Release=1
+
+Synopsis:
+Upgraded from version 23.8 to version 23.10.1
+
+----------------------------------------------------------------
+
+Date: Mon 25 Dec 2023 07:51:23 AM EST
+
+Version=23.12rc1
+Release=1
+
+Synopsis:
+Upgraded from version 23.10.1 to version 23.12rc1
+
+----------------------------------------------------------------
+
+Date: Mon 25 Dec 2023 08:00:21 AM EST
+
+Version=23.12
+Release=1
+
+Synopsis:
+Upgraded from version 23.11 to version 23.12
+
+----------------------------------------------------------------
+
+Date: Sun 31 Dec 2023 09:54:06 PM EST
+
+Version=23.12.1
+Release=1
+
+Synopsis:
+Upgraded from version 23.12 to version 23.12.1
+
+----------------------------------------------------------------
+
+Date: Mon 01 Apr 2024 06:56:00 AM EDT
+
+Version=24.04
+Release=1
+
+Synopsis:
+Upgraded from version 23.12.1 to version 24.04
+
+----------------------------------------------------------------
+
+Date: Mon 15 Apr 2024 01:12:40 PM EDT
+
+Version=24.04.1
+Release=1
+
+Synopsis:
+Upgraded from version 24.04 to version 24.04.1
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=24.06.3
+Release=1
+
+Synopsis:
+Upgraded from version 24.04.1 to version 24.06.3
+
+----------------------------------------------------------------
+
+Date: Sun 01 Dec 2024 12:27:59 PM EST
+
+Version=24.11
+Release=1
+
+Synopsis:
+Upgraded from version 24.06.3 to version 24.11
+
+----------------------------------------------------------------
+
+Date: Wed 18 Dec 2024 07:10:04 AM EST
+
+Version=release
+Release=1
+
+Synopsis:
+Upgraded from version 24.11 to version release
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:22 PM EDT
+
+Version=show
+Release=1
+
+Synopsis:
+Upgraded from version release to version show
+
+----------------------------------------------------------------
+
+Date: Tue 17 Jun 2025 08:42:52 AM EDT
+
+Version=test
+Release=1
+
+Synopsis:
+Upgraded from version show to version test

@@ -1,0 +1,79 @@
+Date: Tue 09 Nov 2021 11:41:08 AM EST
+
+qtwebengine
+Version=5.15.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 5.15.1 to version 5.15.2
+
+----------------------------------------------------------------
+
+Date: Tue 18 Jan 2022 07:46:24 AM EST
+
+Version=5.15.8
+Release=1
+
+Synopsis:
+Upgraded from version 5.15.6 to version 5.15.8
+
+----------------------------------------------------------------
+
+Date: Tue 12 Apr 2022 07:08:51 AM EDT
+
+Version=5.15.9
+Release=1
+
+Synopsis:
+Upgraded from version 5.15.8 to version 5.15.9
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jun 2022 04:37:00 PM EDT
+
+Version=5.15.10
+Release=1
+
+Synopsis:
+Upgraded from version 5.15.9 to version 5.15.10
+
+----------------------------------------------------------------
+
+Date: Tue 20 Sep 2022 08:54:31 AM EDT
+
+Version=5.15.11
+Release=1
+
+Synopsis:
+Upgraded from version 5.15.10 to version 5.15.11
+
+----------------------------------------------------------------
+
+Date: Fri 06 Jan 2023 05:20:26 PM EST
+
+Version=5.15.12
+Release=1
+
+Synopsis:
+Upgraded from version 5.15.11 to version 5.15.12
+
+----------------------------------------------------------------
+
+Date: Fri 10 Mar 2023 02:48:23 PM EST
+
+Version=5.15.13
+Release=1
+
+Synopsis:
+Upgraded from version 5.15.12 to version 5.15.13
+
+----------------------------------------------------------------
+
+Date: Sat 13 May 2023 04:05:06 PM EDT
+
+Version=5.15.14
+Release=1
+
+Synopsis:
+Upgraded from version 5.15.13 to version 5.15.14

@@ -1,0 +1,18 @@
+# description : launches minecraft
+# depends : alsa-lib at-spi2-atk at-spi2-core atk dbus expat gcc gdk-pixbuf glib glibc gtk3 cups libdrm libx11 
+# depends : libxcb libxcomposite libxdamage libxext libxfixes libxrandr mesa nspr nss pango util-linux zlib java-headless 
+# depends : xrandr
+
+name=minecraft-launcher
+version=1.0.1221
+release=1
+
+source="https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_${version}.tar.gz
+	minecraft-launcher.desktop
+	https://launcher.mojang.com/download/minecraft-launcher.svg"
+
+build() {
+  install -Dm644 "minecraft-launcher.svg" "$PKG/usr/share/icons/hicolor/symbolic/apps/minecraft-launcher.svg"
+  install -Dm644 "minecraft-launcher.desktop" "$PKG/usr/share/applications/minecraft-launcher.desktop"
+  install -Dm755 "minecraft-launcher/minecraft-launcher" "$PKG/usr/bin/minecraft-launcher"
+}

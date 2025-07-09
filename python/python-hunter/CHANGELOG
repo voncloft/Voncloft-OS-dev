@@ -1,0 +1,129 @@
+Date: Sun 11 Jul 2021 01:12:39 PM EDT
+
+name=python-hunter
+version=3.3.8
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.3.1 to version 3.3.8
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:27:46 PM EDT
+
+version=3.3.8
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:51:32 AM EDT
+
+version=3.3.8
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:09:53 EDT 2021
+
+version=3.3.8
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:12:30 EDT 2021
+
+version=3.3.8
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:10:28 EDT 2021
+
+version=3.3.8
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 15 Dec 2021 04:03:10 AM EST
+
+Version=3.4.1
+Release=2
+
+Synopsis:
+Upgraded from version 3.3.8 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Thu 16 Dec 2021 07:30:49 AM EST
+
+Version=3.4.3
+Release=2
+
+Synopsis:
+Upgraded from version 3.4.1 to version 3.4.3
+
+----------------------------------------------------------------
+
+Date: Sun 11 Sep 2022 04:17:30 PM EDT
+
+Version=3.5.0
+Release=2
+
+Synopsis:
+Upgraded from version 3.4.3 to version 3.5.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Sep 2022 05:30:56 PM EDT
+
+Version=3.5.1
+Release=2
+
+Synopsis:
+Upgraded from version 3.5.0 to version 3.5.1
+
+----------------------------------------------------------------
+
+Date: Wed 26 Apr 2023 08:00:45 AM EDT
+
+Version=3.6.0
+Release=2
+
+Synopsis:
+Upgraded from version 3.5.1 to version 3.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 26 Apr 2023 04:39:11 PM EDT
+
+Version=3.6.1
+Release=2
+
+Synopsis:
+Upgraded from version 3.6.0 to version 3.6.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=3.7.0
+Release=2
+
+Synopsis:
+Upgraded from version 3.6.1 to version 3.7.0

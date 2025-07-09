@@ -1,0 +1,15 @@
+# description : A Python interface to Amazon Web Services AWS
+# depends : python
+
+name=python-boto
+version=2.49.0.20190327
+release=5
+
+source="https://github.com/boto/boto/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

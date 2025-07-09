@@ -1,0 +1,39 @@
+Date: Wed 29 Sep 2021 07:25:50 AM EDT
+
+help2man
+Version=1.48.5
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.47.16 to version 1.48.5
+
+----------------------------------------------------------------
+
+Date: Tue 15 Feb 2022 03:38:36 PM EST
+
+Version=1.49.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.48.5 to version 1.49.1
+
+----------------------------------------------------------------
+
+Date: Tue 12 Apr 2022 07:08:51 AM EDT
+
+Version=1.49.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.49.1 to version 1.49.2
+
+----------------------------------------------------------------
+
+Date: Fri 16 Dec 2022 06:35:09 AM EST
+
+Version=1.49.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.49.2 to version 1.49.3

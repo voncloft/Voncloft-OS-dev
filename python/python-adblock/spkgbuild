@@ -1,0 +1,15 @@
+# description : Braves adblock library in Python
+# depends :
+
+name=python-adblock
+version=0.6.0
+release=1
+
+source="https://github.com/ArniDagur/python-adblock/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

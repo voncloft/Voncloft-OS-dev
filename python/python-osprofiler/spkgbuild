@@ -1,0 +1,15 @@
+# description : OpenStack Profiler Library
+# depends : python-netaddr python-oslo-concurrency python-oslo-serialization python-oslo-utils
+
+name=python-osprofiler
+version=4.3.0
+release=3
+
+source="https://github.com/openstack/osprofiler/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

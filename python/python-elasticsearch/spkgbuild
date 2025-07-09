@@ -1,0 +1,15 @@
+# description : Python client for Elasticsearch
+# depends : python-urllib3
+
+name=python-elasticsearch
+version=9.0.2
+release=3
+
+source="https://github.com/elastic/elasticsearch-py/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

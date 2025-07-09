@@ -1,0 +1,149 @@
+Date: Sun Jun 27 12:02:39 EDT 2021
+
+name=qbittorrent
+version=4.3.6
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.3.5 to version 4.3.6
+
+----------------------------------------------------------------
+
+Date: Wed Aug  4 15:19:38 EDT 2021
+
+version=4.3.7
+release=1
+
+Synopsis:
+Upgraded from version 4.3.6 to version 4.3.7
+
+----------------------------------------------------------------
+
+Date: Mon Aug 30 15:20:15 EDT 2021
+
+version=4.3.8
+release=1
+
+Synopsis:
+Upgraded from version 4.3.7 to version 4.3.8
+
+----------------------------------------------------------------
+
+Date: Mon 01 Nov 2021 09:39:22 PM EDT
+
+Version=4.3.9
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.8 to version 4.3.9
+
+----------------------------------------------------------------
+
+Date: Fri 07 Jan 2022 06:46:38 PM EST
+
+Version=4.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.9 to version 4.4.0
+
+----------------------------------------------------------------
+
+Date: Thu 17 Feb 2022 05:18:44 AM EST
+
+Version=4.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.0 to version 4.4.1
+
+----------------------------------------------------------------
+
+Date: Fri 25 Mar 2022 08:49:32 PM EDT
+
+Version=4.4.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.1 to version 4.4.2
+
+----------------------------------------------------------------
+
+Date: Mon 23 May 2022 08:09:59 PM EDT
+
+Version=4.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.2 to version 4.4.3
+
+----------------------------------------------------------------
+
+Date: Thu 26 May 2022 05:31:38 AM EDT
+
+Version=4.4.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.3 to version 4.4.3.1
+
+----------------------------------------------------------------
+
+Date: Tue 23 Aug 2022 09:59:33 PM EDT
+
+Version=4.4.4
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.3.1 to version 4.4.4
+
+----------------------------------------------------------------
+
+Date: Tue 30 Aug 2022 08:54:25 PM EDT
+
+Version=4.4.5
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.4 to version 4.4.5
+
+----------------------------------------------------------------
+
+Date: Mon 28 Nov 2022 07:58:29 AM EST
+
+Version=4.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.5 to version 4.5.0
+
+----------------------------------------------------------------
+
+Date: Mon 13 Feb 2023 06:47:47 AM EST
+
+Version=4.5.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.5.0 to version 4.5.1
+
+----------------------------------------------------------------
+
+Date: Tue 28 Feb 2023 05:29:03 PM EST
+
+Version=4.5.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.5.1 to version 4.5.2
+
+----------------------------------------------------------------
+
+Date: Tue 30 May 2023 06:48:53 AM EDT
+
+Version=4.5.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.5.2 to version 4.5.3

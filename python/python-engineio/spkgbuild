@@ -1,0 +1,15 @@
+# description : Python implementation of the Engine.IO realtime server
+# depends : python python-six python-urllib3 python-websocket-client python-websockets
+
+name=python-engineio
+version=4.12.2
+release=1
+
+source="https://github.com/miguelgrinberg/python-engineio/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

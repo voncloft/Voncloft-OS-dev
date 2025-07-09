@@ -1,0 +1,69 @@
+Date: Mon 12 Jul 2021 03:27:38 PM EDT
+
+name=python-html2text
+version=2020.1.16
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:51:25 AM EDT
+
+version=2020.1.16
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:09:46 EDT 2021
+
+version=2020.1.16
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:12:22 EDT 2021
+
+version=2020.1.16
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:10:21 EDT 2021
+
+version=2020.1.16
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:38 AM EST
+
+Version=2024.2.26
+Release=3
+
+Synopsis:
+Upgraded from version 2020.1.16 to version 2024.2.26
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:55 PM EDT
+
+Version=2025.4.15
+Release=3
+
+Synopsis:
+Upgraded from version 2024.2.26 to version 2025.4.15

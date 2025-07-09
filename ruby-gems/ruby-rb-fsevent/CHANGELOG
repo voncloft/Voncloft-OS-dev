@@ -1,0 +1,30 @@
+Date: Wed 18 Aug 2021 08:12:11 PM EDT
+
+_name=rb-fsevent
+name=ruby-$_name
+version=0.11.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.10.4 to version 0.11.0
+
+----------------------------------------------------------------
+
+Date: Mon 07 Feb 2022 01:00:49 PM EST
+
+Version=0.11.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.11.0 to version 0.11.1
+
+----------------------------------------------------------------
+
+Date: Mon 29 Aug 2022 03:53:05 PM EDT
+
+Version=0.11.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.11.1 to version 0.11.2

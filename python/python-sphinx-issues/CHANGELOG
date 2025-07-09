@@ -1,0 +1,99 @@
+Date: Mon 12 Jul 2021 03:36:37 PM EDT
+
+name=python-sphinx-issues
+version=1.2.0
+release=5
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:18 AM EDT
+
+version=1.2.0
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:18:57 EDT 2021
+
+version=1.2.0
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:22:31 EDT 2021
+
+version=1.2.0
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:18:51 EDT 2021
+
+version=1.2.0
+release=5
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 01 Jan 2022 04:49:21 PM EST
+
+Version=2.0.0
+Release=5
+
+Synopsis:
+Upgraded from version 1.2.0 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 12 Jan 2022 06:15:47 AM EST
+
+Version=3.0.1
+Release=5
+
+Synopsis:
+Upgraded from version 2.0.0 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 22 Jan 2024 05:56:49 PM EST
+
+Version=4.0.0
+Release=5
+
+Synopsis:
+Upgraded from version 3.0.1 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=5.0.0
+Release=5
+
+Synopsis:
+Upgraded from version 4.0.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Sun 13 Apr 2025 11:34:42 AM EDT
+
+Version=5.0.1
+Release=5
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.0.1

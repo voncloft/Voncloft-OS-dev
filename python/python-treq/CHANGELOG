@@ -1,0 +1,109 @@
+Date: Sun 11 Jul 2021 01:13:50 PM EDT
+
+name=python-treq
+version=21.5.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 21.1.0 to version 21.5.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:37:40 PM EDT
+
+version=21.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:19 AM EDT
+
+version=21.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:09 EDT 2021
+
+version=21.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:51 EDT 2021
+
+version=21.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:58 EDT 2021
+
+version=21.5.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 31 Jan 2022 06:33:33 AM EST
+
+Version=22.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.5.0 to version 22.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 09 Feb 2022 03:48:22 PM EST
+
+Version=22.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.1.0 to version 22.2.0
+
+----------------------------------------------------------------
+
+Date: Sat 04 Nov 2023 05:20:30 PM EDT
+
+Version=23.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.2.0 to version 23.11.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=24.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 23.11.0 to version 24.9.1
+
+----------------------------------------------------------------
+
+Date: Wed 04 Jun 2025 07:17:58 AM EDT
+
+Version=25.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.9.1 to version 25.5.0

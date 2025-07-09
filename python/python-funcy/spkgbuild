@@ -1,0 +1,15 @@
+# description : A fancy and practical functional tools
+# depends : python
+
+name=python-funcy
+version=2.0
+release=2
+
+source="https://github.com/Suor/funcy/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

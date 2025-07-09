@@ -1,0 +1,15 @@
+# description : Oslo test framework
+# depends : python-fixtures python-subunit python-stestr python-testscenarios
+
+name=python-oslotest
+version=5.0.1
+release=4
+
+source="https://github.com/openstack/oslotest/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

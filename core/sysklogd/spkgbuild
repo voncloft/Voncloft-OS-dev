@@ -1,0 +1,15 @@
+# description	: Logging system messages, such as those given by the kernel
+
+name=sysklogd
+version=1.5.1
+release=1
+source="https://www.infodrom.org/projects/$name/download/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+	sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c
+	sed -i 's/union wait/int/' syslogd.c
+
+	make
+	make DESTDIR=$PKG BINDIR=/sbin install
+}

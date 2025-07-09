@@ -1,0 +1,149 @@
+Date: Mon 12 Jul 2021 03:36:39 PM EDT
+
+name=python-sphinx_rtd_theme
+version=0.5.1
+release=2
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:19 AM EDT
+
+version=0.5.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:00 EDT 2021
+
+version=0.5.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:22:34 EDT 2021
+
+version=0.5.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:18:53 EDT 2021
+
+version=0.5.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:45:04 AM EDT
+
+Version=1.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 0.5.1 to version 1.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 14 Oct 2022 05:47:56 AM EDT
+
+Version=1.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.0.0 to version 1.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 05 Nov 2022 03:56:36 PM EDT
+
+Version=1.1.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.1.0 to version 1.1.1
+
+----------------------------------------------------------------
+
+Date: Sun 18 Dec 2022 06:50:52 AM EST
+
+Version=1.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.1.1 to version 1.2.0
+
+----------------------------------------------------------------
+
+Date: Tue 23 May 2023 05:09:12 PM EDT
+
+Version=1.2.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.2.0 to version 1.2.1
+
+----------------------------------------------------------------
+
+Date: Thu 08 Jun 2023 08:07:23 AM EDT
+
+Version=1.2.2
+Release=2
+
+Synopsis:
+Upgraded from version 1.2.1 to version 1.2.2
+
+----------------------------------------------------------------
+
+Date: Sun 06 Aug 2023 02:07:02 PM EDT
+
+Version=1.3.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.2.2 to version 1.3.0
+
+----------------------------------------------------------------
+
+Date: Mon 21 Aug 2023 04:04:41 PM EDT
+
+Version=2.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.3.0 to version 2.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=3.0.1
+Release=2
+
+Synopsis:
+Upgraded from version 2.0.0 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Sun 17 Nov 2024 12:02:43 PM EST
+
+Version=3.0.2
+Release=2
+
+Synopsis:
+Upgraded from version 3.0.1 to version 3.0.2

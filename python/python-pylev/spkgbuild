@@ -1,0 +1,15 @@
+# description : A pure Python Levenshtein implementation thats not freaking GPLd
+# depends : python
+
+name=python-pylev
+version=1.4.0
+release=6
+
+source="https://github.com/toastdriven/pylev/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

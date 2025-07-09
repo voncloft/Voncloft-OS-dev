@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:22:33 PM EDT
+
+name=python-apscheduler
+version=3.7.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:46:34 AM EDT
+
+version=3.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:04:47 EDT 2021
+
+version=3.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:04:55 EDT 2021
+
+version=3.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:05:16 EDT 2021
+
+version=3.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 25 Oct 2021 05:40:35 PM EDT
+
+Version=3.8.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.0 to version 3.8.1
+
+----------------------------------------------------------------
+
+Date: Fri 25 Feb 2022 06:35:50 PM EST
+
+Version=3.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.8.1 to version 3.9.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:17 AM EDT
+
+Version=4.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.9.0 to version 4.0.0

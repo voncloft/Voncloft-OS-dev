@@ -1,0 +1,15 @@
+# description : Asyncio http mocking, similar to the responses library used for requests
+# depends : python-aiohttp python-pytest-asyncio
+
+name=python-aresponses
+version=3.0.0
+release=1
+
+source="https://github.com/circleup/aresponses/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

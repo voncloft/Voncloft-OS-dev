@@ -1,0 +1,29 @@
+Date: Fri 19 Aug 2022 08:44:16 AM EDT
+
+libspectre
+Version=0.2.10
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Sat 05 Nov 2022 03:56:35 PM EDT
+
+Version=0.2.11
+Release=1
+
+Synopsis:
+Upgraded from version 0.2.10 to version 0.2.11
+
+----------------------------------------------------------------
+
+Date: Tue 10 Jan 2023 05:35:35 PM EST
+
+Version=0.2.12
+Release=1
+
+Synopsis:
+Upgraded from version 0.2.11 to version 0.2.12

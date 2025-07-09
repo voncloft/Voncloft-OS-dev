@@ -1,0 +1,15 @@
+# description : Asyncio-based multidict implementation for Python
+# depends : python glibc
+
+name=python-multidict
+version=6.6.3
+release=1
+
+source="https://github.com/aio-libs/multidict/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

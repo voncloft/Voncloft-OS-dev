@@ -1,0 +1,79 @@
+Date: Wed 29 Sep 2021 07:27:38 AM EDT
+
+socat
+Version=1.7.4.1
+Release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.7.3.4 to version 1.7.4.1
+
+----------------------------------------------------------------
+
+Date: Mon 01 Nov 2021 09:39:21 PM EDT
+
+Version=1.7.4.2
+Release=2
+
+Synopsis:
+Upgraded from version 1.7.4.1 to version 1.7.4.2
+
+----------------------------------------------------------------
+
+Date: Mon 10 Jan 2022 06:35:42 AM EST
+
+Version=1.7.4.3
+Release=2
+
+Synopsis:
+Upgraded from version 1.7.4.2 to version 1.7.4.3
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:03 AM EDT
+
+Version=1.7.4.4
+Release=2
+
+Synopsis:
+Upgraded from version 1.7.4.3 to version 1.7.4.4
+
+----------------------------------------------------------------
+
+Date: Wed 15 Nov 2023 08:46:37 AM EST
+
+Version=1.8.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.7.4.4 to version 1.8.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 04 Sep 2024 10:14:48 AM EDT
+
+Version=1.8.0.1
+Release=2
+
+Synopsis:
+Upgraded from version 1.8.0.0 to version 1.8.0.1
+
+----------------------------------------------------------------
+
+Date: Thu 12 Dec 2024 07:07:46 AM EST
+
+Version=1.8.0.2
+Release=2
+
+Synopsis:
+Upgraded from version 1.8.0.1 to version 1.8.0.2
+
+----------------------------------------------------------------
+
+Date: Sat 22 Feb 2025 06:35:41 PM EST
+
+Version=1.8.0.3
+Release=2
+
+Synopsis:
+Upgraded from version 1.8.0.2 to version 1.8.0.3

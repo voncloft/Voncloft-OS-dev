@@ -1,0 +1,22 @@
+# description : Protocol Buffers - Google's data interchange format
+# depends : gcc glibc zlib python python-six
+
+name=protobuf
+version=31.1
+release=3
+
+source="https://github.com/protocolbuffers/$name/archive/refs/tags/v${version}.tar.gz"
+options="!checksum"
+
+build() {
+	cd *
+	autoreconf -ifv
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	cd python
+	python setup.py build --cpp_implementation
+	python setup.py install --optimize=1 --root=$PKG
+
+	
+}

@@ -1,0 +1,15 @@
+# description : Flexible test automation for Python
+# depends : python python-argcomplete python-colorlog python-py python-virtualenv
+
+name=python-nox
+version=2025.05.01
+release=1
+
+source="https://github.com/theacodes/nox/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

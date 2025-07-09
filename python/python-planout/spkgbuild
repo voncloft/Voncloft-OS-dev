@@ -1,0 +1,15 @@
+# description : A framework for online field experimentation
+# depends : python-six
+
+name=python-planout
+version=0.6.0
+release=6
+
+source="https://github.com/facebook/planout/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

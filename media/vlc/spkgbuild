@@ -1,0 +1,23 @@
+# description	: A media player, streamer, and encoder
+# depends	: alsa-lib desktop-file-utils ffmpeg liba52 libgcrypt libmad lua52 
+
+name=vlc
+version=3.0.21
+release=1
+source="https://download.videolan.org/$name/$version/$name-$version.tar.xz
+	https://www.linuxfromscratch.org/patches/blfs/svn/vlc-3.0.21-taglib-1.patch
+	https://www.linuxfromscratch.org/patches/blfs/svn/vlc-3.0.21-fedora_ffmpeg7-1.patch"
+
+options="!checksum"
+build() {
+	cd $name-$version
+	KG_CONFIG_PATH=/usr/lib/pkgconfig
+	patch -Np1 -i $SRC/vlc-3.0.21-taglib-1.patch         
+	patch -Np1 -i $SRC/vlc-3.0.21-fedora_ffmpeg7-1.patch
+
+	BUILDCC=gcc ./configure --prefix=/usr --disable-libplacebo --disable-lua
+	make
+
+	make DESTDIR=$PKG install
+}
+

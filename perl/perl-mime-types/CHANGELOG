@@ -1,0 +1,39 @@
+Date: Sun 11 Jul 2021 09:54:20 PM EDT
+
+name=perl-mime-types
+version=2.21
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.18 to version 2.21
+
+----------------------------------------------------------------
+
+Date: Tue 13 Jul 2021 03:33:57 PM EDT
+
+version=2.21
+release=1
+
+Synopsis:
+Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue 13 Jul 2021 03:34:04 PM EDT
+
+version=2.21
+release=1
+
+Synopsis:
+Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue 21 Dec 2021 08:57:18 PM EST
+
+Version=2.22
+Release=1
+
+Synopsis:
+Upgraded from version 2.21 to version 2.22

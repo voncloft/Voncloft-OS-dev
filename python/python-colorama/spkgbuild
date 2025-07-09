@@ -1,0 +1,13 @@
+# description : Python API for cross-platform colored terminal text.
+# depends : python
+
+name=python-colorama
+version=0.4.6
+release=3
+
+source="https://github.com/tartley/colorama/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+	pip3 install colorama --target=$PKG
+ }

@@ -1,0 +1,32 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/mygpo-qt5/
+-rw-r--r-- root/root    usr/include/mygpo-qt5/AddRemoveResult.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/ApiRequest.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/Config.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/Device.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/DeviceList.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/DeviceSyncResult.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/DeviceUpdates.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/Episode.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/EpisodeAction.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/EpisodeActionList.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/EpisodeList.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/Podcast.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/PodcastList.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/Settings.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/Tag.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/TagList.h
+-rw-r--r-- root/root    usr/include/mygpo-qt5/mygpo_export.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/cmake/
+drwxr-xr-x root/root    usr/lib/cmake/mygpo-qt5/
+-rw-r--r-- root/root    usr/lib/cmake/mygpo-qt5/Mygpo-qt5Config.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mygpo-qt5/Mygpo-qt5ConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mygpo-qt5/Mygpo-qt5Targets-release.cmake
+-rw-r--r-- root/root    usr/lib/cmake/mygpo-qt5/Mygpo-qt5Targets.cmake
+lrwxrwxrwx root/root    usr/lib/libmygpo-qt5.so -> libmygpo-qt5.so.1
+lrwxrwxrwx root/root    usr/lib/libmygpo-qt5.so.1 -> libmygpo-qt5.so.1.1.0
+-rwxr-xr-x root/root    usr/lib/libmygpo-qt5.so.1.1.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libmygpo-qt5.pc

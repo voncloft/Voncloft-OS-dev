@@ -1,0 +1,219 @@
+Date: Sun 11 Jul 2021 01:13:45 PM EDT
+
+name=python-structlog
+version=21.1.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 20.2.0 to version 21.1.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:36:56 PM EDT
+
+version=21.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:36 AM EDT
+
+version=21.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:25 EDT 2021
+
+version=21.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:03 EDT 2021
+
+version=21.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:17 EDT 2021
+
+version=21.1.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 12 Oct 2021 11:03:36 AM EDT
+
+Version=21.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.1.0 to version 21.2.0
+
+----------------------------------------------------------------
+
+Date: Sat 20 Nov 2021 06:35:14 PM EST
+
+Version=21.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.2.0 to version 21.3.0
+
+----------------------------------------------------------------
+
+Date: Fri 26 Nov 2021 08:53:26 AM EST
+
+Version=21.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.3.0 to version 21.4.0
+
+----------------------------------------------------------------
+
+Date: Fri 17 Dec 2021 04:13:34 PM EST
+
+Version=21.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.4.0 to version 21.5.0
+
+----------------------------------------------------------------
+
+Date: Thu 21 Jul 2022 10:25:11 AM EDT
+
+Version=22.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 21.5.0 to version 22.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=22.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.1.0 to version 22.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Nov 2022 05:01:55 AM EST
+
+Version=22.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.2.0 to version 22.3.0
+
+----------------------------------------------------------------
+
+Date: Fri 07 Apr 2023 12:06:54 AM EDT
+
+Version=23.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 22.3.0 to version 23.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 10 Oct 2023 11:44:12 AM EDT
+
+Version=23.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.1.0 to version 23.2.0
+
+----------------------------------------------------------------
+
+Date: Sun 31 Dec 2023 09:54:07 PM EST
+
+Version=23.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.2.0 to version 23.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:37 AM EST
+
+Version=24.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.3.0 to version 24.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=24.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.1.0 to version 24.4.0
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jan 2025 10:18:16 AM EST
+
+Version=25.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 24.4.0 to version 25.1.0
+
+----------------------------------------------------------------
+
+Date: Thu 13 Mar 2025 10:21:31 AM EDT
+
+Version=25.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.1.0 to version 25.2.0
+
+----------------------------------------------------------------
+
+Date: Mon 28 Apr 2025 05:29:54 AM EDT
+
+Version=25.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.2.0 to version 25.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 03 Jun 2025 10:59:03 AM EDT
+
+Version=25.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 25.3.0 to version 25.4.0

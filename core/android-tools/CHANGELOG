@@ -1,0 +1,99 @@
+Date: Wed 04 Aug 2021 01:47:16 PM EDT
+
+name=android-tools
+version=31.0.2
+release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Mon 25 Oct 2021 05:40:34 PM EDT
+
+Version=31.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 31.0.2 to version 31.0.3
+
+----------------------------------------------------------------
+
+Date: Mon 25 Oct 2021 05:40:35 PM EDT
+
+Version=31.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 31.0.2 to version 31.0.3
+
+----------------------------------------------------------------
+
+Date: Sat 24 Sep 2022 02:20:02 PM EDT
+
+Version=33.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 31.0.3 to version 33.0.3
+
+----------------------------------------------------------------
+
+Date: Fri 03 Mar 2023 03:43:01 PM EST
+
+Version=34.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 33.0.3 to version 34.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 16 May 2023 05:08:04 PM EDT
+
+Version=34.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 34.0.0 to version 34.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:07 AM EDT
+
+Version=34.0.4
+Release=1
+
+Synopsis:
+Upgraded from version 34.0.1 to version 34.0.4
+
+----------------------------------------------------------------
+
+Date: Mon 25 Mar 2024 10:23:47 AM EDT
+
+Version=34.0.5
+Release=1
+
+Synopsis:
+Upgraded from version 34.0.4 to version 34.0.5
+
+----------------------------------------------------------------
+
+Date: Wed 08 May 2024 01:16:17 PM EDT
+
+Version=35.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 34.0.5 to version 35.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 04 Sep 2024 10:14:48 AM EDT
+
+Version=35.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 35.0.1 to version 35.0.2

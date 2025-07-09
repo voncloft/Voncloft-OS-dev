@@ -1,0 +1,15 @@
+# description : Provides a helper class to make assertions of regexes simpler
+# depends : python python-regex
+
+name=python-re-assert
+version=1.1.0
+release=2
+
+source="https://github.com/asottile/re-assert/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

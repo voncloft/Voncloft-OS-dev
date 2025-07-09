@@ -1,0 +1,15 @@
+# description : Scientific Graphics and GUI Library for Python
+# depends : python qt5-python-bindings python-numpy
+
+name=python-pyqtgraph
+version=0.13.7
+release=1
+
+source="https://github.com/pyqtgraph/pyqtgraph/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

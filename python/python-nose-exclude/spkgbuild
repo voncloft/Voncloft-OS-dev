@@ -1,0 +1,15 @@
+# description : Exclude specific directories from nosetests runs
+# depends : python-nose
+
+name=python-nose-exclude
+version=0.5.0
+release=6
+
+source="https://github.com/kgrandis/nose-exclude/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

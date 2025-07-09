@@ -1,0 +1,15 @@
+# description : A full-screen, console-based Python debugger
+# depends : python-urwid python-pygments
+
+name=python-pudb
+version=2025.1
+release=1
+
+source="https://github.com/inducer/pudb/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,79 @@
+Date: Wed Jul 14 04:28:19 EDT 2021
+
+name=python-graphviz
+version=0.17
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.16 to version 0.17
+
+----------------------------------------------------------------
+
+Date: Tue 07 Dec 2021 05:22:56 AM EST
+
+Version=0.19
+Release=1
+
+Synopsis:
+Upgraded from version 0.17 to version 0.19
+
+----------------------------------------------------------------
+
+Date: Sun 12 Dec 2021 04:54:44 PM EST
+
+Version=0.19.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.19 to version 0.19.1
+
+----------------------------------------------------------------
+
+Date: Mon 11 Apr 2022 04:56:48 AM EDT
+
+Version=0.19.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.1 to version 0.19.2
+
+----------------------------------------------------------------
+
+Date: Sat 16 Apr 2022 04:14:19 PM EDT
+
+Version=0.20
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.2 to version 0.20
+
+----------------------------------------------------------------
+
+Date: Sun 24 Jul 2022 10:55:43 AM EDT
+
+Version=0.20.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.20 to version 0.20.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=0.20.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.20.1 to version 0.20.3
+
+----------------------------------------------------------------
+
+Date: Mon 16 Jun 2025 10:49:51 AM EDT
+
+Version=0.21
+Release=1
+
+Synopsis:
+Upgraded from version 0.20.3 to version 0.21

@@ -1,0 +1,89 @@
+Date: Sun 11 Jul 2021 01:12:57 PM EDT
+
+name=python-multipart
+version=0.2.4
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.2.3 to version 0.2.4
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:30:11 PM EDT
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:55 AM EDT
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:12:19 EDT 2021
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:15:14 EDT 2021
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:46 EDT 2021
+
+version=0.2.4
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=1.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.2.4 to version 1.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 29 Nov 2024 06:39:36 AM EST
+
+Version=1.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.1.0 to version 1.2.0
+
+----------------------------------------------------------------
+
+Date: Sun 01 Dec 2024 12:27:59 PM EST
+
+Version=1.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.2.0 to version 1.2.1

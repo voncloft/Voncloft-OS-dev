@@ -1,0 +1,33 @@
+# description : linker from llvm project
+# depends : llvm cmake ninja
+
+name=lld
+version=20.1.7
+release=1
+_source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$version
+
+source="$_source_base/$name-$version.src.tar.xz
+	$_source_base/llvm-$version.src.tar.xz
+	$_source_base/libunwind-$version.src.tar.xz"
+	
+build() {
+	mv libunwind{-$version.src,}
+	cd $name-$version.src
+	mkdir build
+	cd build
+	cmake .. -G Ninja \
+	    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_SKIP_RPATH=ON \
+    -DLLVM_LINK_LLVM_DYLIB=ON \
+    -DLLVM_INCLUDE_TESTS=ON \
+    -DLLVM_BUILD_TESTS=ON \
+    -DLLVM_BUILD_DOCS=ON \
+    -DLLVM_ENABLE_SPHINX=ON \
+    -DSPHINX_WARNINGS_AS_ERRORS=OFF \
+    -DLLVM_EXTERNAL_LIT=/usr/bin/lit \
+    -DLLVM_MAIN_SRC_DIR="$SRC/llvm-$version.src"
+  ninja
+
+  DESTDIR=$PKG ninja install
+}

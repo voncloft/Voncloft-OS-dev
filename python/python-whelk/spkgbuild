@@ -1,0 +1,15 @@
+# description : Easy access to shell commands from python
+# depends : python
+
+name=python-whelk
+version=3.0
+release=2
+
+source="https://github.com/seveas/whelk/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

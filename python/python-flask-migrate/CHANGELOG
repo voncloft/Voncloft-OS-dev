@@ -1,0 +1,149 @@
+Date: Mon 12 Jul 2021 10:43:06 AM EDT
+
+name=python-flask-migrate
+version=3.0.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.5.3 to version 3.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:26:31 PM EDT
+
+version=3.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:50:19 AM EDT
+
+version=3.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:38 EDT 2021
+
+version=3.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:11:08 EDT 2021
+
+version=3.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:09:17 EDT 2021
+
+version=3.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sun Aug  1 15:15:07 EDT 2021
+
+version=3.1.0
+release=3
+
+Synopsis:
+Upgraded from version 3.0.1 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Mon 14 Nov 2022 08:48:17 AM EST
+
+Version=4.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.1.0 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 04:29:44 PM EST
+
+Version=4.0.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 18 Jan 2023 08:32:29 PM EST
+
+Version=4.0.2
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.1 to version 4.0.2
+
+----------------------------------------------------------------
+
+Date: Tue 31 Jan 2023 07:18:58 AM EST
+
+Version=4.0.3
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.2 to version 4.0.3
+
+----------------------------------------------------------------
+
+Date: Sat 04 Feb 2023 08:27:45 PM EST
+
+Version=4.0.4
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.3 to version 4.0.4
+
+----------------------------------------------------------------
+
+Date: Wed 13 Sep 2023 05:29:47 AM EDT
+
+Version=4.0.5
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.4 to version 4.0.5
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=4.0.7
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.5 to version 4.0.7
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:54 AM EST
+
+Version=4.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.7 to version 4.1.0

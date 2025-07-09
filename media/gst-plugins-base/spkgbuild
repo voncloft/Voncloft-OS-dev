@@ -1,0 +1,22 @@
+# description	: Well-groomed and well-maintained collection of GStreamer plug-ins and elements
+# depends	: alsa-lib gstreamer libtheora libvorbis libogg glib iso-codes meson
+
+name=gst-plugins-base
+version=1.26.3
+release=1
+source="http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+
+	mkdir build
+        cd build
+
+	
+meson setup ..               \
+      --prefix=/usr          \
+      --buildtype=release    \
+      --wrap-mode=nodownload 
+	ninja
+	DESTDIR=$PKG ninja install
+}

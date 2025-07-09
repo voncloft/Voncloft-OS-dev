@@ -1,0 +1,139 @@
+Date: Mon 12 Jul 2021 03:23:11 PM EDT
+
+name=python-bcrypt
+version=3.2.0
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:47:04 AM EDT
+
+version=3.2.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:05:19 EDT 2021
+
+version=3.2.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:05:29 EDT 2021
+
+version=3.2.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:05:51 EDT 2021
+
+version=3.2.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 02 May 2022 06:34:21 AM EDT
+
+Version=3.2.2
+Release=3
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.2.2
+
+----------------------------------------------------------------
+
+Date: Thu 25 Aug 2022 11:01:51 AM EDT
+
+Version=4.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.2.2 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 10 Oct 2022 08:04:37 AM EDT
+
+Version=4.0.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 28 Nov 2023 06:20:20 AM EST
+
+Version=4.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.0.1 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 29 Nov 2023 10:11:43 AM EST
+
+Version=4.1.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.1.1
+
+----------------------------------------------------------------
+
+Date: Sun 17 Dec 2023 11:10:45 AM EST
+
+Version=4.1.2
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.1 to version 4.1.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=4.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.2 to version 4.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 21 Nov 2024 04:12:41 AM EST
+
+Version=4.2.1
+Release=3
+
+Synopsis:
+Upgraded from version 4.2.0 to version 4.2.1
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:31 AM EST
+
+Version=4.3.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.2.1 to version 4.3.0

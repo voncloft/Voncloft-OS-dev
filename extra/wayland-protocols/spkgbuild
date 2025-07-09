@@ -1,0 +1,18 @@
+# description : wayland depends
+# depends : wayland
+
+name=wayland-protocols
+version=1.45
+release=1
+
+source="https://gitlab.freedesktop.org/wayland/$name/-/releases/$version/downloads/$name-$version.tar.xz"
+options="!checksum"
+
+build() {
+	cd $name-$version
+	mkdir build
+	cd build
+	meson --prefix=/usr --buildtype=release
+	ninja
+	DESTDIR=$PKG ninja install
+}	

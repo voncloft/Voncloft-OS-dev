@@ -1,0 +1,279 @@
+Date: Sun 11 Jul 2021 01:12:22 PM EDT
+
+name=python-django-modeltranslation
+version=0.17.3
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.16.1 to version 0.17.3
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:25:25 PM EDT
+
+version=0.17.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:49:13 AM EDT
+
+version=0.17.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:07:29 EDT 2021
+
+version=0.17.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:09:47 EDT 2021
+
+version=0.17.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:08:12 EDT 2021
+
+version=0.17.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 28 Jan 2022 03:46:22 PM EST
+
+Version=0.17.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.17.3 to version 0.17.4
+
+----------------------------------------------------------------
+
+Date: Mon 31 Jan 2022 06:33:33 AM EST
+
+Version=0.17.5
+Release=1
+
+Synopsis:
+Upgraded from version 0.17.4 to version 0.17.5
+
+----------------------------------------------------------------
+
+Date: Sun 01 May 2022 11:29:42 AM EDT
+
+Version=0.17.6
+Release=1
+
+Synopsis:
+Upgraded from version 0.17.5 to version 0.17.6
+
+----------------------------------------------------------------
+
+Date: Thu 05 May 2022 07:42:44 AM EDT
+
+Version=0.17.7
+Release=1
+
+Synopsis:
+Upgraded from version 0.17.6 to version 0.17.7
+
+----------------------------------------------------------------
+
+Date: Sat 14 May 2022 03:46:08 PM EDT
+
+Version=0.18.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.17.7 to version 0.18.0
+
+----------------------------------------------------------------
+
+Date: Mon 16 May 2022 06:42:02 AM EDT
+
+Version=0.18.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.0 to version 0.18.2
+
+----------------------------------------------------------------
+
+Date: Wed 20 Jul 2022 05:16:30 AM EDT
+
+Version=0.18.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.2 to version 0.18.3
+
+----------------------------------------------------------------
+
+Date: Sun 24 Jul 2022 10:55:43 AM EDT
+
+Version=0.18.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.3 to version 0.18.4
+
+----------------------------------------------------------------
+
+Date: Fri 14 Oct 2022 05:47:55 AM EDT
+
+Version=0.18.5
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.4 to version 0.18.5
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:04 PM EST
+
+Version=0.18.7
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.5 to version 0.18.7
+
+----------------------------------------------------------------
+
+Date: Thu 02 Feb 2023 07:33:38 AM EST
+
+Version=0.18.8
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.7 to version 0.18.8
+
+----------------------------------------------------------------
+
+Date: Sun 12 Feb 2023 06:27:13 AM EST
+
+Version=0.18.9
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.8 to version 0.18.9
+
+----------------------------------------------------------------
+
+Date: Mon 05 Jun 2023 10:17:50 AM EDT
+
+Version=0.18.10
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.9 to version 0.18.10
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jul 2023 08:27:18 PM EDT
+
+Version=0.18.11
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.10 to version 0.18.11
+
+----------------------------------------------------------------
+
+Date: Sat 09 Sep 2023 03:25:46 PM EDT
+
+Version=0.18.12
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.11 to version 0.18.12
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=0.19.9
+Release=1
+
+Synopsis:
+Upgraded from version 0.18.12 to version 0.19.9
+
+----------------------------------------------------------------
+
+Date: Tue 22 Oct 2024 07:52:57 AM EDT
+
+Version=0.19.10
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.9 to version 0.19.10
+
+----------------------------------------------------------------
+
+Date: Wed 13 Nov 2024 05:29:35 AM EST
+
+Version=0.19.11
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.10 to version 0.19.11
+
+----------------------------------------------------------------
+
+Date: Sun 29 Dec 2024 11:57:31 AM EST
+
+Version=0.19.12
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.11 to version 0.19.12
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:22 AM EDT
+
+Version=0.19.13
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.12 to version 0.19.13
+
+----------------------------------------------------------------
+
+Date: Mon 21 Apr 2025 08:11:36 AM EDT
+
+Version=0.19.14
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.13 to version 0.19.14
+
+----------------------------------------------------------------
+
+Date: Sun 08 Jun 2025 06:56:46 AM EDT
+
+Version=0.19.15
+Release=1
+
+Synopsis:
+Upgraded from version 0.19.14 to version 0.19.15

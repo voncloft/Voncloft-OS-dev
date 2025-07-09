@@ -1,0 +1,15 @@
+# description : Modern password hashing for your software and your servers
+# depends : python-cffi python-six
+
+name=python-bcrypt
+version=4.3.0
+release=3
+
+source="https://github.com/pyca/bcrypt/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

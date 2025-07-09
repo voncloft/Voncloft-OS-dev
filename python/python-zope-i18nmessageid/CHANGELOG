@@ -1,0 +1,99 @@
+Date: Mon 12 Jul 2021 03:39:12 PM EDT
+
+name=python-zope-i18nmessageid
+version=5.0.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:51 AM EDT
+
+version=5.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:39 EDT 2021
+
+version=5.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:36 EDT 2021
+
+version=5.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:27 EDT 2021
+
+version=5.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 07 Nov 2022 08:41:58 AM EST
+
+Version=5.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.0.1 to version 5.1.0
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=5.1.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.1.0 to version 5.1.1
+
+----------------------------------------------------------------
+
+Date: Sun 26 Mar 2023 12:35:21 PM EDT
+
+Version=6.0.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.1.1 to version 6.0.1
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:43 PM EDT
+
+Version=6.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 6.0.1 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=7.0
+Release=3
+
+Synopsis:
+Upgraded from version 6.1.0 to version 7.0

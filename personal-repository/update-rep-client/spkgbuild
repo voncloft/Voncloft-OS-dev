@@ -1,0 +1,14 @@
+# description : a program to upload my repos to github
+# depends : 
+
+name=update-rep-client
+version=1
+release=1
+
+source="update-rep"
+options="!checksum"
+
+build() {
+	mkdir -pv $PKG/usr/bin
+	install -m755 $SRC/update-rep $PKG/usr/bin
+}

@@ -1,0 +1,20 @@
+# description : linker from llvm project
+# depends : llvm cmake ninja
+
+name=lld
+version=13.0.1
+release=1
+_source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$version
+
+source="$_source_base/$name-$version.src.tar.xz
+	$_source_base/llvm-$version.src.tar.xz
+	$_source_base/libunwind-$version.src.tar.xz"
+	
+build() {
+	mv libunwind{-$version.src,}
+	cd $name-$version.src
+	mkdir build
+	cd build
+
+  DESTDIR=$PKG ninja install
+}

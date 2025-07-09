@@ -1,0 +1,49 @@
+Date: Fri 24 Feb 2023 03:46:04 PM EST
+
+bluefish
+Version=2.2.13
+Release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.2.12 to version 2.2.13
+
+----------------------------------------------------------------
+
+Date: Mon 05 Jun 2023 10:17:50 AM EDT
+
+Version=2.2.14
+Release=2
+
+Synopsis:
+Upgraded from version 2.2.13 to version 2.2.14
+
+----------------------------------------------------------------
+
+Date: Mon 25 Mar 2024 10:23:47 AM EDT
+
+Version=2.2.15
+Release=2
+
+Synopsis:
+Upgraded from version 2.2.14 to version 2.2.15
+
+----------------------------------------------------------------
+
+Date: Mon 23 Sep 2024 10:50:18 AM EDT
+
+Version=2.2.16
+Release=2
+
+Synopsis:
+Upgraded from version 2.2.15 to version 2.2.16
+
+----------------------------------------------------------------
+
+Date: Wed 02 Apr 2025 05:43:01 AM EDT
+
+Version=2.2.17
+Release=2
+
+Synopsis:
+Upgraded from version 2.2.16 to version 2.2.17

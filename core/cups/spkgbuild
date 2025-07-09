@@ -1,0 +1,40 @@
+# description	: Print spooler and associated utilities
+# depends	: gnutls libusb linux-pam dbus colord xdg-utils
+
+name=cups
+version=2.4.12
+release=1
+source="https://github.com/OpenPrinting/cups/releases/download/v$version/cups-$version-source.tar.gz
+	cupsd.conf"
+
+build() {
+	cd $name-$version
+
+
+#sed -i 's#@CUPS_HTMLVIEW@#firefox#' desktop/cups.desktop.in
+sed -e "s/format-truncation//" \
+    -i configure \
+       config-scripts/cups-compiler.m4
+
+       ./configure --libdir=/usr/lib            \
+            --disable-systemd            \
+            --with-rcdir=/tmp/cupsinit   \
+            --with-system-groups=lpadmin \
+            --with-docdir=/usr/share/cups/doc-$version
+            make
+            make DESTDIR=$PKG install 
+	    mkdir $PKG/usr/share/doc/
+            ln -sf ../cups/doc-$version $PKG/usr/share/doc/cups-$version
+            rm -rf $PKG/tmp/cupsinit
+	echo "voncloft /run/cups/cups.sock" > $PKG/etc/cups/client.conf
+	# Linux PAM Configuration
+	mkdir -p $PKG/etc/pam.d
+	cat > $PKG/etc/pam.d/cups << "EOF"
+auth    include system-auth
+account include system-account
+session include system-session
+EOF
+
+	mkdir -pv $PKG/etc/cups
+	install -Dm644 $SRC/cupsd.conf $PKG/etc/cups/cupsd.conf
+}

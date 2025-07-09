@@ -1,0 +1,15 @@
+# description : Zope testing frameworks
+  # depends : python
+
+name=python-zope.testing
+version=5.1
+release=1
+
+source="https://github.com/zopefoundation/zope.testing/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

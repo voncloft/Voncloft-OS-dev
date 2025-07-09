@@ -1,0 +1,109 @@
+Date: Wed 29 Sep 2021 07:40:38 AM EDT
+
+python-heatclient
+Version=2.4.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.3.0 to version 2.4.0
+
+----------------------------------------------------------------
+
+Date: Fri 07 Jan 2022 06:46:37 PM EST
+
+Version=2.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.0 to version 2.5.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Feb 2022 06:35:50 PM EST
+
+Version=2.5.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.0 to version 2.5.1
+
+----------------------------------------------------------------
+
+Date: Sat 16 Jul 2022 04:58:48 PM EDT
+
+Version=3.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.1 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Sat 03 Sep 2022 11:13:51 AM EDT
+
+Version=3.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 24 Feb 2023 03:46:04 PM EST
+
+Version=3.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.1.0 to version 3.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 17 May 2023 07:06:19 PM EDT
+
+Version=3.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Thu 11 Jan 2024 01:05:36 PM EST
+
+Version=3.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=4.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.0 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:54 AM EST
+
+Version=4.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 May 2025 09:02:43 AM EDT
+
+Version=4.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.2.0

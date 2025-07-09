@@ -1,0 +1,15 @@
+# description : Generate a formatted text table using ASCII characters
+# depends : python
+
+name=python-texttable
+version=1.7.0
+release=3
+
+source="https://github.com/foutaise/texttable/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

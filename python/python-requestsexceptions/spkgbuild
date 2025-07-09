@@ -1,0 +1,15 @@
+# description : Import exceptions from potentially bundled packages in requests.
+# depends : python-requests
+
+name=python-requestsexceptions
+version=1.4.0
+release=7
+
+source="https://github.com/openstack-infra/requestsexceptions/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

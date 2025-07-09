@@ -1,0 +1,20 @@
+# description : utility that generates rust bindings from c/c++ headers
+# depends : rustc llvm
+
+name=rust-bindgen
+version=0.72.0
+release=1
+
+source="https://github.com/rust-lang/rust-bindgen/archive/v$version/rust-bindgen-$version.tar.gz"
+options="!checksum"
+
+build()
+{
+	cd *
+	cargo build --release
+	mkdir -pv $PKG/usr/bin
+	install -v -m755 target/release/bindgen $PKG/usr/bin
+	mkdir -pv $PKG/usr/share/bash-completion/completions
+	$PKG/usr/bin/bindgen --generate-shell-completions bash \
+    > $PKG/usr/share/bash-completion/completions/bindgen
+}

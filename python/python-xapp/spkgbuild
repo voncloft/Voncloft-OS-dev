@@ -1,0 +1,15 @@
+# description : Python Xapp Library
+# depends : python python-psutil
+
+name=python-xapp
+version=2.4.2
+release=2
+
+source=https://github.com/linuxmint/python3-xapp/archive/refs/tags/$version.tar.gz
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

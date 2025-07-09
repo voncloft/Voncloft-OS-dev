@@ -1,0 +1,15 @@
+# description : A built-package format for Python
+  # depends : python-packaging
+
+name=python-wheel
+version=0.46.1
+release=1
+
+source="https://github.com/pypa/wheel/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

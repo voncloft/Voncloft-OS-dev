@@ -1,0 +1,109 @@
+Date: Mon 12 Jul 2021 03:34:28 PM EDT
+
+name=python-pytest-timeout
+version=1.4.2
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:58:10 AM EDT
+
+version=1.4.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:16:56 EDT 2021
+
+version=1.4.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:20:16 EDT 2021
+
+version=1.4.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:16:54 EDT 2021
+
+version=1.4.2
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 18 Oct 2021 08:23:17 PM EDT
+
+Version=2.0.1
+Release=3
+
+Synopsis:
+Upgraded from version 1.4.2 to version 2.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 14 Dec 2021 04:38:17 AM EST
+
+Version=2.0.2
+Release=3
+
+Synopsis:
+Upgraded from version 2.0.1 to version 2.0.2
+
+----------------------------------------------------------------
+
+Date: Thu 20 Jan 2022 05:20:28 AM EST
+
+Version=2.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.0.2 to version 2.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 10 Oct 2023 11:44:12 AM EDT
+
+Version=2.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.1.0 to version 2.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=2.3.1
+Release=3
+
+Synopsis:
+Upgraded from version 2.2.0 to version 2.3.1
+
+----------------------------------------------------------------
+
+Date: Wed 07 May 2025 08:06:47 AM EDT
+
+Version=2.4.0
+Release=3
+
+Synopsis:
+Upgraded from version 2.3.1 to version 2.4.0

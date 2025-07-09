@@ -1,0 +1,29 @@
+Date: Mon 31 Jan 2022 06:33:33 AM EST
+
+waylandpp
+Version=0.2.9
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.2.8 to version 0.2.9
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 04:34:18 PM EDT
+
+Version=0.2.10
+Release=1
+
+Synopsis:
+Upgraded from version 0.2.9 to version 0.2.10
+
+----------------------------------------------------------------
+
+Date: Mon 25 Apr 2022 07:41:35 PM EDT
+
+Version=1.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.2.10 to version 1.0.0

@@ -1,0 +1,49 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libidn
+Version=1.38
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.36 to version 1.38
+
+----------------------------------------------------------------
+
+Date: Tue 21 Jun 2022 09:14:25 PM EDT
+
+Version=1.40
+Release=1
+
+Synopsis:
+Upgraded from version 1.38 to version 1.40
+
+----------------------------------------------------------------
+
+Date: Sun 26 Jun 2022 07:26:02 PM EDT
+
+Version=1.41
+Release=1
+
+Synopsis:
+Upgraded from version 1.40 to version 1.41
+
+----------------------------------------------------------------
+
+Date: Tue 16 Jan 2024 10:26:25 AM EST
+
+Version=1.42
+Release=1
+
+Synopsis:
+Upgraded from version 1.41 to version 1.42
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:21 AM EDT
+
+Version=1.43
+Release=1
+
+Synopsis:
+Upgraded from version 1.42 to version 1.43

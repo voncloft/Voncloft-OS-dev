@@ -1,0 +1,139 @@
+Date: Mon 12 Jul 2021 03:37:27 PM EDT
+
+name=python-thrift
+version=0.13.0
+release=4
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:07 AM EDT
+
+version=0.13.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:57 EDT 2021
+
+version=0.13.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:38 EDT 2021
+
+version=0.13.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:47 EDT 2021
+
+version=0.13.0
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:45:27 AM EDT
+
+Version=0.14.1
+Release=4
+
+Synopsis:
+Upgraded from version 0.13.0 to version 0.14.1
+
+----------------------------------------------------------------
+
+Date: Thu 30 Sep 2021 05:49:58 AM EDT
+
+Version=0.15.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.14.1 to version 0.15.0
+
+----------------------------------------------------------------
+
+Date: Thu 17 Feb 2022 05:18:44 AM EST
+
+Version=0.16.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.15.0 to version 0.16.0
+
+----------------------------------------------------------------
+
+Date: Sun 18 Sep 2022 05:07:30 PM EDT
+
+Version=0.17.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.16.0 to version 0.17.0
+
+----------------------------------------------------------------
+
+Date: Tue 14 Feb 2023 04:52:08 PM EST
+
+Version=0.18.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.17.0 to version 0.18.0
+
+----------------------------------------------------------------
+
+Date: Thu 02 Mar 2023 04:31:06 PM EST
+
+Version=0.18.1
+Release=4
+
+Synopsis:
+Upgraded from version 0.18.0 to version 0.18.1
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:10 AM EDT
+
+Version=0.19.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.18.1 to version 0.19.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=0.21.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.19.0 to version 0.21.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:25 PM EDT
+
+Version=0.22.0
+Release=4
+
+Synopsis:
+Upgraded from version 0.21.0 to version 0.22.0

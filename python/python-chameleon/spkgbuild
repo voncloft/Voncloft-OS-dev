@@ -1,0 +1,15 @@
+# description : Fast HTML/XML Template Compiler
+# depends : python
+
+name=python-chameleon
+version=4.6.0
+release=2
+
+source="https://github.com/malthe/chameleon/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

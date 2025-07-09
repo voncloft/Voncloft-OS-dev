@@ -1,0 +1,15 @@
+# description : Python attributes without boilerplate.
+# depends : python
+
+name=python-characteristic
+version=14.3.0
+release=11
+
+source="https://files.pythonhosted.org/packages/source/c/characteristic/characteristic-14.3.0.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

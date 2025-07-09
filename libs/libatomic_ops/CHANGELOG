@@ -1,0 +1,39 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libatomic_ops
+Version=7.6.12
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 7.6.10 to version 7.6.12
+
+----------------------------------------------------------------
+
+Date: Fri 26 Aug 2022 08:14:08 AM EDT
+
+Version=7.6.14
+Release=1
+
+Synopsis:
+Upgraded from version 7.6.12 to version 7.6.14
+
+----------------------------------------------------------------
+
+Date: Thu 30 Mar 2023 04:03:50 PM EDT
+
+Version=7.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.6.14 to version 7.8.0
+
+----------------------------------------------------------------
+
+Date: Sun 17 Dec 2023 11:10:45 AM EST
+
+Version=7.8.2
+Release=1
+
+Synopsis:
+Upgraded from version 7.8.0 to version 7.8.2

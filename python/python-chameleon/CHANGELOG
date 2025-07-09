@@ -1,0 +1,219 @@
+Date: Mon 12 Jul 2021 10:42:03 AM EDT
+
+name=python-chameleon
+version=3.9.1
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.8.1 to version 3.9.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:23:55 PM EDT
+
+version=3.9.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:47:46 AM EDT
+
+version=3.9.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:06:01 EDT 2021
+
+version=3.9.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:06:19 EDT 2021
+
+version=3.9.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:06:40 EDT 2021
+
+version=3.9.1
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 08 Apr 2022 12:41:45 PM EDT
+
+Version=3.10.0
+Release=2
+
+Synopsis:
+Upgraded from version 3.9.1 to version 3.10.0
+
+----------------------------------------------------------------
+
+Date: Fri 20 May 2022 06:33:19 PM EDT
+
+Version=3.10.1
+Release=2
+
+Synopsis:
+Upgraded from version 3.10.0 to version 3.10.1
+
+----------------------------------------------------------------
+
+Date: Sun 18 Dec 2022 06:50:52 AM EST
+
+Version=3.10.2
+Release=2
+
+Synopsis:
+Upgraded from version 3.10.1 to version 3.10.2
+
+----------------------------------------------------------------
+
+Date: Tue 07 Mar 2023 08:50:41 AM EST
+
+Version=4.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 3.10.2 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:45 PM EDT
+
+Version=4.0.1
+Release=2
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 29 Aug 2023 05:56:57 PM EDT
+
+Version=4.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 4.0.1 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:33 AM EDT
+
+Version=4.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 06 Dec 2023 06:29:36 AM EST
+
+Version=4.3.0
+Release=2
+
+Synopsis:
+Upgraded from version 4.2.0 to version 4.3.0
+
+----------------------------------------------------------------
+
+Date: Thu 14 Dec 2023 05:39:14 PM EST
+
+Version=4.4.0
+Release=2
+
+Synopsis:
+Upgraded from version 4.3.0 to version 4.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 19 Dec 2023 06:24:49 AM EST
+
+Version=4.4.1
+Release=2
+
+Synopsis:
+Upgraded from version 4.4.0 to version 4.4.1
+
+----------------------------------------------------------------
+
+Date: Wed 20 Dec 2023 03:59:28 AM EST
+
+Version=4.4.2
+Release=2
+
+Synopsis:
+Upgraded from version 4.4.1 to version 4.4.2
+
+----------------------------------------------------------------
+
+Date: Sun 31 Dec 2023 09:54:07 PM EST
+
+Version=4.4.3
+Release=2
+
+Synopsis:
+Upgraded from version 4.4.2 to version 4.4.3
+
+----------------------------------------------------------------
+
+Date: Mon 22 Jan 2024 05:56:49 PM EST
+
+Version=4.5.0
+Release=2
+
+Synopsis:
+Upgraded from version 4.4.3 to version 4.5.0
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:32 AM EST
+
+Version=4.5.2
+Release=2
+
+Synopsis:
+Upgraded from version 4.5.0 to version 4.5.2
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=4.5.4
+Release=2
+
+Synopsis:
+Upgraded from version 4.5.2 to version 4.5.4
+
+----------------------------------------------------------------
+
+Date: Sun 05 Jan 2025 01:15:40 PM EST
+
+Version=4.6.0
+Release=2
+
+Synopsis:
+Upgraded from version 4.5.4 to version 4.6.0

@@ -1,0 +1,15 @@
+# description : Sacred Marriage of Pipfile, Pip, & Virtualenv.
+# depends : python python-pip python-certifi
+
+name=python-pipenv
+version=2025.0.3
+release=1
+
+source="https://github.com/pypa/pipenv/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

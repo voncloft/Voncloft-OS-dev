@@ -1,0 +1,11 @@
+# description	: Utility libraries for XC Binding
+# depends	: libxcb xcb-util xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm xcb-util-cursor 
+
+name=xcb-utilities
+version=0.4.1
+release=1
+
+build() {
+	mkdir -pv $PKG/etc
+}
+

@@ -1,0 +1,69 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+hidapi
+Version=0.11.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.10.1 to version 0.11.0
+
+----------------------------------------------------------------
+
+Date: Tue 04 Jan 2022 04:07:54 PM EST
+
+Version=0.11.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.11.0 to version 0.11.2
+
+----------------------------------------------------------------
+
+Date: Thu 26 May 2022 05:31:37 AM EDT
+
+Version=0.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.11.2 to version 0.12.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 04:29:44 PM EST
+
+Version=0.13.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.12.0 to version 0.13.0
+
+----------------------------------------------------------------
+
+Date: Tue 10 Jan 2023 05:35:35 PM EST
+
+Version=0.13.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.13.0 to version 0.13.1
+
+----------------------------------------------------------------
+
+Date: Tue 23 May 2023 05:09:12 PM EDT
+
+Version=0.14.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.13.1 to version 0.14.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:23 PM EDT
+
+Version=0.15.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.14.0 to version 0.15.0

@@ -1,0 +1,15 @@
+# description : Namespace control and lazy-import mechanism
+# depends : python
+
+name=python-apipkg
+version=2.1.0
+release=5
+
+source="https://files.pythonhosted.org/packages/source/a/apipkg/apipkg-2.1.0.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

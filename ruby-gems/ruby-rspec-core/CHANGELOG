@@ -1,0 +1,128 @@
+Date: Wed 21 Apr 2021 07:10:36 AM EDT
+
+name=ruby-rspec-core
+version=3.8.0
+release=4
+
+Synopsis:
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 18 Aug 2021 08:12:11 PM EDT
+
+version=3.10.1
+release=4
+
+Synopsis:
+Upgraded from version 3.8.0 to version 3.10.1
+
+----------------------------------------------------------------
+
+Date: Fri 28 Jan 2022 03:46:22 PM EST
+
+Version=3.10.2
+Release=4
+
+Synopsis:
+Upgraded from version 3.10.1 to version 3.10.2
+
+----------------------------------------------------------------
+
+Date: Wed 09 Feb 2022 03:48:22 PM EST
+
+Version=3.11.0
+Release=4
+
+Synopsis:
+Upgraded from version 3.10.2 to version 3.11.0
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:36 PM EDT
+
+Version=3.12.0
+Release=4
+
+Synopsis:
+Upgraded from version 3.11.0 to version 3.12.0
+
+----------------------------------------------------------------
+
+Date: Sat 04 Feb 2023 08:27:46 PM EST
+
+Version=3.12.1
+Release=4
+
+Synopsis:
+Upgraded from version 3.12.0 to version 3.12.1
+
+----------------------------------------------------------------
+
+Date: Thu 20 Apr 2023 12:56:52 PM EDT
+
+Version=3.12.2
+Release=4
+
+Synopsis:
+Upgraded from version 3.12.1 to version 3.12.2
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:06 AM EST
+
+Version=3.13.0
+Release=4
+
+Synopsis:
+Upgraded from version 3.12.2 to version 3.13.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=3.13.1
+Release=4
+
+Synopsis:
+Upgraded from version 3.13.0 to version 3.13.1
+
+----------------------------------------------------------------
+
+Date: Tue 22 Oct 2024 07:52:58 AM EDT
+
+Version=3.13.2
+Release=4
+
+Synopsis:
+Upgraded from version 3.13.1 to version 3.13.2
+
+----------------------------------------------------------------
+
+Date: Fri 07 Feb 2025 05:34:56 PM EST
+
+Version=3.13.3
+Release=4
+
+Synopsis:
+Upgraded from version 3.13.2 to version 3.13.3
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:25 PM EDT
+
+Version=3.13.4
+Release=4
+
+Synopsis:
+Upgraded from version 3.13.3 to version 3.13.4
+
+----------------------------------------------------------------
+
+Date: Thu 26 Jun 2025 10:25:20 AM EDT
+
+Version=3.13.5
+Release=4
+
+Synopsis:
+Upgraded from version 3.13.4 to version 3.13.5

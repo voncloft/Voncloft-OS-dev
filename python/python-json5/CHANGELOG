@@ -1,0 +1,189 @@
+Date: Sun 11 Jul 2021 01:12:45 PM EDT
+
+name=python-json5
+version=0.9.6
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.9.5 to version 0.9.6
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:28:35 PM EDT
+
+version=0.9.6
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:52:21 AM EDT
+
+version=0.9.6
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:10:45 EDT 2021
+
+version=0.9.6
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:13:28 EDT 2021
+
+version=0.9.6
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:17 EDT 2021
+
+version=0.9.6
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 07 May 2022 09:13:59 PM EDT
+
+Version=0.9.7
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.6 to version 0.9.7
+
+----------------------------------------------------------------
+
+Date: Tue 10 May 2022 10:04:52 AM EDT
+
+Version=0.9.8
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.7 to version 0.9.8
+
+----------------------------------------------------------------
+
+Date: Tue 02 Aug 2022 04:55:56 PM EDT
+
+Version=0.9.9
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.8 to version 0.9.9
+
+----------------------------------------------------------------
+
+Date: Sat 03 Sep 2022 11:13:51 AM EDT
+
+Version=0.9.10
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.9 to version 0.9.10
+
+----------------------------------------------------------------
+
+Date: Tue 03 Jan 2023 07:24:37 PM EST
+
+Version=0.9.12
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.10 to version 0.9.12
+
+----------------------------------------------------------------
+
+Date: Fri 17 Mar 2023 04:11:36 PM EDT
+
+Version=0.9.13
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.12 to version 0.9.13
+
+----------------------------------------------------------------
+
+Date: Tue 16 May 2023 05:08:04 PM EDT
+
+Version=0.9.14
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.13 to version 0.9.14
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:38 AM EST
+
+Version=0.9.17
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.14 to version 0.9.17
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=0.9.25
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.17 to version 0.9.25
+
+----------------------------------------------------------------
+
+Date: Tue 12 Nov 2024 09:45:11 AM EST
+
+Version=0.9.28
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.25 to version 0.9.28
+
+----------------------------------------------------------------
+
+Date: Wed 27 Nov 2024 09:33:40 AM EST
+
+Version=0.10.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.9.28 to version 0.10.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Apr 2025 09:37:02 AM EDT
+
+Version=0.11.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.10.0 to version 0.11.0
+
+----------------------------------------------------------------
+
+Date: Tue 08 Apr 2025 10:08:57 AM EDT
+
+Version=0.12.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.11.0 to version 0.12.0

@@ -1,0 +1,39 @@
+Date: Sat 13 Nov 2021 04:03:53 PM EST
+
+python-collada
+Version=0.7.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.7.1 to version 0.7.2
+
+----------------------------------------------------------------
+
+Date: Wed 10 Jan 2024 06:09:36 AM EST
+
+Version=0.8
+Release=1
+
+Synopsis:
+Upgraded from version 0.7.2 to version 0.8
+
+----------------------------------------------------------------
+
+Date: Tue 18 Feb 2025 08:54:09 AM EST
+
+Version=0.9
+Release=1
+
+Synopsis:
+Upgraded from version 0.8 to version 0.9
+
+----------------------------------------------------------------
+
+Date: Fri 04 Jul 2025 04:43:34 PM EDT
+
+Version=0.9.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.9 to version 0.9.2

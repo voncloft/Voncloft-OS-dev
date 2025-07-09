@@ -1,0 +1,89 @@
+Date: Mon 29 Nov 2021 05:30:46 AM EST
+
+ristretto
+Version=0.12.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.12.0 to version 0.12.1
+
+----------------------------------------------------------------
+
+Date: Sat 15 Jan 2022 01:18:11 AM EST
+
+Version=0.12.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.12.1 to version 0.12.2
+
+----------------------------------------------------------------
+
+Date: Mon 11 Jul 2022 06:55:00 AM EDT
+
+Version=0.12.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.12.2 to version 0.12.3
+
+----------------------------------------------------------------
+
+Date: Sun 18 Dec 2022 06:50:52 AM EST
+
+Version=0.12.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.12.3 to version 0.12.4
+
+----------------------------------------------------------------
+
+Date: Sun 12 Feb 2023 06:27:14 AM EST
+
+Version=0.13.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.12.4 to version 0.13.0
+
+----------------------------------------------------------------
+
+Date: Sat 13 May 2023 04:05:06 PM EDT
+
+Version=0.13.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.13.0 to version 0.13.1
+
+----------------------------------------------------------------
+
+Date: Tue 06 Feb 2024 06:46:36 AM EST
+
+Version=0.13.2
+Release=1
+
+Synopsis:
+Upgraded from version 0.13.1 to version 0.13.2
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:06 AM EST
+
+Version=0.13.3
+Release=1
+
+Synopsis:
+Upgraded from version 0.13.2 to version 0.13.3
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:47 AM EDT
+
+Version=0.13.4
+Release=1
+
+Synopsis:
+Upgraded from version 0.13.3 to version 0.13.4

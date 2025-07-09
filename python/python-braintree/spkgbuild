@@ -1,0 +1,15 @@
+# description : Braintree Python Library
+# depends : python-requests
+
+name=python-braintree
+version=4.37.0
+release=1
+
+source="https://github.com/braintree/braintree_python/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

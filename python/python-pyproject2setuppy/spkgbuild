@@ -1,0 +1,15 @@
+# description : Cheap build()er for pyproject-based build() systems
+# depends : python-setuptools python-toml
+
+name=python-pyproject2setuppy
+version=20
+release=2
+
+source="https://github.com/mgorny/pyproject2setuppy/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

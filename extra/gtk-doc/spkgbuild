@@ -1,0 +1,21 @@
+# description : code documenter 
+# depends : docbook-xml docbook-xsl itstool libxslt python-pygments fop
+
+name=gtk-doc
+version=1.33.2
+release=1
+
+source="https://download.gnome.org/sources/$name/1.33/$name-$version.tar.xz"
+options="!checksum"
+
+build() {
+	cd $name-$version
+	#autoreconf -fiv   
+	#./configure --prefix=/usr
+	mkdir build
+	cd build
+	meson .. \
+	--libdir=/usr/lib \
+	--prefix=/usr
+	DESTDIR=$PKG meson install -C .
+}	

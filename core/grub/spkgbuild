@@ -1,0 +1,20 @@
+# description	: The GRand Unified Bootloader
+# depends	: gettext bash xz fuse2 python
+
+name=grub
+version=2.12
+release=2
+backup="etc/default/grub"
+source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr \
+	--sysconfdir=/etc \
+	--disable-efimu \
+	--disable-werror
+	make
+	make DESTDIR=$PKG install
+	mkdir -pv $PKG/usr/share/bash-completion
+	mv -v $PKG/etc/bash_completion.d/grub $PKG/usr/share/bash-completion/completions
+}

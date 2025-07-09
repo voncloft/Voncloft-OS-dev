@@ -1,0 +1,15 @@
+# description : A pure git implementation of a sliding window memory map manager
+# depends : python
+
+name=python-smmap
+version=5.0.0
+release=1
+
+source="https://pypi.org/packages/source/s/smmap/smmap-5.0.0.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

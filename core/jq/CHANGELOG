@@ -1,0 +1,39 @@
+Date: Tue 01 Aug 2023 07:32:13 AM EDT
+
+jq
+Version=1.7
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.6 to version 1.7
+
+----------------------------------------------------------------
+
+Date: Thu 14 Dec 2023 05:39:12 PM EST
+
+Version=1.7.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.7 to version 1.7.1
+
+----------------------------------------------------------------
+
+Date: Tue 03 Jun 2025 10:59:03 AM EDT
+
+Version=1.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.1 to version 1.8.0
+
+----------------------------------------------------------------
+
+Date: Fri 04 Jul 2025 04:43:31 PM EDT
+
+Version=1.8.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.0 to version 1.8.1

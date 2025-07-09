@@ -1,0 +1,59 @@
+Date: Mon 12 Jul 2021 03:36:22 PM EDT
+
+name=python-sparqlwrapper
+version=1.8.5
+release=2
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:02 AM EDT
+
+version=1.8.5
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:18:49 EDT 2021
+
+version=1.8.5
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:22:22 EDT 2021
+
+version=1.8.5
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:18:42 EDT 2021
+
+version=1.8.5
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue 15 Mar 2022 05:20:10 AM EDT
+
+Version=2.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 1.8.5 to version 2.0.0

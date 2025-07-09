@@ -1,0 +1,79 @@
+Date: Sun 11 Jul 2021 01:13:24 PM EDT
+
+name=python-pytest-benchmark
+version=3.4.1
+release=4
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.2.3 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:34:01 PM EDT
+
+version=3.4.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:57:43 AM EDT
+
+version=3.4.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:16:29 EDT 2021
+
+version=3.4.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:19:44 EDT 2021
+
+version=3.4.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:16:28 EDT 2021
+
+version=3.4.1
+release=4
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:35 PM EDT
+
+Version=4.0.0
+Release=4
+
+Synopsis:
+Upgraded from version 3.4.1 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:45 PM EST
+
+Version=5.1.0
+Release=4
+
+Synopsis:
+Upgraded from version 4.0.0 to version 5.1.0

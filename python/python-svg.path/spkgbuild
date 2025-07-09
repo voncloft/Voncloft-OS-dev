@@ -1,0 +1,15 @@
+# description : SVG path objects and parser
+# depends : python
+
+name=python-svg.path
+version=6.4
+release=2
+
+source="https://github.com/regebro/svg.path/archive/refs/tags/a$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

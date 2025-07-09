@@ -1,0 +1,21 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/lha
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/liblhasa-1.0/
+-rw-r--r-- root/root    usr/include/liblhasa-1.0/lha_decoder.h
+-rw-r--r-- root/root    usr/include/liblhasa-1.0/lha_file_header.h
+-rw-r--r-- root/root    usr/include/liblhasa-1.0/lha_input_stream.h
+-rw-r--r-- root/root    usr/include/liblhasa-1.0/lha_reader.h
+-rw-r--r-- root/root    usr/include/liblhasa-1.0/lhasa.h
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/liblhasa.a
+lrwxrwxrwx root/root    usr/lib/liblhasa.so -> liblhasa.so.0.0.0
+lrwxrwxrwx root/root    usr/lib/liblhasa.so.0 -> liblhasa.so.0.0.0
+-rwxr-xr-x root/root    usr/lib/liblhasa.so.0.0.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/liblhasa.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man1/
+-rw-r--r-- root/root    usr/share/man/man1/lha.1.gz

@@ -1,0 +1,38 @@
+Date: Wed 21 Apr 2021 06:56:03 AM EDT
+
+name=ruby-optimist
+version=3.0.1
+release=2
+
+Synopsis:
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 26 Jul 2023 09:28:02 AM EDT
+
+Version=3.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 3.0.1 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 13 Nov 2024 05:29:36 AM EST
+
+Version=3.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 3.1.0 to version 3.2.0
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:23 AM EDT
+
+Version=3.2.1
+Release=2
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.2.1

@@ -1,0 +1,15 @@
+# description : Python style guide checker
+  # depends : python-setuptools
+
+name=python-pycodestyle
+version=2.14.0
+release=3
+
+source="https://github.com/PyCQA/pycodestyle/archive/refs/tags/a$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

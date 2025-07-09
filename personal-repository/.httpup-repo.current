@@ -1,0 +1,13 @@
+changelog
+createpackage
+update-rep-server
+update-rep-client
+changelog/changelog
+changelog/spkgbuild
+createpackage/createpackage
+createpackage/spkgbuild
+createpackage/CHANGELOG
+update-rep-server/spkgbuild
+update-rep-server/update-rep
+update-rep-client/spkgbuild
+update-rep-client/update-rep

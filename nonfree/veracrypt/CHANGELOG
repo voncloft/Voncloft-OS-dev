@@ -1,0 +1,138 @@
+Date: Sun 28 Mar 2021 10:05:18 PM EDT
+
+name=veracrypt
+version=1.24.update7
+release=1
+
+Synopsis:
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Sun 19 Sep 2021 06:37:17 PM EDT
+
+Version=7.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.24 to version 7.1
+
+----------------------------------------------------------------
+
+Date: Sun 19 Sep 2021 06:40:49 PM EDT
+
+Version=↵
+Release=1
+
+Synopsis:
+Upgraded from version 7.1 to version ↵
+
+----------------------------------------------------------------
+
+Date: Sun 19 Sep 2021 06:44:46 PM EDT
+
+Version=1.24
+Release=1
+
+Synopsis:
+Upgraded from version 1 to version 1.24
+
+----------------------------------------------------------------
+
+Date: Sun 05 Dec 2021 10:28:44 AM EST
+
+Version=1.25.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.24 to version 1.25.4
+
+----------------------------------------------------------------
+
+Date: Sat 08 Jan 2022 03:41:23 PM EST
+
+Version=1.25.7
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.4 to version 1.25.7
+
+----------------------------------------------------------------
+
+Date: Mon 21 Feb 2022 11:06:29 AM EST
+
+Version=1.25.9
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.7 to version 1.25.9
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:32 AM EDT
+
+Version=1.26.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.25.9 to version 1.26.6
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:42 PM EDT
+
+Version=1.26.7
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.6 to version 1.26.7
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=1.26.15
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.7 to version 1.26.15
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jan 2025 10:18:15 AM EST
+
+Version=1.26.18
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.15 to version 1.26.18
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:39 AM EST
+
+Version=1.26.19
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.18 to version 1.26.19
+
+----------------------------------------------------------------
+
+Date: Thu 06 Feb 2025 11:08:02 AM EST
+
+Version=1.26.20
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.19 to version 1.26.20
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:27 PM EDT
+
+Version=1.26.24
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.20 to version 1.26.24

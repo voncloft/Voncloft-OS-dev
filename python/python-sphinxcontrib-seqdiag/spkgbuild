@@ -1,0 +1,15 @@
+# description : A sphinx extension for embedding sequence diagram using seqdiag
+# depends : blockdiag seqdiag python-sphinx
+
+name=python-sphinxcontrib-seqdiag
+version=3.0.0
+release=3
+
+source="https://github.com/blockdiag/sphinxcontrib-seqdiag/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

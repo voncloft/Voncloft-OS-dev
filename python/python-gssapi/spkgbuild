@@ -1,0 +1,15 @@
+# description : Provides both low-level and high level wrappers around the GSSAPI C libraries
+# depends : python python-decorator krb5
+
+name=python-gssapi
+version=1.9.0
+release=2
+
+source="https://github.com/pythongssapi/python-gssapi/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

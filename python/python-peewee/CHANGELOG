@@ -1,0 +1,289 @@
+Date: Sun 11 Jul 2021 01:13:06 PM EDT
+
+name=python-peewee
+version=3.14.4
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.14.0 to version 3.14.4
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:31:34 PM EDT
+
+version=3.14.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:55:17 AM EDT
+
+version=3.14.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:41 EDT 2021
+
+version=3.14.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:16:45 EDT 2021
+
+version=3.14.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:14:05 EDT 2021
+
+version=3.14.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:22 PM EDT
+
+Version=3.14.7
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.4 to version 3.14.7
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:23 PM EDT
+
+Version=3.14.7
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.4 to version 3.14.8
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:23 PM EDT
+
+Version=3.14.7
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.4 to version 3.14.8
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:24 PM EDT
+
+Version=3.14.7
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.4 to version 3.14.8
+
+----------------------------------------------------------------
+
+Date: Mon 01 Nov 2021 09:39:21 PM EDT
+
+Version=3.14.8
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.7 to version 3.14.8
+
+----------------------------------------------------------------
+
+Date: Tue 15 Feb 2022 03:38:37 PM EST
+
+Version=3.14.9
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.8 to version 3.14.9
+
+----------------------------------------------------------------
+
+Date: Wed 09 Mar 2022 07:23:40 AM EST
+
+Version=3.14.10
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.9 to version 3.14.10
+
+----------------------------------------------------------------
+
+Date: Fri 17 Jun 2022 07:30:33 PM EDT
+
+Version=3.15.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.14.10 to version 3.15.0
+
+----------------------------------------------------------------
+
+Date: Tue 12 Jul 2022 06:35:13 PM EDT
+
+Version=3.15.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.15.0 to version 3.15.1
+
+----------------------------------------------------------------
+
+Date: Sat 27 Aug 2022 09:17:04 PM EDT
+
+Version=3.15.2
+Release=3
+
+Synopsis:
+Upgraded from version 3.15.1 to version 3.15.2
+
+----------------------------------------------------------------
+
+Date: Fri 23 Sep 2022 12:55:28 AM EDT
+
+Version=3.15.3
+Release=3
+
+Synopsis:
+Upgraded from version 3.15.2 to version 3.15.3
+
+----------------------------------------------------------------
+
+Date: Mon 14 Nov 2022 08:48:17 AM EST
+
+Version=3.15.4
+Release=3
+
+Synopsis:
+Upgraded from version 3.15.3 to version 3.15.4
+
+----------------------------------------------------------------
+
+Date: Mon 27 Feb 2023 03:43:39 PM EST
+
+Version=3.16.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.15.4 to version 3.16.0
+
+----------------------------------------------------------------
+
+Date: Wed 19 Apr 2023 07:16:59 AM EDT
+
+Version=3.16.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.16.0 to version 3.16.1
+
+----------------------------------------------------------------
+
+Date: Sat 22 Apr 2023 04:54:24 PM EDT
+
+Version=3.16.2
+Release=3
+
+Synopsis:
+Upgraded from version 3.16.1 to version 3.16.2
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:18 AM EDT
+
+Version=3.16.3
+Release=3
+
+Synopsis:
+Upgraded from version 3.16.2 to version 3.16.3
+
+----------------------------------------------------------------
+
+Date: Tue 17 Oct 2023 11:50:05 AM EDT
+
+Version=3.17.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.16.3 to version 3.17.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Feb 2024 06:46:34 AM EST
+
+Version=3.17.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.17.0 to version 3.17.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=3.17.7
+Release=3
+
+Synopsis:
+Upgraded from version 3.17.1 to version 3.17.7
+
+----------------------------------------------------------------
+
+Date: Wed 13 Nov 2024 05:29:36 AM EST
+
+Version=3.17.8
+Release=3
+
+Synopsis:
+Upgraded from version 3.17.7 to version 3.17.8
+
+----------------------------------------------------------------
+
+Date: Thu 06 Feb 2025 11:08:02 AM EST
+
+Version=3.17.9
+Release=3
+
+Synopsis:
+Upgraded from version 3.17.8 to version 3.17.9
+
+----------------------------------------------------------------
+
+Date: Wed 30 Apr 2025 07:42:56 AM EDT
+
+Version=3.18.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.17.9 to version 3.18.0
+
+----------------------------------------------------------------
+
+Date: Thu 01 May 2025 12:47:49 PM EDT
+
+Version=3.18.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.18.0 to version 3.18.1

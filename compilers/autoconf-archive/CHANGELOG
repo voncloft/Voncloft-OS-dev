@@ -1,0 +1,39 @@
+Date: Wed 13 Apr 2022 04:34:17 PM EDT
+
+autoconf-archive
+Version=2022.02.11
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2021.02.19 to version 2022.02.11
+
+----------------------------------------------------------------
+
+Date: Sun 04 Sep 2022 03:55:37 PM EDT
+
+Version=2022.09.03
+Release=1
+
+Synopsis:
+Upgraded from version 2022.02.11 to version 2022.09.03
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:06 PM EST
+
+Version=2023.02.20
+Release=1
+
+Synopsis:
+Upgraded from version 2022.09.03 to version 2023.02.20
+
+----------------------------------------------------------------
+
+Date: Thu 17 Oct 2024 07:27:42 AM EDT
+
+Version=2024.10.16
+Release=1
+
+Synopsis:
+Upgraded from version 2023.02.20 to version 2024.10.16

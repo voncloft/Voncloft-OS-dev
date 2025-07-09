@@ -1,0 +1,16 @@
+  # description : Python implementation of the Happy Eyeballs Algorithm described in RFC 6555.
+  # description : Python implementation of the Happy Eyeballs Algorithm described in RFC 6555.
+  # depends : python python-selectors2
+
+name=python-rfc6555
+version=0.1.0
+release=3
+
+source="https://pypi.io/packages/source/r/rfc6555/rfc6555-0.1.0.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

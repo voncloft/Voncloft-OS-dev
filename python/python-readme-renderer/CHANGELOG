@@ -1,0 +1,219 @@
+Date: Sun 11 Jul 2021 01:13:31 PM EDT
+
+name=python-readme-renderer
+version=29.0
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 28.0 to version 29.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:35:05 PM EDT
+
+version=29.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:58:47 AM EDT
+
+version=29.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:17:34 EDT 2021
+
+version=29.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:20:59 EDT 2021
+
+version=29.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:17:30 EDT 2021
+
+version=29.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat 02 Oct 2021 01:19:09 PM EDT
+
+Version=30.0
+Release=3
+
+Synopsis:
+Upgraded from version 29.0 to version 30.0
+
+----------------------------------------------------------------
+
+Date: Fri 10 Dec 2021 07:40:15 PM EST
+
+Version=31.0
+Release=3
+
+Synopsis:
+Upgraded from version 30.0 to version 31.0
+
+----------------------------------------------------------------
+
+Date: Tue 14 Dec 2021 04:38:17 AM EST
+
+Version=32.0
+Release=3
+
+Synopsis:
+Upgraded from version 31.0 to version 32.0
+
+----------------------------------------------------------------
+
+Date: Sat 05 Mar 2022 08:22:33 PM EST
+
+Version=33.0
+Release=3
+
+Synopsis:
+Upgraded from version 32.0 to version 33.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Mar 2022 05:20:10 AM EDT
+
+Version=34.0
+Release=3
+
+Synopsis:
+Upgraded from version 33.0 to version 34.0
+
+----------------------------------------------------------------
+
+Date: Fri 22 Apr 2022 05:53:16 AM EDT
+
+Version=35.0
+Release=3
+
+Synopsis:
+Upgraded from version 34.0 to version 35.0
+
+----------------------------------------------------------------
+
+Date: Sat 06 Aug 2022 05:11:47 PM EDT
+
+Version=36.0
+Release=3
+
+Synopsis:
+Upgraded from version 35.0 to version 36.0
+
+----------------------------------------------------------------
+
+Date: Mon 22 Aug 2022 08:01:03 PM EDT
+
+Version=37.0
+Release=3
+
+Synopsis:
+Upgraded from version 36.0 to version 37.0
+
+----------------------------------------------------------------
+
+Date: Sun 04 Sep 2022 03:55:38 PM EDT
+
+Version=37.1
+Release=3
+
+Synopsis:
+Upgraded from version 37.0 to version 37.1
+
+----------------------------------------------------------------
+
+Date: Sat 24 Sep 2022 05:53:42 PM EDT
+
+Version=37.2
+Release=3
+
+Synopsis:
+Upgraded from version 37.1 to version 37.2
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:06 AM EDT
+
+Version=37.3
+Release=3
+
+Synopsis:
+Upgraded from version 37.2 to version 37.3
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:46 PM EDT
+
+Version=40.0
+Release=3
+
+Synopsis:
+Upgraded from version 37.3 to version 40.0
+
+----------------------------------------------------------------
+
+Date: Sun 20 Aug 2023 06:12:42 PM EDT
+
+Version=41.0
+Release=3
+
+Synopsis:
+Upgraded from version 40.0 to version 41.0
+
+----------------------------------------------------------------
+
+Date: Mon 11 Sep 2023 09:19:16 AM EDT
+
+Version=42.0
+Release=3
+
+Synopsis:
+Upgraded from version 41.0 to version 42.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:39 AM EST
+
+Version=43.0
+Release=3
+
+Synopsis:
+Upgraded from version 42.0 to version 43.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=44.0
+Release=3
+
+Synopsis:
+Upgraded from version 43.0 to version 44.0

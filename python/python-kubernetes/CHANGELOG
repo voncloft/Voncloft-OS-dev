@@ -1,0 +1,289 @@
+Date: Sun 11 Jul 2021 01:12:48 PM EDT
+
+name=python-kubernetes
+version=18.20.0
+release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 12.0.1 to version 18.20.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:29:03 PM EDT
+
+version=18.20.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:52:48 AM EDT
+
+version=18.20.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:10 EDT 2021
+
+version=18.20.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:13:57 EDT 2021
+
+version=18.20.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:41 EDT 2021
+
+version=18.20.0
+release=2
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 30 Sep 2021 05:44:26 AM EDT
+
+Version=19.15.0
+Release=2
+
+Synopsis:
+Upgraded from version 18.20.0 to version 19.15.0
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:22 PM EDT
+
+Version=20.11.0
+Release=2
+
+Synopsis:
+Upgraded from version 19.15.0 to version 20.11.0
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:22 PM EDT
+
+Version=20.11.0
+Release=2
+
+Synopsis:
+Upgraded from version 19.15.0 to version 20.11.0
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:23 PM EDT
+
+Version=20.11.0
+Release=2
+
+Synopsis:
+Upgraded from version 19.15.0 to version 20.11.0
+
+----------------------------------------------------------------
+
+Date: Sat 30 Oct 2021 04:32:24 PM EDT
+
+Version=20.11.0
+Release=2
+
+Synopsis:
+Upgraded from version 19.15.0 to version 20.11.0
+
+----------------------------------------------------------------
+
+Date: Tue 09 Nov 2021 06:52:45 PM EST
+
+Version=20.12.0
+Release=2
+
+Synopsis:
+Upgraded from version 20.11.0 to version 20.12.0
+
+----------------------------------------------------------------
+
+Date: Tue 30 Nov 2021 09:57:43 AM EST
+
+Version=20.13.0
+Release=2
+
+Synopsis:
+Upgraded from version 20.12.0 to version 20.13.0
+
+----------------------------------------------------------------
+
+Date: Tue 30 Nov 2021 05:39:54 PM EST
+
+Version=21.7.0
+Release=2
+
+Synopsis:
+Upgraded from version 20.13.0 to version 21.7.0
+
+----------------------------------------------------------------
+
+Date: Wed 02 Feb 2022 03:48:48 PM EST
+
+Version=22.6.0
+Release=2
+
+Synopsis:
+Upgraded from version 21.7.0 to version 22.6.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Feb 2022 03:38:37 PM EST
+
+Version=23.3.0
+Release=2
+
+Synopsis:
+Upgraded from version 22.6.0 to version 23.3.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 May 2022 09:13:59 PM EDT
+
+Version=23.6.0
+Release=2
+
+Synopsis:
+Upgraded from version 23.3.0 to version 23.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 08 Jun 2022 07:53:59 PM EDT
+
+Version=24.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 23.6.0 to version 24.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 22 Jun 2022 06:40:01 PM EDT
+
+Version=24.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 24.1.0 to version 24.2.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Oct 2022 08:44:47 AM EDT
+
+Version=25.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 24.2.0 to version 25.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=25.3.0
+Release=2
+
+Synopsis:
+Upgraded from version 25.2.0 to version 25.3.0
+
+----------------------------------------------------------------
+
+Date: Fri 27 Jan 2023 05:37:46 AM EST
+
+Version=26.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 25.3.0 to version 26.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Jun 2023 06:15:24 PM EDT
+
+Version=27.2.0
+Release=2
+
+Synopsis:
+Upgraded from version 26.1.0 to version 27.2.0
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:09 AM EDT
+
+Version=28.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 27.2.0 to version 28.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 20 Dec 2023 03:59:28 AM EST
+
+Version=29.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 28.1.0 to version 29.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=31.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 29.0.0 to version 31.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 15 Jan 2025 09:15:42 AM EST
+
+Version=32.0.0
+Release=2
+
+Synopsis:
+Upgraded from version 31.0.0 to version 32.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 20 Feb 2025 10:23:59 AM EST
+
+Version=32.0.1
+Release=2
+
+Synopsis:
+Upgraded from version 32.0.0 to version 32.0.1
+
+----------------------------------------------------------------
+
+Date: Thu 29 May 2025 10:30:15 AM EDT
+
+Version=33.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 32.0.1 to version 33.1.0

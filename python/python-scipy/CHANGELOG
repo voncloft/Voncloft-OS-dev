@@ -1,0 +1,89 @@
+Date: Sun 11 Jul 2021 01:13:36 PM EDT
+
+name=python-scipy
+version=1.7.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.6.0 to version 1.7.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:35:44 PM EDT
+
+version=1.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:59:25 AM EDT
+
+version=1.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:18:11 EDT 2021
+
+version=1.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:21:39 EDT 2021
+
+version=1.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:18:06 EDT 2021
+
+version=1.7.0
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon Aug  2 15:21:25 EDT 2021
+
+version=1.7.1
+release=1
+
+Synopsis:
+Upgraded from version 1.7.0 to version 1.7.1
+
+----------------------------------------------------------------
+
+Date: Sun 07 Nov 2021 09:00:08 AM EST
+
+Version=1.7.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.1 to version 1.7.2
+
+----------------------------------------------------------------
+
+Date: Fri 26 Nov 2021 08:53:26 AM EST
+
+Version=1.7.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.2 to version 1.7.3

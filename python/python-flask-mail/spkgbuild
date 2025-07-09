@@ -1,0 +1,15 @@
+# description : Flask extension providing simple email sending capabilities
+# depends : python python-flask python-blinker
+
+name=python-flask-mail
+version=0.10.0
+release=6
+
+source="https://github.com/mattupstate/flask-mail/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,59 @@
+Date: Wed 22 Mar 2023 08:43:45 AM EDT
+
+xfce4-clipman-plugin
+Version=1.6.3
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.6.2 to version 1.6.3
+
+----------------------------------------------------------------
+
+Date: Tue 01 Aug 2023 07:32:13 AM EDT
+
+Version=1.6.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.3 to version 1.6.4
+
+----------------------------------------------------------------
+
+Date: Sat 30 Sep 2023 11:04:06 AM EDT
+
+Version=1.6.5
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.4 to version 1.6.5
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=1.6.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.5 to version 1.6.6
+
+----------------------------------------------------------------
+
+Date: Thu 26 Dec 2024 08:43:06 AM EST
+
+Version=1.6.7
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.6 to version 1.6.7
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:25 PM EDT
+
+Version=1.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.7 to version 1.7.0

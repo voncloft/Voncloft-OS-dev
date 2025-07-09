@@ -1,0 +1,139 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libimagequant
+Version=2.17.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.13.1 to version 2.17.0
+
+----------------------------------------------------------------
+
+Date: Wed 02 Feb 2022 03:48:48 PM EST
+
+Version=4.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.17.0 to version 4.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 20 Jul 2022 05:16:30 AM EDT
+
+Version=4.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.0 to version 4.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 22 Aug 2022 08:01:02 PM EDT
+
+Version=4.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.1 to version 4.0.2
+
+----------------------------------------------------------------
+
+Date: Fri 26 Aug 2022 08:14:08 AM EDT
+
+Version=4.0.4
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.2 to version 4.0.4
+
+----------------------------------------------------------------
+
+Date: Tue 17 Jan 2023 06:44:20 PM EST
+
+Version=4.0.5
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.4 to version 4.0.5
+
+----------------------------------------------------------------
+
+Date: Mon 23 Jan 2023 08:26:23 PM EST
+
+Version=4.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.0.5 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 10 Mar 2023 04:13:49 PM EST
+
+Version=4.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.1.1
+
+----------------------------------------------------------------
+
+Date: Mon 01 May 2023 07:53:52 PM EDT
+
+Version=4.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.1.1 to version 4.2.0
+
+----------------------------------------------------------------
+
+Date: Tue 12 Sep 2023 09:56:37 AM EDT
+
+Version=4.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.2.0 to version 4.2.1
+
+----------------------------------------------------------------
+
+Date: Tue 17 Oct 2023 11:50:04 AM EDT
+
+Version=4.2.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.2.1 to version 4.2.2
+
+----------------------------------------------------------------
+
+Date: Thu 25 Jan 2024 09:18:53 AM EST
+
+Version=4.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.2.2 to version 4.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=4.3.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.0 to version 4.3.3
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:39 AM EST
+
+Version=4.3.4
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.3 to version 4.3.4

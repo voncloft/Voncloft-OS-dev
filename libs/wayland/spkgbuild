@@ -1,0 +1,22 @@
+# description : visual graphic library
+# depends : libxml2
+
+name=wayland
+version=1.23.0
+release=1
+
+source="https://gitlab.freedesktop.org/wayland/wayland/-/releases/$version/downloads/wayland-$version.tar.xz"
+options="!checksum"
+
+build() {
+	cd $name-$version
+	mkdir build 
+	cd    build 
+
+	meson --prefix=/usr       \
+      	--buildtype=release \
+      	-Ddocumentation=false 
+	ninja
+	DESTDIR=$PKG ninja install
+}
+

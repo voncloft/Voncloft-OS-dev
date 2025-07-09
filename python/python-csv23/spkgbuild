@@ -1,0 +1,15 @@
+# description : Python 3 unicode CSV compatibility layer
+# depends : python
+
+name=python-csv23
+version=0.3.4
+release=4
+
+source="https://github.com/xflr6/csv23/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

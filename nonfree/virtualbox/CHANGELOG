@@ -1,0 +1,192 @@
+Date: Tue Jul 20 15:14:45 EDT 2021
+
+name=virtualbox
+_name=Oracle_VM_VirtualBox_Extension_Pack
+version=6.1.24
+release=1
+_release=135662
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 6.1.22 to version 6.1.24
+
+----------------------------------------------------------------
+
+Date: Thu Jul 29 15:16:26 EDT 2021
+
+version=6.1.26
+release=1
+_release=135662
+
+Synopsis:
+Upgraded from version 6.1.24 to version 6.1.26
+
+----------------------------------------------------------------
+
+Date: Tue 19 Oct 2021 06:49:04 PM EDT
+
+Version=6.1.28
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.26 to version 6.1.28
+
+----------------------------------------------------------------
+
+Date: Tue 23 Nov 2021 04:22:00 AM EST
+
+Version=6.1.30
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.28 to version 6.1.30
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jan 2022 10:04:26 AM EST
+
+Version=6.1.32
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.30 to version 6.1.32
+
+----------------------------------------------------------------
+
+Date: Wed 20 Apr 2022 08:42:32 AM EDT
+
+Version=6.1.34
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.32 to version 6.1.34
+
+----------------------------------------------------------------
+
+Date: Thu 21 Jul 2022 10:25:11 AM EDT
+
+Version=6.1.36
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.34 to version 6.1.36
+
+----------------------------------------------------------------
+
+Date: Tue 02 Aug 2022 08:02:54 AM EDT
+
+Version=6.1.36
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.22.144080 to version 6.1.36
+
+----------------------------------------------------------------
+
+Date: Mon 10 Oct 2022 07:04:25 PM EDT
+
+Version=7.0.7.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.36.152435 to version 7.0.7.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=7.0.7.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.7.0.0 to version 7.0.7.0.2
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:57 PM EST
+
+Version=7.0.7.0.4
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.7.0.2 to version 7.0.7.0.4
+
+----------------------------------------------------------------
+
+Date: Tue 17 Jan 2023 06:44:20 PM EST
+
+Version=7.0.7.0.6
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.7.0.4 to version 7.0.7.0.6
+
+----------------------------------------------------------------
+
+Date: Wed 19 Apr 2023 07:16:58 AM EDT
+
+Version=7.0.8.156879
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.7.0.6 to version 7.0.8.156879
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jul 2023 08:27:18 PM EDT
+
+Version=7.0.10.158379
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.8.156879 to version 7.0.10.158379
+
+----------------------------------------------------------------
+
+Date: Wed 18 Oct 2023 11:13:13 AM EDT
+
+Version=7.0.12.159484
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.10.158379 to version 7.0.12.159484
+
+----------------------------------------------------------------
+
+Date: Wed 17 Jan 2024 08:46:08 AM EST
+
+Version=7.0.14.161095
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.12.159484 to version 7.0.14.161095
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=7.1.7.1.4
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.14.161095 to version 7.1.7.1.4
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jan 2025 10:18:15 AM EST
+
+Version=7.1.7.1.6
+Release=1
+
+Synopsis:
+Upgraded from version 7.1.7.1.4 to version 7.1.7.1.6
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:55 PM EDT
+
+Version=7.1.8.168469
+Release=1
+
+Synopsis:
+Upgraded from version 7.1.7.1.6 to version 7.1.8.168469

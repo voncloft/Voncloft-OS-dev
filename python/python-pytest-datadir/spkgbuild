@@ -1,0 +1,15 @@
+# description : pytest plugin for test data directories and files
+# depends : python-pytest
+
+name=python-pytest-datadir
+version=1.7.2
+release=3
+
+source="https://github.com/gabrielcnr/pytest-datadir/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

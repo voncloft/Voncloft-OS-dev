@@ -1,0 +1,119 @@
+Date: Sun 11 Jul 2021 01:12:50 PM EDT
+
+name=python-libusb1
+version=1.9.3
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.9.1 to version 1.9.3
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:29:16 PM EDT
+
+version=1.9.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:01 AM EDT
+
+version=1.9.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:23 EDT 2021
+
+version=1.9.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:12 EDT 2021
+
+version=1.9.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:54 EDT 2021
+
+version=1.9.3
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 30 Sep 2021 05:44:34 AM EDT
+
+Version=2.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.3 to version 2.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 07 Feb 2022 01:00:49 PM EST
+
+Version=3.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.0.1 to version 3.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 30 Oct 2023 07:50:37 PM EDT
+
+Version=3.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.0.0 to version 3.1.0
+
+----------------------------------------------------------------
+
+Date: Sun 29 Dec 2024 11:57:31 AM EST
+
+Version=3.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.1.0 to version 3.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:31 AM EST
+
+Version=3.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.0 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:46 AM EDT
+
+Version=3.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.3.1

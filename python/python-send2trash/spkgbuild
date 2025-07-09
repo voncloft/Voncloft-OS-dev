@@ -1,0 +1,15 @@
+# description : Send file to trash natively
+# depends : python
+
+name=python-send2trash
+version=1.8.3
+release=6
+
+source="https://github.com/hsoft/send2trash/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

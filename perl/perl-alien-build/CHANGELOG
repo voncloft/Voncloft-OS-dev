@@ -1,0 +1,59 @@
+Date: Sun 11 Jul 2021 09:52:53 PM EDT
+
+name=perl-alien-build
+version=2.41
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.38 to version 2.41
+
+----------------------------------------------------------------
+
+Date: Tue 13 Jul 2021 03:31:44 PM EDT
+
+version=2.41
+release=1
+
+Synopsis:
+Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue 13 Jul 2021 03:35:06 PM EDT
+
+version=2.41
+release=1
+
+Synopsis:
+Fixed URL
+
+----------------------------------------------------------------
+
+Date: Sat 02 Oct 2021 01:06:56 PM EDT
+
+Version=2.42
+Release=1
+
+Synopsis:
+Upgraded from version 2.41 to version 2.42
+
+----------------------------------------------------------------
+
+Date: Tue 14 Dec 2021 04:38:17 AM EST
+
+Version=2.44
+Release=1
+
+Synopsis:
+Upgraded from version 2.42 to version 2.44
+
+----------------------------------------------------------------
+
+Date: Tue 21 Dec 2021 08:57:18 PM EST
+
+Version=2.45
+Release=1
+
+Synopsis:
+Upgraded from version 2.44 to version 2.45

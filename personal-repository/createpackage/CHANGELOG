@@ -1,0 +1,7 @@
+3/23/2021 7:04 AM
+
+name=createpackage
+version=1
+release=1
+
+added a loop to ask for configuration files

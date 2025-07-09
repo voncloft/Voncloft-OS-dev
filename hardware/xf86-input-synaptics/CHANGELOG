@@ -1,0 +1,19 @@
+Date: Sun 17 Dec 2023 02:25:46 PM EST
+
+xf86-input-synaptics
+Version=1.9.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.9.1 to version 1.9.2
+
+----------------------------------------------------------------
+
+Date: Mon 06 Jan 2025 07:00:25 AM EST
+
+Version=1.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.2 to version 1.10.0

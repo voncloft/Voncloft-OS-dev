@@ -1,0 +1,15 @@
+# description : Canonical JSON
+# depends : python python-simplejson python-frozendict
+
+name=python-canonicaljson
+version=2.0.0
+release=3
+
+source="https://github.com/matrix-org/python-canonicaljson/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,139 @@
+Date: Wed 29 Sep 2021 07:23:45 AM EDT
+
+cinnamon-desktop
+Version=5.0.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.8.1 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 16 Nov 2021 03:14:56 AM EST
+
+Version=5.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 12 Jan 2022 06:15:47 AM EST
+
+Version=5.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.2.1
+
+----------------------------------------------------------------
+
+Date: Fri 10 Jun 2022 03:40:40 PM EDT
+
+Version=5.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.1 to version 5.4.0
+
+----------------------------------------------------------------
+
+Date: Sat 16 Jul 2022 04:58:47 PM EDT
+
+Version=5.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.0 to version 5.4.1
+
+----------------------------------------------------------------
+
+Date: Thu 21 Jul 2022 10:25:11 AM EDT
+
+Version=5.4.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.1 to version 5.4.2
+
+----------------------------------------------------------------
+
+Date: Sat 19 Nov 2022 04:57:56 PM EST
+
+Version=5.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.2 to version 5.6.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Jan 2023 05:57:10 PM EST
+
+Version=5.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.6.0 to version 5.6.1
+
+----------------------------------------------------------------
+
+Date: Tue 04 Apr 2023 03:49:38 PM EDT
+
+Version=5.6.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.6.1 to version 5.6.2
+
+----------------------------------------------------------------
+
+Date: Mon 05 Jun 2023 10:17:50 AM EDT
+
+Version=5.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.6.2 to version 5.8.0
+
+----------------------------------------------------------------
+
+Date: Mon 20 Nov 2023 09:44:51 AM EST
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.8.0 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:51 AM EDT
+
+Version=6.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Wed 27 Nov 2024 09:33:38 AM EST
+
+Version=6.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.0 to version 6.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 04 Dec 2024 06:29:21 AM EST
+
+Version=6.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.0 to version 6.4.1

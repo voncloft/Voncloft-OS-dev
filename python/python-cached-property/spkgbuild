@@ -1,0 +1,15 @@
+# description : A decorator for caching properties in classes
+# depends : python
+
+name=python-cached-property
+version=2.0.1
+release=3
+
+source="https://github.com/pydanny/cached-property/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

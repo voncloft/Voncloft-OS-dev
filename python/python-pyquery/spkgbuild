@@ -1,0 +1,15 @@
+# description : A jquery-like library for python.
+# depends : python-lxml python-cssselect
+
+name=python-pyquery
+version=2.0.1
+release=1
+
+source="https://github.com/gawel/pyquery/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

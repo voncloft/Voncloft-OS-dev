@@ -1,0 +1,14 @@
+# description : a program to write changelogs for my repository
+# depends : 
+
+name=changelog
+version=1
+release=1
+
+source="changelog"
+options="!checksum"
+
+build() {
+	mkdir -pv $PKG/usr/bin
+	install -m755 $SRC/changelog $PKG/usr/bin
+}

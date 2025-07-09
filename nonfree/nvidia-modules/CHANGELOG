@@ -1,0 +1,319 @@
+Date: Mon 01 Aug 2022 11:12:36 AM EDT
+
+nvidia-modules
+Version=515.57
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 450.66 to version 515.57
+
+----------------------------------------------------------------
+
+Date: Tue 02 Aug 2022 11:22:42 AM EDT
+
+Version=515.65.01
+Release=1
+
+Synopsis:
+Upgraded from version 515.57 to version 515.65.01
+
+----------------------------------------------------------------
+
+Date: Wed 21 Sep 2022 08:09:27 AM EDT
+
+Version=515.76
+Release=1
+
+Synopsis:
+Upgraded from version 515.65.01 to version 515.76
+
+----------------------------------------------------------------
+
+Date: Fri 14 Oct 2022 05:47:55 AM EDT
+
+Version=520.56.06
+Release=1
+
+Synopsis:
+Upgraded from version 515.76 to version 520.56.06
+
+----------------------------------------------------------------
+
+Date: Thu 10 Nov 2022 04:27:03 PM EST
+
+Version=525.53
+Release=1
+
+Synopsis:
+Upgraded from version 520.56.06 to version 525.53
+
+----------------------------------------------------------------
+
+Date: Tue 29 Nov 2022 07:42:35 AM EST
+
+Version=525.60.11
+Release=1
+
+Synopsis:
+Upgraded from version 525.53 to version 525.60.11
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 04:29:44 PM EST
+
+Version=525.78.01
+Release=1
+
+Synopsis:
+Upgraded from version 525.60.11 to version 525.78.01
+
+----------------------------------------------------------------
+
+Date: Fri 20 Jan 2023 05:10:26 PM EST
+
+Version=525.85.05
+Release=1
+
+Synopsis:
+Upgraded from version 525.78.01 to version 525.85.05
+
+----------------------------------------------------------------
+
+Date: Wed 08 Feb 2023 10:52:50 PM EST
+
+Version=525.89.02
+Release=1
+
+Synopsis:
+Upgraded from version 525.85.05 to version 525.89.02
+
+----------------------------------------------------------------
+
+Date: Tue 28 Feb 2023 05:29:02 PM EST
+
+Version=530.30.02
+Release=1
+
+Synopsis:
+Upgraded from version 525.89.02 to version 530.30.02
+
+----------------------------------------------------------------
+
+Date: Sun 26 Mar 2023 12:35:20 PM EDT
+
+Version=530.41.03
+Release=1
+
+Synopsis:
+Upgraded from version 530.30.02 to version 530.41.03
+
+----------------------------------------------------------------
+
+Date: Tue 30 May 2023 04:46:43 PM EDT
+
+Version=535.43.02
+Release=1
+
+Synopsis:
+Upgraded from version 530.41.03 to version 535.43.02
+
+----------------------------------------------------------------
+
+Date: Fri 16 Jun 2023 08:23:37 PM EDT
+
+Version=535.54.03
+Release=1
+
+Synopsis:
+Upgraded from version 535.43.02 to version 535.54.03
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jul 2023 08:27:18 PM EDT
+
+Version=535.86.05
+Release=1
+
+Synopsis:
+Upgraded from version 535.54.03 to version 535.86.05
+
+----------------------------------------------------------------
+
+Date: Wed 09 Aug 2023 08:12:31 AM EDT
+
+Version=535.98
+Release=1
+
+Synopsis:
+Upgraded from version 535.86.05 to version 535.98
+
+----------------------------------------------------------------
+
+Date: Wed 23 Aug 2023 03:43:42 PM EDT
+
+Version=535.104.05
+Release=1
+
+Synopsis:
+Upgraded from version 535.98 to version 535.104.05
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:32 AM EDT
+
+Version=535.113.01
+Release=1
+
+Synopsis:
+Upgraded from version 535.104.05 to version 535.113.01
+
+----------------------------------------------------------------
+
+Date: Wed 18 Oct 2023 11:13:13 AM EDT
+
+Version=545.23.06
+Release=1
+
+Synopsis:
+Upgraded from version 535.113.01 to version 545.23.06
+
+----------------------------------------------------------------
+
+Date: Tue 31 Oct 2023 05:44:32 PM EDT
+
+Version=545.29.02
+Release=1
+
+Synopsis:
+Upgraded from version 545.23.06 to version 545.29.02
+
+----------------------------------------------------------------
+
+Date: Sun 26 Nov 2023 11:28:12 AM EST
+
+Version=545.29.06
+Release=1
+
+Synopsis:
+Upgraded from version 545.29.02 to version 545.29.06
+
+----------------------------------------------------------------
+
+Date: Thu 25 Jan 2024 09:18:53 AM EST
+
+Version=550.40.07
+Release=1
+
+Synopsis:
+Upgraded from version 545.29.06 to version 550.40.07
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:36 AM EST
+
+Version=550.54.14
+Release=1
+
+Synopsis:
+Upgraded from version 550.40.07 to version 550.54.14
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=560.35.03
+Release=1
+
+Synopsis:
+Upgraded from version 550.54.14 to version 560.35.03
+
+----------------------------------------------------------------
+
+Date: Thu 24 Oct 2024 08:57:20 AM EDT
+
+Version=565.57.01
+Release=1
+
+Synopsis:
+Upgraded from version 560.35.03 to version 565.57.01
+
+----------------------------------------------------------------
+
+Date: Sun 08 Dec 2024 11:23:51 AM EST
+
+Version=565.77
+Release=1
+
+Synopsis:
+Upgraded from version 565.57.01 to version 565.77
+
+----------------------------------------------------------------
+
+Date: Mon 03 Feb 2025 07:16:02 AM EST
+
+Version=570.86.16
+Release=1
+
+Synopsis:
+Upgraded from version 565.77 to version 570.86.16
+
+----------------------------------------------------------------
+
+Date: Wed 05 Mar 2025 08:42:30 AM EST
+
+Version=570.124.04
+Release=1
+
+Synopsis:
+Upgraded from version 570.86.16 to version 570.124.04
+
+----------------------------------------------------------------
+
+Date: Thu 20 Mar 2025 08:53:48 AM EDT
+
+Version=570.133.07
+Release=1
+
+Synopsis:
+Upgraded from version 570.124.04 to version 570.133.07
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:55 PM EDT
+
+Version=575.51.02
+Release=1
+
+Synopsis:
+Upgraded from version 570.133.07 to version 575.51.02
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:27 PM EDT
+
+Version=575.57.08
+Release=1
+
+Synopsis:
+Upgraded from version 575.51.02 to version 575.57.08
+
+----------------------------------------------------------------
+
+Date: Wed 18 Jun 2025 11:22:02 AM EDT
+
+Version=575.64
+Release=1
+
+Synopsis:
+Upgraded from version 575.57.08 to version 575.64
+
+----------------------------------------------------------------
+
+Date: Fri 04 Jul 2025 04:43:33 PM EDT
+
+Version=575.64.03
+Release=1
+
+Synopsis:
+Upgraded from version 575.64 to version 575.64.03

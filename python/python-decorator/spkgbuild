@@ -1,0 +1,13 @@
+# description : python decorator module
+# depends : python
+
+name=python-decorator
+version=5.1.0
+release=3
+
+source="https://pypi.python.org/packages/source/d/decorator/decorator-5.1.0.tar.gz"
+options="!checksum"
+
+build() {
+	pip3 install decorator --target=$PKG
+ }

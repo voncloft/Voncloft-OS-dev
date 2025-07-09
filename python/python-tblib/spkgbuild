@@ -1,0 +1,15 @@
+# description : Python traceback fiddling library
+# depends : python-six
+
+name=python-tblib
+version=3.1.0
+release=3
+
+source="https://github.com/ionelmc/python-tblib/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

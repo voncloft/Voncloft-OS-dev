@@ -1,0 +1,269 @@
+Date: Mon 12 Jul 2021 10:43:08 AM EDT
+
+name=python-flask-security-too
+version=4.0.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.3.3 to version 4.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:26:36 PM EDT
+
+version=4.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:50:23 AM EDT
+
+version=4.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:08:43 EDT 2021
+
+version=4.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:11:14 EDT 2021
+
+version=4.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:09:21 EDT 2021
+
+version=4.0.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat Jul 24 15:17:04 EDT 2021
+
+version=4.1.0
+release=3
+
+Synopsis:
+Upgraded from version 4.0.1 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Sat Sep 11 15:19:40 EDT 2021
+
+version=4.1.1
+release=3
+
+Synopsis:
+Upgraded from version 4.1.0 to version 4.1.1
+
+----------------------------------------------------------------
+
+Date: Fri 15 Apr 2022 10:39:45 PM EDT
+
+Version=4.1.3
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.1 to version 4.1.3
+
+----------------------------------------------------------------
+
+Date: Fri 22 Apr 2022 05:53:16 AM EDT
+
+Version=4.1.4
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.3 to version 4.1.4
+
+----------------------------------------------------------------
+
+Date: Fri 29 Jul 2022 09:49:03 PM EDT
+
+Version=4.1.5
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.4 to version 4.1.5
+
+----------------------------------------------------------------
+
+Date: Mon 29 Aug 2022 07:23:58 AM EDT
+
+Version=5.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 4.1.5 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Sep 2022 08:01:20 PM EDT
+
+Version=5.0.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.0.1
+
+----------------------------------------------------------------
+
+Date: Sat 24 Sep 2022 02:20:03 PM EDT
+
+Version=5.0.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.0.1 to version 5.0.2
+
+----------------------------------------------------------------
+
+Date: Tue 24 Jan 2023 04:42:00 PM EST
+
+Version=5.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.0.2 to version 5.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 01 Mar 2023 08:05:29 PM EST
+
+Version=5.1.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.1.0 to version 5.1.1
+
+----------------------------------------------------------------
+
+Date: Tue 14 Mar 2023 04:05:54 PM EDT
+
+Version=5.1.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.1.1 to version 5.1.2
+
+----------------------------------------------------------------
+
+Date: Sat 06 May 2023 05:18:17 PM EDT
+
+Version=5.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.1.2 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 28 Jul 2023 09:26:08 PM EDT
+
+Version=5.3.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 17 Oct 2023 11:50:05 AM EDT
+
+Version=5.3.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.3.0 to version 5.3.1
+
+----------------------------------------------------------------
+
+Date: Wed 25 Oct 2023 06:05:50 PM EDT
+
+Version=5.3.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.3.1 to version 5.3.2
+
+----------------------------------------------------------------
+
+Date: Sun 31 Dec 2023 09:54:07 PM EST
+
+Version=5.3.3
+Release=3
+
+Synopsis:
+Upgraded from version 5.3.2 to version 5.3.3
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:37 AM EST
+
+Version=5.4.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.3.3 to version 5.4.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=5.5.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.4.1 to version 5.5.2
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:56 PM EST
+
+Version=5.6.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.5.2 to version 5.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 19 Mar 2025 10:50:30 AM EDT
+
+Version=5.6.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.6.0 to version 5.6.1
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:22 AM EDT
+
+Version=5.6.2
+Release=3
+
+Synopsis:
+Upgraded from version 5.6.1 to version 5.6.2

@@ -1,0 +1,16 @@
+# description	: X11 client-side library
+# depends	: libxau libxdmcp xcb-proto
+
+name=libxcb
+version=1.17.0
+release=1
+source="https://xorg.freedesktop.org/archive/individual/xcb/libxcb-$version.tar.xz"
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr --sysconfdir=/etc \
+    --localstatedir=/var --disable-static
+    	LC_ALL=en_US.UTF-8 make
+	make DESTDIR=$PKG install
+
+}

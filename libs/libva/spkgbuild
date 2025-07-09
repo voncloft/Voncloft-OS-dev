@@ -1,0 +1,16 @@
+# description	: Library which provides access to hardware accelerated video processing
+# depends	: xorg-libraries libdrm
+name=libva
+version=2.22.0
+release=1
+source="https://github.com/intel/libva/archive/$version/$name-$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+	mkdir bld
+	cd bld
+	meson setup --prefix=$XORG_PREFIX --buildtype=release
+	ninja
+	DESTDIR=$PKG ninja install
+}

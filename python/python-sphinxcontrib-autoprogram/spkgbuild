@@ -1,0 +1,15 @@
+# description : Documenting CLI programs
+# depends : python-sphinx python-six
+
+name=python-sphinxcontrib-autoprogram
+version=0.1.9
+release=3
+
+source="https://github.com/sphinx-contrib/autoprogram/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

@@ -1,0 +1,15 @@
+# description : JSON Web Token implementation in Python
+# depends : python-setuptools
+
+name=python-pyjwt
+version=2.10.1
+release=6
+
+source="https://github.com/jpadilla/pyjwt/archive/refs/tags/a$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

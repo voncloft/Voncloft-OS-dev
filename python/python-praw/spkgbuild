@@ -1,0 +1,15 @@
+# description : Python Reddit API Wrapper that allows for simple access to reddits API
+# depends : python-prawcore python-update-checker python-websocket-client
+
+name=python-praw
+version=7.8.1
+release=1
+
+source="https://github.com/praw-dev/praw/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

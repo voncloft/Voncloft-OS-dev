@@ -1,0 +1,249 @@
+Date: Sun 11 Jul 2021 01:12:48 PM EDT
+
+name=python-keystoneauth1
+version=4.3.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.3.0 to version 4.3.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:28:56 PM EDT
+
+version=4.3.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:52:42 AM EDT
+
+version=4.3.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:04 EDT 2021
+
+version=4.3.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:13:50 EDT 2021
+
+version=4.3.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:35 EDT 2021
+
+version=4.3.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 29 Sep 2021 07:41:23 AM EDT
+
+Version=4.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.1 to version 4.4.0
+
+----------------------------------------------------------------
+
+Date: Wed 09 Mar 2022 07:23:40 AM EST
+
+Version=4.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.0 to version 4.5.0
+
+----------------------------------------------------------------
+
+Date: Fri 20 May 2022 06:33:19 PM EDT
+
+Version=4.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.5.0 to version 4.6.0
+
+----------------------------------------------------------------
+
+Date: Sat 16 Jul 2022 04:58:48 PM EDT
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.6.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Nov 2022 05:01:54 AM EST
+
+Version=5.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 03 Jan 2023 07:24:37 PM EST
+
+Version=5.1.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.0 to version 5.1.1
+
+----------------------------------------------------------------
+
+Date: Tue 14 Feb 2023 04:52:08 PM EST
+
+Version=5.1.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.1 to version 5.1.2
+
+----------------------------------------------------------------
+
+Date: Wed 17 May 2023 07:06:19 PM EDT
+
+Version=5.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.2 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:46 PM EDT
+
+Version=5.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.2.1
+
+----------------------------------------------------------------
+
+Date: Tue 29 Aug 2023 05:56:57 PM EDT
+
+Version=5.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.1 to version 5.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 21 Nov 2023 09:20:22 AM EST
+
+Version=5.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.3.0 to version 5.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 16 Jan 2024 10:26:26 AM EST
+
+Version=5.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.4.0 to version 5.5.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 Feb 2024 05:53:38 AM EST
+
+Version=5.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.5.0 to version 5.6.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=5.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.6.0 to version 5.8.0
+
+----------------------------------------------------------------
+
+Date: Fri 22 Nov 2024 10:11:11 PM EST
+
+Version=5.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.8.0 to version 5.9.0
+
+----------------------------------------------------------------
+
+Date: Wed 27 Nov 2024 09:33:40 AM EST
+
+Version=5.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.0 to version 5.9.1
+
+----------------------------------------------------------------
+
+Date: Sat 22 Feb 2025 06:35:42 PM EST
+
+Version=5.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.9.1 to version 5.10.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:24 PM EDT
+
+Version=5.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.10.0 to version 5.11.0
+
+----------------------------------------------------------------
+
+Date: Mon 16 Jun 2025 10:49:51 AM EDT
+
+Version=5.11.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.11.0 to version 5.11.1

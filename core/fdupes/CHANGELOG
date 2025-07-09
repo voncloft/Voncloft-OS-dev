@@ -1,0 +1,59 @@
+Date: Mon 22 Aug 2022 08:01:02 PM EDT
+
+fdupes
+Version=2.2.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.1.2 to version 2.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 09 Sep 2022 03:42:06 PM EDT
+
+Version=2.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.0 to version 2.2.1
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:30 AM EST
+
+Version=2.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.2.1 to version 2.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=2.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.0 to version 2.3.1
+
+----------------------------------------------------------------
+
+Date: Wed 17 Jul 2024 11:45:24 AM EDT
+
+Version=2.3.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.1 to version 2.3.2
+
+----------------------------------------------------------------
+
+Date: Tue 01 Apr 2025 11:34:44 AM EDT
+
+Version=2.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.2 to version 2.4.0

@@ -1,0 +1,139 @@
+Date: Sun 11 Jul 2021 01:13:06 PM EDT
+
+name=python-pbr
+version=5.6.0
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 5.5.1 to version 5.6.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:31:29 PM EDT
+
+version=5.6.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:55:12 AM EDT
+
+version=5.6.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:36 EDT 2021
+
+version=5.6.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:16:40 EDT 2021
+
+version=5.6.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:14:01 EDT 2021
+
+version=5.6.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 13 Apr 2022 04:34:19 PM EDT
+
+Version=5.8.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.6.0 to version 5.8.1
+
+----------------------------------------------------------------
+
+Date: Sat 07 May 2022 09:13:59 PM EDT
+
+Version=5.9.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.8.1 to version 5.9.0
+
+----------------------------------------------------------------
+
+Date: Fri 12 Aug 2022 12:24:55 PM EDT
+
+Version=5.10.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.9.0 to version 5.10.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=5.11.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.10.0 to version 5.11.0
+
+----------------------------------------------------------------
+
+Date: Wed 11 Jan 2023 06:14:18 PM EST
+
+Version=5.11.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.11.0 to version 5.11.1
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 09:39:13 AM EST
+
+Version=6.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.11.1 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=6.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 28 Jan 2025 10:04:55 AM EST
+
+Version=6.1.1.0
+Release=3
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.1.1.0

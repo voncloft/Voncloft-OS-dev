@@ -1,0 +1,15 @@
+# description : Python wrapper for SQLite
+# depends : python sqlite
+
+name=python-apsw
+version=3.50.2.0
+release=1
+
+source="https://github.com/rogerbinns/apsw/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

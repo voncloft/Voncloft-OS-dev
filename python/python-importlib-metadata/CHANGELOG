@@ -1,0 +1,399 @@
+Date: Sun 11 Jul 2021 01:12:41 PM EDT
+
+name=python-importlib-metadata
+version=4.6.1
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.4.0 to version 4.6.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:27:58 PM EDT
+
+version=4.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:51:44 AM EDT
+
+version=4.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:10:06 EDT 2021
+
+version=4.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:12:44 EDT 2021
+
+version=4.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:10:39 EDT 2021
+
+version=4.6.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sat Jul 31 15:17:49 EDT 2021
+
+version=4.6.3
+release=1
+
+Synopsis:
+Upgraded from version 4.6.1 to version 4.6.3
+
+----------------------------------------------------------------
+
+Date: Fri Aug 13 15:17:43 EDT 2021
+
+version=4.6.4
+release=1
+
+Synopsis:
+Upgraded from version 4.6.3 to version 4.6.4
+
+----------------------------------------------------------------
+
+Date: Thu Aug 26 15:21:38 EDT 2021
+
+version=4.7.1
+release=1
+
+Synopsis:
+Upgraded from version 4.6.4 to version 4.7.1
+
+----------------------------------------------------------------
+
+Date: Sun Aug 29 15:17:52 EDT 2021
+
+version=4.8.1
+release=1
+
+Synopsis:
+Upgraded from version 4.7.1 to version 4.8.1
+
+----------------------------------------------------------------
+
+Date: Tue 09 Nov 2021 06:52:45 PM EST
+
+Version=4.8.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.8.1 to version 4.8.2
+
+----------------------------------------------------------------
+
+Date: Fri 17 Dec 2021 04:13:34 PM EST
+
+Version=4.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.8.2 to version 4.9.0
+
+----------------------------------------------------------------
+
+Date: Tue 21 Dec 2021 07:53:51 AM EST
+
+Version=4.10.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.9.0 to version 4.10.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Jan 2022 07:46:24 AM EST
+
+Version=4.10.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.10.0 to version 4.10.1
+
+----------------------------------------------------------------
+
+Date: Fri 11 Feb 2022 03:47:00 PM EST
+
+Version=4.11.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.10.1 to version 4.11.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Feb 2022 03:38:37 PM EST
+
+Version=4.11.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.11.0 to version 4.11.1
+
+----------------------------------------------------------------
+
+Date: Mon 28 Feb 2022 01:01:03 PM EST
+
+Version=4.11.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.11.1 to version 4.11.2
+
+----------------------------------------------------------------
+
+Date: Sun 13 Mar 2022 05:27:56 PM EDT
+
+Version=4.11.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.11.2 to version 4.11.3
+
+----------------------------------------------------------------
+
+Date: Sun 22 May 2022 01:37:35 PM EDT
+
+Version=4.11.4
+Release=1
+
+Synopsis:
+Upgraded from version 4.11.3 to version 4.11.4
+
+----------------------------------------------------------------
+
+Date: Sun 26 Jun 2022 07:26:02 PM EDT
+
+Version=4.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.11.4 to version 4.12.0
+
+----------------------------------------------------------------
+
+Date: Mon 03 Oct 2022 07:12:58 PM EDT
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.12.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Tue 04 Oct 2022 01:09:25 PM EDT
+
+Version=5.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.12.0 to version 5.0.0
+
+----------------------------------------------------------------
+
+Date: Fri 25 Nov 2022 05:01:54 AM EST
+
+Version=5.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.0.0 to version 5.1.0
+
+----------------------------------------------------------------
+
+Date: Tue 20 Dec 2022 07:35:43 AM EST
+
+Version=5.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.1.0 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Mon 02 Jan 2023 02:52:37 PM EST
+
+Version=6.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.2.0 to version 6.0.0
+
+----------------------------------------------------------------
+
+Date: Sat 18 Mar 2023 05:55:10 PM EDT
+
+Version=6.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.0.0 to version 6.1.0
+
+----------------------------------------------------------------
+
+Date: Fri 07 Apr 2023 03:59:36 PM EDT
+
+Version=6.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.1.0 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Sun 09 Apr 2023 05:53:34 PM EDT
+
+Version=6.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.0 to version 6.2.1
+
+----------------------------------------------------------------
+
+Date: Tue 11 Apr 2023 08:08:15 AM EDT
+
+Version=6.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.2.1 to version 6.3.0
+
+----------------------------------------------------------------
+
+Date: Sat 15 Apr 2023 08:07:09 PM EDT
+
+Version=6.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 6.3.0 to version 6.4.1
+
+----------------------------------------------------------------
+
+Date: Wed 19 Apr 2023 07:16:58 AM EDT
+
+Version=6.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.4.1 to version 6.5.0
+
+----------------------------------------------------------------
+
+Date: Sat 22 Apr 2023 04:54:24 PM EDT
+
+Version=6.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.5.0 to version 6.6.0
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:46 PM EDT
+
+Version=6.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.6.0 to version 6.7.0
+
+----------------------------------------------------------------
+
+Date: Sun 09 Jul 2023 08:04:58 PM EDT
+
+Version=6.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.7.0 to version 6.8.0
+
+----------------------------------------------------------------
+
+Date: Sat 02 Dec 2023 09:19:02 PM EST
+
+Version=6.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.8.0 to version 6.9.0
+
+----------------------------------------------------------------
+
+Date: Mon 04 Dec 2023 03:44:24 AM EST
+
+Version=7.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 6.9.0 to version 7.0.0
+
+----------------------------------------------------------------
+
+Date: Mon 25 Dec 2023 07:51:24 AM EST
+
+Version=7.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.0 to version 7.0.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=8.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 7.0.1 to version 8.5.0
+
+----------------------------------------------------------------
+
+Date: Thu 23 Jan 2025 10:18:15 AM EST
+
+Version=8.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 8.5.0 to version 8.6.1
+
+----------------------------------------------------------------
+
+Date: Mon 28 Apr 2025 05:29:54 AM EDT
+
+Version=8.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.6.1 to version 8.7.0

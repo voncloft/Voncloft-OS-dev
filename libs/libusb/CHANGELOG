@@ -1,0 +1,59 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libusb
+Version=1.0.24
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.0.23 to version 1.0.24
+
+----------------------------------------------------------------
+
+Date: Wed 02 Feb 2022 03:48:48 PM EST
+
+Version=1.0.25
+Release=1
+
+Synopsis:
+Upgraded from version 1.0.24 to version 1.0.25
+
+----------------------------------------------------------------
+
+Date: Mon 11 Apr 2022 04:56:48 AM EDT
+
+Version=1.0.26
+Release=1
+
+Synopsis:
+Upgraded from version 1.0.25 to version 1.0.26
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:04 AM EST
+
+Version=1.0.27
+Release=1
+
+Synopsis:
+Upgraded from version 1.0.26 to version 1.0.27
+
+----------------------------------------------------------------
+
+Date: Thu 20 Mar 2025 08:53:47 AM EDT
+
+Version=1.0.28
+Release=1
+
+Synopsis:
+Upgraded from version 1.0.27 to version 1.0.28
+
+----------------------------------------------------------------
+
+Date: Tue 03 Jun 2025 10:59:03 AM EDT
+
+Version=1.0.29
+Release=1
+
+Synopsis:
+Upgraded from version 1.0.28 to version 1.0.29

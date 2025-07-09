@@ -1,0 +1,19 @@
+Date: Tue 18 Oct 2022 08:44:48 AM EDT
+
+smproxy
+Version=1.0.7
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.0.6 to version 1.0.7
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:26 PM EDT
+
+Version=1.0.8
+Release=1
+
+Synopsis:
+Upgraded from version 1.0.7 to version 1.0.8

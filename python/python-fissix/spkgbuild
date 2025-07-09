@@ -1,0 +1,15 @@
+# description : Fork of lib2to3 with patch for Python issue33983 support
+# depends : python
+
+name=python-fissix
+version=24.4.24
+release=5
+
+source="https://github.com/jreese/fissix/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

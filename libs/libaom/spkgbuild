@@ -1,0 +1,27 @@
+# description : open media codec
+# depends : nasm
+
+name=libaom
+version=3.12.1
+release=1
+
+source="https://storage.googleapis.com/aom-releases/libaom-$version.tar.gz"
+options="!checksum"
+
+build()
+{
+	cd *
+	mkdir aom-build &&
+cd    aom-build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_SHARED_LIBS=1       \
+      -D ENABLE_DOCS=no            \
+      -G Ninja ..
+      ninja
+      DESTDIR=$PKG ninja install
+
+	rm $PKG/usr/lib/libaom.a
+}
+

@@ -1,0 +1,99 @@
+Date: Fri 27 May 2022 05:57:11 PM EDT
+
+cups
+Version=2.3.6
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.3.3 to version 2.3.6
+
+----------------------------------------------------------------
+
+Date: Mon 05 Jun 2023 10:17:50 AM EDT
+
+Version=2.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.2 to version 2.4.3
+
+----------------------------------------------------------------
+
+Date: Tue 06 Jun 2023 06:15:23 PM EDT
+
+Version=2.4.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.3 to version 2.4.4
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jun 2023 08:23:14 AM EDT
+
+Version=2.4.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.4 to version 2.4.5
+
+----------------------------------------------------------------
+
+Date: Fri 23 Jun 2023 02:38:48 PM EDT
+
+Version=2.4.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.5 to version 2.4.6
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:30 AM EDT
+
+Version=2.4.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.6 to version 2.4.7
+
+----------------------------------------------------------------
+
+Date: Wed 08 May 2024 01:16:17 PM EDT
+
+Version=2.4.8
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.7 to version 2.4.8
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=2.4.10
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.8 to version 2.4.10
+
+----------------------------------------------------------------
+
+Date: Wed 09 Oct 2024 03:20:32 PM EDT
+
+Version=2.4.11
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.10 to version 2.4.11
+
+----------------------------------------------------------------
+
+Date: Wed 09 Apr 2025 08:57:57 AM EDT
+
+Version=2.4.12
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.11 to version 2.4.12

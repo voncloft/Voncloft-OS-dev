@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 03:39:14 PM EDT
+
+name=python-zope-location
+version=4.2
+release=6
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:02:53 AM EDT
+
+version=4.2
+release=6
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:21:41 EDT 2021
+
+version=4.2
+release=6
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:25:38 EDT 2021
+
+version=4.2
+release=6
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:21:28 EDT 2021
+
+version=4.2
+release=6
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 30 Nov 2022 07:40:56 AM EST
+
+Version=4.3
+Release=6
+
+Synopsis:
+Upgraded from version 4.2 to version 4.3
+
+----------------------------------------------------------------
+
+Date: Sun 28 May 2023 11:32:10 AM EDT
+
+Version=5.0
+Release=6
+
+Synopsis:
+Upgraded from version 4.3 to version 5.0
+
+----------------------------------------------------------------
+
+Date: Mon 03 Feb 2025 07:16:03 AM EST
+
+Version=5.1
+Release=6
+
+Synopsis:
+Upgraded from version 5.0 to version 5.1

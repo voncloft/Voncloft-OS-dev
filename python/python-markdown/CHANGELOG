@@ -1,0 +1,79 @@
+Date: Mon 12 Jul 2021 10:44:21 AM EDT
+
+name=python-markdown
+version=3.3.4
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.3.3 to version 3.3.4
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:29:38 PM EDT
+
+version=3.3.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:23 AM EDT
+
+version=3.3.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:45 EDT 2021
+
+version=3.3.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:37 EDT 2021
+
+version=3.3.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:15 EDT 2021
+
+version=3.3.4
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 17 Nov 2021 04:22:41 AM EST
+
+Version=3.3.5
+Release=3
+
+Synopsis:
+Upgraded from version 3.3.4 to version 3.3.5
+
+----------------------------------------------------------------
+
+Date: Fri 19 Nov 2021 06:25:32 PM EST
+
+Version=3.3.6
+Release=3
+
+Synopsis:
+Upgraded from version 3.3.5 to version 3.3.6

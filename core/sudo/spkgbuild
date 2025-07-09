@@ -1,0 +1,28 @@
+# description	: allows a system administrator to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while logging the commands and arguments
+# depends	: 
+
+name=sudo
+version=1.9.17p1
+release=1
+
+source="https://www.sudo.ws/dist/sudo-$version.tar.gz"
+options="!checksum"
+
+build() {
+	cd *
+
+	./configure --prefix=/usr         \
+            --libexecdir=/usr/lib \
+            --with-secure-path    \
+            --with-env-editor     \
+            --docdir=/usr/share/doc/sudo-1.9.17p1 \
+            --with-passprompt="[sudo] password for %p: "
+	make
+	make DESTDIR=$PKG install
+	mkdir -pv $PKG/etc/sudoers.d
+cat > $PKG/etc/sudoers.d/00-sudo << "EOF"
+Defaults secure_path="/usr/sbin:/usr/bin"
+%wheel ALL=(ALL) ALL
+EOF
+
+}

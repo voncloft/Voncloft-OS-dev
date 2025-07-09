@@ -1,0 +1,16 @@
+# description	: Library that defines common error values for all GnuPG components
+
+name=libgpg-error
+version=1.55
+release=1
+source="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.55.tar.bz2"
+options="!checksum"
+build() {
+	cd $name-$version
+
+	# allow building with gawk-5.0
+
+  	./configure --prefix=/usr 
+	make
+	make DESTDIR=$PKG install
+}

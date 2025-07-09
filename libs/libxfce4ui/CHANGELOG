@@ -1,0 +1,239 @@
+Date: Wed 08 Dec 2021 09:53:49 AM EST
+
+libxfce4ui
+Version=4.17.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.14.1 to version 4.17.1
+
+----------------------------------------------------------------
+
+Date: Fri 10 Dec 2021 07:40:14 PM EST
+
+Version=4.17.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.1 to version 4.17.2
+
+----------------------------------------------------------------
+
+Date: Mon 27 Dec 2021 07:42:38 AM EST
+
+Version=4.17.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.2 to version 4.17.3
+
+----------------------------------------------------------------
+
+Date: Wed 23 Feb 2022 06:59:43 AM EST
+
+Version=4.17.4
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.3 to version 4.17.4
+
+----------------------------------------------------------------
+
+Date: Thu 17 Mar 2022 08:47:30 AM EDT
+
+Version=4.17.5
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.4 to version 4.17.5
+
+----------------------------------------------------------------
+
+Date: Sat 02 Apr 2022 12:49:49 PM EDT
+
+Version=4.17.6
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.5 to version 4.17.6
+
+----------------------------------------------------------------
+
+Date: Tue 06 Sep 2022 08:01:06 PM EDT
+
+Version=4.17.7
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.6 to version 4.17.7
+
+----------------------------------------------------------------
+
+Date: Thu 03 Nov 2022 10:02:04 AM EDT
+
+Version=4.17.8
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.7 to version 4.17.8
+
+----------------------------------------------------------------
+
+Date: Thu 01 Dec 2022 03:26:04 AM EST
+
+Version=4.17.9
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.8 to version 4.17.9
+
+----------------------------------------------------------------
+
+Date: Fri 16 Dec 2022 06:35:09 AM EST
+
+Version=4.18.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.17.9 to version 4.18.0
+
+----------------------------------------------------------------
+
+Date: Thu 05 Jan 2023 04:29:44 PM EST
+
+Version=4.18.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.18.0 to version 4.18.1
+
+----------------------------------------------------------------
+
+Date: Sun 12 Feb 2023 06:27:12 AM EST
+
+Version=4.18.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.18.1 to version 4.18.2
+
+----------------------------------------------------------------
+
+Date: Thu 30 Mar 2023 04:03:50 PM EDT
+
+Version=4.18.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.18.2 to version 4.18.3
+
+----------------------------------------------------------------
+
+Date: Tue 18 Apr 2023 07:52:10 AM EDT
+
+Version=4.19.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.18.3 to version 4.19.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Apr 2023 06:50:51 PM EDT
+
+Version=4.19.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.0 to version 4.19.1
+
+----------------------------------------------------------------
+
+Date: Tue 30 May 2023 06:48:53 AM EDT
+
+Version=4.19.2
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.1 to version 4.19.2
+
+----------------------------------------------------------------
+
+Date: Tue 17 Oct 2023 11:50:04 AM EDT
+
+Version=4.19.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.2 to version 4.19.3
+
+----------------------------------------------------------------
+
+Date: Tue 06 Feb 2024 06:46:32 AM EST
+
+Version=4.19.4
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.3 to version 4.19.4
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=4.19.5
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.4 to version 4.19.5
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:43 PM EST
+
+Version=4.19.6
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.5 to version 4.19.6
+
+----------------------------------------------------------------
+
+Date: Wed 04 Dec 2024 06:29:21 AM EST
+
+Version=4.19.7
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.6 to version 4.19.7
+
+----------------------------------------------------------------
+
+Date: Mon 16 Dec 2024 03:57:47 AM EST
+
+Version=4.20.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.19.7 to version 4.20.0
+
+----------------------------------------------------------------
+
+Date: Tue 18 Mar 2025 09:57:44 AM EDT
+
+Version=4.21.0
+Release=1
+
+Synopsis:
+Upgraded from version 4.20.0 to version 4.21.0
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:23 PM EDT
+
+Version=4.21.1
+Release=1
+
+Synopsis:
+Upgraded from version 4.21.0 to version 4.21.1

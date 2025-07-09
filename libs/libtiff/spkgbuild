@@ -1,0 +1,22 @@
+# description	: TIFF libraries and associated utilities
+# depends	: cmake ninja
+
+name=libtiff
+version=4.7.0
+release=1
+source="https://download.osgeo.org/$name/tiff-$version.tar.gz"
+
+build() {
+	cd tiff-$version
+
+	mkdir -p build
+	cd build
+	
+	
+cmake -D CMAKE_INSTALL_PREFIX=/usr ..     \
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -G Ninja                            \
+      -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/libtiff-4.7.0 
+       ninja
+	DESTDIR=$PKG ninja install
+}

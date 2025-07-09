@@ -1,0 +1,15 @@
+# description : IPython widgets for the Jupyter Notebook
+# depends : python jupyter-widgetsnbextension
+
+name=python-ipywidgets
+version=8.1.7
+release=1
+
+source="https://github.com/ipython/ipywidgets/archive/refs/tags/a$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

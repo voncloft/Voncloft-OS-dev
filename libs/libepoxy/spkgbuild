@@ -1,0 +1,18 @@
+# description	: Library for handling OpenGL function pointer management
+# depends	: mesa meson
+
+name=libepoxy
+version=1.5.10
+release=1
+source="https://github.com/anholt/libepoxy/archive/refs/tags/$version.tar.gz"
+
+build() {
+	cd $name-$version
+
+  	mkdir build
+	cd build
+	
+	meson --prefix=/usr ..
+	ninja
+	DESTDIR=$PKG ninja install
+}

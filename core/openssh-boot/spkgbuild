@@ -1,0 +1,15 @@
+# description : openssh boot script
+# depends :
+
+name=openssh-boot
+version=20250225
+release=1
+
+source="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-$version.tar.xz"
+options="!checksum"
+
+build() {
+        cd blfs-bootscripts-$version
+        make DESTDIR=$PKG install-sshd
+
+}

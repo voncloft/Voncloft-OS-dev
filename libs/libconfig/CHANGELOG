@@ -1,0 +1,29 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libconfig
+Version=1.7.3
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.7.2 to version 1.7.3
+
+----------------------------------------------------------------
+
+Date: Wed 30 Apr 2025 07:42:56 AM EDT
+
+Version=1.8
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.3 to version 1.8
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:26 PM EDT
+
+Version=1.8.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.8 to version 1.8.1

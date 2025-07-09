@@ -1,0 +1,29 @@
+Date: Sat 11 May 2024 05:21:36 PM EDT
+
+xdg-desktop-portal-gtk
+Version=1.15.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:55 AM EST
+
+Version=1.15.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.15.1 to version 1.15.2
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:24 AM EDT
+
+Version=1.15.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.15.2 to version 1.15.3

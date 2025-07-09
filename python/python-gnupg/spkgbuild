@@ -1,0 +1,15 @@
+# description : A wrapper for the Gnu Privacy Guard GPG or GnuPG
+# depends : gnupg python
+
+name=python-gnupg
+version=2.3.1
+release=2
+
+source="https://files.pythonhosted.org/packages/source/p/python-gnupg/python-gnupg-0.4.7.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

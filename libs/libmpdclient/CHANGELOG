@@ -1,0 +1,39 @@
+Date: Wed 08 Dec 2021 09:53:48 AM EST
+
+libmpdclient
+Version=2.20
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.19 to version 2.20
+
+----------------------------------------------------------------
+
+Date: Thu 21 Dec 2023 04:54:42 AM EST
+
+Version=2.21
+Release=1
+
+Synopsis:
+Upgraded from version 2.20 to version 2.21
+
+----------------------------------------------------------------
+
+Date: Mon 25 Dec 2023 07:51:23 AM EST
+
+Version=2.22
+Release=1
+
+Synopsis:
+Upgraded from version 2.21 to version 2.22
+
+----------------------------------------------------------------
+
+Date: Wed 25 Jun 2025 10:32:10 AM EDT
+
+Version=2.23
+Release=1
+
+Synopsis:
+Upgraded from version 2.22 to version 2.23

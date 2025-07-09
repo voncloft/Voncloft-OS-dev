@@ -1,0 +1,15 @@
+# description : Library for setting up self-contained Kerberos 5 environments
+# depends : python krb5
+
+name=python-k5test
+version=0.10.4
+release=1
+
+source="https://github.com/pythongssapi/k5test/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

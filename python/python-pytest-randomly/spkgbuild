@@ -1,0 +1,15 @@
+# description : Pytest plugin to randomly order tests and control random.seed
+# depends : python-pytest
+
+name=python-pytest-randomly
+version=3.16.0
+release=2
+
+source="https://github.com/pytest-dev/pytest-randomly/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

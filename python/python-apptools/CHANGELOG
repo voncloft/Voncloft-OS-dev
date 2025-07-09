@@ -1,0 +1,99 @@
+Date: Sun 11 Jul 2021 01:12:03 PM EDT
+
+name=python-apptools
+version=5.1.0
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.5.0 to version 5.1.0
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:22:33 PM EDT
+
+version=5.1.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:46:33 AM EDT
+
+version=5.1.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:04:46 EDT 2021
+
+version=5.1.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:04:54 EDT 2021
+
+version=5.1.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:05:15 EDT 2021
+
+version=5.1.0
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 17 Aug 2022 10:17:46 AM EDT
+
+Version=5.2.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.1.0 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Fri 23 Jun 2023 04:10:41 PM EDT
+
+Version=5.2.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.2.0 to version 5.2.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:29 AM EDT
+
+Version=5.3.0
+Release=3
+
+Synopsis:
+Upgraded from version 5.2.1 to version 5.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 14 May 2025 05:33:06 AM EDT
+
+Version=5.3.1
+Release=3
+
+Synopsis:
+Upgraded from version 5.3.0 to version 5.3.1

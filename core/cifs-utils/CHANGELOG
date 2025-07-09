@@ -1,0 +1,49 @@
+Date: Thu 25 May 2023 11:12:53 AM EDT
+
+cifs-utils
+Version=7.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 09 Oct 2024 03:20:32 PM EDT
+
+Version=7.1
+Release=1
+
+Synopsis:
+Upgraded from version 7.0 to version 7.1
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:48 PM EST
+
+Version=7.2
+Release=1
+
+Synopsis:
+Upgraded from version 7.1 to version 7.2
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:21 AM EDT
+
+Version=7.3
+Release=1
+
+Synopsis:
+Upgraded from version 7.2 to version 7.3
+
+----------------------------------------------------------------
+
+Date: Thu 12 Jun 2025 05:38:16 AM EDT
+
+Version=7.4
+Release=1
+
+Synopsis:
+Upgraded from version 7.3 to version 7.4

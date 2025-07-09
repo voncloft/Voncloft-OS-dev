@@ -1,0 +1,19 @@
+bash-completion-2.11.0-1
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/bash_completion.d/
+-rw-r--r-- root/root    etc/bashrc
+-rw-r--r-- root/root    etc/dircolors
+-rw-r--r-- root/root    etc/profile
+drwxr-xr-x root/root    etc/profile.d/
+-rw-r--r-- root/root    etc/profile.d/bash_completion.sh
+-rw-r--r-- root/root    etc/profile.d/dircolors.sh
+-rw-r--r-- root/root    etc/profile.d/extrapaths.sh
+-rw-r--r-- root/root    etc/profile.d/i18n.sh
+-rw-r--r-- root/root    etc/profile.d/readline.sh
+-rw-r--r-- root/root    etc/profile.d/umask.sh
+drwxr-xr-x root/root    etc/skel/
+-rw-r--r-- root/root    etc/skel/.bash_logout
+-rw-r--r-- root/root    etc/skel/.bash_profile
+-rw-r--r-- root/root    etc/skel/.bashrc
+-rw-r--r-- root/root    etc/skel/.nanorc
+-rw-r--r-- root/root    etc/skel/.profile

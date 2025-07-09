@@ -1,0 +1,99 @@
+Date: Mon 12 Jul 2021 03:29:08 PM EDT
+
+name=python-ldap
+version=3.3.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:52:54 AM EDT
+
+version=3.3.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:11:16 EDT 2021
+
+version=3.3.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:03 EDT 2021
+
+version=3.3.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:11:47 EDT 2021
+
+version=3.3.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon 29 Nov 2021 05:30:46 AM EST
+
+Version=3.4.0
+Release=3
+
+Synopsis:
+Upgraded from version 3.3.1 to version 3.4.0
+
+----------------------------------------------------------------
+
+Date: Tue 05 Jul 2022 06:34:59 PM EDT
+
+Version=3.4.1
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.0 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Wed 06 Jul 2022 04:57:40 PM EDT
+
+Version=3.4.2
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.1 to version 3.4.2
+
+----------------------------------------------------------------
+
+Date: Fri 16 Sep 2022 05:47:20 PM EDT
+
+Version=3.4.3
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.2 to version 3.4.3
+
+----------------------------------------------------------------
+
+Date: Sun 19 Nov 2023 02:05:57 PM EST
+
+Version=3.4.4
+Release=3
+
+Synopsis:
+Upgraded from version 3.4.3 to version 3.4.4

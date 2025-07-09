@@ -1,0 +1,159 @@
+Date: Sun 11 Jul 2021 01:12:54 PM EDT
+
+name=python-milc
+version=1.4.2
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.1.0 to version 1.4.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:29:55 PM EDT
+
+version=1.4.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:53:39 AM EDT
+
+version=1.4.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:12:02 EDT 2021
+
+version=1.4.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:14:55 EDT 2021
+
+version=1.4.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:12:30 EDT 2021
+
+version=1.4.2
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Aug 11 15:21:11 EDT 2021
+
+version=1.5.0
+release=1
+
+Synopsis:
+Upgraded from version 1.4.2 to version 1.5.0
+
+----------------------------------------------------------------
+
+Date: Mon Aug 23 15:21:50 EDT 2021
+
+version=1.6.2
+release=1
+
+Synopsis:
+Upgraded from version 1.5.0 to version 1.6.2
+
+----------------------------------------------------------------
+
+Date: Sat Sep  4 15:17:33 EDT 2021
+
+version=1.6.3
+release=1
+
+Synopsis:
+Upgraded from version 1.6.2 to version 1.6.3
+
+----------------------------------------------------------------
+
+Date: Thu 30 Sep 2021 05:44:59 AM EDT
+
+Version=1.6.5
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.3 to version 1.6.5
+
+----------------------------------------------------------------
+
+Date: Wed 30 Mar 2022 10:37:18 AM EDT
+
+Version=1.6.6
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.5 to version 1.6.6
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jun 2023 08:23:14 AM EDT
+
+Version=1.6.8
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.6 to version 1.6.8
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:32 AM EST
+
+Version=1.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.6.8 to version 1.7.0
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:05 AM EST
+
+Version=1.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.7.0 to version 1.8.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:30 AM EDT
+
+Version=1.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.8.0 to version 1.9.0
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:39 AM EST
+
+Version=1.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.9.0 to version 1.9.1

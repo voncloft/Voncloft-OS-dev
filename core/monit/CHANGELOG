@@ -1,0 +1,99 @@
+Date: Wed 13 Apr 2022 04:34:17 PM EDT
+
+monit
+Version=5.32.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 5.27.0 to version 5.32.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Feb 2023 06:27:12 AM EST
+
+Version=5.33.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.32.0 to version 5.33.0
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jun 2024 05:48:29 PM EDT
+
+Version=5.34.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.33.0 to version 5.34.0
+
+----------------------------------------------------------------
+
+Date: Wed 09 Oct 2024 03:20:32 PM EDT
+
+Version=5.34.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.34.0 to version 5.34.1
+
+----------------------------------------------------------------
+
+Date: Sat 12 Oct 2024 01:42:56 AM EDT
+
+Version=5.34.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.34.1 to version 5.34.2
+
+----------------------------------------------------------------
+
+Date: Wed 11 Dec 2024 03:57:22 AM EST
+
+Version=5.34.3
+Release=1
+
+Synopsis:
+Upgraded from version 5.34.2 to version 5.34.3
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:47 AM EST
+
+Version=5.34.4
+Release=1
+
+Synopsis:
+Upgraded from version 5.34.3 to version 5.34.4
+
+----------------------------------------------------------------
+
+Date: Sun 13 Apr 2025 11:34:31 AM EDT
+
+Version=5.35.0
+Release=1
+
+Synopsis:
+Upgraded from version 5.34.4 to version 5.35.0
+
+----------------------------------------------------------------
+
+Date: Wed 30 Apr 2025 07:42:56 AM EDT
+
+Version=5.35.1
+Release=1
+
+Synopsis:
+Upgraded from version 5.35.0 to version 5.35.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 May 2025 09:02:36 AM EDT
+
+Version=5.35.2
+Release=1
+
+Synopsis:
+Upgraded from version 5.35.1 to version 5.35.2

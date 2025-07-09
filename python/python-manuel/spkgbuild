@@ -1,0 +1,15 @@
+# description : Manuel lets you build() tested documentation
+# depends : python-setuptools
+
+name=python-manuel
+version=1.13.0
+release=5
+
+source="https://github.com/benji-york/manuel/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

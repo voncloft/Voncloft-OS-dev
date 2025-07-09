@@ -1,0 +1,879 @@
+Date: Sun 11 Jul 2021 01:13:08 PM EDT
+
+name=python-pipenv
+version=2021.5.29
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2020.11.15 to version 2021.5.29
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:31:47 PM EDT
+
+version=2021.5.29
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:55:30 AM EDT
+
+version=2021.5.29
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:13:55 EDT 2021
+
+version=2021.5.29
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:17:00 EDT 2021
+
+version=2021.5.29
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:14:18 EDT 2021
+
+version=2021.5.29
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Sun 07 Nov 2021 09:00:08 AM EST
+
+Version=2021.11.5
+Release=1
+
+Synopsis:
+Upgraded from version 2021.5.29 to version 2021.11.5
+
+----------------------------------------------------------------
+
+Date: Tue 09 Nov 2021 06:52:45 PM EST
+
+Version=2021.11.9
+Release=1
+
+Synopsis:
+Upgraded from version 2021.11.5 to version 2021.11.9
+
+----------------------------------------------------------------
+
+Date: Tue 16 Nov 2021 03:14:57 AM EST
+
+Version=2021.11.15
+Release=1
+
+Synopsis:
+Upgraded from version 2021.11.9 to version 2021.11.15
+
+----------------------------------------------------------------
+
+Date: Wed 24 Nov 2021 06:52:29 AM EST
+
+Version=2021.11.23
+Release=1
+
+Synopsis:
+Upgraded from version 2021.11.15 to version 2021.11.23
+
+----------------------------------------------------------------
+
+Date: Sat 08 Jan 2022 03:41:23 PM EST
+
+Version=2022.1.8
+Release=1
+
+Synopsis:
+Upgraded from version 2021.11.23 to version 2022.1.8
+
+----------------------------------------------------------------
+
+Date: Thu 24 Mar 2022 05:27:37 AM EDT
+
+Version=2022.3.23
+Release=1
+
+Synopsis:
+Upgraded from version 2022.1.8 to version 2022.3.23
+
+----------------------------------------------------------------
+
+Date: Fri 25 Mar 2022 08:49:32 PM EDT
+
+Version=2022.3.24
+Release=1
+
+Synopsis:
+Upgraded from version 2022.3.23 to version 2022.3.24
+
+----------------------------------------------------------------
+
+Date: Wed 30 Mar 2022 10:37:18 AM EDT
+
+Version=2022.3.28
+Release=1
+
+Synopsis:
+Upgraded from version 2022.3.24 to version 2022.3.28
+
+----------------------------------------------------------------
+
+Date: Mon 11 Apr 2022 04:56:48 AM EDT
+
+Version=2022.4.8
+Release=1
+
+Synopsis:
+Upgraded from version 2022.3.28 to version 2022.4.8
+
+----------------------------------------------------------------
+
+Date: Fri 22 Apr 2022 04:39:03 PM EDT
+
+Version=2022.4.21
+Release=1
+
+Synopsis:
+Upgraded from version 2022.4.8 to version 2022.4.21
+
+----------------------------------------------------------------
+
+Date: Mon 02 May 2022 06:34:21 AM EDT
+
+Version=2022.4.30
+Release=1
+
+Synopsis:
+Upgraded from version 2022.4.21 to version 2022.4.30
+
+----------------------------------------------------------------
+
+Date: Wed 04 May 2022 07:21:05 AM EDT
+
+Version=2022.5.2
+Release=1
+
+Synopsis:
+Upgraded from version 2022.4.30 to version 2022.5.2
+
+----------------------------------------------------------------
+
+Date: Wed 08 Jun 2022 07:53:59 PM EDT
+
+Version=2022.6.7
+Release=1
+
+Synopsis:
+Upgraded from version 2022.5.2 to version 2022.6.7
+
+----------------------------------------------------------------
+
+Date: Tue 05 Jul 2022 06:34:59 PM EDT
+
+Version=2022.7.4
+Release=1
+
+Synopsis:
+Upgraded from version 2022.6.7 to version 2022.7.4
+
+----------------------------------------------------------------
+
+Date: Mon 25 Jul 2022 05:34:22 AM EDT
+
+Version=2022.7.24
+Release=1
+
+Synopsis:
+Upgraded from version 2022.7.4 to version 2022.7.24
+
+----------------------------------------------------------------
+
+Date: Sat 06 Aug 2022 05:11:47 PM EDT
+
+Version=2022.8.5
+Release=1
+
+Synopsis:
+Upgraded from version 2022.7.24 to version 2022.8.5
+
+----------------------------------------------------------------
+
+Date: Sat 13 Aug 2022 06:05:51 PM EDT
+
+Version=2022.8.13
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.5 to version 2022.8.13
+
+----------------------------------------------------------------
+
+Date: Mon 15 Aug 2022 05:00:32 AM EDT
+
+Version=2022.8.14
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.13 to version 2022.8.14
+
+----------------------------------------------------------------
+
+Date: Mon 15 Aug 2022 08:08:28 PM EDT
+
+Version=2022.8.15
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.14 to version 2022.8.15
+
+----------------------------------------------------------------
+
+Date: Thu 18 Aug 2022 03:41:19 PM EDT
+
+Version=2022.8.17
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.15 to version 2022.8.17
+
+----------------------------------------------------------------
+
+Date: Fri 19 Aug 2022 04:32:08 PM EDT
+
+Version=2022.8.19
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.17 to version 2022.8.19
+
+----------------------------------------------------------------
+
+Date: Fri 26 Aug 2022 08:14:09 AM EDT
+
+Version=2022.8.24
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.19 to version 2022.8.24
+
+----------------------------------------------------------------
+
+Date: Thu 01 Sep 2022 06:27:32 AM EDT
+
+Version=2022.8.30
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.24 to version 2022.8.30
+
+----------------------------------------------------------------
+
+Date: Thu 01 Sep 2022 11:52:50 PM EDT
+
+Version=2022.8.31
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.30 to version 2022.8.31
+
+----------------------------------------------------------------
+
+Date: Sat 03 Sep 2022 11:13:51 AM EDT
+
+Version=2022.9.2
+Release=1
+
+Synopsis:
+Upgraded from version 2022.8.31 to version 2022.9.2
+
+----------------------------------------------------------------
+
+Date: Sun 04 Sep 2022 03:55:38 PM EDT
+
+Version=2022.9.4
+Release=1
+
+Synopsis:
+Upgraded from version 2022.9.2 to version 2022.9.4
+
+----------------------------------------------------------------
+
+Date: Fri 09 Sep 2022 03:42:11 PM EDT
+
+Version=2022.9.8
+Release=1
+
+Synopsis:
+Upgraded from version 2022.9.4 to version 2022.9.8
+
+----------------------------------------------------------------
+
+Date: Tue 20 Sep 2022 05:53:50 PM EDT
+
+Version=2022.9.20
+Release=1
+
+Synopsis:
+Upgraded from version 2022.9.8 to version 2022.9.20
+
+----------------------------------------------------------------
+
+Date: Wed 21 Sep 2022 04:41:34 PM EDT
+
+Version=2022.9.21
+Release=1
+
+Synopsis:
+Upgraded from version 2022.9.20 to version 2022.9.21
+
+----------------------------------------------------------------
+
+Date: Mon 26 Sep 2022 09:10:51 AM EDT
+
+Version=2022.9.24
+Release=1
+
+Synopsis:
+Upgraded from version 2022.9.21 to version 2022.9.24
+
+----------------------------------------------------------------
+
+Date: Thu 06 Oct 2022 06:17:50 AM EDT
+
+Version=2022.10.4
+Release=1
+
+Synopsis:
+Upgraded from version 2022.9.24 to version 2022.10.4
+
+----------------------------------------------------------------
+
+Date: Mon 10 Oct 2022 08:04:37 AM EDT
+
+Version=2022.10.9
+Release=1
+
+Synopsis:
+Upgraded from version 2022.10.4 to version 2022.10.9
+
+----------------------------------------------------------------
+
+Date: Mon 10 Oct 2022 07:04:25 PM EDT
+
+Version=2022.10.10
+Release=1
+
+Synopsis:
+Upgraded from version 2022.10.9 to version 2022.10.10
+
+----------------------------------------------------------------
+
+Date: Tue 11 Oct 2022 03:41:24 PM EDT
+
+Version=2022.10.11
+Release=1
+
+Synopsis:
+Upgraded from version 2022.10.10 to version 2022.10.11
+
+----------------------------------------------------------------
+
+Date: Fri 14 Oct 2022 05:47:56 AM EDT
+
+Version=2022.10.12
+Release=1
+
+Synopsis:
+Upgraded from version 2022.10.11 to version 2022.10.12
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:35 PM EDT
+
+Version=2022.10.25
+Release=1
+
+Synopsis:
+Upgraded from version 2022.10.12 to version 2022.10.25
+
+----------------------------------------------------------------
+
+Date: Sat 05 Nov 2022 03:56:36 PM EDT
+
+Version=2022.11.5
+Release=1
+
+Synopsis:
+Upgraded from version 2022.10.25 to version 2022.11.5
+
+----------------------------------------------------------------
+
+Date: Mon 14 Nov 2022 08:48:17 AM EST
+
+Version=2022.11.11
+Release=1
+
+Synopsis:
+Upgraded from version 2022.11.5 to version 2022.11.11
+
+----------------------------------------------------------------
+
+Date: Fri 25 Nov 2022 05:01:54 AM EST
+
+Version=2022.11.23
+Release=1
+
+Synopsis:
+Upgraded from version 2022.11.11 to version 2022.11.23
+
+----------------------------------------------------------------
+
+Date: Sun 27 Nov 2022 08:53:44 AM EST
+
+Version=2022.11.25
+Release=1
+
+Synopsis:
+Upgraded from version 2022.11.23 to version 2022.11.25
+
+----------------------------------------------------------------
+
+Date: Thu 01 Dec 2022 03:26:04 AM EST
+
+Version=2022.11.30
+Release=1
+
+Synopsis:
+Upgraded from version 2022.11.25 to version 2022.11.30
+
+----------------------------------------------------------------
+
+Date: Sun 18 Dec 2022 06:50:52 AM EST
+
+Version=2022.12.17
+Release=1
+
+Synopsis:
+Upgraded from version 2022.11.30 to version 2022.12.17
+
+----------------------------------------------------------------
+
+Date: Tue 20 Dec 2022 07:35:43 AM EST
+
+Version=2022.12.19
+Release=1
+
+Synopsis:
+Upgraded from version 2022.12.17 to version 2022.12.19
+
+----------------------------------------------------------------
+
+Date: Sat 04 Feb 2023 08:27:46 PM EST
+
+Version=2023.2.4
+Release=1
+
+Synopsis:
+Upgraded from version 2022.12.19 to version 2023.2.4
+
+----------------------------------------------------------------
+
+Date: Tue 21 Feb 2023 04:00:08 PM EST
+
+Version=2023.2.18
+Release=1
+
+Synopsis:
+Upgraded from version 2023.2.4 to version 2023.2.18
+
+----------------------------------------------------------------
+
+Date: Sat 18 Mar 2023 05:55:10 PM EDT
+
+Version=2023.3.18
+Release=1
+
+Synopsis:
+Upgraded from version 2023.2.18 to version 2023.3.18
+
+----------------------------------------------------------------
+
+Date: Mon 20 Mar 2023 09:14:51 AM EDT
+
+Version=2023.3.20
+Release=1
+
+Synopsis:
+Upgraded from version 2023.3.18 to version 2023.3.20
+
+----------------------------------------------------------------
+
+Date: Thu 20 Apr 2023 04:13:51 PM EDT
+
+Version=2023.4.20
+Release=1
+
+Synopsis:
+Upgraded from version 2023.3.20 to version 2023.4.20
+
+----------------------------------------------------------------
+
+Date: Mon 01 May 2023 10:41:52 AM EDT
+
+Version=2023.4.29
+Release=1
+
+Synopsis:
+Upgraded from version 2023.4.20 to version 2023.4.29
+
+----------------------------------------------------------------
+
+Date: Mon 22 May 2023 08:08:12 AM EDT
+
+Version=2023.5.19
+Release=1
+
+Synopsis:
+Upgraded from version 2023.4.29 to version 2023.5.19
+
+----------------------------------------------------------------
+
+Date: Mon 05 Jun 2023 10:17:51 AM EDT
+
+Version=2023.6.2
+Release=1
+
+Synopsis:
+Upgraded from version 2023.5.19 to version 2023.6.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jun 2023 08:48:47 AM EDT
+
+Version=2023.6.11
+Release=1
+
+Synopsis:
+Upgraded from version 2023.6.2 to version 2023.6.11
+
+----------------------------------------------------------------
+
+Date: Tue 13 Jun 2023 06:52:12 AM EDT
+
+Version=2023.6.12
+Release=1
+
+Synopsis:
+Upgraded from version 2023.6.11 to version 2023.6.12
+
+----------------------------------------------------------------
+
+Date: Tue 20 Jun 2023 08:18:46 PM EDT
+
+Version=2023.6.18
+Release=1
+
+Synopsis:
+Upgraded from version 2023.6.12 to version 2023.6.18
+
+----------------------------------------------------------------
+
+Date: Tue 27 Jun 2023 08:54:06 PM EDT
+
+Version=2023.6.26
+Release=1
+
+Synopsis:
+Upgraded from version 2023.6.18 to version 2023.6.26
+
+----------------------------------------------------------------
+
+Date: Mon 03 Jul 2023 08:38:26 AM EDT
+
+Version=2023.7.1
+Release=1
+
+Synopsis:
+Upgraded from version 2023.6.26 to version 2023.7.1
+
+----------------------------------------------------------------
+
+Date: Wed 05 Jul 2023 09:02:37 AM EDT
+
+Version=2023.7.3
+Release=1
+
+Synopsis:
+Upgraded from version 2023.7.1 to version 2023.7.3
+
+----------------------------------------------------------------
+
+Date: Thu 06 Jul 2023 09:41:09 PM EDT
+
+Version=2023.7.4
+Release=1
+
+Synopsis:
+Upgraded from version 2023.7.3 to version 2023.7.4
+
+----------------------------------------------------------------
+
+Date: Mon 10 Jul 2023 06:52:36 PM EDT
+
+Version=2023.7.9
+Release=1
+
+Synopsis:
+Upgraded from version 2023.7.4 to version 2023.7.9
+
+----------------------------------------------------------------
+
+Date: Tue 11 Jul 2023 06:43:25 PM EDT
+
+Version=2023.7.11
+Release=1
+
+Synopsis:
+Upgraded from version 2023.7.9 to version 2023.7.11
+
+----------------------------------------------------------------
+
+Date: Tue 25 Jul 2023 10:08:52 AM EDT
+
+Version=2023.7.23
+Release=1
+
+Synopsis:
+Upgraded from version 2023.7.11 to version 2023.7.23
+
+----------------------------------------------------------------
+
+Date: Sun 20 Aug 2023 06:12:42 PM EDT
+
+Version=2023.8.20
+Release=1
+
+Synopsis:
+Upgraded from version 2023.7.23 to version 2023.8.20
+
+----------------------------------------------------------------
+
+Date: Wed 23 Aug 2023 03:43:42 PM EDT
+
+Version=2023.8.23
+Release=1
+
+Synopsis:
+Upgraded from version 2023.8.20 to version 2023.8.23
+
+----------------------------------------------------------------
+
+Date: Mon 28 Aug 2023 10:16:06 AM EDT
+
+Version=2023.8.26
+Release=1
+
+Synopsis:
+Upgraded from version 2023.8.23 to version 2023.8.26
+
+----------------------------------------------------------------
+
+Date: Tue 29 Aug 2023 05:56:57 PM EDT
+
+Version=2023.8.28
+Release=1
+
+Synopsis:
+Upgraded from version 2023.8.26 to version 2023.8.28
+
+----------------------------------------------------------------
+
+Date: Tue 05 Sep 2023 07:55:09 AM EDT
+
+Version=2023.9.1
+Release=1
+
+Synopsis:
+Upgraded from version 2023.8.28 to version 2023.9.1
+
+----------------------------------------------------------------
+
+Date: Mon 11 Sep 2023 09:19:15 AM EDT
+
+Version=2023.9.8
+Release=1
+
+Synopsis:
+Upgraded from version 2023.9.1 to version 2023.9.8
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:43 PM EDT
+
+Version=2023.10.3
+Release=1
+
+Synopsis:
+Upgraded from version 2023.9.8 to version 2023.10.3
+
+----------------------------------------------------------------
+
+Date: Sat 21 Oct 2023 07:25:49 PM EDT
+
+Version=2023.10.20
+Release=1
+
+Synopsis:
+Upgraded from version 2023.10.3 to version 2023.10.20
+
+----------------------------------------------------------------
+
+Date: Wed 25 Oct 2023 06:05:50 PM EDT
+
+Version=2023.10.24
+Release=1
+
+Synopsis:
+Upgraded from version 2023.10.20 to version 2023.10.24
+
+----------------------------------------------------------------
+
+Date: Thu 16 Nov 2023 10:06:46 AM EST
+
+Version=2023.11.14
+Release=1
+
+Synopsis:
+Upgraded from version 2023.10.24 to version 2023.11.14
+
+----------------------------------------------------------------
+
+Date: Sun 19 Nov 2023 02:05:57 PM EST
+
+Version=2023.11.15
+Release=1
+
+Synopsis:
+Upgraded from version 2023.11.14 to version 2023.11.15
+
+----------------------------------------------------------------
+
+Date: Mon 22 Jan 2024 05:56:49 PM EST
+
+Version=2023.11.17
+Release=1
+
+Synopsis:
+Upgraded from version 2023.11.15 to version 2023.11.17
+
+----------------------------------------------------------------
+
+Date: Mon 05 Feb 2024 06:44:06 AM EST
+
+Version=2023.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 2023.11.17 to version 2023.12.0
+
+----------------------------------------------------------------
+
+Date: Tue 06 Feb 2024 06:46:34 AM EST
+
+Version=2023.12.1
+Release=1
+
+Synopsis:
+Upgraded from version 2023.12.0 to version 2023.12.1
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:31 AM EDT
+
+Version=2024.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 2023.12.1 to version 2024.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 23 Oct 2024 06:42:54 AM EDT
+
+Version=2024.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 2024.1.0 to version 2024.2.0
+
+----------------------------------------------------------------
+
+Date: Thu 07 Nov 2024 05:36:45 PM EST
+
+Version=2024.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 2024.2.0 to version 2024.4.0
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:40 AM EST
+
+Version=2024.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 2024.4.0 to version 2024.4.1
+
+----------------------------------------------------------------
+
+Date: Mon 28 Apr 2025 05:29:54 AM EDT
+
+Version=2025.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 2024.4.1 to version 2025.0.1
+
+----------------------------------------------------------------
+
+Date: Tue 06 May 2025 05:31:22 AM EDT
+
+Version=2025.0.2
+Release=1
+
+Synopsis:
+Upgraded from version 2025.0.1 to version 2025.0.2
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:27 PM EDT
+
+Version=2025.0.3
+Release=1
+
+Synopsis:
+Upgraded from version 2025.0.2 to version 2025.0.3

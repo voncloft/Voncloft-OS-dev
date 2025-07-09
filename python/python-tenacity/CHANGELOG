@@ -1,0 +1,139 @@
+Date: Sun 11 Jul 2021 01:13:47 PM EDT
+
+name=python-tenacity
+version=8.0.0
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 6.3.1 to version 8.0.0
+
+----------------------------------------------------------------
+
+Date: Mon Jul 12 08:18:56 EDT 2021
+
+version=8.0.1
+release=1
+
+Synopsis:
+Upgraded from version 8.0.0 to version 8.0.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:37:11 PM EDT
+
+version=8.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:00:51 AM EDT
+
+version=8.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:19:40 EDT 2021
+
+version=8.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:20 EDT 2021
+
+version=8.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:31 EDT 2021
+
+version=8.0.1
+release=1
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 21 Sep 2022 04:41:34 PM EDT
+
+Version=8.1.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.0.1 to version 8.1.0
+
+----------------------------------------------------------------
+
+Date: Wed 08 Feb 2023 10:52:50 PM EST
+
+Version=8.2.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.1.0 to version 8.2.0
+
+----------------------------------------------------------------
+
+Date: Sun 12 Feb 2023 06:27:13 AM EST
+
+Version=8.2.1
+Release=1
+
+Synopsis:
+Upgraded from version 8.2.0 to version 8.2.1
+
+----------------------------------------------------------------
+
+Date: Tue 28 Feb 2023 05:29:03 PM EST
+
+Version=8.2.2
+Release=1
+
+Synopsis:
+Upgraded from version 8.2.1 to version 8.2.2
+
+----------------------------------------------------------------
+
+Date: Tue 15 Aug 2023 10:19:18 AM EDT
+
+Version=8.2.3
+Release=1
+
+Synopsis:
+Upgraded from version 8.2.2 to version 8.2.3
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:32 AM EDT
+
+Version=9.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 8.2.3 to version 9.0.0
+
+----------------------------------------------------------------
+
+Date: Thu 03 Apr 2025 09:37:02 AM EDT
+
+Version=9.1.2
+Release=1
+
+Synopsis:
+Upgraded from version 9.0.0 to version 9.1.2

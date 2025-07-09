@@ -1,0 +1,69 @@
+Date: Wed 06 Apr 2022 05:17:23 AM EDT
+
+emacs
+Version=28.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 27.2 to version 28.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Sep 2022 06:57:58 PM EDT
+
+Version=28.2
+Release=1
+
+Synopsis:
+Upgraded from version 28.1 to version 28.2
+
+----------------------------------------------------------------
+
+Date: Mon 31 Jul 2023 01:13:00 PM EDT
+
+Version=29.1
+Release=1
+
+Synopsis:
+Upgraded from version 28.2 to version 29.1
+
+----------------------------------------------------------------
+
+Date: Thu 25 Jan 2024 09:18:52 AM EST
+
+Version=29.2
+Release=1
+
+Synopsis:
+Upgraded from version 29.1 to version 29.2
+
+----------------------------------------------------------------
+
+Date: Mon 25 Mar 2024 10:23:47 AM EDT
+
+Version=29.3
+Release=1
+
+Synopsis:
+Upgraded from version 29.2 to version 29.3
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=29.4
+Release=1
+
+Synopsis:
+Upgraded from version 29.3 to version 29.4
+
+----------------------------------------------------------------
+
+Date: Mon 24 Feb 2025 02:46:44 PM EST
+
+Version=30.1
+Release=1
+
+Synopsis:
+Upgraded from version 29.4 to version 30.1

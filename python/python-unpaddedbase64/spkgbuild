@@ -1,0 +1,15 @@
+# description : Unpadded Base64
+# depends : python
+
+name=python-unpaddedbase64
+version=2.1.0
+release=7
+
+source="https://github.com/matrix-org/python-unpaddedbase64/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

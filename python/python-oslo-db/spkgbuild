@@ -1,0 +1,15 @@
+# description : OpenStack Database Pattern Library
+# depends : python-six python-pbr python-alembic python-debtcollector python-oslo-i18n
+
+name=python-oslo-db
+version=17.2.1
+release=1
+
+source="https://github.com/openstack/oslo.db/archive/refs/tags/e$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

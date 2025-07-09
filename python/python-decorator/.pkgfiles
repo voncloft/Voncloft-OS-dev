@@ -1,0 +1,13 @@
+python-decorator-5.1.0-3
+drwxr-xr-x root/root    __pycache__/
+-rw-r--r-- root/root    __pycache__/decorator.cpython-313.pyc
+drwxr-xr-x root/root    decorator-5.2.1.dist-info/
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/INSTALLER
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/LICENSE.txt
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/METADATA
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/RECORD
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/REQUESTED
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/WHEEL
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/pbr.json
+-rw-r--r-- root/root    decorator-5.2.1.dist-info/top_level.txt
+-rw-r--r-- root/root    decorator.py

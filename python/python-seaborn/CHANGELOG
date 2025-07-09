@@ -1,0 +1,129 @@
+Date: Sun 11 Jul 2021 01:13:37 PM EDT
+
+name=python-seaborn
+version=0.11.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.11.0 to version 0.11.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:35:47 PM EDT
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 06:59:28 AM EDT
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:18:15 EDT 2021
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:21:43 EDT 2021
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:18:09 EDT 2021
+
+version=0.11.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon Aug  9 15:19:22 EDT 2021
+
+version=0.11.2
+release=3
+
+Synopsis:
+Upgraded from version 0.11.1 to version 0.11.2
+
+----------------------------------------------------------------
+
+Date: Tue 17 May 2022 10:18:30 AM EDT
+
+Version=0.12.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.11.2 to version 0.12.0
+
+----------------------------------------------------------------
+
+Date: Wed 19 Oct 2022 08:20:40 AM EDT
+
+Version=0.12.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.12.0 to version 0.12.1
+
+----------------------------------------------------------------
+
+Date: Sat 31 Dec 2022 07:18:53 AM EST
+
+Version=0.12.2
+Release=3
+
+Synopsis:
+Upgraded from version 0.12.1 to version 0.12.2
+
+----------------------------------------------------------------
+
+Date: Thu 28 Sep 2023 07:27:32 AM EDT
+
+Version=0.13.0
+Release=3
+
+Synopsis:
+Upgraded from version 0.12.2 to version 0.13.0
+
+----------------------------------------------------------------
+
+Date: Mon 01 Jan 2024 04:27:34 PM EST
+
+Version=0.13.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.13.0 to version 0.13.1
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:33 AM EST
+
+Version=0.13.2
+Release=3
+
+Synopsis:
+Upgraded from version 0.13.1 to version 0.13.2

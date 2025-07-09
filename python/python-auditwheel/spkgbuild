@@ -1,0 +1,15 @@
+# description : Auditing and relabeling cross-distribution Linux wheels
+# depends : python python-wheel python-pyelftools unzip patchelf
+
+name=python-auditwheel
+version=6.4.0
+release=1
+
+source="https://github.com/pypa/auditwheel/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

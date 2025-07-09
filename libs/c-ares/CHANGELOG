@@ -1,0 +1,159 @@
+Date: Wed 13 Apr 2022 04:34:18 PM EDT
+
+c-ares
+Version=1.18.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.16.1 to version 1.18.1
+
+----------------------------------------------------------------
+
+Date: Tue 31 Jan 2023 07:18:57 AM EST
+
+Version=1.19.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.18.1 to version 1.19.0
+
+----------------------------------------------------------------
+
+Date: Tue 23 May 2023 08:25:58 AM EDT
+
+Version=1.19.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.19.0 to version 1.19.1
+
+----------------------------------------------------------------
+
+Date: Sat 07 Oct 2023 03:50:42 PM EDT
+
+Version=1.20.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.19.1 to version 1.20.0
+
+----------------------------------------------------------------
+
+Date: Tue 10 Oct 2023 11:44:11 AM EDT
+
+Version=1.20.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.20.0 to version 1.20.1
+
+----------------------------------------------------------------
+
+Date: Mon 30 Oct 2023 07:50:34 PM EDT
+
+Version=1.21.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.20.1 to version 1.21.0
+
+----------------------------------------------------------------
+
+Date: Wed 15 Nov 2023 08:46:38 AM EST
+
+Version=1.22.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.21.0 to version 1.22.0
+
+----------------------------------------------------------------
+
+Date: Mon 20 Nov 2023 09:44:52 AM EST
+
+Version=1.22.1
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.0 to version 1.22.1
+
+----------------------------------------------------------------
+
+Date: Sat 02 Dec 2023 09:19:02 PM EST
+
+Version=1.23.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.22.1 to version 1.23.0
+
+----------------------------------------------------------------
+
+Date: Mon 18 Dec 2023 04:53:27 AM EST
+
+Version=1.24.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.23.0 to version 1.24.0
+
+----------------------------------------------------------------
+
+Date: Thu 01 Feb 2024 11:33:31 AM EST
+
+Version=1.26.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.24.0 to version 1.26.0
+
+----------------------------------------------------------------
+
+Date: Thu 29 Feb 2024 01:51:34 AM EST
+
+Version=1.27.0
+Release=1
+
+Synopsis:
+Upgraded from version 1.26.0 to version 1.27.0
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:27 AM EDT
+
+Version=1.34.2
+Release=1
+
+Synopsis:
+Upgraded from version 1.27.0 to version 1.34.2
+
+----------------------------------------------------------------
+
+Date: Mon 11 Nov 2024 05:44:40 AM EST
+
+Version=1.34.3
+Release=1
+
+Synopsis:
+Upgraded from version 1.34.2 to version 1.34.3
+
+----------------------------------------------------------------
+
+Date: Sun 15 Dec 2024 11:48:23 AM EST
+
+Version=1.34.4
+Release=1
+
+Synopsis:
+Upgraded from version 1.34.3 to version 1.34.4
+
+----------------------------------------------------------------
+
+Date: Wed 09 Apr 2025 08:57:57 AM EDT
+
+Version=1.34.5
+Release=1
+
+Synopsis:
+Upgraded from version 1.34.4 to version 1.34.5

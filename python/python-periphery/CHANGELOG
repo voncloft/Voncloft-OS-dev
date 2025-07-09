@@ -1,0 +1,29 @@
+Date: Wed 29 Sep 2021 07:42:39 AM EDT
+
+python-periphery
+Version=2.3.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.1.1 to version 2.3.0
+
+----------------------------------------------------------------
+
+Date: Wed 19 Apr 2023 07:16:59 AM EDT
+
+Version=2.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.3.0 to version 2.4.0
+
+----------------------------------------------------------------
+
+Date: Fri 21 Apr 2023 06:50:52 PM EDT
+
+Version=2.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.4.0 to version 2.4.1

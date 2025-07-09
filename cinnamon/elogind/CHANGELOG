@@ -1,0 +1,49 @@
+Date: Tue 16 May 2023 05:08:04 PM EDT
+
+elogind
+Version=252.9
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 246.10 to version 252.9
+
+----------------------------------------------------------------
+
+Date: Tue 12 Mar 2024 06:14:57 AM EDT
+
+Version=252.23
+Release=1
+
+Synopsis:
+Upgraded from version 252.9 to version 252.23
+
+----------------------------------------------------------------
+
+Date: Mon 15 Apr 2024 01:12:39 PM EDT
+
+Version=255.4
+Release=1
+
+Synopsis:
+Upgraded from version 252.23 to version 255.4
+
+----------------------------------------------------------------
+
+Date: Wed 08 May 2024 01:16:16 PM EDT
+
+Version=255.5
+Release=1
+
+Synopsis:
+Upgraded from version 255.4 to version 255.5
+
+----------------------------------------------------------------
+
+Date: Tue 14 Jan 2025 05:37:19 AM EST
+
+Version=255.17
+Release=1
+
+Synopsis:
+Upgraded from version 255.5 to version 255.17

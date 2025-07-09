@@ -1,0 +1,15 @@
+# description : JavaScript to Python Translator & JavaScript interpreter written in 100 percent pure Python
+# depends : python-tzlocal python-six python-pyjsparser
+
+name=python-js2py
+version=0.71
+release=3
+
+source="https://github.com/PiotrDabkowski/Js2Py/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

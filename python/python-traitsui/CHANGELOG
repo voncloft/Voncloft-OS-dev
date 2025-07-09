@@ -1,0 +1,129 @@
+Date: Sun 11 Jul 2021 01:13:50 PM EDT
+
+name=python-traitsui
+version=7.2.1
+release=3
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 7.0.0 to version 7.2.1
+
+----------------------------------------------------------------
+
+Date: Mon 12 Jul 2021 03:37:37 PM EDT
+
+version=7.2.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jul 2021 07:01:17 AM EDT
+
+version=7.2.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Jul 14 15:20:06 EDT 2021
+
+version=7.2.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu Jul 15 15:23:48 EDT 2021
+
+version=7.2.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Jul 16 15:19:56 EDT 2021
+
+version=7.2.1
+release=3
+
+Synopsis:
+Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Thu 10 Mar 2022 11:41:17 AM EST
+
+Version=7.3.0
+Release=3
+
+Synopsis:
+Upgraded from version 7.2.1 to version 7.3.0
+
+----------------------------------------------------------------
+
+Date: Tue 15 Mar 2022 05:20:10 AM EDT
+
+Version=7.3.1
+Release=3
+
+Synopsis:
+Upgraded from version 7.3.0 to version 7.3.1
+
+----------------------------------------------------------------
+
+Date: Wed 29 Jun 2022 09:42:14 PM EDT
+
+Version=7.4.0
+Release=3
+
+Synopsis:
+Upgraded from version 7.3.1 to version 7.4.0
+
+----------------------------------------------------------------
+
+Date: Mon 03 Oct 2022 07:12:58 PM EDT
+
+Version=7.4.1
+Release=3
+
+Synopsis:
+Upgraded from version 7.4.0 to version 7.4.1
+
+----------------------------------------------------------------
+
+Date: Sat 05 Nov 2022 03:56:36 PM EDT
+
+Version=7.4.2
+Release=3
+
+Synopsis:
+Upgraded from version 7.4.1 to version 7.4.2
+
+----------------------------------------------------------------
+
+Date: Fri 13 Jan 2023 11:44:09 PM EST
+
+Version=7.4.3
+Release=3
+
+Synopsis:
+Upgraded from version 7.4.2 to version 7.4.3
+
+----------------------------------------------------------------
+
+Date: Tue 23 May 2023 08:25:59 AM EDT
+
+Version=8.0.0
+Release=3
+
+Synopsis:
+Upgraded from version 7.4.3 to version 8.0.0

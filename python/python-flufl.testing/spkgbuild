@@ -1,0 +1,15 @@
+# description : Random collection of testing helpers
+# depends : python
+
+name=python-flufl.testing
+version=0.8
+release=3
+
+source="https://files.pythonhosted.org/packages/source/f/flufl.testing/flufl.testing-0.8.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

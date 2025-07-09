@@ -1,0 +1,15 @@
+# description : Traits-capable user interfaces
+# depends : python-pyface
+
+name=python-traitsui
+version=8.0.0
+release=3
+
+source="https://github.com/enthought/traitsui/archive/refs/tags/r$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

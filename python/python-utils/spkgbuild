@@ -1,0 +1,15 @@
+# description : A module with some convenient utilities not included with the standard Python install
+# depends : python-six
+
+name=python-utils
+version=2.6.3
+release=1
+
+source="https://pypi.org/packages/source/p/python-utils/python-utils-2.6.3.tar.gz"
+options="!checksum"
+
+build() {
+   cd ${name#python-}-$version
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

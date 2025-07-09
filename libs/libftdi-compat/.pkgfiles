@@ -1,0 +1,18 @@
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/libftdi-config
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/ftdi.h
+-rw-r--r-- root/root    usr/include/ftdi.hpp
+drwxr-xr-x root/root    usr/lib/
+-rw-r--r-- root/root    usr/lib/libftdi.a
+lrwxrwxrwx root/root    usr/lib/libftdi.so -> libftdi.so.1.20.0
+lrwxrwxrwx root/root    usr/lib/libftdi.so.1 -> libftdi.so.1.20.0
+-rwxr-xr-x root/root    usr/lib/libftdi.so.1.20.0
+-rw-r--r-- root/root    usr/lib/libftdipp.a
+lrwxrwxrwx root/root    usr/lib/libftdipp.so -> libftdipp.so.1.20.0
+lrwxrwxrwx root/root    usr/lib/libftdipp.so.1 -> libftdipp.so.1.20.0
+-rwxr-xr-x root/root    usr/lib/libftdipp.so.1.20.0
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/libftdi.pc
+-rw-r--r-- root/root    usr/lib/pkgconfig/libftdipp.pc

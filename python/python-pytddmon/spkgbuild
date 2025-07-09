@@ -1,0 +1,15 @@
+# description : Continuous unit testing in Python
+# depends : python
+
+name=python-pytddmon
+version=1.0.8
+release=7
+
+source="https://github.com/objarni/pytddmon/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

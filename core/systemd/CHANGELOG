@@ -1,0 +1,248 @@
+Date: Mon 05 Apr 2021 10:04:26 PM EDT
+
+name=systemd
+version=247
+release=1
+
+Synopsis:
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Thu 06 May 2021 10:26:19 AM EDT
+
+version=248.1
+release=1
+
+Synopsis:
+Upgraded from version 248 to version 248.1
+
+----------------------------------------------------------------
+
+Date: Fri May  7 20:00:53 EDT 2021
+
+version=248.2
+release=1
+
+Synopsis:
+Upgraded from version 248.1 to version 248.2
+
+----------------------------------------------------------------
+
+Date: Sat May 15 20:00:37 EDT 2021
+
+version=248.3
+release=1
+
+Synopsis:
+Upgraded from version 248.2 to version 248.3
+
+----------------------------------------------------------------
+
+Date: Wed Jul  7 20:03:30 EDT 2021
+
+version=249
+release=1
+
+Synopsis:
+Upgraded from version 248.3 to version 249
+
+----------------------------------------------------------------
+
+Date: Wed Jul 21 15:16:19 EDT 2021
+
+version=249.1
+release=1
+
+Synopsis:
+Upgraded from version 249 to version 249.1
+
+----------------------------------------------------------------
+
+Date: Sat Jul 24 15:14:02 EDT 2021
+
+version=249.2
+release=1
+
+Synopsis:
+Upgraded from version 249.1 to version 249.2
+
+----------------------------------------------------------------
+
+Date: Sat Aug  7 15:12:40 EDT 2021
+
+version=249.3
+release=1
+
+Synopsis:
+Upgraded from version 249.2 to version 249.3
+
+----------------------------------------------------------------
+
+Date: Mon Aug 30 15:15:23 EDT 2021
+
+version=249.4
+release=1
+
+Synopsis:
+Upgraded from version 249.3 to version 249.4
+
+----------------------------------------------------------------
+
+Date: Sat 14 May 2022 03:45:52 PM EDT
+
+Version=250.5
+Release=1
+
+Synopsis:
+Upgraded from version 249.4 to version 250.5
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jul 2024 10:21:52 AM EDT
+
+Version=256.1
+Release=1
+
+Synopsis:
+Upgraded from version 250.5 to version 256.1
+
+----------------------------------------------------------------
+
+Date: Wed 17 Jul 2024 11:45:25 AM EDT
+
+Version=256.2
+Release=1
+
+Synopsis:
+Upgraded from version 256.1 to version 256.2
+
+----------------------------------------------------------------
+
+Date: Thu 25 Jul 2024 07:21:48 AM EDT
+
+Version=256.4
+Release=1
+
+Synopsis:
+Upgraded from version 256.2 to version 256.4
+
+----------------------------------------------------------------
+
+Date: Tue 20 Aug 2024 12:22:54 PM EDT
+
+Version=256.5
+Release=1
+
+Synopsis:
+Upgraded from version 256.4 to version 256.5
+
+----------------------------------------------------------------
+
+Date: Mon 16 Sep 2024 10:46:15 AM EDT
+
+Version=256.6
+Release=1
+
+Synopsis:
+Upgraded from version 256.5 to version 256.6
+
+----------------------------------------------------------------
+
+Date: Wed 09 Oct 2024 03:20:32 PM EDT
+
+Version=256.7
+Release=1
+
+Synopsis:
+Upgraded from version 256.6 to version 256.7
+
+----------------------------------------------------------------
+
+Date: Sun 17 Nov 2024 12:02:42 PM EST
+
+Version=256.8
+Release=1
+
+Synopsis:
+Upgraded from version 256.7 to version 256.8
+
+----------------------------------------------------------------
+
+Date: Sun 01 Dec 2024 12:27:59 PM EST
+
+Version=256.9
+Release=1
+
+Synopsis:
+Upgraded from version 256.8 to version 256.9
+
+----------------------------------------------------------------
+
+Date: Mon 23 Dec 2024 07:20:44 AM EST
+
+Version=257.1
+Release=1
+
+Synopsis:
+Upgraded from version 256.9 to version 257.1
+
+----------------------------------------------------------------
+
+Date: Thu 09 Jan 2025 10:31:50 AM EST
+
+Version=257.2
+Release=1
+
+Synopsis:
+Upgraded from version 257.1 to version 257.2
+
+----------------------------------------------------------------
+
+Date: Sat 15 Feb 2025 05:45:49 PM EST
+
+Version=257.3
+Release=1
+
+Synopsis:
+Upgraded from version 257.2 to version 257.3
+
+----------------------------------------------------------------
+
+Date: Sun 09 Mar 2025 09:49:52 AM EDT
+
+Version=257.4
+Release=1
+
+Synopsis:
+Upgraded from version 257.3 to version 257.4
+
+----------------------------------------------------------------
+
+Date: Tue 08 Apr 2025 10:08:54 AM EDT
+
+Version=257.5
+Release=1
+
+Synopsis:
+Upgraded from version 257.4 to version 257.5
+
+----------------------------------------------------------------
+
+Date: Sun 01 Jun 2025 12:46:26 PM EDT
+
+Version=257.6
+Release=1
+
+Synopsis:
+Upgraded from version 257.5 to version 257.6
+
+----------------------------------------------------------------
+
+Date: Thu 26 Jun 2025 10:25:19 AM EDT
+
+Version=257.7
+Release=1
+
+Synopsis:
+Upgraded from version 257.6 to version 257.7

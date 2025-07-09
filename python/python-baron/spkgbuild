@@ -1,0 +1,15 @@
+# description : Full Syntax Tree for python to make writing refactoring code a realist task
+# depends : python-rply
+
+name=python-baron
+version=0.10.1
+release=5
+
+source="https://github.com/PyCQA/baron/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }

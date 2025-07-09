@@ -1,0 +1,15 @@
+# description : Zope Security Framework
+# depends : python-setuptools python-zope-component python-zope-i18nmessageid
+
+name=python-zope-security
+version=7.3
+release=3
+
+source="https://github.com/zopefoundation/zope.security/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+   cd *
+   python setup.py build
+   python setup.py install --optimize=1 --root=$PKG
+ }
