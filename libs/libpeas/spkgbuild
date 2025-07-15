@@ -1,8 +1,8 @@
 # description	: GObject based plugins engine
-# depends	: gobject-introspection gtk3  python-gobject3 meson
+# depends	: glib gtk3  python-gobject3 meson
 
 name=libpeas
-version=1.28.0
+version=1.36.0
 release=1
 source="http://ftp.gnome.org/pub/gnome/sources/libpeas/${version%.*}/$name-$version.tar.xz"
 

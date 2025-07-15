@@ -1,5 +1,5 @@
 # description : Provides a standard for creating app stores across distributions
-# depends : gtk-doc yaml libxml2 stemmer glib lmdb libsoup qt5
+# depends : gtk-doc yaml libxml2  glib lmdb libsoup qt6
 
 name=appstream-qt
 version=0.15.3

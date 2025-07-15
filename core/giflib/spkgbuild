@@ -3,10 +3,15 @@
 name=giflib
 version=5.2.2
 release=1
-source="https://downloads.sourceforge.net/giflib/$name-$version.tar.gz"
+source="https://downloads.sourceforge.net/giflib/$name-$version.tar.gz
+	https://www.linuxfromscratch.org/patches/blfs/svn/giflib-$version-upstream_fixes-1.patch
+	https://www.linuxfromscratch.org/patches/blfs/svn/giflib-$version-security_fixes-1.patch"
 
 build() {
 	cd $name-$version
+	patch -Np1 -i $SRC/giflib-5.2.2-upstream_fixes-1.patch
+	patch -Np1 -i $SRC/giflib-5.2.2-security_fixes-1.patch
+	cp pic/gifgrid.gif doc/giflib-logo.gif
 	make
 	make PREFIX=$PKG/usr install
 	rm $PKG/usr/lib/libgif.a

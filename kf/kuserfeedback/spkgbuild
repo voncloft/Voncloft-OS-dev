@@ -1,0 +1,14 @@
+# description : Core components for the kde desktop
+name=kuserfeedback
+version=6.13.0
+release=1
+
+source="https://download.kde.org/stable/frameworks/6.13/kuserfeedback-$version.tar.xz"
+options="!checksum"
+
+build() {
+   cd $name-$version
+   kf-package-installer
+   cd build
+   make DESTDIR=$PKG install
+}

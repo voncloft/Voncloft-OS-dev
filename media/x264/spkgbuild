@@ -2,13 +2,12 @@
 # depends	: nasm
 
 name=x264
-version=20191217.2245
-verzion=$(echo $version | tr '.' '-')
+version=20250212
 release=1
-source="http://download.videolan.org/pub/videolan/$name/snapshots/$name-snapshot-${verzion}-stable.tar.bz2"
+source="https://anduin.linuxfromscratch.org/BLFS/x264/x264-$version.tar.xz"
 
 build() {
-	cd $name-snapshot-${verzion}-stable
+	cd *
 
 	./configure --prefix=/usr \
 	            --enable-shared \

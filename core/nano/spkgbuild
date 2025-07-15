@@ -4,9 +4,7 @@
 name=nano
 version=8.5
 release=1
-backup="etc/nanorc"
-source="https://www.nano-editor.org/dist/v${version%%.*}/$name-$version.tar.xz
-	.nanorc"
+source="https://www.nano-editor.org/dist/v${version%%.*}/$name-$version.tar.xz"
 options="!checksum"
 build() {
 	cd $name-$version

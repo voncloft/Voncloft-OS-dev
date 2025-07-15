@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kdbusaddons ki18n kirigami2 kwindowsystem libsodium qt5-svg
+# depends : kde-deps kdbusaddons ki18n kirigami2 kwindowsystem libsodium qt6-svg
 
 name=keysmith
 version=25.04.3

@@ -2,7 +2,7 @@
 # depends : xz zlib
 
 name=libunwind
-version=1.6.2
+version=1.8.2
 release=1
 
 source="https://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz"

@@ -2,7 +2,7 @@
 # depends	: zlib readline ncurses
 
 name=sqlite
-version=3500200
+version=3.50.2
 release=1
 source="https://sqlite.org/2025/sqlite-autoconf-$version.tar.gz"
 options="!checksum"

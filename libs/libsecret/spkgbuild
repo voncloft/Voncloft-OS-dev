@@ -1,8 +1,8 @@
 # description	: GObject based library for accessing the Secret Service API
-# depends	: glib libgcrypt gobject-introspection vala
+# depends	: glib libgcrypt glib vala
 
 name=libsecret
-version=0.20.3
+version=0.21.7
 release=1
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
 

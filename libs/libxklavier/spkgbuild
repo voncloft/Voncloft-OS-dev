@@ -1,5 +1,5 @@
 # description	: Utility library for X keyboard
-# depends	: glib iso-codes libxml2 libxi libxkbfile gobject-introspection libxfixes
+# depends	: glib iso-codes libxml2 libxi libxkbfile glib libxfixes
 
 name=libxklavier
 version=5.4

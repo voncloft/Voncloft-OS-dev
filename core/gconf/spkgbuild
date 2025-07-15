@@ -1,5 +1,5 @@
 # description	: Configuration database system used by many GNOME applications
-# depends	: dbus-glib libxml2 gtk3 polkit gobject-introspection
+# depends	: dbus-glib libxml2 gtk3 polkit glib
 
 name=gconf
 version=3.2.6

@@ -1,0 +1,81 @@
+kpeople-6.13.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KF6/
+drwxr-xr-x root/root    usr/include/KF6/KPeople/
+drwxr-xr-x root/root    usr/include/KF6/KPeople/kpeople/
+drwxr-xr-x root/root    usr/include/KF6/KPeople/KPeople/
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/Actions
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/actions.h
+drwxr-xr-x root/root    usr/include/KF6/KPeople/kpeoplebackend/
+drwxr-xr-x root/root    usr/include/KF6/KPeople/KPeopleBackend/
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeopleBackend/AbstractContact
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeoplebackend/abstractcontact.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeopleBackend/AbstractEditableContact
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeoplebackend/abstracteditablecontact.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeopleBackend/AbstractPersonAction
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeoplebackend/abstractpersonaction.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeopleBackend/AllContactsMonitor
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeoplebackend/allcontactsmonitor.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeopleBackend/BasePersonsDataSource
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeoplebackend/basepersonsdatasource.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeopleBackend/ContactMonitor
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeoplebackend/contactmonitor.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeoplebackend/kpeoplebackend_export.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/Global
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/global.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/kpeople_export.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/PersonData
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/persondata.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/PersonPluginManager
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/personpluginmanager.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/PersonsModel
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/personsmodel.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/PersonsSortFilterProxyModel
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/personssortfilterproxymodel.h
+drwxr-xr-x root/root    usr/include/KF6/KPeople/kpeopleprivate/
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeopleprivate/personmanager_p.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople_version.h
+drwxr-xr-x root/root    usr/include/KF6/KPeople/kpeople/widgets/
+drwxr-xr-x root/root    usr/include/KF6/KPeople/KPeople/Widgets/
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/Widgets/AbstractFieldWidgetFactory
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/widgets/abstractfieldwidgetfactory.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/widgets/kpeoplewidgets_export.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/Widgets/MergeDialog
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/widgets/mergedialog.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/Widgets/PersonDetailsDialog
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/widgets/persondetailsdialog.h
+-rw-r--r-- root/root    usr/include/KF6/KPeople/KPeople/Widgets/PersonDetailsView
+-rw-r--r-- root/root    usr/include/KF6/KPeople/kpeople/widgets/persondetailsview.h
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/KF6People/
+-rw-r--r-- root/root    usr/lib64/cmake/KF6People/KF6PeopleConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6People/KF6PeopleConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6People/KPeopleTargets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6People/KPeopleTargets-release.cmake
+-rwxr-xr-x root/root    usr/lib64/libKF6PeopleBackend.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6PeopleBackend.so.6 -> libKF6PeopleBackend.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6PeopleBackend.so -> libKF6PeopleBackend.so.6
+-rwxr-xr-x root/root    usr/lib64/libKF6People.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6People.so.6 -> libKF6People.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6People.so -> libKF6People.so.6
+-rwxr-xr-x root/root    usr/lib64/libKF6PeopleWidgets.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6PeopleWidgets.so.6 -> libKF6PeopleWidgets.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6PeopleWidgets.so -> libKF6PeopleWidgets.so.6
+drwxr-xr-x root/root    usr/plugins/
+drwxr-xr-x root/root    usr/plugins/kpeople/
+drwxr-xr-x root/root    usr/plugins/kpeople/datasource/
+-rwxr-xr-x root/root    usr/plugins/kpeople/datasource/KPeopleVCard.so
+drwxr-xr-x root/root    usr/qml/
+drwxr-xr-x root/root    usr/qml/org/
+drwxr-xr-x root/root    usr/qml/org/kde/
+drwxr-xr-x root/root    usr/qml/org/kde/people/
+-rw-r--r-- root/root    usr/qml/org/kde/people/kde-qmlmodule.version
+-rw-r--r-- root/root    usr/qml/org/kde/people/KF6PeopleDeclarative.qmltypes
+-rwxr-xr-x root/root    usr/qml/org/kde/people/libKF6PeopleDeclarative.so
+-rw-r--r-- root/root    usr/qml/org/kde/people/qmldir
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/qlogging-categories6/
+-rw-r--r-- root/root    usr/share/qlogging-categories6/kpeople.categories
+-rw-r--r-- root/root    usr/share/qlogging-categories6/kpeople.renamecategories

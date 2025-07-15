@@ -2,7 +2,7 @@
 # depends : python-setuptools
 
 name=python-pygments
-version=2.10.0
+version=2.19.2
 release=1
 pyn=python-Pygments
 
@@ -10,7 +10,9 @@ source="https://pypi.org/packages/source/P/Pygments/Pygments-2.10.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${pyn#python-}-$version
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
+   cd *
+   pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+   echo $PKG
+   pip3 install --no-index --find-links dist --no-user Pygments --root=$PKG
+   echo $PKG
  }

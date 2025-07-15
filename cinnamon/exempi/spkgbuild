@@ -2,7 +2,7 @@
 # depends : boost valgrind
 
 name=exempi
-version=2.5.2
+version=2.6.6
 release=1
 
 source="git+https://anongit.freedesktop.org/git/exempi#commit="

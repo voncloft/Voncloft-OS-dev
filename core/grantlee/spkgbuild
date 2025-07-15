@@ -1,5 +1,5 @@
 # description	: Free software libraries written using the Qt framework
-# depends	: qt5 cmake
+# depends	: qt6 cmake
 
 name=grantlee
 version=5.3.1

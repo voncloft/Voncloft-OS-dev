@@ -1,16 +1,23 @@
-# description : Core components for the kde desktop
-# depends : kde-deps
+# description   : Gwenview is a fast and easy-to-use image viewer for KDE
+# depends       : exiv2 kimageannotator  lcms2 libkdcraw
 
 name=gwenview
-version=25.04.3
+version=25.04.0    
 release=1
+source="https://download.kde.org/stable/release-service/25.04.0/src/gwenview-25.04.0.tar.xz"
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+        cd $name-$version
+        SKIP_OPTIONAL='CFitsio'
+        mkdir build 
+cd    build 
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+-D CMAKE_BUILD_TYPE=Release         \
+-D BUILD_TESTING=OFF                \
+      -D FORCE_NOT_REQUIRED_DEPENDENCIES="$SKIP_OPTIONAL" \
+-W no-dev .. 
+make
+make DESTDIR=$PKG install
 }

@@ -1,5 +1,5 @@
 # description	: Dynamic, any to any, pixel format translation library
-# depends	: gobject-introspection meson lcms2 vala
+# depends	: glib meson lcms2 vala
 
 name=babl
 version=0.1.114

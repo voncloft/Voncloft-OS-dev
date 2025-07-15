@@ -1,0 +1,15 @@
+# description : boot script for ntp
+# depends :
+
+name=sddm-boot
+version=12.3
+release=1
+
+source="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20250225.tar.xz"
+options="!checksum"
+
+build()
+{
+	cd *
+	make DESTDIR=$PKG install-sddm
+}

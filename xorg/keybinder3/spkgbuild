@@ -1,5 +1,5 @@
 # description	: Utility library registering global X keyboard shortcuts
-# depends	: gtk3 gobject-introspection
+# depends	: gtk3 glib
 
 name=keybinder3
 version=0.3.2

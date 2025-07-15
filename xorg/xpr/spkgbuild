@@ -4,7 +4,7 @@
 name=xpr
 version=1.2.0
 release=1
-source="http://ftp.x.org/pub/individual/app/xpr-$version.tar.bz2"
+source="http://ftp.x.org/pub/individual/app/xpr-$version.tar.xz"
 
 build() {
 	cd $name-$version

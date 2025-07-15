@@ -1,8 +1,7 @@
 # description : Core components for the kde desktop
-# depends : kde-deps systemsettings kdoctools
 
 name=kinfocenter
-version=6.4.2
+version=6.3.4
 release=1
 
 source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
@@ -10,7 +9,14 @@ options="!checksum"
 
 build() {
    cd $name-$version
-   plasma-package-installer
-   cd build
+   #plasma-package-installer
+   #cd build
+	mkdir build
+	cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr \
+         -DCMAKE_BUILD_TYPE=Release \
+         -DQT_FEATURE_vulkan=ON \
+         -DQT_FEATURE_opengl=desktop
+
    make DESTDIR=$PKG install
 }

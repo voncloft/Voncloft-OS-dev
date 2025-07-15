@@ -4,10 +4,12 @@
 name=qrencode
 version=4.1.1
 release=1
-source="https://fukuchi.org/works/$name/$name-$version.tar.bz2"
+source="https://github.com/fukuchi/libqrencode/archive/refs/tags/v$version.tar.gz"
 
 build() {
-	cd $name-$version
+	cd *
+	autoreconf -ifv
+	autoconf
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install

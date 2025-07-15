@@ -1,0 +1,15 @@
+# description : hatch plugin
+# depends : hatchling setuptools_scm
+
+name=hatchling
+version=0.4.0
+release=1
+
+source="https://files.pythonhosted.org/packages/source/h/hatch-vcs/hatch_vcs-$version.tar.gz"
+
+build()
+{
+	cd *
+	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+	pip3 install --no-index --find-links dist --no-user hatch_vcs --root=$PKG
+}

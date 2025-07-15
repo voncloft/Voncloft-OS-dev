@@ -1,0 +1,20 @@
+# description : hardware temp monitor
+# depends : which
+
+name=lm-sensors
+version=3.6.2
+release=1
+
+source="https://github.com/hramrach/lm-sensors/archive/V3-6-2/lm-sensors-3-6-2.tar.gz"
+
+build()
+{
+	cd *
+	make PREFIX=/usr        \
+     BUILD_STATIC_LIB=0 \
+     MANDIR=/usr/share/man
+
+     make DESTDIR=$PKG PREFIX=/usr        \
+     BUILD_STATIC_LIB=0 \
+     MANDIR=/usr/share/man install
+}

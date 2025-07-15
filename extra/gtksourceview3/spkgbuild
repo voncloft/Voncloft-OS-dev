@@ -1,5 +1,5 @@
 # description	: Libraries used for extending the GTK+ text functions to include syntax highlighting
-# depends	: gtk3 gobject-introspection
+# depends	: gtk3 glib
 # optdepends	: vala valgrind gtk-doc itstool fop glade
 
 name=gtksourceview3

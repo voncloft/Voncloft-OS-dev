@@ -1,0 +1,24 @@
+# description : python bindings to the gobject class from glib
+# depends : glib pycairo
+
+name=pygobject3
+version=3.52.3
+release=1
+
+source="https://download.gnome.org/sources/pygobject/3.52/pygobject-$version.tar.gz"
+options="!checksum"
+
+build()
+{
+	cd *
+	mv -v tests/test_gdbus.py{,.nouse}         
+	mv -v tests/test_overrides_gtk.py{,.nouse}
+
+	mkdir build &&
+	cd    build &&
+
+	meson setup --prefix=/usr --buildtype=release .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}

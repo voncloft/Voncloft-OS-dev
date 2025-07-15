@@ -1,5 +1,5 @@
 # description	: Basic utility library for the Xfce desktop environment
-# depends	: glib gobject-introspection intltool
+# depends	: glib glib intltool
 
 name=libxfce4util
 version=4.20.1

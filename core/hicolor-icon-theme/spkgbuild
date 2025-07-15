@@ -7,8 +7,12 @@ source="http://icon-theme.freedesktop.org/releases/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version
+	mkdir build
+	cd build
+	
+	meson setup --prefix=/usr --buildtype=release ..
 
-  	./configure --prefix=/usr
-	make DESTDIR=$PKG install
+	ninja
+	DESTDIR=$PKG ninja install
 }
 

@@ -2,7 +2,7 @@
 # depends	: alsa-lib sdl2 glib python coreutils pixman libx11
 
 name=qemu
-version=7.2.0
+version=10.0.2
 release=1
 source="http://download.qemu-project.org/$name-$version.tar.bz2"
 

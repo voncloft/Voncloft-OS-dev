@@ -19,4 +19,18 @@ build() {
     --disable-failure-tokens
   make
   make DESTDIR=$PKG install
+
+make distclean
+CC="gcc -m32"
+CCX="g++ -m32"
+	./configure --prefix=/usr \
+	--libdir=/usr/lib32 \
+	--disable-static \
+    	--enable-hashes=strong,glibc \
+    	--enable-obsolete-api=no \
+    	--disable-failure-tokens
+
+        mkdir -pv $PKG/usr/lib32
+        make DESTDIR=$PWD/DESTDIR install
+        cp -Rv DESTDIR/usr/lib32/* /usr/lib32
 }

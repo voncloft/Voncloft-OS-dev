@@ -1,11 +1,11 @@
 # description : Snowball stemming library collection for Python
 # depends : python
 
-name=python-snowballstemmer
+name=python-snowball
 version=2.2.0
 release=1
 
-source="https://pypi.python.org/packages/source/s/snowballstemmer/snowballstemmer-2.2.0.tar.gz"
+source="https://pypi.python.org/packages/source/s/snowball/snowball-2.2.0.tar.gz"
 options="!checksum"
 
 build() {

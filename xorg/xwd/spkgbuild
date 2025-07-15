@@ -4,7 +4,7 @@
 name=xwd
 version=1.0.9
 release=1
-source="http://ftp.x.org/pub/individual/app/xwd-$version.tar.bz2"
+source="http://ftp.x.org/pub/individual/app/xwd-$version.tar.xz"
 
 build() {
 	cd $name-$version

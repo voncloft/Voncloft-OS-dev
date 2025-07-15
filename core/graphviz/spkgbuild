@@ -1,16 +1,22 @@
 # description	: Graph visualization software
-# depends	: pango cairo fontconfig gtk2 poppler-glib
+# depends	: pango cairo xorg-libraries fontconfig libpng gegl
 
 name=graphviz
-version=2.44.1
+version=13.1.0
 release=1
-source="https://www2.graphviz.org/Packages/stable/portable_source/graphviz-$version.tar.gz"
+source="https://gitlab.com/graphviz/graphviz/-/archive/$version/graphviz-$version.tar.bz2"
 
 build() {
 	cd $name-$version
-	
-	export LIBPOSTFIX=/
-	./configure --prefix=/usr
+	mkdir build &&
+	cd    build &&
+
+	cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      ..                           &&
+
+	sed -i '/GZIP/s/:.*$/=/' CMakeCache.txt &&
+
 	make
 	make DESTDIR=$PKG install
 }

@@ -1,5 +1,4 @@
 # description : linux kernel for desktop
-# depends : kernel-prereq linux-firmware
 
 name=linux-desktop
 version=6.15.4
@@ -19,7 +18,9 @@ build()
 	make INSTALL_MOD_PATH=$PKG modules_install
 	mkdir $PKG/boot
 	cp  arch/x86/boot/bzImage $PKG/boot/vmlinuz-$version
-
+	cp System.map $PGK/boot/System.map
+	cp .config $PKG/boot/config-$version
+	make INSTALL_PATH=$PKG install
 	#periods="${version//[^.]}"
 
 	#if [[ "${#periods}" -eq 1 ]];then
@@ -58,12 +59,15 @@ build()
 	#for i in $(ls tools/objtool); do
 	#	[ "$i" = "objtool" ] || rm -fr tools/objtool/$i
 	#done
-	rm $PKG/lib/modules/$version/build \
-	   $PKG/lib/modules/$version/source
-	mv $SRC/linux-$version $PKG/lib/modules/$version/build
-	ln -sv build $PKG/lib/modules/$version/source
+	#rm $PKG/lib/modules/$version/build \
+	#   $PKG/lib/modules/$version/source
+	#mv $SRC/linux-$version $PKG/lib/modules/$version/build
+	#ln -sv build $PKG/lib/modules/$version/source
   	#echo "Adding symlink..."
   	#mkdir -p "$PKG/usr/src/linux-$version"
 	#ln -sr lib/modules/$version/build $PKG/usr/src/linux-$version/build
-	find -L $PKG/lib/modules/$version/build -type l -exec rm -f "{}" \;
+	#find -L $PKG/lib/modules/$version/build -type l -exec rm -f "{}" \;
+
+	#mkdir -pv $PKG/usr/src/linux-$version
+	#cp 
 }

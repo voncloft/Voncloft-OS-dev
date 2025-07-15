@@ -2,9 +2,9 @@
 # depends	: freetype2
 
 name=fontconfig
-version=2.16.0
+version=2.17.1
 release=3
-source="https://www.freedesktop.org/software/fontconfig/release/$name-$version.tar.xz"
+source="https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/$version/fontconfig-$version.tar.xz"
 
 build() {
 	cd $name-$version
@@ -16,4 +16,14 @@ build() {
             --docdir=/usr/share/doc/fontconfig-$version
 	make
 	make DESTDIR=$PKG install
+
+	make distclean
+        CC="gcc -m32 CCX=g++ -m32" ./configure \
+    --prefix=/usr                 \
+    --libdir=/usr/lib32           \
+    make
+    mkdir -pv $PKG/usr/lib32
+    make DESTDIR=$PWD/DESTDIR install
+    cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+
 }

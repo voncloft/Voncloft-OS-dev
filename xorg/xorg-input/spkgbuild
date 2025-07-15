@@ -1,0 +1,16 @@
+# description : input driver for xorg
+# depends : libinput xorg-server
+
+name=xorg-input
+version=1.5.0
+release=1
+
+source="https://www.x.org/pub/individual/driver/xf86-input-libinput-$version.tar.xz"
+
+build()
+{
+	cd *
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+	make
+	make DESTDIR=$PKG install
+}

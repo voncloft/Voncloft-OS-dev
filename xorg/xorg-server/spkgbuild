@@ -1,26 +1,30 @@
-# description	: The core of the X Window system
-# depends	: nettle libxext libx11 libglvnd pixman libxfont2 libxau libxshmfence libxdmcp wayland libdrm libepoxy mesa dbus eudev libpciaccess libxkbfile xkeyboard-config
+# description   : The Xorg Server is the core of the X Window system
+# depends       : libxcvt pixman xorg-fonts xkeyboard-config dbus elogind libepoxy libtirpc
 
 name=xorg-server
 version=21.1.18
 release=1
-source="http://ftp.x.org/pub/individual/xserver/$name-$version.tar.bz2"
+source=" https://www.x.org/pub/individual/xserver/xorg-server-$version.tar.xz"
 options="!checksum"
 
 build() {
-	cd $name-$version
-
-	./configure \
-	    --prefix=/usr \
-	    --sysconfdir=/etc \
-	    --localstatedir=/var \
-	    --libexecdir=/usr/lib/$name \
-	    --disable-static \
-	    --enable-glamor \
-	    --enable-suid-wrapper \
-	    --with-xkb-output=/var/lib/xkb
-	make
-	make DESTDIR=$PKG install
-
-	mkdir -pv $PKG/etc/X11/xorg.conf.d
+        cd $name-$version
+mkdir build 
+cd    build 
+meson setup ..               \
+--prefix=$XORG_PREFIX  \
+--localstatedir=/var   \
+-D glamor=true         \
+-D systemd_logind=true \
+-D xkb_output_dir=/var/lib/xkb 
+ninja
+DESTDIR=$PKG ninja install 
+mkdir -pv $PKG/etc/X11/xorg.conf.d 
+mkdir -pv $PKG/tmp
+mkdir -pv $PKG/etc/sysconfig
+install -v -d -m1777 $PKG/tmp/.{ICE,X11}-unix 
+cat >> $PKG/etc/sysconfig/createfiles << "EOF"
+/tmp/.ICE-unix dir 1777 root root
+/tmp/.X11-unix dir 1777 root root
+EOF
 }

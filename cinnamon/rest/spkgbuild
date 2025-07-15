@@ -1,8 +1,8 @@
 # description : helper library for restful services
-# depends : glib libsoup libxml2 gobject-introspection
+# depends : glib libsoup libxml2 glib
 
 name=rest
-version=0.8.1
+version=0.9.1
 release=1
 
 source="git+https://gitlab.gnome.org/GNOME/librest.git#commit="

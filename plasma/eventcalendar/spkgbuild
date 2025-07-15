@@ -1,5 +1,4 @@
 # description : extended calendar plasmoid much better than default
-# depends : plasma-workspace
 
 name=eventcalendar
 version=76

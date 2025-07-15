@@ -2,7 +2,7 @@
 # depends : nano linux-pam
 
 name=fcron
-version=3.3.0
+version=3.4.0
 release=1
 
 backup="var/spool/fcron/systab.orig"

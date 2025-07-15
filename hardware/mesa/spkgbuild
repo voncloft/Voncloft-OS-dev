@@ -10,16 +10,17 @@ source="https://mesa.freedesktop.org/archive/$name-$version.tar.xz
 options="!checksum"
 build() {
 	cd $name-$version
-	patch -Np1 -i $SRC/mesa-add_xdemos-4.patch
-	
+	#patch -Np1 -i $SRC/mesa-add_xdemos-4.patch
+	export PATH=/opt/rust/bin:$PATH
 	mkdir build &&
 	cd    build &&
 meson setup ..                 \
-      --prefix=$XORG_PREFIX    \
-      --buildtype=release      \
+      --prefix=/usr    \
       -D platforms=x11,wayland \
       -D gallium-drivers=auto \
       -D vulkan-drivers=auto   \
+      -D egl=enabled \
+      -D glvnd=disabled \
       -D valgrind=disabled     \
       -D video-codecs=all      \
       -D libunwind=disabled      	

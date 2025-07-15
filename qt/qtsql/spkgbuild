@@ -1,5 +1,5 @@
 # description	: Cross-platform application framework that is widely used for developing application
-# depends : qt5 mariadb
+# depends : qt6 mariadb
 
 name=qtsql
 version=5.15.9

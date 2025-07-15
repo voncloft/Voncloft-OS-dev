@@ -1,6 +1,6 @@
 # description : cinnamon menu specifications
 # depends : glib
-# depends : gobject-introspection meson ninja
+# depends : glib meson ninja
 name=cinnamon-menus
 version=6.4.0
 release=1

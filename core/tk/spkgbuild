@@ -2,7 +2,7 @@
 # depends : libxft libxss tcl
 
 name=tk
-version=8.6.11.1
+version=8.6.16
 release=1
 verzion=8.6.11
 source="https://downloads.sourceforge.net/sourceforge/tcl/tk${version}-src.tar.gz"

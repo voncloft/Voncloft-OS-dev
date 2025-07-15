@@ -1,5 +1,5 @@
 # description	: Collection of GSettings schemas for settings shared by various components of a GNOME Desktop
-# depends	: glib gobject-introspection meson
+# depends	: glib glib meson
 
 name=gsettings-desktop-schemas
 version=3.38.0

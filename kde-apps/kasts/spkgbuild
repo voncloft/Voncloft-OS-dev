@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kconfig kcoreaddons ki18n kirigami-addons networkmanager-qt qt5-multimedia qt5-svg qtkeychain-qt5 syndication taglib threadweaver vlc
+# depends : kde-deps kconfig kcoreaddons ki18n kirigami-addons networkmanager-qt qt6-multimedia qt6-svg qtkeychain-qt6 syndication taglib threadweaver vlc
 
 name=kasts
 version=25.04.3

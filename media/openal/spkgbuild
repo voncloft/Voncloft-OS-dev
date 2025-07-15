@@ -10,8 +10,8 @@ options="!checksum"
 
 build() {
 	cd $name-soft-$version
-	mkdir build
-	cd build
+	mkdir builds
+	cd builds
 	cmake .. \
 	    -DCMAKE_INSTALL_PREFIX=/usr \
     	-DCMAKE_BUILD_TYPE=None \

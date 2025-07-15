@@ -1,0 +1,9 @@
+kf-depends-6.15.0-1
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/profile.d/
+-rw-r--r-- root/root    etc/profile.d/kf6.sh
+-rw-r--r-- root/root    etc/profile.d/qt6.sh
+drwxr-xr-x root/root    etc/sudoers.d/
+-rw-r--r-- root/root    etc/sudoers.d/kde
+-rw-r--r-- root/root    etc/sudoers.d/qt
+drwxr-xr-x root/root    usr/

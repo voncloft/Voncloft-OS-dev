@@ -1,5 +1,5 @@
 # description : OS abstraction functions
-# depends : gnutls libgcrypt openssl qt5
+# depends : gnutls libgcrypt openssl qt6
 
 name=gwenhywfar
 version=5.6.0
@@ -10,7 +10,7 @@ options="!checksum"
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr --sysconfdir=/etc --enable-system-certs --with-guis="gtk3 qt5"
+	./configure --prefix=/usr --sysconfdir=/etc --enable-system-certs --with-guis="gtk3 qt6"
 	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
 	make
 	make DESTDIR=$PKG install

@@ -1,5 +1,5 @@
 # description	: GTK+ greeter for LightDM
-# depends	: gtk3 lightdm exo gobject-introspection intltool
+# depends	: gtk3 lightdm exo glib intltool
 
 name=lightdm-gtk-greeter
 version=2.0.7

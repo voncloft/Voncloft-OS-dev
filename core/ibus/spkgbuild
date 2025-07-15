@@ -1,5 +1,5 @@
 # description : intelligent input bus 
-# depends : dconf iso-codes vala gobject-introspection gtk2 gtk3 libnotify
+# depends : dconf iso-codes vala glib gtk2 gtk3 libnotify
 
 name=ibus
 version=1.5.32

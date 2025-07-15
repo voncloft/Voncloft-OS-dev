@@ -1,0 +1,16 @@
+# description   : This package is a Qt-style wrapper for PulseAudio-17
+# depends       : kf-depends pulseaudio
+
+name=pulseaudio-qt
+version=1.7.0
+release=1
+source=" https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.7.0.tar.xz"
+options="!checksum"
+
+build() {
+   cd $name-$version
+   kf-package-installer
+   cd build
+   make DESTDIR=$PKG install
+
+}

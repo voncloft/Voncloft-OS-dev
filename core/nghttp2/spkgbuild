@@ -1,0 +1,19 @@
+# description : implementation of http/2 and header compression algorithm
+# depends libxml2
+
+name=nghttp2
+version=1.66.0
+release=1
+
+source="https://github.com/nghttp2/nghttp2/releases/download/v$version/nghttp2-$version.tar.xz"
+
+build()
+{
+	cd $name-$version
+	./configure --prefix=/usr     \
+            --disable-static  \
+            --enable-lib-only \
+            --docdir=/usr/share/doc/nghttp2-$version
+       make
+       make DESTDIR=$PKG install
+}

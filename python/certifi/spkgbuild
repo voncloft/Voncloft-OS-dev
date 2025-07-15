@@ -1,0 +1,15 @@
+# description : provides Mozilla’s carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates 
+# depends : 
+
+name=certifi
+version=2025.1.31
+release=1
+
+source="https://files.pythonhosted.org/packages/source/c/certifi/certifi-$version.tar.gz"
+
+build()
+{
+	cd *
+	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+	pip3 install --no-index --find-links dist --no-user $name --root=$PKG
+}

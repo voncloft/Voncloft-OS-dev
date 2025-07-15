@@ -1,26 +1,27 @@
 # description	: Libraries used for creating graphical user interfaces for applications
-# depends	: adwaita-icon-theme at-spi2-atk gdk-pixbuf libepoxy pango wayland wayland-protocols libxkbcommon gobject-introspection libxcomposite libxcursor libxinerama
+# depends	: at-spi2-core gdk-pixbuf libepoxy pango adwaita-icon-theme docbook-xsl-nons hicolor-icon-theme
+# depends	: iso-codes libxkbcommon libxslt wayland wayland-protocols
 
 name=gtk3
-version=3.24.30+62+g8d04980f38
+version=3.24.49
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/gtk+/${version%.*}/gtk+-$version.tar.xz"
+source="https://download.gnome.org/sources/gtk/3.24/gtk-$version.tar.xz
+	https://www.linuxfromscratch.org/patches/blfs/svn/gtk-$version-upstream_fix-1.patch"
 
 build() {
-	cd gtk+-$version
+	cd gtk-$version
+	patch -Np1 -i $SRC/gtk-3.24.49-upstream_fix-1.patch
 
-	./configure --prefix=/usr             \
-	            --sysconfdir=/etc         \
-	            --enable-broadway-backend \
-	            --enable-x11-backend      \
-	            --enable-wayland-backend
-	make
-	make DESTDIR=$PKG install
+	mkdir build
+	cd build
 
-	cat > $PKG/etc/gtk-3.0/settings.ini << "EOF"
-[Settings]
-gtk-icon-theme-name = Adwaita
-gtk-theme-name = Adwaita
-gtk-font-name = Cantarell 10
-EOF
+	meson setup ..            \
+      --prefix=/usr       \
+      --buildtype=release \
+      -D man=true         \
+      -D broadway_backend=true
+
+      ninja
+      DESTDIR=$PKG ninja install
+      
 }

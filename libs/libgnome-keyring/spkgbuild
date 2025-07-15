@@ -1,5 +1,5 @@
 # description	: GNOME keyring client library
-# depends	: glib dbus libgcrypt libgpg-error vala gobject-introspection
+# depends	: glib dbus libgcrypt libgpg-error vala glib
 
 name=libgnome-keyring
 version=3.12.0

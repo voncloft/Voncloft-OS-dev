@@ -1,21 +1,25 @@
 # description	: C library supporting GObject introspection for manipulation of block devices
-# depends	: libbytesize lvm2 volume_key nss cryptsetup parted gobject-introspection python yaml
+# depends	: glib cryptsetup keyutils libatasmart libbytesize libnvme lvm2
 
 name=libblockdev
 version=3.3.1
 release=1
-source="https://github.com/storaged-project/libblockdev/releases/download/$version-1/$name-$version.tar.gz"
+source="https://github.com/storaged-project/libblockdev/releases/download/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version
 	
-	./configure \
-		--prefix=/usr     \
-            	--sysconfdir=/etc \
-            	--with-python    \
-            	--without-gtk-doc \
-		--without-nvdimm  \
-            	--without-dm
+	./configure --prefix=/usr      \
+            --sysconfdir=/etc  \
+            --with-python3     \
+            --without-escrow   \
+            --without-gtk-doc  \
+            --without-lvm      \
+            --without-lvm_dbus \
+            --without-nvdimm   \
+            --without-tools    \
+            --without-smartmontools
+	
 	make
 	make DESTDIR=$PKG install
 }

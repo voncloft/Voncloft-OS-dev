@@ -3,7 +3,7 @@
 name=libaio
 version=0.3.113
 release=1
-source="http://ftp.de.debian.org/debian/pool/main/liba/libaio/libaio_$version.orig.tar.xz"
+source="https://pagure.io/libaio/archive/libaio-$version/libaio-$version.tar.gz"
 
 build() {
 	cd $name-$version

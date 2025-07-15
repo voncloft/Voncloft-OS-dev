@@ -1,21 +1,17 @@
-# description	: Utilities used to display information about USB buses in the system and the devices connected to them
-# depends	: libusb
+# description   : The USB Utils package contains utilities used to display information about USB buses in the system and the devices connected to them
+# depends       : libusb hwdata
 
 name=usbutils
-version=012
+version=018
 release=1
+source=" https://kernel.org/pub/linux/utils/usb/usbutils/usbutils-018.tar.xz"
 options="!checksum"
-source="https://www.kernel.org/pub/linux/utils/usb/usbutils/$name-$version.tar.xz
-	http://www.linux-usb.org/usb.ids"
 
 build() {
-	cd $name-$version
-
-	./autogen.sh
-	./configure --prefix=/usr --datadir=/usr/share/hwdata
-	make
-	make DESTDIR=$PKG install
-
-	mkdir -p $PKG/usr/share/hwdata
-	cp $SRC/usb.ids $PKG/usr/share/hwdata/
+cd $name-$version
+        mkdir build
+        cd build
+        LDFLAGS="-liconv" meson setup .. --prefix=/usr
+        ninja
+        DESTDIR=$PKG ninja install
 }

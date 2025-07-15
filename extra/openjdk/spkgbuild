@@ -1,17 +1,75 @@
-# description : binary java vm
-# depends : alsa-lib cups giflib xorg
+# description   : OpenJDK is an open-source implementation of Oracle's Java Standard Edition platform
+# depends       : java configuring the java environment alsa-lib cpio cups libarchive which xorg libraries zip make-ca giflib harfbuzz little cms libjpeg-turbo libpng wget
 
 name=openjdk
-version=16.0.2
+version=24.0.1
 release=1
-
-source="https://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-$version/OpenJDK-${version}+7-i686-bin.tar.xz"
+source=" https://github.com/openjdk/jdk24u/archive/jdk-24.0.1-ga.tar.gz"
 options="!checksum"
 
 build() {
-	cd *
-	install -vdm755 $PKG/opt/OpenJDK-$version-bin
-	mv -v * $PKG/opt/OpenJDK-$version-bin         
-	chown -R root:root $PKG/opt/OpenJDK-$version-bin
-	ln -sfn OpenJDK-$version-bin $PKG/opt/jdk
+        cd $name-$version
+        tar -xf ../jtreg-7.5.1+1.tar.gz
+export MAKEFLAGS_HOLD=$MAKEFLAGS           
+unset  JAVA_HOME                           
+unset  CLASSPATH                           
+unset  MAKEFLAGS                           
+bash configure --enable-unlimited-crypto    \
+--disable-warnings-as-errors \
+--with-stdc++lib=dynamic     \
+--with-giflib=system         \
+--with-harfbuzz=system       \
+--with-jtreg=$PWD/jtreg      \
+--with-lcms=system           \
+--with-libjpeg=system        \
+--with-libpng=system         \
+--with-zlib=system           \
+--with-version-build="9"     \
+--with-version-pre=""        \
+--with-version-opt=""        \
+--with-jobs=
+\
+--with-cacerts-file=/etc/pki/tls/java/cacerts 
+make DESTDIR=$PKG images
+export JT_JAVA=$(echo $PWD/build/*/jdk) 
+jtreg/bin/jtreg -jdk:$JT_JAVA -automatic -ignore:quiet -v1 \
+test/jdk:tier1 test/langtools:tier1 
+unset JT_JAVA
+find /opt/jdk-24.0.1+9 -name *.debuginfo -delete
+export MAKEFLAGS=$MAKEFLAGS_HOLD 
+unset  MAKEFLAGS_HOLD
+install -vdm755 /opt/jdk-24.0.1+9             
+cp -Rv build/*/images/jdk/* /opt/jdk-24.0.1+9 
+chown -R root:root /opt/jdk-24.0.1+9          
+for s in 16 24 32 48; do
+install -vDm644 src/java.desktop/unix/classes/sun/awt/X11/java-icon${s}.png \
+/usr/share/icons/hicolor/${s}x${s}/apps/java.png
+done
+ln -v -nsf jdk-24.0.1+9 /opt/jdk
+mkdir -pv /usr/share/applications 
+cat > /usr/share/applications/openjdk-java.desktop << "EOF" 
+[Desktop Entry]
+Name=OpenJDK Java 24.0.1 Runtime
+Comment=OpenJDK Java 24.0.1 Runtime
+Exec=/opt/jdk/bin/java -jar
+Terminal=false
+Type=Application
+Icon=java
+MimeType=application/x-java-archive;application/java-archive;application/x-jar;
+NoDisplay=true
+EOF
+cat > /usr/share/applications/openjdk-jconsole.desktop << "EOF"
+[Desktop Entry]
+Name=OpenJDK Java 24.0.1 Console
+Comment=OpenJDK Java 24.0.1 Console
+Keywords=java;console;monitoring
+Exec=/opt/jdk/bin/jconsole
+Terminal=false
+Type=Application
+Icon=java
+Categories=Application;System;
+EOF
+ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts
+cd /opt/jdk
+bin/keytool -list -cacerts
 }

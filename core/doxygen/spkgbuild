@@ -1,8 +1,8 @@
 # description :  documentation system for C++, C, Java, Objective-C, Corba IDL and to some extent PHP, C# and D
-# depends : cmake git 
+# depends : cmake git qt6
 
 name=doxygen
-version=1.9.2
+version=1.14.0
 release=1
 
 source="http://doxygen.nl/files/$name-$version.src.tar.gz"
@@ -10,14 +10,17 @@ options="!checksum"
 
 build() {
 	cd $name-$version
+	grep -rl '^#!.*python$' | xargs sed -i '1s/python/&3/'
 	mkdir -v build &&
 	cd       build &&
 
-	cmake -G "Unix Makefiles"         \
-      		-DCMAKE_BUILD_TYPE=Release  \
-      		-DCMAKE_INSTALL_PREFIX=/usr \
-      		-Wno-dev ..
 
+	cmake -G "Unix Makefiles"          \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D CMAKE_INSTALL_PREFIX=/usr \
+      -D build_wizard=ON           \
+      -D force_qt=Qt6              \
+      -W no-dev ..
 	make
 	make DESTDIR=$PKG install
 }

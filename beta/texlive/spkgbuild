@@ -2,7 +2,7 @@
 # depends : ghostscript cairo fontconfig freetype gc graphite harfbuzz icu libpaper libpng python2
 
 name=texlive
-version=20220321
+version=20250308-source
 release=1
 
 source="https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-$version-source.tar.xz"

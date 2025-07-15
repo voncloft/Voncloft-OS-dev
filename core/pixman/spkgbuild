@@ -1,4 +1,5 @@
 # description	: Library that provides low-level pixel manipulation features such as image compositing and trapezoid rasterization
+# depends : 
 
 name=pixman
 version=0.46.2
@@ -7,8 +8,11 @@ source="https://cairographics.org/releases/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version
+	mkdir build &&
+	cd    build &&
 
-  	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+	meson setup --prefix=/usr --buildtype=release .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
 }

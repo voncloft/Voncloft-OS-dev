@@ -1,7 +1,7 @@
 # description : A Qt C++ library for the Last.fm webservices
-# depends : fftw libsamplerate qt5
+# depends : fftw libsamplerate qt6
 
-name=liblastfm-qt5
+name=liblastfm-qt6
 version=1.1.0
 release=5
 

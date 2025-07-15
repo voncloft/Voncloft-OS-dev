@@ -1,5 +1,5 @@
 # description : Python compatibility wrapper around all Qt bindings
-# depends : python qt5-python-bindings
+# depends : python qt6-python-bindings
 
 name=python-qt.py
 version=1.4.6

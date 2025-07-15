@@ -1,5 +1,5 @@
 # description : Docstring style checker
-# depends : python-snowballstemmer
+# depends : python-snowball
 
 name=python-pydocstyle
 version=6.3.0

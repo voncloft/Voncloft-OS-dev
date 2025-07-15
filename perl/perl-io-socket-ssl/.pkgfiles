@@ -1,0 +1,26 @@
+perl-io-socket-ssl-2.094-2
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/IO/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/IO/Socket/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/IO/Socket/SSL.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/IO/Socket/SSL.pod
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/IO/Socket/SSL/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/IO/Socket/SSL/Intercept.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/IO/Socket/SSL/PublicSuffix.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/IO/Socket/SSL/Utils.pm
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/IO/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/IO/Socket/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/IO/Socket/SSL/
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/IO::Socket::SSL.3.gz
+-r--r--r-- root/root    usr/share/man/man3/IO::Socket::SSL::Intercept.3.gz
+-r--r--r-- root/root    usr/share/man/man3/IO::Socket::SSL::PublicSuffix.3.gz
+-r--r--r-- root/root    usr/share/man/man3/IO::Socket::SSL::Utils.3.gz

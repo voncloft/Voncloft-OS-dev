@@ -1,0 +1,21 @@
+# description : python bindings to the gobject class from glib
+# depends : cairo
+
+name=pycairo
+version=1.26.1
+release=1
+
+source="https://github.com/pygobject/pycairo/releases/download/v$version/pycairo-$version.tar.gz"
+options="!checksum"
+
+build()
+{
+	cd $name-$version
+	mkdir build &&
+	cd    build &&
+
+	meson setup --prefix=/usr --buildtype=release .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}

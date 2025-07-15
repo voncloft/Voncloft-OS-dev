@@ -5,7 +5,7 @@
 # depends : nm-connection-editor nemo polkit-gnome python-cairo python-dbus
 # depends : python-gobject2 python-gobject3 python-pam python-pexpect python-pillow python-pyinotify
 # depends : python-pytz python-tinycss2 python-xapp timezonemap xapp blueberry cinnamon-translations gnome-panel metacity system-config-printer
-# depends : meson ninja gobject-introspection intltool
+# depends : meson ninja glib intltool
 
 name=cinnamon
 version=6.4.10

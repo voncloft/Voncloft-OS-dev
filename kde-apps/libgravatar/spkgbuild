@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop
-# depends : kde-deps pimcommon
+# depends : kde-deps 
 
 name=libgravatar
 version=25.04.3

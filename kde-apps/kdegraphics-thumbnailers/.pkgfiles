@@ -1,0 +1,11 @@
+kdegraphics-thumbnailers-25.04.3-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/plugins/
+drwxr-xr-x root/root    usr/plugins/kf6/
+drwxr-xr-x root/root    usr/plugins/kf6/thumbcreator/
+-rwxr-xr-x root/root    usr/plugins/kf6/thumbcreator/blenderthumbnail.so
+-rwxr-xr-x root/root    usr/plugins/kf6/thumbcreator/gsthumbnail.so
+-rwxr-xr-x root/root    usr/plugins/kf6/thumbcreator/mobithumbnail.so
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/metainfo/
+-rw-r--r-- root/root    usr/share/metainfo/org.kde.kdegraphics-thumbnailers.metainfo.xml

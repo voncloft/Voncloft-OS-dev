@@ -1,5 +1,5 @@
 # description : gtk3 timezone map widget
-# depends : gtk3 libsoup gobject-introspection
+# depends : gtk3 libsoup glib
 
 name=timezonemap
 version=0.4.5.3

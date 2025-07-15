@@ -1,10 +1,10 @@
 # description	: X.org 100dpi fonts
-# depends	: util-macros mkfontscale bdftopcf
+# depends	: util-macros mkfontscale
 
 name=font-adobe-100dpi
 version=1.0.4
 release=1
-source="https://www.x.org/archive/individual/font/$name-$version.tar.bz2"
+source="https://www.x.org/archive/individual/font/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version

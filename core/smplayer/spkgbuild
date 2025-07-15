@@ -1,5 +1,5 @@
 # description	: Media player with built-in codecs that can play virtually all video and audio formats
-# depends	: mplayer qt5 hicolor-icon-theme
+# depends	: mplayer qt6 hicolor-icon-theme
 
 name=smplayer
 version=24.5.0

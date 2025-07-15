@@ -1,18 +1,24 @@
-# description	: GObject wrappers for libusb-1.0
-# depends	: libusb usbutils gobject-introspection vala meson
+# description   : The libgusb package contains the GObject wrappers for libusb-1
+# depends       : json-glib libusb glib hwdata vala
 
 name=libgusb
-version=0.4.2
+version=0.4.9
 release=1
-source="https://people.freedesktop.org/~hughsient/releases/$name-$version.tar.xz"
+source=" https://github.com/hughsie/libgusb/releases/download/0.4.9/libgusb-0.4.9.tar.xz"
+options="!checksum"
 
 build() {
-	cd $name-$version
-
-	mkdir build
-	cd    build
-	
-	meson --prefix=/usr -Ddocs=false
-	ninja
-	DESTDIR=$PKG ninja install
+        cd $name-$version
+        mkdir build 
+cd    build 
+meson setup ..            \
+--prefix=/usr       \
+--buildtype=release \
+-D docs=false       
+ninja
+sed -E "/output|install_dir/s/('libgusb)'/\1-0.4.9'/" \
+-i ../docs/meson.build                            
+#meson configure -D docs=true                          
+ninja
+DESTDIR=$PKG ninja install
 }

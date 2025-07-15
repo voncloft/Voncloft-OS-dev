@@ -1,5 +1,5 @@
 # description	: A small youtube browser
-# depends	: hicolor-icon-theme qt5 qt5-webkit
+# depends	: hicolor-icon-theme qt6 qt6-webkit
 
 name=smtube
 version=21.10.0

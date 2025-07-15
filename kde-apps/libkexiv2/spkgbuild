@@ -1,16 +1,21 @@
-# description : Core components for the kde desktop
-# depends : kde-deps
+# description   : Libkexiv2 is a KDE wrapper around the Exiv2 library for manipulating image metadata
+# depends       : kf-depends exiv2
 
 name=libkexiv2
-version=25.04.3
+version=25.04.0
 release=1
-
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source=" https://download.kde.org/stable/release-service/25.04.0/src/libkexiv2-25.04.0.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+        cd $name-$version
+        mkdir build 
+cd    build 
+cmake -D CMAKE_INSTALL_PREFIX=$KF6_PREFIX \
+-D CMAKE_BUILD_TYPE=Release         \
+-D BUILD_WITH_QT6=ON                \
+-D BUILD_TESTING=OFF                \
+-W no-dev .. 
+make
+make DESTDIR=$PKG install
 }

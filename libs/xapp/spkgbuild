@@ -1,5 +1,5 @@
 # description : common library for x-apps project
-# depends : libdbusmenu-glib libgnomekbd python gobject-introspection meson python-gobject3 vala
+# depends : libdbusmenu-glib libgnomekbd python glib meson python-gobject3 vala
 
 name=xapp
 version=2.8.9

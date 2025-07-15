@@ -1,5 +1,5 @@
 # description	: glib wrapper for poppler
-# depends	: poppler glib gobject-introspection
+# depends	: poppler glib glib
 
 name=poppler-glib
 version=21.12.0

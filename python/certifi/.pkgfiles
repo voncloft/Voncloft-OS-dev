@@ -1,0 +1,24 @@
+certifi-2025.1.31-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/python3.13/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/certifi/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/INSTALLER
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/licenses/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/licenses/LICENSE
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/METADATA
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/RECORD
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/REQUESTED
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/top_level.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi-2025.1.31.dist-info/WHEEL
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/cacert.pem
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/core.py
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/__init__.py
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/__main__.py
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/certifi/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/__pycache__/core.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/__pycache__/__init__.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/__pycache__/__main__.cpython-313.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/certifi/py.typed

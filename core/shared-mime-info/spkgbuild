@@ -1,19 +1,19 @@
 # description	: A MIME database
-# depends	: glib libxml2 intltool
+# depends	: glib libxml2
 
 name=shared-mime-info
-version=1.10
+version=2.4
 release=5
 options="!makeflags"
-source="https://freedesktop.org/~hadess/$name-$version.tar.xz"
+source="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/shared-mime-info-$version.tar.gz"
 
 build() {
 	cd $name-$version
 
 	# https://bugs.freedesktop.org/show_bug.cgi?id=70366
-	export ac_cv_func_fdatasync=no
-
-	./configure --prefix=/usr --disable-update-mimedb
-	make
-	make DESTDIR=$PKG install
+	mkdir build
+	cd build
+	meson setup --prefix=/usr --buildtype=release -D update-mimedb=true ..
+	ninja
+	DESTDIR=$PKG ninja install
 }

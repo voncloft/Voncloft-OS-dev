@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kconfig kcoreaddons ki18n kirigami2 kunitconversion mpfr qt5-feedback
+# depends : kde-deps kconfig kcoreaddons ki18n kirigami2 kunitconversion mpfr qt6-feedback
 
 name=kalk
 version=25.04.3

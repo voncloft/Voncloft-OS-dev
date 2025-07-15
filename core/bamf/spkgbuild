@@ -1,5 +1,5 @@
 # description	: Application matching framework
-# depends	: libgtop libwnck3  gobject-introspection  vala
+# depends	: libgtop libwnck3  glib  vala
 
 name=bamf
 version=0.5.6

@@ -1,5 +1,5 @@
 # description : cinnamon file manager
-# depends : cinnamon-desktop dconf exempi gvfs libexif libnotify libxml2 python xapp ffmpegthumbnailer gobject-introspection intltool meson ninja
+# depends : cinnamon-desktop dconf exempi gvfs libexif libnotify libxml2 python xapp ffmpegthumbnailer glib intltool meson ninja
 
 name=nemo
 version=6.4.5

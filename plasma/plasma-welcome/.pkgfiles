@@ -1,0 +1,13 @@
+plasma-welcome-6.3.4-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/plasma-welcome
+drwxr-xr-x root/root    usr/plugins/
+drwxr-xr-x root/root    usr/plugins/kf6/
+drwxr-xr-x root/root    usr/plugins/kf6/kded/
+-rwxr-xr-x root/root    usr/plugins/kf6/kded/kded_plasma-welcome.so
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rwxr-xr-x root/root    usr/share/applications/org.kde.plasma-welcome.desktop
+drwxr-xr-x root/root    usr/share/metainfo/
+-rw-r--r-- root/root    usr/share/metainfo/org.kde.plasma-welcome.appdata.xml

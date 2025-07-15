@@ -1,0 +1,19 @@
+kdegraphics-mobipocket-25.04.3-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/QMobipocket6/
+drwxr-xr-x root/root    usr/include/QMobipocket6/qmobipocket/
+-rw-r--r-- root/root    usr/include/QMobipocket6/qmobipocket/mobipocket.h
+-rw-r--r-- root/root    usr/include/QMobipocket6/qmobipocket/qfilestream.h
+-rw-r--r-- root/root    usr/include/QMobipocket6/qmobipocket/qmobipocket_export.h
+-rw-r--r-- root/root    usr/include/QMobipocket6/qmobipocket_version.h
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/QMobipocket6/
+-rw-r--r-- root/root    usr/lib64/cmake/QMobipocket6/QMobipocket6Config.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/QMobipocket6/QMobipocket6ConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/QMobipocket6/QMobipocket6Targets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/QMobipocket6/QMobipocket6Targets-release.cmake
+-rwxr-xr-x root/root    usr/lib64/libQMobipocket6.so.2.1.0
+lrwxrwxrwx root/root    usr/lib64/libQMobipocket6.so.2 -> libQMobipocket6.so.2.1.0
+lrwxrwxrwx root/root    usr/lib64/libQMobipocket6.so -> libQMobipocket6.so.2

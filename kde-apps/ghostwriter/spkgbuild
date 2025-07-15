@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop
-# depends : kde-deps hunspell kxmlgui qt5-webengine sonnet cmark mathjax pandoc-cli
+# depends : kde-deps hunspell kxmlgui qt6-webengine sonnet cmark mathjax pandoc-cli
 
 name=ghostwriter
 version=25.04.3

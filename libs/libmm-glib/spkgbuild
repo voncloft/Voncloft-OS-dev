@@ -1,5 +1,5 @@
 # description : modem manager api libraries
-# depends : libgudev elogind gobject-introspection libmbim libqmi polkit vala
+# depends : libgudev elogind glib libmbim libqmi polkit vala
 
 name=libmm-glib
 version=1.14.10

@@ -1,0 +1,13 @@
+inih-60-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+-rw-r--r-- root/root    usr/include/INIReader.h
+-rw-r--r-- root/root    usr/include/ini.h
+drwxr-xr-x root/root    usr/lib64/
+lrwxrwxrwx root/root    usr/lib64/libINIReader.so -> libINIReader.so.0
+-rwxr-xr-x root/root    usr/lib64/libINIReader.so.0
+lrwxrwxrwx root/root    usr/lib64/libinih.so -> libinih.so.0
+-rwxr-xr-x root/root    usr/lib64/libinih.so.0
+drwxr-xr-x root/root    usr/lib64/pkgconfig/
+-rw-r--r-- root/root    usr/lib64/pkgconfig/INIReader.pc
+-rw-r--r-- root/root    usr/lib64/pkgconfig/inih.pc

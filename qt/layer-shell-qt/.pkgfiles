@@ -1,0 +1,30 @@
+layer-shell-qt-6.3.4-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/LayerShellQt/
+-rw-r--r-- root/root    usr/include/LayerShellQt/layershellqt_export.h
+-rw-r--r-- root/root    usr/include/LayerShellQt/Shell
+-rw-r--r-- root/root    usr/include/LayerShellQt/shell.h
+-rw-r--r-- root/root    usr/include/LayerShellQt/Window
+-rw-r--r-- root/root    usr/include/LayerShellQt/window.h
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/LayerShellQt/
+-rw-r--r-- root/root    usr/lib64/cmake/LayerShellQt/LayerShellQtConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/LayerShellQt/LayerShellQtConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/LayerShellQt/LayerShellQtTargets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/LayerShellQt/LayerShellQtTargets-release.cmake
+-rwxr-xr-x root/root    usr/lib64/libLayerShellQtInterface.so.6.3.4
+lrwxrwxrwx root/root    usr/lib64/libLayerShellQtInterface.so.6 -> libLayerShellQtInterface.so.6.3.4
+lrwxrwxrwx root/root    usr/lib64/libLayerShellQtInterface.so -> libLayerShellQtInterface.so.6
+drwxr-xr-x root/root    usr/plugins/
+drwxr-xr-x root/root    usr/plugins/wayland-shell-integration/
+-rwxr-xr-x root/root    usr/plugins/wayland-shell-integration/liblayer-shell.so
+drwxr-xr-x root/root    usr/qml/
+drwxr-xr-x root/root    usr/qml/org/
+drwxr-xr-x root/root    usr/qml/org/kde/
+drwxr-xr-x root/root    usr/qml/org/kde/layershell/
+-rw-r--r-- root/root    usr/qml/org/kde/layershell/kde-qmlmodule.version
+-rw-r--r-- root/root    usr/qml/org/kde/layershell/LayerShellQtQml.qmltypes
+-rwxr-xr-x root/root    usr/qml/org/kde/layershell/libLayerShellQtQml.so
+-rw-r--r-- root/root    usr/qml/org/kde/layershell/qmldir

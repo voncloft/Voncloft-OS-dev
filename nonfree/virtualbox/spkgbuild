@@ -1,5 +1,5 @@
 # description	: Powerful x86 virtualization for enterprise as well as home use
-# depends	: sdl qt5
+# depends	: sdl qt6
 
 name=virtualbox
 _name=${name%-*}

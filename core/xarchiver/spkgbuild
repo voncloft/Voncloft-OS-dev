@@ -2,7 +2,7 @@
 # depends	: gtk3
 
 name=xarchiver
-version=0.5.4
+version=0.5.4.25
 release=1
 source="https://downloads.sourceforge.net/$name/$name-$version.tar.bz2"
 

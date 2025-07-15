@@ -1,25 +1,22 @@
 # description	: A set of free peer-reviewed portable C++ source libraries
-# depends	: zlib bzip2 which icu python python
+# depends	: icu python-numpy which
 
 name=boost
-version=1.76.0
+version=1.88.0
 release=1
 verzion=1_76_0
 
-source="https://boostorg.jfrog.io/artifactory/main/release/$version/source/boost_$verzion.tar.bz2"
+source="https://github.com/boostorg/boost/releases/download/boost-$version/boost-$version-b2-nodocs.tar.xz"
 options="!checksum"
 
 build() {
-	cd boost_${version//./_}
-
-	./bootstrap.sh --prefix=/usr
-	./b2 ${MAKEFLAGS} stage --stagedir=$PKG/usr threading=multi link=shared
-	./b2 ${MAKEFLAGS} install --prefix=$PKG/usr threading=multi link=shared
-
-	./bootstrap.sh --prefix=/usr --with-python=/usr/bin/python
-	./b2 clean
-	./b2 ${MAKEFLAGS} install --prefix=$SRC/py3 threading=multi link=shared
-	cp -a $SRC/py3/lib/libboost_* $PKG/usr/lib
-
-	ln -sv detail/sha1.hpp $PKG/usr/include/boost/uuid/sha1.hpp
+	cd boost-$version
+	case $(uname -m) in
+   i?86)
+      sed -e "s/defined(__MINGW32__)/& || defined(__i386__)/" \
+          -i ./libs/stacktrace/src/exception_headers.h ;;
+	esac
+	./bootstrap.sh --prefix=/usr --with-python=python3
+	./b2 stage -j$(nproc)--stagedir=$PKG/usr threading=multi link=shared
+	./b2 install --prefix=$PKG/usr threading=multi link=shared
 }

@@ -1,7 +1,7 @@
 # description : A C++/Qt client library for gpodder.net
-# depends : qt5
+# depends : qt6
 
-name=libmygpo-qt5
+name=libmygpo-qt6
 version=1.1.0
 release=3
 

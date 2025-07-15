@@ -1,5 +1,5 @@
 # description : a visualization for VLC and other media players
-# depends : ftgl glew glm libglvnd pulseaudio sdl2 qt5
+# depends : ftgl glew glm libglvnd pulseaudio sdl2 qt6
 
 pkgbase=projectm
 name=projectm

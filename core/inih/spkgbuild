@@ -1,0 +1,20 @@
+# description : ini parser
+# depends :	
+
+name=inih
+version=60
+release=1
+
+source="https://github.com/benhoyt/inih/archive/r$version/inih-r$version.tar.gz"
+
+build()
+{
+	cd *
+	mkdir build &&
+	cd    build &&
+
+	meson setup --prefix=/usr --buildtype=release .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}

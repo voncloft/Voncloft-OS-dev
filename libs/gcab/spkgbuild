@@ -1,5 +1,5 @@
 # description	: A GObject library to create cabinet files
-# depends	: glib gobject-introspection vala meson
+# depends	: glib glib vala meson
 
 name=gcab
 version=1.4

@@ -1,5 +1,5 @@
 # description : Asynchronous Python 3 Bindings for Qt5
-# depends : python qt5-base qt5-declarative qt5-svg
+# depends : python qt6-base qt6-declarative qt6-svg
 
 name=python-pyotherside
 version=1.6.2

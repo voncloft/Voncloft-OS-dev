@@ -2,25 +2,23 @@
 # depends	: gc openssl ncurses imlib2
 
 name=w3m
-version=0.5.3.git20210102_6
+version=0.5.3
 release=3
-source="https://downloads.sourceforge.net/w3m/$name-$version.tar.gz
-	fix-compile.patch"
+source="https://downloads.sourceforge.net/w3m/w3m-$version.tar.gz
+	http://www.linuxfromscratch.org/patches/blfs/8.3/w3m-0.5.3-bdwgc72-1.patch"
 
 build() {
 	cd $name-$version
 
-	patch -Np1 -i ../fix-compile.patch
-	sed -i 's/file_handle/file_foo/' istream.c
-	sed -i 's/file_handle/file_foo/' istream.h
-	sed -i 's#gdk-pixbuf-xlib-2.0#& x11#' configure
-	sed -i '/USE_EGD/s/define/undef/' config.h.in
+	patch -Np1 -i $SRC/w3m-$version-bdwgc72-1.patch
+	patch -Np1 -i ../w3m-0.5.3-bdwgc72-1.patch      &&
+sed -i 's/file_handle/file_foo/' istream.{c,h}  &&
+sed -i 's#gdk-pixbuf-xlib-2.0#& x11#' configure &&
+sed -i '/USE_EGD/s/define/undef/' config.h.in   &&
 	
-	./configure --prefix=/usr \
-		    --sysconfdir=/etc \
-		    --libexecdir=/usr/lib \
-		    --disable-nls
-	make || make -j1
+	
+./configure --prefix=/usr --sysconfdir=/etc 
+	make
 	make DESTDIR=$PKG install
 
 	install -v -m644 -D doc/keymap.default $PKG/etc/w3m/keymap

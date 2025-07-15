@@ -1,0 +1,30 @@
+frameworkintegration-6.13.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KF6/
+drwxr-xr-x root/root    usr/include/KF6/FrameworkIntegration/
+-rw-r--r-- root/root    usr/include/KF6/FrameworkIntegration/frameworkintegration_version.h
+drwxr-xr-x root/root    usr/include/KF6/KStyle/
+-rw-r--r-- root/root    usr/include/KF6/KStyle/KStyle
+-rw-r--r-- root/root    usr/include/KF6/KStyle/kstyle_export.h
+-rw-r--r-- root/root    usr/include/KF6/KStyle/kstyle.h
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/KF6FrameworkIntegration/
+-rw-r--r-- root/root    usr/lib64/cmake/KF6FrameworkIntegration/KF6FrameworkIntegrationConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6FrameworkIntegration/KF6FrameworkIntegrationConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6FrameworkIntegration/KF6FrameworkIntegrationTargets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6FrameworkIntegration/KF6FrameworkIntegrationTargets-release.cmake
+-rwxr-xr-x root/root    usr/lib64/libKF6Style.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6Style.so.6 -> libKF6Style.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6Style.so -> libKF6Style.so.6
+drwxr-xr-x root/root    usr/libexec/
+drwxr-xr-x root/root    usr/libexec/kf6/
+drwxr-xr-x root/root    usr/libexec/kf6/kpackagehandlers/
+-rwxr-xr-x root/root    usr/libexec/kf6/kpackagehandlers/knshandler
+drwxr-xr-x root/root    usr/plugins/
+drwxr-xr-x root/root    usr/plugins/kf6/
+-rwxr-xr-x root/root    usr/plugins/kf6/FrameworkIntegrationPlugin.so
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/knotifications6/
+-rw-r--r-- root/root    usr/share/knotifications6/plasma_workspace.notifyrc

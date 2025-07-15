@@ -1,6 +1,6 @@
 # description : library with common api for various cinnamon modules
 # depends : accountsservice gtk3 libxkbfile pulseaudio
-# depends : meson ninja gobject-introspection intltool
+# depends : meson ninja glib intltool
 
 name=cinnamon-desktop
 version=6.4.1

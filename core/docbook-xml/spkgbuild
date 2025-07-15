@@ -2,7 +2,7 @@
 # depends	: libxml2 sgml-common libarchive
 
 name=docbook-xml
-version=4.5
+version=5.0
 release=4
 noextract="docbook-xml-4.5.zip
 	docbook-xml-4.4.zip

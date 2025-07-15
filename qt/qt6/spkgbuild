@@ -2,7 +2,7 @@
 # depends	: sqlite make-ca dbus harfbuzz glib icu jasper libjpeg-turbo libmng libpng libinput
 # depends	: libxrender libsm libxi libtiff libxkbcommon mesa mtdev openssl pcre2 wayland
 # depends	: xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm alsa-lib python
-# depends	: gst-plugins-base libwebp xorg-libraries
+# depends	: gst-plugins-base libwebp xorg-libraries vulkan-headers
 
 name=qt6
 version=6.9.1
@@ -13,15 +13,17 @@ options="!checksum"
 build() {
 	cd *
 	QT6PREFIX=/usr
-	
+	export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
+
 	if [ "$(uname -m)" == "i686" ]; then
     		sed -e "/^#elif defined(Q_CC_GNU_ONLY)/s/.*/& \&\& 0/" \
          	-i qtbase/src/corelib/global/qtypes.h &&
     		export CXXFLAGS+="-DDISABLE_SIMD -DPFFFT_SIMD_DISABLE"
 	fi
-	./configure -prefix $QT6PREFIX      \
+	./configure -prefix /usr      \
             -sysconfdir /etc/xdg    \
             -dbus-linked            \
+            -plugindir /usr/lib64/qt6/plugins \
             -openssl-linked         \
             -system-sqlite          \
             -nomake examples        \
@@ -31,7 +33,9 @@ build() {
             -skip qt3d              \
             -skip qtquick3dphysics  \
             -skip qtwebengine  \
-             QT_AVOID_CMAKE_ARCHIVING_API=ON
+            Clang_DIR=/usr/lib/cmake/clang\
+            LLVM_DIR=/usr/lib/cmake/llvm \
+            QT_AVOID_CMAKE_ARCHIVING_API=ON
 
             ninja
             DESTDIR=$PKG ninja install

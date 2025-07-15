@@ -1,5 +1,5 @@
 # description	: Library for passing menus over DBus
-# depends	: vala gobject-introspection glib gtk3
+# depends	: vala glib glib gtk3
 
 name=libdbusmenu
 version=16.04.0

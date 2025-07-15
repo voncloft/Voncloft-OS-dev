@@ -1,7 +1,7 @@
 # description	: Python 3.x SIP bindings for C and C++ libraries (PyQt5 version)
 # depends	: python-sip
 
-name=python-sip-pyqt5
+name=python-sip-pyqt6
 version=4.19.24
 release=1
 

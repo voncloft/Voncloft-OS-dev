@@ -1,5 +1,4 @@
 # description : create business diagrams
-# depends :
 
 name=kdiagram
 version=2.8.0

@@ -1,0 +1,19 @@
+# description : kde dep
+# depends : 
+
+name=kimageannotator
+version=0.71
+release=1
+
+source="https://github.com/ksnip/kImageAnnotator/archive/refs/tags/v0.7.1.tar.gz"
+
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake -DBUILD_WITH_QT6=true ..
+	make
+	make DESTDIR=$PKG install
+}

@@ -1,43 +1,37 @@
-# description	: FFmpeg is a solution to record, convert and stream audio and video
-# depends	: libaom libass fdk-aac freetype2 lame libvorbis libvpx opus x264 x265 perl-yasm
+# description   : FFmpeg is a solution to record, convert and stream audio and video
+# depends       : libaom libass fdk-aac freetype lame libvorbis libvpx opus x264 x265 nasm yasm alsa-lib libva sdl2 libvdpau libvdpau-va-gl
 
 name=ffmpeg
-version=7.1.1
+version=7.1.1    
 release=1
-source="https://ffmpeg.org/releases/$name-$version.tar.xz
-	https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-$version-chromium_method-1.patch"
-options="!checksum"
-build() {
-	cd $name-$version
-	#patch it for lfs
-	patch -Np1 -i $SRC/ffmpeg-$version-chromium_method-1.patch
-	# adds the ALSA library to the Flite LDFLAGS variable and
-	# enables the discovery of Flite
-	./configure --prefix=/usr        \
-            --enable-gpl         \
-            --enable-version3    \
-            --enable-nonfree     \
-            --disable-static     \
-            --enable-shared      \
-            --disable-debug      \
-            --enable-libaom      \
-            --enable-libass      \
-            --enable-libfdk-aac  \
-            --enable-libfreetype \
-            --enable-libmp3lame  \
-            --enable-libopus     \
-            --enable-libvorbis   \
-            --enable-libvpx      \
-            --enable-libx264     \
-            --enable-libx265     \
-            --enable-openssl     \
-            --ignore-tests=enhanced-flv-av1 \
-            --docdir=/usr/share/doc/ffmpeg-7.1.1 
-            
-	make
-	gcc tools/qt-faststart.c -o tools/qt-faststart
-	make DESTDIR=$PKG install
-	
-	install -m755 tools/qt-faststart $PKG/usr/bin
-}
+source="https://ffmpeg.org/releases/ffmpeg-7.1.1.tar.xz
+https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-7.1.1-chromium_method-1.patch"
 
+options="!checksum"
+
+build() {
+        cd $name-$version
+patch -Np1 -i $SRC/ffmpeg-7.1.1-chromium_method-1.patch
+./configure --prefix=/usr        \
+--enable-gpl         \
+--enable-version3    \
+--enable-nonfree     \
+--disable-static     \
+--enable-shared      \
+--disable-debug      \
+--enable-libaom      \
+--enable-libass      \
+--enable-libfdk-aac  \
+--enable-libfreetype \
+--enable-libmp3lame  \
+--enable-libopus     \
+--enable-libvorbis   \
+--enable-libvpx      \
+--enable-libx264     \
+--enable-libx265     \
+--enable-openssl     \
+--ignore-tests=enhanced-flv-av1 \
+--docdir=/usr/share/doc/ffmpeg-7.1.1 
+make DESTDIR=$PKG 
+make DESTDIR=$PKG install
+}

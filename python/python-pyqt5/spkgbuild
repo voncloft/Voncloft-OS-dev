@@ -1,7 +1,7 @@
 # description	: A set of Python 3.x bindings for the Qt5 toolkit
-# depends	: python-sip qtwebengine qt5-webkit python-dbus 
+# depends	: python-sip qtwebengine qt6-webkit python-dbus 
 
-name=python-pyqt5
+name=python-pyqt6
 version=5.15.4
 release=1
 

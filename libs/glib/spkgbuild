@@ -4,8 +4,8 @@ name=glib
 version=2.84.3
 release=1
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz
-        https://download.gnome.org/sources/gobject-introspection/1.84/gobject-introspection-1.84.0.tar.xz"
-noextract="gobject-introspection-1.84.0.tar.xz"
+        https://download.gnome.org/sources/glib/1.84/glib-1.84.0.tar.xz"
+noextract="glib-1.84.0.tar.xz"
 
 build() {
         cd $name-$version
@@ -22,9 +22,9 @@ meson setup ..                  \
       -D sysprof=disabled
 ninja
 DESTDIR=$PKG ninja install
-tar xf $SRC/gobject-introspection-1.84.0.tar.xz
+tar xf $SRC/glib-1.84.0.tar.xz
 
-PKG_CONFIG_PATH=$PKG/usr/lib/pkgconfig meson setup gobject-introspection-1.84.0 gi-build \
+PKG_CONFIG_PATH=$PKG/usr/lib/pkgconfig meson setup glib-1.84.0 gi-build \
             --prefix=/usr --buildtype=release
 ninja -C gi-build
 

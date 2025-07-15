@@ -1,5 +1,5 @@
 # description	: An image viewing and cataloging program for MATE
-# depends	: glib mate-desktop libpeas gtk3 gobject-introspection libexif lcms2 dbus-glib librsvg zlib libjpeg-turbo libxml2 libx11 itstool
+# depends	: glib mate-desktop libpeas gtk3 glib libexif lcms2 dbus-glib librsvg zlib libjpeg-turbo libxml2 libx11 itstool
 
 name=eom
 version=1.24.2

@@ -1,5 +1,5 @@
 # description	: Library to query system statistics (net, resource usage, ...)
-# depends	: qt5 cmake
+# depends	: qt6 cmake
 
 name=libsysstat
 version=1.1.0

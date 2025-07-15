@@ -2,13 +2,13 @@
 # depends	: libassuan
 
 name=gpgme
-version=1.23.2
+version=2.0.0
 release=1
-source="ftp://ftp.gnupg.org/gcrypt/gpgme/$name-$version.tar.bz2"
+source="https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2"
 
 build() {
 	cd $name-$version
-	./configure --prefix=/usr --disable-gpg-test
+	./configure --prefix=/usr --disable-gpg-test --disable-static
 	make
 	make DESTDIR=$PKG install
 }

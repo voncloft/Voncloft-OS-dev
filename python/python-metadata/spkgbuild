@@ -1,0 +1,15 @@
+# description : Scientific tools for Python
+# depends : 
+
+name=python-metadata
+version=0.9.0
+release=1
+
+source="https://files.pythonhosted.org/packages/source/p/pyproject-metadata/pyproject_metadata-0.9.0.tar.gz"
+options="!checksum"
+
+build() {
+	cd *
+	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+	pip3 install --no-index --find-links dist --no-user pyproject-metadata --root=$PKG
+ }

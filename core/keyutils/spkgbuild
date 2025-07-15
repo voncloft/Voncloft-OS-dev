@@ -1,0 +1,15 @@
+# description :	key retention facility
+# depends:	
+
+name=keyutils
+version=1.6.3
+release=1
+
+source="https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/keyutils-$version.tar.gz"
+
+build()
+{
+	cd *
+	make
+	make DESTDIR=$PKG install NO_ARLIB=1 LIBDIR=/usr/lib BINDIR=/usr/bin SBINDIR=/usr/sbin install
+}

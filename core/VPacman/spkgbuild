@@ -1,5 +1,5 @@
 # description : a gui for scratch
-# depends : qt5
+# depends : qt6
 
 name=VPacman
 version=4.3

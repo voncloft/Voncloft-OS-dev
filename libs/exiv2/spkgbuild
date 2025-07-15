@@ -1,27 +1,27 @@
 # description	: C++ library and a command line utility for managing image and video metadata
-# depends	: curl cmake
+# depends	: curl brotli inih cmake
 
 name=exiv2
-version=0.27.3
+version=0.28.5
 release=1
-source="https://www.exiv2.org/builds/$name-$version-Source.tar.gz"
+source="https://github.com/Exiv2/exiv2/archive/v$version/exiv2-$version.tar.gz"
 
 build() {
-	cd $name-$version-Source
-
+	cd *
 	# disable building a sample program that fails
-	sed -i '/conntest/s/^/#/' samples/CMakeLists.txt
 
 	mkdir build
 	cd    build
 	
-	cmake -DCMAKE_INSTALL_PREFIX=/usr  \
-	      -DCMAKE_BUILD_TYPE=Release   \
-	      -DEXIV2_ENABLE_VIDEO=yes     \
-	      -DEXIV2_ENABLE_WEBREADY=yes  \
-	      -DEXIV2_ENABLE_CURL=yes      \
-	      -DEXIV2_BUILD_SAMPLES=no     \
-	      -G "Unix Makefiles" ..
-	make
-	make DESTDIR=$PKG install
+	
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D EXIV2_ENABLE_VIDEO=yes      \
+      -D EXIV2_ENABLE_WEBREADY=yes   \
+      -D EXIV2_ENABLE_CURL=yes       \
+      -D EXIV2_BUILD_SAMPLES=no      \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -G Ninja .. 
+	ninja
+	DESTDIR=$PKG ninja install
 }

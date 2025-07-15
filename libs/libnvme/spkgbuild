@@ -1,0 +1,22 @@
+# description:	library that provides type definitions for NVMe structures
+# depends:	
+
+name=libnvme
+version=1.14
+release=1
+
+source="https://github.com/linux-nvme/libnvme/archive/v1.14/libnvme-$version.tar.gz"
+
+build()
+{
+	cd *
+	
+
+	mkdir build &&
+	cd    build &&
+
+	meson setup --prefix=/usr --buildtype=release -D libdbus=auto .. &&
+	ninja
+
+	DESTDIR=$PKG ninja install
+}

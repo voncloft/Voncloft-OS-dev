@@ -1,5 +1,4 @@
 # description : addons for kirigami framework
-# depends : kde-deps kirigami2
 
 name=kirigami-addons
 version=1.8.1
@@ -9,7 +8,9 @@ source="https://download.kde.org/stable/$name/$name-$version.tar.xz"
 
 build() {
    cd $name-$version
-   kf-package-installer
-   cd build
+	cmake -D CMAKE_INSTALL_PREFIX=$KF6_PREFIX \
+      -D CMAKE_BUILD_TYPE=Release         \
+      -D BUILD_TESTING=OFF 
+      make
    make DESTDIR=$PKG install
 }

@@ -1,5 +1,5 @@
 # description	: Fast, easy, and free BitTorrent client (QT GUI)
-# depends	: curl libevent openssl qt5 desktop-file-utils intltool
+# depends	: curl libevent openssl qt6 desktop-file-utils intltool
 
 name=transmission-qt
 version=3.00

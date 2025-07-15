@@ -1,5 +1,5 @@
 # description	: Core library of PCManFM-Qt (Qt binding for libfm)
-# depends	: qt5 cmake glib libxcb libfm
+# depends	: qt6 cmake glib libxcb libfm
 
 name=libfm-qt
 version=2.2.0

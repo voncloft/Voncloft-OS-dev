@@ -1,8 +1,8 @@
 # description	: A library that reads information about processes and the running system
-# depends	: glib libxau gobject-introspection
+# depends	: glib libxau glib
 
 name=libgtop
-version=2.40.0
+version=2.41.3
 release=1
 source="https://ftp.gnome.org/pub/gnome/sources/libgtop/${version%.*}/$name-$version.tar.xz"
 

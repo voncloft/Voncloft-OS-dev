@@ -1,0 +1,6 @@
+plasma-integration-6.3.4-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/plugins/
+drwxr-xr-x root/root    usr/plugins/platformthemes/
+-rwxr-xr-x root/root    usr/plugins/platformthemes/KDEPlasmaPlatformTheme6.so
+drwxr-xr-x root/root    usr/share/

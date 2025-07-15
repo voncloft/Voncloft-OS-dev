@@ -1,5 +1,5 @@
 # description	: Common base library for LXQt components
-# depends	: qt5 cmake kwindowsystem polkit-qt libqtxdg libxscrnsaver libx11
+# depends	: qt6 cmake kwindowsystem polkit-qt libqtxdg libxscrnsaver libx11
 
 name=liblxqt
 version=2.2.0

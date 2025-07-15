@@ -1,5 +1,5 @@
 # description	: Python 3 bindings for QtWebEngine
-# depends	: qtwebengine python-pyqt5 python-sip-pyqt5
+# depends	: qtwebengine python-pyqt6 python-sip-pyqt6
 
 name=python-pyqtwebengine
 version=5.15.4

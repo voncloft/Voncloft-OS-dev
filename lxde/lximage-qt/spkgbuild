@@ -1,5 +1,5 @@
 # description	: The LXQt image viewer and screenshot tool
-# depends	: qt5 cmake libfm-qt
+# depends	: qt6 cmake libfm-qt
 
 name=lximage-qt
 version=2.2.0

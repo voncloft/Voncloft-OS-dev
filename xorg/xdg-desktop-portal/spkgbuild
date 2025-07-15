@@ -1,5 +1,5 @@
 # description : allows applications to interact with desktop
-# depends : fuse3 gdk-pixbuf json-glib dbus pipewire
+# depends : fuse3 gdk-pixbuf json-glib dbus pipewire umockdev bubblewrap
 
 name=xdg-desktop-portal
 version=1.20.3
@@ -12,7 +12,7 @@ build() {
 	mkdir build
 	cd build
 
-	meson setup --prefix=/usr --buildtype=release ..
+	meson setup --prefix=/usr --buildtype=release -D tests=disabled ..
 	ninja
 	DESTDIR=$PKG ninja install
 }

@@ -1,5 +1,5 @@
 # description : xkb hooks used by gnome desktop
-# depends : gtk3 intltool libxklavier gobject-introspection
+# depends : gtk3 intltool libxklavier glib
 
 name=libgnomekbd
 version=3.26.1+2+g8d02ebd

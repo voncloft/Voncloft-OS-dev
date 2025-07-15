@@ -1,23 +1,15 @@
-# description	: Script to start the xserver
-# depends	: libx11 xauth
+# description   : The xinit package contains a usable script to start the xserver
+# depends       : xorg-libraries twm xclock xterm
 
 name=xinit
 version=1.4.4
 release=1
-source="http://ftp.x.org/pub/individual/app/xinit-$version.tar.bz2"
+source=" https://www.x.org/pub/individual/app/xinit-$version.tar.xz"
+options="!checksum"
 
 build() {
-	cd xinit-$version
-
-  	sed -e '/$serverargs $vtarg/ s/serverargs/: #&/' \
-	    -i startx.cpp
-
-	./configure \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--localstatedir=/var \
-		--disable-static \
-		--with-xinitdir=/etc/X11/app-defaults
-	make
-	make DESTDIR=$PKG install
+        cd $name-$version
+        ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static --with-xinitdir=/etc/X11/app-defaults 
+make
+make DESTDIR=$PKG install 
 }

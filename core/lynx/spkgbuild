@@ -2,7 +2,7 @@
 # depends	: gnutls
 
 name=lynx
-version=2.8.9rel.1
+version=2.9.2
 release=1
 source="https://invisible-mirror.net/archives/lynx/tarballs/${name}${version}.tar.bz2"
 

@@ -5,16 +5,17 @@ name=zxing-cpp
 version=2.3.0
 release=2
 
-source="https://github.com/nu-book/zxing-cpp/archive/v$version/$name-$version.tar.gz
-	https://github.com/zxing-cpp/zxing-cpp/commit/5142600c.patch"
+source="https://github.com/nu-book/zxing-cpp/archive/v$version/$name-$version.tar.gz"
 
 build() {
-	patch -d $name-$version -p1 < 5142600c.patch
-  cmake -B build -S $name-$version \
-    -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=None \
-    -DBUILD_EXAMPLES=OFF \
-    -DBUILD_UNIT_TESTS=ON
-  cmake --build build
-  DESTDIR=$PKG cmake --install build
+	cd *
+	mkdir build &&
+	cd    build &&
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D ZXING_EXAMPLES=OFF        \
+      -W no-dev ..                 
+	make
+	make DESTDIR=$PKG install
 }

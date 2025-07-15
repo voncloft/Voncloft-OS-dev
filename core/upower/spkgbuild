@@ -1,22 +1,26 @@
 # description	: Interface to enumerating power devices, listening to device events and querying history and statistics
-# depends	: dbus-glib libgudev libusb polkit
+# depends	: dbus-glib libgudev libusb
 
 name=upower
-version=0.99.13
+version=1.90.9
 release=1
 
-source="https://gitlab.freedesktop.org/upower/upower/uploads/177df5b9f9b76f25a2ad9da41aa0c1fa/$name-$version.tar.xz"
+source="https://gitlab.freedesktop.org/upower/upower/-/archive/v$version/upower-v$version.tar.bz2"
 
 build() {
-	cd $name-$version
+	cd *
 
-	./configure --prefix=/usr \
-	            --sysconfdir=/etc \
-		    --libexecdir=/usr/lib/$name \
-	            --localstatedir=/var \
-	            --enable-deprecated \
-	            --disable-static \
-		    --disable-nls
-	make
-	make DESTDIR=$PKG install
+	mkdir build &&
+	cd    build &&
+
+	meson setup ..                   \
+      --prefix=/usr              \
+      --buildtype=release        \
+      -D gtk-doc=false           \
+      -D man=false               \
+      -D systemdsystemunitdir=no \
+      -D udevrulesdir=/usr/lib/udev/rules.d &&
+	ninja
+
+	DESTDIR=$PKG ninja install
 }

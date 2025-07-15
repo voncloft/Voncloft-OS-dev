@@ -1,5 +1,5 @@
 # description	: Set of plug-ins that aren't up to par compared to the rest
-# depends	: gst-plugins-base libdvdread libdvdnav llvm soundtouch meson
+# depends	: gst-plugins-base libdvdread libdvdnav libva soundtouch
 
 name=gst-plugins-bad
 version=1.26.3
@@ -14,9 +14,7 @@ build() {
 
         meson \
 		--prefix=/usr \
-		--buildtype=release \
-		-Dgpl=enabled\
-		-Dpackage-name="GStreamer Bad Plugins $version (Voncloft Linux)"
+		-D gpl=enabled ..
 	ninja
 	DESTDIR=$PKG ninja install
 }

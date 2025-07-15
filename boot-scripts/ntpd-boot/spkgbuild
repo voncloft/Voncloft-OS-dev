@@ -1,0 +1,20 @@
+# description : boot script for ntp
+# depends :
+
+name=ntpd-boot
+version=12.3
+release=1
+
+source="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20250225.tar.xz"
+options="!checksum"
+
+build()
+{
+	cd *
+	make DESTDIR=$PKG install-ntpd
+
+	mkdir -pv $PKG/etc/rc.d/rc0.d
+	mkdir -pv $PKG/etc/rc.d/rc6.d
+	ln -v -sf ../init.d/setclock $PKG/etc/rc.d/rc0.d/K46setclock &&
+	ln -v -sf ../init.d/setclock $PKG/etc/rc.d/rc6.d/K46setclock
+}

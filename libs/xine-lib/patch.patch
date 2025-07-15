@@ -1,0 +1,12 @@
+--- a/src/input/input_file.c
++++ b/src/input/input_file.c
+@@ -737,7 +737,8 @@
+     }
+ 
+     if (!sort_disabled) {
+-      int                 (*func) ()        = file_input_sortfiles_default;
++      int (*func)(const void *, const void *) =
++          (int (*)(const void *, const void *))file_input_sortfiles_default;
+ 
+       qsort(dir_files, num_dir_files, sizeof(xine_mrl_t), func);
+       qsort(hide_files, num_hide_files, sizeof(xine_mrl_t), func);

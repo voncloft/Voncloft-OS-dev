@@ -1,8 +1,8 @@
 # description	: A lightweight Qt-based terminal emulator
-# depends	: qt5 cmake qtermwidget
+# depends	: qt6 cmake qtermwidget
 
 name=qterminal
-version=1.3.0
+version=2.2.1
 release=1
 source="https://github.com/lxqt/$name/releases/download/$version/$name-$version.tar.xz"
 

@@ -1,0 +1,37 @@
+kquickcharts-6.13.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/KF6QuickCharts/
+-rw-r--r-- root/root    usr/lib64/cmake/KF6QuickCharts/KF6QuickChartsConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6QuickCharts/KF6QuickChartsConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6QuickCharts/KF6QuickChartsTargets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KF6QuickCharts/KF6QuickChartsTargets-release.cmake
+lrwxrwxrwx root/root    usr/lib64/libQuickChartsControls.so.1 -> libQuickChartsControls.so.6.13.0
+-rwxr-xr-x root/root    usr/lib64/libQuickChartsControls.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libQuickChartsControls.so -> libQuickChartsControls.so.1
+lrwxrwxrwx root/root    usr/lib64/libQuickCharts.so.1 -> libQuickCharts.so.6.13.0
+-rwxr-xr-x root/root    usr/lib64/libQuickCharts.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libQuickCharts.so -> libQuickCharts.so.1
+drwxr-xr-x root/root    usr/qml/
+drwxr-xr-x root/root    usr/qml/org/
+drwxr-xr-x root/root    usr/qml/org/kde/
+drwxr-xr-x root/root    usr/qml/org/kde/quickcharts/
+drwxr-xr-x root/root    usr/qml/org/kde/quickcharts/controls/
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/kde-qmlmodule.version
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/KirigamiTheme.qml
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/LegendDelegate.qml
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/Legend.qml
+-rwxr-xr-x root/root    usr/qml/org/kde/quickcharts/controls/libQuickChartsControlsplugin.so
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/LineChartControl.qml
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/PieChartControl.qml
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/qmldir
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/QuickChartsControls.qmltypes
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/controls/Theme.qml
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/kde-qmlmodule.version
+-rwxr-xr-x root/root    usr/qml/org/kde/quickcharts/libQuickChartsplugin.so
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/qmldir
+-rw-r--r-- root/root    usr/qml/org/kde/quickcharts/QuickCharts.qmltypes
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/qlogging-categories6/
+-rw-r--r-- root/root    usr/share/qlogging-categories6/kquickcharts.categories

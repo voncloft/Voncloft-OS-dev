@@ -2,10 +2,10 @@
 # depends : kde-deps kpipewire
 
 name=spectacle
-version=25.04.3
+version=6.3.4
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/6.3.4/spectacle-$version.tar.xz"
 options="!checksum"
 
 build() {

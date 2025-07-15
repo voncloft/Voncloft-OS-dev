@@ -1,5 +1,5 @@
 # description : cinnamon window manager
-# depends : cinnamon-desktop gobject-introspection libcanberra libinput libsm libxkbcommon startup-notification zenity
+# depends : cinnamon-desktop glib libcanberra libinput libsm libxkbcommon startup-notification zenity
 
 name=muffin
 version=6.4.1

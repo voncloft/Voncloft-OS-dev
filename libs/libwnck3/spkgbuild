@@ -1,5 +1,5 @@
 # description	: Window Navigator Construction Kit
-# depends	: gtk3 startup-notification gobject-introspection meson
+# depends	: gtk3 startup-notification glib meson
 
 name=libwnck3
 version=3.36.0

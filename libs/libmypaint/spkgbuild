@@ -1,5 +1,5 @@
 # description	: Library for making brushstrokes which is used by MyPaint and other projects
-# depends	: json-c glib gobject-introspection intltool
+# depends	: json-c glib glib intltool
 
 name=libmypaint
 version=1.6.1

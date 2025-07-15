@@ -1,5 +1,5 @@
 # description	: Server and user space API to deal with multimedia
-# depends	: meson alsa-lib gstreamer ffmpeg dbus gst-plugins-base bluez sbc jack
+# depends	: meson alsa-lib gstreamer ffmpeg dbus gst-plugins-base bluez sbc
 
 name=pipewire
 version=1.4.6
@@ -19,6 +19,15 @@ build() {
         #      -Dexamples=false \
 	#      -Dpipewire-pulseaudio=false
 	meson --prefix=/usr --buildtype=release -Dsession-managers= ..
+	ninja
+	DESTDIR=$PKG ninja install
+
+	cd..
+	mkdir build32
+	cd build32
+CC="gcc -m32"
+CCX="g++ -m32"
+	meson .. --libdir=/usr/lib32 --prefix=/usr --buildtype=/release -DSession=managers=
 	ninja
 	DESTDIR=$PKG ninja install
 }

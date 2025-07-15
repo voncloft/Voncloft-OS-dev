@@ -2,7 +2,7 @@
 # depends	: glib gnutls gsettings-desktop-schemas make-ca p11-kit meson
 
 name=glib-networking
-version=2.66.0
+version=2.80.1
 release=1
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
 
@@ -12,9 +12,11 @@ build() {
 	mkdir build
 	cd build
 
-	meson --prefix=/usr            \
-	      -Dlibproxy_support=false \
-	      -Dpkcs11_support=true
+	meson setup             \
+   --prefix=/usr        \
+   --buildtype=release  \
+   -D libproxy=disabled \
+   .. 
 	ninja
 	DESTDIR=$PKG ninja install
 }

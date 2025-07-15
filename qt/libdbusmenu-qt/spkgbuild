@@ -1,5 +1,5 @@
 # description : libdbusmenu-qt
-# depends : qt5
+# depends : qt6
 
 name=libdbusmenu-qt
 version=0.9.3

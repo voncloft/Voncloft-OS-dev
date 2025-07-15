@@ -1,5 +1,5 @@
 # description	: A Pulseaudio mixer in Qt (port of pavucontrol)
-# depends	: qt5 cmake pulseaudio
+# depends	: qt6 cmake pulseaudio
 
 name=pavucontrol-qt
 version=1.3.0

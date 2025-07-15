@@ -11,7 +11,7 @@ options="!checksum"
 build()
 {
 	cd *
-	./configure --prefix=/usr
+	./configure --prefix=/usr --enable-static --enable-shared
 make
 make DESTDIR=$PKG install
 }

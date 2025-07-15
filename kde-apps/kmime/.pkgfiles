@@ -1,0 +1,38 @@
+kmime-25.04.3-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KPim6/
+drwxr-xr-x root/root    usr/include/KPim6/KMime/
+drwxr-xr-x root/root    usr/include/KPim6/KMime/kmime/
+drwxr-xr-x root/root    usr/include/KPim6/KMime/KMime/
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/Content
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/content.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/ContentIndex
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/contentindex.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/HeaderParsing
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/headerparsing.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/Headers
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/headers.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/kmime_export.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/MDN
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/mdn.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/Message
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/message.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/Types
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/types.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/KMime/Util
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime/util.h
+-rw-r--r-- root/root    usr/include/KPim6/KMime/kmime_version.h
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/KPim6Mime/
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Mime/KPim6MimeConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Mime/KPim6MimeConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Mime/KPim6MimeTargets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Mime/KPim6MimeTargets-release.cmake
+-rwxr-xr-x root/root    usr/lib64/libKPim6Mime.so.6.4.3
+lrwxrwxrwx root/root    usr/lib64/libKPim6Mime.so.6 -> libKPim6Mime.so.6.4.3
+lrwxrwxrwx root/root    usr/lib64/libKPim6Mime.so -> libKPim6Mime.so.6
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/qlogging-categories6/
+-rw-r--r-- root/root    usr/share/qlogging-categories6/kmime.categories

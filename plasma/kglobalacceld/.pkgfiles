@@ -1,0 +1,29 @@
+kglobalacceld-6.3.4-1
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/xdg/
+drwxr-xr-x root/root    etc/xdg/autostart/
+-rw-r--r-- root/root    etc/xdg/autostart/kglobalacceld.desktop
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KGlobalAccelD/
+-rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalacceld_export.h
+-rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalacceld.h
+-rw-r--r-- root/root    usr/include/KGlobalAccelD/kglobalaccel_interface.h
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/KGlobalAccelD/
+-rw-r--r-- root/root    usr/lib64/cmake/KGlobalAccelD/KGlobalAccelDConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KGlobalAccelD/KGlobalAccelDConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KGlobalAccelD/KGlobalAccelDTargets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KGlobalAccelD/KGlobalAccelDTargets-release.cmake
+lrwxrwxrwx root/root    usr/lib64/libKGlobalAccelD.so.0 -> libKGlobalAccelD.so.6.3.4
+-rwxr-xr-x root/root    usr/lib64/libKGlobalAccelD.so.6.3.4
+drwxr-xr-x root/root    usr/libexec/
+-rwxr-xr-x root/root    usr/libexec/kglobalacceld
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/plasma-kglobalaccel.service
+drwxr-xr-x root/root    usr/plugins/
+drwxr-xr-x root/root    usr/plugins/org.kde.kglobalacceld.platforms/
+-rwxr-xr-x root/root    usr/plugins/org.kde.kglobalacceld.platforms/KGlobalAccelDXcb.so

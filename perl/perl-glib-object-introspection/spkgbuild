@@ -1,5 +1,5 @@
 # description : Dynamically create Perl language bindings
-# depends : glib-perl gobject-introspection-runtime
+# depends : glib-perl glib-runtime
 
 name=perl-glib-object-introspection
 version=0.049

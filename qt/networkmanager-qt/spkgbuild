@@ -1,16 +1,26 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : networkmanager
 
 name=networkmanager-qt
-version=5.106.0
+version=6.13.0
 release=1
 
-source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
+source="https://download.kde.org/stable/frameworks/6.13/networkmanager-qt-6.13.0.tar.xz"
 options="!checksum"
 
 build() {
    cd $name-$version
-   kf5-package-installer
-   cd build
+
+      mkdir build
+      cd    build
+
+      cmake -D CMAKE_INSTALL_PREFIX=$KF6_PREFIX \
+            -D CMAKE_INSTALL_LIBEXECDIR=libexec \
+            -D CMAKE_PREFIX_PATH=$QT6DIR        \
+            -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+            -D CMAKE_BUILD_TYPE=Release         \
+            -D BUILD_TESTING=OFF                \
+            -W no-dev ..
+            make   
    make DESTDIR=$PKG install
 }

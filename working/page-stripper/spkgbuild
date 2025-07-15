@@ -1,0 +1,14 @@
+# description : strips pages from blfs so i dont have to write them
+# depends :
+
+name=page-stripper
+version=12.3
+release=1
+
+source="strip-page"
+
+build()
+{
+	mkdir -pv $PKG/usr/bin
+	install -Dm755 $SRC/strip-page $PKG/usr/bin/strip-page
+}

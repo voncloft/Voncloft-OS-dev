@@ -14,9 +14,9 @@ build() {
 
 	
 meson setup ..               \
-      --prefix=/usr          \
-      --buildtype=release    \
-      --wrap-mode=nodownload 
+	  --prefix=/usr \
+  --buildtype=release \
+  -D gl=enabled 
 	ninja
 	DESTDIR=$PKG ninja install
 }

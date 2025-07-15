@@ -1,5 +1,5 @@
 # description : Cross-platform chess database and PGN viewer
-# depends : qt5-speech qt5-svg qt5
+# depends : qt6-speech qt6-svg qt6
 
 name=chessx
 version=1.5.4

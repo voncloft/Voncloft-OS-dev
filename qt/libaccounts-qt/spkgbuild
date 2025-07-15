@@ -1,5 +1,5 @@
 # description : Qt-based client library for accessing the online accounts database
-# depends : libaccounts-glib qt5 doxygen
+# depends : libaccounts-glib qt6 doxygen
 
 name=libaccounts-qt
 version=1.16
