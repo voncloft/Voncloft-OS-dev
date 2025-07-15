@@ -27,6 +27,28 @@ meson setup ..                 \
 	ninja
 	DESTDIR=$PKG ninja install
 
+
+    cd ..
+    mkdir build32
+    cd build32
+
+    	CC="gcc -m32"
+	CCX="g++ -m32"
+
+meson setup ..                 \
+      --prefix=/usr    \
+      --libdir=/usr/lib32 \
+      -D platforms=x11,wayland \
+      -D gallium-drivers=auto \
+      -D vulkan-drivers=auto   \
+      -D egl=enabled \
+      -D glvnd=disabled \
+      -D valgrind=disabled     \
+      -D video-codecs=all      \
+      -D libunwind=disabled
+        ninja
+        DESTDIR=$PKG ninja install
+
 	# indirect rendering symlink
 	#ln -s libGLX_mesa.so.0 $PKG/usr/lib/libGLX_indirect.so.0
 }
