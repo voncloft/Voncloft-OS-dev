@@ -1,0 +1,16 @@
+# description : strips pages from blfs so i dont have to write them
+# depends : page-stripper
+
+name=book-stripper
+version=12.3
+release=1
+
+source="book-stripper index getbook"
+
+build()
+{
+	mkdir -pv $PKG/usr/bin
+	install -Dm755 $SRC/book-stripper $PKG/usr/bin/book-stripper
+	install -Dm755 $SRC/index $PKG/usr/bin/index
+	install -Dm755 $SRC/getbook $PKG/usr/bin/getbook
+}

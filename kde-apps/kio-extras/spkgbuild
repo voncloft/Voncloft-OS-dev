@@ -2,9 +2,9 @@
 # depends       : kf-depends kdsoap-ws-discovery-client libproxy plasma-activities-stats qcoro libkexiv2 solid kio syntax-highlighting kcmutils ktextwidgets
 
 name=kio-extras
-version=25.07.8
+version=24.12.3
 release=1
-source=" https://github.com/KDE/kio-extras/archive/refs/tags/v25.07.80.tar.gz"
+source="https://download.kde.org/stable/release-service/24.12.3/src/kio-extras-$version.tar.xz"
 options="!checksum"
 
 build() {

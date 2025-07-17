@@ -1,37 +1,27 @@
-# description	: QtWebEngine integrates chromium's web capabilities into Qt
-# depends	: qt6 nss python libwebp libxslt opus ninja ffmpeg alsa-lib libxcomposite libxtst
+# description   : QtWebEngine integrates chromium's web capabilities into Qt
+# depends       : cups html5lib nodejs nss pciutils qt6 alsa-lib pulseaudio ffmpeg icu libevent libwebp libxslt opus pipewire
 
 name=qtwebengine
-version=6.9.1
+version=6.9.1    
 release=1
+source="https://download.qt.io/official_releases/qt/6.9/6.9.1/submodules/qtwebengine-everywhere-src-6.9.1.tar.xz"
 
-source="https://anduin.linuxfromscratch.org/BLFS/$name/$name-$version.tar.xz
-	https://www.linuxfromscratch.org/patches/blfs/svn/qtwebengine-$version-build_fixes-1.patch"
+options="!checksum"
 
 build() {
-	cd $name-$version
-	patch -Np1 -i $SRC/qtwebengine-$version-build_fixes-1.patch
-
-	
-
-	mkdir -pv .git src/3rdparty/chromium/.git
-	sed -e '/^MODULE_VERSION/s/5.*/5.15.2/' -i .qmake.conf
-	
-	find -type f -name "*.pr[io]" |
-	  xargs sed -i -e 's|INCLUDEPATH += |&$$QTWEBENGINE_ROOT/include |'
-
-	  
-	sed -e '/link_pulseaudio/s/false/true/' \
-    		-i src/3rdparty/chromium/media/media_options.gni
-
-	sed -i 's/NINJAJOBS/NINJA_JOBS/' src/core/gn_run.pro
-
-	mkdir build &&
-	cd    build &&
-
-	qmake .. -- -system-ffmpeg -webengine-icu
-	make
-	make INSTALL_ROOT=$PKG install
-		
+        cd *
+        mkdir build 
+cd    build 
+cmake -D CMAKE_MESSAGE_LOG_LEVEL=STATUS             \
+-D CMAKE_PREFIX_PATH=/usr/lib \
+-D QT_FEATURE_webengine_system_ffmpeg=ON      \
+-D QT_FEATURE_webengine_system_icu=ON         \
+-D QT_FEATURE_webengine_system_libevent=ON    \
+-D QT_FEATURE_webengine_proprietary_codecs=ON \
+-D QT_FEATURE_webengine_webrtc_pipewire=ON    \
+-D QT_BUILD_EXAMPLES_BY_DEFAULT=OFF           \
+-D QT_GENERATE_SBOM=OFF                       \
+-G Ninja ..                                   
+ninja
+DESTDIR=$PKG ninja install
 }
-

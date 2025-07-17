@@ -1,0 +1,23 @@
+# description : qt keychain for qt6
+# dpepends : qt6 libsecret
+
+name=qtkeychain
+version=0.15.0
+release=1
+
+source="https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/0.15.0.tar.gz"
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake .. \
+	-D CMAKE_INSTALL_PREFIX=/usr \
+	-D BUILD_WITH_QT6=ON \
+	-D BUILD_WITH_QT5=OFF \
+	-D CMAKE_BUILD_TYPE=Release
+
+	make
+	make DESTDIR=$PKG install
+}

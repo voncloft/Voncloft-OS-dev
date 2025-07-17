@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop
-# depends : kde-deps akonadi-mime kcalutils akonadi akonadi-calendar akonadi-notes 
+# depends : kde-deps akonadi-mime kcalutils akonadi akonadi-calendar 
 
 name=calendarsupport
 version=25.04.3

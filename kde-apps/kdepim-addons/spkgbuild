@@ -1,5 +1,4 @@
 # description : Core components for the kde desktop
-# depends : kde-deps  messagelib  incidenceeditor libksieve kpkpass kitinerary qtwebengine ktnef kontactinterface kaddressbook
 
 name=kdepim-addons
 version=25.04.3

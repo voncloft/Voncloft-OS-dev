@@ -17,4 +17,10 @@ build() {
 	./configure --prefix=/usr --enable-freetype-config --disable-static
 	make
 	make DESTDIR=$PKG install
+
+	make distclean
+
+	CC="gcc -m32" ./configure --prefix=/usr --enable-freetype-config --disable-static 
+	
+		
 }

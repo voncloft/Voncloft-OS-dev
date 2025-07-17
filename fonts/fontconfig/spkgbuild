@@ -17,13 +17,5 @@ build() {
 	make
 	make DESTDIR=$PKG install
 
-	make distclean
-        CC="gcc -m32 CCX=g++ -m32" ./configure \
-    --prefix=/usr                 \
-    --libdir=/usr/lib32           \
-    make
-    mkdir -pv $PKG/usr/lib32
-    make DESTDIR=$PWD/DESTDIR install
-    cp -Rv DESTDIR/usr/lib32/* /usr/lib32
 
 }

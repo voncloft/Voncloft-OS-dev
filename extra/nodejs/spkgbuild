@@ -1,21 +1,23 @@
-# description	: JavaScript runtime built on Chrome's V8 JavaScript engine
-# depends	: c-ares icu python libuv zlib
+# description   : Node
+# depends       : which brotli c-ares icu libuv nghttp2
 
 name=nodejs
-version=14.16.1
+version=22.17.0    
 release=1
-source="https://nodejs.org/dist/v$version/node-v$version.tar.xz"
+source="https://nodejs.org/dist/v22.17.0/node-v22.17.0.tar.xz"
+
 options="!checksum"
+
 build() {
-	cd node-v$version
-
-	./configure \
-		--prefix=/usr \
-		--shared-cares \
-		--shared-zlib \
-		--shared-libuv \
-		--with-intl=system-icu
-	make
-	make DESTDIR=$PKG install
+	cd *
+        ./configure --prefix=/usr          \
+--shared-brotli        \
+--shared-cares         \
+--shared-libuv         \
+--shared-openssl       \
+--shared-nghttp2       \
+--shared-zlib          \
+--with-intl=system-icu 
+make
+make DESTDIR=$PKG install 
 }
-

@@ -14,13 +14,4 @@ build() {
 	ninja
 	DESTDIR=$PKG ninja install
 
-	cd ..
-	mkdir build32
-	cd build32
-	CC="gcc -m32"
-	CCX="g++ -m32"
-
-	meson .. --libdir=/usr/lib32
-	ninja
-	DESTDIR=$PKG ninja install
 }

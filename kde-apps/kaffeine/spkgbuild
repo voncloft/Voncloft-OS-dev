@@ -1,0 +1,16 @@
+# description : Core components for the kde desktop
+# depends : kde-deps
+
+name=kaffeine
+version=2.0.19
+release=1
+
+source="kaffeine.tar.xz"
+options="!checksum"
+
+build() {
+   cd *
+   plasma-package-installer
+  cd build
+  make DESTDIR=$PKG install
+}

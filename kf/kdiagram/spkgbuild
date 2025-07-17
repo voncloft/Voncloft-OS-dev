@@ -1,7 +1,7 @@
 # description : create business diagrams
 
 name=kdiagram
-version=2.8.0
+version=3.0.1
 release=1
 
 source="https://download.kde.org/stable/$name/$version/$name-$version.tar.xz"
@@ -9,8 +9,7 @@ source="https://download.kde.org/stable/$name/$version/$name-$version.tar.xz"
 build()
 {
 	cd $name-$version
-	mkdir build
+	kf-package-installer
 	cd build
-	cmake ..
 	make DESTDIR=$PKG install
 }

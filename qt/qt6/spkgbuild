@@ -32,7 +32,6 @@ build() {
             -syslog                 \
             -skip qt3d              \
             -skip qtquick3dphysics  \
-            -skip qtwebengine  \
             Clang_DIR=/usr/lib/cmake/clang\
             LLVM_DIR=/usr/lib/cmake/llvm \
             QT_AVOID_CMAKE_ARCHIVING_API=ON

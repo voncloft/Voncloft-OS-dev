@@ -1,0 +1,19 @@
+# description : bindings for qt
+# depends :
+
+name=qgpgme-qt
+version=2.0.0
+release=1
+
+source="https://gnupg.org/ftp/gcrypt/qgpgme/qgpgme-2.0.0.tar.xz"
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake .. \
+		-D CMAKE_INSTALL_PREFIX=/usr
+	make
+	make DESTDIR=$PKG install
+}

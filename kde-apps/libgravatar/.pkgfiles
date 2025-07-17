@@ -1,0 +1,34 @@
+libgravatar-25.04.3-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/KPim6/
+drwxr-xr-x root/root    usr/include/KPim6/Gravatar/
+drwxr-xr-x root/root    usr/include/KPim6/Gravatar/gravatar/
+drwxr-xr-x root/root    usr/include/KPim6/Gravatar/Gravatar/
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/Gravatar/GravatarCache
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar/gravatarcache.h
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/Gravatar/GravatarConfigureSettingsDialog
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar/gravatarconfiguresettingsdialog.h
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/Gravatar/GravatarConfigureSettingsWidget
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar/gravatarconfiguresettingswidget.h
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/Gravatar/GravatarDownloadPixmapWidget
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar/gravatardownloadpixmapwidget.h
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar/gravatar_export.h
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/Gravatar/GravatarResolvUrlJob
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar/gravatarresolvurljob.h
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar/gravatarsettings.h
+-rw-r--r-- root/root    usr/include/KPim6/Gravatar/gravatar_version.h
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/KPim6Gravatar/
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Gravatar/KPim6GravatarConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Gravatar/KPim6GravatarConfigVersion.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Gravatar/KPim6GravatarTargets.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KPim6Gravatar/KPim6GravatarTargets-release.cmake
+-rwxr-xr-x root/root    usr/lib64/libKPim6Gravatar.so.6.4.3
+lrwxrwxrwx root/root    usr/lib64/libKPim6Gravatar.so.6 -> libKPim6Gravatar.so.6.4.3
+lrwxrwxrwx root/root    usr/lib64/libKPim6Gravatar.so -> libKPim6Gravatar.so.6
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/qlogging-categories6/
+-rw-r--r-- root/root    usr/share/qlogging-categories6/libgravatar.categories
+-rw-r--r-- root/root    usr/share/qlogging-categories6/libgravatar.renamecategories

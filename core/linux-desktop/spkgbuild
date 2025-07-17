@@ -32,7 +32,8 @@ build()
 	#echo $kernver > $PKG/lib/modules/KERNELVERSION
 	echo $version > $PKG/lib/modules/KERNELVERSION
 	#rm -rf $PKG/lib/firmware
-
+	mkdir -pv $PKG/usr/src/linux
+	cp -rv * $PKG/usr/src/linux
 	#for file in $(ls arch); do
 	#	case $file in
 	#		x86|Kconfig) continue ;;

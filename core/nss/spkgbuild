@@ -32,42 +32,4 @@ cp -v -RL {public,private}/nss/*              $PKG/usr/include/nss
 install -v -m755 Linux*/bin/{certutil,nss-config,pk12util} $PKG/usr/bin 
 install -v -m644 Linux*/lib/pkgconfig/nss.pc  $PKG/usr/lib/pkgconfig
 ln -sfv ./pkcs11/p11-kit-trust.so $PKG/usr/lib/libnssckbi.so
-
-
-
-CC="gcc -m32"
-CCX="g++ -m32"
-cd ../nss
-make distclean
-
-make BUILD_OPT=1                            \
-  NSPR_INCLUDE_DIR=/usr/include/nspr        \
-  USE_SYSTEM_ZLIB=1                         \
-  ZLIB_LIBS=-lz                             \
-  NSS_ENABLE_WERROR=0                       \
-  CC="gcc -m32"                             \
-  CXX="g++ -m32"                            \
-  CFLAGS="-m32"                             \
-  CXXFLAGS="-m32"                           \
-  LDFLAGS="-m32"                            \
-  $( [ -f /usr/include/sqlite3.h ] && echo NSS_USE_SYSTEM_SQLITE=1 )
-
-  mkdir -pv $PKG/usr/lib32
-  cd ../dist &&
-
-# Install 32-bit shared libraries
-install -v -m755 Linux*/lib/*.so              $PKG/usr/lib32 &&
-
-# Install .chk files and static library (32-bit)
-install -v -m644 Linux*/lib/{*.chk,libcrmf.a} $PKG/usr/lib32 &&
-
-# Install NSS headers (same for both 32/64-bit builds)
-#install -v -m755 -d                           $PKG/usr/include/nss &&
-#cp -v -RL {public,private}/nss/*              $PKG/usr/include/nss &&
-
-# Install 32-bit NSS tools (shared between archs)
-#install -v -m755 Linux*/bin/{certutil,nss-config,pk12util} $PKG/usr/bin &&
-
-# Install 32-bit pkg-config file
-install -v -m644 Linux*/lib/pkgconfig/nss.pc  $PKG/usr/lib32/pkgconfig
 }

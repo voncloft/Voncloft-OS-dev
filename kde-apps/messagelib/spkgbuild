@@ -1,5 +1,6 @@
 # description : Core components for the kde desktop
-# depends : kde-deps libgravatar kmbox
+# depends : akonadi-contacts akonadi-mime akonadi-search karchive kcalendarcore kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcontacts kcoreaddons kguiaddons ki18n kiconthemes kidentitymanagement
+# depends : kio kitemmodels kitemviews kjobwidgets kmailtransport kmbox kmime kpimtextedit kservice ktextaddons ktexttemplate ktextwidgets kwidgetsaddons kxmlgui
 
 name=messagelib
 version=25.04.3
