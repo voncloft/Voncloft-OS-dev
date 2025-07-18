@@ -1,0 +1,24 @@
+# description	: Utility and a library used for transferring files
+# depends	: make-ca openssl zlib libpsl-32 brotli-32
+
+name=curl-32
+version=8.14.1
+release=1
+source="https://curl.haxx.se/download/curl-$version.tar.xz"
+options="!checksum"
+build() {
+	cd *
+
+	CFLAGS="-m32" LDFLAGS="-m32" ./configure --prefix=/usr              \
+	--disable-static           \
+	--libdir=/usr/lib32 \
+        --enable-threaded-resolver \
+        --with-openssl \
+        --without-libssh2 \
+        --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
+                    
+	make
+        make DESTDIR=$PWD/DESTDIR install
+        mkdir -p $PKG/usr/lib32
+        cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+}

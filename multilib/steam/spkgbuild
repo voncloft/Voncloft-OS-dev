@@ -1,5 +1,5 @@
 # description	: Valve's digital software delivery system
-# depends : xorgproto-32 xcb-proto-32 libxau-32 libx11-32 libxshmfence-32 xdg-user-dirs lsof
+# depends : xorgproto-32 xcb-proto-32 libxau-32 libx11-32 libxshmfence-32 xdg-user-dirs lsof curl-32
 
 name=steam
 version=1.0.0.83

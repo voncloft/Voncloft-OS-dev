@@ -1,0 +1,19 @@
+# description	: Library for accessing and resolving information from the Public Suffix List
+# depends	: libidn2-32 libunistring-32 libiconv-32
+
+name=libpsl-32
+version=0.21.5
+release=1
+source="https://github.com/rockdaboot/libpsl/releases/download/$version/libpsl-$version.tar.gz"
+
+build() {
+	cd *
+	
+	sed -i 's/env python/&3/' src/psl-make-dafsa
+	LIBS="-liconv"
+	CFLAGS="-m32" LDFLAGS="-m32" ./configure --prefix=/usr --disable-static --libdir=/usr/lib32
+	make
+	        make DESTDIR=$PWD/DESTDIR install
+        mkdir -p $PKG/usr/lib32
+        cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+}

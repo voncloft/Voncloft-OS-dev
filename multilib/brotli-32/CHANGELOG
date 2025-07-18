@@ -1,8 +1,8 @@
 Date: Mon 21 Aug 2023 04:04:41 PM EDT
 
-brotli-32
+brotli
 Version=1.1.0
-Release=1
+Release=4
 
 Synopsis:
 Added Changelog to package

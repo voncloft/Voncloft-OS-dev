@@ -1,0 +1,20 @@
+# description : blah
+# depends :
+
+name=libiconv-32
+version=1.18
+release=1
+
+source="https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.18.tar.gz"
+options="!checksum"
+
+build()
+{
+	cd *
+	CFLAGS="-m32" LDFLAGS="-m32" ./configure --prefix=/usr --libdir=/usr/lib32 --enable-static --enable-shared
+	make
+        make DESTDIR=$PWD/DESTDIR install
+        mkdir -p $PKG/usr/lib32
+        cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+
+}

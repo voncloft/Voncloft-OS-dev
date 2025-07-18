@@ -1,0 +1,16 @@
+# description	: Free software implementation of IDNA2008, Punycode and TR46
+# depends	: libunistring-32
+
+name=libidn2-32
+version=2.3.8
+release=1
+source="https://ftp.gnu.org/gnu/libidn/libidn2-$version.tar.gz"
+
+build() {
+	cd *
+	CFLAGS="-m32" LDFLAGS="-m32" ./configure --prefix=/usr --libdir=/usr/lib32 --disable-nls --disable-doc
+	make
+        make DESTDIR=$PWD/DESTDIR install
+        mkdir -p $PKG/usr/lib32
+        cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+}
