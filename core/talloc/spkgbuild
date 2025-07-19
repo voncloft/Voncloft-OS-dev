@@ -1,0 +1,16 @@
+# description   : Talloc provides a hierarchical, reference counted memory pool system with destructors
+# depends       : 
+
+name=talloc
+version=2.4.3    
+release=1
+source="https://www.samba.org/ftp/talloc/talloc-2.4.3.tar.gz"
+
+options="!checksum"
+
+build() {
+        cd $name-$version
+        ./configure --prefix=/usr 
+make
+make DESTDIR=$PKG install
+}
