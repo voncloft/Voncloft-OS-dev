@@ -1,17 +1,22 @@
-# description	: Tools for archiving
+# description   : The cpio package contains tools for archiving
+# depends       : 
 
 name=cpio
-version=2.15
-release=2
-source="https://ftp.gnu.org/gnu/cpio/$name-$version.tar.bz2"
+version=2.15    
+release=1
+source="https://ftp.gnu.org/gnu/cpio/cpio-2.15.tar.bz2"
+
+options="!checksum"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr \
-	            --bindir=/bin \
-	            --enable-mt   \
-		    --disable-nls \
-	            --with-rmt=/usr/lib/tar/rmt
-	make
-	make DESTDIR=$PKG install
+        cd $name-$version
+        sed -e "/^extern int (\*xstat)/s/()/(const char * restrict,  struct stat * restrict)/" \
+-i src/extern.h
+sed -e "/^int (\*xstat)/s/()/(const char * restrict,  struct stat * restrict)/" \
+-i src/global.c
+./configure --prefix=/usr \
+--enable-mt   \
+--with-rmt=/usr/libexec/rmt 
+make
+make DESTDIR=$PKG install
 }

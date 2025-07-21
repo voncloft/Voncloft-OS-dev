@@ -1,15 +1,63 @@
 # description : headless java server
-# depends : 
+# depends : alsa-lib cups giflib lcms2 xorg-libraries
 
 name=java-headless
-version=8
-release=u341
+version=24.0.1
+release=9
 
-source="https://github.com/frekele/oracle-java/releases/download/$version$release-b10/jre-$version$release-linux-x64.tar.gz"
+source="https://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-$version/OpenJDK-$version+$release-x86_64-bin.tar.xz"
 options="!checksum"
 
 build() {
-	mkdir -pv $PKG/opt/java
-	cd jre1.8.0_212
-	mv * $PKG/opt/java
+	cd *
+	mkdir -pv $PKG/etc/profile.d
+cat > /etc/profile.d/openjdk.sh << "EOF"
+# Begin /etc/profile.d/openjdk.sh
+
+# Set JAVA_HOME directory
+JAVA_HOME=/opt/jdk
+
+# Adjust PATH
+pathappend $JAVA_HOME/bin
+
+# Auto Java CLASSPATH: Copy jar files to, or create symlinks in, the
+# /usr/share/java directory.
+
+AUTO_CLASSPATH_DIR=/usr/share/java
+
+pathprepend . CLASSPATH
+
+for dir in `find ${AUTO_CLASSPATH_DIR} -type d 2>/dev/null`; do
+    pathappend $dir CLASSPATH
+done
+
+for jar in `find ${AUTO_CLASSPATH_DIR} -name "*.jar" 2>/dev/null`; do
+    pathappend $jar CLASSPATH
+done
+
+export JAVA_HOME
+
+# By default, Java creates several files in a directory named
+# /tmp/hsperfdata_[username]. This directory contains files that are used for
+# performance monitoring and profiling, but aren't normally needed on a BLFS
+# system. This environment variable disables that feature.
+_JAVA_OPTIONS="-XX:-UsePerfData"
+
+export _JAVA_OPTIONS
+
+unset AUTO_CLASSPATH_DIR dir jar _JAVA_OPTIONS
+
+# End /etc/profile.d/openjdk.sh
+EOF
+	mkdir -pv $PKG/etc/sudoers.d
+cat > $PKG/etc/sudoers.d/java << "EOF"
+Defaults env_keep += JAVA_HOME
+Defaults env_keep += CLASSPATH
+Defaults env_keep += _JAVA_OPTIONS
+EOF
+	
+	mkdir -pv $PKG/opt/OpenJDK-$version-bin
+	mv * -v $PKG/opt/OpenJDK-$version-bin
+	chown -R root:root $PKG/opt/OpenJDK-$version-bin
+	ln -sfn OpenJDK-$version-$bin $PKG/opt/jdk
 }

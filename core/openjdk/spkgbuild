@@ -1,0 +1,73 @@
+# description   : OpenJDK is an open-source implementation of Oracle's Java Standard Edition platform
+# depends       : java-headlessalsa-lib cpio cups libarchive which xorg-libraries zip make-ca giflib harfbuzz lcms2 libjpeg-turbo libpng wget
+
+name=openjdk
+version=23.0.2    
+release=1
+source="https://github.com/openjdk/jdk24u/archive/jdk-24.0.1-ga.tar.gz
+	https://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-24.0.1/jtreg-7.5.1+1.tar.gz"
+options="!checksum"
+
+build() {
+        cd jdk24u-*
+export JAVA_HOME=/opt/jdk
+export MAKEFLAGS_HOLD=$MAKEFLAGS           
+unset  JAVA_HOME                           
+unset  CLASSPATH                           
+unset  MAKEFLAGS 
+#mkdir -pv $PKG/jtreg                          
+export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+bash configure --enable-unlimited-crypto    \
+--disable-warnings-as-errors \
+--with-stdc++lib=dynamic     \
+--with-giflib=system         \
+--with-harfbuzz=system       \
+--with-jtreg=$SRC/jtreg      \
+--with-lcms=system           \
+--with-libjpeg=system        \
+--with-libpng=system         \
+--with-zlib=system           \
+--with-version-build="9"     \
+--with-version-pre=""        \
+--with-version-opt=""        \
+--with-jobs= \
+--with-boot-jdk=/opt/OpenJDK-24.0.1-bin \
+--with-cacerts-file=/etc/pki/tls/java/cacerts 
+make DESTDIR=$PKG images
+
+install -vdm755 $PKG/opt/jdk-24.0.1+9             
+cp -Rv build/*/images/jdk/* $PKG/opt/jdk-24.0.1+9 
+chown -R root:root $PKG/opt/jdk-24.0.1+9          
+for s in 16 24 32 48; do
+mkdir -pv $PKG/usr/share/icons/hicolor
+install -vDm644 src/java.desktop/unix/classes/sun/awt/X11/java-icon${s}.png \
+$PKG/usr/share/icons/hicolor/${s}x${s}/apps/java.png
+done
+ln -v -nsf jdk-24.0.1+9 $PKG/opt/jdk
+mkdir -pv $PKG/usr/share/applications 
+cat > $PKG/usr/share/applications/openjdk-java.desktop << "EOF" 
+[Desktop Entry]
+Name=OpenJDK Java 24.0.1 Runtime
+Comment=OpenJDK Java 24.0.1 Runtime
+Exec=/opt/jdk/bin/java -jar
+Terminal=false
+Type=Application
+Icon=java
+MimeType=application/x-java-archive;application/java-archive;application/x-jar;
+NoDisplay=true
+EOF
+cat > $PKG/usr/share/applications/openjdk-jconsole.desktop << "EOF"
+[Desktop Entry]
+Name=OpenJDK Java 24.0.1 Console
+Comment=OpenJDK Java 24.0.1 Console
+Keywords=java;console;monitoring
+Exec=/opt/jdk/bin/jconsole
+Terminal=false
+Type=Application
+Icon=java
+Categories=Application;System;
+EOF
+ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts
+cd /opt/jdk
+bin/keytool -list -cacerts
+}

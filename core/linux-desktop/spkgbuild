@@ -15,10 +15,11 @@ build()
 	cp $SRC/.config .
 	make menuconfig
 	make -j9
+	mkdir $PKG/usr
 	make INSTALL_MOD_PATH=$PKG modules_install
 	mkdir $PKG/boot
 	cp  arch/x86/boot/bzImage $PKG/boot/vmlinuz-$version
-	cp System.map $PGK/boot/System.map
+	cp System.map $PKG/boot/System.map
 	cp .config $PKG/boot/config-$version
 	make INSTALL_PATH=$PKG install
 	#periods="${version//[^.]}"

@@ -1,0 +1,116 @@
+--- unzip60/crc32.c	2008-04-13 20:36:00.000000000 +0000
++++ unzip60/crc32.c	2025-07-19 19:38:00.000000000 +0000
+@@ -677,7 +677,7 @@
+  *  run, we wouldn't need this.  (Sigh...)  --Zerksis Umrigar, June 1990
+  */
+ 
+-ulg crc32(crc, buf, len)
++ulg crc32(ulg crc, ZCONST uch *buf, extent len)
+     register ulg crc;           /* crc shift register */
+     ZCONST uch *buf;            /* pointer to bytes to pump through */
+     extent len;                 /* number of bytes in buf[] */
+--- unzip60/crypt.c	2008-04-13 20:36:00.000000000 +0000
++++ unzip60/crypt.c	2025-07-19 19:38:00.000000000 +0000
+@@ -160,7 +160,7 @@
+  *  is used in decrypt() to retrieve the encrypted header bytes.
+  */
+ 
+-int update_keys(__G__ c)
++int update_keys(__G__ int c)
+     __GDEF
+     int c;                      /* input byte */
+ {
+@@ -180,7 +180,7 @@
+  *  is used in decrypt() to initialize the set of decryption keys.
+  */
+ 
+-void init_keys(__G__ passwd)
++void init_keys(__G__ ZCONST char *passwd)
+     __GDEF
+     ZCONST char *passwd;        /* password string with which to modify keys */
+ {
+@@ -450,7 +450,7 @@
+  *  Returns a 0 if the password could be the real one, and 1 if not.
+  */
+ 
+-int decrypt(__G__ passwrd)
++int decrypt(__G__ ZCONST char *passwrd)
+     __GDEF
+     ZCONST char *passwrd;       /* password to test */
+ {
+@@ -526,7 +526,7 @@
+ /* Check the 12 bytes of the encrypted header.  Return 0 if the password
+  * looks good, non-zero if not. */
+ 
+-local int testp(__G__ h)
++local int testp(__G__ uch *h)
+     __GDEF
+     uch *h;                     /* pointer to encrypted header */
+ {
+@@ -581,7 +581,7 @@
+  *  Returns 0 if password OK, 1 if bad or error.
+  */
+ 
+-local int testkey(__G__ h, key)
++local int testkey(__G__ uch *h, ush key)
+     __GDEF
+     uch *h;                     /* pointer to encrypted header */
+     ush key;                    /* decrypted key value to test */
+--- unzip60/unzip.c	2008-04-13 20:36:00.000000000 +0000
++++ unzip60/unzip.c	2025-07-19 19:38:00.000000000 +0000
+@@ -711,7 +711,7 @@
+  *  Return PK-type error code (0 if no error, else some non-zero value).
+  */
+ 
+-int MAIN(argc, argv)   /* return PK-type error code (except under VMS) */
++int main(int argc, char **argv)   /* return PK-type error code (except under VMS) */
+ {
+     int r;
+ 
+@@ -730,7 +730,7 @@
+  *  Return PK-type error code.
+  */
+ 
+-int unzip(__G__ argc, argv)
++int unzip(__G__ int argc, char **argv)
+     __GDEF
+     int argc;
+     char **argv;
+@@ -1324,7 +1324,7 @@
+  *  Return 0 on success, non-zero on error.
+  */
+ 
+-int uz_opts(__G__ pargc, pargv)
++int uz_opts(__G__ int *pargc, char ***pargv)
+     __GDEF
+     int *pargc;
+     char ***pargv;
+@@ -2006,7 +2006,7 @@
+  *  Return PK-type error code.
+  */
+ 
+-int usage(__G__ error)
++int usage(__G__ int error)
+     __GDEF
+     int error;
+ {
+--- unzip60/envargs.c	2008-04-13 20:36:00.000000000 +0000
++++ unzip60/envargs.c	2025-07-19 19:38:00.000000000 +0000
+@@ -46,7 +46,7 @@
+ /* Add (or replace) environment-variable argument.  (Modeled after getpwnam()
+  * and getenv() behavior.) */
+ 
+-int envargs(Pargc, Pargv, envstr, envstr2)
++int envargs(int *Pargc, char ***Pargv, char *envstr, char *envstr2)
+     int *Pargc;
+     char ***Pargv;
+     char *envstr;
+@@ -176,7 +176,7 @@
+ /* Count number of arguments in environment string, separated by envstr_delim */
+ 
+ static int count_args(s)
+-    char *s;
++    char *s; /* environment string containing arguments */
+ {
+     int n = 0;
+     char *s0 = s;
