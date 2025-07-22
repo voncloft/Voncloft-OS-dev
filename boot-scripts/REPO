@@ -1,0 +1,16 @@
+d:sddm-boot
+d:dbus-boot
+d:cups-boot
+d:fcron-boot
+d:ntpd-boot
+f:410f5c05ceed78803f0fed845e58362c:sddm-boot/.pkgfiles
+f:9ddd27b6dcacd6b2398fa22bcb249688:sddm-boot/spkgbuild
+f:410f5c05ceed78803f0fed845e58362c:dbus-boot/.pkgfiles
+f:74cd0f5477755aff0e0256cb93e16f72:dbus-boot/spkgbuild
+f:410f5c05ceed78803f0fed845e58362c:cups-boot/.pkgfiles
+f:a673bffde807c796c8a3022c7dcf8a8d:cups-boot/spkgbuild
+f:410f5c05ceed78803f0fed845e58362c:fcron-boot/.pkgfiles
+f:cb0684b6753732f1c6de45f59296faf6:fcron-boot/post-install.sh
+f:ed2871b7c68be615f15255a22bc9464c:fcron-boot/spkgbuild
+f:410f5c05ceed78803f0fed845e58362c:ntpd-boot/.pkgfiles
+f:a7704b791e926b861db3d28275fe69d7:ntpd-boot/spkgbuild

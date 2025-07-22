@@ -1,0 +1,15 @@
+d:createpackage
+d:update-rep-client
+d:update-rep-server
+d:changelog
+f:91fc7ed1bd71825c54d07ca0599aae12:createpackage/createpackage
+f:d63b1ed521386d7fba26bfbad1f6ccb3:createpackage/CHANGELOG
+f:29f3dbf28c96827457c55a15f0f20481:createpackage/spkgbuild
+f:77f0b7652386c2dfc04ea1feb8077b55:.httpup-urlinfo
+f:085705c4ad17ad80619096bee29a0bc7:update-rep-client/update-rep
+f:308cf4fe7c646610c860a26348a1f56e:update-rep-client/spkgbuild
+f:b3d3d855607110e063bd79b27cfd5187:update-rep-server/update-rep
+f:c47903d8e966c9d7c1a032becde4e5a3:update-rep-server/spkgbuild
+f:4c54b89390c33b5fbeebb32123c86fa1:changelog/changelog
+f:29f4a7d85d8315d732292ced76e3af54:changelog/spkgbuild
+f:3d654b3e3c7841e331f3d80b3d68fff3:.httpup-repo.current
