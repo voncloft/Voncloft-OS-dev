@@ -1,8 +1,12 @@
 kde6
-kde-deps-installer
 kde-deps
+kde-deps-installer
+.httpup-urlinfo
 kde6/spkgbuild
-kde-deps-installer/kf-package-installer
-kde-deps-installer/plasma-package-installer
-kde-deps-installer/spkgbuild
+kde-deps/.pkgfiles
 kde-deps/spkgbuild
+kde-deps-installer/.pkgfiles
+kde-deps-installer/plasma-package-installer
+kde-deps-installer/kf-package-installer
+kde-deps-installer/spkgbuild
+.httpup-repo.current

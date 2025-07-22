@@ -51,7 +51,7 @@ f:d1c1f1fdd1ee428b9317de9e639d7544:noto-fonts/66-noto-sans.conf
 f:cd563047bd19b512a6d82f4ec379a5a0:noto-fonts/spkgbuild
 f:c6616661c0d8232d773df854382ab242:font-daewoo-misc/CHANGELOG
 f:5a189ce4f42405f51cfc30d25a1acea9:font-daewoo-misc/spkgbuild
-f:dd5a43d224b4c53dd34c60d0b9163fbe:.httpup-urlinfo
+f:d7e06e58ce12a821ca530d3e24461277:.httpup-urlinfo
 f:be405f9109163014c352211b03531303:font-util/.pkgfiles
 f:1e9543eaac5a7c18256e4c773c2b7615:font-util/CHANGELOG
 f:5d8ad9e4a027c24f238a13497e145294:font-util/spkgbuild
@@ -92,7 +92,7 @@ f:a351b51d111efd8c6d8561d64c5278dd:awesome-font/CHANGELOG
 f:1e672020a866f439ec0869d2f4fcbe1f:awesome-font/spkgbuild
 f:e64e45f1cceb3bdda1a5f0e419252256:dejavu-fonts/.pkgfiles
 f:8d608a4440177c396ae5996e7efd353a:dejavu-fonts/spkgbuild
-f:fc62c2214d2e7836f5b84a2c842e75cd:.httpup-repo.current
+f:3304c4b0011f457c3a8a394424a2f8b7:.httpup-repo.current
 f:b140af24303778b9e6d5aa0f9e3475f0:fontconfig/.pkgfiles
 f:24a47d1a10eec714b822b39bb79d237b:fontconfig/CHANGELOG
 f:23e3953ac04325a6ae10eb980615f709:fontconfig/spkgbuild

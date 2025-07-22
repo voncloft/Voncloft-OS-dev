@@ -127,7 +127,7 @@ f:04f11f17e4e5dc36baadc0b5f93b6776:plasma-programs/spkgbuild
 f:1a3ee981fe913fdda09fff309d457e03:kwrited/.pkgfiles
 f:b117cfddbcdbbf2cf4defb817327cace:kwrited/CHANGELOG
 f:e9abb835df2a5e4e7ae631359f8b82cd:kwrited/spkgbuild
-f:00513221aaee0709af7462b927ac6b3b:.httpup-urlinfo
+f:b64fffaebc229335c055de035155a603:.httpup-urlinfo
 f:9fd5c571bbc74cd49187fbfefb3dd9aa:plymouth-kcm/CHANGELOG
 f:ecb7da429382832c382e23100a74aee0:plymouth-kcm/spkgbuild
 f:58a947a3105cf9c5af8e9b6d559da45c:ocean-sound-theme/.pkgfiles
@@ -271,7 +271,7 @@ f:a240b125e9ef13478a3d9b3d9ebf396e:polkit-kde-agent-1/CHANGELOG
 f:289b7a8853345583bae4e3afd38b75b2:polkit-kde-agent-1/spkgbuild
 f:42dbadba97361c2723c52a0ed052a59b:plasma-bigscreen/CHANGELOG
 f:3b5e7619d5558d4b8c4625b633b3fe5c:plasma-bigscreen/spkgbuild
-f:bf58385163b22bf881fa55a741d7a25c:.httpup-repo.current
+f:eb9035d8d5cf33f8b8bfe1b85790d881:.httpup-repo.current
 f:1da0cfd334c9314758a051ec5484158f:krdp/CHANGELOG
 f:1fb695618ff90abeea040436a41fa18e:krdp/spkgbuild
 f:4f3f11bb1d175f236611fb51f021fad9:kde-gtk-config/.pkgfiles

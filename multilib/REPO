@@ -115,6 +115,7 @@ f:180a66f154f120d03244340e6b6d9849:xorg-libraries-32/spkgbuild
 f:5f2e0da1e11adad5e9f61889d68979a7:libidn2-32/.pkgfiles
 f:47511f7a0be8d5324fdda19466b0130c:libidn2-32/CHANGELOG
 f:243096ac55b54fedfed3c943b511adf9:libidn2-32/spkgbuild
+f:fe18fea745c3233caf2534f860168348:libpciaccess-32/.pkgfiles
 f:4684a46d2cea252f10eeca38d8fe5c4f:libpciaccess-32/spkgbuild
 f:15dc521c89001927ed28f0320738fba9:llvm-32/CHANGELOG
 f:67c2ab496cd993232e84fb6af5a1f292:llvm-32/spkgbuild
@@ -146,7 +147,7 @@ f:00ac023b3d80a5adaccf67a121bdb477:libunistring-32/CHANGELOG
 f:89c45eb7950edcbc88556f652bf97495:libunistring-32/spkgbuild
 f:56692f8d3af93dc54174d22db2ba46ce:fontconfig-32/spkgbuild
 f:effc2d3b5c33e24378865702d41cf930:libxfont2-32/spkgbuild
-f:33ee2236f2e97cb3ca6c959ecf0a0948:.httpup-urlinfo
+f:03a846a5d1a7e9cb361d1b5d9495036b:.httpup-urlinfo
 f:2a1f7ee5caae93f78290121487f8ac6e:brotli-32/.pkgfiles
 f:b96a47100e3b97cac2d27bf44905a6d3:brotli-32/CHANGELOG
 f:12736fd8ac084195feabb8d25ae549f1:brotli-32/spkgbuild
@@ -195,7 +196,8 @@ f:bcb8b765a356d85217c3bf354cf8bb99:json-c-32/spkgbuild
 f:0b1f04c23d0114254ba46970e8bab7fa:ncurses-32/spkgbuild
 f:7dded2ea7fee414e09df245fd320f7f8:libglvnd-32/CHANGELOG
 f:74769b50f94d003d0df7ff4c8d833cb3:libglvnd-32/spkgbuild
-f:0aad9ec907463b595cc49ec76bdb7818:libdrm-32/spkgbuild
+f:c1044f2fcafc6059fb8881cce5700361:libdrm-32/.pkgfiles
+f:7bfe93728c9c847f98b5dd1459e3b99e:libdrm-32/spkgbuild
 f:be24793648b2d4f29db8019f74cc13f1:playonlinux/spkgbuild
 f:a4d01419689e5f25e01683a20b5e023b:libffi-32/spkgbuild
 f:851bf32a8439cda6f0922112808dec0a:libxxf86vm-32/spkgbuild
@@ -231,7 +233,8 @@ f:d70c63698dcbbec4e6a9b98a12cb7f48:mpg123-32/spkgbuild
 f:224694f96c42ffd65d8fed1fd684841e:lm_sensors-32/spkgbuild
 f:5a2ea7039b9c582bbd4ae17c3e4c033c:libxft-32/spkgbuild
 f:0d813aebb105e917340897eecd6010f7:mesa-32/crossfile
-f:c4cd6435f3787c63d210dd5dea6ae0da:mesa-32/spkgbuild
+f:c4cd6435f3787c63d210dd5dea6ae0da:mesa-32/spkgbuild-old
+f:a30fafaaa63502c76582f43f777b4d07:mesa-32/spkgbuild
 f:67f4c03f6084a9751c8bc38923f64c0f:libxt-32/spkgbuild
 f:c344077868eb75388ae712adca638a2f:openssl-32/spkgbuild
 f:f133c5af2d9f764b56f13712f84a0f80:libxfixes-32/spkgbuild
@@ -252,7 +255,7 @@ f:942c51b741af2824c3b6c6c48eca1e63:libxslt-32/spkgbuild
 f:5a24262caf91aecf9508a84631e44df3:libxshmfence-32/.pkgfiles
 f:59d36766d3151224dbeeeadce579564b:libxshmfence-32/spkgbuild
 f:d5317bad90b688786ae755fbe36e749d:libpng-32/spkgbuild
-f:c8d0f54eca7a5d9adbc1f1c459ff6ab5:.httpup-repo.current
+f:42cfbdb30a354e925c61c12930f7d6d3:.httpup-repo.current
 f:e16bb9a631731d8ea23d5f5f4ae65666:libxi-32/spkgbuild
 f:ac137c81792d8c431fec1a6e4825f3d1:expat-32/spkgbuild
 f:2c008eb892a2dd896d7668ca685ed991:libxv-32/spkgbuild

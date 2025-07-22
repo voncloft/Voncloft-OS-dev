@@ -166,7 +166,7 @@ f:689fc1546e1345f3c767baf01e24048e:oxygen-icons/CHANGELOG
 f:0b23a3474d58c1e08209cbc2a3abad16:oxygen-icons/spkgbuild
 f:3f066ba81488b654da89e9979be765bf:kdelibs4support/CHANGELOG
 f:6bedc82c4c489543ba536b97a60df130:kdelibs4support/spkgbuild
-f:78e634df1195711b5e821705b590da72:.httpup-urlinfo
+f:10b279a64bbadb24caa35787e8ea2e7e:.httpup-urlinfo
 f:788aafc44a0c1aef08e126e209f15100:kglobalaccel/.pkgfiles
 f:13eb395df16154627b2122fd48d2d5ee:kglobalaccel/CHANGELOG
 f:4081d6eed76a1fe66e606b6acaf269e9:kglobalaccel/spkgbuild
@@ -329,7 +329,7 @@ f:ef0555c5b909c8001291ba17c2a306e4:kmediaplayer/spkgbuild
 f:874eca9ebf276a977a6785be417f76ef:qqc2-desktop-style/.pkgfiles
 f:03ca0359c264ecdb3eb123cb7c3446b5:qqc2-desktop-style/CHANGELOG
 f:1173a1aa1c7f974e9d6dfa9ffa854846:qqc2-desktop-style/spkgbuild
-f:bf369f1fff16fad096e3aa87b720b08e:.httpup-repo.current
+f:07115812ce987a9cc1ac814d675d149a:.httpup-repo.current
 f:8dd03f7fd95907d289bb82619ea4696b:kunitconversion/.pkgfiles
 f:aa46293d95072687ada6f874c33109de:kunitconversion/CHANGELOG
 f:f5858cb3401ca47602b908ad1ac234a1:kunitconversion/spkgbuild

@@ -2318,7 +2318,7 @@ f:1a7956ae5efd92a92cfe2bc3b0b3a64c:python-sphinxcontrib-blockdiag/CHANGELOG
 f:cf3a66d521ab6f5065a638216393404f:python-sphinxcontrib-blockdiag/spkgbuild
 f:efb662c449aefa9d9cf77b29557bda46:python-beaker/CHANGELOG
 f:7d25735ee7bbdf30e372e54858a7530f:python-beaker/spkgbuild
-f:856a6e5bcc187eedb7809bb6384b056b:.httpup-urlinfo
+f:6caa25e4cb0cdb333e175213bc9025c1:.httpup-urlinfo
 f:7ef04c57ea81aa27065edc74c1be38fd:python-pexpect/CHANGELOG
 f:f3ffa92edaa13ae170f10a37f2fed3d9:python-pexpect/spkgbuild
 f:974fb43c65049f7f502ecf33835db0e4:python-webtest/CHANGELOG
@@ -4518,7 +4518,7 @@ f:8b4d5eae0b518b1811750687fcb9ff00:python-flickrapi/spkgbuild
 f:4aa1aab753f0d2ad8d9eca90e51a119c:python-pytest-datadir/CHANGELOG
 f:dc4e97cdd746154b1fe5f27bfb12c318:python-pytest-datadir/spkgbuild
 f:1b6ebdc2019922db3f56fd2c8e8e2699:python-soappy/spkgbuild
-f:d42d88cf51851f87d84195c0f706783d:.httpup-repo.current
+f:f6cd41abb903df218063cc7d6246a220:.httpup-repo.current
 f:1f0b75f7e60511575ad4a26a41941089:python-hidapi/CHANGELOG
 f:951d33cf2687d3612915a5d471cbd0e0:python-hidapi/spkgbuild
 f:c734a83ed688eb05ea2f54421c26ed0b:python-iniconfig/CHANGELOG

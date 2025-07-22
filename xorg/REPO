@@ -130,7 +130,7 @@ f:c26b837c49500f7b28d64ca3b9addcf4:smproxy/spkgbuild
 f:b45592b472a84a5acbb43013ef129e85:xcb-proto/.pkgfiles
 f:cc1e33467480c078bf7db14b20387143:xcb-proto/CHANGELOG
 f:efdd3d0dac46c852db1b39d0b1ecf4d2:xcb-proto/spkgbuild
-f:78c1264477a57b42dc8b0b7cb1e90e30:.httpup-urlinfo
+f:f57e610c9d06bf5bde48ceb6a214ac18:.httpup-urlinfo
 f:1633abb1eec0f2d131fa64df610e5340:keybinder3/spkgbuild
 f:f9e4df2066ea548b2a9905ed23771672:xcb-util/.pkgfiles
 f:34798c154169e99f3a2b29188040b5b0:xcb-util/CHANGELOG
@@ -269,7 +269,7 @@ f:51ab433cb9bdd1829a89c8c636636efa:xmessage/spkgbuild
 f:d94ff81fd87c00e1fc8456c227a775f3:xev/.pkgfiles
 f:d6d9f1ee764fa8b40b9e5b493f794918:xev/CHANGELOG
 f:50719cf6e47e471478e114d60608b749:xev/spkgbuild
-f:b48ee0cc715803b30b497ee5ea67e861:.httpup-repo.current
+f:696e12cbbadee1214fdef2f28113668e:.httpup-repo.current
 f:f23450a33336da81a11bf7688dde9606:xinput/.pkgfiles
 f:2f69de3607aa5ac39ba9455b19c7a28a:xinput/CHANGELOG
 f:d19907d9e601235c8a149fa346398933:xinput/spkgbuild

@@ -943,7 +943,7 @@ f:18aa9f7423ab5610509b3ac6a32257c2:perl-devel-cycle/CHANGELOG
 f:f416bf9306dc052372690d734e45dc50:perl-devel-cycle/spkgbuild
 f:3672138f70dfd40116b560f12e0c3854:perl-html-template/CHANGELOG
 f:e91ff8cb047b616f29656c6d0b06a845:perl-html-template/spkgbuild
-f:b54cdf3e1d063730f9bf2ed84747260c:.httpup-urlinfo
+f:c6d6be35dcb8c38731fa8b5b98577652:.httpup-urlinfo
 f:8b19d08b4799bf9e05d059652470d0fd:perl-file-chdir/CHANGELOG
 f:f193b7d076f85dc8556e73633754a42b:perl-file-chdir/spkgbuild
 f:1d0db8f084ce66ae56aa156210915ea6:perl-tk/CHANGELOG
@@ -1830,7 +1830,7 @@ f:4ef9936c94fb19788254f6a00272cfef:perl-sort-key/CHANGELOG
 f:065c5f5c77cd0374550036fd4c1a2e5f:perl-sort-key/spkgbuild
 f:e5e8ebaf6b86a967eabaa6efad453daa:perl-cpan-meta-check/CHANGELOG
 f:78dde85404fc016a6d9692d83bc48aea:perl-cpan-meta-check/spkgbuild
-f:9becf8f8867a3d25f9d95026ed0703be:.httpup-repo.current
+f:b262029bf70d0ae6d566cbf195153928:.httpup-repo.current
 f:9f71f7c069ceef159fa0152a87e814e1:perl-template-gd/CHANGELOG
 f:912efa8be0a0eb8f530ce2403061b920:perl-template-gd/spkgbuild
 f:a4378aa3c41bb2a7da4683bd8544d619:perl-archive-cpio/CHANGELOG

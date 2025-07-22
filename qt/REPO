@@ -33,7 +33,7 @@ f:d82f86896b87dd84b216098c8e4857fd:networkmanager-qt/spkgbuild
 f:3bbaade499e7299b2ca06d1750a5c188:libdbusmenu-qt/spkgbuild
 f:028bbf46947bf665e03268ea3e600b53:pavucontrol-qt/CHANGELOG
 f:01931d64ca6a9eb4ec4070cda5318b80:pavucontrol-qt/spkgbuild
-f:4e86e34f50a127f7fc8d8196074db998:.httpup-urlinfo
+f:a5c820fc313a518380b081631bdef9b9:.httpup-urlinfo
 f:20103566669116db4a15108dd4cb942a:transmission-qt/spkgbuild
 f:7f35377c3080aee62d2b05522c362b09:qbittorrent/CHANGELOG
 f:05544df80fee3d127cea5390dac301ec:qbittorrent/spkgbuild
@@ -75,6 +75,6 @@ f:dd98ca6549fd34e4a815cbdce3725dfa:polkit-qt/spkgbuild
 f:1e4026d97fdb35c9f2802421d6b7aeda:qcoro/.pkgfiles
 f:f7ad44750c288cfffb214a19239390c5:qcoro/CHANGELOG
 f:90b74a9d7f64fe2d1921bae0cfadea72:qcoro/spkgbuild
-f:aeccafe57451bd6561a8c601d681e40c:.httpup-repo.current
+f:2d4a67f61e08378e2479a7dff34bd9ee:.httpup-repo.current
 f:117698f706391ac121ae5b46662c48dc:modemmanager-qt/CHANGELOG
 f:54e81cab1971fd162e0b9cd438b401a0:modemmanager-qt/spkgbuild

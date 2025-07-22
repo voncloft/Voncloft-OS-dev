@@ -51,7 +51,7 @@ f:b8bbf2f8c701015a22ebd182eda5a3e0:mate-media/spkgbuild
 f:87e477d17f89d60ef9acffc398ac5ec7:eom/CHANGELOG
 f:136d521d478b4fc8fc42f6a50b7673e3:eom/spkgbuild
 f:f6fe6b891cd8d39c6386181b887baf24:mate-netbook/spkgbuild
-f:f168c4903c02123369ac8f905ac6b4de:.httpup-urlinfo
+f:491e9609029c5382fdd3c6096fa7aa53:.httpup-urlinfo
 f:c758ad8823fb3209bc8315f1abd1ae8f:atril/CHANGELOG
 f:e74c14e291b0cdeee73206a07f517db8:atril/disable-synctex.patch
 f:7678a9bdfdc9f4339b17054dd32b45f0:atril/spkgbuild
@@ -87,6 +87,6 @@ f:39bcdc6370b3658914956f558842b2ed:mate-utils/spkgbuild
 f:a042c0166c7ba3b4119c17f4f922e3c0:mate-polkit/spkgbuild
 f:b6ba0181f7deacc37c9961d58d256897:caja-actions/spkgbuild
 f:c495020803ad589a781e5a281ef22ed6:mate-common/spkgbuild
-f:74d68f5ecda8aa150cbbd969fa7f8db5:.httpup-repo.current
+f:00868d635ae1bf7fd5dd089535b825e8:.httpup-repo.current
 f:cd2b1676c9a5d39ef9bae5c051f54cfb:pluma/CHANGELOG
 f:810b6ec0dc96a40c5b4fdc32db4ee330:pluma/spkgbuild

@@ -60,7 +60,7 @@ f:ff4859b0c95ae61ab6f8dfee3b7a5d58:projectm/CHANGELOG
 f:94fe205dc9d6f1a8b7e7ff3cde68d4a4:projectm/spkgbuild
 f:80e2e4837454bf6bc6f5d5af2ee133b2:phonon/.pkgfiles
 f:bfa5f78564a167fe17fb99f0532e618f:phonon/spkgbuild
-f:49ffc7bcb800829982819d9f1f3bc92d:.httpup-urlinfo
+f:f18c95b5e492428187905654112cb674:.httpup-urlinfo
 f:44936f6927809764784656870c1f7e86:ffmpeg/.pkgfiles
 f:e0125e07b37d1ccab7de1edef08ac862:ffmpeg/CHANGELOG
 f:293d4211cfd8a3a9c89a97fc1f897edc:ffmpeg/spkgbuild
@@ -112,6 +112,6 @@ f:ac91e0ace898feb13c6ff219f9db6ab7:gstreamer/spkgbuild
 f:5e9283b8010a9b81f57df54e0ae28af6:gst-plugins-good/.pkgfiles
 f:fcd1da801a14823858d2b49afb8ef113:gst-plugins-good/CHANGELOG
 f:0867d2586c2cf650edc628d7fe40d9a6:gst-plugins-good/spkgbuild
-f:293047e7740d11073e79282ede081400:.httpup-repo.current
+f:88664563c8ae6f311221f14e57ba3691:.httpup-repo.current
 f:94fce86ee9592c327f95f7b09aa0ab6d:plex-desktop/CHANGELOG
 f:5959d60560847c349dde72b7cf88de6f:plex-desktop/spkgbuild

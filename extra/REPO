@@ -112,7 +112,7 @@ f:18a47a0cda7130ccc46db3f5c0f4f3a3:sane/pre-install.sh
 f:cc1347064094c2cf55f9bb202c6e83da:epson-inkjet-printer-escpr/CHANGELOG
 f:584ceb39b197685f7215ee0a4fa2e5bb:epson-inkjet-printer-escpr/spkgbuild
 f:f884fbf6726f9ab103e2d832d8ad27fe:epson-inkjet-printer-escpr/bug_x86_64.patch
-f:0c373e77c00406d986c5980cc189894c:.httpup-urlinfo
+f:d404044a08c7b28376c660d1af5b0a6d:.httpup-urlinfo
 f:c000b5faf4c8278507d27622d1f263d1:flashplugin/CHANGELOG
 f:66c331be421c449c521adcbb688bb862:flashplugin/spkgbuild
 f:4b8798bee1339effc3924a8cbff88177:ebook-tools/CHANGELOG
@@ -216,6 +216,6 @@ f:c4270356f06a2783e91a75d3ebbf1770:steam-devices/spkgbuild
 f:332ae8d62f376752915a9efaae4e7923:convertpdf/CHANGELOG
 f:e0b2482b2da2e0b1939a0464ca601e52:convertpdf/spkgbuild
 f:913069c0036f1e139915ea7f44a7afe6:convertpdf/convertpdf
-f:46572ab3b8c9c7d26cff280b189475b8:.httpup-repo.current
+f:0001700b71b50b4a0aa7693324c1cebe:.httpup-repo.current
 f:2e19deaa682e94692b2450c2dc040899:gtk-doc/.pkgfiles
 f:389b6032816f48c83c04d73b68a56d5e:gtk-doc/spkgbuild

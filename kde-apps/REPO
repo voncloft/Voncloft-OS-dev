@@ -361,7 +361,7 @@ f:9f046128c895310453514af944c6fe20:kpimtextedit/CHANGELOG
 f:7b3fe6e03ee6d35e374725bdcd7ae455:kpimtextedit/spkgbuild
 f:df117285ee4a5e3e7e2c96aefd9ccb83:kwordquiz/CHANGELOG
 f:00bd6ddb1edf8e08341a3fb53e92fd62:kwordquiz/spkgbuild
-f:05d5572b22c0332241767fcda2143e36:.httpup-urlinfo
+f:6eeed2af75492f27ba4e26dbfbc224d0:.httpup-urlinfo
 f:db9a2e44f89d04a48b558a45732f823e:libkdegames/.pkgfiles
 f:b7ef7df333251a8bb6e7e9ff0a9a64e1:libkdegames/CHANGELOG
 f:f0997a85069d7067b54751b92996ba87:libkdegames/spkgbuild
@@ -789,7 +789,7 @@ f:0ac775315ca2a56da4158408cf088042:kasts/CHANGELOG
 f:771766142bf5576e86b7b4242495e391:kasts/spkgbuild
 f:63a63f19ec88c47a07172933fb469821:kalarm/CHANGELOG
 f:3af519d56d03ce7c9a98be683dd572a4:kalarm/spkgbuild
-f:0076607ee526a86988815ef377238b8e:.httpup-repo.current
+f:41917e0e1c2c0f95823ebe77c4502506:.httpup-repo.current
 f:8888a5c3e38620245531dd66a3190c3c:mailcommon/.pkgfiles
 f:9be3298f10b23f31d832f064aa833134:mailcommon/CHANGELOG
 f:2a62bec747bc53b8353e4a70f79c41df:mailcommon/spkgbuild

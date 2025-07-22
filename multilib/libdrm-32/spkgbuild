@@ -1,9 +1,7 @@
 # description	: User space library for accessing the DRM, on operating systems that support the ioctl interface (32bit)
-# depends	: libpciaccess-32 meson cairo-32
-# optdepends	: libdrm cairo docbook-xml docbook-xml libxslt valgrind cunit
-
+# depends : xorg-libraries libpciaccess-32
 name=libdrm-32
-version=2.4.102
+version=2.4.125
 release=1
 source="https://dri.freedesktop.org/libdrm/libdrm-$version.tar.xz"
 
@@ -18,8 +16,8 @@ build() {
 	cd build
 	meson --prefix=/usr \
 	      --libdir=/usr/lib32 \
-	      -Dudev=true \
-	      -Dcairo-tests=false
+	      -D udev=true \
+	      -D valgrind=disabled 
 	ninja
 	DESTDIR=$PWD/DESTDIR ninja install
 	mkdir -p $PKG/usr/lib32

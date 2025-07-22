@@ -37,7 +37,7 @@ f:33fbe98274e43eb8fab58c916d614552:ruby-sass/spkgbuild
 f:2ee0bb912e72b42b3ae221afad26a509:ruby-optimist/.pkgfiles
 f:cd1ef60d414ddaa067043fef3723d1d4:ruby-optimist/CHANGELOG
 f:c03b21ba8269ef34c779d0176ea6f530:ruby-optimist/spkgbuild
-f:2662981b217de504c738aad82c20a387:.httpup-urlinfo
+f:ad569164727106f80f858c5b9edd5a6e:.httpup-urlinfo
 f:324cd596601550c5d5deb3f8c6825be8:ruby-rainbow/.pkgfiles
 f:6d5813fcedee2e44e924cd8327321126:ruby-rainbow/CHANGELOG
 f:85329c435991daecf4c04f7625ce97c2:ruby-rainbow/spkgbuild
@@ -79,4 +79,4 @@ f:7796061090f26c28078dd6464506b045:ruby-tins/spkgbuild
 f:b058930969c537bf93551f383e9db1d7:ruby-paint/.pkgfiles
 f:a8b84df0e71cf0b8b4dcec65520fc2ce:ruby-paint/CHANGELOG
 f:8f72e57c6740cce8911bad0d62c07af8:ruby-paint/spkgbuild
-f:868178ab769bfe0866bb0c4020555be3:.httpup-repo.current
+f:b7c5f4cb02daa3b8bcd7a5831e9ef0fb:.httpup-repo.current

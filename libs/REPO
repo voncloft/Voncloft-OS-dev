@@ -456,7 +456,7 @@ f:3965a59dbebb04051391e83daa216932:libcurl-compat/spkgbuild
 f:fad4c506a8f3d7b3852e0384c02cc701:giblib/.pkgfiles
 f:d13de6459cadb3cf83ed937d804630d1:giblib/giblib.patch
 f:2d1ba0da0920b6d575c4634011cf9c2f:giblib/spkgbuild
-f:3c7c2a6b5bde2e039827306f2a2a2ce5:.httpup-urlinfo
+f:2974754b7b6d513191c00e94170a0306:.httpup-urlinfo
 f:df5ca1e112d6db4adca7301e8218308b:libmm-glib/spkgbuild
 f:46eddc181d031da66a40f5346ab77e18:libmusicbrainz5/spkgbuild
 f:1eab1b4bfdef7add3ae168c86d2d9a38:libraw1394/.pkgfiles
@@ -929,7 +929,7 @@ f:8563854714d29426254f4a85bc879132:cblas/CHANGELOG
 f:325f7c627a627848dc9e5ed59cc64078:cblas/spkgbuild
 f:63395dde209aef8dd85ca38cac877adc:libxt/.pkgfiles
 f:ba24930588ecd9cf389ec41a295550db:libxt/spkgbuild
-f:34844ffb20ebd1e0c3fdf59d3ca9ba9b:.httpup-repo.current
+f:a06b863a2b1c20b7276e126ccff87829:.httpup-repo.current
 f:4f08410bb28b734e91a065457c36de8e:xwayland/.pkgfiles
 f:2fe15c6ebbe67526f7ea3b8e02c56dc5:xwayland/CHANGELOG
 f:814da32a2f5e10b9595f9bf961726cc6:xwayland/spkgbuild

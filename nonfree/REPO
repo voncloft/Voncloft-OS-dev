@@ -47,7 +47,7 @@ f:7e2790e8c21dd5fc7af08d1e3a3f95d9:virtualbox/virtualbox.60-vboxdrv.rules
 f:404f52aa84a2f37b2427da95ca6eb681:virtualbox/buildmodules-vboxhost.sh
 f:312bf76e4bebb5a9ab674f0d794ec020:virtualbox/spkgbuild
 f:df00d16b24d4aa866bb88ce8e71123aa:virtualbox/override
-f:c00b9a8ab60f4530e6999c6fd892ac71:.httpup-urlinfo
+f:ef92becf7a4a8a0365abb2a9fa5f3897:.httpup-urlinfo
 f:768a64259f7e8d8a46a13b876d6c443c:nvidia/nvidia-drm-outputclass.conf
 f:3d76988ddf49b79385e3901d4e6dcbf0:nvidia/post-upgrade.sh
 f:0b8803d6a33c5af02701de85966b7b7e:nvidia/CHANGELOG
@@ -146,7 +146,7 @@ f:697755d99d0852fa6e0bbfbbf40ea9c4:tuner/test/hcw85b64.cat
 f:c06a300b08426e20cad29cd0688f4645:tuner/test/HcwDriverInstall.exe
 f:5468a271f8dd7467a74ca5fad373d61a:tuner/test/hcw85bda.inf
 f:c5895279c4c7e796eb1416ce0642c755:tuner/spkgbuild
-f:e1fda9eadb257218c58dc43d03f09d88:.httpup-repo.current
+f:2b25e8ed0211110d2fa09dbec7ee37a3:.httpup-repo.current
 f:2be5a57e477adf82a7d9b7fe77f22086:dropbox/dropbox.png
 f:f3350cc0fb7b5f4fb6f2c0adda7e1260:dropbox/dropbox.desktop
 f:5485cda5d86e02748a09e4ab02b39b09:dropbox/spkgbuild

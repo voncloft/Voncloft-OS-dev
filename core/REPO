@@ -829,7 +829,7 @@ f:d678006a4e87d73a38e425bcde86a3aa:lz4/CHANGELOG
 f:34789927a64e6bdfd8e4aaaa4a967d03:lz4/spkgbuild
 f:1a9d7d6b1054dedd0bdbce4f9e1950e4:pangomm/spkgbuild
 f:09250983c3b0241612eca678faa4b063:uget/spkgbuild
-f:69cc5e8d7e2a3152f748527909e24424:.httpup-urlinfo
+f:e8d9fd6f6078ca14d10e05d0878fb8e6:.httpup-urlinfo
 f:1585d6473435077ee29af114f1a2b919:palemoon/mozconfig
 f:8bdd44dc555963714ccb146a04c246e8:palemoon/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:isl/.pkgfiles
@@ -1695,6 +1695,7 @@ f:708d8e26b34d048ffb58b855f4249f73:ncurses/.pkgfiles
 f:00517037c87b7eca99c7b386c038d79b:ncurses/CHANGELOG
 f:3b9bf23389fa5ee8b13f622b4420504c:ncurses/spkgbuild
 f:b2d1b91627297c15765d25edde2882d6:imagemagick7/spkgbuild
+f:19c0cf924bb9e7856f8b48702945aa48:unzip/.pkgfiles
 f:01e6b2fcc336999b006986c920f087c4:unzip/unzip-6.0_CVE-2021-4217.patch
 f:3cf27bbfa47dc99752072dfe4bd14548:unzip/time.patch
 f:db524a231b3b35479ed7e5ed70a0e563:unzip/spkgbuild
@@ -1834,7 +1835,7 @@ f:b15581c229916066d99b02fbc49b9d28:shadow/CHANGELOG
 f:d65f80e3f592084b62d205b075f08a9c:shadow/post-install.sh
 f:311ddb85c289b9b893b8938212f178f1:shadow/spkgbuild
 f:67bfdee60d1f31efc42ea724c5da9cad:shadow/su
-f:88b780327787b57382ce83ae510a3567:.httpup-repo.current
+f:057625f98fbb34f9eb79725eddb3e074:.httpup-repo.current
 f:969a61c5436fd96104c8bb6505d83315:yetris/spkgbuild
 f:b86bf7292e3af00f9119c16d22795139:icoutils/.pkgfiles
 f:fa56ded29016f12205356ab712b9ec7f:icoutils/spkgbuild

@@ -13,7 +13,7 @@ f:2a7326f4de1d949b8c96749b62cc5021:lightdm/lightdm.rules
 f:8cac886c4e2ea78f8cda33d0a9f22e2b:lightdm/spkgbuild
 f:fa0ce6c77f10b1efd0b63c530881f5b1:lightdm/mkdirs
 f:3f617bf61a0099186419715f14a755c0:lightdm/pre-install.sh
-f:85d4186041314b32fc9068bb744337c8:.httpup-urlinfo
+f:29345119fe5fd05a6b2b48541495ea70:.httpup-urlinfo
 f:545f774b1d7f47e5e79fdd2dfd8aefda:sddm/.pkgfiles
 f:7a0d1d5e41473db5889bdb20f13626a5:sddm/post-upgrade.sh
 f:3a663c814a301a7ad1dbbd5182d8300c:sddm/sddm
@@ -21,4 +21,4 @@ f:10fe34365e804d2bd600fabb72923706:sddm/CHANGELOG
 f:760fe4e54eb5b451b81f9a3342fe71ef:sddm/spkgbuild
 f:2ef7bca86d496441aef77cbb62c8097f:sddm/pre-install.sh
 f:c5e2ebed7622b8b5ab59dc2482ef4440:lightdm-gtk-greeter-settings/spkgbuild
-f:cc5e10ff99667e76715a60de3843248e:.httpup-repo.current
+f:91e44578657f052e138bc2231237932a:.httpup-repo.current

@@ -35,7 +35,7 @@ f:9c3eea71480286366987f92503846b67:glslang/spkgbuild
 f:78f8b49962b9d7fbe5e6e3a51199af6c:zig/CHANGELOG
 f:6be2a5e3cd924b417e134fccf6449d41:zig/resolve_DNS.patch
 f:d659b78f7071326fd1be1afde98d2b3a:zig/spkgbuild
-f:983c3faa2169508a3b6e79836aaadfd6:.httpup-urlinfo
+f:d0caf18e98c6ad5dd399d7403f77081b:.httpup-urlinfo
 f:deb662746f0b9f4c51429153a89d2ef0:ninja/.pkgfiles
 f:b14cc845168b425acfc664289fbaa2e1:ninja/CHANGELOG
 f:ff4c19b4b1c49ed35a65a8d4b94217b4:ninja/spkgbuild
@@ -114,6 +114,6 @@ f:9992967f1ab1c58984287c2bc8537317:cmake/CHANGELOG
 f:8ba3c9f07f4f88b451083053325a1552:cmake/override-old
 f:6613cff23d435e2d42bd3ae2fa01f24d:cmake/spkgbuild
 f:3952e1e013f3675c6ec2d90dfd12f4a2:cmake/override
-f:5f3fc329f6b124dbd8b687a41c0f8268:.httpup-repo.current
+f:cea1e92da5e154b5f073e610a3ee238a:.httpup-repo.current
 f:4d810f7ff8338affdfa988d93dbf7f38:luajit/.pkgfiles
 f:21dc50f01b8da123ef97388f268ce1cc:luajit/spkgbuild

@@ -27,7 +27,7 @@ f:2872ac14312be922849df88ef85b816e:lxinput/spkgbuild
 f:c8484aab49f026b6b325bf0d53fd3031:lxtask/CHANGELOG
 f:5b07651d4acba2b29a80abbc89129f7f:lxtask/spkgbuild
 f:fae91622981d5a945a23659aa7e2a12a:lxrandr/spkgbuild
-f:94fb0d11c7fb8f935526bcf011c8c86e:.httpup-urlinfo
+f:48dc1231683f1963983f8bbda9031457:.httpup-urlinfo
 f:89ae8c40c19dd1835d5f0b3a728f56d8:lxsession/spkgbuild
 f:1980e7bf4f360e1d9b80261382083932:menu-cache/menu-cache-1.1.0-0001-Support-gcc10-compilation.patch
 f:cb972b65ec581f89a785edb2e764c7bb:menu-cache/spkgbuild
@@ -45,4 +45,4 @@ f:273ac34d95fdcc5594bb236b4728322d:lximage-qt/CHANGELOG
 f:24b2e0b9b0a254d158e94942701a6b89:lximage-qt/spkgbuild
 f:4cad2e3d9b4acab7021b6e2097dedeec:lxappearance-obconf/spkgbuild
 f:5175a0504c0b32eac242ca9d07ab185d:lxappearance/spkgbuild
-f:e1ae0d2b7e8374094b56d7d480b8df85:.httpup-repo.current
+f:611ce22d66f9f16e36a875c37f0e6209:.httpup-repo.current

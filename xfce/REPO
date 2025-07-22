@@ -71,7 +71,7 @@ f:cbe87e21df0a974834435cf2852ff6b2:xfce4-mount-plugin/CHANGELOG
 f:3bae73fedd74ed0c1234d9571088a4ff:xfce4-mount-plugin/spkgbuild
 f:376357c0cf3794190ba178f092e06bfc:xfce4-notes-plugin/CHANGELOG
 f:08efdcd863496a6c4e297b0826ff8e4c:xfce4-notes-plugin/spkgbuild
-f:aca76d414ff427fa2cbacb7c93b19bea:.httpup-urlinfo
+f:e6f43a572bf98eb0d77fffa3fd64af55:.httpup-urlinfo
 f:3267c2fac37adaf6031e374fd6e880bb:xfce4-cpufreq-plugin/CHANGELOG
 f:f715cfc8be8920db4cc3c14f62d90d6c:xfce4-cpufreq-plugin/spkgbuild
 f:12da4b184288c50604d9a33d5424bb66:xfce4-mailwatch-plugin/CHANGELOG
@@ -151,4 +151,4 @@ f:312cc4a6192a36b66331fb4f16f928e3:orage/CHANGELOG
 f:09527effd55ada1c5f3dca03007d3d1b:orage/spkgbuild
 f:bf80578d26f17f298dede2afdc165067:thunar-volman/CHANGELOG
 f:f2e4af612fb393aa9b06e3e52ec84b2d:thunar-volman/spkgbuild
-f:4ebe19eb2575778276cc7b8ec403ec34:.httpup-repo.current
+f:c54fd0351163796d51f55dbe2aefbd28:.httpup-repo.current
