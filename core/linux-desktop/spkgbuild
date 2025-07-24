@@ -5,71 +5,45 @@ version=6.15.4
 release=1
 
 source="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$version.tar.xz
-	.config"
+        .config"
 options="!checksum"
 
-build()
-{
-	cd linux-$version
-	make mrproper
-	cp $SRC/.config .
-	make menuconfig
-	make -j9
-	mkdir $PKG/usr
-	make INSTALL_MOD_PATH=$PKG modules_install
-	mkdir $PKG/boot
-	cp  arch/x86/boot/bzImage $PKG/boot/vmlinuz-$version
-	cp System.map $PKG/boot/System.map
-	cp .config $PKG/boot/config-$version
-	make INSTALL_PATH=$PKG install
-	#periods="${version//[^.]}"
+build() {
+    cd linux-$version
 
-	#if [[ "${#periods}" -eq 1 ]];then
-	#	version=$version.0
-	#else
-	#	version=$version
-	#fi
-	#kernver=${version}$(grep CONFIG_LOCALVERSION= .config | cut -d '"' -f2)
-	#echo $kernver > $PKG/lib/modules/KERNELVERSION
-	echo $version > $PKG/lib/modules/KERNELVERSION
-	#rm -rf $PKG/lib/firmware
-	mkdir -pv $PKG/usr/src/linux
-	cp -rv * $PKG/usr/src/linux
-	#for file in $(ls arch); do
-	#	case $file in
-	#		x86|Kconfig) continue ;;
-	#		*) rm -fr arch/$file ;;
-	#	esac
-	#done
+    make mrproper
+    cp $SRC/.config .
 
-	# strip down sources
-	# don't package the kernel in the sources directory
-	#find . -name "*Image" -exec rm "{}" \;
-	#find . -name "*.cmd" -exec rm -f "{}" \; 
-	#rm -f .*.d
+    # Optionally run menuconfig if you want to customize
+    make menuconfig
 
-	#rm -fr firmware ipc .config.old .version .cocciconfig \
-	#	.get_maintainer.ignore .gitattributes .gitignore .mailmap \
-	#	COPYING CREDITS MAINTAINERS README
-	#find . -name ".gitignore" -exec rm "{}" \;
-	#for dir in block certs crypto drivers fs init kernel lib mm net samples security sound usr virt; do
-	#	find $dir -type f \( -name "*.c" -o -name "*.h" \) -exec rm "{}" \;
-	#done
-	#for i in $(ls tools); do
-	#	[ "$i" = "objtool" ] || rm -fr tools/$i
-	#done
-	#for i in $(ls tools/objtool); do
-	#	[ "$i" = "objtool" ] || rm -fr tools/objtool/$i
-	#done
-	#rm $PKG/lib/modules/$version/build \
-	#   $PKG/lib/modules/$version/source
-	#mv $SRC/linux-$version $PKG/lib/modules/$version/build
-	#ln -sv build $PKG/lib/modules/$version/source
-  	#echo "Adding symlink..."
-  	#mkdir -p "$PKG/usr/src/linux-$version"
-	#ln -sr lib/modules/$version/build $PKG/usr/src/linux-$version/build
-	#find -L $PKG/lib/modules/$version/build -type l -exec rm -f "{}" \;
+    make -j9
 
-	#mkdir -pv $PKG/usr/src/linux-$version
-	#cp 
+    # Install kernel modules to packaging directory
+    mkdir -p $PKG/usr
+    make INSTALL_MOD_PATH=$PKG modules_install
+
+    # Install kernel image and related files
+    mkdir -p $PKG/boot
+    cp arch/x86/boot/bzImage $PKG/boot/vmlinuz-$version
+    cp System.map $PKG/boot/System.map
+    cp .config $PKG/boot/config-$version
+
+    make INSTALL_PATH=$PKG install
+
+    # Write kernel version file for modules directory
+    mkdir -p $PKG/lib/modules/$version
+    echo $version > $PKG/lib/modules/KERNELVERSION
+
+    # Copy full kernel source to persistent directory named by version
+    mkdir -p $PKG/usr/src/linux-$version
+    cp -rv . $PKG/usr/src/linux-$version
+
+    # Prepare the copied kernel source for external modules
+    cd $PKG/usr/src/linux-$version
+    make modules_prepare
+
+    # Create symlinks in modules directory to point to persistent kernel source
+    ln -sfn /usr/src/linux-$version $PKG/lib/modules/$version/build
+    ln -sfn /usr/src/linux-$version $PKG/lib/modules/$version/source
 }

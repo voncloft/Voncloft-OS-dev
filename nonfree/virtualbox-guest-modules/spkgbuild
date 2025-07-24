@@ -1,8 +1,8 @@
 # description	: Guest kernel modules for virtualbox
-# depends	: virtualbox-guest-utils p7zip
+# depends	: 
 
 name=virtualbox-guest-modules
-version=7.2.0
+version=7.0.10
 release=1
 source="http://download.virtualbox.org/virtualbox/$version/VBoxGuestAdditions_${version}.iso
 	vboxvideo-upstream.conf
