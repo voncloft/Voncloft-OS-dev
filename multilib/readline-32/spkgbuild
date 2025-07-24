@@ -1,5 +1,5 @@
 # description	: Set of libraries that offers command-line editing and history capabilities
-# depends	: readline ncurses-32
+# depends	: readline
 
 name=readline-32
 version=8.0

@@ -1,34 +1,46 @@
-# description	: Low-level libraries useful for providing data structure handling for C, portability wrappers and interfaces
-# depends	: glib pcre-32 libffi-32 util-linux-32 elfutils-32 zlib-32
+# description   : The GLib package contains low-level libraries useful for providing data structure handling for C, portability wrappers and interfaces for runtime functionality such as an event loop, threads, dynamic loading and an object system
+# depends       : docutils libxslt pcre2 sharedmimeinfo desktopfileutils
 
 name=glib-32
-version=2.64.5
+version=2.84.3    
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/glib/${version%.*}/glib-$version.tar.xz
-	multilib.patch"
+source="https://download.gnome.org/sources/glib/2.84/glib-2.84.3.tar.xz
+https://download.gnome.org/sources/gobject-introspection/1.84/gobject-introspection-1.84.0.tar.xz
+https://www.linuxfromscratch.org/patches/blfs/svn/glib-skip_warnings-1.patch"
 
+options="!checksum"
+noextract="gobject-introspection-1.84.0.tar.xz"
 build() {
-	cd glib-$version
-
-	patch -Np1 -i ../multilib.patch
-
-	export CC="gcc -m32"
-	export CXX="g++ -m32"
-	export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
-
-	mkdir build-glib
-	cd    build-glib
-	
-	meson --prefix=/usr   \
-	      --libdir=/usr/lib32 \
-	      -Dgtk_doc=false \
-	      -Dnls=disabled \
-	      -Dselinux=disabled \
-	      ..
-	ninja
-	DESTDIR=$PWD/DESTDIR ninja install
-	mkdir -p $PKG/usr/bin
-	cp DESTDIR/usr/bin/gio-querymodules $PKG/usr/bin/gio-querymodules-32
-	mkdir -p $PKG/usr/lib32
-	cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+    cd glib-$version
+    
+export CC="gcc -m32"
+export CXX="g++ -m32"
+export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+export CFLAGS="-m32"
+export CXXFLAGS="-m32"
+export LDFLAGS="-m32 -L/usr/lib32 -Wl,-rpath,/usr/lib32"
+    patch -Np1 -i $SRC/glib-skip_warnings-1.patch
+    mkdir build 
+    cd    build 
+    meson setup ..                  \
+    --prefix=/usr             \
+    --buildtype=release       \
+    --libdir=/usr/lib32 \
+    -D introspection=disabled \
+    -D glib_debug=disabled    \
+    -D man-pages=enabled      \
+    -D sysprof=disabled       
+    ninja
+    mkdir -p $PKG/usr/lib32
+    DESTDIR=$PWD/DESTDIR ninja install
+    cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+    #tar xf $SRC/gobject-introspection-1.84.0.tar.xz 
+    #PKG_CONFIG_PATH=$PKG/usr/lib32/pkgconfig meson setup gobject-introspection-1.84.0 gi-build \
+    #--prefix=/usr --buildtype=release --libdir=/usr/lib32     
+    #ninja -C gi-build
+    #PKG_CONFIG_PATH=$PKG/usr/lib32/pkgconfig:/usr/lib32/pkgconfig meson configure -D introspection=enabled --libdir=/usr/lib32 
+    #ninja
+    #DESTDIR=$PWD/DESTDIR ninja -C gi-build install
+    #DESTDIR=$PWD/DESTDIR ninja install
+    #cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
 }

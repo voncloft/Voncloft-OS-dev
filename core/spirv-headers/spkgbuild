@@ -5,7 +5,8 @@ name=spirv-headers
 version=1.4.313.0
 release=1
 
-source="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz"
+#source="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz"
+source="https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz"
 options="!checksum"
 
 build()
@@ -14,7 +15,11 @@ build()
 	mkdir build 
 	cd    build 
 
-	cmake -D CMAKE_INSTALL_PREFIX=/usr -G Ninja ..
+	        cmake \
+    -D CMAKE_INSTALL_PREFIX=/usr \
+    -D CMAKE_INSTALL_SYSCONFDIR=/etc \
+    -D CMAKE_SKIP_INSTALL_RPATH=ON \
+	-G Ninja ..
 
 	ninja
 	DESTDIR=$PKG ninja install

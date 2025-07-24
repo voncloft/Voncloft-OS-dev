@@ -1,8 +1,8 @@
 # description	: User-space support for the hardware monitoring drivers in the Linux kernel
-# depends	: lm_sensors
+# depends	: 
 
 name=lm_sensors-32
-version=3.4.0
+version=3.6.0
 release=1
 source="https://ftp.gwdg.de/pub/linux/misc/lm-sensors/lm_sensors-$version.tar.bz2"
 
@@ -22,6 +22,6 @@ build() {
 	     LIBDIR=/usr/lib32 \
 	     DESTDIR=$PWD/DEST install
 
-	install -d $PKG/usr
-	cp -Rav DEST/usr/lib32 $PKG/usr
+	install -d $PKG/usr/lib32
+	cp -Ra DEST/usr/lib32/* $PKG/usr/lib32
 }

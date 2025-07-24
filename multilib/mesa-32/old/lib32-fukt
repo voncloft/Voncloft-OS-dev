@@ -1,0 +1,27 @@
+[host_machine]
+system = 'linux'
+cpu_family = 'x86'
+cpu = 'i686'
+endian = 'little'
+
+[build_machine]
+system = 'linux'
+cpu_family = 'x86_64'
+cpu = 'x86_64'
+endian = 'little'
+
+[built-in options]
+c_args = ['-m32']
+c_link_args = ['-m32', '-L/usr/lib32']
+cpp_args = ['-m32']
+cpp_link_args = ['-m32', '-L/usr/lib32']
+rust_args = ['--target', 'i686-unknown-linux-gnu']
+pkg_config_path = '/usr/lib32/pkgconfig'
+
+[binaries]
+c = 'gcc'
+cpp = 'g++'
+ar = 'ar'
+strip = 'strip'
+pkg-config = 'pkg-config'
+rust = '/opt/rustc-1.88.0/bin/rustc'

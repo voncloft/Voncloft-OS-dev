@@ -1,0 +1,23 @@
+# description   : The libva package contains a library which provides access to hardware accelerated video processing, using hardware to accelerate video processing in order to offload the central processing unit (CPU) to decode and encode compressed digital video
+# depends       : xorgbuildenvironment libdrm mesa
+
+name=libva-32
+version=2.22.0    
+release=1
+source="https://github.com/intel/libva/archive/2.22.0/libva-2.22.0.tar.gz"
+
+options="!checksum"
+
+build() {
+    cd *
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+    export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
+    cd build 
+    meson setup --prefix=/usr --libdir=/usr/lib32 --buildtype=release 
+    ninja
+    DESTDIR=$PWD/DESTDIR ninja install
+    mkdir -p $PKG/usr/lib32
+    cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+}

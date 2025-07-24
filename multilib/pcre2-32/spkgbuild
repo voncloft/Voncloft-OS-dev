@@ -1,0 +1,31 @@
+# description   : The PCRE2 package contains a new generation of the Perl Compatible Regular Expression libraries
+# depends       : 
+
+name=pcre2-32
+version=10.45    
+release=1
+source="https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.45/pcre2-10.45.tar.bz2"
+
+options="!checksum"
+
+build() {
+    cd *
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
+    ./configure --prefix=/usr                       \
+    --docdir=/usr/share/doc/pcre2-10.45 \
+    --enable-unicode                    \
+    --enable-jit                        \
+    --enable-pcre2-16                   \
+    --enable-pcre2-32                   \
+    --enable-pcre2grep-libz             \
+    --enable-pcre2grep-libbz2           \
+    --enable-pcre2test-libreadline      \
+    --disable-static                    \
+    --libdir=/usr/lib32
+    make
+    make DESTDIR=$PWD/DESTDIR install
+    mkdir -p $PKG/usr/lib32
+    cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+}

@@ -1,0 +1,41 @@
+# description : SPIRV-Tools (32-bit)
+# depends : cmake spirv-headers ninja
+
+name=spirv-llvm-translator-32
+version=1.4.313.0
+release=1
+
+source="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v20.1.4/SPIRV-LLVM-Translator-20.1.4.tar.gz"
+options="!checksum"
+
+build()
+{
+    cd *
+
+    mkdir build
+    cd build
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+
+cmake .. \
+  -G Ninja \
+  -DCMAKE_INSTALL_PREFIX=/usr/spirv-llvm-32 \
+  -DCMAKE_INSTALL_LIBDIR=lib32 \
+  -DCMAKE_C_FLAGS=-m32 \
+  -DCMAKE_CXX_FLAGS=-m32 \
+  -DLLVM_DIR=/usr/lib32/cmake/llvm \
+   -DBUILD_SHARED_LIBS=ON \
+  -DCMAKE_BUILD_TYPE=Release
+
+    ninja
+    #DESTDIR="$PKG" ninja install
+
+        DESTDIR="$PWD/DESTDIR" ninja install
+    ls $PWD/DESTDIR
+    # Manually move files into $PKG/usr/lib32/
+    mkdir -p "$PKG/usr/lib32"
+    #cp -av "DESTDIR/usr/lib32/"* "$PKG/usr/lib32/"
+    cp -a DESTDIR/usr/spirv-llvm-32/lib32/* $PKG/usr/lib32/
+}

@@ -2,7 +2,7 @@
 # depends : spirv-llvm-translator
 
 name=libclc
-version=20.1.7
+version=20.1.8
 release=1
 
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/libclc-$version.src.tar.xz"
@@ -14,10 +14,11 @@ build()
 	mkdir build 
 	cd    build 
 
-	cmake -D CMAKE_INSTALL_PREFIX=/usr \
+#cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DLLVM_DIR=/usr/lib/cmake/llvm -G Ninja
+	
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
-      -G Ninja ..  
-
+      -G Ninja ..
 	ninja
 	DESTDIR=$PKG ninja install
 }

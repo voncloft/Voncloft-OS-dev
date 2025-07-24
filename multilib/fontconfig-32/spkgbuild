@@ -1,10 +1,10 @@
 # description	: A library and support programs used for configuring and customizing font access (32bit)
-# depends	: fontconfig brotli-32 expat-32 freetype2-32 util-linux-32  json-c-32
+# depends	: fontconfig brotli-32 expat-32 freetype2-32
 
 name=fontconfig-32
-version=2.14.0
+version=2.17.1
 release=1
-source="https://www.freedesktop.org/software/fontconfig/release/fontconfig-$version.tar.gz"
+source="https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/2.17.1/fontconfig-2.17.1.tar.xz"
 
 build() {
 	cd fontconfig-$version
@@ -12,7 +12,7 @@ build() {
 	export CC="gcc -m32"
 	export CXX="g++ -m32"
 	export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
-
+	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
 	# make sure the system regenerates src/fcobjshash.h
 	rm -f src/fcobjshash.h
 
@@ -20,7 +20,8 @@ build() {
 		    --libdir=/usr/lib32  \
 	            --sysconfdir=/etc    \
 	            --localstatedir=/var \
-	            --disable-docs
+	            --disable-docs \
+	            --without-json
 	make
 	make DESTDIR=$PWD/DESTDIR install
 	mkdir -p $PKG/usr/lib32

@@ -2,9 +2,9 @@
 # depends	: expat
 
 name=expat-32
-version=2.2.9
+version=2.7.1
 release=1
-source="http://prdownloads.sourceforge.net/expat/expat-$version.tar.bz2"
+source="http://prdownloads.sourceforge.net/expat/expat-$version.tar.xz"
 
 build() {
 	cd expat-$version

@@ -9,6 +9,7 @@ options="!checksum"
 
 build() {
 	cd *
+	export CARGO_PROFILE_RELEASE_LTO=true CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
 	cargo build --release
 	mkdir -pv $PKG/usr/bin
 	install -Dm755 target/release/cbindgen $PKG/usr/bin/

@@ -1,0 +1,31 @@
+# description : implementation of library reqs for opencl
+# depends : spirv-llvm-translator
+
+name=libclc-32
+version=20.1.7
+release=1
+
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/libclc-$version.src.tar.xz"
+options="!checksum"
+
+build()
+{
+	cd *
+	mkdir build 
+	cd    build 
+                export CC="gcc -m32"
+        export CXX="g++ -m32"
+        export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+export LLVM_CONFIG=/usr/bin/llvm-config-32
+    cmake .. -G Ninja \
+      -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_INSTALL_LIBDIR=lib32 \
+      -D CMAKE_C_FLAGS="-m32" \
+      -D CMAKE_CXX_FLAGS="-m32" \
+      -D LLVM_CONFIG=$LLVM_CONFIG \
+      -D LLVM_DIR=$($LLVM_CONFIG --cmakedir)
+	ninja
+	DESTDIR=$PWD/DESTIR ninja install
+	mkdir -pv $PKG/usr/lib32
+	cp -Ra DESTDIR/usr/lib32/* $PKG/usr/lib32
+}

@@ -1,0 +1,49 @@
+# description   : Rust std libs for 32-bit (i686-unknown-linux-gnu), multilib addon
+# depends       : curl cmake python3 llvm libssh2
+
+name=rust-32
+version=1.88.0
+release=1
+
+source="https://static.rust-lang.org/dist/rustc-$version-src.tar.xz"
+options="!checksum"
+
+build()
+{
+    cd rustc-${version}-src
+    cat > bootstrap.toml << EOF
+change-id = 140732
+
+[llvm]
+download-ci-llvm = false
+link-shared = true
+
+[build]
+target = ["x86_64-unknown-linux-gnu", "i686-unknown-linux-gnu"]
+host = ["x86_64-unknown-linux-gnu"]
+docs = false
+locked-deps = true
+
+[install]
+prefix = "/opt/rustc-${version}"
+
+[rust]
+channel = "stable"
+lto = "thin"
+codegen-units = 1
+lld = false
+llvm-bitcode-linker = false
+
+[target.i686-unknown-linux-gnu]
+cc = "/usr/bin/gcc"
+cxx = "/usr/bin/g++"
+ar = "/usr/bin/gcc-ar"
+ranlib = "/usr/bin/gcc-ranlib"
+EOF
+
+    # Build only 32-bit target libraries (standard libs)
+    ./x.py build --target i686-unknown-linux-gnu --host x86_64-unknown-linux-gnu library/std
+
+    # Install only the 32-bit target standard libraries
+    DESTDIR=$PKG ./x.py install --target i686-unknown-linux-gnu library/std
+}

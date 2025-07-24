@@ -1,0 +1,17 @@
+[binaries]
+c = 'gcc'
+cpp = 'g++'
+ar = 'ar'
+strip = 'strip'
+pkgconfig = 'pkg-config'
+rust = 'rustc'
+cmake = 'cmake'
+
+[host_machine]
+system = 'linux'
+cpu_family = 'x86'
+cpu = 'i686'
+endian = 'little'
+
+[properties]
+rust_args = ['-C', 'linker=gcc', '-C', 'link-arg=-m32']

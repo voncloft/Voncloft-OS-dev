@@ -1,0 +1,28 @@
+# description	: Utility libraries for XC Binding - Standard X key constants and conversion to/from keycodes
+# depends	: libxcb-32 
+
+name=xcb-util-keysyms-32
+version=0.4.1
+release=1
+source="http://xcb.freedesktop.org/dist/xcb-util-keysyms-$version.tar.gz"
+
+build() {
+	cd *
+
+	        export CC="gcc -m32"
+        export CXX="g++ -m32"
+        export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+
+  	./configure \
+		--prefix=/usr \
+		--libdir=/usr/lib32 \
+		--sysconfdir=/etc \
+		--localstatedir=/var \
+		--disable-static
+	make
+	make DESTDIR=$PWD/DESTDIR install
+
+	mkdir -pv $PKG/usr/lib32
+	cp -Ra DESTDIR/usr/lib32/* $PKG/usr/lib32
+}
+

@@ -1,0 +1,15 @@
+# description : converts text
+# depends :
+
+name=dos2unix
+version=7.5.1
+release=1
+
+source="http://sourceforge.net/projects/dos2unix/files/dos2unix/7.5.1/dos2unix-7.5.1.tar.gz"
+
+build()
+{
+	cd dos2unix-$version
+	make
+	make DESTDIR=$PKG install
+}

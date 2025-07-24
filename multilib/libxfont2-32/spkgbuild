@@ -2,9 +2,9 @@
 # depends	: libxfont2
 
 name=libxfont2-32
-version=2.0.4
+version=2.0.7
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXfont2-$version.tar.bz2"
+source="http://ftp.x.org/pub/individual/lib/libXfont2-$version.tar.xz"
 
 build() {
 	cd libXfont2-$version

@@ -1,23 +1,43 @@
 # description	: Collection of modular and reusable compiler and toolchain technologies
-# depends	: libffi-32  libxml2-32 llvm
+# depends	: libxml2-32 llvm
 
 name=llvm-32
 version=20.1.7
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz"
+source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-${version}.src.tar.xz
+https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-20.1.7.src.tar.xz
+https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-20.1.7.src.tar.xz
+https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/clang-20.1.7.src.tar.xz"
+noextract="llvm-cmake-20.1.7.src.tar.xz llvm-third-party-20.1.7.src.tar.xz clang-20.1.7.src.tar.xz"
+
 
 build() {
-	cd llvm-$version.src
+        cd llvm-$version.src
 
-	export CC="gcc -m32"
-	export CXX="g++ -m32"
-	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+        # The upstream expects them extracted at the same level as the llvm tarball, and 
+        # the extracted directories renamed to cmake and third-party:
+        tar -xf $SRC/llvm-cmake-20.1.7.src.tar.xz                              &&
+        tar -xf $SRC/llvm-third-party-20.1.7.src.tar.xz                        &&
+	sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-20.1.7.src@'          \
+    -i CMakeLists.txt                                                &&
+	sed '/LLVM_THIRD_PARTY_DIR/s@../third-party@third-party-20.1.7.src@' \
+    -i cmake/modules/HandleLLVMOptions.cmake
 
-	mkdir -v build
-	cd       build
-	
+        tar -xf $SRC/clang-20.1.7.src.tar.xz -C tools &&
+        mv tools/clang-20.1.7.src tools/clang
+
+        # Fix Python scripts which use /usr/bin/env python to access the system Python:
+                grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
+                sed 's/utility/tool/' -i utils/FileCheck/CMakeLists.txt
+        mkdir build
+        cd build
+        export CC="gcc -m32"
+        export CXX="g++ -m32"
+        export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
+
 	cmake .. -G Ninja \
 	      -DCMAKE_INSTALL_PREFIX=/usr           \
+	      -DCMAKE_INSTALL_LIBDIR=lib32 \
 	      -DLLVM_ENABLE_FFI=ON                  \
 	      -DCMAKE_BUILD_TYPE=Release            \
 	      -DLLVM_BUILD_LLVM_DYLIB=ON            \
