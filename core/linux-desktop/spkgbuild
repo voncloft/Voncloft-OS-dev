@@ -1,5 +1,5 @@
 # description : linux kernel for desktop
-
+# depends : sof-firmware linux-firmware tuner-firmware
 name=linux-desktop
 version=6.15.4
 release=1
