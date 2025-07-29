@@ -15,14 +15,4 @@ build() {
 	meson .. --prefix=/usr
 	ninja
 	DESTDIR=$PKG ninja install
-
-	cd ..
-	mkdir build32
-	cd build32
-	export CC="gcc -m32"
-	export "CXX="g++ -m32"
-
-	meson .. --libdir=/usr/lib32
-	ninja
-	DESTDIR=$PKG ninja install
 }
