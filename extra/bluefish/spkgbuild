@@ -1,25 +1,21 @@
-# description : an IDE program used for programming
-# depends : enchant gtk3 python
+# description   : Bluefish is a GTK+ text editor targeted towards programmers and web designers, with many options to write websites, scripts and programming code
+# depends       : gtk desktopfileutils
 
 name=bluefish
-version=2.2.17
-release=2
+version=2.2.17    
+release=1
+source="https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.17.tar.bz2"
 
-source="https://www.bennewitz.com/$name/stable/source/$name-$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
-	autoreconf -ifv
-
-	./configure --prefix=/usr \
-	--sysconfdir=/etc \
-        --localstatedir=/var \
-        --enable-spell-check \
-        --disable-update-databases \
-        --disable-xml-catalog-update
-
-	make 
-	make DESTDIR=$PKG install
+    cd $name-$version
+    
+    sed '/infbrowser/d' -i src/Makefile.am 
+    autoreconf
+    ./configure --prefix=/usr --docdir=/usr/share/doc/bluefish-2.2.17 
+    make
+    make DESTDIR=$PKG install
+    #gtk-update-icon-cache -t -f --include-image-data /usr/share/icons/hicolor 
+    #update-desktop-database
 }
-
