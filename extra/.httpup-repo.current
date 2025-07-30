@@ -1,7 +1,6 @@
 gtksourceview3
 gtkmm2
 gimp
-kmod
 gnucash
 gtk3
 epson-inkjet-printer-escpr2
@@ -66,8 +65,6 @@ gtksourceview3/spkgbuild
 gtkmm2/spkgbuild
 gimp/CHANGELOG
 gimp/spkgbuild
-kmod/CHANGELOG
-kmod/spkgbuild
 gnucash/CHANGELOG
 gnucash/spkgbuild
 gtk3/.pkgfiles

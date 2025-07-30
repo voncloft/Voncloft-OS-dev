@@ -54,7 +54,6 @@ plasma-desktop
 eventcalendar
 plasma-systemmonitor
 plasma-systemmonitor/plasmasystemmonitor
-test
 khotkeys
 libkscreen
 kwayland-integration
@@ -224,7 +223,6 @@ eventcalendar/spkgbuild
 plasma-systemmonitor/plasmasystemmonitor/spkgbuild
 plasma-systemmonitor/CHANGELOG
 plasma-systemmonitor/spkgbuild
-test/spkgbuild
 khotkeys/CHANGELOG
 khotkeys/spkgbuild
 libkscreen/.pkgfiles

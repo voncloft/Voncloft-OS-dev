@@ -1,12 +1,10 @@
 galculator
 intltool
-python
 figlet
 stfl
 graphviz
 texinfo
 fluxbox
-python-packaging
 dmenu
 dcfldd
 linux-pam
@@ -26,7 +24,6 @@ opencl-headers
 cairomm
 hunspell
 aircrack-ng
-python-flit
 grub-efi
 logrotate
 openssh-boot
@@ -140,7 +137,6 @@ accountsservice
 cdrtools
 mitkrb
 cabextract
-python-setuptools
 gwenhywfar
 runit
 webkitgtk
@@ -203,7 +199,6 @@ playerctl
 fbpanel
 gnutls
 jasper
-openjdk
 viewnior
 enchant
 talloc
@@ -243,7 +238,6 @@ mksh
 json-c
 fakeroot
 consolekit2
-perl
 slang
 audacious
 shared-mime-info
@@ -346,7 +340,6 @@ flex
 ntfs-3g
 epdfview
 cups
-python-wheel
 papirus-icon-theme
 nbwmon
 time
@@ -420,8 +413,6 @@ papirus-icon-theme-dark
 newsboat
 iproute2
 irssi
-perl-xml-parser
-perl-xml-parser/nano
 frei0r-plugins
 dejagnu
 inih
@@ -503,10 +494,6 @@ audacious-plugins
 galculator/spkgbuild
 intltool/.pkgfiles
 intltool/spkgbuild
-python/.pkgfiles
-python/.nanorc
-python/CHANGELOG
-python/spkgbuild
 figlet/spkgbuild
 stfl/spkgbuild
 graphviz/.pkgfiles
@@ -516,8 +503,6 @@ texinfo/.pkgfiles
 texinfo/CHANGELOG
 texinfo/spkgbuild
 fluxbox/spkgbuild
-python-packaging/.pkgfiles
-python-packaging/spkgbuild
 dmenu/dmenu-4.5-xft.diff
 dmenu/dmenu-4.5-mouse-support.diff
 dmenu/CHANGELOG
@@ -578,8 +563,6 @@ hunspell/.pkgfiles
 hunspell/CHANGELOG
 hunspell/spkgbuild
 aircrack-ng/spkgbuild
-python-flit/.pkgfiles
-python-flit/spkgbuild
 grub-efi/.pkgfiles
 grub-efi/0006-BootHole.patch
 grub-efi/spkgbuild
@@ -889,8 +872,6 @@ mitkrb/.pkgfiles
 mitkrb/spkgbuild
 cabextract/CHANGELOG
 cabextract/spkgbuild
-python-setuptools/.pkgfiles
-python-setuptools/spkgbuild
 gwenhywfar/spkgbuild
 runit/spkgbuild
 webkitgtk/CHANGELOG
@@ -1052,7 +1033,6 @@ gnutls/CHANGELOG
 gnutls/spkgbuild
 jasper/.pkgfiles
 jasper/spkgbuild
-openjdk/spkgbuild
 viewnior/CHANGELOG
 viewnior/spkgbuild
 enchant/.pkgfiles
@@ -1150,10 +1130,6 @@ consolekit2/consolekit2.install.bak
 consolekit2/pam-foreground-compat.ck
 consolekit2/CHANGELOG
 consolekit2/spkgbuild
-perl/.pkgfiles
-perl/.nanorc
-perl/CHANGELOG
-perl/spkgbuild
 slang/.pkgfiles
 slang/CHANGELOG
 slang/spkgbuild
@@ -1442,8 +1418,6 @@ cups/rc.cupsd
 cups/run
 cups/spkgbuild
 cups/pre-install.sh
-python-wheel/.pkgfiles
-python-wheel/spkgbuild
 papirus-icon-theme/spkgbuild
 nbwmon/spkgbuild
 time/spkgbuild
@@ -1639,14 +1613,6 @@ iproute2/CHANGELOG
 iproute2/spkgbuild
 irssi/CHANGELOG
 irssi/spkgbuild
-perl-xml-parser/.pkgfiles
-perl-xml-parser/.nanorc
-perl-xml-parser/CHANGELOG
-perl-xml-parser/spkgbuild
-perl-xml-parser/nano/.pkgfiles
-perl-xml-parser/nano/.nanorc
-perl-xml-parser/nano/CHANGELOG
-perl-xml-parser/nano/spkgbuild
 frei0r-plugins/.pkgfiles
 frei0r-plugins/CHANGELOG
 frei0r-plugins/spkgbuild

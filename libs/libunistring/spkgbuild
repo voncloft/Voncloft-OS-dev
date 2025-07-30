@@ -1,4 +1,5 @@
 # description	: Library for manipulating Unicode strings and C strings
+# depends : 
 
 name=libunistring
 version=1.3

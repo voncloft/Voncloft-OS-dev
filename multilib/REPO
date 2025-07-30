@@ -80,7 +80,6 @@ d:xorgproto-32
 d:libgcrypt-32
 d:elfutils-32
 d:libpsl-32
-d:libpsl-32/libunistring
 d:wayland-32
 d:icu-32
 d:libxau-32
@@ -269,9 +268,6 @@ f:4104f99fe11a9b188a989684acf88e7f:libgcrypt-32/spkgbuild
 f:95ebccec796a3f94280aa973d1e5153e:elfutils-32/spkgbuild
 f:2db3dc93103349ec8975b536d09f9496:libpsl-32/.pkgfiles
 f:81794c1c5a42152086da98eed338a6a5:libpsl-32/CHANGELOG
-f:c4a5067544e65e6bbc27920ad969f069:libpsl-32/libunistring/.pkgfiles
-f:00ac023b3d80a5adaccf67a121bdb477:libpsl-32/libunistring/CHANGELOG
-f:1cb100a4b84b0419325ba121cc5ca412:libpsl-32/libunistring/spkgbuild
 f:117823406766e2629deea894b119a497:libpsl-32/spkgbuild
 f:1757fe110eb0dfa488d76708f15ed90e:wayland-32/.pkgfiles
 f:e82ecbe35ea51a6fb2101d5f3cf12733:wayland-32/spkgbuild

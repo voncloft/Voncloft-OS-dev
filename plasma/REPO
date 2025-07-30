@@ -28,8 +28,6 @@ d:plasma-firewall
 d:milou
 d:libksysguard
 d:kactivitymanagerd
-d:plasma-programs-bak
-d:plasma-programs-bak/plasma-programs
 d:plasma-pa
 d:aura-browser
 d:plasma-wayland-protocols
@@ -158,10 +156,6 @@ f:46e586740b5cfe1e226661bf5b178208:libksysguard/spkgbuild
 f:6083c48a8630d18d102ad2a3c103ddd5:kactivitymanagerd/.pkgfiles
 f:c1340640847a48dc9329087025525208:kactivitymanagerd/CHANGELOG
 f:6dcd0381def2cc83e50e629d9db5b9cd:kactivitymanagerd/spkgbuild
-f:212920977fae37b34033f22d4dc3f6f9:plasma-programs-bak/plasma-programs/CHANGELOG
-f:0ea9e3e1a8635eb62d69197eb6765261:plasma-programs-bak/plasma-programs/spkgbuild
-f:212920977fae37b34033f22d4dc3f6f9:plasma-programs-bak/CHANGELOG
-f:aa74c77dc569dd2b76655dbc1b12707a:plasma-programs-bak/spkgbuild
 f:ffa9348da1bf8fbd255784edd51a6ddb:plasma-pa/.pkgfiles
 f:2104c63e4c16f6df1cade231dbe5dc06:plasma-pa/CHANGELOG
 f:d872c3dfc209bdaf2070482537e46d6b:plasma-pa/spkgbuild
@@ -269,7 +263,7 @@ f:a240b125e9ef13478a3d9b3d9ebf396e:polkit-kde-agent-1/CHANGELOG
 f:289b7a8853345583bae4e3afd38b75b2:polkit-kde-agent-1/spkgbuild
 f:42dbadba97361c2723c52a0ed052a59b:plasma-bigscreen/CHANGELOG
 f:3b5e7619d5558d4b8c4625b633b3fe5c:plasma-bigscreen/spkgbuild
-f:eb9035d8d5cf33f8b8bfe1b85790d881:.httpup-repo.current
+f:bfe5070455052442b0ce7353d5c3dde8:.httpup-repo.current
 f:1da0cfd334c9314758a051ec5484158f:krdp/CHANGELOG
 f:1fb695618ff90abeea040436a41fa18e:krdp/spkgbuild
 f:4f3f11bb1d175f236611fb51f021fad9:kde-gtk-config/.pkgfiles
