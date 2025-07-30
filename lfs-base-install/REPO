@@ -37,6 +37,7 @@ d:lfs-base
 d:groff
 d:tzdata
 d:glibc
+d:sof-firmware
 d:perl
 d:libxcrypt
 d:gcc
@@ -49,6 +50,7 @@ d:diffutils
 d:sysklogd
 d:sed
 d:bison
+d:linux-firmware
 d:bzip2
 d:libpsl
 d:make
@@ -59,6 +61,7 @@ d:python-wheel
 d:elfutils
 d:util-linux
 d:lfs-bootscripts
+d:tuner-firmware
 d:tcl
 d:libffi
 d:gmp
@@ -209,7 +212,7 @@ f:6bdb9e65b88edc4aa8ecf1eef432ebc4:udev-lfs/spkgbuild
 f:cadcb63b9bc269a457a70c58f0d97367:zstd/.pkgfiles
 f:0d5be0c2825343f377c4f94556807964:zstd/CHANGELOG
 f:5c9c0665a48a76906a73c3aadec627f1:zstd/spkgbuild
-f:9f497be7f0fd7af16546bfcddcddeebc:lfs-base/spkgbuild
+f:f52ad4744649b1d6ea08adba4ab9e5e7:lfs-base/spkgbuild
 f:664b2c752dd6a57663aa6a11e9b01614:groff/.pkgfiles
 f:206cb5ae2dcc536779a5ca298ae1d9bb:groff/CHANGELOG
 f:ecdbb57763c23d63c195431cecda5bd0:groff/spkgbuild
@@ -220,6 +223,8 @@ f:9a5997c3452909b1769918c759eff8a2:glibc/glibc-fhs-1.patch
 f:cdf5013e47e43c174f1451cd63896921:glibc/CHANGELOG
 f:cabf312a0adc98de9d52a411b2c14baa:glibc/genlocales
 f:663c40c6cc76381afe07cba65de8ec0a:glibc/spkgbuild
+f:1e8408c28502f17e4f6e7816f9d4600c:sof-firmware/CHANGELOG
+f:bb126640d7fa0fab74a85a049d9e7699:sof-firmware/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:perl/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:perl/.nanorc
 f:d6c598646e8405f39a48fdc2228b71df:perl/CHANGELOG
@@ -263,6 +268,8 @@ f:47ae2410ff07650a59acd26626c56f91:sed/spkgbuild
 f:2218eb3541c6a8c1241db5707f7760cd:bison/.pkgfiles
 f:347a8b013464979f21063b02edd4ccfb:bison/CHANGELOG
 f:861adcc637b52e9fa0aa9dac2e935be2:bison/spkgbuild
+f:1e8408c28502f17e4f6e7816f9d4600c:linux-firmware/CHANGELOG
+f:59acf9b514ce1c02438ed45e68d7aaa5:linux-firmware/spkgbuild
 f:49d4baf3ac49ec0acc58b22ec983401c:bzip2/.pkgfiles
 f:99b3849fcc24d6a8ccf749ca1ccb8ad1:bzip2/spkgbuild
 f:2db3dc93103349ec8975b536d09f9496:libpsl/.pkgfiles
@@ -290,6 +297,12 @@ f:fe07c432c464e42b023caa057cafb410:lfs-bootscripts/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:lfs-bootscripts/.nanorc
 f:d6c598646e8405f39a48fdc2228b71df:lfs-bootscripts/CHANGELOG
 f:5c9d66fb2b19b8e022a0f0392411b2b1:lfs-bootscripts/spkgbuild
+f:775dbf0824268573af19c88681033c6c:tuner-firmware/.pkgfiles
+f:fd24b601fe2cf5779778da5f7521c917:tuner-firmware/NXP7164-2010-03-10.1.fw
+f:b9fa8f284483480675d29d19e704f62c:tuner-firmware/dvb-fe-tda10048-1.0.fw
+f:dbba1038c44b9379db50a24dbb790ea0:tuner-firmware/spkgbuild
+f:39b8c34dd6e96414798e78540bc5396f:tuner-firmware/v4l-saa7164-1.0.2.fw
+f:ba8194afd8105969a536cb881899200b:tuner-firmware/v4l-saa7164-1.0.3.fw
 f:82487e43d74d33bd68582f7fede63421:tcl/.pkgfiles
 f:405358ce61b3b13f13749e8b8073da66:tcl/spkgbuild
 f:fa1ab5f5a8003c1b0e1faeada8560d8f:libffi/.pkgfiles

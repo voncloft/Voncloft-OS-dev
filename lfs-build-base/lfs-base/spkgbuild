@@ -1,7 +1,7 @@
 # description : base install 
-# depends : man-pages iana-etc glibc zlib bzip2 xz lz4 zstd file readline m4 bc flex tcl expect dejagnu pkgconf binutils gmp mpfr mpc isl attr acl libcap libxcrypt shadow gcc ncurses sed psmisc gettext bison grep bash
-# depends : libtool gdbm gperf expat inetutils less perl perl-xml-parser intltool autoconf automake openssl elfutils libffi python python-flit python-packaging python-wheel python-setuptools ninja meson kmod coreutils diffutils gawk
-# depends : findutils groff gzip iproute2 kbd libpipeline make patch tar texinfo nano markupsafe jinja2 udev man-db procps-ng util-linux e2fsprogs sysklogd sysvinit wget linux-desktop
+# depends : man-pages iana-etc glibc zlib bzip2 xz lz4 zstd file readline m4 bc flex tcl expect dejagnu pkgconf binutils bmp mpfr mpc isl attr acl libcap libxcrypt shadow gcc ncurses sed psmisc gettext bison grep bash
+# depends : libtool gdbm gperf expat inetutils less perl perl xml-parser intltool autconf automake openssl libelf libffi python python-flit python-packaging python-wheel python-setuptools ninja meson kmod coreutils diffutils gawk
+# depends : findutils groff gzip iproute kbd libpipeline make patch tar texinfo nano markupsafe jinja udev man-db procps-ng util-linux e2fsprogs sysklogd sysvinit wget linux-desktop grub-efi
 
 name=lfs-base
 version=12.3
