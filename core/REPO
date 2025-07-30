@@ -236,6 +236,7 @@ d:tmux
 d:iw
 d:cifs-utils
 d:leafpad
+d:sof-firmware
 d:git
 d:syslinux
 d:mksh
@@ -357,12 +358,14 @@ d:elfutils
 d:at-spi2-core
 d:util-linux
 d:parallel
+d:dos2unix
 d:jack
 d:lfs-bootscripts
 d:uthash
 d:papirus-icon-theme-light
 d:lsof
 d:sxhkd
+d:tuner-firmware
 d:tcl
 d:vimix-gtk-themes
 d:docbook2x
@@ -488,7 +491,6 @@ d:spectrwm
 d:bitchx
 d:foltotar
 d:scons
-d:kernel-prereq
 d:pinentry
 d:plank
 d:mkinitramfs
@@ -602,7 +604,7 @@ f:ed3a1d368217405b9648ba43d2e62737:attr/.pkgfiles
 f:cd16ab61bb48e663b5af6414040b888c:attr/CHANGELOG
 f:063f14c49b9d2516edc56a1274b97bc1:attr/spkgbuild
 f:05fd85721a267da04598ec1f628bce50:page-stripper/.pkgfiles
-f:378921e7752b5376e31e4f7afae0383a:page-stripper/page-stripper
+f:34610676a6d3ff50b31eec15437461b7:page-stripper/page-stripper
 f:02d70067b249b8f02de35eb063511428:page-stripper/strip-page
 f:daedc000cc554c611cee289f1a677d18:page-stripper/page-stripper-bak
 f:c8937e237af469e70bfc7fcb26790747:page-stripper/spkgbuild
@@ -616,7 +618,7 @@ f:094c25ee39999ec48ba4385265b34daa:numix-themes-blue/spkgbuild
 f:9e3cd4617d74da7e28b700da71fbfd84:icewm/CHANGELOG
 f:860d17e2d2c2191517c9ab9af55d224a:icewm/spkgbuild
 f:b2fd790f540766ca539d06509a794cce:spirv-headers/.pkgfiles
-f:3f2ce913a2f4854a0408eb4f892b9086:spirv-headers/spkgbuild
+f:830693a611e0eb84583a79332b77b033:spirv-headers/spkgbuild
 f:7877ffe889e5387287f5a94910e8a0a3:which/.pkgfiles
 f:55e90af3365d767d4c7cc78556a8160b:which/CHANGELOG
 f:82dc02a7e6250d46877caa9095ea4ce5:which/spkgbuild
@@ -704,11 +706,12 @@ f:6f0f530adbe1f4d982c017270087eaf2:linux-desktop/post-install.no
 f:8bc83aa05179429d031aec0c45013f5b:linux-desktop/extract.sh
 f:511d2d2f2ca57c4a5938f0bedb1ff0de:linux-desktop/.old-config
 f:ad48edb5e6a47c82f5f84256c73a631a:linux-desktop/post-upgrade.sh
+f:c71871f16c1686ce8b7da00106df2c69:linux-desktop/spkgbuild-old
 f:b69c19cb7bf876af98ab52ba58d32cd8:linux-desktop/CHANGELOG
 f:6f0f530adbe1f4d982c017270087eaf2:linux-desktop/post-install.sh
 f:cd5390e5b0e7cbe86cb692fa06666762:linux-desktop/config
-f:d0fee34ee2b3614fd00b828fc524bfdd:linux-desktop/.config
-f:c71871f16c1686ce8b7da00106df2c69:linux-desktop/spkgbuild
+f:2169576f90d68be87f8f0ec8fd101eab:linux-desktop/.config
+f:a080cc519d5b99c46ce6ff6822cdd54e:linux-desktop/spkgbuild
 f:262eda046c808cedb749b7f139f4233e:linux-desktop/override
 f:677d4471c793b7a46eb9bffac6c38257:log-folders/CHANGELOG
 f:7a8c246814ce676ef8640096fab05e89:log-folders/spkgbuild
@@ -1059,7 +1062,7 @@ f:4f61bbd62f35116617f94a071e764dcf:talloc/.pkgfiles
 f:0e90e4cbf100238b1a492e8261f5ee4c:talloc/spkgbuild
 f:50e9c67c0a8bed1451e79eb1edcd0af9:fuse3/.pkgfiles
 f:d5c03726081b3deb15161663c59a1f66:fuse3/CHANGELOG
-f:f42b50253c180befefe2556a037466b7:fuse3/spkgbuild
+f:bc58714ef970128b7eba562f7f52346a:fuse3/spkgbuild
 f:31043aeb69dc0973664cf6d197bf27cc:wgetpaste/spkgbuild
 f:f929686189270e9c6b345c8e889d140f:gnupg/.pkgfiles
 f:fcbb06c0f2b2bb71b7baa1f9c50ffeb1:gnupg/CHANGELOG
@@ -1129,6 +1132,8 @@ f:7269eeb7fe5976be5ac8c1d7ddbc9eac:cifs-utils/CHANGELOG
 f:c13be58ccc460155a59d18802a8bb74c:cifs-utils/spkgbuild
 f:652191ef522559c1d0f7b2317dd744da:leafpad/CHANGELOG
 f:cd34dec63d0d6ec4f10eb4a682ec1547:leafpad/spkgbuild
+f:1e8408c28502f17e4f6e7816f9d4600c:sof-firmware/CHANGELOG
+f:bb126640d7fa0fab74a85a049d9e7699:sof-firmware/spkgbuild
 f:e58c44028b3272b0ebd0482be01d0b14:git/.pkgfiles
 f:688d4e72bbb633526889f33c8de7142f:git/CHANGELOG
 f:c181a6859d30b665c4387ddf2fb353cd:git/spkgbuild
@@ -1176,6 +1181,7 @@ f:8219ee56c634626b5bdc68e1a7ddb9aa:pcmanfm/spkgbuild
 f:c6365259465f783771d65efcc5ac1d8b:doxygen/.pkgfiles
 f:74419a59dacc41aec1752624273b5731:doxygen/CHANGELOG
 f:0a87f42e92ecc91af07766587c321980:doxygen/spkgbuild
+f:57e0f2757c5db5f063f7706f33c40840:dconf/.pkgfiles
 f:80929e6cd29c1f598053c82e83ee221f:dconf/spkgbuild
 f:1d74df087174fe619dd324fd4d56ac1f:gegl/.pkgfiles
 f:1f01d7e5086ad702eaaf3a1b9c681408:gegl/CHANGELOG
@@ -1304,7 +1310,7 @@ f:393869392b6591de04eb15305add492b:lftp/spkgbuild
 f:4bccd3de2177c4f9626a25984557b5ec:openbox/spkgbuild
 f:9efff0613c5d33369681c70f01834aa4:cbindgen/.pkgfiles
 f:3e63a62afd8b82395002a17304af26c4:cbindgen/CHANGELOG
-f:0e87ed212e4d08ca0e34a5403d4e5fa1:cbindgen/spkgbuild
+f:b2b7fa2f6eb9f92d15d2171ada57f324:cbindgen/spkgbuild
 f:60108cf69a481c7b2258098de78ce5b6:cyrus-sasl/.pkgfiles
 f:8d3b989ecd8e0157d68cd76dd3b351aa:cyrus-sasl/spkgbuild
 f:b3ba2c04dae84b84ebc7729b2e686d7f:lua52/.pkgfiles
@@ -1371,7 +1377,7 @@ f:58b1b94642895a454896ef61b8ac82bf:glib-networking/spkgbuild
 f:97e4cb9f74e6d526143f3632a817b41b:fuse2/readme
 f:c9457cf5b2196da67d5ac816d1c86a4f:fuse2/fuse.conf
 f:0cef609405fb6705e196bc272a8e1c5c:fuse2/CHANGELOG
-f:db7e553fb452e28d97ec046e2d1435d9:fuse2/spkgbuild
+f:c9f8ebb076ee51be4fc246b0a4b0260e:fuse2/spkgbuild
 f:84164d8ff50bd28cc8d534272d363ef4:timeshift/pr476.patch
 f:9c51ee2b6b5ba6274ffde49da460edb2:timeshift/CHANGELOG
 f:3788d7b8834d8d86f569fa2eb8c6dab2:timeshift/spkgbuild
@@ -1468,6 +1474,8 @@ f:e16ba52e2e8d66bc37939aeddec892c3:util-linux/CHANGELOG
 f:cb5b1eb897048ba1784c1fe9bd50229d:util-linux/spkgbuild
 f:de135bdbd4ecdaa0f5c7b997da8214c7:util-linux/override
 f:cf55ab1248efc6dab2820aa5bc682979:parallel/spkgbuild
+f:fa74d49d781054ad87b3f524057ddcd2:dos2unix/.pkgfiles
+f:ad56fdcc2d7589fd2a1d59fcfaf21086:dos2unix/spkgbuild
 f:63638c731aba2e8f823187ad7e9af7dc:jack/.pkgfiles
 f:59c3734515e5e6ccb0ea274802671e16:jack/99-audio.conf
 f:73060059c06ed7739211b8f47e55b70c:jack/post-upgrade.sh
@@ -1485,6 +1493,12 @@ f:b1b62cb5c9ccc9f347d8bc72e5e149aa:lsof/.pkgfiles
 f:b1be01a8bc0637cfbdc720466f17a0cc:lsof/CHANGELOG
 f:0d849c72aa612f3a128aba089febca8b:lsof/spkgbuild
 f:ece56886fa95c95d2b62d23f00920029:sxhkd/spkgbuild
+f:775dbf0824268573af19c88681033c6c:tuner-firmware/.pkgfiles
+f:fd24b601fe2cf5779778da5f7521c917:tuner-firmware/NXP7164-2010-03-10.1.fw
+f:b9fa8f284483480675d29d19e704f62c:tuner-firmware/dvb-fe-tda10048-1.0.fw
+f:dbba1038c44b9379db50a24dbb790ea0:tuner-firmware/spkgbuild
+f:39b8c34dd6e96414798e78540bc5396f:tuner-firmware/v4l-saa7164-1.0.2.fw
+f:ba8194afd8105969a536cb881899200b:tuner-firmware/v4l-saa7164-1.0.3.fw
 f:82487e43d74d33bd68582f7fede63421:tcl/.pkgfiles
 f:53ed46b4a964f2f74b60e1f43e395491:tcl/spkgbuild
 f:01054dca3ebb4806b1782a3f469a7138:vimix-gtk-themes/Install.patch
@@ -1810,12 +1824,6 @@ f:966019be9bdb1097a5095eb9ae1d6c39:foltotar/spkgbuild
 f:36701c59fa6c88d0bf4ab8c90fb8afc6:foltotar/foltotar
 f:7035ab4b404fd5f57b00035cf8ab3369:scons/CHANGELOG
 f:3702cdd62ac3010316f8b9cbb98f7942:scons/spkgbuild
-f:775dbf0824268573af19c88681033c6c:kernel-prereq/.pkgfiles
-f:fd24b601fe2cf5779778da5f7521c917:kernel-prereq/NXP7164-2010-03-10.1.fw
-f:b9fa8f284483480675d29d19e704f62c:kernel-prereq/dvb-fe-tda10048-1.0.fw
-f:766e8169b048498f690be18569bc18a4:kernel-prereq/spkgbuild
-f:39b8c34dd6e96414798e78540bc5396f:kernel-prereq/v4l-saa7164-1.0.2.fw
-f:ba8194afd8105969a536cb881899200b:kernel-prereq/v4l-saa7164-1.0.3.fw
 f:2d95520c2bc0ebc0435ca5a455311b24:pinentry/.pkgfiles
 f:dc6a6c36ffda4887148917ad4787392e:pinentry/CHANGELOG
 f:6df15e9940dfa62ad703203db3744e01:pinentry/spkgbuild

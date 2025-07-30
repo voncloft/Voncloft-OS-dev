@@ -359,7 +359,7 @@ f:b188f556eb8b99e0342e31bfe2976cfd:exiv2/.pkgfiles
 f:eef5e59ed46c2ac3b373473342524741:exiv2/spkgbuild
 f:d0ed9acd976cf89decf309a757eac73a:libglvnd/.pkgfiles
 f:a7dc64d2dd0ad750b7238d6655496925:libglvnd/CHANGELOG
-f:a73af04058b53aa20631961391bc1619:libglvnd/spkgbuild
+f:afe4b1a88ca601e8f4209d236545181e:libglvnd/spkgbuild
 f:376807bbc96d25302f36e90893d27f61:js78/spkgbuild
 f:e181e848a49581ce6dbfe576b1817611:libbytesize/.pkgfiles
 f:bc9ec22a6d654efe3a8874c868ff8474:libbytesize/CHANGELOG
@@ -834,7 +834,7 @@ f:79ae33c182a658afc7a092442883c994:libdbusmenu/spkgbuild
 f:13cbea1c4184c209e3a064ccf285daf7:glibmm/CHANGELOG
 f:f9e06cbbffd540965fe71eee5005bea9:glibmm/spkgbuild
 f:69c56a5b8797edf7a1d8d4ee5f23f3ea:libclc/.pkgfiles
-f:c92aa558c4038acdf4f397eafd84a540:libclc/spkgbuild
+f:c309e2a03e090effd6ec8c5b33afcebe:libclc/spkgbuild
 f:02f53cb3b067123d2b9e8c085816171b:libatomic_ops/.pkgfiles
 f:f8ab2b113c164dbb23825c3c96e1468a:libatomic_ops/CHANGELOG
 f:3944c38fff290286890f56678cb46f89:libatomic_ops/spkgbuild

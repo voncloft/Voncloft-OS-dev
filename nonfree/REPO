@@ -87,7 +87,7 @@ f:9fc66cc2eb0d4ef8ff58c4bab85b6a79:spotify/spkgbuild
 f:e04163ce7c7c186c87c80cf5da9d6736:virtualbox-guest-modules/vboxguest.hook
 f:12043a7550cd7b4d9cc71a60d47634d2:virtualbox-guest-modules/CHANGELOG
 f:6f75c7a8dcbbce7b0dab4ad40f04fed0:virtualbox-guest-modules/post-install.sh
-f:bd125f609d8d5ea1b78824e4a15f3009:virtualbox-guest-modules/spkgbuild
+f:8c14d18fc7634d4778adab98ea47246f:virtualbox-guest-modules/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-modules/override
 f:501ab7b371ea0ac9bbebc886be9f3027:virtualbox-guest-modules/vboxvideo-upstream.conf
 f:91891835ddaa34a41d7020775b14ede6:iridium/spkgbuild

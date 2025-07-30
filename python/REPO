@@ -2100,8 +2100,9 @@ f:ed5d535c2b1dab3df654164c92929837:python-keyring/spkgbuild
 f:df758d5ec7078f7f2ef7ff08cbd7c355:python-zope-interface/CHANGELOG
 f:0b8beff682552b217c84c6f52f740391:python-zope-interface/spkgbuild
 f:449d6ada92bcfd19af06821e9217f68e:python-profilestats/spkgbuild
+f:7ffc6a7cff9cdf34bf2711ef060eb061:python-cairo/.pkgfiles
 f:ce31c421c0f463f5b28dae47807d08a6:python-cairo/CHANGELOG
-f:1bc0d720c19fb3aebb7069a84f4b91d2:python-cairo/spkgbuild
+f:12dd1e4322a5feb2683e56a12f254d11:python-cairo/spkgbuild
 f:a2c0eeac04e6f6a7a73c7cd5e1c66d7e:python-mutagen/CHANGELOG
 f:d6106587e2329bb9f3a09e1481fd1d7c:python-mutagen/spkgbuild
 f:133a79ce19e0f180734de347f7710232:python-textdistance/CHANGELOG
@@ -3677,7 +3678,8 @@ f:f0135b98ba4a1a3e846f1b12fc17f18b:python-pytest-forked/CHANGELOG
 f:be422dc24fc5f2a78ca01818435c74e5:python-pytest-forked/spkgbuild
 f:9247b523a39e07ba3e24004050817995:python-qasync/CHANGELOG
 f:8be6a312fa09c23587c73416fbba5911:python-qasync/spkgbuild
-f:09b45e19e53fabbd716e2deffd50e105:python-distutils-extra/spkgbuild
+f:10a9e120024bfa8c2712473a90ebb7ff:python-distutils-extra/.pkgfiles
+f:d9a7ffda66042ec0735a241f9044eb1f:python-distutils-extra/spkgbuild
 f:3047b27cbc7bceab32c5ecb8dbd9e125:python-unicodecsv/CHANGELOG
 f:29e9f451e233512b5893a3316f9b3370:python-unicodecsv/spkgbuild
 f:04c6e819d6af7d405828c1ac34c28c8a:python-git-url-parse/CHANGELOG

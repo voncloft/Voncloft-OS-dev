@@ -120,6 +120,7 @@ f:90031be98ff47a28ca9dc3e4023ee898:xdgmenumaker/spkgbuild
 f:4a8475e4f748aa08f0a0552ca6eaff57:tty-clock/spkgbuild
 f:e22868234909a7d4037c771469767636:xorg-libraries/.pkgfiles
 f:252216456e42d04a8dd2f86b5f1641cb:xorg-libraries/spkgbuild
+f:84b3664a85e750c0a9dfecc7d7e2430a:xdg-desktop-portal-gtk/.pkgfiles
 f:9dd9790b3acd9c53b931ba3fa7cef681:xdg-desktop-portal-gtk/post-upgrade.sh
 f:171eaa10a0e946dfb132d886bad8320f:xdg-desktop-portal-gtk/CHANGELOG
 f:9dd9790b3acd9c53b931ba3fa7cef681:xdg-desktop-portal-gtk/post-install.sh

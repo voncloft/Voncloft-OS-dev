@@ -100,8 +100,9 @@ f:1550dc8346a8331e4a0be5be2d1dfc10:gtk-engines/spkgbuild
 f:5d88d18f1a9fed0588546a6eadb659a9:screenfetch/.pkgfiles
 f:4f4a324a8ddaea736240853fecfc314d:screenfetch/CHANGELOG
 f:a4fcef4bd066a86ac306c8e5aa7a359d:screenfetch/spkgbuild
+f:c1509b612aeb544afd08cd3762cbdc9c:bluefish/.pkgfiles
 f:ee33386422aa3cc19a41f8f8f779ea6a:bluefish/CHANGELOG
-f:0bbf2dda422ab6e9c550ab35b54d8e49:bluefish/spkgbuild
+f:c42a83a6f949ae4b225096092797c8fb:bluefish/spkgbuild
 f:ce97e5a63c91a1bcbdad8e52a7b2c896:youtubemp3/youtubemp3
 f:765e587e2e58461e1b501df7a7b7a2d0:youtubemp3/spkgbuild
 f:eeb64906ddfec1622f9ae95ab787c213:sane/CHANGELOG
@@ -193,7 +194,7 @@ f:195e8b1019fb7e28904537e8881af33a:dotnet-host/CHANGELOG
 f:4b770f5c0293948b9e3b6fac3aedad48:dotnet-host/spkgbuild
 f:6cff7f52e0e13c6f988f051a93676765:dotnet-host/dotnet-core-sdk-telemetry-optout.patch
 f:1622181a205950786bc4c695003feff9:onboard/CHANGELOG
-f:ebbf021261f2671e307e6e82741dd747:onboard/spkgbuild
+f:50efb10c1da9ebd753cc6461489bd62c:onboard/spkgbuild
 f:b78826ef54e0cab77d9ea4c4b7c50174:minecraft-launcher/CHANGELOG
 f:c759c05311ef7eb0ca4b6c3767375f03:minecraft-launcher/spkgbuild
 f:61a694a2574ed840f1509039d18e8b1e:minecraft-launcher/minecraft-launcher.desktop

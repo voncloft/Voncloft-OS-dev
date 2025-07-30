@@ -36,7 +36,7 @@ f:b63a368da002d7da4b4e9227e0a3e5cc:libsamplerate/.pkgfiles
 f:89afb40eb2bc610ee8f2e6a386a4d922:libsamplerate/CHANGELOG
 f:2cee3fe92acaaea8772ed993d7afcba9:libsamplerate/spkgbuild
 f:2a837ae352ba39438fa466cf7e825018:mplayer/CHANGELOG
-f:ef96211270be05dfb5b5db063890cb67:mplayer/spkgbuild
+f:dbc9e6347c1088a0b1d942eba663fe41:mplayer/spkgbuild
 f:4703dc0019932e442486942adb6c90a4:pulseaudio-alsa/asound.conf
 f:4d1860ef3d37b45aaa133384d5c2b8ff:pulseaudio-alsa/CHANGELOG
 f:d417165c676338af1bbebb546ac6ac2b:pulseaudio-alsa/spkgbuild
@@ -66,8 +66,9 @@ f:e0125e07b37d1ccab7de1edef08ac862:ffmpeg/CHANGELOG
 f:293d4211cfd8a3a9c89a97fc1f897edc:ffmpeg/spkgbuild
 f:7dcdc322ba5632b156b324b0c2f5d19b:graphite2/.pkgfiles
 f:8a9cb190b0aa9147cbc7272cd57ad2b6:graphite2/spkgbuild
+f:1cfcb80419b5c1b2f69ddb85a34f851a:mesa-demos/.pkgfiles
 f:cdf5d1f88b896b61ee0d749fa705bacc:mesa-demos/CHANGELOG
-f:fcb6655c1734fb3bd59c4da046d37683:mesa-demos/spkgbuild
+f:7118d46394f1df830e7c85da7432e0ab:mesa-demos/spkgbuild
 f:e0f5b761920745d2139b12d70a3759ec:openal/.pkgfiles
 f:d1b36b9e10c24d52c3ae9a1382e0f53b:openal/CHANGELOG
 f:6169581260b3a4888e4ee3d931395afb:openal/spkgbuild
