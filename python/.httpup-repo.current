@@ -2100,6 +2100,7 @@ python-keyring/spkgbuild
 python-zope-interface/CHANGELOG
 python-zope-interface/spkgbuild
 python-profilestats/spkgbuild
+python-cairo/.pkgfiles
 python-cairo/CHANGELOG
 python-cairo/spkgbuild
 python-mutagen/CHANGELOG
@@ -3677,6 +3678,7 @@ python-pytest-forked/CHANGELOG
 python-pytest-forked/spkgbuild
 python-qasync/CHANGELOG
 python-qasync/spkgbuild
+python-distutils-extra/.pkgfiles
 python-distutils-extra/spkgbuild
 python-unicodecsv/CHANGELOG
 python-unicodecsv/spkgbuild

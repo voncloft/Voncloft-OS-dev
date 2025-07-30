@@ -167,6 +167,7 @@ f:bf0a6299ef2ab084ceeead7b613ce4ab:libcap/spkgbuild
 f:dd389669b06a2e0136fb8ab8e9b6d88e:lz4/.pkgfiles
 f:d678006a4e87d73a38e425bcde86a3aa:lz4/CHANGELOG
 f:78879c497873a46c0eea8a6b5b1dd83f:lz4/spkgbuild
+f:2b85460e2bf8ca4d551c4bd9bd5baf6a:.httpup-urlinfo
 f:fe07c432c464e42b023caa057cafb410:isl/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:isl/.nanorc
 f:d6c598646e8405f39a48fdc2228b71df:isl/CHANGELOG
@@ -405,3 +406,4 @@ f:bc11273827e25e65a75582dd2f7a2b05:sysvinit/spkgbuild
 f:3659389e9cc289225ff3c26ceb069f70:shadow/.pkgfiles
 f:b15581c229916066d99b02fbc49b9d28:shadow/CHANGELOG
 f:b9064c2295d9f63e3f70b51a60a315ad:shadow/spkgbuild
+f:d7f1accbc8525355121c56c054699941:.httpup-repo.current

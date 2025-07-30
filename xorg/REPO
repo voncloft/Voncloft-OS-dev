@@ -270,7 +270,7 @@ f:51ab433cb9bdd1829a89c8c636636efa:xmessage/spkgbuild
 f:d94ff81fd87c00e1fc8456c227a775f3:xev/.pkgfiles
 f:d6d9f1ee764fa8b40b9e5b493f794918:xev/CHANGELOG
 f:50719cf6e47e471478e114d60608b749:xev/spkgbuild
-f:696e12cbbadee1214fdef2f28113668e:.httpup-repo.current
+f:feacd3ffa7c8aead2069ed95613af40c:.httpup-repo.current
 f:f23450a33336da81a11bf7688dde9606:xinput/.pkgfiles
 f:2f69de3607aa5ac39ba9455b19c7a28a:xinput/CHANGELOG
 f:d19907d9e601235c8a149fa346398933:xinput/spkgbuild

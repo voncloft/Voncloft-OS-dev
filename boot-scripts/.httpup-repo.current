@@ -1,0 +1,16 @@
+sddm-boot
+dbus-boot
+cups-boot
+fcron-boot
+ntpd-boot
+sddm-boot/.pkgfiles
+sddm-boot/spkgbuild
+dbus-boot/.pkgfiles
+dbus-boot/spkgbuild
+cups-boot/.pkgfiles
+cups-boot/spkgbuild
+fcron-boot/.pkgfiles
+fcron-boot/post-install.sh
+fcron-boot/spkgbuild
+ntpd-boot/.pkgfiles
+ntpd-boot/spkgbuild

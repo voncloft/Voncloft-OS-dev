@@ -54,7 +54,6 @@ d:plasma-desktop
 d:eventcalendar
 d:plasma-systemmonitor
 d:plasma-systemmonitor/plasmasystemmonitor
-d:test
 d:khotkeys
 d:libkscreen
 d:kwayland-integration
@@ -224,7 +223,6 @@ f:f12cd99f810fc595e4782ba17d4b57dd:eventcalendar/spkgbuild
 f:d5a7f90d375e3ff9a6de18dae39aa440:plasma-systemmonitor/plasmasystemmonitor/spkgbuild
 f:77ce25f7f570f7902eb49372d826a20f:plasma-systemmonitor/CHANGELOG
 f:d5a7f90d375e3ff9a6de18dae39aa440:plasma-systemmonitor/spkgbuild
-f:4afa8c9d5f9ff221aa645abf62c7fcf4:test/spkgbuild
 f:7c9c59ff916cce6346a85a4b23f6f37f:khotkeys/CHANGELOG
 f:1e54d8cd1f46dfece6ecf6c0279ffedd:khotkeys/spkgbuild
 f:949696fcfeaf1bfeaf01d11e018c1fbb:libkscreen/.pkgfiles

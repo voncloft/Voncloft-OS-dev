@@ -4520,7 +4520,7 @@ f:8b4d5eae0b518b1811750687fcb9ff00:python-flickrapi/spkgbuild
 f:4aa1aab753f0d2ad8d9eca90e51a119c:python-pytest-datadir/CHANGELOG
 f:dc4e97cdd746154b1fe5f27bfb12c318:python-pytest-datadir/spkgbuild
 f:1b6ebdc2019922db3f56fd2c8e8e2699:python-soappy/spkgbuild
-f:f6cd41abb903df218063cc7d6246a220:.httpup-repo.current
+f:7aeea43d2e9323b0c937fb11dbe1bc94:.httpup-repo.current
 f:1f0b75f7e60511575ad4a26a41941089:python-hidapi/CHANGELOG
 f:951d33cf2687d3612915a5d471cbd0e0:python-hidapi/spkgbuild
 f:c734a83ed688eb05ea2f54421c26ed0b:python-iniconfig/CHANGELOG

@@ -100,6 +100,7 @@ gtk-engines/spkgbuild
 screenfetch/.pkgfiles
 screenfetch/CHANGELOG
 screenfetch/spkgbuild
+bluefish/.pkgfiles
 bluefish/CHANGELOG
 bluefish/spkgbuild
 youtubemp3/youtubemp3

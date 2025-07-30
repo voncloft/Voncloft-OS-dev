@@ -236,6 +236,7 @@ tmux
 iw
 cifs-utils
 leafpad
+sof-firmware
 git
 syslinux
 mksh
@@ -357,12 +358,14 @@ elfutils
 at-spi2-core
 util-linux
 parallel
+dos2unix
 jack
 lfs-bootscripts
 uthash
 papirus-icon-theme-light
 lsof
 sxhkd
+tuner-firmware
 tcl
 vimix-gtk-themes
 docbook2x
@@ -488,7 +491,6 @@ spectrwm
 bitchx
 foltotar
 scons
-kernel-prereq
 pinentry
 plank
 mkinitramfs
@@ -704,6 +706,7 @@ linux-desktop/post-install.no
 linux-desktop/extract.sh
 linux-desktop/.old-config
 linux-desktop/post-upgrade.sh
+linux-desktop/spkgbuild-old
 linux-desktop/CHANGELOG
 linux-desktop/post-install.sh
 linux-desktop/config
@@ -1129,6 +1132,8 @@ cifs-utils/CHANGELOG
 cifs-utils/spkgbuild
 leafpad/CHANGELOG
 leafpad/spkgbuild
+sof-firmware/CHANGELOG
+sof-firmware/spkgbuild
 git/.pkgfiles
 git/CHANGELOG
 git/spkgbuild
@@ -1176,6 +1181,7 @@ pcmanfm/spkgbuild
 doxygen/.pkgfiles
 doxygen/CHANGELOG
 doxygen/spkgbuild
+dconf/.pkgfiles
 dconf/spkgbuild
 gegl/.pkgfiles
 gegl/CHANGELOG
@@ -1468,6 +1474,8 @@ util-linux/CHANGELOG
 util-linux/spkgbuild
 util-linux/override
 parallel/spkgbuild
+dos2unix/.pkgfiles
+dos2unix/spkgbuild
 jack/.pkgfiles
 jack/99-audio.conf
 jack/post-upgrade.sh
@@ -1485,6 +1493,12 @@ lsof/.pkgfiles
 lsof/CHANGELOG
 lsof/spkgbuild
 sxhkd/spkgbuild
+tuner-firmware/.pkgfiles
+tuner-firmware/NXP7164-2010-03-10.1.fw
+tuner-firmware/dvb-fe-tda10048-1.0.fw
+tuner-firmware/spkgbuild
+tuner-firmware/v4l-saa7164-1.0.2.fw
+tuner-firmware/v4l-saa7164-1.0.3.fw
 tcl/.pkgfiles
 tcl/spkgbuild
 vimix-gtk-themes/Install.patch
@@ -1695,6 +1709,7 @@ ncurses/.pkgfiles
 ncurses/CHANGELOG
 ncurses/spkgbuild
 imagemagick7/spkgbuild
+unzip/.pkgfiles
 unzip/unzip-6.0_CVE-2021-4217.patch
 unzip/time.patch
 unzip/spkgbuild
@@ -1809,12 +1824,6 @@ foltotar/spkgbuild
 foltotar/foltotar
 scons/CHANGELOG
 scons/spkgbuild
-kernel-prereq/.pkgfiles
-kernel-prereq/NXP7164-2010-03-10.1.fw
-kernel-prereq/dvb-fe-tda10048-1.0.fw
-kernel-prereq/spkgbuild
-kernel-prereq/v4l-saa7164-1.0.2.fw
-kernel-prereq/v4l-saa7164-1.0.3.fw
 pinentry/.pkgfiles
 pinentry/CHANGELOG
 pinentry/spkgbuild

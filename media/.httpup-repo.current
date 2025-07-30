@@ -66,6 +66,7 @@ ffmpeg/CHANGELOG
 ffmpeg/spkgbuild
 graphite2/.pkgfiles
 graphite2/spkgbuild
+mesa-demos/.pkgfiles
 mesa-demos/CHANGELOG
 mesa-demos/spkgbuild
 openal/.pkgfiles

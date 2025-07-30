@@ -1,7 +1,6 @@
 d:gtksourceview3
 d:gtkmm2
 d:gimp
-d:kmod
 d:gnucash
 d:gtk3
 d:epson-inkjet-printer-escpr2
@@ -66,8 +65,6 @@ f:68afca1737633c307ae8a7165e702fb6:gtksourceview3/spkgbuild
 f:5a3c86e8ed520b973293ab599a3df213:gtkmm2/spkgbuild
 f:be52e1189522f7e0850fa01a4b466eae:gimp/CHANGELOG
 f:9a8a4fa10c9b672a43d3b1aed08ab60a:gimp/spkgbuild
-f:03931952fb9df25efc847c78cccec917:kmod/CHANGELOG
-f:e6661f604c76adbbb8c02dbea12345e9:kmod/spkgbuild
 f:29cc7b84408b8f652ed2bf166b44cbff:gnucash/CHANGELOG
 f:6bd2f7d2e25c97f94658fe89fe88d210:gnucash/spkgbuild
 f:f36cbb5071b9308ede5cbb2da3f77a9f:gtk3/.pkgfiles
@@ -217,6 +214,6 @@ f:c4270356f06a2783e91a75d3ebbf1770:steam-devices/spkgbuild
 f:332ae8d62f376752915a9efaae4e7923:convertpdf/CHANGELOG
 f:e0b2482b2da2e0b1939a0464ca601e52:convertpdf/spkgbuild
 f:913069c0036f1e139915ea7f44a7afe6:convertpdf/convertpdf
-f:0001700b71b50b4a0aa7693324c1cebe:.httpup-repo.current
+f:6a9024d64f95598841daf69efd5bf445:.httpup-repo.current
 f:2e19deaa682e94692b2450c2dc040899:gtk-doc/.pkgfiles
 f:389b6032816f48c83c04d73b68a56d5e:gtk-doc/spkgbuild

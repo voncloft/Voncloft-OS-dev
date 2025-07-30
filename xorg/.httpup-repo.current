@@ -120,6 +120,7 @@ xdgmenumaker/spkgbuild
 tty-clock/spkgbuild
 xorg-libraries/.pkgfiles
 xorg-libraries/spkgbuild
+xdg-desktop-portal-gtk/.pkgfiles
 xdg-desktop-portal-gtk/post-upgrade.sh
 xdg-desktop-portal-gtk/CHANGELOG
 xdg-desktop-portal-gtk/post-install.sh

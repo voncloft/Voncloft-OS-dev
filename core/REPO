@@ -1,12 +1,10 @@
 d:galculator
 d:intltool
-d:python
 d:figlet
 d:stfl
 d:graphviz
 d:texinfo
 d:fluxbox
-d:python-packaging
 d:dmenu
 d:dcfldd
 d:linux-pam
@@ -26,7 +24,6 @@ d:opencl-headers
 d:cairomm
 d:hunspell
 d:aircrack-ng
-d:python-flit
 d:grub-efi
 d:logrotate
 d:openssh-boot
@@ -140,7 +137,6 @@ d:accountsservice
 d:cdrtools
 d:mitkrb
 d:cabextract
-d:python-setuptools
 d:gwenhywfar
 d:runit
 d:webkitgtk
@@ -203,7 +199,6 @@ d:playerctl
 d:fbpanel
 d:gnutls
 d:jasper
-d:openjdk
 d:viewnior
 d:enchant
 d:talloc
@@ -243,7 +238,6 @@ d:mksh
 d:json-c
 d:fakeroot
 d:consolekit2
-d:perl
 d:slang
 d:audacious
 d:shared-mime-info
@@ -346,7 +340,6 @@ d:flex
 d:ntfs-3g
 d:epdfview
 d:cups
-d:python-wheel
 d:papirus-icon-theme
 d:nbwmon
 d:time
@@ -420,8 +413,6 @@ d:papirus-icon-theme-dark
 d:newsboat
 d:iproute2
 d:irssi
-d:perl-xml-parser
-d:perl-xml-parser/nano
 d:frei0r-plugins
 d:dejagnu
 d:inih
@@ -503,10 +494,6 @@ d:audacious-plugins
 f:08aa3d9bf912a900bbfa5e7947b2eaf7:galculator/spkgbuild
 f:6d3cbb5f2c384e0d8459dc85aaae34a7:intltool/.pkgfiles
 f:fa96f6abf49b9378bf6f7c48979379d0:intltool/spkgbuild
-f:fe07c432c464e42b023caa057cafb410:python/.pkgfiles
-f:7467e2646fd67befffdb2496d03e7267:python/.nanorc
-f:d6c598646e8405f39a48fdc2228b71df:python/CHANGELOG
-f:725ab85af964b34ec05d49c2fa09f485:python/spkgbuild
 f:b3b731cbf05bfb1f037daeabab260d41:figlet/spkgbuild
 f:59583b7acb6b7c62c73c6410d29b30ad:stfl/spkgbuild
 f:54745ccaec31b1ae034406411bb5d083:graphviz/.pkgfiles
@@ -516,8 +503,6 @@ f:dde6b899fb1a8e8bd9895aec233a71b6:texinfo/.pkgfiles
 f:366060b9f36b389a69e9448f4387346d:texinfo/CHANGELOG
 f:6032fa8d5d90a16be8da2862ebc83472:texinfo/spkgbuild
 f:195211db8f74de47473f906d0e6a6a22:fluxbox/spkgbuild
-f:7db40f3d28095d80d2ff349e9a7e94c8:python-packaging/.pkgfiles
-f:287082504b00b583675918c7f00e7193:python-packaging/spkgbuild
 f:0c73d595eb78f159bea83f33bba15e80:dmenu/dmenu-4.5-xft.diff
 f:eeec3e11ff68f27ebbc3133ad6549f56:dmenu/dmenu-4.5-mouse-support.diff
 f:29d6a4b5e7e900547a0a5027938dc49d:dmenu/CHANGELOG
@@ -578,8 +563,6 @@ f:dd18d7a8667d4aa323efd24ed4c5fd59:hunspell/.pkgfiles
 f:286b85b5d71e99216d5c2ade69b20212:hunspell/CHANGELOG
 f:0d452f7f2f6fce718f6611a10f252fd1:hunspell/spkgbuild
 f:ab58673eaee46e7d05b92900adee4a91:aircrack-ng/spkgbuild
-f:7db40f3d28095d80d2ff349e9a7e94c8:python-flit/.pkgfiles
-f:172545af79939fd659111dd54610331a:python-flit/spkgbuild
 f:ae4f93507e6be22f41c87cfc92d6c86d:grub-efi/.pkgfiles
 f:f074421752fa573485623cccc059c7d6:grub-efi/0006-BootHole.patch
 f:030a22879c5538578b769e8cb7db6f4b:grub-efi/spkgbuild
@@ -889,8 +872,6 @@ f:12be4755290018952dab1e614034f345:mitkrb/.pkgfiles
 f:0afa041670e93a2dfe3411929e74e6e8:mitkrb/spkgbuild
 f:f2bb16c9af3dcc9c670c0f73055d0d07:cabextract/CHANGELOG
 f:c5568671417c628138a3c1e26452f983:cabextract/spkgbuild
-f:7db40f3d28095d80d2ff349e9a7e94c8:python-setuptools/.pkgfiles
-f:153e3c1a625194ea02d3851a44be9b5a:python-setuptools/spkgbuild
 f:fcfc0a8132dd735f33dfa9eb22d14c61:gwenhywfar/spkgbuild
 f:18d7ddd71d3e0c3ddb5c50668f6466f1:runit/spkgbuild
 f:bf6e8ce6a02cc741eb0d3173acb6efa8:webkitgtk/CHANGELOG
@@ -1052,7 +1033,6 @@ f:56dad37670e73447c7da976ebda88eb3:gnutls/CHANGELOG
 f:51c522e0e65cb42ea65f150f945bf743:gnutls/spkgbuild
 f:1456ecea4258ff3b424ce82fe806d0f0:jasper/.pkgfiles
 f:6601857e367b158a0b2f090ce5cfd716:jasper/spkgbuild
-f:45876497cde48b5cece913dee1ab433e:openjdk/spkgbuild
 f:6b9fec89392cad502d89f69f3d87147a:viewnior/CHANGELOG
 f:10bf533629a5d300157e3b8b31c5a24b:viewnior/spkgbuild
 f:3db606db50137ad150a0577af5d717de:enchant/.pkgfiles
@@ -1150,10 +1130,6 @@ f:eb7a8a86792273889c58c6bc9ea6011f:consolekit2/consolekit2.install.bak
 f:d75ed3438dab01552304c06fd9a967b1:consolekit2/pam-foreground-compat.ck
 f:760c91f97b455c8ca91a5a2cecfa4f17:consolekit2/CHANGELOG
 f:2185237001ce7597ba83c1a64d92bcb8:consolekit2/spkgbuild
-f:fe07c432c464e42b023caa057cafb410:perl/.pkgfiles
-f:7467e2646fd67befffdb2496d03e7267:perl/.nanorc
-f:d6c598646e8405f39a48fdc2228b71df:perl/CHANGELOG
-f:8875e44c89e64e68bd4c13cd396183cc:perl/spkgbuild
 f:580e9af171ab6d10c155f1f138a24174:slang/.pkgfiles
 f:0230c3ff2dc0e51fd0ddb9b6c25e4e9f:slang/CHANGELOG
 f:f3e7818496df20f396b4784a76806739:slang/spkgbuild
@@ -1442,8 +1418,6 @@ f:324848d098be356a18083b0a02c3c842:cups/rc.cupsd
 f:7ff084677614b02915fa8e05e8817cfe:cups/run
 f:b8c7f1f14bcddf9d24866b4ae937d6a3:cups/spkgbuild
 f:485892b0c31bacd1d8f96e8d2d470a86:cups/pre-install.sh
-f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
-f:3108c3b103d79dd0b3fd21495baf644d:python-wheel/spkgbuild
 f:5f17f5f991b28b73de1050edcc6410c6:papirus-icon-theme/spkgbuild
 f:a3b27534933eeeabeaf7ddcab763c725:nbwmon/spkgbuild
 f:83c2b00728b23c48a939c762fb0c6c3d:time/spkgbuild
@@ -1639,14 +1613,6 @@ f:b1261fb2866f0ed2054916df0a3ed4db:iproute2/CHANGELOG
 f:8cc0799ccb98da0c6c7e45912458ab0d:iproute2/spkgbuild
 f:11d060e6c509938198594f0c3ec038ab:irssi/CHANGELOG
 f:41dc2720faf4a1c40532348271576112:irssi/spkgbuild
-f:fe07c432c464e42b023caa057cafb410:perl-xml-parser/.pkgfiles
-f:7467e2646fd67befffdb2496d03e7267:perl-xml-parser/.nanorc
-f:d6c598646e8405f39a48fdc2228b71df:perl-xml-parser/CHANGELOG
-f:0573fa962886f55e4e207509a610f1fc:perl-xml-parser/spkgbuild
-f:fe07c432c464e42b023caa057cafb410:perl-xml-parser/nano/.pkgfiles
-f:7467e2646fd67befffdb2496d03e7267:perl-xml-parser/nano/.nanorc
-f:d6c598646e8405f39a48fdc2228b71df:perl-xml-parser/nano/CHANGELOG
-f:69af701a06a37e4bcf7ca0fd98a3bd09:perl-xml-parser/nano/spkgbuild
 f:62ffd45bedc6455ee77ece6339442dc2:frei0r-plugins/.pkgfiles
 f:c346e64cb9b6c34f3e79e7adc0a9de74:frei0r-plugins/CHANGELOG
 f:7b5fb56ef32315bc55a133c3bc63cb48:frei0r-plugins/spkgbuild
@@ -1843,7 +1809,7 @@ f:b15581c229916066d99b02fbc49b9d28:shadow/CHANGELOG
 f:d65f80e3f592084b62d205b075f08a9c:shadow/post-install.sh
 f:311ddb85c289b9b893b8938212f178f1:shadow/spkgbuild
 f:67bfdee60d1f31efc42ea724c5da9cad:shadow/su
-f:057625f98fbb34f9eb79725eddb3e074:.httpup-repo.current
+f:4b04ff3e01385fb61152a3dd936646b0:.httpup-repo.current
 f:969a61c5436fd96104c8bb6505d83315:yetris/spkgbuild
 f:b86bf7292e3af00f9119c16d22795139:icoutils/.pkgfiles
 f:fa56ded29016f12205356ab712b9ec7f:icoutils/spkgbuild
