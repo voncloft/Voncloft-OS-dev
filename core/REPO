@@ -102,6 +102,7 @@ d:squashfs-tools
 d:yad
 d:recode
 d:psmisc
+d:net-tools
 d:reiserfsprogs
 d:colord
 d:double-conversion
@@ -772,6 +773,8 @@ f:8d0d9da5602656057d8cd186caad6751:recode/spkgbuild
 f:ee8c29157d88b3c5cc93fb9665781309:psmisc/.pkgfiles
 f:4a434021a1b1d4c4d17ce27bf4bd8997:psmisc/CHANGELOG
 f:23c0c47a8a752a477f5a366d1a10d005:psmisc/spkgbuild
+f:d834e5f3961548b57cd87a3a653ff2e8:net-tools/.pkgfiles
+f:ed90bb8d68555208558d8b5be7a371c8:net-tools/spkgbuild
 f:c9e1abb8d76f66d2c4c6ed4bb5e9e1fa:reiserfsprogs/reiserfsprogs-3.6.27-loff_t.patch
 f:f77b24a2e077b4943fe815ba50313073:reiserfsprogs/spkgbuild
 f:66d585cf9ddab30948015888a5b8db42:colord/.pkgfiles

@@ -526,6 +526,7 @@ f:7f85d6e6ea9ad9176d55d9a787b9dd5e:kmines/CHANGELOG
 f:2db9bdf282185e279ed6015d84fe3e0d:kmines/spkgbuild
 f:89a455519423a48d0913ccfb995619d6:kanagram/CHANGELOG
 f:d655a675b33734131f3226a3c7cedba8:kanagram/spkgbuild
+f:b5cb5672a99bd4c654bf3e941c9db741:sweeper/.pkgfiles
 f:38616cac7a23c0b8a3f3d115e7f5e6d1:sweeper/CHANGELOG
 f:8d14812296c9d0dfec5f86c00b7fc630:sweeper/spkgbuild
 f:cecc947de7a6d26fbfc87993a3eb49a6:kdesdk-thumbnailers/.pkgfiles
