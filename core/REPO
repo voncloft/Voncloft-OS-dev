@@ -20,6 +20,7 @@ d:kmod
 d:cython3
 d:busybox
 d:gpm
+d:iftop
 d:opencl-headers
 d:cairomm
 d:hunspell
@@ -557,6 +558,9 @@ f:be0594b0927ab5fa94fc123e86279c89:gpm/CHANGELOG
 f:7f7d72b794c44c60afc122aca70838e0:gpm/gpm-1.20.7-consolidated-1.patch
 f:e67409039df6e8e093e7967321bbc595:gpm/run
 f:43a8d92baf828940747573ef975b00fd:gpm/spkgbuild
+f:9935c0df6dd40cea5e61b17602de440a:iftop/.pkgfiles
+f:c260e1b305f11a1b5b05dd1fe1ccd1fb:iftop/patch.patch
+f:ca91eed4f7e9011d00a7acac65cf96f5:iftop/spkgbuild
 f:3be4cac952eb28068866325cd416ad96:opencl-headers/spkgbuild
 f:5d6c3cfa067f84c245c1b95b1a32cd5d:cairomm/CHANGELOG
 f:ff5892e1284327ec9f60988977b4df87:cairomm/spkgbuild

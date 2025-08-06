@@ -1,0 +1,20 @@
+# description : visual depiction of network traffic on interface
+# depends : libpcap ncurses
+
+name=iftop
+version=0.17
+release=1
+
+source="https://code.blinkace.com/pdw/iftop/-/archive/master/iftop-master.tar.gz
+	patch.patch"
+
+build()
+{
+	cd iftop*
+	autoreconf -ifv
+	CFLAGS+=' -fcommon'
+	patch -p0 -i $SRC/patch.patch
+	./configure --prefix=/usr --sbindir=/usr/bin --mandir=/usr/share/man
+	make
+	make DESTDIR=$PKG install
+}

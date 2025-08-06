@@ -1,0 +1,8 @@
+iftop-0.17-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/iftop
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man8/
+-rw-r--r-- root/root    usr/share/man/man8/iftop.8.gz
