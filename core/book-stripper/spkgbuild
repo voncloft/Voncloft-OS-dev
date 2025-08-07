@@ -5,7 +5,7 @@ name=book-stripper
 version=12.3
 release=1
 
-source="book-stripper index getbook"
+source="book-stripper index getbook version_mod"
 
 build()
 {
@@ -13,4 +13,5 @@ build()
 	install -Dm755 $SRC/book-stripper $PKG/usr/bin/book-stripper
 	install -Dm755 $SRC/index $PKG/usr/bin/index
 	install -Dm755 $SRC/getbook $PKG/usr/bin/getbook
+	install -Dm755 $SRC/version_mod $PKG/usr/bin/version_mod
 }
