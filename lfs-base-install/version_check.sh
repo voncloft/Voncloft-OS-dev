@@ -1,6 +1,28 @@
 #!/bin/bash
 set -e
 
+show_newer=false
+show_missing=false
+
+usage() {
+    echo "Usage: $0 [-n] [-m] [-h]"
+    echo "  -n    Show only newer packages available remotely"
+    echo "  -m    Show only missing local packages"
+    echo "  -h    Show this help message"
+    exit 0
+}
+
+# parse flags
+while getopts "nmh" opt; do
+    case $opt in
+        n) show_newer=true ;;
+        m) show_missing=true ;;
+        h) usage ;;
+        *) usage ;;
+    esac
+done
+shift $((OPTIND -1))
+
 url="https://www.linuxfromscratch.org/~thomas/multilib-m32/wget-list-sysv"
 dest="wget-list-sysv"
 output="package_versions.txt"
@@ -83,7 +105,9 @@ while IFS="=" read -r pkg ver; do
     fi
 
     if [[ -z "$dir" ]]; then
-        echo "$original_pkg: no local package found"
+        if $show_missing || (! $show_newer && ! $show_missing); then
+            echo "$original_pkg: no local package found"
+        fi
         continue
     fi
 
@@ -96,11 +120,12 @@ while IFS="=" read -r pkg ver; do
     local_ver=$(grep -E '^version=' "$spkgbuild" | cut -d= -f2)
 
     if [[ "$ver" == "$local_ver" ]]; then
-        echo "$dir: same ($ver)"
+        [[ ! $show_newer && ! $show_missing ]] && echo "$dir: same ($ver)"
     elif [[ $(printf "%s\n%s\n" "$local_ver" "$ver" | sort -V | tail -n1) == "$ver" ]]; then
-        echo "$dir: newer available ($local_ver → $ver)"
+        $show_newer && echo "$dir: newer available ($local_ver → $ver)"
+        [[ ! $show_newer && ! $show_missing ]] && echo "$dir: newer available ($local_ver → $ver)"
     else
-        echo "$dir: local newer ($local_ver vs $ver)"
+        [[ ! $show_newer && ! $show_missing ]] && echo "$dir: local newer ($local_ver vs $ver)"
     fi
 done < "$output"
 
