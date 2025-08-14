@@ -2,7 +2,7 @@
 # depends	: 
 
 name=python
-version=3.13.5
+version=3.13.6
 release=1
 source="https://www.python.org/ftp/python/$version/Python-$version.tar.xz"
 options="!checksum"

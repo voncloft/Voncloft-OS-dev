@@ -30,7 +30,10 @@ sedfile="version_fix.sh"
 
 echo "Downloading $url ..."
 wget -O "$dest" "$url"
-
+sed -i '/\.patch$/d' wget-list-sysv
+sed -i '/html/d' wget-list-sysv
+sed -i -e 's/tcl/tcl-/g' wget-list-sysv
+sed -i -e 's/expect/expect-/g' wget-list-sysv
 > "$output"
 > "$sedfile"
 
@@ -109,7 +112,7 @@ while IFS="=" read -r pkg ver; do
 
     if [[ "$ver" != "$local_ver" ]]; then
         [[ "$show_new" == true ]] && echo "$dir: newer available ($local_ver → $ver)"
-        [[ "$generate_sed" == true ]] && echo "s/^version=.*/version=$ver/g $dir/spkgbuild" >> "$sedfile"
+        [[ "$generate_sed" == true ]] && echo "sed -i -e s/^version=.*/version=$ver/g $dir/spkgbuild" >> "$sedfile"
     fi
 done < "$output"
 

@@ -2,7 +2,7 @@
 # depends	: 
 
 name=openssl
-version=3.5.0
+version=3.5.2
 release=1
 source="https://github.com/openssl/openssl/releases/download/openssl-$version/openssl-$version.tar.gz"
 options="!checksum"
