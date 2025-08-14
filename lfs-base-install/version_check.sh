@@ -1,57 +1,59 @@
 #!/bin/bash
 set -e
 
-show_newer=false
-show_missing=false
-
 usage() {
-    echo "Usage: $0 [-n] [-m] [-h]"
-    echo "  -n    Show only newer packages available remotely"
-    echo "  -m    Show only missing local packages"
-    echo "  -h    Show this help message"
-    exit 0
+    echo "Usage: $0 [-m|-n|-s|-h]"
+    echo "  -m   Show missing packages"
+    echo "  -n   Show packages with newer versions"
+    echo "  -s   Generate sed script (with folder/spkgbuild, do not apply)"
+    echo "  -h   Show this help"
 }
 
-# parse flags
-while getopts "nmh" opt; do
-    case $opt in
-        n) show_newer=true ;;
+show_missing=false
+show_new=false
+generate_sed=false
+
+while getopts "mnsHh" opt; do
+    case "$opt" in
         m) show_missing=true ;;
-        h) usage ;;
-        *) usage ;;
+        n) show_new=true ;;
+        s) generate_sed=true ;;
+        h|H) usage; exit 0 ;;
+        *) usage; exit 1 ;;
     esac
 done
-shift $((OPTIND -1))
 
 url="https://www.linuxfromscratch.org/~thomas/multilib-m32/wget-list-sysv"
 dest="wget-list-sysv"
 output="package_versions.txt"
+sedfile="version_fix.sh"
 
 echo "Downloading $url ..."
 wget -O "$dest" "$url"
 
 > "$output"
+> "$sedfile"
 
-# Parse wget list into package=version
+# Parse wget list
 while read -r fileurl; do
     [[ -z "$fileurl" || "$fileurl" =~ ^# ]] && continue
     filename="${fileurl##*/}"
 
-    if [[ "$filename" == *.patch ]]; then
-        clean="${filename%=1.patch}"
-        pkg="${clean%%-*}"
-        ver_patch="${clean#*-}"
-        echo "${pkg}-1.patch=${ver_patch}" >> "$output"
-    else
-        base="${filename%%.tar.*}"
-        base="${base%%.zip}"
-        pkg="${base%-*}"
-        ver="${base##*-}"
-        echo "${pkg}=${ver}" >> "$output"
-    fi
+    # Remove non-version suffixes
+    base="${filename%%.tar.*}"
+    base="${base%%.zip}"
+    base="${base%-src}"
+    base="${base%-html}"
+    base="${base%-docs}"
+    base="${base%-1.patch}"
+
+    pkg="${base%-*}"
+    ver="${base##*-}"
+
+    echo "${pkg}=${ver}" >> "$output"
 done < "$dest"
 
-# Manual name mapping (lowercase keys)
+# Manual name mapping
 declare -A name_map=(
     ["wheel"]="python-wheel"
     ["flit"]="python-flit"
@@ -68,14 +70,13 @@ declare -A name_map=(
     ["pkgconf"]="pkg-config"
 )
 
-# Get list of local directories (lowercase)
 mapfile -t local_dirs < <(find . -mindepth 1 -maxdepth 1 -type d -printf "%P\n" | tr 'A-Z' 'a-z')
 
 while IFS="=" read -r pkg ver; do
     original_pkg="$pkg"
     pkg_lc=$(echo "$pkg" | tr 'A-Z' 'a-z')
 
-    # Apply manual mapping if matched
+    # Apply mapping
     for key in "${!name_map[@]}"; do
         if [[ "$pkg_lc" =~ ^$key ]]; then
             pkg="${name_map[$key]}"
@@ -84,7 +85,7 @@ while IFS="=" read -r pkg ver; do
         fi
     done
 
-    # Try direct match to local folder
+    # Match folder
     dir=""
     for d in "${local_dirs[@]}"; do
         if [[ "$pkg_lc" == "$d" ]]; then
@@ -93,40 +94,24 @@ while IFS="=" read -r pkg ver; do
         fi
     done
 
-    # Fuzzy match: strip numbers/dots and match prefix
     if [[ -z "$dir" ]]; then
-        clean_pkg=$(echo "$pkg_lc" | sed -E 's/[0-9._-]+$//')
-        for d in "${local_dirs[@]}"; do
-            if [[ "$d" == "$clean_pkg"* ]]; then
-                dir="$d"
-                break
-            fi
-        done
-    fi
-
-    if [[ -z "$dir" ]]; then
-        if $show_missing || (! $show_newer && ! $show_missing); then
-            echo "$original_pkg: no local package found"
-        fi
+        [[ "$show_missing" == true ]] && echo "$original_pkg: missing"
         continue
     fi
 
     spkgbuild="./$dir/spkgbuild"
     if [[ ! -f "$spkgbuild" ]]; then
-        echo "$dir: spkgbuild not found"
+        [[ "$show_missing" == true ]] && echo "$dir: spkgbuild not found"
         continue
     fi
 
     local_ver=$(grep -E '^version=' "$spkgbuild" | cut -d= -f2)
 
-    if [[ "$ver" == "$local_ver" ]]; then
-        [[ ! $show_newer && ! $show_missing ]] && echo "$dir: same ($ver)"
-    elif [[ $(printf "%s\n%s\n" "$local_ver" "$ver" | sort -V | tail -n1) == "$ver" ]]; then
-        $show_newer && echo "$dir: newer available ($local_ver → $ver)"
-        [[ ! $show_newer && ! $show_missing ]] && echo "$dir: newer available ($local_ver → $ver)"
-    else
-        [[ ! $show_newer && ! $show_missing ]] && echo "$dir: local newer ($local_ver vs $ver)"
+    if [[ "$ver" != "$local_ver" ]]; then
+        [[ "$show_new" == true ]] && echo "$dir: newer available ($local_ver → $ver)"
+        [[ "$generate_sed" == true ]] && echo "s/^version=.*/version=$ver/g $dir/spkgbuild" >> "$sedfile"
     fi
 done < "$output"
 
-echo "Done checking packages."
+[[ "$generate_sed" == true ]] && echo "Sed script written to $sedfile"
+echo "Done."
