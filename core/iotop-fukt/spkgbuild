@@ -1,0 +1,15 @@
+# description : view hard drive writes
+# depends : python 
+
+name=iotop
+version=0.6
+release=12
+
+source="http://guichaz.free.fr/$name/files/$name-$version.tar.bz2"
+
+build()
+{
+	sed -i '7,13d' setup.py
+	python -m build --wheel --no-isolation
+	python -m installer --destdir="$PKG" dist/*.whl
+}
