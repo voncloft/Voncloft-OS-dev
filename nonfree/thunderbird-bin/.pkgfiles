@@ -1,0 +1,89 @@
+firefox-bin-142-0a1
+drwxr-xr-x root/root    opt/
+drwxr-xr-x root/root    opt/firefox-bin/
+-rw-r--r-- root/root    opt/firefox-bin/application.ini
+drwxr-xr-x root/root    opt/firefox-bin/browser/
+drwxr-xr-x root/root    opt/firefox-bin/browser/chrome/
+drwxr-xr-x root/root    opt/firefox-bin/browser/chrome/icons/
+drwxr-xr-x root/root    opt/firefox-bin/browser/chrome/icons/default/
+-rw-r--r-- root/root    opt/firefox-bin/browser/chrome/icons/default/default128.png
+-rw-r--r-- root/root    opt/firefox-bin/browser/chrome/icons/default/default16.png
+-rw-r--r-- root/root    opt/firefox-bin/browser/chrome/icons/default/default32.png
+-rw-r--r-- root/root    opt/firefox-bin/browser/chrome/icons/default/default48.png
+-rw-r--r-- root/root    opt/firefox-bin/browser/chrome/icons/default/default64.png
+-rw-r--r-- root/root    opt/firefox-bin/browser/omni.ja
+-rwxr-xr-x root/root    opt/firefox-bin/crashhelper
+-rwxr-xr-x root/root    opt/firefox-bin/crashreporter
+drwxr-xr-x root/root    opt/firefox-bin/defaults/
+drwxr-xr-x root/root    opt/firefox-bin/defaults/pref/
+-rw-r--r-- root/root    opt/firefox-bin/defaults/pref/channel-prefs.js
+-rw-r--r-- root/root    opt/firefox-bin/dependentlibs.list
+lrwxrwxrwx root/root    opt/firefox-bin/dictionaries -> /usr/share/hunspell
+-rwxr-xr-x root/root    opt/firefox-bin/firefox
+-rwxr-xr-x root/root    opt/firefox-bin/firefox-bin
+-rw-r--r-- root/root    opt/firefox-bin/firefox-bin.sig
+-rw-r--r-- root/root    opt/firefox-bin/firefox.sig
+drwxr-xr-x root/root    opt/firefox-bin/fonts/
+-rw-r--r-- root/root    opt/firefox-bin/fonts/TwemojiMozilla.ttf
+-rwxr-xr-x root/root    opt/firefox-bin/glxtest
+drwxr-xr-x root/root    opt/firefox-bin/gmp-clearkey/
+drwxr-xr-x root/root    opt/firefox-bin/gmp-clearkey/0.1/
+-rwxr-xr-x root/root    opt/firefox-bin/gmp-clearkey/0.1/libclearkey.so
+-rw-r--r-- root/root    opt/firefox-bin/gmp-clearkey/0.1/libclearkey.so.sig
+-rw-r--r-- root/root    opt/firefox-bin/gmp-clearkey/0.1/manifest.json
+lrwxrwxrwx root/root    opt/firefox-bin/hyphenation -> /usr/share/hyphen
+drwxr-xr-x root/root    opt/firefox-bin/icons/
+-rw-r--r-- root/root    opt/firefox-bin/icons/updater.png
+-rwxr-xr-x root/root    opt/firefox-bin/libfreeblpriv3.so
+-rwxr-xr-x root/root    opt/firefox-bin/libgkcodecs.so
+-rwxr-xr-x root/root    opt/firefox-bin/liblgpllibs.so
+-rwxr-xr-x root/root    opt/firefox-bin/libmozavcodec.so
+-rwxr-xr-x root/root    opt/firefox-bin/libmozavutil.so
+-rwxr-xr-x root/root    opt/firefox-bin/libmozgtk.so
+-rwxr-xr-x root/root    opt/firefox-bin/libmozsandbox.so
+-rwxr-xr-x root/root    opt/firefox-bin/libmozsqlite3.so
+-rwxr-xr-x root/root    opt/firefox-bin/libmozwayland.so
+-rwxr-xr-x root/root    opt/firefox-bin/libnspr4.so
+-rwxr-xr-x root/root    opt/firefox-bin/libnss3.so
+lrwxrwxrwx root/root    opt/firefox-bin/libnssckbi.so -> /usr/lib/libnssckbi.so
+-rwxr-xr-x root/root    opt/firefox-bin/libnssutil3.so
+-rwxr-xr-x root/root    opt/firefox-bin/libonnxruntime.so
+-rwxr-xr-x root/root    opt/firefox-bin/libplc4.so
+-rwxr-xr-x root/root    opt/firefox-bin/libplds4.so
+-rwxr-xr-x root/root    opt/firefox-bin/libsmime3.so
+-rwxr-xr-x root/root    opt/firefox-bin/libsoftokn3.so
+-rwxr-xr-x root/root    opt/firefox-bin/libssl3.so
+-rwxr-xr-x root/root    opt/firefox-bin/libxul.so
+-rw-r--r-- root/root    opt/firefox-bin/libxul.so.sig
+-rw-r--r-- root/root    opt/firefox-bin/omni.ja
+-rwxr-xr-x root/root    opt/firefox-bin/pingsender
+-rw-r--r-- root/root    opt/firefox-bin/platform.ini
+-rw-r--r-- root/root    opt/firefox-bin/precomplete
+-rw-r--r-- root/root    opt/firefox-bin/removed-files
+-rwxr-xr-x root/root    opt/firefox-bin/updater
+-rw-r--r-- root/root    opt/firefox-bin/updater.ini
+-rw-r--r-- root/root    opt/firefox-bin/update-settings.ini
+-rwxr-xr-x root/root    opt/firefox-bin/vaapitest
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/firefox
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/firefox.desktop
+drwxr-xr-x root/root    usr/share/icons/
+drwxr-xr-x root/root    usr/share/icons/hicolor/
+drwxr-xr-x root/root    usr/share/icons/hicolor/128x128/
+drwxr-xr-x root/root    usr/share/icons/hicolor/128x128/apps/
+lrwxrwxrwx root/root    usr/share/icons/hicolor/128x128/apps/firefox.png -> /opt/firefox-bin/browser/chrome/icons/default/default128.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/16x16/
+drwxr-xr-x root/root    usr/share/icons/hicolor/16x16/apps/
+lrwxrwxrwx root/root    usr/share/icons/hicolor/16x16/apps/firefox.png -> /opt/firefox-bin/browser/chrome/icons/default/default16.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/32x32/
+drwxr-xr-x root/root    usr/share/icons/hicolor/32x32/apps/
+lrwxrwxrwx root/root    usr/share/icons/hicolor/32x32/apps/firefox.png -> /opt/firefox-bin/browser/chrome/icons/default/default32.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48/
+drwxr-xr-x root/root    usr/share/icons/hicolor/48x48/apps/
+lrwxrwxrwx root/root    usr/share/icons/hicolor/48x48/apps/firefox.png -> /opt/firefox-bin/browser/chrome/icons/default/default48.png
+drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/
+drwxr-xr-x root/root    usr/share/icons/hicolor/64x64/apps/
+lrwxrwxrwx root/root    usr/share/icons/hicolor/64x64/apps/firefox.png -> /opt/firefox-bin/browser/chrome/icons/default/default64.png
