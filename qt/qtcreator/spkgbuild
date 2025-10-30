@@ -1,0 +1,23 @@
+# description : qt6 like visualbasic
+# depends :
+
+
+name=qtcreator
+version=18.0.0
+release=rc1
+
+source="https://github.com/qt-creator/qt-creator/archive/refs/tags/v$version-$release.tar.gz"
+options="!checksum"
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake .. -DCMAKE_PREFIX_PATH=/usr/lib/cmake/Qt6 -DCMAKE_BUILD_TYPE=Release -DBUILD_EXECUTABLE_CMDBRIDGE=OFF -DCMAKE_INSTALL_PREFIX=/usr
+	#cmake .. -DCMAKE_PREFIX_PATH=/path/to/Qt6 -DCMAKE_BUILD_TYPE=Release
+	#cmake .. -DCMAKE_PREFIX_PATH=/opt/Qt/6.6.2/gcc_64 -DCMAKE_BUILD_TYPE=Release -DENABLE_TESTS=OFF
+	make
+	DESTDIR=$PKG make install
+
+}
