@@ -3,10 +3,10 @@
 
 
 name=qtcreator
-version=18.0.0
+version=17.0.2
 release=rc1
 
-source="https://github.com/qt-creator/qt-creator/archive/refs/tags/v$version-$release.tar.gz"
+source="https://download.qt.io/official_releases/qtcreator/17.0/$version/qt-creator-opensource-src-$version.tar.xz"
 options="!checksum"
 
 build()
@@ -14,10 +14,25 @@ build()
 	cd *
 	mkdir build
 	cd build
-	cmake .. -DCMAKE_PREFIX_PATH=/usr/lib/cmake/Qt6 -DCMAKE_BUILD_TYPE=Release -DBUILD_EXECUTABLE_CMDBRIDGE=OFF -DCMAKE_INSTALL_PREFIX=/usr
-	#cmake .. -DCMAKE_PREFIX_PATH=/path/to/Qt6 -DCMAKE_BUILD_TYPE=Release
-	#cmake .. -DCMAKE_PREFIX_PATH=/opt/Qt/6.6.2/gcc_64 -DCMAKE_BUILD_TYPE=Release -DENABLE_TESTS=OFF
-	make
-	DESTDIR=$PKG make install
 
+	#cmake .. -DCMAKE_PREFIX_PATH=/usr -DCMAKE_BUILD_TYPE=Release -DBUILD_EXECUTABLE_CMDBRIDGE=OFF -DCMAKE_INSTALL_PREFIX=/usr -DWITH_QMLDESIGNER=ON -DQTCREATOR_LIBRARY_BASE_PATH=/usr/lib/qtcreator
+	#make
+	#DESTDIR=$PKG make install
+
+
+   cmake .. \
+        -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_PREFIX_PATH=/usr \
+        -DCMAKE_INSTALL_RPATH=/usr/lib/qtcreator \
+        -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON \
+        -DBUILD_EXECUTABLE_CMDBRIDGE=OFF \
+        -DIDE_INSTALL_PREFIX=/usr \
+        -DWITH_DOCS=OFF \
+        -DBUILD_QBS=OFF \
+        -DENABLE_TESTS=OFF
+
+    ninja
+    DESTDIR="$PKG" ninja install
 }
