@@ -2,9 +2,9 @@
 # depends       : exiv2 kimageannotator  lcms2 libkdcraw
 
 name=gwenview
-version=25.04.0    
+version=25.08.3    
 release=1
-source="https://download.kde.org/stable/release-service/25.04.0/src/gwenview-25.04.0.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/gwenview-$version.tar.xz"
 
 options="!checksum"
 

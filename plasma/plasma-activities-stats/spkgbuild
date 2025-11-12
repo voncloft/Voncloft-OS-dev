@@ -2,9 +2,9 @@
 # depends       : plasma-activities
 
 name=plasma-activities-stats
-version=6.3.4
+version=6.5.2
 release=1
-source=" https://download.kde.org/stable/plasma/6.3.4/plasma-activities-stats-6.3.4.tar.xz"
+source=" https://download.kde.org/stable/plasma/6.5.2/plasma-activities-stats-6.5.2.tar.xz"
 options="!checksum"
 
 build() {

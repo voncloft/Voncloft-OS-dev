@@ -8,7 +8,7 @@
 # depends :	wacomtablet oxygen spectacle 
 
 name=plasma-programs
-version=6.3.4
+version=6.5.2
 release=1
 
 build() {

@@ -2,7 +2,7 @@
 # depends : libxml2
 
 name=wayland
-version=1.23.0
+version=1.24.0
 release=1
 
 source="https://gitlab.freedesktop.org/wayland/wayland/-/releases/$version/downloads/wayland-$version.tar.xz"

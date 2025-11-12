@@ -1,7 +1,7 @@
 # description : core package for the kde desktop
 
 name=plasma-wayland-protocols
-version=1.18.0
+version=1.19.0
 release=1
 
 source="https://download.kde.org/stable/plasma-wayland-protocols/plasma-wayland-protocols-$version.tar.xz"

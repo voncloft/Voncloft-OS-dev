@@ -2,7 +2,7 @@
 # depends	: python
 
 name=python-chardet
-version=4.0.0
+version=5.2.0
 release=1
 
 source="https://pypi.io/packages/source/c/chardet/chardet-4.0.0.tar.gz"
@@ -10,6 +10,6 @@ options="!checksum"
 
 build() {
    cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
+   pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+   pip3 install --no-index --find-links dist --no-user chardet --root=$PKG
  }

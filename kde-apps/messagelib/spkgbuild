@@ -3,7 +3,7 @@
 # depends : kio kitemmodels kitemviews kjobwidgets kmailtransport kmbox kmime kpimtextedit kservice ktextaddons ktexttemplate ktextwidgets kwidgetsaddons kxmlgui
 
 name=messagelib
-version=25.04.3
+version=25.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"

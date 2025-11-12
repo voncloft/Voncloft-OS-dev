@@ -1,6 +1,6 @@
 # description : Core components for the kde desktop kf5 packages needed to install kde
 name=kf-programs
-version=6.13.0
+version=6.19.0
 release=1
 
 build () {

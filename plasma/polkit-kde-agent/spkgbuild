@@ -1,10 +1,10 @@
 # description : Core components for the kde desktop
 
 name=polkit-kde-agent
-version=6.3.4
+version=6.5.2
 release=1
 
-source="https://download.kde.org/stable/plasma/6.3.4/polkit-kde-agent-1-6.3.4.tar.xz"
+source="https://download.kde.org/stable/plasma/6.5.2/polkit-kde-agent-1-6.5.2.tar.xz"
 options="!checksum"
 
 build() {

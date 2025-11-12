@@ -1,7 +1,7 @@
 # description : Core components for the kde desktop
 
 name=kapidox
-version=6.13.0
+version=6.19.0
 release=1
 
 source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
@@ -9,6 +9,5 @@ options="!checksum"
 
 build() {
    cd $name-$version
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
+        pip3 install . --root=$PKG   
 }

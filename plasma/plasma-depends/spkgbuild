@@ -1,7 +1,7 @@
 # description : Core components for the kde desktop all plasma dependencies
 
 name=plasma-depends
-version=6.3.4
+version=6.5.2
 release=1
 build(){
 	mkdir -pv $PKG/usr

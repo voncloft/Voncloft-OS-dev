@@ -2,7 +2,7 @@
 # depends : kde-deps kconfig kcoreaddons ki18n kirigami-addons networkmanager-qt qt6-multimedia qt6-svg qtkeychain-qt6 syndication taglib threadweaver vlc
 
 name=kasts
-version=25.04.3
+version=25.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"

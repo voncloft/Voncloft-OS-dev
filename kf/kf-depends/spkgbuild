@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop these are all the kf5 dependencies
-version=6.13.0
+version=6.19.0
 release=1
 verzion=5.81
 source="kf6.sh
