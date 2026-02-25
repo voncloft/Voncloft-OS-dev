@@ -1,0 +1,22 @@
+# description : SDK intended for applications dealing with 3d CAD
+# depends : freetype2 fontconfig tk 
+
+name=opencascade
+version=7.9.3
+release=1
+_version=7_9_3
+source="https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V$_version.tar.gz"
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake .. \
+	    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr 
+
+    make
+    make DESTDIR=$PKG install
+
+}

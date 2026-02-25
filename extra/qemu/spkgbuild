@@ -1,36 +1,32 @@
-# description	: Virtualization for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V)
-# depends	: alsa-lib sdl2 glib python coreutils pixman libx11
+# description   : qemu is a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V)
+# depends       : glib pixman alsa-lib dtc libslirp sdl2-compat
 
 name=qemu
-version=10.0.2
+version=10.2.1
 release=1
-source="http://download.qemu-project.org/$name-$version.tar.bz2"
+source=" https://download.qemu.org/qemu-10.2.1.tar.xz"
+options="!checksum"
 
 build() {
-	cd $name-$version
-
-	mkdir -vp build
-	cd        build
-	
-	../configure --prefix=/usr \
-	             --sysconfdir=/etc \
-	             --libexecdir=/usr/lib/$name \
-		     --python=python \
-	             --audio-drv-list=alsa \
-		     --disable-docs \
-		     --disable-gtk \
-		     --localstatedir=/var
-	make
-	make DESTDIR=$PKG install
-
-install -d $PKG/lib/udev/rules.d/
-cat > $PKG/lib/udev/rules.d/65-kvm.rules << "EOF"
-KERNEL=="kvm", GROUP="kvm", MODE="0660"
-EOF
-
-	#make qemu.1 qemu-img.1 qemu-nbd.8
-	#install -D -m 644 qemu.1 $PKG/usr/share/man/man1/qemu.1
-	#install -D -m 644 qemu-img.1 $PKG/usr/share/man/man1/qemu-img.1
-	#install -D -m 644 qemu-nbd.8 $PKG/usr/share/man/man8/qemu-nbd.8
+        cd $name-$version
+if [ $(uname -m) = i686 ]; then
+QEMU_ARCH=i386-softmmu
+else
+QEMU_ARCH=x86_64-softmmu
+fi
+mkdir -vp build 
+cd        build 
+../configure --prefix=/usr            \
+--sysconfdir=/etc        \
+--localstatedir=/var     \
+--target-list=$QEMU_ARCH \
+--audio-drv-list=alsa    \
+--disable-pa             \
+--enable-slirp           \
+--docdir=/usr/share/doc/qemu-10.2.1 
+unset QEMU_ARCH 
+make
+sudo DESTDIR=$PKG make install
+chgrp kvm  $PKG/usr/libexec/qemu-bridge-helper &&
+chmod 4750 $PKG/usr/libexec/qemu-bridge-helper
 }
-

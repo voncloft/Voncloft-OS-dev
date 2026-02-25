@@ -1,0 +1,30 @@
+# description : tool to make pcb boards
+# depends : abseil-cpp cairo curl fontconfig freetype2 gcc glib glibc glm gtk3 harfbuzz hicolor-icon-theme
+# depends : libgit2 libglvnd libsecret ngspice nng opencascade protobuf python python-wxpython 
+# depends : unixodbc wayland wxwidgets-common wxwidgets-gtk3 zlib
+# depends : zlib zstd kicad-library kicad-library-3d boost cmake git mesa ninja swig
+
+name=kicad
+version=9.0.7
+release=5
+
+source="https://github.com/KiCad/kicad-source-mirror/archive/refs/tags/$version.tar.gz"
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake .. \
+	    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DKICAD_USE_EGL=ON \
+    -DKICAD_BUILD_I18N=ON \
+    -DKICAD_I18N_UNIX_STRICT_PATH=ON \
+    -DKICAD_BUILD_QA_TESTS=OFF \
+    -DKICAD_USE_CMAKE_FINDPROTOBUF=OFF
+
+	make
+	make DESTDIR=$PKG install
+
+}

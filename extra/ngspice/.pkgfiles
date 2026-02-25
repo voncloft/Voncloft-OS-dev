@@ -1,0 +1,45 @@
+ngspice-45.2-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/ngspice/
+-rw-r--r-- root/root    usr/include/ngspice/sharedspice.h
+drwxr-xr-x root/root    usr/lib/
+-rwxr-xr-x root/root    usr/lib/libngspice.so.0.0.14
+lrwxrwxrwx root/root    usr/lib/libngspice.so.0 -> libngspice.so.0.0.14
+lrwxrwxrwx root/root    usr/lib/libngspice.so -> libngspice.so.0.0.14
+drwxr-xr-x root/root    usr/lib/ngspice/
+-rwxr-xr-x root/root    usr/lib/ngspice/analog.cm
+-rwxr-xr-x root/root    usr/lib/ngspice/digital.cm
+-rwxr-xr-x root/root    usr/lib/ngspice/ivlng.so
+-rwxr-xr-x root/root    usr/lib/ngspice/ivlng.vpi
+-rwxr-xr-x root/root    usr/lib/ngspice/spice2poly.cm
+-rwxr-xr-x root/root    usr/lib/ngspice/table.cm
+-rwxr-xr-x root/root    usr/lib/ngspice/tlines.cm
+-rwxr-xr-x root/root    usr/lib/ngspice/xtradev.cm
+-rwxr-xr-x root/root    usr/lib/ngspice/xtraevt.cm
+drwxr-xr-x root/root    usr/lib/pkgconfig/
+-rw-r--r-- root/root    usr/lib/pkgconfig/ngspice.pc
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/ngspice/
+drwxr-xr-x root/root    usr/share/ngspice/scripts/
+-rw-r--r-- root/root    usr/share/ngspice/scripts/ciderinit
+-rw-r--r-- root/root    usr/share/ngspice/scripts/devaxis
+-rw-r--r-- root/root    usr/share/ngspice/scripts/devload
+-rw-r--r-- root/root    usr/share/ngspice/scripts/ghnggen
+-rw-r--r-- root/root    usr/share/ngspice/scripts/setplot
+-rw-r--r-- root/root    usr/share/ngspice/scripts/spectrum
+-rw-r--r-- root/root    usr/share/ngspice/scripts/spinit
+drwxr-xr-x root/root    usr/share/ngspice/scripts/src/
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ghdl_shim.c
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ghdl_shim.h
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ghdl_vpi.c
+drwxr-xr-x root/root    usr/share/ngspice/scripts/src/ngspice/
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ngspice/cmtypes.h
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ngspice/coroutine_cosim.h
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ngspice/coroutine.h
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ngspice/coroutine_shim.h
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ngspice/cosim.h
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/ngspice/miftypes.h
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/verilator_main.cpp
+-rw-r--r-- root/root    usr/share/ngspice/scripts/src/verilator_shim.cpp
+-rw-r--r-- root/root    usr/share/ngspice/scripts/vlnggen

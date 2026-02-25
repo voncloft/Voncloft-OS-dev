@@ -1,0 +1,28 @@
+# description : SSL library
+# depends : glibc cmake
+
+name=wolfssl
+version=5.8.4
+release=1
+
+source="https://github.com/$name/$name/archive/refs/tags/v$version-stable.tar.gz"
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake .. \
+	    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DWOLFSSL_CURVE25519=ON \
+    -DWOLFSSL_CURVE448=ON \
+    -DWOLFSSL_ED25519=ON \
+    -DWOLFSSL_ED448=ON \
+    -DWOLFSSL_REPRODUCIBLE_BUILD=ON \
+    -DWOLFSSL_SNI=ON 
+
+    make 
+    make DESTDIR=$PKG install
+
+}

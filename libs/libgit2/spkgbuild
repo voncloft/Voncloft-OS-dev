@@ -1,0 +1,19 @@
+# description : a linkable library for git
+# depends : gcc glibc zlib
+
+name=libgit2
+version=1.9.2
+release=1
+
+source="https://github.com/libgit2/libgit2/archive/refs/tags/v$version.tar.gz"
+
+build()
+{
+	cd *
+	mkdir build
+	cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
+	make
+	make DESTDIR=$PKG install
+
+}
