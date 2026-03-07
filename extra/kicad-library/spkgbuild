@@ -1,0 +1,29 @@
+# description : addon for kicad
+# depends : cmake
+
+name=kicad-library
+version=9.0.7
+release=1
+
+source="https://gitlab.com/kicad/libraries/kicad-packages3D/-/archive/$version/kicad-packages3D-$version.tar.gz
+	https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/$version/kicad-symbols-$version.tar.gz
+	https://gitlab.com/kicad/libraries/kicad-templates/-/archive/$version/kicad-templates-$version.tar.gz
+	https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/$version/kicad-footprints-$version.tar.gz"
+
+build()
+{
+  ls *
+  for package in kicad-symbols-$version kicad-footprints-$version kicad-packages3D-$version kicad-templates-$version; do
+	echo $PWD
+	mkdir $package/build
+	echo $PWD
+	cd $package/build
+	echo $PWD
+     cmake .. \
+       -DCMAKE_INSTALL_PREFIX=/usr
+	make
+	make DESTDIR=$PKG install
+	cd ../../
+   done
+
+}

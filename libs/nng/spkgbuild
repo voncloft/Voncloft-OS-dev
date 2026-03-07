@@ -9,18 +9,18 @@ source="https://github.com/nanomsg/nng/archive/refs/tags/v$version.tar.gz"
 
 build()
 {
-	cd *
-	mkdir build
-	cd build
-	cmake .. \
-	   -DCMAKE_BUILD_TYPE=None \
+echo $PWD
+cd *
+mkdir build
+cd build
+cmake .. \
+    -DCMAKE_BUILD_TYPE=None \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DBUILD_SHARED_LIBS=ON \
     -DNNG_ENABLE_TLS=ON \
     -DNNG_TLS_ENGINE=wolf \
-    -DNNG_ENABLE_DOC=OFF \
-    -DNNG_TESTS=OFF
+    -DNNG_ENABLE_DOC=OFF 
 
-	make
-	make DESTDIR=$PKG install
+make -j9
+make DESTDIR=$PKG install
 }

@@ -1,20 +1,23 @@
-# description	: Used to send desktop notifications to a notification daemon
-# depends	: gtk3 glib docbook-xsl libxslt
+# description   : The libnotify library is used to send desktop notifications to a notification daemon, as defined in the Desktop Notifications spec
+# depends       : gdkpixbuf gtk notificationdaemon xfce4notifyd lxqtnotificationd
 
 name=libnotify
-version=0.8.6
+version=0.8.8    
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
+source="https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.8.tar.xz"
+
+options="!checksum"
 
 build() {
-	cd $name-$version
-
-	mkdir build
-	cd    build
-
-	meson --prefix=/usr \
-	      -Dgtk_doc=false \
-	      -Ddocbook_docs=disabled
-	ninja
-	DESTDIR=$PKG ninja install
+    cd $name-$version
+    
+    mkdir build 
+    cd    build 
+    meson setup --prefix=/usr       \
+    --buildtype=release \
+    -D gtk_doc=false    \
+    -D man=false        \
+    ..                  
+    ninja
+    DESTDIR=$PKG ninja install 
 }

@@ -2,14 +2,14 @@
 # depends : 
 
 name=firefox-bin
-version=149
+version=150
 release=0a1
-month=01
+month=03
 year=2026
-day=28
-hour=09
-min=48
-sec=16
+day=06
+hour=21
+min=58
+sec=30
 source="https://archive.mozilla.org/pub/firefox/nightly/$year/$month/$year-$month-$day-$hour-$min-$sec-mozilla-central/firefox-$version.$release.en-US.linux-x86_64.tar.xz
 	firefox.sh
 	firefox.desktop"

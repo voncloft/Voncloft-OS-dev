@@ -8,7 +8,7 @@ source="https://github.com/lurcher/unixODBC/archive/v$version/unixODBC-$version.
 options="!checksum"
 
 build() {
-        cd $name-$version
+        cd *
         autoreconf -fiv 
 ./configure --prefix=/usr --sysconfdir=/etc/unixODBC 
 make

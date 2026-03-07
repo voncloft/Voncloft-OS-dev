@@ -1,0 +1,31 @@
+# description : widget library
+# depends :
+
+name=wxwidgets
+version=3.2.9
+release=1
+
+source="https://github.com/wxWidgets/wxWidgets/releases/download/v$version/wxWidgets-$version.tar.bz2"
+
+build()
+{
+	cd *
+	cd build
+	cmake .. -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DwxUSE_GUI=ON \
+    -DwxUSE_REGEX=sys \
+    -DwxUSE_ZLIB=sys \
+    -DwxUSE_EXPAT=sys \
+    -DwxUSE_LIBJPEG=sys \
+    -DwxUSE_LIBPNG=sys \
+    -DwxUSE_LIBTIFF=sys \
+    -DwxUSE_LIBLZMA=sys \
+    -DwxUSE_NANOSVG=sys \
+    -DwxUSE_LIBMSPACK=ON \
+    -DwxUSE_PRIVATE_FONTS=ON \
+    -DwxUSE_GLCANVAS_EGL=OFF \
+    -DwxUSE_WEBVIEW=ON
+    make
+    make DESTDIR=$PKG install
+}

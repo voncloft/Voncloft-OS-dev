@@ -1,16 +1,18 @@
 # description : Cross-platform GUI toolkit
-# depends : wxgtk3 python-six
+# depends : 
 
 name=python-wxpython
-version=4.1.1
+version=4.2.4
 verzion=${version%.*}
 release=5
 
-source="https://files.pythonhosted.org/packages/source/w/wxPython/wxPython-4.0.7.post.tar.gz"
+source="https://files.pythonhosted.org/packages/source/w/wxPython/wxpython-$version.tar.gz"
 options="!checksum"
 
 build() {
    cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
+   #python3 build.py install --destdir="$PKG"
+
+   python3 build.py build --use_syswx --no_magic --prefix=/usr --no_html2
+   python3 build.py install --prefix=/usr --destdir="$PKG"
  }
