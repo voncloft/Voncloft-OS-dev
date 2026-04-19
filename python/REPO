@@ -925,6 +925,7 @@ d:python-django-rest-framework
 d:python-dephell-changelogs
 d:python-recommonmark
 d:python-aiohttp-cors
+d:python-doxypypy
 d:python-breathe
 d:python-pytest-mpi
 d:python-parso
@@ -2114,7 +2115,7 @@ f:b77ace069c041819e2c16e92485439b5:python-confuse/spkgbuild
 f:fcc1218ad3530434ba18e27719d85fad:python-pytest-benchmark/CHANGELOG
 f:73d87d3edde83ae3168c79329294edbd:python-pytest-benchmark/spkgbuild
 f:f8b4b9e9f51557132820d55c87f8eec7:python-chardet/CHANGELOG
-f:8e3a1c1f476d38b2029a18c0db5ee711:python-chardet/spkgbuild
+f:236100155c700eec436ed9b99e2281b0:python-chardet/spkgbuild
 f:d2a6b0810d87cf8426fb8748d9635f6b:python-automat/CHANGELOG
 f:840ea30a1cc1d8392accaaee2a619200:python-automat/spkgbuild
 f:04389deec27b58bd1ef9948634b37860:python-pdfminer/CHANGELOG
@@ -3372,6 +3373,7 @@ f:8e3e5513d6ecd16b600c9457ff18acca:python-recommonmark/CHANGELOG
 f:f05d4d8cedc83699c6d34ec466f2e3ee:python-recommonmark/spkgbuild
 f:e6cfe05b6dc872956d1ddfc6dacc0c60:python-aiohttp-cors/CHANGELOG
 f:3f883f22418f467f5a3a0ce794ec47a5:python-aiohttp-cors/spkgbuild
+f:7690003f0c1b556da8c17f57180a27da:python-doxypypy/spkgbuild
 f:05b42d62aa449b2d40f51cc97ceaf76e:python-breathe/CHANGELOG
 f:da4f99e6bb5fdc26f9d16bd1a3a757dd:python-breathe/spkgbuild
 f:59241f57099ea4b19ca306652341472b:python-pytest-mpi/CHANGELOG
@@ -3614,7 +3616,7 @@ f:6f786c603f61645dc385c4c480bcd007:python-cfgv/spkgbuild
 f:e5559bc992dbb4e738f44e14f8ce5a33:python-tox/CHANGELOG
 f:812248ed939e79e466b34a85cb01b04a:python-tox/spkgbuild
 f:0cf531622252c1116a14aac9d86daf4b:python-wxpython/CHANGELOG
-f:790888f52e107fa4e6ac725ab449255e:python-wxpython/spkgbuild
+f:9a4cbd61d6b61a7137733e7ead4004d7:python-wxpython/spkgbuild
 f:afece8af91fe5ddc8762a152041d7199:python-pyvcd/CHANGELOG
 f:01e4b3302ae8331392b982a6c8f7dc24:python-pyvcd/spkgbuild
 f:fa1ba6e1e31a7c26aa4e6f60ad1bdc2f:python-click-default-group/CHANGELOG

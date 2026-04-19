@@ -87,7 +87,7 @@ f:a1e94c29730ab217664089670b0eca16:alsa-plugins/CHANGELOG
 f:7f6641154354d858f775759174401116:alsa-plugins/spkgbuild
 f:45b1eb5c96528202e88674acdac0959a:vlc/.pkgfiles
 f:7f3a71d24f88400b94c27cf88ce83a96:vlc/CHANGELOG
-f:4ac22e8336dcd7e7a6a42a52afea97e2:vlc/spkgbuild
+f:103019716809c70aa02f7d7fa80c5167:vlc/spkgbuild
 f:59c8c1fadb493a39fe519c8d74fcdc28:vlc/override
 f:c2d19d3b29283432435c233065801374:phonon-backend-vlc/.pkgfiles
 f:7d21ed1d1df6276c6e838dc6f8ed31e7:phonon-backend-vlc/spkgbuild
@@ -99,7 +99,7 @@ f:9abbecb92c8009ff089f88fa7a5e656b:dav1d/spkgbuild
 f:e2903f3516bd7443d5c1431a559f6cc7:clementine/CHANGELOG
 f:06a39f5efd0ca976bfc56dc7cc94eb19:clementine/spkgbuild
 f:151c397d2ead9121574bb3921ba332c1:kodi/CHANGELOG
-f:5c075e55d1e819ba891da2309b2d5d1d:kodi/spkgbuild
+f:0d454a69878e0e14510a8c01560bd95d:kodi/spkgbuild
 f:459417aced874ef71fad77f9a0538182:chromaprint/CHANGELOG
 f:4ada7d8213e13252ef7458c37fa65ba4:chromaprint/spkgbuild
 f:c44bbaeb514a0df3599c4a2257962b7d:mythtv/CHANGELOG

@@ -278,6 +278,7 @@ d:sudo
 d:polkit
 d:glew
 d:gmrun
+d:bind-utils
 d:sysklogd
 d:jq
 d:pv
@@ -400,6 +401,7 @@ d:efivar
 d:makeself
 d:startup-notification
 d:icon-naming-utils
+d:iotop-fukt
 d:potrace
 d:faad2
 d:hugo
@@ -421,6 +423,7 @@ d:inih
 d:tar
 d:rfkill
 d:tcsh
+d:dir
 d:ncmpcpp
 d:i3
 d:vsv
@@ -471,6 +474,7 @@ d:libiconv
 d:file
 d:waylandpp
 d:pugixml
+d:whois
 d:chntpw
 d:polkit-gnome
 d:mpc
@@ -683,7 +687,8 @@ f:01b25104f6f21ad66fd6687cb4739511:curl/.pkgfiles
 f:edefbefbbf1055ad11d3c97be2e19291:curl/CHANGELOG
 f:022247b3719cbf7a9c195d9bd2b2f3c5:curl/spkgbuild
 f:2ab2fd51a5d53ce21c2d56b931fd54ed:curl/override
-f:9f364d5eb016e5cd2defeff41751d332:tk/spkgbuild
+f:a023bce71d77f9f56621423075042ad6:tk/.pkgfiles
+f:5e9c19712606544db795162c70cd75e3:tk/spkgbuild
 f:0c26edb5571e364e46aee6d09c05fc39:udisks2/.pkgfiles
 f:ac110dccd81dda5d706b84c9b6ee72d8:udisks2/CHANGELOG
 f:f518e07d2626441463e742b10f65e187:udisks2/spkgbuild
@@ -767,7 +772,7 @@ f:20c99b3f5fcb1dbb45f24c574d20401d:linux-api-headers/spkgbuild
 f:262eda046c808cedb749b7f139f4233e:linux-api-headers/override
 f:838cb4823e09e27e54d962b0820e9364:squashfs-tools/.pkgfiles
 f:a39a3ceb97a26ca0cd031d17eb8ef7d4:squashfs-tools/CHANGELOG
-f:adb6de3719240b52d399a76ef32fe9c3:squashfs-tools/spkgbuild
+f:cb53c375f24f3f2711666e141a0bfcd1:squashfs-tools/spkgbuild
 f:466f4b9e8f81f446f0218cebde4206a5:squashfs-tools/fix-glibc-2.28.patch
 f:b06f0422fcfabbb237d19157d55678b4:yad/CHANGELOG
 f:9329f8c3a53455bd46ac076b00941991:yad/spkgbuild
@@ -882,7 +887,7 @@ f:c5568671417c628138a3c1e26452f983:cabextract/spkgbuild
 f:fcfc0a8132dd735f33dfa9eb22d14c61:gwenhywfar/spkgbuild
 f:18d7ddd71d3e0c3ddb5c50668f6466f1:runit/spkgbuild
 f:bf6e8ce6a02cc741eb0d3173acb6efa8:webkitgtk/CHANGELOG
-f:255ad14c067b636a129066fd9ff0fda3:webkitgtk/spkgbuild
+f:e5dc3bdda39c76a58791808a3fcd505f:webkitgtk/spkgbuild
 f:80e55a5e3a46326aa47559fe6af368bb:imagemagick6/spkgbuild
 f:1f1d8a6a27b292d083a61231bb4099c4:imagemagick6/ImageMagick-libs_only-1.patch
 f:109b6c1225c8b5d3746bd1bc05013ad6:opus/.pkgfiles
@@ -1033,6 +1038,7 @@ f:f2d5afae36f9821bbe4a3e82207ffb61:speedtest-cli/CHANGELOG
 f:44c3d1a96a1e6bfe7de503534f464e01:speedtest-cli/spkgbuild
 f:6635f05048ebd6d6711d482e13a0740b:qutebrowser/CHANGELOG
 f:bb8f4377e7acbba06ea8aff776683b2f:qutebrowser/spkgbuild
+f:89105158c6582eea6efe69723360136d:playerctl/.pkgfiles
 f:35281d904547480dd02fefa0fa948171:playerctl/CHANGELOG
 f:ba6fc1edb20ed98832b9a1006e476d7e:playerctl/spkgbuild
 f:48692f14c80b4cee76bf409c7d389450:fbpanel/spkgbuild
@@ -1231,9 +1237,12 @@ f:eed7939f349834415b43aa5d5017e6aa:polkit/CHANGELOG
 f:e0831afe35660ac07ad90b7e5934c1d0:polkit/spkgbuild
 f:8c8b6d8f3bb968eebb26befb04b7c0c7:polkit/mkdirs
 f:f4d1b90979fa1c3b424798949a5fdb6f:polkit/pre-install.sh
-f:26bdee005991162166a6f930f4e1d70d:glew/spkgbuild
+f:024ae1f626a2e1f0b7ed3f72073d2019:glew/.pkgfiles
+f:c5e44d3810140035bc5ebfa3148d1b69:glew/spkgbuild
 f:a8fd3421b163421ea7990668c634d406:gmrun/gcc43.patch
 f:8e38ad46a1ffc313086e14e19f383792:gmrun/spkgbuild
+f:dc9848c0098e5921ecc531f12f8f5665:bind-utils/.pkgfiles
+f:ca715af0263b67d03bc3c5276a271507:bind-utils/spkgbuild
 f:4b34b383721d74894194c6e8628dc3a9:post-install.sh
 f:37ba62883540d59cf615bf2b72bff603:sysklogd/.pkgfiles
 f:6b5bf4e2fae36cc8131f09cb2bf06d86:sysklogd/rc.sysklogd
@@ -1358,10 +1367,11 @@ f:e79ced14a64fbd7694baf322e166582e:aspell/spkgbuild
 f:44c66f48ddbaf361840dc444e6d77c2f:glib-networking/.pkgfiles
 f:8eb7e200473236f58c2f6de2555bc814:glib-networking/readme
 f:58b1b94642895a454896ef61b8ac82bf:glib-networking/spkgbuild
+f:0020828e0d85c715948b5f8b4f5a8078:fuse2/.pkgfiles
 f:97e4cb9f74e6d526143f3632a817b41b:fuse2/readme
 f:c9457cf5b2196da67d5ac816d1c86a4f:fuse2/fuse.conf
 f:0cef609405fb6705e196bc272a8e1c5c:fuse2/CHANGELOG
-f:c9f8ebb076ee51be4fc246b0a4b0260e:fuse2/spkgbuild
+f:fecc6066553088d49ef111b484ff153a:fuse2/spkgbuild
 f:84164d8ff50bd28cc8d534272d363ef4:timeshift/pr476.patch
 f:9c51ee2b6b5ba6274ffde49da460edb2:timeshift/CHANGELOG
 f:3788d7b8834d8d86f569fa2eb8c6dab2:timeshift/spkgbuild
@@ -1581,6 +1591,7 @@ f:402b8c791bd65946d4c2c9d1b7dd70eb:makeself/CHANGELOG
 f:399bb1d982d7a385ff471ebe230edb6d:makeself/spkgbuild
 f:c9695ad50deb49c92aa332e830ccb83f:startup-notification/spkgbuild
 f:19f7c192d0099452972860c2ccea0410:icon-naming-utils/spkgbuild
+f:b9a91c89c44d17bbe3a3dae8119326e0:iotop-fukt/spkgbuild
 f:d4b1ff77ab64e6ab30c26f9337e479ae:potrace/spkgbuild
 f:70aff5c78af1c8f60fa6af2864482d0d:faad2/spkgbuild
 f:7945031a55346a7b2cf6f67d2739f129:hugo/CHANGELOG
@@ -1773,6 +1784,8 @@ f:57a4ed378b72d98e3d78446d30945315:waylandpp/spkgbuild
 f:330b2aaaea84abb734a95c01c9c7c868:pugixml/.pkgfiles
 f:9cfc81b89eb217a94b4f01de32cfd492:pugixml/CHANGELOG
 f:fc20f1a835aa0417481f0ca8ffbf6e4f:pugixml/spkgbuild
+f:9e9d1b6b6f3c5815cf685769b3bd24b9:whois/.pkgfiles
+f:a8ad0e1553151aee5202f2d9691b182f:whois/spkgbuild
 f:1c0c2cf65a1d95e9cb61c428891d7e77:chntpw/spkgbuild
 f:08b0d328e8381b632afcc36d634f0d15:polkit-gnome/spkgbuild
 f:220b5386a55f7490935d047b98877ed5:mpc/.pkgfiles

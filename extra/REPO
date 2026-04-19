@@ -4,6 +4,7 @@ d:gimp
 d:gnucash
 d:gtk3
 d:epson-inkjet-printer-escpr2
+d:kicad
 d:waterfox
 d:convertlit
 d:anki
@@ -21,9 +22,12 @@ d:ebook-tools
 d:discordchatexporter
 d:solaar
 d:gtk-engine-murrine
+d:opencascade
 d:openjdk
 d:flexget
 d:chessx
+d:wolfssl
+d:unixodbc
 d:woff2
 d:vidtomp3
 d:setconf
@@ -49,10 +53,12 @@ d:iotop
 d:aspell-english-dictionary
 d:mypaint-brushes
 d:dotnet-host
+d:ngspice
 d:onboard
 d:minecraft-launcher
 d:geoip-database
 d:gtk2
+d:kicad-library
 d:gtk4
 d:gtkmm3
 d:tinyxml
@@ -75,6 +81,9 @@ f:951abdb870a129e245794d08f1699992:epson-inkjet-printer-escpr2/.pkgfiles
 f:cc1347064094c2cf55f9bb202c6e83da:epson-inkjet-printer-escpr2/CHANGELOG
 f:ab27e9e6d69c04dae161cab744cfb2c1:epson-inkjet-printer-escpr2/spkgbuild
 f:a4a9a2704930b1033bbe80e6f1c7f049:epson-inkjet-printer-escpr2/bug_x86_64.patch
+f:e725df653fbd089cc5e9b83fb9e90c34:kicad/.pkgfiles
+f:136a6b991106d8e76c67a6647ce7bdfc:kicad/spkgbuild
+f:67fe37eeb5b5ad302f4bff37b3302b97:kicad/pre-install.sh
 f:cd463125b53a1a25c1b559721934aa90:waterfox/waterfox.desktop
 f:a893e6a506d6cbb2685182b298fe7964:waterfox/mozconfig
 f:ae7a2882092719b68e78ca8a0c4290e5:waterfox/spkgbuild
@@ -87,11 +96,12 @@ f:6c462a9e6bab116ba8d1be9d7c498d17:nspr/.pkgfiles
 f:0efcabdfee4823b2ea38632d52775c52:nspr/CHANGELOG
 f:90c19a87de1de41501846555d65b0c84:nspr/spkgbuild
 f:b67368e78838b26c4777723bab45cc3b:nspr/override
+f:1cf09a11e2ef38d763bb5b68b1f1a7d7:protobuf/.pkgfiles
 f:cc1dadfd5c0d97aea5324b87bbd72f6d:protobuf/CHANGELOG
-f:c079a96f0510faba1f68d403e4ad2eaf:protobuf/spkgbuild
+f:be88d23250e92b7ff9165d183bdcdb2e:protobuf/spkgbuild
 f:6ff71127c7599566c93c7f5e4f9ec15a:extra-cmake-modules/.pkgfiles
 f:2b583ce31a2642fcd10c146849602471:extra-cmake-modules/CHANGELOG
-f:f062df7a23afd917607e8bbb5f02a85d:extra-cmake-modules/spkgbuild
+f:0a840240377185830545e7f8170cb877:extra-cmake-modules/spkgbuild
 f:0cba16b1f3c202c85a0125b2b113fbc2:gtk-engines/CHANGELOG
 f:1550dc8346a8331e4a0be5be2d1dfc10:gtk-engines/spkgbuild
 f:5d88d18f1a9fed0588546a6eadb659a9:screenfetch/.pkgfiles
@@ -123,6 +133,8 @@ f:b8b09711f58ed35a035d397e81dda16c:solaar/CHANGELOG
 f:28599d282dadbbc637a372b46535c05a:solaar/spkgbuild
 f:ed11e8350d03fe315fa742824d6f95aa:solaar/override
 f:5b67a82e4956df3ef8e2a07ff1974f35:gtk-engine-murrine/spkgbuild
+f:1e2987833b8bdae1f5139879c5fd67c4:opencascade/.pkgfiles
+f:f0f5a7290d177483e70525b2160d2eee:opencascade/spkgbuild
 f:c0dd249c01ef3729e2317bd5244c2b9b:openjdk/CHANGELOG
 f:ec42fae2cd9c4afedeab617315cd4f55:openjdk/post-install.sh
 f:0558d84a6af322d78a1d49250c574792:openjdk/spkgbuild
@@ -131,6 +143,10 @@ f:75f9f4984be2cb7447420a037845dd07:flexget/CHANGELOG
 f:afbf19216e1d4cb96efd7adb1e7ddc24:flexget/spkgbuild
 f:668adb700ec0292770dea8f95161e67f:chessx/CHANGELOG
 f:29ba8f02d6049b262f79ee6cc27b09bf:chessx/spkgbuild
+f:5e78e7811e9e8c693d3d0f54f9f70269:wolfssl/.pkgfiles
+f:d67970baf386ec5c580bc21db50d81d8:wolfssl/spkgbuild
+f:9594a7028a08597e2a7fe5decae9bf8d:unixodbc/.pkgfiles
+f:c29bd6e82e55be509303f041e9467468:unixodbc/spkgbuild
 f:d8e499cccb1a6fa8b6eb3732477f5eb1:woff2/spkgbuild
 f:21926b318d7ecd15a531ffae0cd7146e:vidtomp3/CHANGELOG
 f:f1739fcafcb78fde77578cc276f1ff06:vidtomp3/vidtomp3
@@ -139,10 +155,8 @@ f:a0785bf69ab10afbeb832551ac12d132:setconf/spkgbuild
 f:da1b5902f72a6c090245f59a03f70cc0:ncdu/.pkgfiles
 f:9b01b4a26f29933d7a419c781d016fc5:ncdu/CHANGELOG
 f:404189ba59ce9904bdcd3247bd320934:ncdu/spkgbuild
-f:a7505aef4689f6435e7627de9d308962:qemu/CHANGELOG
-f:606cabe405669120236cc2abbdcaa6d8:qemu/spkgbuild
-f:ae7caa19c3db453b132c2d4bf7c0aa12:qemu/mkdirs
-f:47e04c4dbd133ff51aa7547ce8e9e56b:qemu/pre-install.sh
+f:64040a51058c820808dc5643c166221a:qemu/.pkgfiles
+f:ad59ae0175fc3bc7e45917262dbf92c8:qemu/spkgbuild
 f:1c029d8d5671c52dd10e892cbc052ff8:scid_vs_pc/CHANGELOG
 f:3046fd641e724726b7ce5b49ecbec66a:scid_vs_pc/spkgbuild
 f:f133302d3d8e080cdc76f4634c830b94:nodejs/.pkgfiles
@@ -180,6 +194,7 @@ f:55855839b7791ab31f99737b3776500e:discount/spkgbuild
 f:b13fb88e9ef3731e5374c3ad2f672146:florence/CHANGELOG
 f:5274c93f806e7a05246bda256f31da63:florence/spkgbuild
 f:7c53adcd9147ce76b057d35f4eba84a8:mozjs/spkgbuild
+f:f1c77a56f1e6d652d450aa87e3cb9ea4:iotop/.pkgfiles
 f:bf856d368ba24a40e9cbbb4f77de59db:iotop/CHANGELOG
 f:7cec407c92a9fdc7a03a2053d7f8c60a:iotop/spkgbuild
 f:0d0c290f714543ef39efbb2012ab8781:aspell-english-dictionary/.pkgfiles
@@ -190,6 +205,8 @@ f:68c995ed89f32cf20ea33374283e0ed3:dotnet-host/dotnet.sh
 f:195e8b1019fb7e28904537e8881af33a:dotnet-host/CHANGELOG
 f:4b770f5c0293948b9e3b6fac3aedad48:dotnet-host/spkgbuild
 f:6cff7f52e0e13c6f988f051a93676765:dotnet-host/dotnet-core-sdk-telemetry-optout.patch
+f:b0a6696b7a0a6a2b4cc10fa3a6018cbf:ngspice/.pkgfiles
+f:c41e430fdc17a6b2b083cd3ffa58aa07:ngspice/spkgbuild
 f:1622181a205950786bc4c695003feff9:onboard/CHANGELOG
 f:50efb10c1da9ebd753cc6461489bd62c:onboard/spkgbuild
 f:b78826ef54e0cab77d9ea4c4b7c50174:minecraft-launcher/CHANGELOG
@@ -198,6 +215,8 @@ f:61a694a2574ed840f1509039d18e8b1e:minecraft-launcher/minecraft-launcher.desktop
 f:80a0050adc4e383a71fca11c158c09a8:geoip-database/spkgbuild
 f:bb0ad7d077d5a01e5aa061e1662d37fa:gtk2/post-install.sh
 f:13f2c9445f7358f37ebde4fd22c3a024:gtk2/spkgbuild
+f:633bae522b47c51f89fbd8da859bac05:kicad-library/.pkgfiles
+f:8a6a196d0201d96a4b3daf88370d39aa:kicad-library/spkgbuild
 f:adb57a225085067f2252941d51cdcf4f:gtk4/.pkgfiles
 f:08a0e3160a1cbf1a98b045b8335388c8:gtk4/spkgbuild
 f:bf89bb98ad0d06cef7a9bebda179720f:gtkmm3/spkgbuild

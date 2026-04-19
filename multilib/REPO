@@ -220,7 +220,7 @@ f:868ca26cbf03e2d14786755db5acf092:gst-plugins-base-32/spkgbuild
 f:8cb6d23dde3b905c9ad3203631dda7ce:gmp-32/spkgbuild
 f:fd276e6e7f51042ee7802de8f8ea8310:steam/.pkgfiles
 f:c61d145d60c842e9b115b72727003a72:steam/CHANGELOG
-f:75e8cd8e506d2e46046b2e6e2c2d6224:steam/spkgbuild
+f:215ec7ea1a86bfcc5d49d2d745bfebe2:steam/spkgbuild
 f:d0bbdc1a8bbba756ed8e0f83333a9286:libtasn1-32/spkgbuild
 f:3ca2701e4d85cc05f533d63c4f271d67:libxml2-32/.pkgfiles
 f:f0fe1a64d40c056baf2149b1efebf1b4:libxml2-32/libxml2-python3_hack-1.patch

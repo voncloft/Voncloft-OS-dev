@@ -3,6 +3,7 @@ d:qca
 d:qtermwidget
 d:networkmanager-qt
 d:libdbusmenu-qt
+d:qtcreator
 d:pavucontrol-qt
 d:transmission-qt
 d:qbittorrent
@@ -31,6 +32,8 @@ f:15aef8c845a6bad3c0162dc31b73a395:qtermwidget/spkgbuild
 f:55df71b27f4cda641a2ebd8a82d20500:networkmanager-qt/CHANGELOG
 f:d82f86896b87dd84b216098c8e4857fd:networkmanager-qt/spkgbuild
 f:3bbaade499e7299b2ca06d1750a5c188:libdbusmenu-qt/spkgbuild
+f:3cf61cac6170341f86e00d7e3bd980bd:qtcreator/.pkgfiles
+f:8c0a7f33229bd06750048845d6e9ce6b:qtcreator/spkgbuild
 f:028bbf46947bf665e03268ea3e600b53:pavucontrol-qt/CHANGELOG
 f:01931d64ca6a9eb4ec4070cda5318b80:pavucontrol-qt/spkgbuild
 f:a5c820fc313a518380b081631bdef9b9:.httpup-urlinfo
@@ -41,7 +44,7 @@ f:5acc72c5fd6c5f2cb9e41ebb328909dd:pulseaudio-qt/.pkgfiles
 f:558732e27e07866b474477dd6dde28a3:pulseaudio-qt/spkgbuild
 f:542f017f53ddccbe40640aabb66fb958:layer-shell-qt/.pkgfiles
 f:9e416d2671460ecfec4e58d96b79e387:layer-shell-qt/CHANGELOG
-f:cd7d4b1688fc171ee726e87bddc2f761:layer-shell-qt/spkgbuild
+f:6f01b82d208e8f530dc80464c7c02e56:layer-shell-qt/spkgbuild
 f:2b08e0c28c0c602a27153fc4616ec30d:bluez-qt/CHANGELOG
 f:eb6abc44f8fde9b8f7c3df050b30f56d:bluez-qt/spkgbuild
 f:3c57996875da34ee73a9ed1ad622b786:appstream-qt/spkgbuild
