@@ -4,12 +4,12 @@
 name=firefox-bin
 version=151
 release=0a1
-month=03
+month=06
 year=2026
-day=30
-hour=21
-min=36
-sec=24
+day=15
+hour=09
+min=30
+sec=07
 source="https://archive.mozilla.org/pub/firefox/nightly/$year/$month/$year-$month-$day-$hour-$min-$sec-mozilla-central/firefox-$version.$release.en-US.linux-x86_64.tar.xz
 	firefox.sh
 	firefox.desktop"
@@ -20,7 +20,8 @@ build() {
 	mkdir -pv $PKG/opt
 
 	cp -rv firefox/ $PKG/opt/$name
-
+	#version testing
+	#cp -rv firefox/ $PKG/opt/$name-$month-$year
 	#launchers
 	install -m755 $SRC/firefox.sh "$PKG"/usr/bin/firefox
 	install -m644 *.desktop $PKG/usr/share/applications/
@@ -32,5 +33,4 @@ build() {
   	ln -Ts /usr/share/hunspell "$PKG"/opt/$name/dictionaries
 	ln -Ts /usr/share/hyphen "$PKG"/opt/$name/hyphenation
 	ln -sf /usr/lib/libnssckbi.so "$PKG"/opt/$name/libnssckbi.so
-	
 }

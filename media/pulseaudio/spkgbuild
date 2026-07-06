@@ -15,7 +15,7 @@ meson setup --prefix=/usr       \
             --buildtype=release \
             -D database=gdbm    \
             -D doxygen=false    \
-            -D bluez5=disabled  \
+            -D bluez5=enabled  \
             -D tests=false \
             ..
 	ninja

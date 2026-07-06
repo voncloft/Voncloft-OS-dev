@@ -1,0 +1,23 @@
+libei-1.6.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/ei-debug-events
+drwxr-xr-x root/root    usr/include/
+drwxr-xr-x root/root    usr/include/libei-1.0/
+-rw-r--r-- root/root    usr/include/libei-1.0/libei.h
+-rw-r--r-- root/root    usr/include/libei-1.0/libeis.h
+-rw-r--r-- root/root    usr/include/libei-1.0/liboeffis.h
+drwxr-xr-x root/root    usr/lib64/
+-rwxr-xr-x root/root    usr/lib64/libei.so.1.6.0
+lrwxrwxrwx root/root    usr/lib64/libei.so.1 -> libei.so.1.6.0
+lrwxrwxrwx root/root    usr/lib64/libei.so -> libei.so.1
+-rwxr-xr-x root/root    usr/lib64/libeis.so.1.6.0
+lrwxrwxrwx root/root    usr/lib64/libeis.so.1 -> libeis.so.1.6.0
+lrwxrwxrwx root/root    usr/lib64/libeis.so -> libeis.so.1
+-rwxr-xr-x root/root    usr/lib64/liboeffis.so.1.6.0
+lrwxrwxrwx root/root    usr/lib64/liboeffis.so.1 -> liboeffis.so.1.6.0
+lrwxrwxrwx root/root    usr/lib64/liboeffis.so -> liboeffis.so.1
+drwxr-xr-x root/root    usr/lib64/pkgconfig/
+-rw-r--r-- root/root    usr/lib64/pkgconfig/libei-1.0.pc
+-rw-r--r-- root/root    usr/lib64/pkgconfig/libeis-1.0.pc
+-rw-r--r-- root/root    usr/lib64/pkgconfig/liboeffis-1.0.pc
