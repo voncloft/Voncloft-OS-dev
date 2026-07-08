@@ -2,7 +2,7 @@
 # depends : xdg-desktop-portal-gtk
 
 name=discord
-version=0.0.27
+version=1.0.146
 release=1
 source="https://dl.discordapp.net/apps/linux/$version/discord-$version.tar.gz"
 
@@ -12,21 +12,11 @@ build() {
 	#put in .profile of usesr directory
 	
 	cd Discord
-	sed -i "s|Exec=.*|Exec=/usr/bin/$name|" $name.desktop
-  	echo 'Path=/usr/bin' >> $name.desktop
-	cd ..
-	install -d "$PKG"/opt/$name
-	cp -a Discord/. "$PKG"/opt/$name
+	  install -Dm755 $name "$PKG"/usr/bin/$name
+  install -Dm755 updater_bootstrap "$PKG"/usr/share/$name/updater_bootstrap
+  install -Dm644 $name.desktop "$PKG"/usr/share/applications/$name.desktop
+  install -Dm644 $name.png "$PKG"/usr/share/icons/hicolor/256x256/apps/$name.png
 
-	chmod 755 "$PKG"/opt/$name/Discord
 
-	rm "$PKG"/opt/$name/postinst.sh
 
-  	install -d "$PKG"/usr/{bin,share/{pixmaps,applications}}
-  	ln -s /opt/$name/Discord "$PKG"/usr/bin/$name
-  	ln -s /opt/$name/discord.png "$PKG"/usr/share/pixmaps/$name.png
-  	ln -s /opt/$name/$name.desktop "$PKG"/usr/share/applications/$name.desktop
-
-  # setuid on chrome-sandbox
- 	 chmod u+s "$PKG"/opt/$name/chrome-sandbox
 }
