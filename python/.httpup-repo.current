@@ -925,6 +925,7 @@ python-django-rest-framework
 python-dephell-changelogs
 python-recommonmark
 python-aiohttp-cors
+python-doxypypy
 python-breathe
 python-pytest-mpi
 python-parso
@@ -3372,6 +3373,7 @@ python-recommonmark/CHANGELOG
 python-recommonmark/spkgbuild
 python-aiohttp-cors/CHANGELOG
 python-aiohttp-cors/spkgbuild
+python-doxypypy/spkgbuild
 python-breathe/CHANGELOG
 python-breathe/spkgbuild
 python-pytest-mpi/CHANGELOG

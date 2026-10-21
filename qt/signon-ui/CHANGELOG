@@ -1,0 +1,9 @@
+Date: Sat 15 Aug 2026 12:00:00 PM EDT
+
+signon-ui
+Version=0.17+git20231016
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo

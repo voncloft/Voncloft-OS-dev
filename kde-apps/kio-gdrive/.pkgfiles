@@ -1,0 +1,21 @@
+kio-gdrive-25.08.3-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/qt6/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfileitemaction/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfileitemaction/gdrivecontextmenuaction.so
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kio/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kio/gdrive.so
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/propertiesdialog/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/propertiesdialog/gdrivepropertiesplugin.so
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/purpose/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/purpose/purpose_gdrive.so
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/metainfo/
+-rw-r--r-- root/root    usr/share/metainfo/org.kde.kio_gdrive.metainfo.xml
+drwxr-xr-x root/root    usr/share/purpose/
+-rw-r--r-- root/root    usr/share/purpose/purpose_gdrive_config.qml
+drwxr-xr-x root/root    usr/share/remoteview/
+-rw-r--r-- root/root    usr/share/remoteview/gdrive-network.desktop

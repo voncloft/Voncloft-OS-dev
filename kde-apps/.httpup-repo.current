@@ -63,7 +63,6 @@ ktp-auth-handler
 palapeli
 pimcommon
 kaffeine
-kaffeine/kaffeine
 khelpcenter
 audiotube
 kcharselect
@@ -227,6 +226,7 @@ kdiamond
 ktp-approver
 kmail-account-wizard
 granatier
+kvantum
 akonadi-contacts
 kruler
 kompare
@@ -272,6 +272,7 @@ kfind/CHANGELOG
 kfind/spkgbuild
 kapman/CHANGELOG
 kapman/spkgbuild
+kolourpaint/.pkgfiles
 kolourpaint/CHANGELOG
 kolourpaint/spkgbuild
 kmail/CHANGELOG
@@ -527,6 +528,7 @@ kmines/CHANGELOG
 kmines/spkgbuild
 kanagram/CHANGELOG
 kanagram/spkgbuild
+sweeper/.pkgfiles
 sweeper/CHANGELOG
 sweeper/spkgbuild
 kdesdk-thumbnailers/.pkgfiles
@@ -763,6 +765,8 @@ kmail-account-wizard/CHANGELOG
 kmail-account-wizard/spkgbuild
 granatier/CHANGELOG
 granatier/spkgbuild
+kvantum/.pkgfiles
+kvantum/spkgbuild
 akonadi-contacts/.pkgfiles
 akonadi-contacts/CHANGELOG
 akonadi-contacts/spkgbuild

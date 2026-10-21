@@ -20,6 +20,7 @@ kmod
 cython3
 busybox
 gpm
+iftop
 opencl-headers
 cairomm
 hunspell
@@ -102,6 +103,7 @@ squashfs-tools
 yad
 recode
 psmisc
+net-tools
 reiserfsprogs
 colord
 double-conversion
@@ -276,6 +278,7 @@ sudo
 polkit
 glew
 gmrun
+bind-utils
 sysklogd
 jq
 pv
@@ -398,6 +401,7 @@ efivar
 makeself
 startup-notification
 icon-naming-utils
+iotop-fukt
 potrace
 faad2
 hugo
@@ -419,6 +423,7 @@ inih
 tar
 rfkill
 tcsh
+dir
 ncmpcpp
 i3
 vsv
@@ -469,6 +474,7 @@ libiconv
 file
 waylandpp
 pugixml
+whois
 chntpw
 polkit-gnome
 mpc
@@ -556,6 +562,9 @@ gpm/CHANGELOG
 gpm/gpm-1.20.7-consolidated-1.patch
 gpm/run
 gpm/spkgbuild
+iftop/.pkgfiles
+iftop/patch.patch
+iftop/spkgbuild
 opencl-headers/spkgbuild
 cairomm/CHANGELOG
 cairomm/spkgbuild
@@ -678,6 +687,7 @@ curl/.pkgfiles
 curl/CHANGELOG
 curl/spkgbuild
 curl/override
+tk/.pkgfiles
 tk/spkgbuild
 udisks2/.pkgfiles
 udisks2/CHANGELOG
@@ -772,6 +782,8 @@ recode/spkgbuild
 psmisc/.pkgfiles
 psmisc/CHANGELOG
 psmisc/spkgbuild
+net-tools/.pkgfiles
+net-tools/spkgbuild
 reiserfsprogs/reiserfsprogs-3.6.27-loff_t.patch
 reiserfsprogs/spkgbuild
 colord/.pkgfiles
@@ -934,6 +946,7 @@ book-stripper/index
 book-stripper/book-stripper
 book-stripper/getbook
 book-stripper/raw-cat.txt
+book-stripper/verion_mod
 book-stripper/spkgbuild
 mps-youtube/CHANGELOG
 mps-youtube/spkgbuild
@@ -1025,6 +1038,7 @@ speedtest-cli/CHANGELOG
 speedtest-cli/spkgbuild
 qutebrowser/CHANGELOG
 qutebrowser/spkgbuild
+playerctl/.pkgfiles
 playerctl/CHANGELOG
 playerctl/spkgbuild
 fbpanel/spkgbuild
@@ -1223,9 +1237,12 @@ polkit/CHANGELOG
 polkit/spkgbuild
 polkit/mkdirs
 polkit/pre-install.sh
+glew/.pkgfiles
 glew/spkgbuild
 gmrun/gcc43.patch
 gmrun/spkgbuild
+bind-utils/.pkgfiles
+bind-utils/spkgbuild
 post-install.sh
 sysklogd/.pkgfiles
 sysklogd/rc.sysklogd
@@ -1350,6 +1367,7 @@ aspell/spkgbuild
 glib-networking/.pkgfiles
 glib-networking/readme
 glib-networking/spkgbuild
+fuse2/.pkgfiles
 fuse2/readme
 fuse2/fuse.conf
 fuse2/CHANGELOG
@@ -1573,6 +1591,7 @@ makeself/CHANGELOG
 makeself/spkgbuild
 startup-notification/spkgbuild
 icon-naming-utils/spkgbuild
+iotop-fukt/spkgbuild
 potrace/spkgbuild
 faad2/spkgbuild
 hugo/CHANGELOG
@@ -1765,6 +1784,8 @@ waylandpp/spkgbuild
 pugixml/.pkgfiles
 pugixml/CHANGELOG
 pugixml/spkgbuild
+whois/.pkgfiles
+whois/spkgbuild
 chntpw/spkgbuild
 polkit-gnome/spkgbuild
 mpc/.pkgfiles

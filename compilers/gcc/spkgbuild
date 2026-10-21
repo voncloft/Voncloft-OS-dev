@@ -25,7 +25,7 @@ build() {
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
 		#--enable-languages=c,c++,objc,obj-c++ \
-		--enable-languages=c,c++,d,fortran,go,objc,obj-c++
+		--enable-languages=c,c++,d,fortran,go,objc,obj-c++ \
 		--disable-bootstrap \
 		--disable-libmpx \
 		--with-system-zlib \

@@ -16,6 +16,7 @@ breeze-grub
 kinfocenter
 plasma-programs
 kwrited
+knighttime
 plymouth-kcm
 ocean-sound-theme
 qqc2-breeze-style
@@ -28,8 +29,6 @@ plasma-firewall
 milou
 libksysguard
 kactivitymanagerd
-plasma-programs-bak
-plasma-programs-bak/plasma-programs
 plasma-pa
 aura-browser
 plasma-wayland-protocols
@@ -37,6 +36,7 @@ plasma-vault
 kde-cli-tools
 breeze
 kgamma5
+kwin-x11
 plasma5support
 kglobalacceld
 kmenuedit
@@ -44,6 +44,7 @@ oxygen
 kdeplasma-addons
 plasma-remotecontrollers
 plasma-welcome
+aurorae
 plasma-integration
 ktextaddons
 plasma-activities-stats
@@ -126,6 +127,9 @@ plasma-programs/spkgbuild
 kwrited/.pkgfiles
 kwrited/CHANGELOG
 kwrited/spkgbuild
+knighttime/.pkgfiles
+knighttime/CHANGELOG
+knighttime/spkgbuild
 .httpup-urlinfo
 plymouth-kcm/CHANGELOG
 plymouth-kcm/spkgbuild
@@ -141,6 +145,7 @@ drkonqi/spkgbuild
 sddm-kcm/.pkgfiles
 sddm-kcm/CHANGELOG
 sddm-kcm/spkgbuild
+plasma-browser-integration/.pkgfiles
 plasma-browser-integration/CHANGELOG
 plasma-browser-integration/spkgbuild
 breeze-gtk/.pkgfiles
@@ -158,10 +163,6 @@ libksysguard/spkgbuild
 kactivitymanagerd/.pkgfiles
 kactivitymanagerd/CHANGELOG
 kactivitymanagerd/spkgbuild
-plasma-programs-bak/plasma-programs/CHANGELOG
-plasma-programs-bak/plasma-programs/spkgbuild
-plasma-programs-bak/CHANGELOG
-plasma-programs-bak/spkgbuild
 plasma-pa/.pkgfiles
 plasma-pa/CHANGELOG
 plasma-pa/spkgbuild
@@ -181,6 +182,9 @@ breeze/CHANGELOG
 breeze/spkgbuild
 kgamma5/CHANGELOG
 kgamma5/spkgbuild
+kwin-x11/.pkgfiles
+kwin-x11/CHANGELOG
+kwin-x11/spkgbuild
 plasma5support/.pkgfiles
 plasma5support/spkgbuild
 kglobalacceld/.pkgfiles
@@ -199,6 +203,9 @@ plasma-remotecontrollers/spkgbuild
 plasma-welcome/.pkgfiles
 plasma-welcome/CHANGELOG
 plasma-welcome/spkgbuild
+aurorae/.pkgfiles
+aurorae/CHANGELOG
+aurorae/spkgbuild
 plasma-integration/.pkgfiles
 plasma-integration/CHANGELOG
 plasma-integration/spkgbuild
@@ -220,6 +227,7 @@ plasma-desktop/CHANGELOG
 plasma-desktop/spkgbuild
 eventcalendar/CHANGELOG
 eventcalendar/spkgbuild
+plasma-systemmonitor/.pkgfiles
 plasma-systemmonitor/plasmasystemmonitor/spkgbuild
 plasma-systemmonitor/CHANGELOG
 plasma-systemmonitor/spkgbuild

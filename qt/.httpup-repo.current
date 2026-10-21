@@ -3,6 +3,7 @@ qca
 qtermwidget
 networkmanager-qt
 libdbusmenu-qt
+qtcreator
 pavucontrol-qt
 transmission-qt
 qbittorrent
@@ -12,6 +13,9 @@ bluez-qt
 appstream-qt
 qtwebengine
 libaccounts-qt
+signond
+signon-plugin-oauth2
+signon-ui
 pcmanfm-qt
 qbittorrent-nox
 qt6
@@ -31,6 +35,8 @@ qtermwidget/spkgbuild
 networkmanager-qt/CHANGELOG
 networkmanager-qt/spkgbuild
 libdbusmenu-qt/spkgbuild
+qtcreator/.pkgfiles
+qtcreator/spkgbuild
 pavucontrol-qt/CHANGELOG
 pavucontrol-qt/spkgbuild
 .httpup-urlinfo
@@ -53,6 +59,12 @@ qtwebengine/spkgbuild
 qtwebengine/pre-install.sh
 libaccounts-qt/CHANGELOG
 libaccounts-qt/spkgbuild
+signond/CHANGELOG
+signond/spkgbuild
+signon-plugin-oauth2/CHANGELOG
+signon-plugin-oauth2/spkgbuild
+signon-ui/CHANGELOG
+signon-ui/spkgbuild
 pcmanfm-qt/CHANGELOG
 pcmanfm-qt/spkgbuild
 qbittorrent-nox/spkgbuild

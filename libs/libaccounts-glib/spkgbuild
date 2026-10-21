@@ -2,17 +2,14 @@
 # depends : dbus-glib libxml2 sqlite glib
 
 name=libaccounts-glib
-version=1.26
-release=6
+version=1.27
+release=3
 
 source="https://gitlab.com/accounts-sso/libaccounts-glib/-/archive/VERSION_$version/libaccounts-glib-VERSION_$version.tar.gz"
 
 build() {
-	cd $name-VERSION_$version
-	mkdir build
-	cd build
-	meson .. \
-	-Dprefix=/usr \
-	-Dlibdir=/usr/lib
-	meson install --destdir $PKG
+	meson $name-VERSION_$version build \
+    -Dprefix=/usr
+  meson compile -C build
+meson install -C build --destdir $PKG
 }

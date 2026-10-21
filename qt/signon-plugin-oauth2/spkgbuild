@@ -1,0 +1,17 @@
+# description : OAuth 1.0/2.0 plugin for signond
+# depends : signond
+
+name=signon-plugin-oauth2
+version=0.25
+release=1
+
+source="$name-master.tar.gz::https://gitlab.com/accounts-sso/$name/-/archive/master/$name-master.tar.gz"
+options="!checksum"
+
+build() {
+	cd $name-master
+	sed -e '/example/d' -e '/tests/d' -i signon-oauth2.pro
+	qmake6 PREFIX=/usr LIBDIR=/usr/lib
+	make
+	make INSTALL_ROOT="$PKG" install
+}

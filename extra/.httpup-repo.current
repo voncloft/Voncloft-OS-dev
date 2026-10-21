@@ -4,6 +4,7 @@ gimp
 gnucash
 gtk3
 epson-inkjet-printer-escpr2
+kicad
 waterfox
 convertlit
 anki
@@ -21,9 +22,12 @@ ebook-tools
 discordchatexporter
 solaar
 gtk-engine-murrine
+opencascade
 openjdk
 flexget
 chessx
+wolfssl
+unixodbc
 woff2
 vidtomp3
 setconf
@@ -49,10 +53,12 @@ iotop
 aspell-english-dictionary
 mypaint-brushes
 dotnet-host
+ngspice
 onboard
 minecraft-launcher
 geoip-database
 gtk2
+kicad-library
 gtk4
 gtkmm3
 tinyxml
@@ -75,6 +81,9 @@ epson-inkjet-printer-escpr2/.pkgfiles
 epson-inkjet-printer-escpr2/CHANGELOG
 epson-inkjet-printer-escpr2/spkgbuild
 epson-inkjet-printer-escpr2/bug_x86_64.patch
+kicad/.pkgfiles
+kicad/spkgbuild
+kicad/pre-install.sh
 waterfox/waterfox.desktop
 waterfox/mozconfig
 waterfox/spkgbuild
@@ -87,6 +96,7 @@ nspr/.pkgfiles
 nspr/CHANGELOG
 nspr/spkgbuild
 nspr/override
+protobuf/.pkgfiles
 protobuf/CHANGELOG
 protobuf/spkgbuild
 extra-cmake-modules/.pkgfiles
@@ -123,6 +133,8 @@ solaar/CHANGELOG
 solaar/spkgbuild
 solaar/override
 gtk-engine-murrine/spkgbuild
+opencascade/.pkgfiles
+opencascade/spkgbuild
 openjdk/CHANGELOG
 openjdk/post-install.sh
 openjdk/spkgbuild
@@ -131,6 +143,10 @@ flexget/CHANGELOG
 flexget/spkgbuild
 chessx/CHANGELOG
 chessx/spkgbuild
+wolfssl/.pkgfiles
+wolfssl/spkgbuild
+unixodbc/.pkgfiles
+unixodbc/spkgbuild
 woff2/spkgbuild
 vidtomp3/CHANGELOG
 vidtomp3/vidtomp3
@@ -139,10 +155,8 @@ setconf/spkgbuild
 ncdu/.pkgfiles
 ncdu/CHANGELOG
 ncdu/spkgbuild
-qemu/CHANGELOG
+qemu/.pkgfiles
 qemu/spkgbuild
-qemu/mkdirs
-qemu/pre-install.sh
 scid_vs_pc/CHANGELOG
 scid_vs_pc/spkgbuild
 nodejs/.pkgfiles
@@ -180,6 +194,7 @@ discount/spkgbuild
 florence/CHANGELOG
 florence/spkgbuild
 mozjs/spkgbuild
+iotop/.pkgfiles
 iotop/CHANGELOG
 iotop/spkgbuild
 aspell-english-dictionary/.pkgfiles
@@ -190,6 +205,8 @@ dotnet-host/dotnet.sh
 dotnet-host/CHANGELOG
 dotnet-host/spkgbuild
 dotnet-host/dotnet-core-sdk-telemetry-optout.patch
+ngspice/.pkgfiles
+ngspice/spkgbuild
 onboard/CHANGELOG
 onboard/spkgbuild
 minecraft-launcher/CHANGELOG
@@ -198,6 +215,8 @@ minecraft-launcher/minecraft-launcher.desktop
 geoip-database/spkgbuild
 gtk2/post-install.sh
 gtk2/spkgbuild
+kicad-library/.pkgfiles
+kicad-library/spkgbuild
 gtk4/.pkgfiles
 gtk4/spkgbuild
 gtkmm3/spkgbuild

@@ -2,37 +2,59 @@
 # depends	: gcc
 
 name=ncurses
-version=6.5
+version=6.6
 release=1
-source="https://ftp.gnu.org/gnu//$name/$name-$version.tar.gz"
+source="https://invisible-island.net/archives/$name/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
-
-	sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in
+	cd "$name-$version"
 
 	./configure --prefix=/usr \
+	            --libdir=/usr/lib \
 	            --mandir=/usr/share/man \
-		    --with-pkg-config-libdir=/usr/lib/pkgconfig \
 	            --with-shared \
 	            --without-debug \
 	            --without-normal \
+	            --with-cxx-shared \
+	            --enable-widec \
 	            --enable-pc-files \
-	            --enable-widec
+	            --with-pkg-config-libdir=/usr/lib/pkgconfig
 	make
-	make DESTDIR=$PKG install
+	make DESTDIR="$PKG" install
 
-	mkdir -p $PKG/lib
-	mv -v $PKG/usr/lib/libncursesw.so.6* $PKG/lib
-	ln -sfv ../../lib/$(readlink $PKG/usr/lib/libncursesw.so) $PKG/usr/lib/libncursesw.so
-
+	sed -e 's/^#if.*XOPEN.*$/#if 1/' -i "$PKG/usr/include/curses.h"
 	for lib in ncurses form panel menu ; do
-	    rm -vf                    $PKG/usr/lib/lib${lib}.so
-	    echo "INPUT(-l${lib}w)" > $PKG/usr/lib/lib${lib}.so
-	    ln -sfv ${lib}w.pc        $PKG/usr/lib/pkgconfig/${lib}.pc
+		ln -sfv "lib${lib}w.so" "$PKG/usr/lib/lib${lib}.so"
+		ln -sfv "${lib}w.pc" "$PKG/usr/lib/pkgconfig/${lib}.pc"
 	done
+	ln -sfv libncurses.so "$PKG/usr/lib/libcurses.so"
 
-	rm -vf                     $PKG/usr/lib/libcursesw.so
-	echo "INPUT(-lncursesw)" > $PKG/usr/lib/libcursesw.so
-	ln -sfv libncurses.so      $PKG/usr/lib/libcurses.so
+	make distclean
+	CC="gcc -m32" CXX="g++ -m32" \
+	./configure --prefix=/usr \
+	            --host=i686-pc-linux-gnu \
+	            --with-build-cc=gcc \
+	            --libdir=/usr/lib32 \
+	            --mandir=/usr/share/man \
+	            --with-shared \
+	            --without-debug \
+	            --without-normal \
+	            --with-cxx-shared \
+	            --enable-widec \
+	            --enable-pc-files \
+	            --with-pkg-config-libdir=/usr/lib32/pkgconfig
+	make
+	make DESTDIR="$PWD/DESTDIR" install
+
+	mkdir -pv DESTDIR/usr/lib32/pkgconfig
+	for lib in ncurses form panel menu ; do
+		rm -vf "DESTDIR/usr/lib32/lib${lib}.so"
+		echo "INPUT(-l${lib}w)" > "DESTDIR/usr/lib32/lib${lib}.so"
+		ln -svf "${lib}w.pc" "DESTDIR/usr/lib32/pkgconfig/${lib}.pc"
+	done
+	rm -vf DESTDIR/usr/lib32/libcursesw.so
+	echo "INPUT(-lncursesw)" > DESTDIR/usr/lib32/libcursesw.so
+	ln -sfv libncurses.so DESTDIR/usr/lib32/libcurses.so
+	mkdir -pv "$PKG/usr/lib32"
+	cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

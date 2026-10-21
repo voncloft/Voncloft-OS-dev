@@ -1,5 +1,5 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : kde-deps kaccounts-integration
 
 name=kaccounts-providers
 version=25.08.3

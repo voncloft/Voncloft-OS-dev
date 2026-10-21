@@ -3,7 +3,6 @@ firefox-bin
 virtualbox
 nvidia
 nvidia-32
-thunderbird
 libreoffice
 discord
 virtualbox-guest-utils
@@ -16,6 +15,7 @@ google-chrome
 firefox-esr
 nvidia-modules
 webtorrent-desktop-bin
+thunderbird-bin
 wps-office
 pandoc-bin
 vscode-bin
@@ -32,12 +32,12 @@ veracrypt/veracrypt.desktop
 veracrypt/spkgbuild
 veracrypt/override
 firefox-bin/.pkgfiles
-firefox-bin/index.html
 firefox-bin/CHANGELOG
 firefox-bin/firefox.sh
 firefox-bin/spkgbuild
 firefox-bin/test.sh
 firefox-bin/firefox.desktop
+virtualbox/.pkgfiles
 virtualbox/dkms.conf
 virtualbox/post-upgrade.sh
 virtualbox/CHANGELOG
@@ -59,11 +59,6 @@ nvidia/override
 nvidia-32/CHANGELOG
 nvidia-32/spkgbuild
 nvidia-32/override
-thunderbird/pre-upgrade.sh
-thunderbird/CHANGELOG
-thunderbird/cbindgen-0.24.patch
-thunderbird/spkgbuild
-thunderbird/override
 libreoffice/.pkgfiles
 libreoffice/CHANGELOG
 libreoffice/spkgbuild
@@ -107,6 +102,12 @@ nvidia-modules/override
 webtorrent-desktop-bin/CHANGELOG
 webtorrent-desktop-bin/spkgbuild
 webtorrent-desktop-bin/webtorrent-desktop.desktop
+thunderbird-bin/.pkgfiles
+thunderbird-bin/thunderbird.sh
+thunderbird-bin/CHANGELOG
+thunderbird-bin/spkgbuild
+thunderbird-bin/test.sh
+thunderbird-bin/thunderbird.desktop
 wps-office/spkgbuild
 pandoc-bin/CHANGELOG
 pandoc-bin/spkgbuild

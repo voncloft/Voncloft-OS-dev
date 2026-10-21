@@ -8,6 +8,7 @@ libx11
 libpgm
 pango
 libvorbis
+libgit2
 libxfont2
 libxi
 libgee
@@ -59,6 +60,7 @@ libqalculate
 libwebp
 cracklib-dict
 babl
+abseil-cpp
 libmatemixer
 libtiff
 libdbusmenu-glib
@@ -189,6 +191,7 @@ libmpeg2
 libunique
 blas
 libwpe
+liburcu
 libgcrypt
 libxdg-basedir
 libcdio
@@ -199,6 +202,7 @@ libtorrent
 libnvme
 p8-platform
 libtommath
+nng
 libinput
 libfm
 libcroco
@@ -262,6 +266,7 @@ libxfce4ui
 libgtop
 libmicrohttpd
 liblzf
+wxwidgets
 cairo
 libaom
 libxml2
@@ -307,6 +312,8 @@ pango/.pkgfiles
 pango/spkgbuild
 libvorbis/.pkgfiles
 libvorbis/spkgbuild
+libgit2/.pkgfiles
+libgit2/spkgbuild
 libxfont2/.pkgfiles
 libxfont2/spkgbuild
 libxi/.pkgfiles
@@ -382,6 +389,7 @@ libspectre/spkgbuild
 libxscrnsaver/.pkgfiles
 libxscrnsaver/spkgbuild
 libmpc/spkgbuild
+lzo/.pkgfiles
 lzo/spkgbuild
 oniguruma/.pkgfiles
 oniguruma/CHANGELOG
@@ -425,6 +433,8 @@ babl/.pkgfiles
 babl/CHANGELOG
 babl/spkgbuild
 babl/babl.patch
+abseil-cpp/.pkgfiles
+abseil-cpp/spkgbuild
 libmatemixer/spkgbuild
 libtiff/.pkgfiles
 libtiff/spkgbuild
@@ -709,12 +719,15 @@ blas/spkgbuild
 libwpe/.pkgfiles
 libwpe/CHANGELOG
 libwpe/spkgbuild
+liburcu/.pkgfiles
+liburcu/spkgbuild
 libgcrypt/.pkgfiles
 libgcrypt/CHANGELOG
 libgcrypt/spkgbuild
 libxdg-basedir/CHANGELOG
 libxdg-basedir/xdgGetRelativeHome-overflow.patch
 libxdg-basedir/spkgbuild
+libcdio/.pkgfiles
 libcdio/spkgbuild
 libxau/.pkgfiles
 libxau/spkgbuild
@@ -733,6 +746,8 @@ p8-platform/spkgbuild
 libtommath/.pkgfiles
 libtommath/CHANGELOG
 libtommath/spkgbuild
+nng/.pkgfiles
+nng/spkgbuild
 libinput/.pkgfiles
 libinput/CHANGELOG
 libinput/spkgbuild
@@ -881,6 +896,8 @@ libmicrohttpd/.pkgfiles
 libmicrohttpd/CHANGELOG
 libmicrohttpd/spkgbuild
 liblzf/spkgbuild
+wxwidgets/.pkgfiles
+wxwidgets/spkgbuild
 cairo/.pkgfiles
 cairo/CHANGELOG
 cairo/spkgbuild
