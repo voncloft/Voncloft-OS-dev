@@ -1,0 +1,60 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          networkmanager
+# Required-Start:    $local_fs $network dbus
+# Required-Stop:     $local_fs $network dbus
+# Should-Start:      $syslog
+# Should-Stop:       $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: NetworkManager for the existing SysV network setup
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+nm_daemon=/usr/sbin/NetworkManager
+nm_pidfile=/run/NetworkManager/NetworkManager.pid
+
+nm_report_status() {
+    nm_result=$1
+    if [ "$nm_result" -eq 0 ]; then
+        log_success_msg2
+    else
+        log_failure_msg2
+    fi
+    return "$nm_result"
+}
+
+case "$1" in
+    start)
+        if [ ! -S /run/dbus/system_bus_socket ]; then
+            echo "NetworkManager needs the system D-Bus service first." >&2
+            exit 1
+        fi
+        mkdir -p /run/NetworkManager || exit 1
+        log_info_msg "Starting NetworkManager..."
+        start_daemon -p "$nm_pidfile" "$nm_daemon" --pid-file="$nm_pidfile"
+        nm_report_status "$?"
+        ;;
+    stop)
+        log_info_msg "Stopping NetworkManager..."
+        killproc -p "$nm_pidfile" "$nm_daemon"
+        nm_report_status "$?"
+        ;;
+    reload)
+        log_info_msg "Reloading NetworkManager configuration..."
+        killproc -p "$nm_pidfile" "$nm_daemon" -HUP
+        nm_report_status "$?"
+        ;;
+    restart)
+        "$0" stop && "$0" start
+        ;;
+    status)
+        statusproc -p "$nm_pidfile" "$nm_daemon"
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|reload|restart|status}" >&2
+        exit 2
+        ;;
+esac

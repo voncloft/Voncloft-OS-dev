@@ -1,0 +1,25 @@
+# description : SysV startup for NetworkManager alongside VonOS static networking
+# depends : dbus-boot networkmanager
+
+name=networkmanager-boot
+version=1
+release=1
+
+source="networkmanager
+        20-vonos-static-network.conf"
+options="!checksum"
+
+build() {
+    install -Dm755 "$SRC/networkmanager" "$PKG/etc/rc.d/init.d/networkmanager"
+    install -Dm644 "$SRC/20-vonos-static-network.conf" \
+        "$PKG/etc/NetworkManager/conf.d/20-vonos-static-network.conf"
+
+    for level in 2 3 4 5; do
+        install -d "$PKG/etc/rc.d/rc$level.d"
+        ln -s ../init.d/networkmanager "$PKG/etc/rc.d/rc$level.d/S30networkmanager"
+    done
+    for level in 0 1 6; do
+        install -d "$PKG/etc/rc.d/rc$level.d"
+        ln -s ../init.d/networkmanager "$PKG/etc/rc.d/rc$level.d/K28networkmanager"
+    done
+}
