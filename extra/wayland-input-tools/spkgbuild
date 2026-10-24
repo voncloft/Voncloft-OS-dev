@@ -1,0 +1,13 @@
+# description : Mouse, drag, scroll, and keyboard controls for KDE Wayland
+# depends : python python-evdev python-dbus kwin
+
+name=wayland-input-tools
+version=1.0.0
+release=1
+source="wayland-mouse
+        wayland-keyboard"
+
+build() {
+    install -Dm755 "$SRC/wayland-mouse" "$PKG/usr/bin/wayland-mouse"
+    install -Dm755 "$SRC/wayland-keyboard" "$PKG/usr/bin/wayland-keyboard"
+}

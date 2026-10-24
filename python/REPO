@@ -3703,8 +3703,10 @@ f:799f1c3e5f7c427938297f8d1bb0204f:python-pywinrm/CHANGELOG
 f:9ccb17fe5072a1aaccdfde0e470efd89:python-pywinrm/spkgbuild
 f:81acb52c0c7b538b8e13dace3a04dba3:python-poyo/CHANGELOG
 f:c1025746cc1cfae7eebbcf30d00a7765:python-poyo/spkgbuild
+f:03e370706726aa3cb4264f5b843ca991:python-evdev/.pkgfiles
 f:43775c7f12453388d3c0e17b6c15922b:python-evdev/CHANGELOG
-f:b01cc86ea6119be56bdd0af8e01c090d:python-evdev/spkgbuild
+f:67d90dfded3101001c33363ce3506096:python-evdev/spkgbuild
+f:d1ef5d6579583cdc66e938ed55bf6228:python-evdev/.checksums
 f:fd53dd27706f67d499f5baf1c79e1833:python-flask-wtf/CHANGELOG
 f:be5f37489a422b46557c6d5d1eb60f95:python-flask-wtf/spkgbuild
 f:69ee473d231a87ea54cd0f7dcf3a2dcd:python-json-config/CHANGELOG
@@ -4268,7 +4270,9 @@ f:25bb2f919fe77467205c012f265f1fa2:python-attrs/CHANGELOG
 f:c9c8765455e22aab00d64ccf997596b7:python-attrs/spkgbuild
 f:14c4e7a14653ac2bb24c39765363133b:python-xmlschema/CHANGELOG
 f:90bb46954575c8d6678392813c5670be:python-xmlschema/spkgbuild
-f:95379ea788e41235490a75272471d799:python-dbus/spkgbuild
+f:2d975ea974986adfc089290fc30b635b:python-dbus/.pkgfiles
+f:654a1624bd44e1882096a5d6489bfed8:python-dbus/spkgbuild
+f:544f4333dd09f7221833a45167d55a4c:python-dbus/.checksums
 f:9b145cb7bf764d966a3d49677a8e6190:python-ewmh/CHANGELOG
 f:ad2c7e636db8aebb71eb15c954099bc5:python-ewmh/spkgbuild
 f:213c2f916364cfab6519b40b059df232:python-infinity/CHANGELOG

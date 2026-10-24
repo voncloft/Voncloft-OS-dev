@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Type text and send key combinations through a temporary Wayland keyboard.
+
+Examples:
+  wayland-keyboard type 'hello world'
+  wayland-keyboard key Ctrl+a
+  wayland-keyboard key space
+  wayland-keyboard key left --hold 1
+
+Text typing supports ASCII with the English (US) layout. Key combinations use
+physical key names. Requires python-evdev, python-dbus, KDE, and /dev/uinput.
+"""
+import argparse
+import string
+import sys
+import time
+
+import dbus
+from evdev import UInput, ecodes as e
+
+
+def wait_for_keyboard(keyboard):
+    bus = dbus.SessionBus()
+    node = keyboard.device.path.rsplit('/', 1)[-1]
+    deadline = time.monotonic() + 5
+    while True:
+        try:
+            props = dbus.Interface(bus.get_object('org.kde.KWin',
+                '/org/kde/KWin/InputDevice/' + node), 'org.freedesktop.DBus.Properties')
+            if str(props.Get('org.kde.KWin.InputDevice', 'name')) != 'Codex Virtual Keyboard':
+                raise RuntimeError('Unexpected virtual keyboard identity')
+            if not props.Get('org.kde.KWin.InputDevice', 'keyboard'):
+                raise RuntimeError('KDE did not recognize a keyboard')
+            time.sleep(0.15)
+            return
+        except dbus.DBusException:
+            if time.monotonic() >= deadline:
+                raise RuntimeError('KDE did not register the virtual keyboard')
+            time.sleep(0.1)
+
+
+def press(keyboard, codes, hold=0.025):
+    held = []
+    try:
+        for code in codes:
+            keyboard.write(e.EV_KEY, code, 1)
+            held.append(code)
+            keyboard.syn()
+        time.sleep(hold)
+    finally:
+        for code in reversed(held):
+            keyboard.write(e.EV_KEY, code, 0)
+            keyboard.syn()
+
+
+def text_keys(text):
+    bus = dbus.SessionBus()
+    layouts = dbus.Interface(bus.get_object('org.kde.KWin', '/Layouts'), 'org.kde.KeyboardLayouts')
+    description = str(layouts.getLayoutsList()[int(layouts.getLayout())][2])
+    if description != 'English (US)':
+        raise RuntimeError('Text typing requires English (US); active layout is ' + description)
+    plain = {c: e.ecodes['KEY_' + c.upper()] for c in string.ascii_lowercase + string.digits}
+    punctuation = {' ': 'SPACE', '-': 'MINUS', '=': 'EQUAL', '[': 'LEFTBRACE',
+        ']': 'RIGHTBRACE', ';': 'SEMICOLON', "'": 'APOSTROPHE', '`': 'GRAVE',
+        '\\': 'BACKSLASH', ',': 'COMMA', '.': 'DOT', '/': 'SLASH', '\n': 'ENTER', '\t': 'TAB'}
+    plain.update({char: e.ecodes['KEY_' + name] for char, name in punctuation.items()})
+    shifted = dict(zip('!@#$%^&*()_+{}:"~|<>?', '1234567890-=[];\'`\\,./'))
+    result = []
+    for char in text:
+        if char in string.ascii_uppercase:
+            result.append((plain[char.lower()], True, True))
+        elif char in shifted:
+            result.append((plain[shifted[char]], True, False))
+        elif char in plain:
+            result.append((plain[char], False, char in string.ascii_lowercase))
+        else:
+            raise ValueError('Unsupported character: ' + repr(char))
+    return result
+
+
+def combo_keys(combo):
+    aliases = {'CTRL': 'LEFTCTRL', 'CONTROL': 'LEFTCTRL', 'SHIFT': 'LEFTSHIFT',
+        'ALT': 'LEFTALT', 'META': 'LEFTMETA', 'SUPER': 'LEFTMETA', 'WIN': 'LEFTMETA',
+        'ESCAPE': 'ESC', 'RETURN': 'ENTER', 'PGUP': 'PAGEUP', 'PGDN': 'PAGEDOWN'}
+    result = []
+    for part in combo.split('+'):
+        name = part.strip().upper().removeprefix('KEY_')
+        code = e.ecodes.get('KEY_' + aliases.get(name, name))
+        if code is None or not 1 <= code < 248:
+            raise ValueError('Unknown key name: ' + part)
+        if code not in result:
+            result.append(code)
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    commands = parser.add_subparsers(dest='action', required=True)
+    typing = commands.add_parser('type', help='type ASCII text with English (US) layout')
+    typing.add_argument('text')
+    typing.add_argument('--interval', type=float, default=0.03)
+    key = commands.add_parser('key', help='press a key or chord, then release it')
+    key.add_argument('combination')
+    key.add_argument('--hold', type=float, default=0.08)
+    args = parser.parse_args()
+    delay = args.interval if args.action == 'type' else args.hold
+    if not 0 <= delay <= 30:
+        parser.error('Timing must be between 0 and 30 seconds')
+    sequence = text_keys(args.text) if args.action == 'type' else combo_keys(args.combination)
+    caps = {e.EV_KEY: list(range(1, 248)), e.EV_LED: [e.LED_NUML, e.LED_CAPSL, e.LED_SCROLLL]}
+    with UInput(caps, name='Codex Virtual Keyboard', vendor=0x1234, product=0xc0df) as keyboard:
+        wait_for_keyboard(keyboard)
+        if args.action == 'type':
+            capslock = e.LED_CAPSL in keyboard.device.leds()
+            for code, shifted, letter in sequence:
+                shift = shifted ^ (capslock and letter)
+                press(keyboard, ([e.KEY_LEFTSHIFT] if shift else []) + [code])
+                time.sleep(args.interval)
+        else:
+            press(keyboard, sequence, args.hold)
+        time.sleep(0.15)
+    print('Keyboard input sent successfully.')
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (OSError, RuntimeError, ValueError, dbus.DBusException) as error:
+        print('Keyboard control failed: ' + str(error), file=sys.stderr)
+        sys.exit(1)

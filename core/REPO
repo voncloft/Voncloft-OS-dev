@@ -248,6 +248,7 @@ d:audacious
 d:shared-mime-info
 d:picom
 d:gobject-introspection
+d:kernel-uinput
 d:openjade
 d:menumaker
 d:dzen2
@@ -1169,6 +1170,13 @@ f:d23fcb98b83b3deae74524c235ebd412:picom/picom.conf
 f:ac878f2ed99554dd0e719b6f26ef61b2:picom/spkgbuild
 f:e1347f979fb8cb4e13f13f120df80498:gobject-introspection/.pkgfiles
 f:7af68aa2b692ef81eddf936db6bd22fe:gobject-introspection/spkgbuild
+f:c302686dce87ef03352117f9d9164bd0:kernel-uinput/.pkgfiles
+f:0f85b418a8cd57cb8ea23621a39f3cd1:kernel-uinput/input-compat.h
+f:10e66e8fc98cf016f8cc1497db81d524:kernel-uinput/post-upgrade.sh
+f:2d0bf3fbfc3390811be1d5fb573bdfc5:kernel-uinput/72-onboard-uinput.rules
+f:57f4ab519220fc987244659e2539f12a:kernel-uinput/uinput.c
+f:10e66e8fc98cf016f8cc1497db81d524:kernel-uinput/post-install.sh
+f:c3032c1420bd7c0aa1c762a58647c254:kernel-uinput/spkgbuild
 f:e8a3e22ada3ba6af100072490fa3ba04:openjade/post-install.sh
 f:fa11264f453c84b59982662b47d42997:openjade/spkgbuild
 f:89c84497d14dae69ba50448ee9262be0:openjade/openjade-upstream-1.patch

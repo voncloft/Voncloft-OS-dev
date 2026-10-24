@@ -1,18 +1,18 @@
-# description	: python bindings to the D-Bus
-# depends	: dbus python dbus-glib
+# description : Python bindings for D-Bus
+# depends : dbus glib python meson ninja pkgconf
 
 name=python-dbus
-version=1.2.16
-release=2
-
-source="https://dbus.freedesktop.org/releases/dbus-python/dbus-python-${version}.tar.gz"
-options="!checksum"
+version=1.5.1
+release=1
+source="https://dbus.freedesktop.org/releases/dbus-python/dbus_python-$version.tar.gz"
 
 build() {
-   cd dbus-python-$version
-   autoreconf -ifv
-   ./configure --prefix=/usr
-   sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-   make
-   make DESTDIR=$PKG install   
- }
+    cd "dbus_python-$version"
+    export PYTHONNOUSERSITE=1
+    meson setup build --prefix=/usr --libdir=lib \
+        --buildtype=release --wrap-mode=nofallback \
+        -Dpython=/usr/bin/python3 -Ddoc=disabled -Dtests=auto
+    meson compile -C build
+    meson test -C build --print-errorlogs
+    DESTDIR="$PKG" meson install -C build --no-rebuild
+}

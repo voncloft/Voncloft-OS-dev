@@ -1,0 +1,12 @@
+# description : On-demand Onboard launcher with XWayland and uinput support
+# depends : kernel-uinput
+
+name=onboard-launcher
+version=1
+release=1
+source="onboard"
+options="!checksum"
+
+build() {
+    install -Dm755 "$SRC/onboard" "$PKG/usr/bin/onboard"
+}

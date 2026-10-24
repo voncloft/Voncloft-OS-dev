@@ -1,0 +1,22 @@
+# description : uinput module for the matching VonOS kernel and Onboard seat permissions
+
+name=kernel-uinput
+version=6.19.0
+release=1
+source="uinput.c input-compat.h 72-onboard-uinput.rules"
+options="!checksum"
+nostrip="uinput.ko"
+
+build() {
+    local kernel_tree="/lib/modules/$version/build"
+    test -f "$kernel_tree/Module.symvers"
+    test "$(cat "$kernel_tree/include/config/kernel.release")" = "$version"
+    mkdir -p misc
+    cp "$SRC/uinput.c" misc/uinput.c
+    printf 'obj-m := uinput.o\n' > misc/Makefile
+    # External-module builds leave the prepared kernel tree unchanged.
+    make -C "$kernel_tree" M="$PWD/misc" modules
+    test "$(modinfo -F vermagic misc/uinput.ko | cut -d ' ' -f 1)" = "$version"
+    install -Dm644 misc/uinput.ko "$PKG/lib/modules/$version/kernel/drivers/input/misc/uinput.ko"
+    install -Dm644 "$SRC/72-onboard-uinput.rules" "$PKG/usr/lib/udev/rules.d/72-onboard-uinput.rules"
+}

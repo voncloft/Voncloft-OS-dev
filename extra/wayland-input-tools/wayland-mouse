@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+"""Move, click, and drag on KDE Wayland using a temporary virtual mouse.
+
+Requires python-evdev, python-dbus, and existing write access to /dev/uinput.
+Coordinates are logical desktop pixels measured from the layout's upper-left
+corner. The current desktop must have its upper-left corner on a display.
+The virtual device exists only while this command runs; no daemon is needed.
+
+Examples:
+  wayland-mouse move 40 1040
+  wayland-mouse click 40 1040
+  wayland-mouse click --button right
+  wayland-mouse scroll -3
+  wayland-mouse drag 300 250 600 400 --duration 0.8
+  wayland-mouse drag 300 250 600 400 --button right
+"""
+
+import argparse
+import math
+import signal
+import sys
+import time
+
+import dbus
+from evdev import UInput, ecodes as e
+
+
+def configure(mouse):
+    """Wait until KDE sees this device and use predictable pointer movement."""
+    event = mouse.device.path.rsplit('/', 1)[-1]
+    bus = dbus.SessionBus()
+    deadline = time.monotonic() + 5
+    while True:
+        try:
+            props = dbus.Interface(
+                bus.get_object('org.kde.KWin', '/org/kde/KWin/InputDevice/' + event),
+                'org.freedesktop.DBus.Properties',
+            )
+            interface = 'org.kde.KWin.InputDevice'
+            if str(props.Get(interface, 'name')) != 'Codex Virtual Mouse':
+                raise RuntimeError('Unexpected input device; refusing to change it')
+            props.Set(interface, 'pointerAccelerationProfileFlat', dbus.Boolean(True))
+            props.Set(interface, 'pointerAcceleration', dbus.Double(0.0))
+            props.Set(interface, 'leftHanded', dbus.Boolean(False))
+            if not props.Get(interface, 'pointerAccelerationProfileFlat'):
+                raise RuntimeError('KDE did not enable predictable pointer movement')
+            return
+        except dbus.DBusException:
+            if time.monotonic() >= deadline:
+                raise RuntimeError('KDE did not register the virtual mouse within five seconds')
+            time.sleep(0.1)
+
+
+def move(mouse, x, y):
+    # Relative mouse events avoid XWayland's separate coordinate space.
+    # Home against the desktop edges, then move with acceleration disabled.
+    mouse.write(e.EV_REL, e.REL_X, -100000)
+    mouse.write(e.EV_REL, e.REL_Y, -100000)
+    mouse.syn()
+    time.sleep(0.1)
+    mouse.write(e.EV_REL, e.REL_X, x)
+    mouse.write(e.EV_REL, e.REL_Y, y)
+    mouse.syn()
+    time.sleep(0.15)
+
+
+def drag(mouse, x, y, end_x, end_y, button, duration):
+    """Move smoothly while holding a button, releasing it even on interruption."""
+    mouse.write(e.EV_KEY, button, 1)
+    try:
+        mouse.syn()
+        time.sleep(0.08)
+        steps = max(1, math.ceil(duration * 100))
+        started = time.monotonic()
+        previous_x = previous_y = 0
+        for step in range(1, steps + 1):
+            target_time = started + duration * step / steps
+            time.sleep(max(0, target_time - time.monotonic()))
+            offset_x = round((end_x - x) * step / steps)
+            offset_y = round((end_y - y) * step / steps)
+            mouse.write(e.EV_REL, e.REL_X, offset_x - previous_x)
+            mouse.write(e.EV_REL, e.REL_Y, offset_y - previous_y)
+            mouse.syn()
+            previous_x, previous_y = offset_x, offset_y
+        time.sleep(0.05)
+    finally:
+        mouse.write(e.EV_KEY, button, 0)
+        mouse.syn()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    commands = parser.add_subparsers(dest='action', required=True)
+    movement = commands.add_parser('move', help='move to logical desktop coordinates')
+    movement.add_argument('x', type=int)
+    movement.add_argument('y', type=int)
+    click = commands.add_parser('click', help='click at optional logical desktop coordinates')
+    click.add_argument('x', nargs='?', type=int)
+    click.add_argument('y', nargs='?', type=int)
+    click.add_argument('--button', choices=('left', 'right', 'middle'), default='left')
+    click.add_argument('--count', type=int, choices=(1, 2, 3), default=1)
+    scroll = commands.add_parser('scroll', help='scroll vertically; positive is up')
+    scroll.add_argument('steps', type=int)
+    dragging = commands.add_parser('drag', help='hold a mouse button while moving between coordinates')
+    dragging.add_argument('x', type=int)
+    dragging.add_argument('y', type=int)
+    dragging.add_argument('end_x', type=int)
+    dragging.add_argument('end_y', type=int)
+    dragging.add_argument('--button', choices=('left', 'right', 'middle'), default='left')
+    dragging.add_argument('--duration', type=float, default=0.6)
+    args = parser.parse_args()
+    x, y = getattr(args, 'x', None), getattr(args, 'y', None)
+    if (x is None) != (y is None):
+        parser.error('Provide both x and y, or neither')
+    if x is not None and not (0 <= x < 100000 and 0 <= y < 100000):
+        parser.error('Coordinates must be between 0 and 99999')
+    if args.action == 'scroll' and not -100 <= args.steps <= 100:
+        parser.error('Scroll steps must be between -100 and 100')
+    if args.action == 'drag':
+        if not (0 <= args.end_x < 100000 and 0 <= args.end_y < 100000):
+            parser.error('End coordinates must be between 0 and 99999')
+        if not math.isfinite(args.duration) or not 0.05 <= args.duration <= 30:
+            parser.error('Drag duration must be between 0.05 and 30 seconds')
+    caps = {
+        e.EV_KEY: [e.BTN_LEFT, e.BTN_RIGHT, e.BTN_MIDDLE],
+        e.EV_REL: [e.REL_X, e.REL_Y, e.REL_WHEEL],
+    }
+    with UInput(caps, name='Codex Virtual Mouse', vendor=0x1234, product=0xc0de,
+                input_props=[e.INPUT_PROP_POINTER]) as mouse:
+        configure(mouse)
+        time.sleep(0.1)
+        if x is not None:
+            move(mouse, x, y)
+        if args.action == 'click':
+            button = {'left': e.BTN_LEFT, 'right': e.BTN_RIGHT, 'middle': e.BTN_MIDDLE}[args.button]
+            for _ in range(args.count):
+                mouse.write(e.EV_KEY, button, 1)
+                mouse.syn()
+                try:
+                    time.sleep(0.05)
+                finally:
+                    mouse.write(e.EV_KEY, button, 0)
+                    mouse.syn()
+                time.sleep(0.1)
+        elif args.action == 'drag':
+            button = {'left': e.BTN_LEFT, 'right': e.BTN_RIGHT, 'middle': e.BTN_MIDDLE}[args.button]
+            drag(mouse, x, y, args.end_x, args.end_y, button, args.duration)
+        elif args.action == 'scroll':
+            mouse.write(e.EV_REL, e.REL_WHEEL, args.steps)
+            mouse.syn()
+        time.sleep(0.15)
+    print('Mouse ' + args.action + ' sent successfully.')
+
+
+if __name__ == '__main__':
+    def terminate(signum, frame):
+        raise SystemExit(128 + signum)
+    signal.signal(signal.SIGTERM, terminate)
+    try:
+        main()
+    except (OSError, RuntimeError, dbus.DBusException) as error:
+        print('Mouse control failed: ' + str(error), file=sys.stderr)
+        sys.exit(1)

@@ -51,6 +51,7 @@ d:dbi-drivers
 d:incrontab
 d:discount
 d:florence
+d:wayland-input-tools
 d:mozjs
 d:iotop
 d:aspell-english-dictionary
@@ -66,6 +67,7 @@ d:gtk4
 d:gtkmm3
 d:tinyxml
 d:gpgmepp
+d:onboard-launcher
 d:steam-devices
 d:convertpdf
 d:gtk-doc
@@ -205,6 +207,12 @@ f:90709b1cbe1169018537b288b630195a:discount/CHANGELOG
 f:55855839b7791ab31f99737b3776500e:discount/spkgbuild
 f:b13fb88e9ef3731e5374c3ad2f672146:florence/CHANGELOG
 f:5274c93f806e7a05246bda256f31da63:florence/spkgbuild
+f:f512453df360195c14c0541236a9e057:wayland-input-tools/.pkgfiles
+f:2ed42819474511be49d254f386fd2989:wayland-input-tools/wayland-keyboard
+f:5495cbef2835284e2b7f0f588e6543f5:wayland-input-tools/wayland-mouse
+f:126600367f16d889651a6b1b1f031f14:wayland-input-tools/README.txt
+f:453910e2c7e446ec3d50c4751c6ece87:wayland-input-tools/spkgbuild
+f:1b23c213f310356e48bac3a4cd12ce4e:wayland-input-tools/.checksums
 f:7c53adcd9147ce76b057d35f4eba84a8:mozjs/spkgbuild
 f:f1c77a56f1e6d652d450aa87e3cb9ea4:iotop/.pkgfiles
 f:bf856d368ba24a40e9cbbb4f77de59db:iotop/CHANGELOG
@@ -220,7 +228,7 @@ f:6cff7f52e0e13c6f988f051a93676765:dotnet-host/dotnet-core-sdk-telemetry-optout.
 f:b0a6696b7a0a6a2b4cc10fa3a6018cbf:ngspice/.pkgfiles
 f:c41e430fdc17a6b2b083cd3ffa58aa07:ngspice/spkgbuild
 f:1622181a205950786bc4c695003feff9:onboard/CHANGELOG
-f:50efb10c1da9ebd753cc6461489bd62c:onboard/spkgbuild
+f:621b05f645393758dc6d38278e5aafca:onboard/spkgbuild
 f:b78826ef54e0cab77d9ea4c4b7c50174:minecraft-launcher/CHANGELOG
 f:c759c05311ef7eb0ca4b6c3767375f03:minecraft-launcher/spkgbuild
 f:61a694a2574ed840f1509039d18e8b1e:minecraft-launcher/minecraft-launcher.desktop
@@ -238,6 +246,9 @@ f:9c6788d9e2e8485ffbd7d8e0e8da940d:tinyxml/tinyxml.pc
 f:cff4b3323161b01284715a3794080d93:tinyxml/spkgbuild
 f:779f016e071e4d06f37202e1d0e7dcf9:gpgmepp/.pkgfiles
 f:9e867e18c047a39f2252e2033abc700a:gpgmepp/spkgbuild
+f:a50f000a5713eaa8c8a891e69a7f5120:onboard-launcher/.pkgfiles
+f:491d46dadb8063fc668c10a3710b5f10:onboard-launcher/spkgbuild
+f:ad5420b1ed8e712bd04667c910090c71:onboard-launcher/onboard
 f:f45afdd44e87a3a1f68ac26c8dfa74ae:steam-devices/71-sony-controllers.rules
 f:049e5b85607b852febd24360d669deae:steam-devices/71-logitech-controllers.rules
 f:97dc1a63020b6a0a6e1272eca2e58443:steam-devices/CHANGELOG

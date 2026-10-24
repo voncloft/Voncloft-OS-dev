@@ -1,0 +1,15 @@
+#!/bin/sh
+# Onboard 1.4.x uses XWayland for its window and uinput for Wayland typing.
+export GI_TYPELIB_PATH=/usr/lib64/girepository-1.0:/usr/lib/girepository-1.0
+export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig
+if [ "${XDG_SESSION_TYPE:-}" = wayland ] || [ -n "${WAYLAND_DISPLAY:-}" ]; then
+    export GDK_BACKEND=x11
+fi
+# Avoid the stale XWayland accessibility-bus address left by an earlier login.
+if command -v qdbus >/dev/null 2>&1; then
+    onboard_a11y_address=$(qdbus org.a11y.Bus /org/a11y/bus org.a11y.Bus.GetAddress 2>/dev/null) || onboard_a11y_address=
+    if [ -n "$onboard_a11y_address" ]; then
+        export AT_SPI_BUS_ADDRESS="$onboard_a11y_address"
+    fi
+fi
+exec /usr/bin/onboard-app "$@"

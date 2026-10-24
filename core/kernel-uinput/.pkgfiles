@@ -1,0 +1,14 @@
+kernel-uinput-6.19.0-1
+drwxr-xr-x root/root    lib/
+drwxr-xr-x root/root    lib/modules/
+drwxr-xr-x root/root    lib/modules/<kernelversion>/
+drwxr-xr-x root/root    lib/modules/<kernelversion>/kernel/
+drwxr-xr-x root/root    lib/modules/<kernelversion>/kernel/drivers/
+drwxr-xr-x root/root    lib/modules/<kernelversion>/kernel/drivers/input/
+drwxr-xr-x root/root    lib/modules/<kernelversion>/kernel/drivers/input/misc/
+-rw-r--r-- root/root    lib/modules/<kernelversion>/kernel/drivers/input/misc/uinput.ko
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/udev/
+drwxr-xr-x root/root    usr/lib/udev/rules.d/
+-rw-r--r-- root/root    usr/lib/udev/rules.d/72-onboard-uinput.rules
