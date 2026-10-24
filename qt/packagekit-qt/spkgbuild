@@ -1,17 +1,17 @@
 # description : packagekit-qt - KDE dependency
-# depends : kde-deps-installer qt6
+# depends : kde-deps-installer packagekit-interfaces qt6
 # note : Qt bindings only; scratchpkg has no PackageKit backend.
 
 name=packagekit-qt
 version=1.1.4
-release=1
+release=2
 
 source="$name-$version.tar.gz::https://github.com/PackageKit/PackageKit-Qt/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {
     cd "PackageKit-Qt-$version"
-    plasma-package-installer 
+    plasma-package-installer
     cd build
     make DESTDIR="$PKG" install
 }

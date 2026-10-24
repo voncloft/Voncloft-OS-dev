@@ -1,15 +1,18 @@
-# description : Scientific tools for Python
-# depends : 
+# description : PEP 621 project metadata support
+# depends : python python-flit python-packaging
 
 name=python-metadata
 version=0.9.0
-release=1
-
-source="https://files.pythonhosted.org/packages/source/p/pyproject-metadata/pyproject_metadata-0.9.0.tar.gz"
+release=2
+source="https://files.pythonhosted.org/packages/source/p/pyproject_metadata/pyproject_metadata-$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user pyproject-metadata --root=$PKG
- }
+    cd "pyproject_metadata-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/pyproject_metadata-"$version"-*.whl
+}

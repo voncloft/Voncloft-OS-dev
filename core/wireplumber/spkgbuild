@@ -1,0 +1,19 @@
+# description : PipeWire session manager and stream linking policy
+# depends : glib pipewire meson ninja pkgconf elogind
+
+name=wireplumber
+version=0.5.18
+release=1
+source="https://github.com/PipeWire/wireplumber/archive/$version/$name-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    # Use upstream's pinned bundled Lua; the installed Lua 5.2 is too old.
+    meson setup build --prefix=/usr --libdir=lib64 --buildtype=release \
+        -Dsystemd=disabled -Dsystemd-user-service=false \
+        -Delogind=enabled -Dsystem-lua=false \
+        -Ddoc=disabled -Dintrospection=disabled -Dtests=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

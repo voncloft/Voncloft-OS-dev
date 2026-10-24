@@ -1,0 +1,18 @@
+# description : Canonical Python package classifiers
+# depends : python python-calver python-setuptools python-wheel
+
+name=python-trove-classifiers
+version=2026.9.21.13
+release=1
+
+source="https://files.pythonhosted.org/packages/source/t/trove-classifiers/trove_classifiers-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "trove_classifiers-$version"
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Stage the wheel even if this version is already installed on the host.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/trove_classifiers-"$version"-*.whl
+}

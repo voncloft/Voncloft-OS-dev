@@ -1,15 +1,18 @@
-# description : Internationalized Domain Names in Applications IDNA
-   # depends : python
+# description : Internationalized domain name support
+# depends : python python-flit
 
 name=python-idna
-version=3.3
-release=3
-
-source="https://pypi.io/packages/source/i/idna/idna-3.3.tar.gz"
+version=3.10
+release=1
+source="https://files.pythonhosted.org/packages/source/i/idna/idna-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "idna-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/idna-"$version"-*.whl
+}

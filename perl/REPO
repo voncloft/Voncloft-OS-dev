@@ -671,6 +671,7 @@ f:541fbbacd2887c4d31f076475314864c:perl-http-server-simple/CHANGELOG
 f:08fedd3a00f152977303cbc2d542ca5b:perl-http-server-simple/spkgbuild
 f:1cfb3083f5f7d1d1bb7c01a2f4e666f5:perl-data-uniqid/CHANGELOG
 f:ffd5aea6274351e5922cd6e1677479b0:perl-data-uniqid/spkgbuild
+f:5507da5d4c5299fd8ce714defa871539:perl-sub-exporter/.pkgfiles
 f:e855101e08d2880fa95e6a0026e48140:perl-sub-exporter/CHANGELOG
 f:4f7a1200194e086384218dd1d7a2c7f9:perl-sub-exporter/spkgbuild
 f:6d7d5e05be28b15420fac654b9b9d35b:perl-io-tty/CHANGELOG
@@ -723,6 +724,7 @@ f:05b5a4afd2ce439b6aa85266959f18cf:perl-xml-rss/CHANGELOG
 f:321a00006fb08b4e829fda0850908758:perl-xml-rss/spkgbuild
 f:29545dbae31edce790e4b760d2eefa5c:perl-www-sms/CHANGELOG
 f:e126a97aff140efcb60b02f0051c610f:perl-www-sms/spkgbuild
+f:747feb976dd87701abce27208630c5ee:perl-module-runtime/.pkgfiles
 f:7e8c5c95184896cb20c80ce8b353a133:perl-module-runtime/CHANGELOG
 f:cbc7ef53043d5120c1121b7306c2d8f8:perl-module-runtime/spkgbuild
 f:3f9da84106cd9f744d1ec0bf6da8ef17:perl-path-finddev/spkgbuild
@@ -768,6 +770,7 @@ f:2f937fe74deb4eae054f47ce234e1dc2:perl-anyevent-xmpp/CHANGELOG
 f:d8ec9f55841fe4ed9e47d9c00cb6bedd:perl-anyevent-xmpp/spkgbuild
 f:986619710e77277c8837a103890edae5:perl-cpanplus-dist-arch/CHANGELOG
 f:c8cbf88a92e7e5c35bc496e3edaae676:perl-cpanplus-dist-arch/spkgbuild
+f:b70fb1ad95a98cd81365a47d04131553:perl-devel-globaldestruction/.pkgfiles
 f:459931235634503a6beb0eeb4bc43043:perl-devel-globaldestruction/CHANGELOG
 f:0482008eb0a58b3c7817828740c5a5c5:perl-devel-globaldestruction/spkgbuild
 f:954b07aa6bb4a20072797d74b10bdc79:perl-alien-sdl/CHANGELOG
@@ -790,6 +793,7 @@ f:ec21aa0b4f530164e69dfb1bc5da8d9e:perl-email-mime-attachment-stripper/spkgbuild
 f:7de311afbcea2c3fc1024cdca9495edd:perl-net-ssleay/.pkgfiles
 f:b4356301088e72ee12533c4f2ea553d0:perl-net-ssleay/CHANGELOG
 f:068d9b9bcce1942db26a642b4c779dd7:perl-net-ssleay/spkgbuild
+f:eabb2151a2d082fab86ebd7ef86233a8:perl-class-method-modifiers/.pkgfiles
 f:3ad053bbabdb09572b4e3bf70cb5f947:perl-class-method-modifiers/CHANGELOG
 f:28eeaab2580a721bbf43b431eabb881f:perl-class-method-modifiers/spkgbuild
 f:c42e9e42259411b0d7310aa6d8e08f84:perl-patchreader/spkgbuild
@@ -851,8 +855,10 @@ f:1a9fba22c8749ba5bd55c2a280a67505:perl-test-file/CHANGELOG
 f:8bee75f204378fa8a676d17e68984607:perl-test-file/spkgbuild
 f:c5e375d1c1190116cd3fbc13b98c06c5:perl-io-string/CHANGELOG
 f:15ffcdcab9697d4a80eb4cdc4ece883c:perl-io-string/spkgbuild
+f:3e28e8bc8e166da5f0004cfca2fe565c:perl-params-util/.pkgfiles
 f:5c554f0046727f5f4655776956269dfe:perl-params-util/CHANGELOG
 f:f132b2f3befc0b1d55a753f60ed60d88:perl-params-util/spkgbuild
+f:0260e8cb4b5b843c9096f5061343d8e9:perl-data-optlist/.pkgfiles
 f:fa0ad2cb85fb1e7495b15116882526db:perl-data-optlist/CHANGELOG
 f:99b26d07ec3e5216ceb8d5403eb4db3e:perl-data-optlist/spkgbuild
 f:651eca3d8fb95c740ed5553719ff364b:perl-log-any-adapter-tap/CHANGELOG
@@ -986,6 +992,7 @@ f:c3bf169d231e2b6b659ea89bacf7af69:perl-file-basedir/CHANGELOG
 f:87d1720028ad33596fc1ea369761dafe:perl-file-basedir/spkgbuild
 f:ec459ceff4ad917d23b39783fb1ccee8:perl-lingua-en-inflect/CHANGELOG
 f:f8f3c582d6f86038f93959a15efd84b5:perl-lingua-en-inflect/spkgbuild
+f:9d0f7a515be5116e51d2f7e2c61603fb:perl-sub-exporter-progressive/.pkgfiles
 f:c83f7a5e8d1f2822ce0071b0e764db4e:perl-sub-exporter-progressive/CHANGELOG
 f:046d4ac49625ebc73e4644a8d454241d:perl-sub-exporter-progressive/spkgbuild
 f:31a88c10bbb7fecc4871716ce0a3553c:perl-text-reform/CHANGELOG
@@ -1022,6 +1029,7 @@ f:482ab11db89e9890d1449d859a2d33c2:perl-lingua-preferred/CHANGELOG
 f:510afd3659592be8d5dc046fa9641ca7:perl-lingua-preferred/spkgbuild
 f:a806430c24828998460497542ccdf5dd:perl-test-nowarnings/CHANGELOG
 f:cca6d53ea3150d9fb88acf35355a77bc:perl-test-nowarnings/spkgbuild
+f:7c064b551827554bcf9624c0c75f2117:perl-encode-locale/.pkgfiles
 f:be8c64459556b23e68c2d40291aa9198:perl-encode-locale/CHANGELOG
 f:db54558fb9c8ec75a3416afcbca75018:perl-encode-locale/spkgbuild
 f:3c8f38ab5febec0202a07db6e36f4b58:perl-datetime/CHANGELOG
@@ -1134,6 +1142,7 @@ f:cbd3ea1741963e15bf6cc7ddaec52143:perl-text-glob/spkgbuild
 f:6bcabbcdc95dc84f0e177a060e3c5232:perl-unix-syslog/CHANGELOG
 f:c6355cb686c5a09441cd172c0304dec7:perl-unix-syslog/spkgbuild
 f:fe29687df6368ccf15c45e81796ef6f0:perl-types-serialiser/spkgbuild
+f:cc91aa2b94533eb75c5b5e10b2de9b08:perl-file-listing/.pkgfiles
 f:7733f4173f3aca23f8ff841e6da09834:perl-file-listing/CHANGELOG
 f:459b4283ded47e8a6a7a6a15d8b0a5af:perl-file-listing/spkgbuild
 f:387aaf1d3a1c96f6cfc90442bcd2ab0a:perl-mime-lite/CHANGELOG
@@ -1224,6 +1233,7 @@ f:0f354c46444084dc8b496cebbfb0c33a:perl-test-exit/CHANGELOG
 f:d404f784af5e11048a8b2227d9f6bfb2:perl-test-exit/spkgbuild
 f:869d4374df4f04f6b27c0891956988aa:perl-xml-smart/CHANGELOG
 f:4d74c3bbb34772061cad163ede01f0bf:perl-xml-smart/spkgbuild
+f:61ef20cafcda60610fc0c192391d359e:perl-module-build/.pkgfiles
 f:85b1963ec80b3ce9a0214ee2ecda3aaa:perl-module-build/CHANGELOG
 f:1695b2ea4fcd17512ac04313d80ea513:perl-module-build/spkgbuild
 f:a0c4705cb70c30bb577e2b118ef98059:perl-xml-sax-writer/CHANGELOG
@@ -1406,6 +1416,7 @@ f:e5013ae00accf4f13519fe1afbcd3422:perl-test-simple/spkgbuild
 f:9255c93f3e681fa199865e25d6a99423:perl-sgmls/spkgbuild
 f:a17b30d3d0ba6a258f035098af68473a:perl-test-requires/CHANGELOG
 f:89df1fde70658724befeb252437ca7e4:perl-test-requires/spkgbuild
+f:464f8599965aef61c8396a4251187455:perl-http-date/.pkgfiles
 f:d3988a70e4b338dd914bd03b8ce575f6:perl-http-date/CHANGELOG
 f:47c0006227f7b3a2c7e341df3791b72b:perl-http-date/spkgbuild
 f:170c24d33df301035bf87f8000cfbccf:perl-datetime-calendar-julian/CHANGELOG
@@ -1417,12 +1428,14 @@ f:7252dbfd6fdf8b252dc16bc9dd07d246:perl-yaml-libyaml/spkgbuild
 f:ac3b61bae267995e358051a02452fe95:perl-class-singleton/CHANGELOG
 f:331b598e3eec9667561efe12220f6beb:perl-class-singleton/spkgbuild
 f:fcbf9dd19d02ce48869423080041d04a:perl-spiffy/spkgbuild
+f:5f3535ebbbf06dd34a0e4612de058ab0:perl-cpan-meta/.pkgfiles
 f:857c714bfba6f98a7e83c7690ddbb23a:perl-cpan-meta/CHANGELOG
 f:7d751d531df98cf17e4307a59f9c4dbf:perl-cpan-meta/spkgbuild
 f:02d931f1f17b5ef07eae2422b5573c27:perl-file-desktopentry/CHANGELOG
 f:1e513a973b7deb65e755c2e24def4404:perl-file-desktopentry/spkgbuild
 f:b334804cd8860f23ab0038c1968390c5:perl-www-mechanize/CHANGELOG
 f:0a75dd4a69b4bdd4eff1e56e11e4c0ea:perl-www-mechanize/spkgbuild
+f:24b0c9abfacaa05f69ef5afc86a61497:perl-sub-install/.pkgfiles
 f:d87f2c35a228aee6a12486b81fef3f76:perl-sub-install/CHANGELOG
 f:5d334efdd56f54fcdf542e89217c54f1:perl-sub-install/spkgbuild
 f:d7e682c6cb7394df69f5aa8055355735:perl-unicode-string/CHANGELOG
@@ -1445,6 +1458,7 @@ f:a2ed2384e90909369b5fb7ebc1ab7690:perl-params-validate/CHANGELOG
 f:ed486fb0313e06498666146192ae387c:perl-params-validate/spkgbuild
 f:29c2e2cd6c7703277c2fc46faecb0f4e:perl-mail-dkim/CHANGELOG
 f:835916c67dadc0170c525baa17a9054d:perl-mail-dkim/spkgbuild
+f:09b03fe41c96e45161ad4a7968ab0edd:perl-inc-latest/.pkgfiles
 f:b8e4f7f930332810a60af2341c031976:perl-inc-latest/spkgbuild
 f:a362773871db2601bce42d5acbfb8593:perl-mail-message/CHANGELOG
 f:cd4725f5900f62be9e6b201e29647beb:perl-mail-message/spkgbuild
@@ -1508,6 +1522,7 @@ f:71f579a1e8b0a52b1a0f39323357b13d:perl-pdf-builder/CHANGELOG
 f:a5a9854ab9040125c684ae0fd85be3f1:perl-pdf-builder/spkgbuild
 f:c69d0afcbc78bd47f73c64261c6ebd42:perl-test-trap/CHANGELOG
 f:fe3d384d17c72cee5b8964fa9785ed1a:perl-test-trap/spkgbuild
+f:cb125887616721f1d88b47b10b8818f4:perl-import-into/.pkgfiles
 f:7f03ee3e9970918259bc88d3448ac0c3:perl-import-into/spkgbuild
 f:4d16b6e9fb4a610f056a372092edcf5f:perl-html-strip/CHANGELOG
 f:211ee52c8592ef9e90799e71f6a0ec33:perl-html-strip/spkgbuild
@@ -1544,6 +1559,7 @@ f:039008280c24dc1c3d2df81e5f37d088:perl-bytes-random-secure/CHANGELOG
 f:f5cc32f5fd7c9c331c15260c111ce19a:perl-bytes-random-secure/spkgbuild
 f:4c5c0743c83c20b1d22d4a7e40fc3a85:perl-time-human/CHANGELOG
 f:9847f24c52dcbceba618671ec141ace7:perl-time-human/spkgbuild
+f:54963500bf154f858020f94c60b8b120:perl-libwww/.pkgfiles
 f:c71c1565cc271fc7952f6f90eb90f524:perl-libwww/CHANGELOG
 f:c521e877b3b51216a4d23a3ad688fe2b:perl-libwww/spkgbuild
 f:31ab7a1ad9bec3f663ed06b8d8150309:perl-email-sender/CHANGELOG
@@ -1647,6 +1663,7 @@ f:02fc6603fa70aa3f9eab101a281b9ba6:perl-curses/CHANGELOG
 f:51a18d41d4bf1a0140063d5bc1868d7f:perl-curses/spkgbuild
 f:bf1c5dff0f45f796cb58bea2e357341e:perl-data-hierarchy/CHANGELOG
 f:22122c0bdfbde117d7006a37d8cc9393:perl-data-hierarchy/spkgbuild
+f:859f954633a41ee55ff207185e107470:perl-scalar-list-utils/.pkgfiles
 f:f39f98e3938c12522b7bfd49508a3f1c:perl-scalar-list-utils/CHANGELOG
 f:0f8ab8ae2a9002c47c816edd6a642dec:perl-scalar-list-utils/spkgbuild
 f:1fb754ca36cc7bc20e33c3dfc4bc1e5c:perl-bit-vector/CHANGELOG
@@ -1667,6 +1684,7 @@ f:8c52c78e0da9dcd21e3abbff1c1a40ab:perl-appconfig/CHANGELOG
 f:57f0ec8f1237e89f8718cb397415b3c5:perl-appconfig/spkgbuild
 f:fe103cf2e94d29a5e78961054ef0f22d:perl-universal-can/CHANGELOG
 f:8104b09c68012d7d1b5a16c7948872ba:perl-universal-can/spkgbuild
+f:0d39d010eea97342b4c56eaa05ea3fd6:perl-timedate/.pkgfiles
 f:e572fd30981fd1da1b3567c077cfa708:perl-timedate/CHANGELOG
 f:c0370d00ee2d90826b40b1dcb9d8cbd1:perl-timedate/spkgbuild
 f:6812c30dcf1073097b87421eef1e02ef:perl-alien-base-modulebuild/CHANGELOG

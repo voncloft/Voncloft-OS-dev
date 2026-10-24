@@ -1,0 +1,12 @@
+--- a/applets/taskmanager/qml/ToolTipInstance.qml
++++ b/applets/taskmanager/qml/ToolTipInstance.qml
+@@ -341,7 +341,8 @@
+             retainWhileLoading: true
+             source: toolTipDelegate.playerData?.artUrl ?? ""
+             fillMode: Image.PreserveAspectFit
+-            visible: available
++            // Browser tooltips should show live video instead of media artwork.
++            visible: available && !backend.applicationCategories(launcherUrl).includes("WebBrowser")
+         }
+ 
+         // hoverHandler has to be unloaded after the instance is pooled in order to avoid getting the old containsMouse status when the same instance is reused, so put it in a Loader.

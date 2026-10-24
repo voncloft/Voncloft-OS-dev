@@ -1,0 +1,16 @@
+perl-http-date-6.05-3
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/HTTP/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/HTTP/Date/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/HTTP/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/HTTP/Date.pm
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/HTTP::Date.3.gz

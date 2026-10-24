@@ -41,7 +41,7 @@ f:d659b78f7071326fd1be1afde98d2b3a:zig/spkgbuild
 f:d0caf18e98c6ad5dd399d7403f77081b:.httpup-urlinfo
 f:deb662746f0b9f4c51429153a89d2ef0:ninja/.pkgfiles
 f:b14cc845168b425acfc664289fbaa2e1:ninja/CHANGELOG
-f:ff4c19b4b1c49ed35a65a8d4b94217b4:ninja/spkgbuild
+f:a7afcb4467d83a25e6be27c3831f7d2b:ninja/spkgbuild
 f:b4588c9b0b2b370b6ab674faeca44c41:xkbcomp/.pkgfiles
 f:056fd9c0227ec94425a887cce59e4548:xkbcomp/CHANGELOG
 f:8d438c0b634725093e0a530b64def432:xkbcomp/spkgbuild
@@ -53,6 +53,7 @@ f:871ab997ddbbff7d0c9d8b1f54a3dbbc:ruby/.pkgfiles
 f:a14319d7e7cc684e6ce9c23779de739a:ruby/CHANGELOG
 f:e766de5d76bf570386586184755728df:ruby/spkgbuild
 f:d9f4d5de58a076d2af1a828c4c3edf5b:ruby/override
+f:7468daddede439947d1a8269c1e7fa3c:corrosion/.pkgfiles
 f:5ff814761f53bb97975ab844fa37eb8f:corrosion/spkgbuild
 f:48836ed2284a7e388522deab27613e41:lld/.pkgfiles
 f:e3d4789121347900471e78af68569eb8:lld/CHANGELOG
@@ -67,7 +68,7 @@ f:f220f0337914010336a396c277f55a31:cargo-c/.pkgfiles
 f:21566c3ff536c83b9a3b5b318eea9333:cargo-c/spkgbuild
 f:c3265ca11bed27e9fe4c509729dc2827:meson/.pkgfiles
 f:e94b7421c8d2a4a0b2bb8e1d1f98bedf:meson/CHANGELOG
-f:0caac56247a83c63d293a2ae4ac08102:meson/spkgbuild
+f:d268b149e6187fbfa1282f5e689c75e8:meson/spkgbuild
 f:bcb9754c03aa84e845ca0e091b5cb3b5:gdb/.pkgfiles
 f:70b6fecec1b9949f4d472742d7ab2927:gdb/CHANGELOG
 f:2f3c4d6eb50db425331b5087dc1cb827:gdb/spkgbuild

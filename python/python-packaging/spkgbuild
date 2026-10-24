@@ -1,9 +1,9 @@
 # description : packaging Python build/runtime dependency
-# depends : python python-flit python-wheel
+# depends : python python-flit
 
 name=python-packaging
 version=26.3
-release=1
+release=2
 source="https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz"
 options="!checksum"
 

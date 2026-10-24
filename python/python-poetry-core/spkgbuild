@@ -1,15 +1,18 @@
-# description : Poetry PEP 517 Build Backend & Core Utilities
-# depends : ${_deps[@]/#/python-}
+# description : Poetry Python build backend and core utilities
+# depends : python python-wheel
 
 name=python-poetry-core
-version=2.1.3
-release=2
+version=2.5.0
+release=1
 
-source="https://github.com/python-poetry/poetry-core/archive/refs/tags/a$version.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/poetry-core/poetry_core-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "poetry_core-$version"
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Stage the wheel even if this version is already installed on the host.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/poetry_core-"$version"-*.whl
+}

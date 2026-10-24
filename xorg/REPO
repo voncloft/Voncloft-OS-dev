@@ -193,9 +193,10 @@ f:f75ee46b5d7de11c445a3a29edee1e08:xwd/CHANGELOG
 f:650b59f65df75a31eff73139a5c897fc:xwd/spkgbuild
 f:6a2e3b7faf31e290f28d8e509154d265:xorg-applications/.pkgfiles
 f:71d253765a741fae3131d22224736c67:xorg-applications/spkgbuild
+f:ed30ef01340f9cd132cef0aa507e1849:xdg-dbus-proxy/.pkgfiles
 f:36856acc35f8802d0cba6fbfd3e3f56a:xdg-dbus-proxy/musl.patch
 f:c73b608cf8374db83acd346a9138fc43:xdg-dbus-proxy/CHANGELOG
-f:8c4fddc7c7ab607b620330052826bbc6:xdg-dbus-proxy/spkgbuild
+f:15daceebb90f0684ea2981772e3ca9fe:xdg-dbus-proxy/spkgbuild
 f:37692806dba49d866da15025dc2e98cb:xcursor-themes/.pkgfiles
 f:0a8633e4aab98fc804db8f35b16151c2:xcursor-themes/CHANGELOG
 f:f39919ff70d30c385f440e35309671b2:xcursor-themes/spkgbuild

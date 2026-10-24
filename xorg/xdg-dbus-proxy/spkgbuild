@@ -1,18 +1,22 @@
-# description	: D-Bus proxy
-# depends	: glib
+# description : D-Bus proxy
+# depends : dbus docbook-xml docbook-xsl glib libxslt meson ninja pkgconf
 
 name=xdg-dbus-proxy
 version=0.1.6
-release=1
-source="https://github.com/flatpak/xdg-dbus-proxy/releases/download/$version/xdg-dbus-proxy-$version.tar.xz
-	musl.patch"
+release=2
+source="https://github.com/flatpak/xdg-dbus-proxy/releases/download/$version/xdg-dbus-proxy-$version.tar.xz"
 
 build() {
-	cd $name-$version
+    cd "$name-$version"
 
-	patch -Np0 -i $SRC/musl.patch
-
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    meson setup build \
+        --prefix=/usr \
+        --libdir=lib64 \
+        --buildtype=release \
+        -Dman=enabled \
+        -Dtests=true \
+        -Dinstalled_tests=false
+    ninja -C build
+    meson test -C build --print-errorlogs
+    DESTDIR="$PKG" meson install -C build
 }

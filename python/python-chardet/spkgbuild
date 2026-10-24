@@ -1,15 +1,20 @@
-# description	: Python module for character encoding auto-detection
-# depends	: python
+# description : Python module for character encoding auto-detection
+# depends : python python-setuptools python-wheel
 
 name=python-chardet
 version=5.2.0
-release=1
+release=2
 
-source="https://pypi.io/packages/source/c/chardet/chardet-4.0.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/c/chardet/chardet-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-   pip3 install --no-index --find-links dist --no-user chardet --root=$PKG
- }
+    cd "chardet-$version"
+
+    # pip is supplied by this repository's Python package through ensurepip.
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Stage the built wheel even when the same version is installed on the host.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/chardet-"$version"-*.whl
+}

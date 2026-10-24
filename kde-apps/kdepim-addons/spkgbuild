@@ -1,15 +1,19 @@
 # description : Core components for the kde desktop
-# depends : akonadi akonadi-calendar akonadi-contacts akonadi-import-wizard calendarsupport extra-cmake-modules gpgmepp grantleetheme incidenceeditor kaddressbook kcalendarcore kcalutils kcmutils kcolorscheme kconfig kconfigwidgets kcontacts kdbusaddons kde-deps-installer kdeclarative kguiaddons kholidays ki18n kiconthemes kidentitymanagement kimap kio kitinerary kldap kmailtransport kmime kparts kpimtextedit kpkpass ktextaddons ktexttemplate ktnef kxmlgui libgravatar libkdepim libkleo libksieve mailcommon mailimporter messagelib pimcommon plasma-activities prison qt6 syntax-highlighting
+# depends : akonadi akonadi-calendar akonadi-contacts akonadi-import-wizard calendarsupport corrosion extra-cmake-modules gpgmepp grantleetheme incidenceeditor kaddressbook kcalendarcore kcalutils kcmutils kcolorscheme kconfig kconfigwidgets kcontacts kdbusaddons kde-deps-installer kdeclarative kguiaddons kholidays ki18n kiconthemes kidentitymanagement kimap kio kitinerary kldap kmailtransport kmime kparts kpimtextedit kpkpass ktextaddons ktexttemplate ktnef kxmlgui libgravatar libkdepim libkleo libksieve mailcommon mailimporter messagelib pimcommon plasma-activities prison qt6 rust syntax-highlighting
 
 name=kdepim-addons
 version=26.08.2
-release=1
+release=2
 
 source="https://download.kde.org/stable/release-service/$version/src/kdepim-addons-$version.tar.xz"
 options="!checksum"
 
 build() {
     cd "kdepim-addons-$version"
+    # Rust is installed under /opt; sudo does not preserve that PATH entry.
+    export PATH="/opt/rustc/bin:$PATH"
+    rustc --version
+    cargo --version
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

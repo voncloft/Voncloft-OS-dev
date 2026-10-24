@@ -345,6 +345,7 @@ f:90b626f0b1d5c288278c7ca6fccb7595:libxkbcommon/CHANGELOG
 f:cadb84ec4f9f989e13fe2ce7a0d76579:libxkbcommon/spkgbuild
 f:30070a6d8ba4d24dd2c4d00229b399c5:libx11/.pkgfiles
 f:7d422d917afe34300ea02f04fc46baa9:libx11/spkgbuild
+f:b85754471ef9b23c59c65eb752b05268:tesseract/.pkgfiles
 f:121cc99c2f1f474bfe6c113890973f87:tesseract/spkgbuild
 f:91fcf99fbe327b32a871b947b2135d2d:libpgm/CHANGELOG
 f:5b80353da631e58d2d11df9a7335cc4c:libpgm/spkgbuild
@@ -425,7 +426,8 @@ f:98df1fce511b9e8afefa008d89c9c99b:libnma/CHANGELOG
 f:0f941ae6369bec8a4d42e053e19ef089:libnma/spkgbuild
 f:f432c5c1a516a74428b88e2d527b6cb2:gsl/CHANGELOG
 f:eb1e4086483dafb2851f5e5f6dca764e:gsl/spkgbuild
-f:302f7b2513b4be330ac425caa909da38:cxx-rust-cssparser/spkgbuild
+f:ad516f88d2cbdf8fe350627639fafa5b:cxx-rust-cssparser/.pkgfiles
+f:e1d22ab7761eb263336247e9b213b081:cxx-rust-cssparser/spkgbuild
 f:0c54a9f5fef05db238da7aa10102bdc0:zita-resampler-libs/spkgbuild
 f:d3d76239e6500b892b332390e6d421ca:libpipeline/.pkgfiles
 f:55378c2a14ca7f1f504e1611d2e6128d:libpipeline/CHANGELOG
@@ -495,6 +497,7 @@ f:a221652c98575179869f27ae19231dfa:libcanberra/.pkgfiles
 f:abdf320e22e04f0502d5beb4a13542e4:libcanberra/spkgbuild
 f:82f39b55fc64d5bc3f4d6127255ce504:opencv/.pkgfiles
 f:41a2250634d43a998f4aa599e09b81c4:opencv/spkgbuild
+f:7dade8f54263d786057bfe597ada1ae2:modemmanager/.pkgfiles
 f:c2a480a4dae7ef713a70b0aa6845fbbb:modemmanager/spkgbuild
 f:0396ecb2a23984d15a9aaf024490a836:libconfig/CHANGELOG
 f:5a861a0e077bc7d21f75ce4a567861ea:libconfig/spkgbuild
@@ -531,6 +534,7 @@ f:47511f7a0be8d5324fdda19466b0130c:libidn2/CHANGELOG
 f:bddc3642d31c3d20766bb133637b3da8:libidn2/spkgbuild
 f:628e89a05ff39b194dd72d6e387293ab:yaml/.pkgfiles
 f:c9167fc50b6822f374bf67d1ee0de403:yaml/spkgbuild
+f:20aaac08a545de3cfadf6e23512a7973:libssh/.pkgfiles
 f:2fd23fd2e52a6ea82f9434be7da6e25b:libssh/spkgbuild
 f:f69e2dc78b2daa3b813487c85fc46e97:libseccomp/.pkgfiles
 f:6f0656011dabce79f4a8f3b29e457f97:libseccomp/CHANGELOG
@@ -603,14 +607,16 @@ f:4991a9969d07dc7fefbd481cf6a535de:libisoburn/spkgbuild
 f:4d81467956221ee47557f542b246f7f4:libxcb/.pkgfiles
 f:f8b2e82051abc4d1c41a39d7a51032f0:libxcb/CHANGELOG
 f:9f6044d2e72f3e2f212660f73dd26482:libxcb/spkgbuild
+f:e485d0a8f4706ffa22cfcd294c56b03d:avahi/.pkgfiles
 f:80e624799a30d7360f992a04043f8309:avahi/pre-upgrade.sh
-f:70cba58d722ca37d27268e6008632a4d:avahi/spkgbuild
+f:90c20b9a3fa80000e8fc31bcec810637:avahi/spkgbuild
 f:5b4736ba9c52389c7ef1bc75210ad4dc:avahi/pre-install.sh
 f:d9d2d42b42a778d6b65d0608a3d296c8:librsvg/.pkgfiles
 f:3de1fd6f8f46e2bf92ba2a107daff60f:librsvg/spkgbuild
 f:47cea3f6286bbf3e50146ee61cf2c4c6:libcue/CHANGELOG
 f:d25c648a0964942661de0129efb7bb83:libcue/spkgbuild
 f:6ef7eb607d341ca9ac023b12b62f3e02:shapelib/spkgbuild
+f:8c73753408f743d34840968af4dec384:libxmlb/.pkgfiles
 f:8faa8ccac5372c9d1fb1e1121f3a76d4:libxmlb/spkgbuild
 f:ea461240042573d41ca3e3fe89ab514c:libmypaint/spkgbuild
 f:5913368513e2108f3cd8a66053a46b3e:libquotient/spkgbuild
@@ -750,7 +756,8 @@ f:3c6d22c60210abdc0fb9ca5937cc2d40:libavif/spkgbuild
 f:104c25389156c85f0d9ca9df802b5c62:hdf5/spkgbuild
 f:9e45991a79ceb9c2ff2bca0cb26049c2:libressl/CHANGELOG
 f:9974c576197d783e56269c3023e49b8c:libressl/spkgbuild
-f:bfd769e3a7acd9aa1f9b2da08e644a83:jansson/spkgbuild
+f:049ab2227793f15830f0f2e40db24643:jansson/.pkgfiles
+f:eacd9707e0b6df6254ca94dde06c9f47:jansson/spkgbuild
 f:58ffcea1a165366f89b94a1dedcf8c24:lirc/.pkgfiles
 f:051a6e7add098c4c89f107189f64b1f6:lirc/CHANGELOG
 f:4fd0cc3324e9e62e50dec34822f3fa57:lirc/spkgbuild
@@ -763,7 +770,8 @@ f:1515bc81f457e81d29194b8aad21dabd:nettle/spkgbuild
 f:15625a5c7b2874ac21b4276b7dee75bc:libdbi/spkgbuild
 f:995a0571aec3eef550332bf9ac21e733:libstatgrab/CHANGELOG
 f:a9a32945996a8e7d0f9f03d1a87dfef4:libstatgrab/spkgbuild
-f:34c2525681bbe9222ec2eeae5610258b:libqaccessibilityclient/spkgbuild
+f:734274271e568b4ccb3350ff951cd2e7:libqaccessibilityclient/.pkgfiles
+f:5738c146527ab239bca7f3e42eed1652:libqaccessibilityclient/spkgbuild
 f:28a1832727b40485cf0d10870c6be0eb:libtasn1/.pkgfiles
 f:dad87edbf5c0601d7a0239d3f8d2fe72:libtasn1/CHANGELOG
 f:9444806bb1f84d1b5547f60093ba6364:libtasn1/spkgbuild
@@ -803,6 +811,7 @@ f:00df2570232b3cad475fcc667ee5748c:libpsl/spkgbuild
 f:a83bac56b4b8ab9bf9fe22252c18472d:libxtst/.pkgfiles
 f:4f7724cdd9edc3f7348b36640977c15f:libxtst/spkgbuild
 f:c96ad166d85f99b593c7579619da5b24:gcem/spkgbuild
+f:20e65cc9a8f2b5c7260b77d2a2d45a08:ostree/.pkgfiles
 f:32b43526e8632ee6889819249eb62b8c:ostree/spkgbuild
 f:d3791ad667e1a1a7d94db52397f045d3:libtorrent/CHANGELOG
 f:e4ea060a5287b6dc181f43ab2f69d503:libtorrent/fix-build-with-boost-1.72.0.patch
@@ -863,8 +872,10 @@ f:377b9cecabf4a3380b378e99bc61286d:chmlib/spkgbuild
 f:565cf5356b7e88ef02b815354e65df8b:libzip/.pkgfiles
 f:1e0192c06dfb76c068be95babd7765a6:libzip/CHANGELOG
 f:38a13871e44520a8787062f906fd4d56:libzip/spkgbuild
+f:c770e59ff0a87e16af797b578d094a75:kquickimageeditor/.pkgfiles
 f:76e39cb3b8c8123fe55b25913fb440da:kquickimageeditor/spkgbuild
-f:4b2b1985da56164206bed890d6447e21:freerdp/spkgbuild
+f:1a005716a0c1a0280af8563c1879ae5d:freerdp/.pkgfiles
+f:1752ad40e88d61d55658288a62a8df4e:freerdp/spkgbuild
 f:5292b85ee91294c7a0f82494af820e98:poppler/.pkgfiles
 f:4847e5e1770d04814b6b151a85c494b0:poppler/CHANGELOG
 f:217943b8729b816158a9ffd09a0a62ef:poppler/spkgbuild
@@ -896,6 +907,7 @@ f:abc437d325fcf8622622be281c0aeb03:libfakekey/spkgbuild
 f:683dcf29ffc4429549d5d6cb056f0886:stemmer/.pkgfiles
 f:0ab290aa47a09dd8034076a22747c2ed:stemmer/CHANGELOG
 f:785e180ad476152c4832054427d90bcb:stemmer/spkgbuild
+f:681ddd8d4fc9768471c11e6988c170b3:libfyaml/.pkgfiles
 f:990ecf34a91eb70f45e2dfdf869d7aaa:libfyaml/spkgbuild
 f:b6b2f89672bec707f524ddfc08ff6e38:libmad/.pkgfiles
 f:d531bed28d26117bd28787b724d8a3c3:libmad/spkgbuild
@@ -1016,8 +1028,10 @@ f:7105a46924a6a6281b409d62e2ef8626:libmatekbd/spkgbuild
 f:07113a9be1c8e880191d36c5b816373a:libndp/.pkgfiles
 f:789a6d220b20694251fe07c120bb12ab:libndp/CHANGELOG
 f:c26cf8a1cc51ef7d9a0dc90f47108918:libndp/spkgbuild
+f:3cbf819c914deadaa45ad05ae97eadba:leptonica/.pkgfiles
 f:8d8b163ae995571896eb5227512add76:leptonica/spkgbuild
-f:a35e8f195d0d6a1f001dac7a4a39a3d0:flatpak/spkgbuild
+f:b43394e7d5580cac99ac73485b969626:flatpak/.pkgfiles
+f:04ed526a154a75ac538532ce50e96da6:flatpak/spkgbuild
 f:0006c70321a47f637fdc4c9176bb4caf:libmng/.pkgfiles
 f:19b3e00d381b6ffbde04c972044d1651:libmng/spkgbuild
 f:d4150b19e249e38ec591543033cadd81:pybind11/spkgbuild
@@ -1039,6 +1053,7 @@ f:b07d61a47a1ac0ec6ea033ceeb2097b5:libxrandr/spkgbuild
 f:573fd5de8a7d45d0ab9ef44305c49c90:sdl3/spkgbuild
 f:382a404c38e6f731a9a64a3412b2c0e0:liblxqt/CHANGELOG
 f:0854618ed4bcdb28e05dbcbbd1ebc809:liblxqt/spkgbuild
+f:8acaf986a40c1ad6d8183862c7671acb:highway/.pkgfiles
 f:75d7666ada6e233ae80911fc807b1cdb:highway/spkgbuild
 f:8c70d6e4c46c8b4d4b5fab5daf3a483c:muparser/CHANGELOG
 f:f413234a6efd1227afe73889bdb2e068:muparser/spkgbuild

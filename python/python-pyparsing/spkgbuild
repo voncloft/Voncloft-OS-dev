@@ -1,15 +1,15 @@
 # description : General parsing module for Python
-  # depends : python
+# depends : python python-flit python-wheel
 
 name=python-pyparsing
 version=3.2.3
-release=3
+release=4
 
-source="https://github.com/pyparsing/pyparsing/archive/refs/tags/pyparsing_$version.tar.gz"
+source="https://files.pythonhosted.org/packages/bb/22/f1129e69d94ffff626bdb5c835506b3a5b4f3d070f17ea295e12c2c6f60f/pyparsing-3.2.3.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "pyparsing-$version"
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --no-user --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

@@ -1,15 +1,18 @@
-# description : Python HTTP for Humans
-  # depends : python-urllib3 python-chardet python-idna
+# description : Python HTTP client
+# depends : python python-setuptools python-wheel python-urllib3 python-idna certifi python-charset-normalizer
 
 name=python-requests
 version=2.32.4
-release=1
-
-source="https://github.com/psf/requests/archive/refs/tags/v$version.tar.gz"
+release=2
+source="https://files.pythonhosted.org/packages/source/r/requests/requests-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "requests-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/requests-"$version"-*.whl
+}

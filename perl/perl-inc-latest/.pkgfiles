@@ -1,0 +1,19 @@
+perl-inc-latest-0.500-7
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/inc/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/inc/latest/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/inc/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/inc/latest/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/inc/latest.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/inc/latest/private.pm
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/inc::latest.3.gz
+-r--r--r-- root/root    usr/share/man/man3/inc::latest::private.3.gz

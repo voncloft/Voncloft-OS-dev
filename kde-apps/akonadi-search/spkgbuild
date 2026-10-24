@@ -1,15 +1,19 @@
 # description : Core components for the kde desktop
-# depends : akonadi akonadi-mime extra-cmake-modules kcalendarcore kcmutils kconfig kcontacts kcrash kdbusaddons kde-deps-installer ki18n kio kmime krunner ktextaddons qt6 xapian
+# depends : akonadi akonadi-mime corrosion extra-cmake-modules kcalendarcore kcmutils kconfig kcontacts kcrash kdbusaddons kde-deps-installer ki18n kio kmime krunner ktextaddons qt6 rust xapian
 
 name=akonadi-search
 version=26.08.2
-release=1
+release=2
 
 source="https://download.kde.org/stable/release-service/$version/src/akonadi-search-$version.tar.xz"
 options="!checksum"
 
 build() {
     cd "akonadi-search-$version"
+    # Rust is installed under /opt; sudo does not preserve that PATH entry.
+    export PATH="/opt/rustc/bin:$PATH"
+    rustc --version
+    cargo --version
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

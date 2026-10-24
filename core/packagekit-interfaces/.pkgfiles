@@ -1,0 +1,10 @@
+packagekit-interfaces-1.4.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/dbus-1/
+drwxr-xr-x root/root    usr/share/dbus-1/interfaces/
+-rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.PackageKit.Transaction.xml
+-rw-r--r-- root/root    usr/share/dbus-1/interfaces/org.freedesktop.PackageKit.xml
+drwxr-xr-x root/root    usr/share/licenses/
+drwxr-xr-x root/root    usr/share/licenses/packagekit-interfaces/
+-rw-r--r-- root/root    usr/share/licenses/packagekit-interfaces/COPYING

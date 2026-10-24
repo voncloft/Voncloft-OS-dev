@@ -1,16 +1,16 @@
 # description : freerdp - KDE dependency
-# depends : alsa-lib cairo ffmpeg kde-deps-installer libx11 libxcursor libxdamage libxext libxfixes libxi libxinerama libxkbcommon libxrandr libxrender libxtst openssl pulseaudio wayland zlib
+# depends : alsa-lib cairo cmake ffmpeg icu jansson kde-deps-installer libusb libx11 libxcursor libxdamage libxext libxfixes libxi libxinerama libxkbcommon libxrandr libxrender libxtst openssl pkgconf pulseaudio udev wayland zlib
 
 name=freerdp
 version=3.32.2
-release=1
+release=2
 
 source="$name-$version.tar.gz::https://github.com/FreeRDP/FreeRDP/releases/download/$version/freerdp-$version.tar.gz"
 options="!checksum"
 
 build() {
     cd "freerdp-$version"
-    plasma-package-installer -DWITH_SERVER=ON -DWITH_SAMPLE=OFF -DWITH_FUSE=OFF -DWITH_PCSC=OFF -DWITH_SDL=OFF -DWITH_SDL3=OFF -DWITH_CUPS=OFF -DWITH_KRB5=OFF -DWITH_FFMPEG=ON -DWITH_MANPAGES=OFF
+    plasma-package-installer -DWITH_SERVER=ON -DWITH_SAMPLE=OFF -DWITH_FUSE=OFF -DWITH_PCSC=OFF -DWITH_CLIENT_SDL=OFF -DWITH_CUPS=OFF -DWITH_KRB5=OFF -DWITH_FFMPEG=ON -DWITH_MANPAGES=OFF
     cd build
     make DESTDIR="$PKG" install
 }

@@ -117,6 +117,7 @@ f:ee33386422aa3cc19a41f8f8f779ea6a:bluefish/CHANGELOG
 f:c42a83a6f949ae4b225096092797c8fb:bluefish/spkgbuild
 f:ce97e5a63c91a1bcbdad8e52a7b2c896:youtubemp3/youtubemp3
 f:765e587e2e58461e1b501df7a7b7a2d0:youtubemp3/spkgbuild
+f:fd14b0b42789ffe20d6bc1b0d64daf6e:sane/.pkgfiles
 f:80e624799a30d7360f992a04043f8309:sane/pre-upgrade.sh
 f:3b5ec73bf8835da2dfe99f8d4619372b:sane/post-upgrade.sh
 f:eeb64906ddfec1622f9ae95ab787c213:sane/CHANGELOG

@@ -3,7 +3,7 @@
 
 name=bash-completion
 version=2.11.0
-release=1
+release=2
 
 source="profile
 	bash_completion.sh
@@ -41,5 +41,22 @@ build()
 	install -Dm644 $SRC/.bash_logout $PKG/etc/skel/.bash_logout
 	install -Dm644 $SRC/.nanorc $PKG/etc/skel/.nanorc
 	dircolors -p > $PKG/etc/dircolors
+
+	# Build systems use this metadata to locate completion installation paths.
+	install -d "$PKG/usr/share/pkgconfig"
+	cat > "$PKG/usr/share/pkgconfig/bash-completion.pc" <<EOF
+prefix=/usr
+datadir=\${prefix}/share
+sysconfdir=/etc
+
+compatdir=\${sysconfdir}/bash_completion.d
+completionsdir=\${datadir}/bash-completion/completions
+helpersdir=\${datadir}/bash-completion/helpers
+
+Name: bash-completion
+Description: programmable completion for the bash shell
+URL: https://github.com/scop/bash-completion
+Version: $version
+EOF
 	
 }

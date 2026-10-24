@@ -1,0 +1,17 @@
+# description : Mobile broadband service provider settings and access point database
+# depends : libxml2 libxslt meson ninja
+
+name=mobile-broadband-provider-info
+version=20251101
+release=1
+source="$name-$version.tar.gz::https://github.com/GNOME/mobile-broadband-provider-info/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    # Upstream's dated tag still carries the older project metadata version.
+    sed -i "s/version: '20240407'/version: '$version'/" meson.build
+    meson setup build --prefix=/usr --buildtype=release
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

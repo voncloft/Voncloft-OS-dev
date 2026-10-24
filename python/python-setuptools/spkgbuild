@@ -1,15 +1,18 @@
-# description : Easily download, build(), install, upgrade, and uninstall Python packages
+# description : Python packaging build backend
 # depends : python python-packaging
 
 name=python-setuptools
-version=80.9.0
+version=82.0.0
 release=1
-
-source="https://github.com/pypa/setuptools/archive/refs/tags/v$version.tar.gz"
+source="https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "setuptools-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/setuptools-"$version"-*.whl
+}

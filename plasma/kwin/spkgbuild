@@ -3,13 +3,18 @@
 
 name=kwin
 version=6.8.1
-release=1
+release=2
 
-source="https://download.kde.org/stable/plasma/$version/kwin-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/kwin-$version.tar.xz
+        vulkan-raii-check.cpp"
 options="!checksum"
 
 build() {
     cd "kwin-$version"
+    if ! ${CXX:-c++} $CXXFLAGS -std=c++23 -fsyntax-only "$SRC/vulkan-raii-check.cpp"; then
+        echo "KWin needs newer Vulkan C++ headers. Run: sudo scratch upgrade vulkan-headers" >&2
+        return 1
+    fi
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

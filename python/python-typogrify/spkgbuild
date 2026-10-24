@@ -1,15 +1,18 @@
-# description : filters to make caring about typography on the web a bit easier
-# depends : python python-smartypants
+# description : Filters to improve web typography
+# depends : python python-smartypants hatchling python-wheel
 
 name=python-typogrify
-version=2.0.7
-release=10
+version=2.1.0
+release=1
 
-source="https://pypi.python.org/packages/source/t/typogrify/typogrify-2.0.7.tar.gz"
+source="https://files.pythonhosted.org/packages/source/t/typogrify/typogrify-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "typogrify-$version"
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Stage the wheel even if this version is already installed on the host.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/typogrify-"$version"-*.whl
+}

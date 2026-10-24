@@ -1,15 +1,18 @@
-# description : provides Mozilla’s carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates 
-# depends : 
+# description : Mozilla CA certificate bundle for Python
+# depends : python python-setuptools python-wheel
 
 name=certifi
 version=2025.1.31
-release=1
-
+release=2
 source="https://files.pythonhosted.org/packages/source/c/certifi/certifi-$version.tar.gz"
+options="!checksum"
 
-build()
-{
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user $name --root=$PKG
+build() {
+    cd "certifi-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/certifi-"$version"-*.whl
 }

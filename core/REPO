@@ -28,6 +28,7 @@ d:aircrack-ng
 d:grub-efi
 d:elogind
 d:logrotate
+d:mobile-broadband-provider-info
 d:openssh-boot
 d:docbook-xsl-nons
 d:runit-rc
@@ -132,6 +133,7 @@ d:bash
 d:grantlee
 d:valgrind
 d:bash-completion
+d:wireplumber
 d:cracklib
 d:lhasa
 d:nnn
@@ -275,6 +277,7 @@ d:lua
 d:numactl
 d:mlt
 d:openjpeg
+d:packagekit-interfaces
 d:sudo
 d:polkit
 d:glew
@@ -553,7 +556,7 @@ f:7467e2646fd67befffdb2496d03e7267:kmod/.nanorc
 f:d6c598646e8405f39a48fdc2228b71df:kmod/CHANGELOG
 f:57e405e65f55075fab470764aea42ad1:kmod/spkgbuild
 f:9ce688c3bf43329f5250bde849633bd8:cython3/.pkgfiles
-f:65d73d968015bc7a3fa5c41ac9fcd60f:cython3/spkgbuild
+f:cb00de8b7f8161cb83de47e0e5179829:cython3/spkgbuild
 f:53cc2095925a1f5a693bcf7df9fa92c2:busybox/CHANGELOG
 f:45de326e439ed1393f20b9cd5c55fa22:busybox/config
 f:5455ef9bd25e03bc97007d4114766fbd:busybox/spkgbuild
@@ -582,6 +585,8 @@ f:a4378b43c972c9b0cff7af97dcd05521:elogind/spkgbuild
 f:6c7409aba90a6777da08897561634f5b:logrotate/CHANGELOG
 f:2dd1290ffd92a7cd99dc84eef6f04ccd:logrotate/spkgbuild
 f:94dae4d3eded2fab9ae879533d3680db:logrotate/logrotate.conf
+f:812d65a5c1e5772322c062ee01e04fc8:mobile-broadband-provider-info/.pkgfiles
+f:591f6d85949da777eda06736731fdbb4:mobile-broadband-provider-info/spkgbuild
 f:161955fe19af80aa62cc0413bfc75451:openssh-boot/.pkgfiles
 f:1fd3eecf55d2ff165c1dd4ccb083213f:openssh-boot/spkgbuild
 f:b34532ad01543f4727e3181c37a85701:docbook-xsl-nons/.pkgfiles
@@ -866,9 +871,11 @@ f:45f13b305d240b2a298e9d1a4353049e:bash-completion/CHANGELOG
 f:8626e88cf29cc974e867641cdffd3296:bash-completion/extrapaths.sh
 f:fa6ce99e0329c7854e0a83d022da6fe3:bash-completion/readline.sh
 f:bac0d8dedad1bed2ab5d127f21ed5e2f:bash-completion/i18n.sh
-f:45507ee2e013d450fe05de984088943d:bash-completion/spkgbuild
+f:36c719b6ad20df398384c9b678aa4bfe:bash-completion/spkgbuild
 f:f1dd87922e8fddfe73ef20ae76c2f777:bash-completion/umask.sh
 f:f70bbec388eac3b99a99718b96b6d4c6:bash-completion/.bash_logout
+f:645bf7bc72a8378eff3b0bbb5e3b81fa:wireplumber/.pkgfiles
+f:d366933096a288fc7ebe3b6c5ad762d7:wireplumber/spkgbuild
 f:48593d2a8fb22f55e9ceadfa46f464f9:cracklib/.pkgfiles
 f:3dd3aebdb7f724cbabf55c78c1d8dc84:cracklib/post-upgrade.sh
 f:6ed377f28e5499f61dc82106c2d2fc54:cracklib/CHANGELOG
@@ -1232,6 +1239,8 @@ f:56554522322b30ddef88a857c396ae28:mlt/spkgbuild
 f:61b3cb3af75e55ab6be5c2270c78823b:openjpeg/.pkgfiles
 f:9b2b1b68e1751587a3a8ac81cf70a11f:openjpeg/CHANGELOG
 f:9c3b94904c6ec53e627ce1272615c70f:openjpeg/spkgbuild
+f:e383a5473908854dad9dec41596da596:packagekit-interfaces/.pkgfiles
+f:454f0ed93be8dfc794abe19c6f77b83e:packagekit-interfaces/spkgbuild
 f:105259a7afcd158026163fd0f01ecd38:sudo/.pkgfiles
 f:05a5acd5b91cb29219264c7428155e7b:sudo/post-upgrade.sh
 f:95d3b42ae43e9f90fa4194e6770d38e6:sudo/CHANGELOG
@@ -1626,7 +1635,8 @@ f:b36b6b659b9fc4b052d686a3b5a1b546:smplayer-skins/spkgbuild
 f:c373c39d013b4d646f4d1fd072aa56f3:keyutils/.pkgfiles
 f:6ecfdaea80c5e0afe053c8e5cefad8eb:keyutils/spkgbuild
 f:be4242cd7e09a51387e4cb7a1cc9d1cd:volumeicon/spkgbuild
-f:62773f1c09e88d5b47049f7f8d54e3c5:networkmanager/spkgbuild
+f:96b3ad5a54a0d231afc114b2db6fd10b:networkmanager/.pkgfiles
+f:3b7e7272e13563a6a7f66709ed746e21:networkmanager/spkgbuild
 f:31947433f140176deec3d77be55e5b44:papirus-icon-theme-dark/spkgbuild
 f:43b602a9011a48837005f82972e0beca:newsboat/podboat.1.gz
 f:8355dc7165cbdf83517a19588de9f1d8:newsboat/CHANGELOG
@@ -1698,7 +1708,8 @@ f:0c867059bafa355b5c2d9ee438252d19:tint2/spkgbuild
 f:708d8e26b34d048ffb58b855f4249f73:ncurses/.pkgfiles
 f:00517037c87b7eca99c7b386c038d79b:ncurses/CHANGELOG
 f:8b4273837f87e9d52be1d6dc4be4d0fc:ncurses/spkgbuild
-f:b2d1b91627297c15765d25edde2882d6:imagemagick7/spkgbuild
+f:c4118f4a09cb0692b3c9ec7f2968ff5b:imagemagick7/.pkgfiles
+f:a94837ed2cee789be55a8f08b477eea3:imagemagick7/spkgbuild
 f:19c0cf924bb9e7856f8b48702945aa48:unzip/.pkgfiles
 f:01e6b2fcc336999b006986c920f087c4:unzip/unzip-6.0_CVE-2021-4217.patch
 f:3cf27bbfa47dc99752072dfe4bd14548:unzip/time.patch

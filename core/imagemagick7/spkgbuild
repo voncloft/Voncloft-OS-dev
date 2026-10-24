@@ -1,22 +1,24 @@
-# description	: ImageMagick is a collection of tools and libraries to read, write, and manipulate an image in various image formats
-# depends	: fontconfig lcms2 libtool libxext libxt perl libxml2 librsvg
+# description : Tools and libraries for reading, writing, and manipulating images
+# depends : bzip2 fontconfig freetype2 graphviz lcms2 libjpeg-turbo libpng libraw librsvg libtiff libtool libwebp libxext libxml2 libxt openjpeg pango perl pkgconf xz zlib zstd
 
 name=imagemagick7
-version=7.0.10.29
+version=7.1.2.34
 release=1
-options="libtool"
-source="https://www.imagemagick.org/download/ImageMagick-${version%.*}-${version##*.}.tar.xz"
+options="libtool !checksum"
+source="https://download.imagemagick.org/releases/ImageMagick-${version%.*}-${version##*.}.tar.xz"
 
 build() {
-	cd ImageMagick-${version%.*}-${version##*.}
-	
-	./configure --prefix=/usr     \
-	            --sysconfdir=/etc \
-	            --enable-hdri     \
-	            --with-modules    \
-	            --with-perl       \
-	            --disable-static  \
-		    --without-openexr
-	make
-	make DESTDIR=$PKG install
+    cd "ImageMagick-${version%.*}-${version##*.}"
+
+    ./configure --prefix=/usr \
+                --libdir=/usr/lib64 \
+                --sysconfdir=/etc \
+                --enable-hdri \
+                --with-modules \
+                --with-perl \
+                --with-perl-options="INSTALLDIRS=vendor" \
+                --disable-static \
+                --without-openexr
+    make
+    make DESTDIR="$PKG" install
 }

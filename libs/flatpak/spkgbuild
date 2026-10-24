@@ -1,10 +1,10 @@
 # description : flatpak - KDE dependency
-# depends : appstream-qt bubblewrap curl fuse3 gdk-pixbuf glib gpgme json-glib libarchive libcap libseccomp libxau libxml2 meson ninja ostree xdg-dbus-proxy zstd
+# depends : appstream-qt bison bubblewrap curl dconf fuse3 gdk-pixbuf gettext glib gpgme json-glib libarchive libcap libseccomp libxau libxml2 meson ninja ostree pkgconf python-pyparsing wayland wayland-protocols xdg-dbus-proxy zstd
 # note : SysVinit build supports per-user Flatpak installs; privileged system helper disabled.
 
 name=flatpak
 version=1.18.4
-release=1
+release=2
 
 source="$name-$version.tar.xz::https://github.com/flatpak/flatpak/releases/download/$version/flatpak-$version.tar.xz"
 options="!checksum"

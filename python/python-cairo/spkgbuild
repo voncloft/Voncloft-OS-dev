@@ -1,20 +1,14 @@
-# description	: python bindings to Cairo
-# depends	: python cairo
+# description : Compatibility package for the Cairo bindings supplied by pycairo
+# depends : pycairo
 
 name=python-cairo
-version=1.26.1
+version=1.28.0
 release=1
-
-source="https://github.com/pygobject/pycairo/releases/download/v$version/pycairo-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd pycairo-$version
-   mkdir build &&
-cd    build &&
-
-meson setup --prefix=/usr --buildtype=release .. &&
-ninja
-
-DESTDIR=$PKG ninja install
- }
+    # This name must not install a second copy of Cairo's Python files.
+    install -d "$PKG/usr/share/doc/python-cairo"
+    printf '%s\n' 'Cairo Python bindings are supplied by the pycairo package.' \
+        > "$PKG/usr/share/doc/python-cairo/README"
+}

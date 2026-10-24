@@ -1,0 +1,33 @@
+krdp-6.8.1-2
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/krdpserver
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/cmake/
+drwxr-xr-x root/root    usr/lib64/cmake/KRdp/
+-rw-r--r-- root/root    usr/lib64/cmake/KRdp/KRdpConfig.cmake
+-rw-r--r-- root/root    usr/lib64/cmake/KRdp/KRdpConfigVersion.cmake
+-rwxr-xr-x root/root    usr/lib64/libKRdp.so.6.8.1
+lrwxrwxrwx root/root    usr/lib64/libKRdp.so.6 -> libKRdp.so.6.8.1
+lrwxrwxrwx root/root    usr/lib64/libKRdp.so -> libKRdp.so.6
+drwxr-xr-x root/root    usr/lib64/qt6/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/plasma/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/plasma/kcms/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/plasma/kcms/systemsettings/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/plasma/kcms/systemsettings/kcm_krdpserver.so
+drwxr-xr-x root/root    usr/lib/systemd/
+drwxr-xr-x root/root    usr/lib/systemd/user/
+-rw-r--r-- root/root    usr/lib/systemd/user/app-org.kde.krdpserver.service
+drwxr-xr-x root/root    usr/lib/systemd/user-preset/
+-rw-r--r-- root/root    usr/lib/systemd/user-preset/00-krdp.preset
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/kcm_krdpserver.desktop
+-rw-r--r-- root/root    usr/share/applications/org.kde.krdpserver.desktop
+drwxr-xr-x root/root    usr/share/config.kcfg/
+-rw-r--r-- root/root    usr/share/config.kcfg/krdpserversettings.kcfg
+drwxr-xr-x root/root    usr/share/qlogging-categories6/
+-rw-r--r-- root/root    usr/share/qlogging-categories6/kcm_krdpserver.categories
+-rw-r--r-- root/root    usr/share/qlogging-categories6/krdp.categories

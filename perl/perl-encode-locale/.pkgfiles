@@ -1,0 +1,16 @@
+perl-encode-locale-1.05-7
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Encode/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Encode/Locale/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/Encode/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/Encode/Locale.pm
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/Encode::Locale.3.gz

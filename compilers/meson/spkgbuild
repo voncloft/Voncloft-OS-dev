@@ -1,13 +1,18 @@
-# description	: Open source build system meant to be both extremely fast, and, even more importantly, as user friendly as possible
-# depends	: python ninja python-setuptools
+# description : Meson build system
+# depends : python ninja python-setuptools python-wheel
 
 name=meson
 version=1.8.2
-release=1
-source="https://github.com/mesonbuild/meson/releases/download/$version/$name-$version.tar.gz"
+release=2
+source="https://files.pythonhosted.org/packages/source/m/meson/meson-$version.tar.gz"
+options="!checksum"
 
 build() {
-	cd $name-$version
-	python setup.py build
-	python setup.py install --root=$PKG
+    cd "meson-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/meson-"$version"-*.whl
 }

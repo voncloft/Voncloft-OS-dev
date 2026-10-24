@@ -1,0 +1,20 @@
+# description : Character encoding detection for Requests
+# depends : python python-setuptools python-wheel
+
+name=python-charset-normalizer
+version=3.5.2
+release=1
+source="https://files.pythonhosted.org/packages/source/c/charset_normalizer/charset_normalizer-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "charset_normalizer-$version"
+    export PYTHONNOUSERSITE=1
+    # The upstream default is the portable Python implementation.
+    export CHARSET_NORMALIZER_USE_CYTHON=0
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/charset_normalizer-"$version"-*.whl
+}

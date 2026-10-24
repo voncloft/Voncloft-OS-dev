@@ -1,16 +1,18 @@
-# description : HTTP library with thread-safe connection pooling and file post support
-  # description : urllib3 Documentation
-  # depends : python
+# description : Python HTTP connection pooling
+# depends : python hatchling hatch-vcs python-setuptools-scm
 
 name=python-urllib3
-version=2.5.0
+version=2.8.0
 release=1
-
-source="https://github.com/urllib3/urllib3/archive/refs/tags/$version.tar.gz"
+source="https://files.pythonhosted.org/packages/source/u/urllib3/urllib3-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "urllib3-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/urllib3-"$version"-*.whl
+}

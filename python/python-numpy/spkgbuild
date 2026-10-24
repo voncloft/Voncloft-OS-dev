@@ -1,15 +1,18 @@
-# description : Scientific tools for Python
-# depends : cython3 python-meson python-metadata
+# description : Scientific array tools for Python
+# depends : python cython3 python-meson python-metadata meson ninja pkgconf
 
 name=python-numpy
 version=2.3.1
-release=1
-
+release=2
 source="https://files.pythonhosted.org/packages/source/n/numpy/numpy-$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir -C setup-args=-Dallow-noblas=true $PWD
-	pip3 install --no-index --find-links dist --no-user numpy --root=$PKG
- }
+    cd "numpy-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist -C setup-args=-Dallow-noblas=true .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/numpy-"$version"-*.whl
+}

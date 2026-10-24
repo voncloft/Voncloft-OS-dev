@@ -1,17 +1,18 @@
-# description   : The Vulkan-Headers package contains a set of header files necessary to build and link applications against the Vulkan API
-# depends       : cmake
+# description : Vulkan C and C++ API headers
+# depends : cmake ninja
 
 name=vulkan-headers
-version=1.4.313
+version=1.4.365
 release=1
-source=" https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.4.313/Vulkan-Headers-1.4.313.tar.gz"
+source="Vulkan-Headers-$version.tar.gz::https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {
-        cd *
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=/usr -G Ninja .. 
-ninja
-DESTDIR=$PKG ninja install
+    cd "Vulkan-Headers-$version"
+    cmake -S . -B build -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DVULKAN_HEADERS_ENABLE_TESTS=OFF \
+        -DVULKAN_HEADERS_ENABLE_MODULE=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
 }

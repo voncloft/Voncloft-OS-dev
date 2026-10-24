@@ -1,5 +1,5 @@
 # description : appstream-qt - KDE dependency
-# depends : curl glib gperf libfyaml libxml2 libxmlb meson ninja qt6 wayland zstd
+# depends : bash-completion curl glib gperf libfyaml libxml2 libxmlb meson ninja qt6 wayland zstd
 
 name=appstream-qt
 version=1.2.1

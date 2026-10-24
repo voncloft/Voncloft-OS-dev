@@ -1,15 +1,18 @@
-# description : Scientific tools for Python
-# depends : python-metadata
+# description : Meson backend for Python wheels
+# depends : python meson ninja python-packaging python-metadata
 
 name=python-meson
 version=0.17.1
-release=1
-
+release=2
 source="https://files.pythonhosted.org/packages/source/m/meson_python/meson_python-$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user meson_python --root=$PKG
- }
+    cd "meson_python-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/meson_python-"$version"-*.whl
+}

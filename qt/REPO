@@ -33,6 +33,7 @@ f:59bf65f2b85f9ace7766c095a1bb653b:qca/qca-2.1.3-openssl-1.patch
 f:6487dbfb680c3b676204e8a4b386a396:qca/spkgbuild
 f:1df9aa896db520b8fcb804e3a9bbdc11:qtermwidget/CHANGELOG
 f:15aef8c845a6bad3c0162dc31b73a395:qtermwidget/spkgbuild
+f:880585e76e1e7f23b9d8732b36e0e864:networkmanager-qt/.pkgfiles
 f:55df71b27f4cda641a2ebd8a82d20500:networkmanager-qt/CHANGELOG
 f:f39bc3c1d7882e10e6ad689a40109080:networkmanager-qt/spkgbuild
 f:3bbaade499e7299b2ca06d1750a5c188:libdbusmenu-qt/spkgbuild
@@ -60,7 +61,8 @@ f:7dd439f309dcc0bf0c3dc3d567cfdfaa:layer-shell-qt/spkgbuild
 f:91310743cb79d73e7ddd7771d2974713:bluez-qt/.pkgfiles
 f:2b08e0c28c0c602a27153fc4616ec30d:bluez-qt/CHANGELOG
 f:3638d895a4d3081b467469040ef7b691:bluez-qt/spkgbuild
-f:5812c638bbce13bc45d784ed8e7d2d39:appstream-qt/spkgbuild
+f:5411be55c5d3b1854ace075eaf9713b6:appstream-qt/.pkgfiles
+f:c87a98ed066aedc4953ff81799900662:appstream-qt/spkgbuild
 f:9aea1b15a7061ca7fc504dec279b3f62:qtwebengine/pre-upgrade.sh
 f:d8e3650dd0fca51128187d8bd8504786:qtwebengine/post-upgrade.sh
 f:92a09a502780d05962aee7d216902c51:qtwebengine/CHANGELOG
@@ -85,7 +87,8 @@ f:aadd40347642d4a60f78270664b2d369:qt6/main.patch
 f:39a4717a7d5cc1751c3f98d07b3291e4:qt6/override
 f:9ced8d2f52aef30cdb12bcdea20b8aef:qgpgme-qt/.pkgfiles
 f:65e60b852696ddc79dd319869bc8b5ce:qgpgme-qt/spkgbuild
-f:134f5d301b5533f65aa0e0dcde44c58b:packagekit-qt/spkgbuild
+f:7de355a1845458223351a46391c68717:packagekit-qt/.pkgfiles
+f:66a584eaea9525646eaf3543889798dc:packagekit-qt/spkgbuild
 f:cf657e78267e08eb2db240c1d07e79c7:qtkeychain/.pkgfiles
 f:c1af057ee91408ede10e2a8476240c24:qtkeychain/spkgbuild
 f:0cee68ef72fa1523b562a6e86738a712:qterminal/CHANGELOG
@@ -96,5 +99,6 @@ f:1e4026d97fdb35c9f2802421d6b7aeda:qcoro/.pkgfiles
 f:f7ad44750c288cfffb214a19239390c5:qcoro/CHANGELOG
 f:bbb9cccc62680fa0d3ee8e38bc44b519:qcoro/spkgbuild
 f:d45cb57ce61769a6f66d3d9f5af37622:.httpup-repo.current
+f:b42c9a7dd8088b9bfd220837cffa0ebb:modemmanager-qt/.pkgfiles
 f:117698f706391ac121ae5b46662c48dc:modemmanager-qt/CHANGELOG
 f:63a48862f01d8eb0182a3206dc007632:modemmanager-qt/spkgbuild

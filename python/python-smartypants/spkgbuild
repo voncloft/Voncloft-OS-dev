@@ -1,15 +1,18 @@
-# description : Python with the SmartyPants
-# depends : python
+# description : Python typography filter for quotes, dashes, and ellipses
+# depends : python python-setuptools python-wheel
 
 name=python-smartypants
 version=2.0.2
-release=7
+release=8
 
-source="https://github.com/leohemsted/smartypants.py/archive/refs/tags/v$version.tar.gz"
+source="smartypants.py-$version.tar.gz::https://github.com/leohemsted/smartypants.py/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "smartypants.py-$version"
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Stage the wheel even if this version is already installed on the host.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/smartypants-"$version"-*.whl
+}

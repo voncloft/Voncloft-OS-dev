@@ -298,9 +298,10 @@ f:06b420f99bedfaaf2cf4b60968308651:ktp-contact-runner/CHANGELOG
 f:0f9e54535eaa427fc92cb12230809bf6:ktp-contact-runner/spkgbuild
 f:88f924eb1b7b6b0f6809ab55aefbd037:akonadi-search/.pkgfiles
 f:f5e069c997747502c0ca9c5f033cc747:akonadi-search/CHANGELOG
-f:ef9e13d174558994a37c5bfa6a5875f2:akonadi-search/spkgbuild
+f:121c8361245d7000a5d7d9d2f7b50b9c:akonadi-search/spkgbuild
 f:ea500ce04394772d42e011ca001b10bc:kio-admin/CHANGELOG
 f:308b4c3d3aea931615231cc52433c701:kio-admin/spkgbuild
+f:8a076f892fb52dcd738ee5501314c21c:libksane/.pkgfiles
 f:623b876420284e7b3450324a1ce2f073:libksane/CHANGELOG
 f:c0f303b348ed62a9b89b5dc3c66d50bd:libksane/spkgbuild
 f:9d2c80bf8e0904ee46d0162fda838d0a:kget/CHANGELOG
@@ -429,6 +430,7 @@ f:12fe2e1400d1fd15cb5c808bea3a653c:grantleetheme/CHANGELOG
 f:22d9a40dde0e29c01195a19be9cc5314:grantleetheme/spkgbuild
 f:3abd8b61a59b9a9e3ab6628bccbb3058:kspaceduel/CHANGELOG
 f:7740f792ddee79e3b0f27b4f6ecfc583:kspaceduel/spkgbuild
+f:2b4c87322d9c3fe2b7ee7d0360346331:baloo-widgets/.pkgfiles
 f:d075e6f81c6d82f8cae87f312a3a0ee8:baloo-widgets/CHANGELOG
 f:a6da82e01f3bdbf22d2c0b3450579e23:baloo-widgets/spkgbuild
 f:489a37eea695c02b25b7af6360844790:accessibility-inspector/spkgbuild
@@ -553,7 +555,7 @@ f:6c5d1aeb26446833582ee45d4343ce3e:umbrello/CHANGELOG
 f:f7e87cd1c5d02051594c48584dee4d8c:umbrello/spkgbuild
 f:2dbfb11c637ded2224f0db537e30de96:kdepim-addons/.pkgfiles
 f:fb81a3bbdfce7f332173cf3975296b10:kdepim-addons/CHANGELOG
-f:fd16679bbfc329eb49d7c59692949b7c:kdepim-addons/spkgbuild
+f:d55bd497ff75365738ca83f9061cb5b9:kdepim-addons/spkgbuild
 f:383d039d6d8363868ab2045b26cbf6bc:libkdepim/.pkgfiles
 f:0fd83c54242ca8154689155107c4340e:libkdepim/CHANGELOG
 f:b2011f071f572bc4ccd334b1d7c73c2d:libkdepim/spkgbuild
@@ -869,6 +871,7 @@ f:8a37acdfd5a80df06ddd6fc645efdc10:ktp-common-internals/spkgbuild
 f:394ad821ddb3d0108eae169de06e9e0a:dolphin-plugins/.pkgfiles
 f:af936bb768e6b826b164df52769c601a:dolphin-plugins/CHANGELOG
 f:a23b96b78e2966910906681a83e0c207:dolphin-plugins/spkgbuild
+f:078ab44419aeb982b1a8f9a39d265184:ksanecore/.pkgfiles
 f:ff1c3059e9dadfbb5bab4ceb3e7413db:ksanecore/CHANGELOG
 f:1732988e6a62f9e46de7aa3526f7e8ed:ksanecore/spkgbuild
 f:066d7e960c1749999231ba450ed12614:kwave/CHANGELOG

@@ -3,14 +3,14 @@
 
 name=plasma-integration
 version=6.8.1
-release=1
+release=2
 
 source="https://download.kde.org/stable/plasma/$version/plasma-integration-$version.tar.xz"
 options="!checksum"
 
 build() {
     cd "plasma-integration-$version"
-    plasma-package-installer
+    plasma-package-installer -DBUILD_QT5=OFF -DBUILD_QT6=ON
     cd build
     make DESTDIR="$PKG" install
 }

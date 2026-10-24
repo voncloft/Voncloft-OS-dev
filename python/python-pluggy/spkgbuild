@@ -1,15 +1,18 @@
-# description : Plugin and hook calling mechanisms for python
-  # depends : python-importlib-metadata
+# description : Python plugin and hook calling mechanisms
+# depends : python python-setuptools python-setuptools-scm python-wheel
 
 name=python-pluggy
 version=1.6.0
-release=4
+release=5
 
-source="https://github.com/pytest-dev/pluggy/archive/refs/tags/d$version.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/pluggy/pluggy-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "pluggy-$version"
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Stage the wheel even if this version is already installed on the host.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/pluggy-"$version"-*.whl
+}

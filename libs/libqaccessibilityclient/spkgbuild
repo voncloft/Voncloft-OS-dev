@@ -3,14 +3,14 @@
 
 name=libqaccessibilityclient
 version=0.6.0
-release=1
+release=2
 
 source="https://download.kde.org/stable/libqaccessibilityclient/libqaccessibilityclient-$version.tar.xz"
 options="!checksum"
 
 build() {
     cd "libqaccessibilityclient-$version"
-    plasma-package-installer
+    plasma-package-installer -DQT_MAJOR_VERSION=6
     cd build
     make DESTDIR="$PKG" install
 }

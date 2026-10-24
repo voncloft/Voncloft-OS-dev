@@ -1,8 +1,8 @@
 # description	: Next generation of the python high-level scripting language
-# depends	: libffi sqlite
+# depends	: bzip2 expat gdbm libffi ncurses openssl readline sqlite xz zlib pkgconf
 
 name=python
-version=3.10.6
+version=3.13.5
 release=1
 source="https://www.python.org/ftp/python/$version/Python-$version.tar.xz"
 
@@ -15,7 +15,6 @@ build() {
 	./configure --prefix=/usr        \
             --enable-shared      \
             --with-system-expat  \
-            --with-system-ffi    \
             --with-ensurepip=yes \
             --enable-optimizations
 	make

@@ -1,13 +1,18 @@
-# description	: C-Extensions for Python3
-# depends	: python
+# description : C extensions for Python
+# depends : python python-setuptools python-wheel
 
 name=cython3
 version=3.1.2
-release=1
-source="https://github.com/cython/cython/releases/download/$version/cython-$version.tar.gz"
+release=2
+source="https://files.pythonhosted.org/packages/source/c/cython/cython-$version.tar.gz"
+options="!checksum"
 
 build() {
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user Cython --root=$PKG
+    cd "cython-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Always stage the wheel, even when this distribution is installed already.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/cython-"$version"-*.whl
 }

@@ -1,9 +1,9 @@
 # description : avahi KDE dependency
-# depends : glib dbus expat gdbm libdaemon libcap intltool libtool pkgconf
+# depends : glib dbus expat gdbm libdaemon libcap libevent intltool libtool pkgconf
 
 name=avahi
 version=0.8
-release=3
+release=4
 source="https://github.com/avahi/avahi/releases/download/v$version/avahi-$version.tar.gz"
 options="!checksum"
 
@@ -11,8 +11,8 @@ build() {
     cd "$name-$version"
     ./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --localstatedir=/var \
         --with-distro=none --with-systemdsystemunitdir=no --disable-static \
-        --disable-qt3 --disable-qt4 --disable-gtk --disable-gtk3 \
-        --disable-python --disable-pygtk --disable-python-dbus \
+        --disable-qt3 --disable-qt4 --disable-qt5 --disable-gtk --disable-gtk3 \
+        --disable-python --disable-python-dbus \
         --disable-mono --disable-monodoc --disable-autoipd --disable-doxygen-doc
     make
     make DESTDIR="$PKG" install

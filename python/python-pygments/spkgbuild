@@ -1,18 +1,18 @@
 # description : Python syntax highlighter
-# depends : python-setuptools
+# depends : python hatchling python-wheel
 
 name=python-pygments
 version=2.19.2
-release=1
-pyn=python-Pygments
+release=2
 
-source="https://pypi.org/packages/source/P/Pygments/Pygments-2.10.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/pygments/pygments-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-   echo $PKG
-   pip3 install --no-index --find-links dist --no-user Pygments --root=$PKG
-   echo $PKG
- }
+    cd "pygments-$version"
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    # Stage the wheel even if this version is already installed on the host.
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/pygments-"$version"-*.whl
+}

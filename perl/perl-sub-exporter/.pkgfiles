@@ -1,0 +1,23 @@
+perl-sub-exporter-0.988-6
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Sub/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/Sub/Exporter/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/Sub/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/Sub/Exporter/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/Sub/Exporter/Cookbook.pod
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/Sub/Exporter.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/Sub/Exporter/Tutorial.pod
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/Sub/Exporter/Util.pm
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/Sub::Exporter.3.gz
+-r--r--r-- root/root    usr/share/man/man3/Sub::Exporter::Cookbook.3.gz
+-r--r--r-- root/root    usr/share/man/man3/Sub::Exporter::Tutorial.3.gz
+-r--r--r-- root/root    usr/share/man/man3/Sub::Exporter::Util.3.gz
