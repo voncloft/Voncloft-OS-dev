@@ -1,15 +1,16 @@
-# description	: C library that allows cryptography support to be added to a program
-# depends	: libassuan
+# description : gpgme - KDE dependency
+# depends : gnupg libassuan libgpg-error make
 
 name=gpgme
-version=2.0.0
+version=2.2.0
 release=1
-source="https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2"
+
+source="$name-$version.tar.bz2::https://gnupg.org/ftp/gcrypt/gpgme/gpgme-$version.tar.bz2"
+options="!checksum"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr --disable-gpg-test --disable-static
-	make
-	make DESTDIR=$PKG install
+    cd "gpgme-$version"
+    ./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --localstatedir=/var --disable-gpg-test --disable-static
+    make
+    make DESTDIR="$PKG" install
 }
-

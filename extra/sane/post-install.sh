@@ -1,6 +1,4 @@
 #!/bin/sh
-install -m 644 -v tools/udev/libsane.rules           \
-                  /etc/udev/rules.d/65-scanner.rules &&
-mkdir -p          /run/lock/sane &&
-chgrp -v scanner  /run/lock/sane
-
+set -e
+# The udev rules belong to the package; only this runtime directory is created here.
+install -d -m 0775 -g scanner /run/lock/sane

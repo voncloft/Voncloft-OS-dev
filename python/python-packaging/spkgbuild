@@ -1,15 +1,14 @@
-# description : Core utilities for Python packages
-  # depends : python-pyparsing python-six
+# description : packaging Python build/runtime dependency
+# depends : python python-flit python-wheel
 
 name=python-packaging
-version=25.0
+version=26.3
 release=1
-
-source="https://github.com/pypa/packaging/archive/refs/tags/$version.tar.gz"
+source="https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "packaging-26.3"
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

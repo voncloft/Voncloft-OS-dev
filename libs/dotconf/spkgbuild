@@ -1,0 +1,17 @@
+# description : Configuration-file parser used by Speech Dispatcher
+# depends : autoconf automake libtool make
+
+name=dotconf
+version=1.4.1
+release=1
+source="dotconf-$version.tar.gz::https://github.com/williamh/dotconf/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    autoreconf -fiv
+    CFLAGS="${CFLAGS:--O2} -std=gnu17" ./configure \
+        --prefix=/usr --libdir=/usr/lib64 --disable-static
+    make
+    make DESTDIR="$PKG" install
+}

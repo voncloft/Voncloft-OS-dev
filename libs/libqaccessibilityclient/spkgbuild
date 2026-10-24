@@ -1,0 +1,16 @@
+# description : libqaccessibilityclient - KDE independent component
+# depends : extra-cmake-modules kde-deps-installer qt6
+
+name=libqaccessibilityclient
+version=0.6.0
+release=1
+
+source="https://download.kde.org/stable/libqaccessibilityclient/libqaccessibilityclient-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "libqaccessibilityclient-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

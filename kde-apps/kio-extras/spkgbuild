@@ -1,20 +1,16 @@
-# description   : The kio-extras package contains additional components to increase the functionality of the KDE resource and network access abstractions
-# depends       : kf-depends kdsoap-ws-discovery-client libproxy plasma-activities-stats qcoro libkexiv2 solid kio syntax-highlighting kcmutils ktextwidgets
+# description : The kio-extras package contains additional components to increase the functionality of the KDE resource and network access abstractions
+# depends : extra-cmake-modules karchive kcmutils kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdnssd kdoctools kdsoap kdsoap-ws-discovery-client kguiaddons ki18n kio knotifications libkexiv2 libproxy plasma-activities plasma-activities-stats qcoro qt6 solid syntax-highlighting
 
 name=kio-extras
-version=24.12.3
+version=26.08.2
 release=1
-source="https://download.kde.org/stable/release-service/24.12.3/src/kio-extras-$version.tar.xz"
+
+source="https://download.kde.org/stable/release-service/$version/src/kio-extras-$version.tar.xz"
 options="!checksum"
 
 build() {
-        cd *
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
--D CMAKE_BUILD_TYPE=Release         \
--D BUILD_TESTING=OFF                \
--W no-dev .. 
-make
-make DESTDIR=$PKG install
+    cd "kio-extras-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

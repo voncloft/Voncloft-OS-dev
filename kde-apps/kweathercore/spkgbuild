@@ -1,0 +1,16 @@
+# description : kweathercore - KDE gear component
+# depends : extra-cmake-modules kde-deps-installer kholidays ki18n qt6
+
+name=kweathercore
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/kweathercore-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kweathercore-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

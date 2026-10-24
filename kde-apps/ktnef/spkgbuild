@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : extra-cmake-modules kcalendarcore kcalutils kcontacts kde-deps-installer ki18n qt6
 
 name=ktnef
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/ktnef-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "ktnef-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

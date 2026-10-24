@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : akonadi akonadi-mime extra-cmake-modules kcalendarcore kcmutils kconfig kcontacts kcrash kdbusaddons kde-deps-installer ki18n kio kmime krunner ktextaddons qt6 xapian
 
 name=akonadi-search
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/akonadi-search-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "akonadi-search-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

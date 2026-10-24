@@ -1,10 +1,12 @@
-ccache-4.6.1-1
+ccache-4.14.2-1
+drwxr-xr-x root/root    etc/
+-rw-r--r-- root/root    etc/ccache.conf.spkgnew
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/ccache
 drwxr-xr-x root/root    usr/lib/
 drwxr-xr-x root/root    usr/lib/ccache/
-lrwxrwxrwx root/root    usr/lib/ccache/c++ -> /usr/bin/ccache
 lrwxrwxrwx root/root    usr/lib/ccache/cc -> /usr/bin/ccache
-lrwxrwxrwx root/root    usr/lib/ccache/g++ -> /usr/bin/ccache
+lrwxrwxrwx root/root    usr/lib/ccache/c++ -> /usr/bin/ccache
 lrwxrwxrwx root/root    usr/lib/ccache/gcc -> /usr/bin/ccache
+lrwxrwxrwx root/root    usr/lib/ccache/g++ -> /usr/bin/ccache

@@ -1,16 +1,19 @@
-# description : This is a Python implementation of the WHATWG Encoding standard.
-# description : This is a Python implementation of the WHATWG Encoding standard.
-# depends : python
+# description : Python implementation of the WHATWG Encoding standard
+# depends : python python-flit
 
 name=python-webencodings
-version=0.5.1
-release=6
-
-source="https://github.com/gsnedders/python-webencodings/archive/refs/tags/v$version.tar.gz"
+version=0.6.1
+release=1
+source="https://files.pythonhosted.org/packages/source/w/webencodings/webencodings-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "webencodings-$version"
+
+    # The existing python-flit package supplies the flit_core build backend.
+    # pip is included by this repository's Python build via ensurepip.
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

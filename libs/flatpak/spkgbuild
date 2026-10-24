@@ -1,0 +1,17 @@
+# description : flatpak - KDE dependency
+# depends : appstream-qt bubblewrap curl fuse3 gdk-pixbuf glib gpgme json-glib libarchive libcap libseccomp libxau libxml2 meson ninja ostree xdg-dbus-proxy zstd
+# note : SysVinit build supports per-user Flatpak installs; privileged system helper disabled.
+
+name=flatpak
+version=1.18.4
+release=1
+
+source="$name-$version.tar.xz::https://github.com/flatpak/flatpak/releases/download/$version/flatpak-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "flatpak-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dsystemd=disabled -Dsystem_helper=disabled -Dmalcontent=disabled -Dselinux_module=disabled -Dtests=false -Dgir=disabled -Dgtkdoc=disabled -Ddocbook_docs=disabled -Dman=disabled -Dsystem_bubblewrap=/usr/bin/bwrap -Dsystem_dbus_proxy=/usr/bin/xdg-dbus-proxy
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

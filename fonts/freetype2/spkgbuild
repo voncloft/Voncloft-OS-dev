@@ -1,10 +1,13 @@
+# note : HarfBuzz is detected when installed. For a new font stack: FreeType, Graphite2, HarfBuzz, then rebuild FreeType.
 # description	: Font rasterization library
-# depends	: libpng which harfbuzz
+# depends : libpng which
 
 name=freetype2
 version=2.13.3
-release=1
+release=2
 source="https://downloads.sourceforge.net/freetype/freetype-$version.tar.xz"
+
+options="!checksum"
 
 build() {
 	cd freetype-$version

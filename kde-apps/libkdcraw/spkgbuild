@@ -1,22 +1,16 @@
-# description   : Libkdcraw is a KDE wrapper around the libraw-0
-# depends       : libraw
+# description : Libkdcraw is a KDE wrapper around the libraw-0
+# depends : extra-cmake-modules kde-deps-installer libraw qt6
 
 name=libkdcraw
-version=25.04.0    
+version=26.08.2
 release=1
-source="https://download.kde.org/stable/release-service/25.04.0/src/libkdcraw-25.04.0.tar.xz"
 
+source="https://download.kde.org/stable/release-service/$version/src/libkdcraw-$version.tar.xz"
 options="!checksum"
 
 build() {
-        cd $name-$version
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
--D CMAKE_BUILD_TYPE=Release         \
--D BUILD_TESTING=OFF                \
--D QT_MAJOR_VERSION=6               \
--W no-dev .. 
-make
-make DESTDIR=$PKG install
+    cd "libkdcraw-$version"
+    plasma-package-installer -DQT_MAJOR_VERSION=6
+    cd build
+    make DESTDIR="$PKG" install
 }

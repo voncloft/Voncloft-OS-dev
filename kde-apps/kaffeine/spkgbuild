@@ -1,15 +1,16 @@
+# note : Preserves the local kaffeine.tar.xz Qt6 port (source identifies itself as 2.1.0).
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : kde-deps-installer extra-cmake-modules qt6 kcoreaddons kconfig ki18n kxmlgui kio solid kdbusaddons vlc v4l-utils
 
 name=kaffeine
 version=2.0.19
-release=1
+release=2
 
 source="kaffeine.tar.xz"
 options="!checksum"
 
 build() {
-   cd *
+   cd kaffeine
    plasma-package-installer
   cd build
   make DESTDIR=$PKG install

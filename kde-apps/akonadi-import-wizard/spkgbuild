@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : akonadi extra-cmake-modules karchive kconfig kcontacts kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kidentitymanagement kio kmailtransport mailcommon mailimporter messagelib pimcommon qt6 qtkeychain
 
 name=akonadi-import-wizard
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/akonadi-import-wizard-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "akonadi-import-wizard-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

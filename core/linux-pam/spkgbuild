@@ -1,9 +1,10 @@
+# note : Build PAM before libpwquality; pam_pwquality is a separate optional password-policy module.
 # description : contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users
-# depends : libnsl libtirpc rpcsvc-proto libpwquality
+# depends : libnsl libtirpc rpcsvc-proto meson ninja
 
 name=linux-pam
 version=1.7.1
-release=1
+release=2
 
 source="https://github.com/linux-pam/linux-pam/releases/download/v$version/Linux-PAM-$version.tar.xz"
 
@@ -28,7 +29,7 @@ build() {
 	chmod -v 4755 $PKG/usr/sbin/unix_chkpwd
 
 	install -v -m755 -d $PKG/etc/pam.d
-	$rm -rf $PKG/usr/lib/systemd
+	rm -rf "$PKG/usr/lib/systemd"
 #cat > $PKG/etc/pam.d/other <<"EOF"
 # Begin /etc/pam.d/other
 

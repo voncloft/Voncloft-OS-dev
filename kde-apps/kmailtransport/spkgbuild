@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps ksmtp libkgapi qt6-keychain kmime akonadi-mime
+# depends : extra-cmake-modules kconfigwidgets kde-deps-installer ki18n kio ksmtp libkgapi qt6 qtkeychain
 
 name=kmailtransport
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kmailtransport-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kmailtransport-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

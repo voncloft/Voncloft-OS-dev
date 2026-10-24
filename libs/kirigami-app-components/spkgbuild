@@ -1,0 +1,16 @@
+# description : kirigami-app-components - KDE independent component
+# depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kglobalaccel kguiaddons ki18n kiconthemes kirigami kitemmodels qt6
+
+name=kirigami-app-components
+version=1.1.1
+release=1
+
+source="https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kirigami-app-components-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

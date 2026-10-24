@@ -1,13 +1,16 @@
 # description : Core components for the kde desktop
+# depends : kde-deps-installer extra-cmake-modules python python-setuptools python-wheel python-doxypypy python-doxyqml python-requests jinja2 python-yaml doxygen graphviz
 
 name=kapidox
-version=6.19.0
+version=6.31.0
 release=1
 
-source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
+source="https://download.kde.org/stable/frameworks/${version%.*}/kapidox-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-        pip3 install . --root=$PKG   
+    cd "kapidox-$version"
+    kf-package-installer
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

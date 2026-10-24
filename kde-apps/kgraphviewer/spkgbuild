@@ -1,0 +1,16 @@
+# description : kgraphviewer - KDE gear component
+# depends : boost extra-cmake-modules graphviz kcoreaddons kde-deps-installer kdoctools ki18n kparts kwidgetsaddons qt6
+
+name=kgraphviewer
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/kgraphviewer-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kgraphviewer-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

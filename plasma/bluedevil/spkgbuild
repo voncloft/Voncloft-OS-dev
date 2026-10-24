@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : bluez-qt extra-cmake-modules kauth kcmutils kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdoctools ki18n kio kitemviews kjobwidgets knotifications kservice ksvg kwidgetsaddons kwindowsystem kxmlgui libplasma plasma-workspace qt6 shared-mime-info solid
 
 name=bluedevil
-version=6.5.2
+version=6.8.1
 release=1
 
-source="https://github.com/KDE/bluedevil/archive/refs/tags/v6.5.2.tar.gz"
+source="https://download.kde.org/stable/plasma/$version/bluedevil-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "bluedevil-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

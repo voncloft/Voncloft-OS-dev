@@ -155,7 +155,7 @@ f:d47364d92daa073c4df24cdab7f41e30:libclc-32/spkgbuild
 f:df3388ac2a1a521cf7aa259f1afb06a0:libtool-32/spkgbuild
 f:83dc9f46e25a0028d777bf7ff23fe0ac:vulkan-loader-32/spkgbuild
 f:330289c0f70baebc24d416ea4ba002dc:pixman-32/spkgbuild
-f:c5cdec9813678cff457172a31a9bce7a:libgpg-error-32/spkgbuild
+f:41325e4d356cef2b7b051bfcae7622b7:libgpg-error-32/spkgbuild
 f:d98f0ce9de7a5ac292ab7dcc9293f3a1:libxmu-32/.pkgfiles
 f:0901abdbc59f9ea5e380680edcea0fbd:libxmu-32/spkgbuild
 f:d540cac4855d16c2353e25c781499511:libxxf86dga-32/.pkgfiles

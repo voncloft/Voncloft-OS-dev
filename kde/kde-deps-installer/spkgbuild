@@ -1,9 +1,9 @@
 # description : a kde installer that can be used in spkgbuild scripts
-# depends : 
+# depends : cmake make
 
 name=kde-deps-installer
 version=6
-release=1
+release=2
 
 source="kf-package-installer
 	plasma-package-installer"

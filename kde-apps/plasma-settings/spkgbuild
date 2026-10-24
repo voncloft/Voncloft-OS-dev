@@ -1,0 +1,16 @@
+# description : plasma-settings - KDE gear component
+# depends : extra-cmake-modules kcmutils kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kirigami-addons kitemmodels kitemviews kservice qqc2-desktop-style qt6
+
+name=plasma-settings
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/plasma-settings-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "plasma-settings-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

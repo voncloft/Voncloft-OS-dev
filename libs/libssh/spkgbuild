@@ -1,0 +1,16 @@
+# description : libssh - KDE dependency
+# depends : kde-deps-installer openssl zlib
+
+name=libssh
+version=0.12.2
+release=1
+
+source="$name-$version.tar.xz::https://www.libssh.org/files/0.12/libssh-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "libssh-$version"
+    plasma-package-installer -DWITH_EXAMPLES=OFF -DUNIT_TESTING=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

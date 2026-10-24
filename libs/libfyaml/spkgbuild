@@ -1,0 +1,16 @@
+# description : libfyaml - KDE dependency
+# depends : make
+
+name=libfyaml
+version=0.9.6
+release=1
+
+source="$name-$version.tar.gz::https://github.com/pantoniou/libfyaml/releases/download/v$version/libfyaml-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "libfyaml-$version"
+    ./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --localstatedir=/var --disable-static
+    make
+    make DESTDIR="$PKG" install
+}

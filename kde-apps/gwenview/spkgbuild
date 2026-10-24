@@ -1,23 +1,16 @@
-# description   : Gwenview is a fast and easy-to-use image viewer for KDE
-# depends       : exiv2 kimageannotator  lcms2 libkdcraw
+# description : Gwenview is a fast and easy-to-use image viewer for KDE
+# depends : exiv2 extra-cmake-modules kcolorpicker kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kiconthemes kimageannotator kio kitemmodels knewstuff knotifications kparts kwidgetsaddons kwindowsystem kxmlgui lcms2 libjpeg-turbo libkdcraw libpng plasma-activities purpose qt6 wayland wayland-protocols
 
 name=gwenview
-version=25.08.3    
+version=26.08.2
 release=1
-source="https://download.kde.org/stable/release-service/$version/src/gwenview-$version.tar.xz"
 
+source="https://download.kde.org/stable/release-service/$version/src/gwenview-$version.tar.xz"
 options="!checksum"
 
 build() {
-        cd $name-$version
-        SKIP_OPTIONAL='CFitsio'
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
--D CMAKE_BUILD_TYPE=Release         \
--D BUILD_TESTING=OFF                \
-      -D FORCE_NOT_REQUIRED_DEPENDENCIES="$SKIP_OPTIONAL" \
--W no-dev .. 
-make
-make DESTDIR=$PKG install
+    cd "gwenview-$version"
+    plasma-package-installer '-DFORCE_NOT_REQUIRED_DEPENDENCIES=CFitsio'
+    cd build
+    make DESTDIR="$PKG" install
 }

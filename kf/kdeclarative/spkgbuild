@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : extra-cmake-modules kconfig kde-deps-installer kglobalaccel kguiaddons ki18n kwidgetsaddons qt6
 
 name=kdeclarative
-version=6.19.0
+version=6.31.0
 release=1
 
-source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
+source="https://download.kde.org/stable/frameworks/${version%.*}/kdeclarative-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   kf-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "kdeclarative-$version"
+    kf-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

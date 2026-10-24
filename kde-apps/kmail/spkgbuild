@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : akonadi akonadi-contacts akonadi-mime akonadi-search extra-cmake-modules gpgmepp kbookmarks kcalendarcore kcalutils kcmutils kconfig kconfigwidgets kcontacts kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kidentitymanagement kio kitemviews kjobwidgets kldap kmailtransport kmime knotifications knotifyconfig kontactinterface kparts kpimtextedit kservice kstatusnotifieritem ktextaddons ktnef kuserfeedback kwidgetsaddons kwindowsystem kxmlgui libgpg-error libgravatar libkdepim libkleo libksieve mailcommon messagelib pimcommon plasma-activities qt6 qtkeychain sonnet
 
 name=kmail
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kmail-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kmail-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

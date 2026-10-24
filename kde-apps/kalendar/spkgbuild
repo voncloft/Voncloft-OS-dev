@@ -1,14 +1,12 @@
-# description : calendar application using akonadi
-# depends: eventviews kdepim-runtime kirigami-addons
+# description : Compatibility package name; replaced upstream by merkuro
+# depends : merkuro
+# note : Contains no application files. Use merkuro for the maintained source package.
 
 name=kalendar
-version=25.04.0
+version=26.08.2
 release=1
+options="!checksum"
 
-source="https://github.com/KDE/kalendar/archive/refs/tags/v$version.tar.gz"
-build(){
-   cd *
-   kf-package-installer
-   cd build
-   make DESTDIR=$PKG install	
+build() {
+    mkdir -p "$PKG/usr"
 }

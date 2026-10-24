@@ -1,0 +1,16 @@
+# description : libquotient - KDE dependency
+# depends : kde-deps-installer libolm openssl qt6 qtkeychain
+
+name=libquotient
+version=0.9.6.1
+release=1
+
+source="$name-$version.tar.gz::https://github.com/quotient-im/libQuotient/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "libQuotient-$version"
+    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DBUILD_WITH_QT6=ON -DQuotient_ENABLE_E2EE=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

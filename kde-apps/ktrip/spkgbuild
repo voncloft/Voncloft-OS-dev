@@ -1,0 +1,16 @@
+# description : ktrip - KDE gear component
+# depends : extra-cmake-modules kconfig kcontacts kcoreaddons kcrash kde-deps-installer ki18n kirigami kirigami-addons kpublictransport qqc2-desktop-style qt6
+
+name=ktrip
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/ktrip-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "ktrip-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

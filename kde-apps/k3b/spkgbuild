@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : extra-cmake-modules karchive kauth kcmutils kconfig kcoreaddons kde-deps-installer kdoctools kfilemetadata ki18n kiconthemes kio kjobwidgets knewstuff knotifications knotifyconfig kwidgetsaddons kxmlgui libkcddb libsamplerate qt6 solid
 
 name=k3b
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/k3b-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "k3b-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

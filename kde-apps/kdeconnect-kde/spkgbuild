@@ -1,16 +1,16 @@
+# depends : dbus extra-cmake-modules kcmutils kcolorscheme kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kguiaddons ki18n kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kpackage kpeople kservice kstatusnotifieritem kwidgetsaddons kwindowsystem modemmanager-qt pkgconf plasma-wayland-protocols pulseaudio-qt qqc2-desktop-style qt6 solid wayland wayland-protocols
 # description : Core components for the kde desktop
-# depends : kde-deps
 
 name=kdeconnect-kde
-version=25.08.3
-release=1
+version=26.08.2
+release=2
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kdeconnect-kde-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kdeconnect-kde-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

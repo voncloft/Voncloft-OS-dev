@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kdbusaddons ki18n kirigami2 kwindowsystem libsodium qt6-svg
+# depends : extra-cmake-modules kconfig kcoreaddons kdbusaddons kde-deps-installer kguiaddons ki18n kirigami kirigami-addons kwidgetsaddons kwindowsystem libsodium openssl prison qqc2-desktop-style qt6
 
 name=keysmith
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/keysmith-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "keysmith-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

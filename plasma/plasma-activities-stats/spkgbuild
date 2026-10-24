@@ -1,20 +1,16 @@
-# description   : The plasma-activities-stats-6
-# depends       : plasma-activities
+# description : The plasma-activities-stats-6
+# depends : extra-cmake-modules kactivitymanagerd kconfig kde-deps-installer plasma-activities qt6
 
 name=plasma-activities-stats
-version=6.5.2
+version=6.8.1
 release=1
-source=" https://download.kde.org/stable/plasma/6.5.2/plasma-activities-stats-6.5.2.tar.xz"
+
+source="https://download.kde.org/stable/plasma/$version/plasma-activities-stats-$version.tar.xz"
 options="!checksum"
 
 build() {
-        cd $name-$version
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=$KF6_PREFIX \
--D CMAKE_BUILD_TYPE=Release         \
--D BUILD_TESTING=OFF                \
--W no-dev .. 
-make
-make DESTDIR=$PKG install
+    cd "plasma-activities-stats-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

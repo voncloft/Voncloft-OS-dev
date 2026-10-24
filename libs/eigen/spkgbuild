@@ -1,0 +1,17 @@
+# description : eigen - KDE dependency
+# depends : kde-deps-installer
+# note : Latest Eigen 3 release, matching KDE packages requesting Eigen3.
+
+name=eigen
+version=3.4.1
+release=1
+
+source="$name-$version.tar.gz::https://gitlab.com/libeigen/eigen/-/archive/$version/eigen-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "eigen-$version"
+    plasma-package-installer -DEIGEN_BUILD_DOC=OFF -DBUILD_TESTING=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

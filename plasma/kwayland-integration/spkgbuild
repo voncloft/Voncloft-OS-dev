@@ -1,15 +1,23 @@
+# depends : extra-cmake-modules kde-deps-installer kguiaddons kidletime kwayland kwindowsystem pkgconf plasma-wayland-protocols wayland wayland-protocols
+# note : Optional Qt5 Wayland integration; requires a separate KF5 stack and is excluded from the Plasma 6 group.
+# note : Optional Qt5 Wayland integration; requires a separate KF5 stack and is excluded from the Plasma 6 group.
 # description : Core components for the kde desktop
 
 name=kwayland-integration
-version=6.5.2
-release=1
+version=6.8.1
+release=2
 
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/kwayland-integration-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    if ! test -f /usr/lib64/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake && \
+       ! test -f /usr/lib/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake; then
+        printf '%s\n' 'This archived Qt5/KF5 package is outside the current Qt6 KDE upgrade.' >&2
+        return 1
+    fi
+    cd "kwayland-integration-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

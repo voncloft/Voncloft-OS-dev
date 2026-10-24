@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kimap kldap libkdepim akonadi-search ktextaddons 
+# depends : akonadi akonadi-contacts akonadi-search extra-cmake-modules karchive kcalendarcore kcmutils kcodecs kcolorscheme kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kimap kio kitemmodels kitemviews kjobwidgets kldap knewstuff knotifications knotifyconfig kparts kservice ktextaddons kwidgetsaddons kwindowsystem kxmlgui libkdepim plasma-activities purpose qt6 sonnet
 
 name=pimcommon
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/pimcommon-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "pimcommon-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

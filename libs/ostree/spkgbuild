@@ -1,0 +1,16 @@
+# description : ostree - KDE dependency
+# depends : curl fuse3 glib gpgme libarchive libcap make openssl udev util-linux xz
+
+name=ostree
+version=2026.4
+release=1
+
+source="$name-$version.tar.xz::https://github.com/ostreedev/ostree/releases/download/v$version/libostree-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "libostree-$version"
+    ./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --localstatedir=/var --with-curl --without-soup --with-crypto=openssl --without-libsystemd --without-selinux --disable-man --disable-gtk-doc --disable-introspection --disable-installed-tests --disable-static --with-libmount --without-composefs
+    make
+    make DESTDIR="$PKG" install
+}

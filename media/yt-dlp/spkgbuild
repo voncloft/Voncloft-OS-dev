@@ -1,0 +1,13 @@
+# description : yt-dlp - KDE dependency
+# depends : ffmpeg python
+
+name=yt-dlp
+version=2026.10.21
+release=1
+
+source="yt-dlp-$version::https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp"
+options="!checksum"
+
+build() {
+    install -Dm755 "$SRC/yt-dlp-$version" "$PKG/usr/bin/yt-dlp"
+}

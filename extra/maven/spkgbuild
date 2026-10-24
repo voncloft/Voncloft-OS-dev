@@ -1,0 +1,16 @@
+# description : Apache Maven build tool for Java projects
+# depends : java-headless bash
+
+name=maven
+version=3.10.0
+release=1
+source="https://archive.apache.org/dist/maven/maven-3/$version/binaries/apache-maven-$version-bin.tar.gz"
+options="!checksum"
+
+build() {
+    cd "apache-maven-$version"
+    install -d "$PKG/usr/share/maven" "$PKG/usr/bin"
+    cp -a bin boot conf lib LICENSE NOTICE README.txt "$PKG/usr/share/maven/"
+    ln -s ../share/maven/bin/mvn "$PKG/usr/bin/mvn"
+    ln -s ../share/maven/bin/mvnDebug "$PKG/usr/bin/mvnDebug"
+}

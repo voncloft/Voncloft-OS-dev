@@ -1,13 +1,14 @@
-# description	: python module implements pythonic template language
-# depends	: 
+# description : jinja2 Python build/runtime dependency
+# depends : python python-flit python-markupsafe python-wheel
 
 name=jinja2
 version=3.1.6
-release=1
-source="https://pypi.org/packages/source/J/Jinja2/jinja2-$version.tar.gz"
+release=2
+source="https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c72f3e33cef02e048281fec7ecec5f032d4aac52226b/jinja2-3.1.6.tar.gz"
 options="!checksum"
+
 build() {
-	cd $name-$version
-	pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
-	pip3 install --no-index --find-links dist Jinja2 --root=$PKG
+    cd "jinja2-3.1.6"
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

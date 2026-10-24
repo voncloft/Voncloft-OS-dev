@@ -1,0 +1,16 @@
+# description : neochat - KDE gear component
+# depends : cmark extra-cmake-modules icu kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kquickcharts kquickimageeditor kunifiedpush kwindowsystem libquotient prison purpose qcoro qqc2-desktop-style qt6 qtkeychain sonnet syntax-highlighting
+
+name=neochat
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/neochat-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "neochat-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

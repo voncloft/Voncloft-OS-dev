@@ -1,5 +1,5 @@
 # description : Easily download, build(), install, upgrade, and uninstall Python packages
-# depends : python-appdirs python-packaging python-ordered-set
+# depends : python python-packaging
 
 name=python-setuptools
 version=80.9.0

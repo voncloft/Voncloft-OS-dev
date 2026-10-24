@@ -1,0 +1,18 @@
+# description : Small speech synthesis engine with shared libraries for Qt TextToSpeech
+# depends : alsa-lib make
+
+name=flite
+version=2.2
+release=1
+source="flite-$version.tar.gz::https://github.com/festvox/flite/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    # Qt loads Flite through a shared plugin. Both static and shared objects need PIC.
+    CFLAGS="${CFLAGS:--O2} -fPIC -std=gnu17" ./configure \
+        --prefix=/usr --libdir=/usr/lib64 --enable-shared --with-pic --with-audio=alsa
+    # Flite 2.2 generates voice lists as side effects; parallel make races those files.
+    make -j1
+    make DESTDIR="$PKG" install
+}

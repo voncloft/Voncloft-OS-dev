@@ -1,15 +1,14 @@
-# description : Python bindings for YAML, using fast libYAML library
-# depends : cython3 yaml
+# description : pyyaml Python build/runtime dependency
+# depends : python python-setuptools cython3 yaml python-wheel
 
 name=python-yaml
-version=6.0.2
-release=4
-
-source="https://github.com/yaml/pyyaml/archive/${version}.tar.gz"
+version=6.0.3
+release=1
+source="https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
 options="!checksum"
 
 build() {
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user PyYAML --root=$PKG
- }
+    cd "pyyaml-6.0.3"
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

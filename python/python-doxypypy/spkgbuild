@@ -1,15 +1,14 @@
-# description : used for kapipox
-# depends : python-chardet doxygen
+# description : doxypypy Python build/runtime dependency
+# depends : python python-setuptools python-chardet python-wheel
 
 name=python-doxypypy
 version=0.8.8.7
-version=1
+release=1
+source="https://files.pythonhosted.org/packages/f9/d2/8331005fb117a27c0122f714fe3f528d8c5752aa13d11d5cba12d754270b/doxypypy-0.8.8.7.tar.gz"
+options="!checksum"
 
-source="https://files.pythonhosted.org/packages/source/d/doxypypy/doxypypy-0.8.8.7.tar.gz"
-
-build()
-{
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user doxypypy --root=$PKG
+build() {
+    cd "doxypypy-0.8.8.7"
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

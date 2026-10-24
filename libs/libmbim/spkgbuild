@@ -1,18 +1,16 @@
-# description	: GLib-based library for talking to WWAN modems and devices which speak the Mobile Interface Broadband Model (MBIM) protocol
-# depends	: libgudev
+# description : libmbim - KDE dependency
+# depends : glib help2man libgudev meson ninja python
 
 name=libmbim
-version=1.32.0
+version=1.34.0
 release=1
-source="https://www.freedesktop.org/software/$name/$name-$version.tar.xz"
+
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/libmbim/-/archive/$version/libmbim-$version.tar.gz"
+options="!checksum"
 
 build() {
-	cd $name-$version
-
-	./configure \
-		--prefix=/usr \
-		--libexecdir=/usr/lib/$name \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
+    cd "libmbim-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dgtk_doc=false -Dintrospection=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

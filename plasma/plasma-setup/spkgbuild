@@ -1,0 +1,16 @@
+# description : plasma-setup - KDE plasma component
+# depends : extra-cmake-modules kauth kconfig kcoreaddons kde-deps-installer ki18n kpackage libkscreen pkgconf plasma-desktop plasma-workspace qt6
+
+name=plasma-setup
+version=6.8.1
+release=2
+
+source="https://download.kde.org/stable/plasma/$version/plasma-setup-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "plasma-setup-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

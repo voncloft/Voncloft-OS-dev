@@ -1,0 +1,22 @@
+# description : kjournald - KDE gear component
+# depends : extra-cmake-modules kconfig kcoreaddons kcrash kde-deps-installer ki18n kirigami kirigami-addons pkgconf qt6
+# platform : Requires systemd; excluded from the SysVinit desktop aggregate.
+
+name=kjournald
+version=26.08.2
+release=2
+
+source="https://download.kde.org/stable/release-service/$version/src/kjournald-$version.tar.xz"
+options="!checksum"
+
+build() {
+    # Upstream requires systemd; this package is excluded from the SysVinit KDE groups.
+    pkg-config --exists systemd libsystemd || {
+        printf "%s\n" "kjournald 26.08.2 requires systemd and is not supported on SysVinit." >&2
+        return 1
+    }
+    cd "kjournald-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

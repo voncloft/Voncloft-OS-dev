@@ -1,18 +1,16 @@
-# description	: GLib-based library for talking to WWAN modems and devices which speak the Qualcomm MSM Interface (QMI) protocol
-# depends	: glib libmbim
+# depends : glib help2man libgudev libmbim libmnl meson ninja python
+# description : libqmi - KDE dependency
 
 name=libqmi
-version=1.36.0
+version=1.38.0
 release=1
-source="https://www.freedesktop.org/software/$name/$name-$version.tar.xz"
+
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/libqmi/-/archive/$version/libqmi-$version.tar.gz"
+options="!checksum"
 
 build() {
-	cd $name-$version
-
-	./configure \
-		--prefix=/usr \
-		--libexecdir=/usr/lib/$name \
-		--disable-static
-	make
-	make DESTDIR=$PKG install
+    cd "libqmi-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dgtk_doc=false -Dintrospection=false -Dqrtr=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

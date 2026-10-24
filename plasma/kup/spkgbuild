@@ -1,0 +1,16 @@
+# depends : extra-cmake-modules kcmutils kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kidletime kio kjobwidgets knotifications kwidgetsaddons kwindowsystem kxmlgui libgit2 libplasma plasma5support qt6 rsync solid
+# description : kup - KDE plasma component
+
+name=kup
+version=6.8.1
+release=1
+
+source="https://download.kde.org/stable/plasma/$version/kup-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kup-$version"
+    plasma-package-installer -DQT_MAJOR_VERSION=6
+    cd build
+    make DESTDIR="$PKG" install
+}

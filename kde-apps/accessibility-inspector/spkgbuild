@@ -1,0 +1,16 @@
+# description : accessibility-inspector - KDE gear component
+# depends : extra-cmake-modules kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kxmlgui libqaccessibilityclient qt6
+
+name=accessibility-inspector
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/accessibility-inspector-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "accessibility-inspector-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

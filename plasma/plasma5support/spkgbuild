@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kguiaddons kholidays ki18n kidletime kio knotifications kservice kunitconversion libksysguard networkmanager-qt plasma-activities qt6 solid
 
 name=plasma5support
-version=6.5.2
+version=6.8.1
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/plasma5support-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "plasma5support-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

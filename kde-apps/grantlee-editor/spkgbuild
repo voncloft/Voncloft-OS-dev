@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : akonadi-contacts extra-cmake-modules grantleetheme karchive kcrash kdbusaddons kde-deps-installer ki18n kimap kmime ktextaddons ktexttemplate kxmlgui messagelib pimcommon qt6 syntax-highlighting
 
 name=grantlee-editor
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/grantlee-editor-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "grantlee-editor-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

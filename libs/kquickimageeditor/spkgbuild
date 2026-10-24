@@ -1,0 +1,16 @@
+# description : kquickimageeditor - KDE independent component
+# depends : extra-cmake-modules highway kconfig kde-deps-installer qt6
+
+name=kquickimageeditor
+version=0.7.0.1
+release=1
+
+source="https://download.kde.org/stable/kquickimageeditor/kquickimageeditor-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kquickimageeditor-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

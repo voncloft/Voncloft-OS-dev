@@ -1,0 +1,16 @@
+# description : skanlite - KDE gear component
+# depends : extra-cmake-modules kcoreaddons kcrash kde-deps-installer kdoctools ki18n kio kxmlgui libksane qt6
+
+name=skanlite
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/skanlite-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "skanlite-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

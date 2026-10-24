@@ -1,0 +1,11 @@
+# description : Compatibility name for the Flit Core backend supplied by python-flit
+# depends : python-flit
+
+name=python-flit-core
+version=3.12.0
+release=1
+options="!checksum"
+
+build() {
+    mkdir -p "$PKG/usr"
+}

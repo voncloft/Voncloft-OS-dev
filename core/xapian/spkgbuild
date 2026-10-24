@@ -1,9 +1,9 @@
+# depends : 
 # description   : Xapian is an open source search engine library
-# depends       : none
 
 name=xapian
 version=1.4.29    
-release=1
+release=2
 source="https://oligarchy.co.uk/xapian/1.4.29/xapian-core-1.4.29.tar.xz"
 
 options="!checksum"

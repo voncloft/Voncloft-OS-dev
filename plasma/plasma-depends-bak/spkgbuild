@@ -1,8 +1,12 @@
-# description : Core components for the kde desktop all plasma dependencies
+# description : Compatibility package name; replaced upstream by plasma-depends
+# depends : plasma-depends
+# note : Contains no application files. Use plasma-depends for the maintained source package.
 
-name=plasma-depends
-version=6.5.2
+name=plasma-depends-bak
+version=6.8.1
 release=1
-build(){
-	mkdir -pv $PKG/usr
+options="!checksum"
+
+build() {
+    mkdir -p "$PKG/usr"
 }

@@ -1,0 +1,31 @@
+# description : Speech service and client libraries with Flite and desktop audio support
+# depends : dotconf glib libsndfile libtool flite pulseaudio pipewire alsa-lib
+# depends : python python-pyxdg pkgconf gettext texinfo help2man make
+
+name=speech-dispatcher
+version=0.12.1
+release=1
+source="https://github.com/brailcom/speechd/releases/download/$version/$name-$version.tar.gz"
+options="!checksum"
+backup="etc/speech-dispatcher/speechd.conf etc/speech-dispatcher/modules/flite.conf"
+
+build() {
+    cd "$name-$version"
+    # Prefer the repaired shared Flite libraries over the old /usr/lib archives.
+    export LIBRARY_PATH="/usr/lib64${LIBRARY_PATH:+:$LIBRARY_PATH}"
+    CFLAGS="${CFLAGS:--O2} -std=gnu17" \
+    LDFLAGS="-L/usr/lib64 ${LDFLAGS:-}" ./configure \
+        --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc \
+        --localstatedir=/var --disable-static --enable-python \
+        --with-flite --without-espeak --without-espeak-ng \
+        --with-pulse --with-pipewire --with-alsa \
+        --with-default-audio-method=pulse,alsa \
+        --with-systemdsystemunitdir=no --with-systemduserunitdir=no
+    # Use the installed Flite engine; no systemd service is required.
+    sed -i \
+        -e 's/^#AddModule "flite".*/AddModule "flite" "sd_flite" "flite.conf"/' \
+        -e 's/^# DefaultModule espeak-ng$/DefaultModule flite/' \
+        config/speechd.conf
+    make
+    make DESTDIR="$PKG" install
+}

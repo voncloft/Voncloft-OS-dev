@@ -1,0 +1,16 @@
+# description : libphonenumber - KDE dependency
+# depends : abseil-cpp boost icu kde-deps-installer protobuf
+
+name=libphonenumber
+version=9.0.42
+release=1
+
+source="$name-$version.tar.gz::https://github.com/google/libphonenumber/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "libphonenumber-$version/cpp"
+    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

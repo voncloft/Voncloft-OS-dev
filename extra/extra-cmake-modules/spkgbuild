@@ -1,26 +1,16 @@
-# description	: Extra modules and scripts for CMake
-# depends	: cmake
+# description : Extra modules and scripts for CMake
+# depends : kde-deps-installer
 
 name=extra-cmake-modules
-version=6.26.0
+version=6.31.0
 release=1
-source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
+
+source="https://download.kde.org/stable/frameworks/${version%.*}/extra-cmake-modules-$version.tar.xz"
 options="!checksum"
 
 build() {
-	cd $name-$version
-
-	sed -i '/"lib64"/s/64//' kde-modules/KDEInstallDirs.cmake
-	
-sed -e '/PACKAGE_INIT/i set(SAVE_PACKAGE_PREFIX_DIR "${PACKAGE_PREFIX_DIR}")' \
-    -e '/^include/a set(PACKAGE_PREFIX_DIR "${SAVE_PACKAGE_PREFIX_DIR}")' \
-    -i ECMConfig.cmake.in
-	mkdir build
-	cd    build
-	
-	cmake -D CMAKE_INSTALL_PREFIX=/usr -D BUILD_WITH_QT6=ON .. 
-
-	make
-	make DESTDIR=$PKG install
+    cd "extra-cmake-modules-$version"
+    kf-package-installer -DBUILD_TESTING=OFF -DBUILD_HTML_DOCS=OFF -DBUILD_QTHELP_DOCS=OFF -DBUILD_MAN_DOCS=OFF
+    cd build
+    make DESTDIR="$PKG" install
 }
-

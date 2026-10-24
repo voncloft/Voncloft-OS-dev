@@ -1,19 +1,16 @@
-# description : bindings for qt
-# depends :
+# description : qgpgme-qt - KDE dependency
+# depends : gpgme gpgmepp kde-deps-installer libgpg-error qt6
 
 name=qgpgme-qt
-version=2.0.0
+version=2.2.0
 release=1
 
-source="https://gnupg.org/ftp/gcrypt/qgpgme/qgpgme-2.0.0.tar.xz"
+source="$name-$version.tar.xz::https://gnupg.org/ftp/gcrypt/qgpgme/qgpgme-$version.tar.xz"
+options="!checksum"
 
-build()
-{
-	cd *
-	mkdir build
-	cd build
-	cmake .. \
-		-D CMAKE_INSTALL_PREFIX=/usr
-	make
-	make DESTDIR=$PKG install
+build() {
+    cd "qgpgme-$version"
+    plasma-package-installer -DBUILD_WITH_QT5=OFF -DBUILD_WITH_QT6=ON
+    cd build
+    make DESTDIR="$PKG" install
 }

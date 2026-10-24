@@ -1,0 +1,16 @@
+# description : sdl3 - KDE dependency
+# depends : alsa-lib kde-deps-installer libx11 libxcursor libxext libxfixes libxi libxkbcommon libxrandr libxrender libxss pulseaudio udev wayland wayland-protocols
+
+name=sdl3
+version=3.4.18
+release=1
+
+source="$name-$version.tar.gz::https://github.com/libsdl-org/SDL/releases/download/release-$version/SDL3-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "SDL3-$version"
+    plasma-package-installer -DSDL_TESTS=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

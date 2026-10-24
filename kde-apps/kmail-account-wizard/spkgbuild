@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : akonadi extra-cmake-modules kcrash kdbusaddons kde-deps-installer kdoctools ki18n kidentitymanagement kio kmailtransport kmime qt6
 
 name=kmail-account-wizard
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kmail-account-wizard-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kmail-account-wizard-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

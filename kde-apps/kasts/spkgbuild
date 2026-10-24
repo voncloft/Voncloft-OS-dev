@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kconfig kcoreaddons ki18n kirigami-addons networkmanager-qt qt6-multimedia qt6-svg qtkeychain-qt6 syndication taglib threadweaver vlc
+# depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kirigami kirigami-addons kwindowsystem qqc2-desktop-style qt6 qtkeychain syndication taglib threadweaver
 
 name=kasts
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kasts-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kasts-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

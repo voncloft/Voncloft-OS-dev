@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps signond
+# depends : extra-cmake-modules kde-deps-installer kwallet qt6 signond
 
 name=signon-kwallet-extension
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/signon-kwallet-extension-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "signon-kwallet-extension-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

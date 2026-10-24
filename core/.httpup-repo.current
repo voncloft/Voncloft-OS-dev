@@ -131,7 +131,6 @@ bash
 grantlee
 valgrind
 bash-completion
-pkg-config
 cracklib
 lhasa
 nnn
@@ -865,8 +864,6 @@ bash-completion/i18n.sh
 bash-completion/spkgbuild
 bash-completion/umask.sh
 bash-completion/.bash_logout
-pkg-config/.pkgfiles
-pkg-config/spkgbuild
 cracklib/.pkgfiles
 cracklib/post-upgrade.sh
 cracklib/CHANGELOG

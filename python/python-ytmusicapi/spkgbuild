@@ -1,0 +1,15 @@
+# description : python-ytmusicapi - KDE dependency
+# depends : python python-requests python-setuptools python-setuptools-scm python-wheel
+
+name=python-ytmusicapi
+version=1.12.3
+release=1
+
+source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/4a/0d/a536a685d8b021ff984a3f9902600bc1fb613afe3c0b143e2b0d791a3c5c/ytmusicapi-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "ytmusicapi-$version"
+    pip3 wheel --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

@@ -1,0 +1,22 @@
+# description : plasma-login-manager - KDE plasma component
+# depends : extra-cmake-modules kauth kcmutils kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kio kpackage kwindowsystem layer-shell-qt libkscreen libplasma libxau linux-pam plasma-workspace qt6
+# platform : Requires systemd; excluded from the SysVinit desktop aggregate.
+
+name=plasma-login-manager
+version=6.8.1
+release=1
+
+source="https://download.kde.org/stable/plasma/$version/plasma-login-manager-$version.tar.xz"
+options="!checksum"
+
+build() {
+    # Upstream requires systemd; this package is excluded from the SysVinit KDE groups.
+    pkg-config --exists systemd libsystemd || {
+        printf "%s\n" "plasma-login-manager 6.8.1 requires systemd and is not supported on SysVinit." >&2
+        return 1
+    }
+    cd "plasma-login-manager-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

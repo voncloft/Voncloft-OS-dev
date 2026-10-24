@@ -1,10 +1,10 @@
-# description : kde meta basically installs all of kde
 # depends : kde-deps kf-programs plasma-programs
+# description : KDE Frameworks 6 and Plasma desktop group
 
 name=kde6
-version=6
+version=6.8.1
 release=1
-verzion=6.81
+options="!checksum"
 build () {
 	mkdir -pv $PKG/opt
 

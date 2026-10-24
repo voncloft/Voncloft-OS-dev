@@ -1,15 +1,12 @@
-# description : Core components for the kde desktop
+# description : Compatibility package name; replaced upstream by kgamma
+# depends : kgamma
+# note : Contains no application files. Use kgamma for the maintained source package.
 
 name=kgamma5
-version=6.5.2
+version=6.7.5
 release=1
-
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    mkdir -p "$PKG/usr"
 }

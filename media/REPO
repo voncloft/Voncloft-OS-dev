@@ -1,3 +1,4 @@
+d:yt-dlp
 d:libsamplerate
 d:mplayer
 d:pulseaudio-alsa
@@ -32,6 +33,7 @@ d:gst-plugins-bad
 d:gstreamer
 d:gst-plugins-good
 d:plex-desktop
+f:6a7f2d53df968e5058831b1853629b45:yt-dlp/spkgbuild
 f:b63a368da002d7da4b4e9227e0a3e5cc:libsamplerate/.pkgfiles
 f:89afb40eb2bc610ee8f2e6a386a4d922:libsamplerate/CHANGELOG
 f:2cee3fe92acaaea8772ed993d7afcba9:libsamplerate/spkgbuild
@@ -63,7 +65,7 @@ f:bfa5f78564a167fe17fb99f0532e618f:phonon/spkgbuild
 f:f18c95b5e492428187905654112cb674:.httpup-urlinfo
 f:44936f6927809764784656870c1f7e86:ffmpeg/.pkgfiles
 f:e0125e07b37d1ccab7de1edef08ac862:ffmpeg/CHANGELOG
-f:293d4211cfd8a3a9c89a97fc1f897edc:ffmpeg/spkgbuild
+f:4adc66b237b69417edcd2fb474bad4d7:ffmpeg/spkgbuild
 f:7dcdc322ba5632b156b324b0c2f5d19b:graphite2/.pkgfiles
 f:8a9cb190b0aa9147cbc7272cd57ad2b6:graphite2/spkgbuild
 f:1cfcb80419b5c1b2f69ddb85a34f851a:mesa-demos/.pkgfiles
@@ -87,7 +89,7 @@ f:a1e94c29730ab217664089670b0eca16:alsa-plugins/CHANGELOG
 f:7f6641154354d858f775759174401116:alsa-plugins/spkgbuild
 f:45b1eb5c96528202e88674acdac0959a:vlc/.pkgfiles
 f:7f3a71d24f88400b94c27cf88ce83a96:vlc/CHANGELOG
-f:103019716809c70aa02f7d7fa80c5167:vlc/spkgbuild
+f:fff952ee45ddf01488d11426a5d4ad5b:vlc/spkgbuild
 f:59c8c1fadb493a39fe519c8d74fcdc28:vlc/override
 f:c2d19d3b29283432435c233065801374:phonon-backend-vlc/.pkgfiles
 f:7d21ed1d1df6276c6e838dc6f8ed31e7:phonon-backend-vlc/spkgbuild

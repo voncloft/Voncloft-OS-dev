@@ -1,22 +1,16 @@
-# description : visual graphic library
-# depends : libxml2
+# depends : expat libffi libxml2 meson ninja pkgconf
+# description : wayland - KDE dependency
 
 name=wayland
-version=1.24.0
-release=1
+version=1.26.0
+release=2
 
-source="https://gitlab.freedesktop.org/wayland/wayland/-/releases/$version/downloads/wayland-$version.tar.xz"
+source="$name-$version.tar.xz::https://gitlab.freedesktop.org/wayland/wayland/-/releases/$version/downloads/wayland-$version.tar.xz"
 options="!checksum"
 
 build() {
-	cd $name-$version
-	mkdir build 
-	cd    build 
-
-	meson --prefix=/usr       \
-      	--buildtype=release \
-      	-Ddocumentation=false 
-	ninja
-	DESTDIR=$PKG ninja install
+    cd "wayland-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Ddocumentation=false -Dtests=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }
-

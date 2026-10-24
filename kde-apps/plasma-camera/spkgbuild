@@ -1,0 +1,16 @@
+# description : plasma-camera - KDE gear component
+# depends : exiv2 extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kirigami qt6
+
+name=plasma-camera
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/plasma-camera-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "plasma-camera-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

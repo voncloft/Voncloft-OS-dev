@@ -1,0 +1,14 @@
+# description : GObject introspection documentation generator
+# depends : python python-setuptools python-wheel python-markdown python-markupsafe python-pygments jinja2 python-packaging python-typogrify
+
+name=gi-docgen
+version=2026.1
+release=1
+source="https://files.pythonhosted.org/packages/43/23/386dad008d1f1dc3c7188db63ea5bf82ceb41a5914fb050e6e09a14a457a/gi_docgen-2026.1.tar.gz"
+options="!checksum"
+
+build() {
+    cd "gi_docgen-2026.1"
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

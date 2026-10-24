@@ -1,0 +1,16 @@
+# description : union - KDE plasma component
+# depends : cxx-rust-cssparser extra-cmake-modules kcolorscheme kconfig kcoreaddons kde-deps-installer kguiaddons kiconthemes kirigami qt6 zlib
+
+name=union
+version=6.8.1
+release=1
+
+source="https://download.kde.org/stable/plasma/$version/union-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "union-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

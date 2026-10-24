@@ -1,22 +1,16 @@
-# description	: Provides a user space library for accessing the DRM, direct rendering manager, on operating systems that support the ioctl interface
-# depends	: libpciaccess meson
-# optdepends	: xorg-libraries
+# description : libdrm - KDE dependency
+# depends : libpciaccess meson ninja pkgconf udev
 
 name=libdrm
-version=2.4.125
-release=1
-source="https://dri.freedesktop.org/$name/$name-$version.tar.xz"
-options="!checksum"
-build() {
-	cd $name-$version
+version=2.4.134
+release=2
 
-	mkdir build
-	cd build
-	meson setup --prefix=$XORG_PREFIX \
-            --buildtype=release   \
-            -D udev=true          \
-            -D valgrind=disabled  \
-            ..   
-        ninja
-	DESTDIR=$PKG ninja install
+source="$name-$version.tar.xz::https://dri.freedesktop.org/libdrm/libdrm-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "libdrm-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dudev=true -Dvalgrind=disabled -Dtests=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

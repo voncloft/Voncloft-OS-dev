@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps colord kdeclarative kirigami-addons kitemmodels libxrandr 
+# depends : extra-cmake-modules kcmutils kcoreaddons kdbusaddons kde-deps-installer ki18n kitemmodels kwidgetsaddons kwindowsystem lcms2 libxcb qt6 xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=colord-kde
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/colord-kde-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "colord-kde-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

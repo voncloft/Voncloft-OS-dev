@@ -1,9 +1,10 @@
-# description : these are all the dependencies needed for kde
 # depends : kde-deps-installer kf-depends plasma-depends
+# description : KDE build tools and base dependencies
 
 name=kde-deps
-version=5
+version=6.8.1
 release=1
+options="!checksum"
 
 build() {
 	mkdir -p $PKG/opt

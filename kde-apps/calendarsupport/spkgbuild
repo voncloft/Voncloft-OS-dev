@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps akonadi-mime kcalutils akonadi akonadi-calendar 
+# depends : akonadi akonadi-calendar extra-cmake-modules kcalendarcore kcalutils kcodecs kde-deps-installer kguiaddons kholidays ki18n kidentitymanagement kio kmime ktextaddons qt6
 
 name=calendarsupport
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/calendarsupport-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "calendarsupport-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

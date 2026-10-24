@@ -1,9 +1,10 @@
+# depends : cmake libffi libxml2 ninja python
 # description	: Collection of modular and reusable compiler and toolchain technologies
-# depends	: cmake ninja libffi python3 libxml2
 
 name=llvm
 version=20.1.7
-release=1
+release=2
+options="!checksum"
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-${version}.src.tar.xz
 https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-20.1.7.src.tar.xz
 https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-20.1.7.src.tar.xz

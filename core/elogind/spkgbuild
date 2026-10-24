@@ -1,0 +1,17 @@
+# depends : dbus gperf jinja2 libcap libseccomp linux-pam meson ninja python udev
+# description : elogind - KDE dependency
+# note : Provides logind for SysVinit. Does not replace init or enable a service.
+
+name=elogind
+version=257.16
+release=1
+
+source="$name-$version.tar.gz::https://github.com/elogind/elogind/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "elogind-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dman=disabled -Ddocdir=/usr/share/doc/elogind-$version -Dcgroup-controller=elogind -Dtests=false -Ddbuspolicydir=/etc/dbus-1/system.d
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

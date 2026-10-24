@@ -1,14 +1,21 @@
+# note : Requires a separate Qt 5/KF5 stack; the KF6 upgrade does not supply it.
+# depends : kde-deps-installer
+# status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
 # description : Core components for the kde desktop
-# depends : kde-deps
 
 name=ktp-approver
-version=25.08.3
+version=23.04.3
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/Attic/release-service/$version/src/ktp-approver-$version.tar.xz"
 options="!checksum"
 
 build() {
+    if ! test -f /usr/lib64/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake && \
+       ! test -f /usr/lib/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake; then
+        printf '%s\n' 'This archived Qt5/KF5 package is outside the current Qt6 KDE upgrade.' >&2
+        return 1
+    fi
    cd $name-$version
    plasma-package-installer
   cd build

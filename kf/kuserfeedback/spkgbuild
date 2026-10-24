@@ -1,14 +1,16 @@
 # description : Core components for the kde desktop
+# depends : extra-cmake-modules kde-deps-installer qt6
+
 name=kuserfeedback
-version=6.19.0
+version=6.31.0
 release=1
 
-source="https://download.kde.org/stable/frameworks/6.19/kuserfeedback-$version.tar.xz"
+source="https://download.kde.org/stable/frameworks/${version%.*}/kuserfeedback-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   kf-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "kuserfeedback-$version"
+    kf-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

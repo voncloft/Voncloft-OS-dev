@@ -1,16 +1,16 @@
+# depends : breeze-icons extra-cmake-modules ffmpeg imath karchive kbookmarks kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kddockwidgets kde-deps-installer kdoctools kfilemetadata kguiaddons ki18n kiconthemes kio kitemviews kjobwidgets knewstuff knotifications knotifyconfig kplotting kservice ktextwidgets kwidgetsaddons kxmlgui mlt opentimelineio purpose qt6 solid
 # description : Core components for the kde desktop
-# depends : kde-deps
 
 name=kdenlive
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kdenlive-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kdenlive-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

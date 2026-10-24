@@ -1,0 +1,9 @@
+openapi-generator-7.18.0-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/openapi-generator
+lrwxrwxrwx root/root    usr/bin/openapi-generator-cli -> openapi-generator
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/java/
+drwxr-xr-x root/root    usr/share/java/openapi-generator/
+-rw-r--r-- root/root    usr/share/java/openapi-generator/openapi-generator-cli.jar

@@ -1,0 +1,16 @@
+# description : merkuro - KDE gear component
+# depends : akonadi akonadi-calendar akonadi-contacts akonadi-mime akonadi-search extra-cmake-modules gpgmepp kcalendarcore kcalutils kconfigwidgets kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kdepim-runtime kholidays ki18n kiconthemes kidentitymanagement kio kirigami kirigami-addons kitemmodels kmailtransport kmbox kmime knotifications kwindowsystem kxmlgui libkdepim libkleo mailcommon messagelib mimetreeparser pimcommon qqc2-desktop-style qt6
+
+name=merkuro
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/merkuro-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "merkuro-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

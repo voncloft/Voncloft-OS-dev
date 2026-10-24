@@ -1,0 +1,14 @@
+# description : vcs-versioning Python build/runtime dependency
+# depends : python python-packaging python-setuptools python-wheel
+
+name=python-vcs-versioning
+version=2.6.0
+release=1
+source="https://files.pythonhosted.org/packages/ad/e7/2a691db7d076b75d099fdba1a14cd966931f2aeb591e77f6d22f15097326/vcs_versioning-2.6.0.tar.gz"
+options="!checksum"
+
+build() {
+    cd "vcs_versioning-2.6.0"
+    pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

@@ -1,26 +1,25 @@
 # description : Scanner Access Now Easy
-# depends : avahi cups libjpeg-turbo libtiff libusb v4l-utils 
+# depends : avahi cups curl libjpeg-turbo libtiff libusb libxml2 pkgconf poppler python v4l-utils
 
 name=sane
 version=1.4.0
-release=1
+release=2
 
-source="https://anduin.linuxfromscratch.org/BLFS/sane/sane-backends-1.0.32.tar.gz
+source="https://anduin.linuxfromscratch.org/BLFS/sane/sane-backends-$version.tar.gz
 	net.conf"
+options="!checksum"
 
 build() {
-	cd $name-backends-$version
-	sg scanner -c "                  \
-	./configure --prefix=/usr        \
-            --sysconfdir=/etc    \
-            --localstatedir=/var \
-            --with-group=scanner \
-            --with-lockdir=/run/lock \
-            --docdir=/usr/share/doc/sane-backends-1.0.32"
-	make
-	make DESTDIR=$PKG install
-
-	make install
-	mkdir -pv $PKG/etc/sane.d
-	install -Dm644 $SRC/net.conf $PKG/etc/sane.d/net.conf                                         
+    cd "sane-backends-$version"
+    PYTHON=python3 ./configure --prefix=/usr \
+        --libdir=/usr/lib64 \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --with-lockdir=/run/lock \
+        --with-usb --with-avahi --without-systemd \
+        --docdir="/usr/share/doc/sane-backends-$version"
+    make
+    make DESTDIR="$PKG" install
+    install -Dm644 tools/udev/libsane.rules "$PKG/etc/udev/rules.d/65-scanner.rules"
+    install -Dm644 "$SRC/net.conf" "$PKG/etc/sane.d/net.conf"
 }

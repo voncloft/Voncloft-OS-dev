@@ -1,0 +1,16 @@
+# description : mimetreeparser - KDE gear component
+# depends : extra-cmake-modules gpgmepp kcalendarcore kcolorscheme kde-deps-installer ki18n kio kirigami kmbox kmime kservice kwidgetsaddons libkleo qt6
+
+name=mimetreeparser
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/mimetreeparser-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "mimetreeparser-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

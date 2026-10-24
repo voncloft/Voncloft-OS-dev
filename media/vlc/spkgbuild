@@ -1,9 +1,10 @@
+# note : VLC 3.0.23 configure supports Qt6 when Qt5 is unavailable.
+# depends : alsa-lib desktop-file-utils ffmpeg liba52 libgcrypt libmad lua qt6
 # description   : VLC is a media player, streamer, and encoder
-# depends       : alsalib desktopfileutils ffmpeg liba52 libgcrypt libmadb lua qt chapter24graphicalenvironments
 
 name=vlc
 version=3.0.23
-release=1
+release=2
 source="https://download.videolan.org/vlc/3.0.23/vlc-3.0.23.tar.xz"
 
 options="!checksum"

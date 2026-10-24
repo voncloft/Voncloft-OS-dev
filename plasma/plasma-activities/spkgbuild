@@ -1,20 +1,16 @@
-# description   : The plasma-activities-6
-# depends       : boost kf-depends
+# description : The plasma-activities-6
+# depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kwindowsystem qt6
 
 name=plasma-activities
-version=6.5.2
+version=6.8.1
 release=1
-source=" https://download.kde.org/stable/plasma/6.5.2/plasma-activities-6.5.2.tar.xz"
+
+source="https://download.kde.org/stable/plasma/$version/plasma-activities-$version.tar.xz"
 options="!checksum"
 
 build() {
-        cd $name-$version
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=$KF6_PREFIX \
--D CMAKE_BUILD_TYPE=Release         \
--D BUILD_TESTING=OFF                \
--W no-dev .. 
-make
-make DESTDIR=$PKG install
+    cd "plasma-activities-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

@@ -1,0 +1,16 @@
+# description : libolm - KDE dependency
+# depends : kde-deps-installer
+
+name=libolm
+version=3.2.16
+release=1
+
+source="$name-$version.tar.gz::https://gitlab.matrix.org/matrix-org/olm/-/archive/$version/olm-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "olm-$version"
+    plasma-package-installer -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DBUILD_SHARED_LIBS=ON -DOLM_TESTS=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

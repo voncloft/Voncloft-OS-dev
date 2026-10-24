@@ -1,0 +1,18 @@
+# description : Freedesktop XDG helpers including xdg.BaseDirectory for spd-conf
+# depends : python python-setuptools python-wheel
+# note : PyXDG is a different upstream project from the python-xdg port.
+
+name=python-pyxdg
+version=0.28
+release=1
+source="https://files.pythonhosted.org/packages/source/p/pyxdg/pyxdg-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "pyxdg-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-index --no-deps --no-build-isolation \
+        --no-cache-dir --wheel-dir dist .
+    python3 -m pip install --no-index --no-deps --ignore-installed \
+        --root="$PKG" --prefix=/usr dist/*.whl
+}

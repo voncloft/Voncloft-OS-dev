@@ -1,0 +1,16 @@
+# description : kddockwidgets - KDE dependency
+# depends : fmt kde-deps-installer qt6 spdlog
+
+name=kddockwidgets
+version=2.5.1
+release=1
+
+source="$name-$version.tar.gz::https://github.com/KDAB/KDDockWidgets/releases/download/v$version/kddockwidgets-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "KDDockWidgets-$version"
+    plasma-package-installer -DKDDockWidgets_QT6=ON -DKDDockWidgets_EXAMPLES=OFF -DKDDockWidgets_TESTS=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

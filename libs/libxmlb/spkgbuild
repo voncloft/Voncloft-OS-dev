@@ -1,0 +1,16 @@
+# description : libxmlb - KDE dependency
+# depends : glib meson ninja
+
+name=libxmlb
+version=0.3.29
+release=1
+
+source="$name-$version.tar.xz::https://github.com/hughsie/libxmlb/releases/download/$version/libxmlb-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "libxmlb-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dstemmer=false -Dgtkdoc=false -Dintrospection=false -Dtests=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

@@ -1,11 +1,12 @@
+# note : libvdpau-va-gl is an optional VDPAU driver built after FFmpeg, not a build dependency.
+# depends : openssl pkgconf alsa-lib fdk-aac freetype2 lame libaom libass libva libvdpau libvorbis libvpx nasm opus sdl2 x264 x265 yasm
 # description   : FFmpeg is a solution to record, convert and stream audio and video
-# depends       : libaom libass fdk-aac freetype lame libvorbis libvpx opus x264 x265 nasm yasm alsa-lib libva sdl2 libvdpau libvdpau-va-gl
 
 name=ffmpeg
 version=7.1.1    
-release=1
+release=3
 source="https://ffmpeg.org/releases/ffmpeg-7.1.1.tar.xz
-https://www.linuxfromscratch.org/patches/blfs/svn/ffmpeg-7.1.1-chromium_method-1.patch"
+https://www.linuxfromscratch.org/patches/downloads/ffmpeg/ffmpeg-7.1.1-chromium_method-1.patch"
 
 options="!checksum"
 

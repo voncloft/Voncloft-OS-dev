@@ -1,15 +1,18 @@
 # description : Python 2 and 3 compatibility utilities
-# depends : python
+# depends : python python-setuptools
 
 name=python-six
-version=1.16.0
-release=3
-
-source="https://pypi.io/packages/source/s/six/six-1.16.0.tar.gz"
+version=1.17.0
+release=1
+source="https://files.pythonhosted.org/packages/source/s/six/six-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "six-$version"
+
+    # pip is included by this repository's Python build via ensurepip.
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

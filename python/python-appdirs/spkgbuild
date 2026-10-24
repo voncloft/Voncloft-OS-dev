@@ -1,15 +1,18 @@
-# description	: A small Python module for determining appropriate platform-specific dirs, e.g. a user data dir
-# depends	: python
+# description : Determine platform-specific application data, config and cache directories
+# depends : python python-setuptools
 
 name=python-appdirs
 version=1.4.4
-release=1
-
-source="https://pypi.io/packages/source/a/appdirs/appdirs-1.4.4.tar.gz"
+release=2
+source="https://files.pythonhosted.org/packages/source/a/appdirs/appdirs-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "appdirs-$version"
+
+    # pip is included by this repository's Python build via ensurepip.
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

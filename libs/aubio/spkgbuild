@@ -1,0 +1,16 @@
+# description : aubio - KDE dependency
+# depends : fftw libsndfile pkgconf python waf
+
+name=aubio
+version=0.4.9
+release=2
+
+source="$name-$version.tar.bz2::https://aubio.org/pub/aubio-$version.tar.bz2"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    waf configure --prefix=/usr --libdir=/usr/lib64 --disable-tests --disable-docs --disable-avcodec
+    waf build
+    waf install --destdir="$PKG"
+}

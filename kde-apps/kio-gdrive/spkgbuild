@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kaccounts-integration kaccounts-providers
+# depends : extra-cmake-modules kaccounts-integration kde-deps-installer kdoctools ki18n kio libkgapi purpose qt6 qtkeychain
 
 name=kio-gdrive
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kio-gdrive-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kio-gdrive-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

@@ -1,0 +1,16 @@
+# description : kopeninghours - KDE gear component
+# depends : bison extra-cmake-modules flex kde-deps-installer kholidays ki18n qt6
+
+name=kopeninghours
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/kopeninghours-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kopeninghours-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

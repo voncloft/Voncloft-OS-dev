@@ -1,37 +1,64 @@
-# description : glib
-# depends : docutils libxslt pcre2
+# depends : libxslt pcre2 python-docutils libffi zlib meson ninja pkgconf python python-mako python-markdown util-linux flex bison
+# description : GLib libraries and GObject Introspection
 name=glib
 version=2.84.3
-release=1
+release=4
+options="!checksum"
+#KEEP_WORK=yes
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz
-        https://download.gnome.org/sources/glib/1.84/glib-1.84.0.tar.xz"
-noextract="glib-1.84.0.tar.xz"
+        https://download.gnome.org/sources/gobject-introspection/1.84/gobject-introspection-1.84.0.tar.xz"
+noextract="gobject-introspection-1.84.0.tar.xz"
 
 build() {
-        cd $name-$version
-	echo $XDG_DATA_DIRS
-        mkdir build
-cd    build
+    cd "$name-$version"
 
-meson setup ..                  \
-      --prefix=/usr             \
-      --buildtype=release       \
-      -D introspection=disabled \
-      -D glib_debug=disabled    \
-      -D man-pages=enabled      \
-      -D sysprof=disabled
-ninja
-DESTDIR=$PKG ninja install
-tar xf $SRC/glib-1.84.0.tar.xz
+    # Keep the existing /usr/lib layout; the first pass bootstraps introspection.
+    meson setup build \
+        --prefix=/usr \
+        --libdir=lib \
+        --buildtype=release \
+        --wrap-mode=nodownload \
+        -Dintrospection=disabled \
+        -Dglib_debug=disabled \
+        -Dman-pages=enabled \
+        -Dsysprof=disabled
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 
-PKG_CONFIG_PATH=$PKG/usr/lib/pkgconfig meson setup glib-1.84.0 gi-build \
-            --prefix=/usr --buildtype=release
-ninja -C gi-build
+    # PKG_CONFIG_PATH only locates .pc files; it does not relocate their /usr
+    # paths into DESTDIR. Relocate private copies for bootstrap consumers only.
+    # The packaged .pc files keep their final /usr prefix.
+    mkdir -p "$SRC/glib-bootstrap-pc"
+    for pc in "$PKG"/usr/lib/pkgconfig/*.pc; do
+        sed "s|^prefix=/usr\$|prefix=$PKG/usr|" "$pc" \
+            > "$SRC/glib-bootstrap-pc/${pc##*/}"
+    done
+    export PKG_CONFIG_PATH="$SRC/glib-bootstrap-pc${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
+    export LD_LIBRARY_PATH="$PKG/usr/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+    export PATH="$PKG/usr/bin:$PATH"
+    export XDG_DATA_DIRS="$PKG/usr/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"
+    export GI_TYPELIB_PATH="$PKG/usr/lib/girepository-1.0${GI_TYPELIB_PATH:+:$GI_TYPELIB_PATH}"
+    test "$(pkg-config --variable=libdir glib-2.0)" = "$PKG/usr/lib"
+    test -f "$PKG/usr/lib/glib-2.0/include/glibconfig.h"
 
-DESTDIR=$PKG ninja -C gi-build install
+    tar -xf "$SRC/gobject-introspection-1.84.0.tar.xz" -C build
+    meson setup build/gi-build build/gobject-introspection-1.84.0 \
+        --prefix=/usr \
+        --libdir=lib \
+        --buildtype=release \
+        --wrap-mode=nodownload
+    ninja -C build/gi-build
+    DESTDIR="$PKG" ninja -C build/gi-build install
 
-PKG_CONFIG_PATH=$PKG/usr/lib/pkgconfig:/usr/lib/pkgconfig meson configure -D introspection=enabled &&
-ninja
-
-DESTDIR=$PKG ninja install
+    # Make the newly built scanner and introspection library available to GLib.
+    for pc in "$PKG"/usr/lib/pkgconfig/*.pc; do
+        sed "s|^prefix=/usr\$|prefix=$PKG/usr|" "$pc" \
+            > "$SRC/glib-bootstrap-pc/${pc##*/}"
+    done
+    test "$(pkg-config --variable=g_ir_scanner gobject-introspection-1.0)" = "$PKG/usr/bin/g-ir-scanner"
+    # Meson caches pkg_config_path at initial setup, so update it explicitly.
+    meson setup --reconfigure build -Dintrospection=enabled \
+        -Dpkg_config_path="$PKG_CONFIG_PATH"
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

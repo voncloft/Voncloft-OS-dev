@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps zxing-cpp
+# depends : extra-cmake-modules kcalendarcore kcodecs kcontacts kde-deps-installer ki18n kmime kpkpass libxml2 openssl qt6 shared-mime-info zlib zxing-cpp
 
 name=kitinerary
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kitinerary-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kitinerary-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

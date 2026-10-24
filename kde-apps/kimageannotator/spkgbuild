@@ -1,19 +1,16 @@
-# description : kde dep
-# depends : 
+# description : kimageannotator - KDE dependency
+# depends : kcolorpicker kde-deps-installer qt6
 
 name=kimageannotator
-version=0.71
+version=0.7.2
 release=1
 
-source="https://github.com/ksnip/kImageAnnotator/archive/refs/tags/v0.7.1.tar.gz"
+source="$name-$version.tar.gz::https://github.com/ksnip/kImageAnnotator/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
 
-
-build()
-{
-	cd *
-	mkdir build
-	cd build
-	cmake -DBUILD_WITH_QT6=true ..
-	make
-	make DESTDIR=$PKG install
+build() {
+    cd "kImageAnnotator-$version"
+    plasma-package-installer -DBUILD_WITH_QT6=ON -DBUILD_SHARED_LIBS=ON
+    cd build
+    make DESTDIR="$PKG" install
 }

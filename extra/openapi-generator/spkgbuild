@@ -1,0 +1,26 @@
+# description : OpenAPI Generator command line tool for Qt OpenAPI and other clients
+# depends : java-headless bash
+# note : Match the generator version used by Qt 6.11.2's Maven project.
+
+name=openapi-generator
+version=7.18.0
+release=1
+source="https://repo.maven.apache.org/maven2/org/openapitools/openapi-generator-cli/$version/openapi-generator-cli-$version.jar"
+options="!checksum"
+
+build() {
+    install -Dm644 "openapi-generator-cli-$version.jar" \
+        "$PKG/usr/share/java/openapi-generator/openapi-generator-cli.jar"
+    install -d "$PKG/usr/bin"
+    cat > "$PKG/usr/bin/openapi-generator" <<'EOF'
+#!/bin/sh
+set -eu
+java_command=java
+if [ -n "${JAVA_HOME:-}" ] && [ -x "$JAVA_HOME/bin/java" ]; then
+    java_command="$JAVA_HOME/bin/java"
+fi
+exec "$java_command" -jar /usr/share/java/openapi-generator/openapi-generator-cli.jar "$@"
+EOF
+    chmod 755 "$PKG/usr/bin/openapi-generator"
+    ln -s openapi-generator "$PKG/usr/bin/openapi-generator-cli"
+}

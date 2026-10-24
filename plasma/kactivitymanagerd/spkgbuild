@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : extra-cmake-modules kauth kcodecs kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kglobalaccel ki18n kio kservice kwidgetsaddons kxmlgui qt6
 
 name=kactivitymanagerd
-version=6.5.2
+version=6.8.1
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/kactivitymanagerd-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "kactivitymanagerd-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

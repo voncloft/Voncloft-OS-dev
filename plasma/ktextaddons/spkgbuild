@@ -1,14 +1,16 @@
 # description : ktextaddons
+# depends : breeze-icons extra-cmake-modules karchive kcolorscheme kconfig kcoreaddons kde-deps-installer ki18n kiconthemes kio kitemviews kservice ktextwidgets kwidgetsaddons qt6 qtkeychain sonnet syntax-highlighting
 
 name=ktextaddons
-version=1.6.0
+version=2.2.0
 release=1
 
-source="https://download.kde.org/stable/$name/$name-$version.tar.xz"
+source="https://download.kde.org/stable/ktextaddons/ktextaddons-$version.tar.xz"
+options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "ktextaddons-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

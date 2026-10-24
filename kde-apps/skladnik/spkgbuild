@@ -1,0 +1,16 @@
+# description : skladnik - KDE gear component
+# depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui libkdegames qt6
+
+name=skladnik
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/skladnik-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "skladnik-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,0 +1,16 @@
+# description : imath - KDE dependency
+# depends : kde-deps-installer
+
+name=imath
+version=3.2.3
+release=1
+
+source="$name-$version.tar.gz::https://github.com/AcademySoftwareFoundation/Imath/releases/download/v$version/Imath-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "Imath-$version"
+    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DPYTHON=OFF -DPYBIND11=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

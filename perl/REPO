@@ -636,7 +636,7 @@ f:6271f5d650993faa51c32bb5b7f3858d:perl-log-any/CHANGELOG
 f:64260f322174bdf716d68e27467c90ea:perl-log-any/spkgbuild
 f:6b508365137e9eb5c95e2d4a13f66569:perl-moo/.pkgfiles
 f:e90c9e76d709a6eaef181218aab707ff:perl-moo/CHANGELOG
-f:64f5411c047896eed2548b180893b854:perl-moo/spkgbuild
+f:c2ac45701d238c7023efa973bef8c215:perl-moo/spkgbuild
 f:829db8f8f76af05168c49baf43eb55ef:perl-pegex/CHANGELOG
 f:5e526edcaf0de279a29438446f83a58e:perl-pegex/spkgbuild
 f:19a507931d29ebc42029011399df9d05:perl-gtk2-ex-formfactory/CHANGELOG
@@ -1418,7 +1418,7 @@ f:ac3b61bae267995e358051a02452fe95:perl-class-singleton/CHANGELOG
 f:331b598e3eec9667561efe12220f6beb:perl-class-singleton/spkgbuild
 f:fcbf9dd19d02ce48869423080041d04a:perl-spiffy/spkgbuild
 f:857c714bfba6f98a7e83c7690ddbb23a:perl-cpan-meta/CHANGELOG
-f:3693647cbcb6df222859a67b8b4dc019:perl-cpan-meta/spkgbuild
+f:7d751d531df98cf17e4307a59f9c4dbf:perl-cpan-meta/spkgbuild
 f:02d931f1f17b5ef07eae2422b5573c27:perl-file-desktopentry/CHANGELOG
 f:1e513a973b7deb65e755c2e24def4404:perl-file-desktopentry/spkgbuild
 f:b334804cd8860f23ab0038c1968390c5:perl-www-mechanize/CHANGELOG

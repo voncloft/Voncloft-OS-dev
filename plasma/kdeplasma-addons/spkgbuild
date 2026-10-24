@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : attica corrosion extra-cmake-modules kauth kcmutils kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdeclarative kglobalaccel kguiaddons kholidays ki18n kio kirigami-addons kjobwidgets knewstuff knotifications kpackage krunner kservice ksvg kunitconversion kwidgetsaddons kxmlgui libplasma plasma-workspace qt6 solid sonnet
 
 name=kdeplasma-addons
-version=6.5.2
+version=6.8.1
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/kdeplasma-addons-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "kdeplasma-addons-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

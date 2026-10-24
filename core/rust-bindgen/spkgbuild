@@ -1,5 +1,5 @@
 # description : utility that generates rust bindings from c/c++ headers
-# depends : rustc llvm
+# depends : rust llvm
 
 name=rust-bindgen
 version=0.72.0
@@ -11,6 +11,7 @@ options="!checksum"
 build()
 {
 	cd *
+	export PATH="/opt/rustc/bin:$PATH"
 	cargo build --release
 	mkdir -pv $PKG/usr/bin
 	install -v -m755 target/release/bindgen $PKG/usr/bin

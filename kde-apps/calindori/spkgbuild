@@ -1,0 +1,16 @@
+# description : calindori - KDE gear component
+# depends : extra-cmake-modules kcalendarcore kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kirigami knotifications kpeople qt6
+
+name=calindori
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/calindori-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "calindori-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,7 +1,9 @@
-# description : Core components for the kde desktop these are all the kf5 dependencies
-version=6.19.0
+# depends : qt6
+# description : KDE Frameworks 6 environment configuration
+name=kf-depends
+version=6.31.0
 release=1
-verzion=5.81
+options="!checksum"
 source="kf6.sh
 	qt6.sh
 	qt

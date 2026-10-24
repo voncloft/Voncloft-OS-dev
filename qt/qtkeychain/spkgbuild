@@ -1,23 +1,16 @@
-# description : qt keychain for qt6
-# dpepends : qt6 libsecret
+# description : qtkeychain - KDE dependency
+# depends : kde-deps-installer libsecret qt6
 
 name=qtkeychain
-version=0.15.0
+version=0.17.0
 release=1
 
-source="https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/0.15.0.tar.gz"
+source="$name-$version.tar.gz::https://github.com/frankosterfeld/qtkeychain/archive/refs/tags/$version.tar.gz"
+options="!checksum"
 
-build()
-{
-	cd *
-	mkdir build
-	cd build
-	cmake .. \
-	-D CMAKE_INSTALL_PREFIX=/usr \
-	-D BUILD_WITH_QT6=ON \
-	-D BUILD_WITH_QT5=OFF \
-	-D CMAKE_BUILD_TYPE=Release
-
-	make
-	make DESTDIR=$PKG install
+build() {
+    cd "qtkeychain-$version"
+    plasma-package-installer -DBUILD_WITH_QT6=ON -DBUILD_TEST_APPLICATION=OFF
+    cd build
+    make DESTDIR="$PKG" install
 }

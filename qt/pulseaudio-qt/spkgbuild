@@ -1,16 +1,16 @@
-# description   : This package is a Qt-style wrapper for PulseAudio-17
-# depends       : kf-depends pulseaudio
+# description : This package is a Qt-style wrapper for PulseAudio-17
+# depends : extra-cmake-modules kde-deps-installer pkgconf pulseaudio qt6
 
 name=pulseaudio-qt
-version=1.7.0
-release=1
-source=" https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.7.0.tar.xz"
+version=1.9.0
+release=2
+
+source="https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   kf-package-installer
-   cd build
-   make DESTDIR=$PKG install
-
+    cd "pulseaudio-qt-$version"
+    plasma-package-installer -DQT_MAJOR_VERSION=6
+    cd build
+    make DESTDIR="$PKG" install
 }

@@ -1,19 +1,16 @@
-# description :	provides a C++ wrapper to gpgme
-# depends : gpgme
+# description : gpgmepp - KDE dependency
+# depends : gpgme kde-deps-installer libgpg-error
 
 name=gpgmepp
-version=2.0.0
+version=2.2.0
 release=1
 
-source="https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-$version.tar.xz"
+source="$name-$version.tar.xz::https://gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-$version.tar.xz"
+options="!checksum"
 
-build()
-{
-	cd $name-$version
-	mkdir build &&
-	cd    build &&
-
-	cmake -D CMAKE_INSTALL_PREFIX=/usr .. &&
-	make
-	make DESTDIR=$PKG install
+build() {
+    cd "gpgmepp-$version"
+    plasma-package-installer -DBUILD_TESTING=OFF
+    cd build
+    make DESTDIR="$PKG" install
 }

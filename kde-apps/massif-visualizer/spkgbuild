@@ -1,0 +1,16 @@
+# description : massif-visualizer - KDE gear component
+# depends : extra-cmake-modules karchive kconfig kcoreaddons kde-deps-installer kdiagram kgraphviewer ki18n kio kparts qt6
+
+name=massif-visualizer
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/massif-visualizer-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "massif-visualizer-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kontactinterface
+# depends : akonadi akonadi-contacts akonadi-search extra-cmake-modules grantleetheme kcmutils kcolorscheme kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kldap kontactinterface ktextaddons kuserfeedback libkdepim pimcommon plasma-activities qt6
 
 name=kaddressbook
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kaddressbook-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kaddressbook-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

@@ -26,6 +26,7 @@ d:cairomm
 d:hunspell
 d:aircrack-ng
 d:grub-efi
+d:elogind
 d:logrotate
 d:openssh-boot
 d:docbook-xsl-nons
@@ -131,7 +132,6 @@ d:bash
 d:grantlee
 d:valgrind
 d:bash-completion
-d:pkg-config
 d:cracklib
 d:lhasa
 d:nnn
@@ -414,6 +414,7 @@ d:scratchpkg
 d:smplayer-skins
 d:keyutils
 d:volumeicon
+d:networkmanager
 d:papirus-icon-theme-dark
 d:newsboat
 d:iproute2
@@ -505,7 +506,7 @@ f:b3b731cbf05bfb1f037daeabab260d41:figlet/spkgbuild
 f:59583b7acb6b7c62c73c6410d29b30ad:stfl/spkgbuild
 f:54745ccaec31b1ae034406411bb5d083:graphviz/.pkgfiles
 f:f6fe6886d34e97c23d8308bb7d21dbbb:graphviz/CHANGELOG
-f:d2d049835c8cff33586181fd43bf5fa1:graphviz/spkgbuild
+f:8b975785e771514bf2b7ccceba6b5636:graphviz/spkgbuild
 f:dde6b899fb1a8e8bd9895aec233a71b6:texinfo/.pkgfiles
 f:366060b9f36b389a69e9448f4387346d:texinfo/CHANGELOG
 f:6032fa8d5d90a16be8da2862ebc83472:texinfo/spkgbuild
@@ -527,7 +528,7 @@ f:b1198d9ae416bd204e53a7aeb5a7842a:linux-pam/system-auth
 f:c95d4c6445922d0d687bb6ee44075e8f:linux-pam/post-upgrade.sh
 f:479b4ef3feee799389484cf9a30a8dc0:linux-pam/CHANGELOG
 f:8f1f38a5c631ede7f9b407595ca79726:linux-pam/post-install.sh
-f:9662eaf01a5d8f803272c3cbb7065748:linux-pam/spkgbuild
+f:390919e5c78248b848398c19ccee0d45:linux-pam/spkgbuild
 f:8c37ec4dba9c45b3540f990a6c1922c1:linux-pam/other
 f:38aa4e01298d1ed0da4e20a2cb26edbc:iucode-tool/spkgbuild
 f:d9b396a7d485f5e0c68e6d038def2146:gnustep-base/CHANGELOG
@@ -576,6 +577,8 @@ f:ab58673eaee46e7d05b92900adee4a91:aircrack-ng/spkgbuild
 f:ae4f93507e6be22f41c87cfc92d6c86d:grub-efi/.pkgfiles
 f:f074421752fa573485623cccc059c7d6:grub-efi/0006-BootHole.patch
 f:030a22879c5538578b769e8cb7db6f4b:grub-efi/spkgbuild
+f:92fae240b3030819ba4a820d9b9b653e:elogind/.pkgfiles
+f:a4378b43c972c9b0cff7af97dcd05521:elogind/spkgbuild
 f:6c7409aba90a6777da08897561634f5b:logrotate/CHANGELOG
 f:2dd1290ffd92a7cd99dc84eef6f04ccd:logrotate/spkgbuild
 f:94dae4d3eded2fab9ae879533d3680db:logrotate/logrotate.conf
@@ -797,7 +800,7 @@ f:3df491edbaa639d11388cff55e149688:double-conversion/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:jinja2/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:jinja2/.nanorc
 f:d6c598646e8405f39a48fdc2228b71df:jinja2/CHANGELOG
-f:8150cadc3c34db7b99eb609406029124:jinja2/spkgbuild
+f:1cef7ecfe5826149d37c8b30f1bb5e09:jinja2/spkgbuild
 f:1f580d2d1f2383a4919053a472ec1f22:zenity/CHANGELOG
 f:ad5b6834a519a41b44c22cad84853657:zenity/spkgbuild
 f:007492e22d272871902afaf1f6765d6e:db/atomic.patch
@@ -866,8 +869,6 @@ f:bac0d8dedad1bed2ab5d127f21ed5e2f:bash-completion/i18n.sh
 f:45507ee2e013d450fe05de984088943d:bash-completion/spkgbuild
 f:f1dd87922e8fddfe73ef20ae76c2f777:bash-completion/umask.sh
 f:f70bbec388eac3b99a99718b96b6d4c6:bash-completion/.bash_logout
-f:121a2adb59519904d4d572441aa6ef44:pkg-config/.pkgfiles
-f:c279146b3142e0bc837b2f0f08ae76bb:pkg-config/spkgbuild
 f:48593d2a8fb22f55e9ceadfa46f464f9:cracklib/.pkgfiles
 f:3dd3aebdb7f724cbabf55c78c1d8dc84:cracklib/post-upgrade.sh
 f:6ed377f28e5499f61dc82106c2d2fc54:cracklib/CHANGELOG
@@ -954,7 +955,7 @@ f:02eb5192a4d6aaf8536ae078fd7d32ba:book-stripper/spkgbuild
 f:1f6c24eb41997d98b0d6155c97a20b17:mps-youtube/CHANGELOG
 f:282f6d64a8c0f6feb4ed4107ed883a37:mps-youtube/spkgbuild
 f:d8e25f1c3e018207a9622be23891197e:xapian/.pkgfiles
-f:03a1dc9e11a2b67005e28adbdd1dfaac:xapian/spkgbuild
+f:a83681c2be5ad84cdc8418fce1fc50c6:xapian/spkgbuild
 f:8794464f4b7561518fbfa97448f9c0f4:osx-arc-theme/spkgbuild
 f:7bc5a27c8b4854039d88e2b23b75ebbe:lsb-release/.pkgfiles
 f:7ea647550690d98f1d4a6c4dcef59897:lsb-release/lsb-release
@@ -1514,7 +1515,7 @@ f:b7e7193fefab7b03d54e55ca3f178fad:openssh/rc.sshd
 f:7fe73bf8ea8559f4d74a0848c244db1a:openssh/mkdirs
 f:375bc8bcfb157208c9c5d9700c7c6b69:openssh/pre-install.sh
 f:2530c3282da6dac922a098e81baace95:rust-bindgen/.pkgfiles
-f:7a271a64167ea61583264094f6fbe214:rust-bindgen/spkgbuild
+f:d97fecf6c9133427f0222f0908e23441:rust-bindgen/spkgbuild
 f:82935be7f32165ec2e4f89a1f8717329:swig/.pkgfiles
 f:98bedd7cad5a1150857328d3ead91841:swig/CHANGELOG
 f:2de416a7af9d50909501806674419d0e:swig/spkgbuild
@@ -1625,6 +1626,7 @@ f:b36b6b659b9fc4b052d686a3b5a1b546:smplayer-skins/spkgbuild
 f:c373c39d013b4d646f4d1fd072aa56f3:keyutils/.pkgfiles
 f:6ecfdaea80c5e0afe053c8e5cefad8eb:keyutils/spkgbuild
 f:be4242cd7e09a51387e4cb7a1cc9d1cd:volumeicon/spkgbuild
+f:62773f1c09e88d5b47049f7f8d54e3c5:networkmanager/spkgbuild
 f:31947433f140176deec3d77be55e5b44:papirus-icon-theme-dark/spkgbuild
 f:43b602a9011a48837005f82972e0beca:newsboat/podboat.1.gz
 f:8355dc7165cbdf83517a19588de9f1d8:newsboat/CHANGELOG
@@ -1816,7 +1818,7 @@ f:7035ab4b404fd5f57b00035cf8ab3369:scons/CHANGELOG
 f:3702cdd62ac3010316f8b9cbb98f7942:scons/spkgbuild
 f:2d95520c2bc0ebc0435ca5a455311b24:pinentry/.pkgfiles
 f:dc6a6c36ffda4887148917ad4787392e:pinentry/CHANGELOG
-f:6df15e9940dfa62ad703203db3744e01:pinentry/spkgbuild
+f:a6328887f48d1e9bf642aabb255b5087:pinentry/spkgbuild
 f:a1a9d74dca9c6ca8a9ed43b2a7c30ab8:plank/spkgbuild
 f:2bf40a877eedd001abcae0c495ae97ed:mkinitramfs/install
 f:d300a6d09dadfc279b69aec15b1e1ee7:mkinitramfs/spkgbuild
@@ -1833,7 +1835,7 @@ f:b15581c229916066d99b02fbc49b9d28:shadow/CHANGELOG
 f:d65f80e3f592084b62d205b075f08a9c:shadow/post-install.sh
 f:311ddb85c289b9b893b8938212f178f1:shadow/spkgbuild
 f:67bfdee60d1f31efc42ea724c5da9cad:shadow/su
-f:b26675586ec499376621f0b00e877b57:.httpup-repo.current
+f:5ce8418cdf6429b3e73601e6f8cb7ebb:.httpup-repo.current
 f:969a61c5436fd96104c8bb6505d83315:yetris/spkgbuild
 f:b86bf7292e3af00f9119c16d22795139:icoutils/.pkgfiles
 f:fa56ded29016f12205356ab712b9ec7f:icoutils/spkgbuild

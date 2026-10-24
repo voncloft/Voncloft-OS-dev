@@ -1,0 +1,16 @@
+# description : plasma-dialer - KDE plasma component
+# depends : extra-cmake-modules kconfig kcontacts kcoreaddons kdbusaddons kde-deps-installer ki18n kio kirigami kirigami-addons knotifications kpeople kwindowsystem modemmanager-qt qt6 wayland
+
+name=plasma-dialer
+version=6.8.1
+release=1
+
+source="https://download.kde.org/stable/plasma/$version/plasma-dialer-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "plasma-dialer-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

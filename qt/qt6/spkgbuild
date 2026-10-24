@@ -1,24 +1,94 @@
-# description	: Cross-platform double-conversion application framework that is widely used for developing application
+# description	: Cross-platform application framework for desktop, embedded and mobile applications
 # depends	: sqlite make-ca dbus harfbuzz glib icu jasper libjpeg-turbo libmng libpng libinput
 # depends	: libxrender libsm libxi libtiff libxkbcommon mesa mtdev openssl pcre2 wayland
 # depends	: xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm alsa-lib python
 # depends	: gst-plugins-base libwebp xorg-libraries vulkan-headers
+# depends	: cmake ninja llvm nodejs nss python-html5lib gperf bison flex flite
+# depends	: maven openapi-generator speech-dispatcher pipewire ccache
 
 name=qt6
-version=6.9.1
-release=1
-source="https://download.qt.io/archive/qt/${version%.*}/$version/single/qt-everywhere-src-$version.tar.xz"
+version=6.11.2
+release=6
+source="https://download.qt.io/archive/qt/${version%.*}/$version/single/qt-everywhere-src-$version.tar.xz
+qt6-examples.cmake"
 options="!checksum"
 
+# Preserve this long build on failure. A normal scratch/pkgbuild retry still
+# re-extracts sources, so resume a retained tree instead of starting a new run.
+#KEEP_WORK=yes
+
+prepare_openapi_java() {
+    # sudo keeps JAVA_HOME on this system but restricts PATH. Qt OpenAPI's
+    # generator invokes plain "java", even when CMake finds Java via JAVA_HOME.
+    if [ -n "${JAVA_HOME:-}" ]; then
+        if [ ! -x "$JAVA_HOME/bin/java" ] || [ ! -x "$JAVA_HOME/bin/javac" ]; then
+            printf '%s\n' 'Qt OpenAPI requires JAVA_HOME to point to a working JDK.' >&2
+            return 1
+        fi
+        export PATH="$JAVA_HOME/bin:$PATH"
+    fi
+    if ! command -v java >/dev/null 2>&1 || ! command -v javac >/dev/null 2>&1; then
+        printf '%s\n' 'Qt OpenAPI requires java and javac in PATH; set JAVA_HOME to the installed JDK.' >&2
+        return 1
+    fi
+    java -version >/dev/null 2>&1 && javac -version >/dev/null 2>&1 || {
+        printf '%s\n' 'Qt OpenAPI Java runtime/compiler check failed.' >&2
+        return 1
+    }
+}
+
+check_flite_link() {
+    # Qt checks Flite with an executable; that does not detect non-PIC static libraries.
+    # Keep this project outside Qt: its top-level build discovers CMake subdirectories.
+    local check_dir="$SRC/.qt6-flite-link-check"
+    mkdir -p "$check_dir"
+    cat > "$check_dir/CMakeLists.txt" <<'CMAKE'
+cmake_minimum_required(VERSION 3.16)
+project(QtFliteLinkCheck LANGUAGES CXX)
+list(PREPEND CMAKE_MODULE_PATH "${FLITE_FIND_MODULE_DIR}")
+find_package(Flite REQUIRED)
+add_library(qt_flite_link_check SHARED probe.cpp)
+target_link_libraries(qt_flite_link_check PRIVATE Flite::Flite)
+target_link_options(qt_flite_link_check PRIVATE -Wl,--no-undefined)
+CMAKE
+    cat > "$check_dir/probe.cpp" <<'CPP'
+#include <flite/flite.h>
+extern "C" int qt_flite_link_check()
+{
+    flite_init();
+    cst_audio_streaming_info *stream = new_audio_streaming_info();
+    delete_audio_streaming_info(stream);
+    return 0;
+}
+CPP
+    cmake -S "$check_dir" -B "$check_dir/build" -G Ninja \
+        -DFLITE_FIND_MODULE_DIR="$PWD/qtspeech/cmake" \
+        -DFlite_LIBRARY=/usr/lib64/libflite.so &&
+    cmake --build "$check_dir/build" || {
+        printf '%s\n' 'Qt Flite shared-library check failed. Install the PIC-enabled flite package before retrying.' >&2
+        return 1
+    }
+}
+
 build() {
-	cd *
+	local build_jobs="${NINJAJOBS:-$(nproc)}"
+	prepare_openapi_java
+	# Keep the compiler cache off the root filesystem and bound its disk use.
+	export CCACHE_DIR="${CCACHE_DIR:-/mnt/Storage/scratchpkg/ccache}"
+	export CCACHE_MAXSIZE="${CCACHE_MAXSIZE:-50G}"
+	mkdir -p "$CCACHE_DIR"
+	# WebEngine reads NINJAFLAGS at configure time for its nested Ninja builds.
+	export NINJAFLAGS="${NINJAFLAGS:+$NINJAFLAGS }-j$build_jobs"
+
+	cd "qt-everywhere-src-$version"
+	check_flite_link
 	QT6PREFIX=/usr
 	export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
 
 	if [ "$(uname -m)" == "i686" ]; then
     		sed -e "/^#elif defined(Q_CC_GNU_ONLY)/s/.*/& \&\& 0/" \
          	-i qtbase/src/corelib/global/qtypes.h &&
-    		export CXXFLAGS+="-DDISABLE_SIMD -DPFFFT_SIMD_DISABLE"
+		export CXXFLAGS+=" -DDISABLE_SIMD -DPFFFT_SIMD_DISABLE"
 	fi
 	./configure -prefix /usr      \
             -sysconfdir /etc/xdg    \
@@ -26,18 +96,30 @@ build() {
             -plugindir /usr/lib64/qt6/plugins \
             -openssl-linked         \
             -system-sqlite          \
-            -nomake examples        \
+            -make examples          \
+            -examplesdir /usr/lib64/qt6/examples \
             -no-rpath               \
             -no-sbom                \
             -syslog                 \
-            -skip qt3d              \
-            -skip qtquick3dphysics  \
-            Clang_DIR=/usr/lib/cmake/clang\
+            -ccache                 \
+            -webengine-proprietary-codecs \
+            -feature-webengine-webrtc-pipewire \
+            -feature-speechd        \
+            FEATURE_openapi_generator=ON \
+            FEATURE_openapi_common_library=ON \
+            BUILD_qt3d=ON           \
+            BUILD_qtquick3dphysics=ON \
+            BUILD_qtopenapi=ON      \
+            CMAKE_PROJECT_INCLUDE="$SRC/qt6-examples.cmake" \
+            QT_BUILD_EXAMPLES_BY_DEFAULT=ON \
+            QT_BUILD_EXAMPLES_AS_EXTERNAL=OFF \
+            Flite_LIBRARY=/usr/lib64/libflite.so \
+            Clang_DIR=/usr/lib/cmake/clang \
             LLVM_DIR=/usr/lib/cmake/llvm \
             QT_AVOID_CMAKE_ARCHIVING_API=ON
 
-            ninja
-            DESTDIR=$PKG ninja install
+            ninja -j"$build_jobs"
+            DESTDIR="$PKG" ninja -j"$build_jobs" install
 
             find $PKG$QT6PREFIX/ -name \*.prl -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' {} \;
 	pushd qttools/src

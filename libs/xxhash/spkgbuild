@@ -1,0 +1,14 @@
+# description : Fast non-cryptographic hash library used by ccache
+# depends : make
+
+name=xxhash
+version=0.8.4
+release=1
+source="xxhash-$version.tar.gz::https://github.com/Cyan4973/xxHash/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "xxHash-$version"
+    make PREFIX=/usr LIBDIR=/usr/lib64
+    make PREFIX=/usr LIBDIR=/usr/lib64 DESTDIR="$PKG" install
+}

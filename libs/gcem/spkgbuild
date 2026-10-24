@@ -1,0 +1,16 @@
+# description : gcem - KDE dependency
+# depends : kde-deps-installer
+
+name=gcem
+version=1.18.0
+release=1
+
+source="$name-$version.tar.gz::https://github.com/kthohr/gcem/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "gcem-$version"
+    plasma-package-installer -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DGCEM_BUILD_TESTS=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

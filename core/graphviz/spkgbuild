@@ -1,10 +1,13 @@
+# note : GEGL can use Graphviz output; it is not a Graphviz build dependency.
 # description	: Graph visualization software
-# depends	: pango cairo xorg-libraries fontconfig libpng gegl
+# depends : pango cairo xorg-libraries fontconfig libpng cmake
 
 name=graphviz
 version=13.1.0
-release=1
+release=2
 source="https://gitlab.com/graphviz/graphviz/-/archive/$version/graphviz-$version.tar.bz2"
+
+options="!checksum"
 
 build() {
 	cd $name-$version

@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : extra-cmake-modules kde-deps-installer modemmanager qt6
 
 name=modemmanager-qt
-version=5.106.0
+version=6.31.0
 release=1
 
-source="https://download.kde.org/stable/frameworks/${version%.*}/$name-$version.tar.xz"
+source="https://download.kde.org/stable/frameworks/${version%.*}/modemmanager-qt-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   kf5-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "modemmanager-qt-$version"
+    kf-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

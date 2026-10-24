@@ -1,0 +1,16 @@
+# description : kclock - KDE gear component
+# depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kio kirigami kirigami-addons kjobwidgets knotifications kstatusnotifieritem ksvg libplasma qt6 wayland-protocols
+
+name=kclock
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/kclock-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kclock-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

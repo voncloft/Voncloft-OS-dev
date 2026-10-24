@@ -1,2 +1,3 @@
 #!/bin/sh
-groupadd -g 70 scanner
+set -e
+getent group scanner >/dev/null || groupadd -r scanner

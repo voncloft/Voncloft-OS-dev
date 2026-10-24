@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps libaccounts-qt signond signon-ui signon-kwallet-extension qcoro
+# depends : extra-cmake-modules kcmutils kcoreaddons kdbusaddons kde-deps-installer ki18n kio kwallet libaccounts-qt qcoro qt6 signond
 
 name=kaccounts-integration
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kaccounts-integration-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kaccounts-integration-$version"
+    plasma-package-installer -DQT_MAJOR_VERSION=6
+    cd build
+    make DESTDIR="$PKG" install
 }

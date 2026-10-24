@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : extra-cmake-modules futuresql kcoreaddons kcrash kde-deps-installer kdoctools ki18n kirigami kirigami-addons qcoro qt6
 
 name=kontrast
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kontrast-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kontrast-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

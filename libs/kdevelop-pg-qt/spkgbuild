@@ -1,0 +1,16 @@
+# description : kdevelop-pg-qt - KDE independent component
+# depends : extra-cmake-modules kde-deps-installer qt6
+
+name=kdevelop-pg-qt
+version=2.4.0
+release=1
+
+source="https://download.kde.org/stable/kdevelop-pg-qt/$version/src/kdevelop-pg-qt-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kdevelop-pg-qt-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

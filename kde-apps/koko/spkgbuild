@@ -1,0 +1,16 @@
+# description : koko - KDE gear component
+# depends : exiv2 extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdeclarative kfilemetadata ki18n kio kirigami kirigami-addons kirigami-app-components knotifications kquickimageeditor purpose qt6
+
+name=koko
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/koko-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "koko-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

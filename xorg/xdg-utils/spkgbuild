@@ -1,9 +1,9 @@
+# depends : links lynx xmlto xorg
 # description   : xdg-utils is a set of command line tools that assist applications with a variety of desktop integration tasks
-# depends       : xmlto lynx links xorg applications
 
 name=xdg-utils
 version=1.2.1
-release=1
+release=2
 source=" https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v1.2.1/xdg-utils-v1.2.1.tar.gz"
 options="!checksum"
 

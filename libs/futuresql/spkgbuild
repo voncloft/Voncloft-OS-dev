@@ -1,0 +1,16 @@
+# description : futuresql - KDE independent component
+# depends : extra-cmake-modules kde-deps-installer qcoro qt6
+
+name=futuresql
+version=0.1.1
+release=1
+
+source="https://download.kde.org/stable/futuresql/futuresql-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "futuresql-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

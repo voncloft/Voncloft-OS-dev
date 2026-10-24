@@ -1,0 +1,16 @@
+# description : highway - KDE dependency
+# depends : kde-deps-installer
+
+name=highway
+version=1.4.0
+release=1
+
+source="$name-$version.tar.gz::https://github.com/google/highway/releases/download/$version/highway-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "highway-$version"
+    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DHWY_ENABLE_TESTS=OFF -DHWY_ENABLE_EXAMPLES=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

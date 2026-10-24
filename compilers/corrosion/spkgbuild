@@ -1,0 +1,16 @@
+# description : corrosion - KDE dependency
+# depends : cmake kde-deps-installer rust
+
+name=corrosion
+version=0.6.1
+release=1
+
+source="$name-$version.tar.gz::https://github.com/corrosion-rs/corrosion/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "corrosion-$version"
+    plasma-package-installer -DCORROSION_INSTALL_ONLY=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

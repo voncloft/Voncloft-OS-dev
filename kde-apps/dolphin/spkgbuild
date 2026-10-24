@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : baloo baloo-widgets extra-cmake-modules kbookmarks kcmutils kcodecs kcolorscheme kcompletion kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kfilemetadata kguiaddons ki18n kiconthemes kio kio-extras knewstuff knotifications kparts ktextwidgets kuserfeedback kwidgetsaddons kwindowsystem packagekit-qt qt6 solid
 
 name=dolphin
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/dolphin-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "dolphin-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

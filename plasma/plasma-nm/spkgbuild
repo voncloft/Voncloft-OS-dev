@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : extra-cmake-modules kauth kcmutils kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdeclarative ki18n kio kirigami-addons kjobwidgets knotifications kpackage kquickcharts kservice kwidgetsaddons kwindowsystem libplasma modemmanager-qt networkmanager networkmanager-qt openssl pkgconf prison qcoro qt6 qtkeychain solid
 
 name=plasma-nm
-version=6.5.2
-release=1
+version=6.8.1
+release=2
 
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/plasma-nm-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "plasma-nm-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

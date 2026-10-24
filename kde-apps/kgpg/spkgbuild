@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : akonadi-contacts extra-cmake-modules gpgme karchive kcodecs kconfigwidgets kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kio kjobwidgets knotifications kservice kstatusnotifieritem ktextwidgets kwidgetsaddons kwindowsystem kxmlgui qt6
 
 name=kgpg
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kgpg-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kgpg-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

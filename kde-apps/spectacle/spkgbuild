@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kpipewire
+# depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kio kirigami knotifications kpipewire kquickimageeditor kstatusnotifieritem kwidgetsaddons kwindowsystem kxmlgui layer-shell-qt libxcb pkgconf plasma-wayland-protocols prison purpose qt6 tesseract wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=spectacle
-version=6.5.2
-release=1
+version=6.8.1
+release=2
 
-source="https://download.kde.org/stable/plasma/6.5.2/spectacle-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/spectacle-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "spectacle-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

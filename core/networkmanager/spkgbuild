@@ -1,0 +1,17 @@
+# description : networkmanager - KDE dependency
+# depends : curl dbus elogind glib jansson libndp meson modemmanager ninja nss polkit readline udev util-linux
+# note : No service is started or enabled by this recipe.
+
+name=networkmanager
+version=1.58.1
+release=1
+
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/$version/NetworkManager-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "NetworkManager-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dsystemdsystemunitdir=no -Dsystemdsystemgeneratordir=no -Dsystemd_journal=false -Dsession_tracking=elogind -Dsuspend_resume=elogind -Dsession_tracking_consolekit=false -Dppp=false -Dovs=false -Dnmtui=false -Dintrospection=false -Ddocs=false -Dtests=no
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

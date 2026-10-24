@@ -1,15 +1,19 @@
-# description : A MutableSet that remembers its order, so that every entry has an index
-# depends : python python-setuptools
+# description : A mutable set that preserves insertion order and supports indexing
+# depends : python python-flit
 
 name=python-ordered-set
-version=4.0.2
-release=3
-
-source="https://pypi.io/packages/source/o/ordered-set/ordered-set-4.0.2.tar.gz"
+version=4.1.0
+release=1
+source="https://files.pythonhosted.org/packages/source/o/ordered-set/ordered-set-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "ordered-set-$version"
+
+    # The existing python-flit package supplies the flit_core build backend.
+    # pip is included by this repository's Python build via ensurepip.
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

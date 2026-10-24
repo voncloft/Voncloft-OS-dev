@@ -1,0 +1,16 @@
+# description : pybind11 - KDE dependency
+# depends : kde-deps-installer python
+
+name=pybind11
+version=3.1.0
+release=1
+
+source="$name-$version.tar.gz::https://github.com/pybind/pybind11/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "pybind11-$version"
+    plasma-package-installer -DPYBIND11_TEST=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

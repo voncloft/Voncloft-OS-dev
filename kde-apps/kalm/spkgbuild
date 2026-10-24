@@ -1,0 +1,16 @@
+# description : kalm - KDE gear component
+# depends : extra-cmake-modules kconfig kcoreaddons kcrash kde-deps-installer ki18n kirigami kirigami-addons qqc2-desktop-style qt6
+
+name=kalm
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/kalm-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kalm-$version"
+    plasma-package-installer -DQT_MAJOR_VERSION=6
+    cd build
+    make DESTDIR="$PKG" install
+}

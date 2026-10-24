@@ -1,0 +1,16 @@
+# description : kdsingleapplication - KDE dependency
+# depends : kde-deps-installer qt6
+
+name=kdsingleapplication
+version=1.2.1
+release=1
+
+source="$name-$version.tar.gz::https://github.com/KDAB/KDSingleApplication/releases/download/v$version/kdsingleapplication-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "KDSingleApplication-$version"
+    plasma-package-installer -DKDSingleApplication_QT6=ON -DKDSingleApplication_EXAMPLES=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

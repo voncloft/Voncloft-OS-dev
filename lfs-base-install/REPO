@@ -24,7 +24,6 @@ d:man-pages
 d:ninja
 d:bash
 d:libidn2
-d:pkg-config
 d:python-setuptools
 d:iana-etc
 d:blfs-book-updater
@@ -186,8 +185,6 @@ f:4e7e8fa5fa17c2b6b2bd630dc44a701b:bash/spkgbuild
 f:5f2e0da1e11adad5e9f61889d68979a7:libidn2/.pkgfiles
 f:47511f7a0be8d5324fdda19466b0130c:libidn2/CHANGELOG
 f:6a9ab8ff3dd2b59d9424ab57555a0949:libidn2/spkgbuild
-f:121a2adb59519904d4d572441aa6ef44:pkg-config/.pkgfiles
-f:99604a1ce60d6e04b3c575b450fccce0:pkg-config/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-setuptools/.pkgfiles
 f:153e3c1a625194ea02d3851a44be9b5a:python-setuptools/spkgbuild
 f:e180301a32ea424f1eeffd066eaa1df7:iana-etc/.pkgfiles
@@ -412,4 +409,4 @@ f:bc11273827e25e65a75582dd2f7a2b05:sysvinit/spkgbuild
 f:3659389e9cc289225ff3c26ceb069f70:shadow/.pkgfiles
 f:b15581c229916066d99b02fbc49b9d28:shadow/CHANGELOG
 f:b9064c2295d9f63e3f70b51a60a315ad:shadow/spkgbuild
-f:d7f1accbc8525355121c56c054699941:.httpup-repo.current
+f:1730a9c510bd0476be8267ff6b2a3ac1:.httpup-repo.current

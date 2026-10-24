@@ -1,0 +1,16 @@
+# description : tesseract - KDE dependency
+# depends : curl icu kde-deps-installer leptonica libarchive
+
+name=tesseract
+version=5.5.3
+release=1
+
+source="$name-$version.tar.gz::https://github.com/tesseract-ocr/tesseract/archive/refs/tags/$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "tesseract-$version"
+    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DBUILD_TRAINING_TOOLS=OFF -DBUILD_TESTS=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

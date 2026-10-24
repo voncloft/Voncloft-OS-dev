@@ -1,15 +1,16 @@
 # description : frontend for scanner
-# depends : kde-deps libksane kirigami2 purpose
+# depends : extra-cmake-modules kconfig kcoreaddons kcrash kde-deps-installer ki18n kio kirigami kquickimageeditor ksanecore kxmlgui leptonica purpose qt6 tesseract
 
 name=skanpage
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/skanpage-$version.tar.xz"
+options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "skanpage-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

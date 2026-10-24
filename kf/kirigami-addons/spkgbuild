@@ -1,16 +1,16 @@
 # description : addons for kirigami framework
+# depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kde-deps-installer kglobalaccel kguiaddons ki18n kiconthemes kirigami qt6
 
 name=kirigami-addons
-version=1.8.1
+version=1.15.0
 release=1
 
-source="https://download.kde.org/stable/$name/$name-$version.tar.xz"
+source="https://download.kde.org/stable/kirigami-addons/kirigami-addons-$version.tar.xz"
+options="!checksum"
 
 build() {
-   cd $name-$version
-	cmake -D CMAKE_INSTALL_PREFIX=$KF6_PREFIX \
-      -D CMAKE_BUILD_TYPE=Release         \
-      -D BUILD_TESTING=OFF 
-      make
-   make DESTDIR=$PKG install
+    cd "kirigami-addons-$version"
+    kf-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

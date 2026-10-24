@@ -1,0 +1,16 @@
+# description : fluidsynth - KDE dependency
+# depends : alsa-lib gcem glib kde-deps-installer libsndfile pulseaudio readline
+
+name=fluidsynth
+version=2.6.1
+release=1
+
+source="$name-$version.tar.gz::https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "fluidsynth-$version"
+    plasma-package-installer -Denable-signalsmith=OFF -Denable-systemd=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

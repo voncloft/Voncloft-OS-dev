@@ -1,22 +1,16 @@
-# description   : This package provides a set of tools to make use of C++20 coroutines with Qt
-# depends       : qt6
+# description : qcoro - KDE dependency
+# depends : kde-deps-installer qt6
 
 name=qcoro
-version=0.12.0
+version=0.13.0
 release=1
-source=" https://github.com/danvratil/qcoro/archive/v$version/qcoro-$version.tar.gz"
+
+source="$name-$version.tar.gz::https://github.com/danvratil/qcoro/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {
-        cd $name-$version
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
--D CMAKE_BUILD_TYPE=Release     \
--D BUILD_TESTING=OFF            \
--D QCORO_BUILD_EXAMPLES=OFF     \
--D BUILD_SHARED_LIBS=ON         \
-..                             
-make
-make DESTDIR=$PKG install
+    cd "qcoro-$version"
+    plasma-package-installer -DUSE_QT_VERSION=6 -DQCORO_BUILD_EXAMPLES=OFF -DBUILD_SHARED_LIBS=ON
+    cd build
+    make DESTDIR="$PKG" install
 }

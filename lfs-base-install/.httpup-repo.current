@@ -24,7 +24,6 @@ man-pages
 ninja
 bash
 libidn2
-pkg-config
 python-setuptools
 iana-etc
 blfs-book-updater
@@ -183,8 +182,6 @@ bash/spkgbuild
 libidn2/.pkgfiles
 libidn2/CHANGELOG
 libidn2/spkgbuild
-pkg-config/.pkgfiles
-pkg-config/spkgbuild
 python-setuptools/.pkgfiles
 python-setuptools/spkgbuild
 iana-etc/.pkgfiles

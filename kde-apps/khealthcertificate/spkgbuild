@@ -1,0 +1,16 @@
+# description : khealthcertificate - KDE gear component
+# depends : extra-cmake-modules karchive kcodecs kde-deps-installer ki18n openssl qt6
+
+name=khealthcertificate
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/khealthcertificate-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "khealthcertificate-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

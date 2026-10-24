@@ -1,9 +1,10 @@
+# note : A Secret Service provider is needed at runtime; Plasma can use KWallet.
+# depends : glib gnutls libgcrypt vala
 # description   : The libsecret package contains a GObject based library for accessing the Secret Service API
-# depends       : glib libgcrypt gnutls vala gnome-keyring
 
 name=libsecret
 version=0.21.7    
-release=1
+release=2
 source="https://download.gnome.org/sources/libsecret/0.21/libsecret-0.21.7.tar.xz"
 
 options="!checksum"

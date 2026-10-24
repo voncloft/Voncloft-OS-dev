@@ -1,0 +1,16 @@
+# description : leptonica - KDE dependency
+# depends : giflib kde-deps-installer libjpeg-turbo libpng libtiff libwebp openjpeg zlib
+
+name=leptonica
+version=1.87.0
+release=1
+
+source="$name-$version.tar.gz::https://github.com/DanBloomberg/leptonica/releases/download/$version/leptonica-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "leptonica-$version"
+    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DBUILD_PROG=OFF -DSW_BUILD=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

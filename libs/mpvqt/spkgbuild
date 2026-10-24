@@ -1,0 +1,16 @@
+# description : mpvqt - KDE independent component
+# depends : extra-cmake-modules kde-deps-installer mpv qt6
+
+name=mpvqt
+version=1.2.0
+release=1
+
+source="https://download.kde.org/stable/mpvqt/mpvqt-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "mpvqt-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

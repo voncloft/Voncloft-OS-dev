@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : bluez-qt extra-cmake-modules kauth kcmutils kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdeconnect-kde kglobalaccel ki18n kiconthemes kio kirigami kjobwidgets knotifications kpackage kservice ksvg kwayland kwidgetsaddons kwindowsystem libkscreen libplasma pkgconf plasma-activities plasma-activities-stats plasma-wayland-protocols plasma-workspace plasma5support qcoro qt6 sdl3 solid wayland
 
 name=plasma-bigscreen
-version=6.5.2
-release=1
+version=6.8.1
+release=2
 
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/plasma-bigscreen-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "plasma-bigscreen-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

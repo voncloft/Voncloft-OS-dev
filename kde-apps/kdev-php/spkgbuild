@@ -1,0 +1,16 @@
+# description : kdev-php - KDE gear component
+# depends : extra-cmake-modules kcmutils kde-deps-installer kdevelop kdevelop-pg-qt ki18n ktexteditor qt6 threadweaver
+
+name=kdev-php
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/kdev-php-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kdev-php-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

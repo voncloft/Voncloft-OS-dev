@@ -1,0 +1,16 @@
+# description : modemmanager - KDE dependency
+# depends : dbus glib libgudev libmbim libqmi meson ninja polkit udev
+
+name=modemmanager
+version=1.24.2
+release=1
+
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/$version/ModemManager-$version.tar.gz"
+options="!checksum"
+
+build() {
+    cd "ModemManager-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dsystemd_suspend_resume=false -Dsystemd_journal=false -Dsystemdsystemunitdir=no -Dqrtr=false -Dtests=false -Dgtk_doc=false -Dintrospection=false -Dvapi=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps
+# depends : extra-cmake-modules karchive kcolorscheme kcompletion kconfig kconfigwidgets kde-deps-installer kdnssd kguiaddons ki18n kiconthemes knewstuff kxmlgui libsndfile openal qt6
 
 name=libkdegames
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/libkdegames-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "libkdegames-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

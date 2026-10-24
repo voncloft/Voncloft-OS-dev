@@ -1,15 +1,16 @@
 # description : Core components for the kde desktop
+# depends : extra-cmake-modules kde-deps-installer mesa plasma-wayland-protocols qt6 wayland wayland-protocols
 
 name=kwayland
-version=6.5.2
+version=6.8.1
 release=1
 
 source="https://download.kde.org/stable/plasma/$version/kwayland-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   kf-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "kwayland-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

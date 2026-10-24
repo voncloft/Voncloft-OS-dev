@@ -1,15 +1,16 @@
 # description : Core components for the kde deskto
+# depends : breeze extra-cmake-modules kde-deps-installer python-cairo qt6 sassc
 
 name=breeze-gtk
-version=6.5.2
+version=6.8.1
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/$name-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/breeze-gtk-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-   cd build
-   make DESTDIR=$PKG install
+    cd "breeze-gtk-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

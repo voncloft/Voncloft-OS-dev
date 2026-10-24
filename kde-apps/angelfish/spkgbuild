@@ -1,0 +1,16 @@
+# description : angelfish - KDE gear component
+# depends : extra-cmake-modules futuresql kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kirigami kirigami-addons knotifications kwindowsystem purpose qcoro qqc2-desktop-style qt6
+
+name=angelfish
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/angelfish-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "angelfish-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

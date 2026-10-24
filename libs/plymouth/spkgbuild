@@ -1,0 +1,17 @@
+# description : plymouth - KDE dependency
+# depends : cairo freetype2 gtk3 libdrm libpng meson ninja pango udev
+# note : Theme build prerequisite only; no initramfs or boot configuration changes.
+
+name=plymouth
+version=26.134.222
+release=1
+
+source="$name-$version.tar.xz::https://www.freedesktop.org/software/plymouth/releases/plymouth-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "plymouth-$version"
+    meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dsystemd-integration=false -Ddocs=false -Drelease-file=/etc/os-release
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
+}

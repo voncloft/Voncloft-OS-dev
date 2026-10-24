@@ -1,15 +1,16 @@
-# description : Python implementation of John Grubers Markdown.
-# depends : python
+# description : Python Markdown parser and markdown_py command
+# depends : python python-setuptools python-wheel
+# note : Requires Python >=3.11 and setuptools >=77; pip is provided by the python package.
 
 name=python-markdown
-version=3.3.6
-release=3
-
-source="https://files.pythonhosted.org/packages/source/M/Markdown/Markdown-3.3.6.tar.gz"
+version=3.11.2
+release=1
+source="https://files.pythonhosted.org/packages/source/m/markdown/markdown-$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "markdown-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
+    python3 -m pip install --no-index --no-deps --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
+}

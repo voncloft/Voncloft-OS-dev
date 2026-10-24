@@ -1,0 +1,16 @@
+# description : tokodon - KDE gear component
+# depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdeclarative ki18n kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kunifiedpush kwindowsystem openssl prison purpose qcoro qqc2-desktop-style qt6 qtkeychain
+
+name=tokodon
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/tokodon-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "tokodon-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

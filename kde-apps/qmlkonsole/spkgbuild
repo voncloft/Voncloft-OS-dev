@@ -1,0 +1,16 @@
+# description : qmlkonsole - KDE gear component
+# depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kirigami kirigami-addons kpty kwindowsystem qt6
+
+name=qmlkonsole
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/qmlkonsole-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "qmlkonsole-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps libkdegames
+# depends : extra-cmake-modules kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio knewstuff kwallet kwidgetsaddons kxmlgui libkdegames qt6
 
 name=ksirk
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/ksirk-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "ksirk-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

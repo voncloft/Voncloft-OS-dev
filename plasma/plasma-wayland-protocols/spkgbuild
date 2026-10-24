@@ -1,16 +1,16 @@
 # description : core package for the kde desktop
+# depends : extra-cmake-modules kde-deps-installer qt6 wayland
 
 name=plasma-wayland-protocols
-version=1.19.0
+version=1.23.0
 release=1
 
 source="https://download.kde.org/stable/plasma-wayland-protocols/plasma-wayland-protocols-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   mkdir build &&
-   cd    build &&
-   cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-   make DESTDIR=$PKG install
+    cd "plasma-wayland-protocols-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

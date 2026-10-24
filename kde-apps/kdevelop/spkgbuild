@@ -1,0 +1,16 @@
+# description : kdevelop - KDE gear component
+# depends : extra-cmake-modules karchive kcmutils kconfig kcrash kde-deps-installer kdevelop-pg-qt kdoctools kguiaddons ki18n kiconthemes kio kitemmodels kitemviews kjobwidgets knewstuff knotifications knotifyconfig kparts krunner kservice ktexteditor ktexttemplate ktextwidgets kwindowsystem kxmlgui libkomparediff2 libksysguard libplasma purpose qt6 shared-mime-info sonnet threadweaver
+
+name=kdevelop
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/kdevelop-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "kdevelop-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

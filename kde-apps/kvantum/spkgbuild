@@ -1,18 +1,16 @@
-# description : a win xp theme installer
-# depends : kwindowsystem
+# description : kvantum - KDE dependency
+# depends : kde-deps-installer kwindowsystem qt6
 
 name=kvantum
-version=1.1.6
+version=1.1.8
 release=1
 
-source="https://github.com/tsujan/Kvantum/releases/download/V$version/Kvantum-$version.tar.xz"
+source="$name-$version.tar.xz::https://github.com/tsujan/Kvantum/releases/download/V$version/Kvantum-$version.tar.xz"
+options="!checksum"
 
-build()
-{
-	cd Kvantum-$version/Kvantum
-	mkdir build
-	cd build
-	cmake .. -DCMAKE_INSTALL_PREFIX=/usr
-	make 
-	make DESTDIR=$PKG install
+build() {
+    cd "Kvantum-$version/Kvantum"
+    plasma-package-installer -DENABLE_QT5=OFF
+    cd build
+    make DESTDIR="$PKG" install
 }

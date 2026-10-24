@@ -1,16 +1,16 @@
 # description : Core components for the kde desktop
-# depends : kde-deps kaccounts-integration
+# depends : extra-cmake-modules kaccounts-integration kde-deps-installer ki18n kio kpackage qcoro qt6
 
 name=kaccounts-providers
-version=25.08.3
+version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/$name-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/kaccounts-providers-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd $name-$version
-   plasma-package-installer
-  cd build
-  make DESTDIR=$PKG install
+    cd "kaccounts-providers-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
 }

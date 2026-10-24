@@ -1,0 +1,16 @@
+# description : plasma-phonebook - KDE gear component
+# depends : extra-cmake-modules kconfig kcontacts kcoreaddons kde-deps-installer ki18n kirigami kirigami-addons kpeople qt6
+
+name=plasma-phonebook
+version=26.08.2
+release=1
+
+source="https://download.kde.org/stable/release-service/$version/src/plasma-phonebook-$version.tar.xz"
+options="!checksum"
+
+build() {
+    cd "plasma-phonebook-$version"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}
