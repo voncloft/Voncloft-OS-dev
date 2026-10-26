@@ -204,6 +204,7 @@ d:playerctl
 d:fbpanel
 d:gnutls
 d:jasper
+d:update-repo
 d:viewnior
 d:enchant
 d:talloc
@@ -1059,6 +1060,11 @@ f:56dad37670e73447c7da976ebda88eb3:gnutls/CHANGELOG
 f:51c522e0e65cb42ea65f150f945bf743:gnutls/spkgbuild
 f:1456ecea4258ff3b424ce82fe806d0f0:jasper/.pkgfiles
 f:6601857e367b158a0b2f090ce5cfd716:jasper/spkgbuild
+f:8892370fd53fa5bc8c86d694703ab523:update-repo/.pkgfiles
+f:89eb4132da342f8f46da911c0ba4ea77:update-repo/update-repo
+f:69373343806592fb0edc5f0c1086ecc0:update-repo/changelog
+f:d1596dea40e90a2e6ae3dfdfd21a334d:update-repo/spkgbuild
+f:47e65567e9ea161eb3093372559d6c79:update-repo/.checksums
 f:6b9fec89392cad502d89f69f3d87147a:viewnior/CHANGELOG
 f:10bf533629a5d300157e3b8b31c5a24b:viewnior/spkgbuild
 f:3db606db50137ad150a0577af5d717de:enchant/.pkgfiles
@@ -1436,7 +1442,7 @@ f:472abbf391ab91225ac0e819435b3639:audiofile/009-CVE-2017-6831.patch
 f:8d1db23c04242c05c81b47dd8294d1bd:audiofile/005-CVE-2017-6827-CVE-2017-6828-CVE-2017-6832-CVE-2017-6833-CVE-2017-6835-CVE-2017-6837.patch
 f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
-f:a86235e7b92c60de18ac21932db60c35:grep/spkgbuild
+f:531d5864716a1dbde1d143fd641b4fc3:grep/spkgbuild
 f:e5ffbdd9ac8b9c69ef7a91e759f98e50:spirv-tools/.pkgfiles
 f:c666809c9abf6d5250754ee30fb63063:spirv-tools/spkgbuild
 f:48410b426fb6143ceda93fcf055f7a06:adapta-gtk-theme/spkgbuild

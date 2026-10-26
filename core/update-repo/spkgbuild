@@ -1,0 +1,23 @@
+# description : Checks source releases for Scratchpkg recipes, updates package versions, and writes repository change reports
+# depends : bash coreutils curl findutils foltotar grep gzip nano sed tar
+
+name=update-repo
+version=20261026
+release=2
+source="update-repo changelog"
+
+build() {
+    install -Dm755 "$SRC/update-repo" "$PKG/usr/bin/update-repo"
+    install -Dm755 "$SRC/changelog" "$PKG/usr/libexec/update-repo/changelog"
+
+    # All directories are staged in the package, never created on the host.
+    local logroot="$PKG/sources/Voncloft-OS-dev/logs"
+    local logdate
+    logdate=$(date +%Y/%b)
+    install -dm755 "$PKG/var/log/old" \
+        "$logroot/$logdate/changes" \
+        "$logroot/$logdate/reports" \
+        "$logroot/$logdate/over_updated" \
+        "$logroot/$logdate/missing" \
+        "$logroot/old-test-updates/$logdate"
+}

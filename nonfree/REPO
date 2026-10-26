@@ -60,9 +60,9 @@ f:2546c13687044b4adccffbf13df2bda6:nvidia-32/CHANGELOG
 f:2d01ca6a07cd14185abc41e72ff60c06:nvidia-32/spkgbuild
 f:cfcb2fdfc65066f4197f1d593883c205:nvidia-32/override
 f:43cfbf82694715f2d13e458eaad32f46:libreoffice/.pkgfiles
-f:8e126caf3284e00450bfd3bb53ce5fb0:libreoffice/CHANGELOG
-f:627766c6f115c834c78faf7b5dbca3ff:libreoffice/spkgbuild
-f:2e8f6c03e721749e06903411e9d1b876:libreoffice/override
+f:ad65548f5e974ecaf682fa37d858c5d7:libreoffice/CHANGELOG
+f:e751a796c3d07cc9c68bad463d71c118:libreoffice/spkgbuild
+f:3fd61ad592ad34bd4c80583f54c6acd2:libreoffice/override
 f:76e5fb76ed1bb9e020a82fe5cbe3ba97:discord/.pkgfiles
 f:c08dd6aba85106175542d97c55e61998:discord/CHANGELOG
 f:64c5e4fbce229905be9871daaa4d77c0:discord/spkgbuild

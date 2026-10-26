@@ -1,7 +1,7 @@
 # description	: Full featured cross platform office suite (binary)
 
 name=libreoffice
-version=25.2.4
+version=26.8.1
 release=1
 source="http://download.documentfoundation.org/$name/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz"
 options="!checksum"

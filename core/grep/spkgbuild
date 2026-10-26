@@ -1,16 +1,22 @@
 # description	: Programs for searching through files
-# depends	: pcre
+# depends : pcre2
 
 name=grep
 version=3.12
-release=1
+release=2
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
 options="!checksum"
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr --bindir=/bin --disable-nls
+	./configure --prefix=/usr --bindir=/bin --disable-nls \
+	            --enable-perl-regexp
 	make
-	make DESTDIR=$PKG install
+
+	# Reject a build without the lookbehind support used by update overrides.
+	printf '%s\n' '<a href="1.2.3/">1.2.3</a>' | \
+	    ./src/grep -Pq '(?<=href=")[^"]*' || return 1
+
+	make DESTDIR="$PKG" install
 }

@@ -1,0 +1,22 @@
+update-repo-20261026-1
+drwxr-xr-x root/root    sources/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/2026/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/2026/Oct/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/2026/Oct/changes/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/2026/Oct/missing/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/2026/Oct/over_updated/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/2026/Oct/reports/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/old-test-updates/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/old-test-updates/2026/
+drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/old-test-updates/2026/Oct/
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/update-repo
+drwxr-xr-x root/root    usr/libexec/
+drwxr-xr-x root/root    usr/libexec/update-repo/
+-rwxr-xr-x root/root    usr/libexec/update-repo/changelog
+drwxr-xr-x root/root    var/
+drwxr-xr-x root/root    var/log/
+drwxr-xr-x root/root    var/log/old/
