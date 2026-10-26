@@ -1,0 +1,52 @@
+# description : Private messenger for encrypted one-to-one and group chats (official Linux binary)
+# depends : alsa-lib at-spi2-core cairo coreutils cups dbus expat glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libsecret libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr libxss libxtst mesa nspr nss pango xdg-utils xwayland
+
+name=session-desktop
+version=1.18.2
+release=2
+source="https://github.com/session-foundation/$name/releases/download/v$version/$name-linux-x86_64-$version.rpm"
+noextract="$name-linux-x86_64-$version.rpm"
+options="!checksum !strip"
+_sha256=dee5aed7bae031381af2cce60ec35e4177ee194aba963b08db006072db14e234
+
+build() {
+    if [ "$(uname -m)" != x86_64 ]; then
+        printf '%s\n' 'Session Desktop requires an x86_64 system for this release.' >&2
+        return 1
+    fi
+
+    # Verify the published upstream digest before unpacking the RPM payload.
+    printf '%s  %s\n' "$_sha256" "$SRC/$name-linux-x86_64-$version.rpm" |
+        sha256sum -c - || return 1
+
+    # Scratchpkg uses GNU tar to unpack sources, so handle this RPM explicitly.
+    bsdtar -xf "$SRC/$name-linux-x86_64-$version.rpm" -p -o -C "$PKG"
+    test -x "$PKG/opt/Session/session-desktop"
+    test -f "$PKG/usr/share/applications/session-desktop.desktop"
+
+    # RPM post-install scripts are not run when extracting the payload.
+    install -dm755 "$PKG/usr/bin"
+    # Replace the RPM symlink before writing the wrapper into the package tree.
+    rm -f "$PKG/usr/bin/session-desktop"
+    cat > "$PKG/usr/bin/session-desktop" <<'EOF'
+#!/bin/sh
+# Session's bundled Electron crashes on native Wayland on this KDE setup.
+# Use XWayland when available, while honoring an explicit platform argument.
+for arg do
+    case "$arg" in
+        --ozone-platform|--ozone-platform=*)
+            exec /opt/Session/session-desktop "$@"
+            ;;
+    esac
+done
+if [ -n "${DISPLAY:-}" ] &&
+   { [ "${XDG_SESSION_TYPE:-}" = wayland ] || [ -n "${WAYLAND_DISPLAY:-}" ]; }; then
+    set -- --ozone-platform=x11 "$@"
+fi
+exec /opt/Session/session-desktop "$@"
+EOF
+    chmod 755 "$PKG/usr/bin/session-desktop"
+    sed -i 's|^Exec=.*|Exec=/usr/bin/session-desktop %U|' \
+        "$PKG/usr/share/applications/session-desktop.desktop"
+    chmod 4755 "$PKG/opt/Session/chrome-sandbox"
+}

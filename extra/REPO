@@ -46,6 +46,7 @@ d:htmlq
 d:djvulibre
 d:inotify-tools
 d:clazy
+d:session-desktop
 d:wayland-protocols
 d:mcomix
 d:jpegoptim
@@ -196,6 +197,8 @@ f:7953758cab8842a7b39c11782ea57239:inotify-tools/CHANGELOG
 f:33d57513d2686a7e485749eea422ae95:inotify-tools/spkgbuild
 f:e10125f78449ccedbf2b06f976ed31c0:clazy/CHANGELOG
 f:36bdf7180586d2e28d35d6f424c3fe11:clazy/spkgbuild
+f:5f0d9b274c7362384367a6199d32b199:session-desktop/.pkgfiles
+f:df01e58017583a4ddf528dd8a6522af2:session-desktop/spkgbuild
 f:47e480f53f600a0e8368903f65b6b0e0:wayland-protocols/.pkgfiles
 f:be6f0a27a75911f166aede33d4048e12:wayland-protocols/CHANGELOG
 f:2ca1a3aabc1a21eccf2900960cebc66b:wayland-protocols/spkgbuild
