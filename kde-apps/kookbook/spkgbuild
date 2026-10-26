@@ -1,0 +1,15 @@
+# description : Kookbook
+# depends : extra-cmake-modules kde-deps-installer qt6
+
+name=kookbook
+version=0.3.0
+release=2
+options="!checksum"
+source="kookbook-0.3.0.tar.xz::https://download.kde.org/stable/kookbook/kookbook-0.3.0.tar.xz"
+
+build() {
+    cd "kookbook-0.3.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,0 +1,18 @@
+# description : rolisteam
+# depends : extra-cmake-modules gettext karchive kde-deps-installer qt6
+
+name=rolisteam
+version=1.10.0
+release=2
+options="!checksum"
+source="rolisteam-1.10.0.tar.gz::https://invent.kde.org/rolisteam/rolisteam/-/archive/v1.10.0/rolisteam-v1.10.0.tar.gz
+    rolisteam-diceparser-1086c22300d1db477f0109a743581e493b1d9ae8.tar.gz::https://invent.kde.org/rolisteam/rolisteam-diceparser/-/archive/1086c22300d1db477f0109a743581e493b1d9ae8/rolisteam-diceparser-1086c22300d1db477f0109a743581e493b1d9ae8.tar.gz"
+
+build() {
+    cd "rolisteam-v1.10.0"
+    cp -a "$SRC/rolisteam-diceparser-1086c22300d1db477f0109a743581e493b1d9ae8/." src/libraries/diceparser/
+    plasma-package-installer \
+        -DNO_BUILD_CLI=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

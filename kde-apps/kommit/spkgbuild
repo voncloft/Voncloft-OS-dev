@@ -1,0 +1,16 @@
+# description : Kommit
+# depends : dolphin extra-cmake-modules kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio ktexteditor ktextwidgets kxmlgui libgit2 openssl qt6 syntax-highlighting
+
+name=kommit
+version=1.8.1
+release=2
+options="!checksum"
+source="kommit-1.8.1.tar.gz::https://invent.kde.org/sdk/kommit/-/archive/v1.8.1/kommit-v1.8.1.tar.gz"
+
+build() {
+    cd "kommit-v1.8.1"
+    plasma-package-installer \
+        -DQT_MAJOR_VERSION=6
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -5,6 +5,7 @@ d:networkmanager-qt
 d:libdbusmenu-qt
 d:qtcreator
 d:pavucontrol-qt
+d:mauiman
 d:signon-ui
 d:transmission-qt
 d:signond
@@ -12,13 +13,19 @@ d:qbittorrent
 d:pulseaudio-qt
 d:signon-plugin-oauth2
 d:layer-shell-qt
+d:mauikit-texteditor
 d:bluez-qt
+d:qxmpp
+d:mauikit
 d:appstream-qt
 d:qtwebengine
 d:libaccounts-qt
+d:libalkimia
+d:stellarsolver
 d:pcmanfm-qt
 d:qbittorrent-nox
 d:qt6
+d:mauikit-filebrowsing
 d:qgpgme-qt
 d:packagekit-qt
 d:qtkeychain
@@ -42,6 +49,7 @@ f:8c0a7f33229bd06750048845d6e9ce6b:qtcreator/spkgbuild
 f:028bbf46947bf665e03268ea3e600b53:pavucontrol-qt/CHANGELOG
 f:01931d64ca6a9eb4ec4070cda5318b80:pavucontrol-qt/spkgbuild
 f:a5c820fc313a518380b081631bdef9b9:.httpup-urlinfo
+f:f8bcae2b78a56d72086ece78b0a89a7e:mauiman/spkgbuild
 f:8755f2a406e302969bc19568cef0865c:signon-ui/.pkgfiles
 f:ddb500272171cebabece5b132a1de6d6:signon-ui/CHANGELOG
 f:c9c3fe2bf48b5e06b7ae6982d704cd60:signon-ui/spkgbuild
@@ -58,9 +66,12 @@ f:da00a86c009f2b2a61abb406c6941638:signon-plugin-oauth2/spkgbuild
 f:542f017f53ddccbe40640aabb66fb958:layer-shell-qt/.pkgfiles
 f:9e416d2671460ecfec4e58d96b79e387:layer-shell-qt/CHANGELOG
 f:7dd439f309dcc0bf0c3dc3d567cfdfaa:layer-shell-qt/spkgbuild
+f:9a4e9c09e5a896a65bea1296184ee9be:mauikit-texteditor/spkgbuild
 f:91310743cb79d73e7ddd7771d2974713:bluez-qt/.pkgfiles
 f:2b08e0c28c0c602a27153fc4616ec30d:bluez-qt/CHANGELOG
 f:3638d895a4d3081b467469040ef7b691:bluez-qt/spkgbuild
+f:430ab15f57ceabcd39c5ef633524ee40:qxmpp/spkgbuild
+f:899d1d4d22220e30b41a181473a235a9:mauikit/spkgbuild
 f:5411be55c5d3b1854ace075eaf9713b6:appstream-qt/.pkgfiles
 f:c87a98ed066aedc4953ff81799900662:appstream-qt/spkgbuild
 f:9aea1b15a7061ca7fc504dec279b3f62:qtwebengine/pre-upgrade.sh
@@ -72,6 +83,8 @@ f:9aea1b15a7061ca7fc504dec279b3f62:qtwebengine/pre-install.sh
 f:b5c4f8aca34cd4582f2f1ee5d07707b7:libaccounts-qt/.pkgfiles
 f:29f94b685d201d02e69201808260dab0:libaccounts-qt/CHANGELOG
 f:527b48189144dc2381cae5ceabb31cbb:libaccounts-qt/spkgbuild
+f:e5375ecb8c8bf624f0497d3d469bff77:libalkimia/spkgbuild
+f:ae177eb8b44ade0ed91e76d246ec3e0d:stellarsolver/spkgbuild
 f:66228691fe79722b772460d9717f62b5:pcmanfm-qt/CHANGELOG
 f:d7955b2fe4bb9ef8cea32d364db0bea9:pcmanfm-qt/spkgbuild
 f:632c818b9b749e3d4014042220d9cdd6:qbittorrent-nox/spkgbuild
@@ -85,6 +98,7 @@ f:c740e6a9ea5a77bd5f62ea6de396d125:qt6/post-install.sh
 f:24bf140ca266a977edae15ca2aee3bc2:qt6/spkgbuild
 f:aadd40347642d4a60f78270664b2d369:qt6/main.patch
 f:39a4717a7d5cc1751c3f98d07b3291e4:qt6/override
+f:c4a0c0a255005cf4995398ee4bdd028d:mauikit-filebrowsing/spkgbuild
 f:9ced8d2f52aef30cdb12bcdea20b8aef:qgpgme-qt/.pkgfiles
 f:65e60b852696ddc79dd319869bc8b5ce:qgpgme-qt/spkgbuild
 f:7de355a1845458223351a46391c68717:packagekit-qt/.pkgfiles

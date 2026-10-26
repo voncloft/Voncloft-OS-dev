@@ -1,9 +1,9 @@
 # description   : The opencv package contains graphics libraries mainly aimed at real-time computer vision
-# depends       : cmake libarchive ffmpeg gst-plugins-base gtk jasper libavif libexif libjpeg-turbo libpng libtiff libwebp openjpeg v4l-utils
+# depends       : cmake libarchive ffmpeg gst-plugins-base gtk3 jasper libavif libexif libjpeg-turbo libpng libtiff libwebp openjpeg v4l-utils
 
 name=opencv
 version=4.12.0
-release=1
+release=3
 source=" https://github.com/opencv/opencv/archive/$version/opencv-$version.tar.gz
 	https://github.com/opencv/opencv_contrib/archive/4.12.0/opencv_contrib-$version.tar.gz"
 options="!checksum"

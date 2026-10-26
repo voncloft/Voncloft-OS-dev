@@ -1,0 +1,451 @@
+KDE DESKTOP RECIPE COVERAGE — 2026-10-25
+
+Scope: stable desktop releases using Qt 6/KF6, as selected by the user.
+Local repository: /sources/Voncloft-OS-dev. No package installation or live session change.
+All 252 KDE Gear 26.08.2 source packages were already represented before this addition.
+Added 43 independently released desktop app recipes and 34 supporting dependency recipes.
+Updated 7 existing recipes and added the optional kde-desktop-apps-extra group.
+Existing KDE build/install helpers are retained.
+
+VALIDATION
+New and version-updated primary source archives were downloaded and checked for their actual source-root names.
+GCompris and Rolisteam explicitly include the exact submodule revisions from their stable tags.
+Shell syntax and dependency closure checked: 85 changed/group recipes, 523 packages in the full chain, no unresolved dependency names or cycles.
+CMake configure passed: krusader, ktimetracker, kdiff3, drawy, komodo, hash-o-matic, kodaskanna, klevernotes, kookbook, gcompris (including the teachers application), rolisteam.
+KGeoTag configure reached its declared Marble dependency, which is not installed on the current host.
+SQLCipher compiled and staged successfully; an encrypted database was created and reopened with its key and rejected without it.
+SQLCipher stages distinct library/header/CLI/pkg-config names and does not replace system SQLite.
+No full build or runtime test was performed for every application. In particular, the compiler add-on has not been compiled here.
+
+PACKAGING CHOICES
+gcc-fortran 15.1.0 adds only the Fortran frontend/runtime for the existing GCC 15.1.0; its recipe checks the compiler version before building.
+It uses upstream Fortran-specific install targets plus f951, and does not install C/C++ drivers, libgcc, libstdc++, or libquadmath.
+R uses its bundled BLAS/LAPACK. HDF5 uses the stable 1.14.6 compatibility series.
+Samba is configured for this SysV host with systemd integration disabled; bundled support libraries are private to avoid replacing system talloc.
+Optional integrations remain optional. This adds applications, not every optional upstream feature: for example Crow Translate uses Qt speech without the optional neural Piper backend.
+Qt5-only applications, mobile-only applications and experimental/beta releases were excluded; see the catalog table below.
+
+INSTALLATION WHEN WANTED
+Nothing has been installed by this work. Individual applications can be selected with scratch.
+The optional kde-desktop-apps-extra package depends on all 43 new desktop applications; it can be a large build/install.
+Scratch dependency resolution does not upgrade dependencies that are already installed. Review/upgrade changed dependencies separately before building applications that use them:
+  mpv hdf5 highway opencv python-jinja python-pip python-scour
+The existing app installers and the kde6 group were not replaced or made to install all these applications automatically.
+
+ADDED APPLICATIONS (package, version, primary release archive)
+amarok 3.3.3
+  https://download.kde.org/stable/amarok/3.3.3/amarok-3.3.3.tar.xz
+calligraplan 4.0.1
+  https://download.kde.org/stable/calligraplan/calligraplan-4.0.1.tar.xz
+crow-translate 4.1.0
+  https://download.kde.org/stable/crow-translate/4.1.0/crow-translate-4.1.0.tar.gz
+digikam 9.1.0
+  https://download.kde.org/stable/digikam/9.1.0/digiKam-9.1.0.tar.xz
+drawy 1.0.2
+  https://download.kde.org/stable/drawy/1.0.2/drawy-1.0.2.tar.xz
+gcompris 26.2
+  https://download.kde.org/stable/gcompris/qt/src/gcompris-qt-26.2.tar.xz
+glaxnimate 0.6.0
+  https://download.kde.org/stable/glaxnimate/0.6.0/glaxnimate-0.6.0.tar.xz
+hana 1.0.0
+  https://download.kde.org/stable/hana/1.0.0/hana-1.0.0.tar.xz
+haruna 1.8.1
+  https://download.kde.org/stable/haruna/1.8.1/haruna-1.8.1.tar.xz
+hash-o-matic 1.0.1
+  https://invent.kde.org/utilities/hash-o-matic/-/archive/v1.0.1/hash-o-matic-v1.0.1.tar.gz
+heaptrack 1.5.0
+  https://invent.kde.org/sdk/heaptrack/-/archive/v1.5.0/heaptrack-v1.5.0.tar.gz
+index-fm 4.0.2
+  https://invent.kde.org/maui/index-fm/-/archive/v4.0.2/index-fm-v4.0.2.tar.gz
+kaichat 0.9.0
+  https://download.kde.org/stable/kaichat/kaichat-0.9.0.tar.xz
+kaidan 0.16.0
+  https://invent.kde.org/network/kaidan/-/archive/v0.16.0/kaidan-v0.16.0.tar.gz
+kdiff3 1.12.6
+  https://download.kde.org/stable/kdiff3/kdiff3-1.12.6.tar.xz
+kgeotag 2.0.0
+  https://download.kde.org/stable/kgeotag/2.0.0/kgeotag-2.0.0.tar.xz
+kid3 3.10.2
+  https://download.kde.org/stable/kid3/3.10.2/kid3-3.10.2.tar.xz
+klevernotes 1.3.1
+  https://download.kde.org/stable/klevernotes/1.3.1/klevernotes-1.3.1.tar.xz
+kmymoney 5.2.2
+  https://download.kde.org/stable/kmymoney/5.2.2/kmymoney-5.2.2.tar.xz
+kodaskanna 0.2.3
+  https://invent.kde.org/graphics/kodaskanna/-/archive/v0.2.3/kodaskanna-v0.2.3.tar.gz
+kommit 1.8.1
+  https://invent.kde.org/sdk/kommit/-/archive/v1.8.1/kommit-v1.8.1.tar.gz
+komodo 1.6.0
+  https://download.kde.org/stable/komodo/1.6.0/komodo-1.6.0.tar.xz
+kookbook 0.3.0
+  https://download.kde.org/stable/kookbook/kookbook-0.3.0.tar.xz
+kphotoalbum 6.2.0
+  https://download.kde.org/stable/kphotoalbum/6.2.0/kphotoalbum-6.2.0.tar.xz
+krita 6.0.4.1
+  https://download.kde.org/stable/krita/6.0.4.1/krita-6.0.4.1.tar.xz
+krusader 2.9.0
+  https://invent.kde.org/utilities/krusader/-/archive/v2.9.0/krusader-v2.9.0.tar.gz
+kst 3.0.0
+  https://invent.kde.org/graphics/kst-plot/-/archive/3.0.0/kst-plot-3.0.0.tar.gz
+kstars 3.8.5
+  https://download.kde.org/stable/kstars/3.8.5/kstars-3.8.5.tar.xz
+ktimetracker 6.0.0
+  https://invent.kde.org/pim/ktimetracker/-/archive/v6.0.0/ktimetracker-v6.0.0.tar.gz
+labplot 2.12.1
+  https://download.kde.org/stable/labplot/labplot-2.12.1.tar.xz
+liquidshell 1.10.1
+  https://download.kde.org/stable/liquidshell/liquidshell-1.10.1.tar.xz
+marknote 1.6.0
+  https://download.kde.org/stable/marknote/marknote-1.6.0.tar.xz
+nota 4.0.2
+  https://invent.kde.org/maui/nota/-/archive/v4.0.2/nota-v4.0.2.tar.gz
+optiimage 1.0.0
+  https://invent.kde.org/graphics/optiimage/-/archive/v1.0.0/optiimage-v1.0.0.tar.gz
+rkward 0.8.3
+  https://download.kde.org/stable/rkward/0.8.3/rkward-0.8.3.tar.gz
+rolisteam 1.10.0
+  https://invent.kde.org/rolisteam/rolisteam/-/archive/v1.10.0/rolisteam-v1.10.0.tar.gz
+rsibreak 0.13.0
+  https://download.kde.org/stable/rsibreak/0.13/rsibreak-0.13.0.tar.xz
+ruqola 2.9.0
+  https://download.kde.org/stable/ruqola/ruqola-2.9.0.tar.xz
+skrooge 26.8.0
+  https://download.kde.org/stable/skrooge/skrooge-26.8.0.tar.xz
+smb4k 4.0.7
+  https://invent.kde.org/network/smb4k/-/archive/4.0.7/smb4k-4.0.7.tar.gz
+subtitlecomposer 0.8.2
+  https://download.kde.org/stable/subtitlecomposer/subtitlecomposer-0.8.2.tar.xz
+tellico 4.3
+  https://invent.kde.org/office/tellico/-/archive/v4.3/tellico-v4.3.tar.gz
+vvave 4.0.2
+  https://invent.kde.org/maui/vvave/-/archive/v4.0.2/vvave-v4.0.2.tar.gz
+
+SUPPORTING RECIPES AND EXISTING REPAIRS
+compilers/gcc-fortran/spkgbuild
+core/mpv/spkgbuild
+extra/jpegoptim/spkgbuild
+extra/oxipng/spkgbuild
+extra/r/spkgbuild
+extra/samba/spkgbuild
+kde/kde-desktop-apps-extra/spkgbuild
+libs/cfitsio/spkgbuild
+libs/hdf5/spkgbuild
+libs/highway/spkgbuild
+libs/immer/spkgbuild
+libs/indi/spkgbuild
+libs/lager/spkgbuild
+libs/lensfun/spkgbuild
+libs/libheif/spkgbuild
+libs/libjxl/spkgbuild
+libs/libnova/spkgbuild
+libs/libomemo-c/spkgbuild
+libs/libplacebo/spkgbuild
+libs/libunibreak/spkgbuild
+libs/mariadb/spkgbuild
+libs/md4c/spkgbuild
+libs/minizip-ng/spkgbuild
+libs/netcdf/spkgbuild
+libs/opencolorio/spkgbuild
+libs/opencv/spkgbuild
+libs/pystring/spkgbuild
+libs/sqlcipher/spkgbuild
+libs/wcslib/spkgbuild
+libs/xsimd/spkgbuild
+libs/zug/spkgbuild
+python/python-glad/spkgbuild
+python/python-jinja/spkgbuild
+python/python-pip/spkgbuild
+python/python-scour/spkgbuild
+qt/libalkimia/spkgbuild
+qt/mauikit-filebrowsing/spkgbuild
+qt/mauikit-texteditor/spkgbuild
+qt/mauikit/spkgbuild
+qt/mauiman/spkgbuild
+qt/qxmpp/spkgbuild
+qt/stellarsolver/spkgbuild
+
+CATALOG COVERAGE
+Catalog source: https://apps.kde.org/
+Gear source: https://download.kde.org/stable/release-service/26.08.2/src/
+
+Dolphin [dolphin]: RECIPE: dolphin
+Konsole [konsole]: RECIPE: konsole
+Okular [okular]: RECIPE: okular
+Ark [ark]: RECIPE: ark
+Spectacle [spectacle]: RECIPE: spectacle
+Plasma System Monitor [plasma-systemmonitor]: RECIPE: plasma-systemmonitor
+Kate [kate]: RECIPE: kate
+Kdenlive [kdenlive]: RECIPE: kdenlive
+Gwenview [gwenview]: RECIPE: gwenview
+KDE Connect [kdeconnect]: RECIPE: kdeconnect-kde
+Krita [krita]: RECIPE: krita
+Filelight [filelight]: RECIPE: filelight
+Discover [discover]: RECIPE: discover
+KWalletManager [kwalletmanager5]: RECIPE: kwalletmanager
+KCalc [kcalc]: RECIPE: kcalc
+KDE Partition Manager [partitionmanager]: RECIPE: partitionmanager
+KFind [kfind]: RECIPE: kfind
+KolourPaint [kolourpaint]: RECIPE: kolourpaint
+KCharSelect [kcharselect]: RECIPE: kcharselect
+KColorChooser [kcolorchooser]: RECIPE: kcolorchooser
+KSystemLog [ksystemlog]: RECIPE: ksystemlog
+ISO Image Writer [isoimagewriter]: RECIPE: isoimagewriter
+KRDC [krdc]: RECIPE: krdc
+Yakuake [yakuake]: RECIPE: yakuake
+Kompare [kompare]: RECIPE: kompare
+Kamoso [kamoso]: RECIPE: kamoso
+Help Center [khelpcenter]: RECIPE: khelpcenter
+Skanlite [skanlite]: RECIPE: skanlite
+Skanpage [skanpage]: RECIPE: skanpage
+K3b [k3b]: RECIPE: k3b
+KDiskFree [kdf]: RECIPE: kdf
+KGpg [kgpg]: RECIPE: kgpg
+Sweeper [sweeper]: RECIPE: sweeper
+Krfb [krfb]: RECIPE: krfb
+Elisa [elisa]: RECIPE: elisa
+Kleopatra [kleopatra]: RECIPE: kleopatra
+KTorrent [ktorrent]: RECIPE: ktorrent
+KDebugSettings [kdebugsettings]: RECIPE: kdebugsettings
+KRuler [kruler]: RECIPE: kruler
+Haruna [haruna]: RECIPE: haruna
+Clock [kclock]: RECIPE: kclock
+Konversation [konversation]: RECIPE: konversation
+KPatience [kpat]: RECIPE: kpat
+KTimer [ktimer]: RECIPE: ktimer
+Falkon [falkon]: RECIPE: falkon
+Calculator [kalk]: RECIPE: kalk
+KImageMapEditor [kimagemapeditor]: RECIPE: kimagemapeditor
+KCachegrind [kcachegrind]: RECIPE: kcachegrind
+Weather [kweather]: RECIPE: kweather
+KMouseTool [kmousetool]: RECIPE: kmousetool
+Recorder [krecorder]: RECIPE: krecorder
+Koko [koko]: RECIPE: koko
+KBackup [kbackup]: RECIPE: kbackup
+Akregator [akregator]: RECIPE: akregator
+KMines [kmines]: RECIPE: kmines
+KGet [kget]: RECIPE: kget
+KTeaTime [kteatime]: RECIPE: kteatime
+AudioTube [audiotube]: RECIPE: audiotube
+KOrganizer [korganizer]: RECIPE: korganizer
+Konqueror [konqueror]: RECIPE: konqueror
+KMag [kmag]: RECIPE: kmag
+Dragon Player [dragonplayer]: RECIPE: dragon
+KDevelop [kdevelop]: RECIPE: kdevelop
+ghostwriter [ghostwriter]: RECIPE: ghostwriter
+KMix [kmix]: RECIPE: kmix
+KMahjongg [kmahjongg]: RECIPE: kmahjongg
+KMail [kmail2]: RECIPE: kmail
+PlasmaTube [plasmatube]: RECIPE: plasmatube
+Kwave [kwave]: RECIPE: kwave
+Kontact [kontact]: RECIPE: kontact
+NeoChat [neochat]: RECIPE: neochat
+Keysmith [keysmith]: RECIPE: keysmith
+KAlarm [kalarm]: RECIPE: kalarm
+Merkuro [merkuro]: RECIPE: merkuro
+KTouch [ktouch]: RECIPE: ktouch
+KSudoku [ksudoku]: RECIPE: ksudoku
+KAddressBook [kaddressbook]: RECIPE: kaddressbook
+Lokalize [lokalize]: RECIPE: lokalize
+digiKam [digikam]: RECIPE: digikam
+Marble [marble]: RECIPE: marble
+KGraphViewer [kgraphviewer]: RECIPE: kgraphviewer
+KAlgebra [kalgebra]: RECIPE: kalgebra
+Cantor [cantor]: RECIPE: cantor
+JuK [juk]: RECIPE: juk
+Umbrello [umbrello]: RECIPE: umbrello
+KAppTemplate [kapptemplate]: RECIPE: kapptemplate
+KNights [knights]: RECIPE: knights
+KMouth [kmouth]: RECIPE: kmouth
+Arianna [arianna]: RECIPE: arianna
+Alligator [alligator]: RECIPE: alligator
+Kirigami Gallery [kirigami2.gallery]: RECIPE: kirigami-gallery
+Minuet [minuet]: RECIPE: minuet
+KBlocks [kblocks]: RECIPE: kblocks
+KBreakOut [kbreakout]: RECIPE: kbreakout
+KShisen [kshisen]: RECIPE: kshisen
+Kapman [kapman]: RECIPE: kapman
+Kigo [kigo]: RECIPE: kigo
+Palapeli [palapeli]: RECIPE: palapeli
+KTrip [ktrip]: RECIPE: ktrip
+KNetWalk [knetwalk]: RECIPE: knetwalk
+KReversi [kreversi]: RECIPE: kreversi
+Kongress [kongress]: RECIPE: kongress
+KBounce [kbounce]: RECIPE: kbounce
+Clazy [clazy]: RECIPE: clazy
+Naval Battle [knavalbattle]: RECIPE: knavalbattle
+Kalzium [kalzium]: RECIPE: kalzium
+KmPlot [kmplot]: RECIPE: kmplot
+Kolf [kolf]: RECIPE: kolf
+KSquares [ksquares]: RECIPE: ksquares
+Kasts [kasts]: RECIPE: kasts
+KDiamond [kdiamond]: RECIPE: kdiamond
+Tokodon [tokodon]: RECIPE: tokodon
+Picmi [picmi]: RECIPE: picmi
+Konquest [konquest]: RECIPE: konquest
+Telly Skout [telly-skout]: RECIPE: telly-skout
+Kolor Lines [klines]: RECIPE: klines
+Klickety [klickety]: RECIPE: klickety
+KAtomic [katomic]: RECIPE: katomic
+Kollision [kollision]: RECIPE: kollision
+KGeography [kgeography]: RECIPE: kgeography
+Bovo [bovo]: RECIPE: bovo
+KJumpingCube [kjumpingcube]: RECIPE: kjumpingcube
+KGoldrunner [kgoldrunner]: RECIPE: kgoldrunner
+Francis [francis]: RECIPE: francis
+Kubrick [kubrick]: RECIPE: kubrick
+KSnakeDuel [ksnakeduel]: RECIPE: ksnakeduel
+Granatier [granatier]: RECIPE: granatier
+KBlackbox [kblackbox]: RECIPE: kblackbox
+Kajongg [kajongg]: RECIPE: kajongg
+KFourInLine [kfourinline]: RECIPE: kfourinline
+Killbots [killbots]: RECIPE: killbots
+Bomber [bomber]: RECIPE: bomber
+KsirK [ksirk]: RECIPE: ksirk
+Kiriki [kiriki]: RECIPE: kiriki
+LSkat [lskat]: RECIPE: lskat
+KDE Itinerary [itinerary]: RECIPE: itinerary
+Blinken [blinken]: RECIPE: blinken
+Kontrast [kontrast]: RECIPE: kontrast
+Step [step]: RECIPE: step
+KSpaceDuel [kspaceduel]: RECIPE: kspaceduel
+Kig [kig]: RECIPE: kig
+Kiten [kiten]: RECIPE: kiten
+KTuberling [ktuberling]: RECIPE: ktuberling
+WordQuiz [kwordquiz]: RECIPE: kwordquiz
+KTurtle [kturtle]: RECIPE: kturtle
+Parley [parley]: RECIPE: parley
+KBruch [kbruch]: RECIPE: kbruch
+Kalm [kalm]: RECIPE: kalm
+Rocs [rocs]: RECIPE: rocs
+KHangMan [khangman]: RECIPE: khangman
+Kanagram [kanagram]: RECIPE: kanagram
+KLettres [klettres]: RECIPE: klettres
+Zanshin [zanshin]: RECIPE: zanshin
+Audex [audex]: RECIPE: audex
+Artikulate [artikulate]: RECIPE: artikulate
+Calligra [calligra]: RECIPE: calligra
+Angelfish [angelfish]: RECIPE: angelfish
+Skladnik [skladnik]: RECIPE: skladnik
+Okteta [okteta]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+KDiff3 [kdiff3]: RECIPE: kdiff3
+KRename [krename]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+Kid3 [kid3]: RECIPE: kid3
+Krusader [krusader]: RECIPE: krusader
+Smb4K [smb4k]: RECIPE: smb4k
+KStars [kstars]: RECIPE: kstars
+Heaptrack [heaptrack]: RECIPE: heaptrack
+GCompris [gcompris]: RECIPE: gcompris
+Amarok [amarok]: RECIPE: amarok
+Kile [kile]: EXCLUDED: current release is beta; old stable release belongs to the KDE4 stack
+KMyMoney [kmymoney]: RECIPE: kmymoney
+Marknote [marknote]: RECIPE: marknote
+Cervisia [cervisia]: RECIPE: cervisia
+Crow Translate [crowtranslate]: RECIPE: crow-translate
+LabPlot [labplot]: RECIPE: labplot
+Kaffeine [kaffeine]: RECIPE: kaffeine
+Skrooge [skrooge]: RECIPE: skrooge
+Kronometer [kronometer]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+Kommit [kommit]: RECIPE: kommit
+Tellico [tellico]: RECIPE: tellico
+KBibTeX [kbibtex]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+Subtitle Composer [subtitlecomposer]: RECIPE: subtitlecomposer
+KPhotoAlbum [kphotoalbum]: RECIPE: kphotoalbum
+Drawy [drawy]: RECIPE: drawy
+KWrite [kwrite]: RECIPE: kate
+KTimeTracker [ktimetracker]: RECIPE: ktimetracker
+Kaidan [kaidan]: RECIPE: kaidan
+Glaxnimate [glaxnimate]: RECIPE: glaxnimate
+Index [index-fm]: RECIPE: index-fm
+Qrca [qrca]: RECIPE: qrca
+kdesvn [kdesvn]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+Calindori [calindori]: RECIPE: calindori
+KEXI [kexi-3.3]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+RKWard [rkward]: RECIPE: rkward
+RSI Break [rsibreak]: RECIPE: rsibreak
+Vvave [vvave]: RECIPE: vvave
+QMLKonsole [qmlkonsole]: RECIPE: qmlkonsole
+KGeoTag [kgeotag]: RECIPE: kgeotag
+Plan [calligraplan]: RECIPE: calligraplan
+KFloppy [kfloppy]: RECIPE: kfloppy
+KeepSecret [keepsecret]: RECIPE: keepsecret
+KleverNotes [klevernotes]: RECIPE: klevernotes
+OptiImage [optiimage]: RECIPE: optiimage
+Atlantik [atlantik]: EXCLUDED: no stable release found for the current Qt6 port; historical KDE3 releases only
+KXStitch [kxstitch]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+KomoDo [komodo]: RECIPE: komodo
+liquidshell [liquidshell]: RECIPE: liquidshell
+Rolisteam RPG Client [rolisteam]: RECIPE: rolisteam
+Peruse [peruse]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+KTechlab [ktechlab]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+GCompris-teachers [gcompris-teachers]: RECIPE: gcompris
+Kodaskanna [kodaskanna]: RECIPE: kodaskanna
+Hana [hana]: RECIPE: hana
+KEuroCalc [keurocalc]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+Trojitá [trojita]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+SymbolEditor [symboleditor]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+Ruqola [ruqola]: RECIPE: ruqola
+Kst [kst]: RECIPE: kst
+KUIViewer [kuiviewer]: RECIPE: kde-dev-utils
+Nota [nota]: RECIPE: nota
+Basket [basket]: EXCLUDED: current port has beta tags; old stable release belongs to an older KDE stack
+Accessibility Inspector [accessibilityinspector]: RECIPE: accessibility-inspector
+Alpaka [alpaka]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Arkade [arkade]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Atelier [atelier]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Behaim Globe [marble.behaim]: RECIPE: marble
+Braindump [calligra.braindump]: RECIPE: calligra
+Calligra Sheets [calligra.sheets]: RECIPE: calligra
+Calligra Stage [calligra.stage]: RECIPE: calligra
+Calligra Words [calligra.words]: RECIPE: calligra
+Chessament [chessament]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Codevis [codevis]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+ELF Dissector [elf-dissector]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Eloquens [eloquens]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Fielding [fielding]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Gemini [calligra.gemini]: RECIPE: calligra
+Hash-o-matic [hashomatic]: RECIPE: hash-o-matic
+Journald Browser [kjournaldbrowser]: RECIPE: kjournald
+KAIChat [kaichat]: RECIPE: kaichat
+Kairo [kairo]: EXCLUDED: mobile-only
+KAlgebra Mobile [kalgebramobile]: RECIPE: kalgebra
+Karbon [calligra.karbon]: RECIPE: calligra
+Karp [karp]: EXCLUDED: 25.03.80 prerelease
+kdesrc-build [kdesrc_build]: EXCLUDED: developer source-building tool; not a desktop application
+KDominate [kdominate]: RECIPE: kdominate
+Khipu [khipu]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Kirogi [kirogi]: EXCLUDED: mobile-focused experimental
+KItinerary Command Line Extractor [kitinerary-extractor]: RECIPE: kitinerary
+Klimbgrades [klimbgrades]: EXCLUDED: mobile-only
+KMcpClientInspector [kmcpclientinspector]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Kolorfill [kolorfill]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Kookbook [kookbook]: RECIPE: kookbook
+KRegexpEditor [kregexpeditor]: EXCLUDED: no stable release found for the current port; historical KDE3 releases only
+KRetro [kretro]: EXCLUDED: early 0.0.1 work-in-progress; upstream promotes nightly builds
+KSame [ksame]: RECIPE: klickety
+Licentia [licentia]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+MankalaEngine [mankalaengine]: EXCLUDED: library, not a standalone desktop application
+Marble Maps [marble.maps]: RECIPE: marble
+Massif-Visualizer [massif_visualizer]: RECIPE: massif-visualizer
+Notae [notae]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Peruse [perusecreator]: EXCLUDED: Qt5/KF5 compatibility stack not requested
+Phone [plasma.dialer]: EXCLUDED: mobile-only
+Phonebook [phonebook]: RECIPE: plasma-phonebook
+Pikasso [pikasso]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+PIM Data Exporter [pimdataexporter]: RECIPE: pim-data-exporter
+Plan Portfolio [calligraplanportfolio]: RECIPE: calligraplan
+Plan Work [calligraplanwork]: RECIPE: calligraplan
+Plasma Camera [plasma.camera]: RECIPE: plasma-camera
+PowerPlant [powerplant]: EXCLUDED: mobile-only
+Public Alerts [publicalerts]: EXCLUDED: mobile-only
+PuMoKu [pumoku]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+pvfViewer [pvfviewer]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Rust Qt Binding Generator [rust_qt_binding_generator]: EXCLUDED: development code generator; not a desktop application
+Seabass [seabass]: EXCLUDED: published tags explicitly marked beta (including 0.7.16)
+Showfoto [showfoto]: RECIPE: digikam
+Skrooge Companion [skroogecompanion]: EXCLUDED: mobile companion; outside desktop-only scope
+Spacebar [spacebar]: RECIPE: spacebar
+systemdGenie [systemdgenie]: EXCLUDED: requires systemd; host uses SysVinit
+Tasks [tasks]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Vail [vail]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs
+Vakzination [vakzination]: EXCLUDED: mobile-only
+WashiPad [washipad]: EXCLUDED: no stable desktop release verified in upstream release/tag catalogs

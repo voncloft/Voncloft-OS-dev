@@ -1,0 +1,18 @@
+# description : samba
+# depends : acl attr docbook-xsl gnutls libarchive libcap libnsl libtirpc libxslt make perl pkgconf popt python zlib
+
+name=samba
+version=4.25.1
+release=2
+options="!checksum"
+source="samba-4.25.1.tar.gz::https://download.samba.org/pub/samba/stable/samba-4.25.1.tar.gz"
+
+build() {
+    cd "samba-4.25.1"
+    ./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc \
+        --localstatedir=/var --enable-fhs --without-ad-dc --without-ads \
+        --without-ldap --without-pam --without-systemd --disable-cups \
+        --disable-python --bundled-libraries=ALL --private-libraries=ALL,!smbclient,!wbclient
+    make
+    make DESTDIR="$PKG" install
+}

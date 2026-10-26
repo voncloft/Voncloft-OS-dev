@@ -1,0 +1,16 @@
+# description : LabPlot
+# depends : bison cantor cfitsio eigen extra-cmake-modules fftw gsl hdf5 karchive kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kiconthemes kio knewstuff kparts kservice ktextwidgets kuserfeedback kwidgetsaddons kxmlgui lz4 netcdf poppler purpose qt6 syntax-highlighting zlib zstd
+
+name=labplot
+version=2.12.1
+release=2
+options="!checksum"
+source="labplot-2.12.1.tar.xz::https://download.kde.org/stable/labplot/labplot-2.12.1.tar.xz"
+
+build() {
+    cd "labplot-2.12.1"
+    plasma-package-installer \
+        -DENABLE_TESTS=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

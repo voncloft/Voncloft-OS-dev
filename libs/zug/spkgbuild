@@ -1,0 +1,22 @@
+# description : zug
+# depends : cmake make
+
+name=zug
+version=0.1.2
+release=2
+options="!checksum"
+source="zug-0.1.2.tar.gz::https://github.com/arximboldi/zug/archive/refs/tags/v0.1.2.tar.gz"
+
+build() {
+    cd "zug-0.1.2"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -Dzug_BUILD_TESTS=OFF \
+        -Dzug_BUILD_EXAMPLES=OFF \
+        -Dzug_BUILD_DOCS=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

@@ -1,16 +1,23 @@
-# description : highway - KDE dependency
-# depends : kde-deps-installer
+# description : highway
+# depends : cmake make
 
 name=highway
 version=1.4.0
-release=1
-
-source="$name-$version.tar.gz::https://github.com/google/highway/releases/download/$version/highway-$version.tar.gz"
+release=3
 options="!checksum"
+source="highway-1.4.0.tar.gz::https://github.com/google/highway/archive/refs/tags/1.4.0.tar.gz"
 
 build() {
-    cd "highway-$version"
-    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DHWY_ENABLE_TESTS=OFF -DHWY_ENABLE_EXAMPLES=OFF
-    cd build
-    make DESTDIR="$PKG" install
+    cd "highway-1.4.0"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -DHWY_ENABLE_TESTS=OFF \
+        -DHWY_ENABLE_EXAMPLES=OFF \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
 }

@@ -1,0 +1,40 @@
+# description : sqlcipher
+# depends : make openssl pkgconf tcl zlib
+
+name=sqlcipher
+version=4.19.0
+release=2
+options="!checksum"
+source="sqlcipher-4.19.0.tar.gz::https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.19.0.tar.gz"
+
+build() {
+    cd "sqlcipher-4.19.0"
+    export CFLAGS="$CFLAGS -DSQLITE_HAS_CODEC -DSQLITE_EXTRA_INIT=sqlcipher_extra_init -DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown -DSQLITE_THREADSAFE=1 -DSQLITE_TEMP_STORE=2 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_FTS5"
+    # SQLCipher 4.19 uses SQLite's build names. Stage a separately named library
+    # and headers so it cannot replace the system SQLite package.
+    ./configure --prefix=/usr --with-tempstore=yes --disable-tcl --enable-fts5
+    make sqlite3.c
+    ${CC:-cc} $CFLAGS -fPIC -shared -Wl,-soname,libsqlcipher.so.0 \
+        sqlite3.c -o libsqlcipher.so.0.0.0 $LDFLAGS -lcrypto -lz -lm -ldl -pthread
+    ${CC:-cc} $CFLAGS shell.c sqlite3.c -o sqlcipher \
+        $LDFLAGS -lcrypto -lz -lm -ldl -pthread
+    install -Dm755 libsqlcipher.so.0.0.0 "$PKG/usr/lib64/libsqlcipher.so.0.0.0"
+    ln -s libsqlcipher.so.0.0.0 "$PKG/usr/lib64/libsqlcipher.so.0"
+    ln -s libsqlcipher.so.0 "$PKG/usr/lib64/libsqlcipher.so"
+    install -Dm755 sqlcipher "$PKG/usr/bin/sqlcipher"
+    install -Dm644 sqlite3.h "$PKG/usr/include/sqlcipher/sqlite3.h"
+    install -Dm644 sqlite3ext.h "$PKG/usr/include/sqlcipher/sqlite3ext.h"
+    install -d "$PKG/usr/lib64/pkgconfig"
+    cat > "$PKG/usr/lib64/pkgconfig/sqlcipher.pc" <<EOF_PC
+prefix=/usr
+libdir=\${prefix}/lib64
+includedir=\${prefix}/include/sqlcipher
+
+Name: SQLCipher
+Description: SQLite with transparent AES encryption
+Version: $version
+Libs: -L\${libdir} -lsqlcipher
+Libs.private: -lcrypto -lz -lm -ldl -pthread
+Cflags: -I\${includedir}
+EOF_PC
+}

@@ -1,0 +1,15 @@
+# description : Drawy
+# depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui qt6 shared-mime-info syntax-highlighting zstd
+
+name=drawy
+version=1.0.2
+release=2
+options="!checksum"
+source="drawy-1.0.2.tar.xz::https://download.kde.org/stable/drawy/1.0.2/drawy-1.0.2.tar.xz"
+
+build() {
+    cd "drawy-1.0.2"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

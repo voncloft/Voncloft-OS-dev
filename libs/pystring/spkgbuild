@@ -1,0 +1,21 @@
+# description : pystring
+# depends : cmake make
+
+name=pystring
+version=1.2.0
+release=2
+options="!checksum"
+source="pystring-1.2.0.tar.gz::https://github.com/imageworks/pystring/archive/refs/tags/v1.2.0.tar.gz"
+
+build() {
+    cd "pystring-1.2.0"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

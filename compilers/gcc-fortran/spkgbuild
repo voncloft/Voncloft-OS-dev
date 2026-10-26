@@ -1,0 +1,36 @@
+# description : GNU Fortran compiler matching the system GCC 15.1
+# depends : bison flex gmp make mpc mpfr perl texinfo zlib zstd
+
+name=gcc-fortran
+version=15.1.0
+release=1
+options="!checksum"
+source="gcc-fortran-15.1.0.tar.xz::https://ftp.gnu.org/gnu/gcc/gcc-15.1.0/gcc-15.1.0.tar.xz"
+
+build() {
+    cd "gcc-15.1.0"
+    # Add the Fortran frontend for the existing compiler; do not install GCC's
+    # C/C++ drivers, headers, libgcc, libstdc++, or the existing libquadmath.
+    test "$(gcc -dumpfullversion)" = "$version" || {
+        echo "gcc-fortran $version requires the matching system GCC $version" >&2
+        return 1
+    }
+    local target_triplet="$(gcc -dumpmachine)"
+    local compiler_dir="$(dirname "$(gcc -print-prog-name=cc1)")"
+    test -f "$(gcc -print-file-name=libquadmath.so)" || {
+        echo "The system GCC libquadmath is required" >&2
+        return 1
+    }
+    mkdir -p build
+    cd build
+    ../configure --prefix=/usr --libdir=/usr/lib \
+        --build="$target_triplet" --host="$target_triplet" --target="$target_triplet" \
+        --enable-languages=c,fortran --disable-bootstrap --disable-multilib \
+        --disable-nls --disable-fixincludes --with-system-zlib \
+        --enable-default-pie --enable-default-ssp --enable-host-pie
+    make all-gcc all-target-libquadmath all-target-libgfortran
+    make -C gcc DESTDIR="$PKG" fortran.install-common fortran.install-man
+    install -Dm755 gcc/f951 "$PKG$compiler_dir/f951"
+    make DESTDIR="$PKG" install-target-libgfortran
+    test -x "$PKG/usr/bin/gfortran"
+}

@@ -1,5 +1,6 @@
 d:gtksourceview3
 d:gtkmm2
+d:oxipng
 d:gimp
 d:gnucash
 d:gtk3
@@ -18,6 +19,7 @@ d:bluefish
 d:youtubemp3
 d:sane
 d:epson-inkjet-printer-escpr
+d:samba
 d:maven
 d:flashplugin
 d:ebook-tools
@@ -38,6 +40,7 @@ d:ncdu
 d:qemu
 d:scid_vs_pc
 d:nodejs
+d:r
 d:cmatrix
 d:htmlq
 d:djvulibre
@@ -45,6 +48,7 @@ d:inotify-tools
 d:clazy
 d:wayland-protocols
 d:mcomix
+d:jpegoptim
 d:mailcap
 d:freecell-solver
 d:dbi-drivers
@@ -74,6 +78,7 @@ d:gtk-doc
 f:10a18e9386007c8f0aa6198184a47105:gtksourceview3/CHANGELOG
 f:68afca1737633c307ae8a7165e702fb6:gtksourceview3/spkgbuild
 f:5a3c86e8ed520b973293ab599a3df213:gtkmm2/spkgbuild
+f:e221c44bfc6e6ff6448c52ed72461e80:oxipng/spkgbuild
 f:be52e1189522f7e0850fa01a4b466eae:gimp/CHANGELOG
 f:9a8a4fa10c9b672a43d3b1aed08ab60a:gimp/spkgbuild
 f:29cc7b84408b8f652ed2bf166b44cbff:gnucash/CHANGELOG
@@ -130,6 +135,7 @@ f:be26385ce91be30517d465d00321f829:sane/pre-install.sh
 f:cc1347064094c2cf55f9bb202c6e83da:epson-inkjet-printer-escpr/CHANGELOG
 f:584ceb39b197685f7215ee0a4fa2e5bb:epson-inkjet-printer-escpr/spkgbuild
 f:f884fbf6726f9ab103e2d832d8ad27fe:epson-inkjet-printer-escpr/bug_x86_64.patch
+f:55e40880313e9aadbdc3599b6e5d2262:samba/spkgbuild
 f:83a73c3503007907b7f1ff45fb3f4b68:maven/.pkgfiles
 f:9ffff2cc89bb88e458cec7c6ab9ebaf6:maven/spkgbuild
 f:d404044a08c7b28376c660d1af5b0a6d:.httpup-urlinfo
@@ -175,6 +181,7 @@ f:1c029d8d5671c52dd10e892cbc052ff8:scid_vs_pc/CHANGELOG
 f:3046fd641e724726b7ce5b49ecbec66a:scid_vs_pc/spkgbuild
 f:f133302d3d8e080cdc76f4634c830b94:nodejs/.pkgfiles
 f:197897cc779fdbf17fbf7e06f27f76f9:nodejs/spkgbuild
+f:52c84843f7c56244fe867f55fde69d28:r/spkgbuild
 f:6b6870e6abf4653794ad75099451329d:cmatrix/CHANGELOG
 f:2012fbff5ea332ce2b2d19b327b46c93:cmatrix/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:htmlq/.pkgfiles
@@ -194,6 +201,7 @@ f:2ca1a3aabc1a21eccf2900960cebc66b:wayland-protocols/spkgbuild
 f:e0188d613cb06ca339f0b0f52a2a7e64:wayland-protocols/override
 f:06761fbf361c7a3305bf38f633aa89c9:mcomix/CHANGELOG
 f:3d7248195242a2aba64cc45e3f4942d3:mcomix/spkgbuild
+f:77d9c085d584d013a2ef96329bdca4fe:jpegoptim/spkgbuild
 f:0aac25f665686c1bd01882388315c9f3:mailcap/CHANGELOG
 f:f5e28499227c990b66410a2319831ce6:mailcap/spkgbuild
 f:2bfb8016120e579046afb5f716b3d795:freecell-solver/.pkgfiles

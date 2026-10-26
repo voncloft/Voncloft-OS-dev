@@ -1,0 +1,16 @@
+# description : KMyMoney
+# depends : extra-cmake-modules gpgmepp karchive kcmutils kcompletion kconfig kconfigwidgets kcontacts kcoreaddons kcrash kde-deps-installer kdiagram kdoctools kholidays ki18n kio kitemmodels kitemviews knotifications kservice ktextwidgets kxmlgui libalkimia libical libofx qgpgme-qt qt6 qtkeychain sqlcipher
+
+name=kmymoney
+version=5.2.2
+release=2
+options="!checksum"
+source="kmymoney-5.2.2.tar.xz::https://download.kde.org/stable/kmymoney/5.2.2/kmymoney-5.2.2.tar.xz"
+
+build() {
+    cd "kmymoney-5.2.2"
+    plasma-package-installer \
+        -DBUILD_WITH_QT6=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

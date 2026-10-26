@@ -1,0 +1,25 @@
+# description : opencolorio
+# depends : cmake expat imath lcms2 make minizip-ng pystring yaml-cpp zlib
+
+name=opencolorio
+version=2.6.0
+release=2
+options="!checksum"
+source="opencolorio-2.6.0.tar.gz::https://github.com/AcademySoftwareFoundation/OpenColorIO/releases/download/v2.6.0/OpenColorIO-2.6.0.tar.gz"
+
+build() {
+    cd "OpenColorIO-2.6.0"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DOCIO_BUILD_APPS=OFF \
+        -DOCIO_BUILD_TESTS=OFF \
+        -DOCIO_BUILD_GPU_TESTS=OFF \
+        -DOCIO_BUILD_DOCS=OFF \
+        -DOCIO_BUILD_PYTHON=OFF \
+        -DOCIO_INSTALL_EXT_PACKAGES=NONE
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

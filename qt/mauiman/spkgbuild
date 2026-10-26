@@ -1,0 +1,15 @@
+# description : mauiman
+# depends : extra-cmake-modules kde-deps-installer qt6
+
+name=mauiman
+version=4.0.2
+release=2
+options="!checksum"
+source="mauiman-4.0.2.tar.xz::https://download.kde.org/stable/maui/mauiman/4.0.2/mauiman-4.0.2.tar.xz"
+
+build() {
+    cd "mauiman-4.0.2"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,0 +1,15 @@
+# description : Hash-o-matic
+# depends : extra-cmake-modules gpgmepp kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kirigami kwindowsystem libkleo qgpgme-qt qt6
+
+name=hash-o-matic
+version=1.0.1
+release=2
+options="!checksum"
+source="hash-o-matic-1.0.1.tar.gz::https://invent.kde.org/utilities/hash-o-matic/-/archive/v1.0.1/hash-o-matic-v1.0.1.tar.gz"
+
+build() {
+    cd "hash-o-matic-v1.0.1"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

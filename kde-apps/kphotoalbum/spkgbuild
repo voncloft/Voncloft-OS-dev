@@ -1,0 +1,15 @@
+# description : KPhotoAlbum
+# depends : extra-cmake-modules karchive kcolorscheme kcompletion kconfig kcoreaddons kde-deps-installer kdoctools ki18n kiconthemes kio kjobwidgets ktextwidgets kwidgetsaddons kxmlgui libjpeg-turbo libkdcraw marble purpose qt6 vlc
+
+name=kphotoalbum
+version=6.2.0
+release=2
+options="!checksum"
+source="kphotoalbum-6.2.0.tar.xz::https://download.kde.org/stable/kphotoalbum/6.2.0/kphotoalbum-6.2.0.tar.xz"
+
+build() {
+    cd "kphotoalbum-6.2.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,0 +1,15 @@
+# description : Vvave
+# depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n mauikit mauikit-filebrowsing qt6 taglib
+
+name=vvave
+version=4.0.2
+release=2
+options="!checksum"
+source="vvave-4.0.2.tar.gz::https://invent.kde.org/maui/vvave/-/archive/v4.0.2/vvave-v4.0.2.tar.gz"
+
+build() {
+    cd "vvave-v4.0.2"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

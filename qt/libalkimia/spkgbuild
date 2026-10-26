@@ -1,0 +1,18 @@
+# description : libalkimia
+# depends : extra-cmake-modules gmp kcodecs kcompletion kconfig kcoreaddons kde-deps-installer ki18n kio knewstuff ktextwidgets kwidgetsaddons kxmlgui qt6
+
+name=libalkimia
+version=8.2.1
+release=2
+options="!checksum"
+source="libalkimia-8.2.1.tar.xz::https://download.kde.org/stable/alkimia/8.2.1/alkimia-8.2.1.tar.xz"
+
+build() {
+    cd "alkimia-8.2.1"
+    plasma-package-installer \
+        -DBUILD_WITH_QT6=ON \
+        -DBUILD_APPLETS=OFF \
+        -DBUILD_WITH_WEBENGINE=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

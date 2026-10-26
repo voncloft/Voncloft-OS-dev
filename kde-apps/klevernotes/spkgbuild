@@ -1,0 +1,15 @@
+# description : KleverNotes
+# depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kde-deps-installer ki18n kiconthemes kio kirigami kirigami-addons qt6
+
+name=klevernotes
+version=1.3.1
+release=2
+options="!checksum"
+source="klevernotes-1.3.1.tar.xz::https://download.kde.org/stable/klevernotes/1.3.1/klevernotes-1.3.1.tar.xz"
+
+build() {
+    cd "klevernotes-1.3.1"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

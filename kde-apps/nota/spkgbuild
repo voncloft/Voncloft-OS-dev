@@ -1,0 +1,15 @@
+# description : Nota
+# depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n mauikit mauikit-filebrowsing mauikit-texteditor qt6
+
+name=nota
+version=4.0.2
+release=2
+options="!checksum"
+source="nota-4.0.2.tar.gz::https://invent.kde.org/maui/nota/-/archive/v4.0.2/nota-v4.0.2.tar.gz"
+
+build() {
+    cd "nota-v4.0.2"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

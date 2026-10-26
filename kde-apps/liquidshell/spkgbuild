@@ -1,0 +1,15 @@
+# description : liquidshell
+# depends : bluez-qt extra-cmake-modules karchive kcmutils kconfig kconfigwidgets kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kio kitemviews knewstuff knotifications kservice kwidgetsaddons kwindowsystem kxmlgui networkmanager-qt packagekit-qt qt6 solid
+
+name=liquidshell
+version=1.10.1
+release=2
+options="!checksum"
+source="liquidshell-1.10.1.tar.xz::https://download.kde.org/stable/liquidshell/liquidshell-1.10.1.tar.xz"
+
+build() {
+    cd "liquidshell-1.10.1"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

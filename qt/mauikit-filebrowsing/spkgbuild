@@ -1,0 +1,15 @@
+# description : mauikit-filebrowsing
+# depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n kio mauikit qt6
+
+name=mauikit-filebrowsing
+version=4.0.2
+release=2
+options="!checksum"
+source="mauikit-filebrowsing-4.0.2.tar.xz::https://download.kde.org/stable/maui/mauikit-filebrowsing/4.0.2/mauikit-filebrowsing-4.0.2.tar.xz"
+
+build() {
+    cd "mauikit-filebrowsing-4.0.2"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

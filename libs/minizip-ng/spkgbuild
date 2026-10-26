@@ -1,0 +1,23 @@
+# description : minizip-ng
+# depends : bzip2 cmake make openssl xz zlib zstd
+
+name=minizip-ng
+version=4.2.2
+release=2
+options="!checksum"
+source="minizip-ng-4.2.2.tar.gz::https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.2.2.tar.gz"
+
+build() {
+    cd "minizip-ng-4.2.2"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -DMZ_COMPAT=OFF \
+        -DMZ_FETCH_LIBS=OFF \
+        -DMZ_LIBBSD=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

@@ -1,0 +1,15 @@
+# description : RSI Break
+# depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kidletime knotifications knotifyconfig kstatusnotifieritem ktextwidgets kwindowsystem kxmlgui qt6
+
+name=rsibreak
+version=0.13.0
+release=2
+options="!checksum"
+source="rsibreak-0.13.0.tar.xz::https://download.kde.org/stable/rsibreak/0.13/rsibreak-0.13.0.tar.xz"
+
+build() {
+    cd "rsibreak-0.13.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

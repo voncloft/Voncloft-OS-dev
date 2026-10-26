@@ -309,6 +309,7 @@ d:python-digitalocean
 d:python-pint
 d:python-metadata
 d:python-irc
+d:python-glad
 d:python-pyadi-iio
 d:python-munch
 d:python-periphery
@@ -2088,7 +2089,7 @@ f:bac5bedd12715eb9b8d6445e87ca83f1:python-pdoc/spkgbuild
 f:9a5c9933196c728bd8608358d7decdc4:python-covdefaults/CHANGELOG
 f:053a960525ad0b3a7c0c1091ce181e4e:python-covdefaults/spkgbuild
 f:424ab703c6e09e4df96decc263f0d1a6:python-scour/CHANGELOG
-f:bd1d1270845a79aa12c245b4ba841060:python-scour/spkgbuild
+f:8d74e51369c4f25ac3a45b86cf2419ed:python-scour/spkgbuild
 f:e402ff1ad64f096073c47122bf634df4:python-librabbitmq/CHANGELOG
 f:8a6b81aaa872c8844cc58e160f243c0e:python-librabbitmq/spkgbuild
 f:da607f4ce0c82d3ba20edcc013fd6919:python-engineio/CHANGELOG
@@ -2171,6 +2172,7 @@ f:ec1883a667224e22cca41334896458e5:python-metadata/CHANGELOG
 f:3037c510f009e5108c0cb83d9739ed4f:python-metadata/spkgbuild
 f:931e9a19ccbe3be9b0dfcf159b52e73c:python-irc/CHANGELOG
 f:0a594c5d95de1781efa2d69c24717116:python-irc/spkgbuild
+f:7c3a2453ec136f60b12599ec6fb4c600:python-glad/spkgbuild
 f:49f5670255a4f8264b43701baaaaf398:python-pyadi-iio/CHANGELOG
 f:c63d4d4e497b2e11c1a4579109411651:python-pyadi-iio/spkgbuild
 f:39411de1bd679514dcefad2b44224f6b:python-munch/CHANGELOG
@@ -2222,7 +2224,7 @@ f:85dc0d1fc3eb8b3edc26e78e3010d9fb:python-backcall/spkgbuild
 f:b335583a6a7dc06798d2fa610c240b1b:python-pytest-tap/CHANGELOG
 f:757c83c7f852b35b84eb45d462a99190:python-pytest-tap/spkgbuild
 f:cac772ef3f3f0802cea94811091e9e27:python-pip/CHANGELOG
-f:8569935bace0bfb3ab066e37e7f4f95f:python-pip/spkgbuild
+f:6435b7ca074f88a3d98287baa27ba40a:python-pip/spkgbuild
 f:6858e35102e4cbae21307b8398c112bd:python-pytest-checkdocs/CHANGELOG
 f:a8465be31bcbc567c48e8bc9c0aafe19:python-pytest-checkdocs/spkgbuild
 f:dd8b755857985cc5cb2e1d2195d45f73:python-dogpile.cache/CHANGELOG
@@ -4229,7 +4231,7 @@ f:540481c305a35a29b847d2c3ae13819d:python-keras-preprocessing/CHANGELOG
 f:33b82e2fa09b8e93d4d5d7a02607a133:python-keras-preprocessing/spkgbuild
 f:fd7bf462a5bb29c02859b0d48278de11:python-jinja/.pkgfiles
 f:c05bb2d7f17eef5dc8c9b76c4b99f329:python-jinja/CHANGELOG
-f:4117bd757c71f1366ed32f25107b705a:python-jinja/spkgbuild
+f:fc1d4cb4d9cd6743d2fc98820f33c044:python-jinja/spkgbuild
 f:4a27000e2c93039131aa1f1ab346d0f0:python-flask-sqlalchemy/CHANGELOG
 f:9efbf9c7ddc1e35942c897167d3cc4f2:python-flask-sqlalchemy/spkgbuild
 f:efe930bd079c8fa8152f8de8c80c8ac4:python-oslo-i18n/CHANGELOG

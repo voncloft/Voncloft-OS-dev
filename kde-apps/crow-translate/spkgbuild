@@ -1,0 +1,17 @@
+# description : Crow Translate
+# depends : extra-cmake-modules kde-deps-installer kiconthemes kwayland libxcb qt6 tesseract
+
+name=crow-translate
+version=4.1.0
+release=2
+options="!checksum"
+source="crow-translate-4.1.0.tar.gz::https://download.kde.org/stable/crow-translate/4.1.0/crow-translate-4.1.0.tar.gz"
+
+build() {
+    cd "crow-translate"
+    plasma-package-installer \
+        -DWITH_PIPER_TTS=OFF \
+        -DWITH_TTS=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

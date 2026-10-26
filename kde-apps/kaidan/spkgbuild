@@ -1,0 +1,15 @@
+# description : Kaidan
+# depends : extra-cmake-modules gstreamer icu kcrash kde-deps-installer kdsingleapplication kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kwindowsystem openssl prison qqc2-desktop-style qt6 qtkeychain qxmpp sqlite
+
+name=kaidan
+version=0.16.0
+release=2
+options="!checksum"
+source="kaidan-0.16.0.tar.gz::https://invent.kde.org/network/kaidan/-/archive/v0.16.0/kaidan-v0.16.0.tar.gz"
+
+build() {
+    cd "kaidan-v0.16.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

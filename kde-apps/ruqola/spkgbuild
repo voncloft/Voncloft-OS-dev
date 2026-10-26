@@ -1,0 +1,15 @@
+# description : Ruqola
+# depends : extra-cmake-modules karchive kcodecs kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kdsingleapplication ki18n kiconthemes kidletime kio kitemviews knotifications knotifyconfig kstatusnotifieritem ktextaddons ktextwidgets kuserfeedback kxmlgui networkmanager-qt openssl plasma-activities prison purpose qt6 qtkeychain sonnet syntax-highlighting
+
+name=ruqola
+version=2.9.0
+release=2
+options="!checksum"
+source="ruqola-2.9.0.tar.xz::https://download.kde.org/stable/ruqola/ruqola-2.9.0.tar.xz"
+
+build() {
+    cd "ruqola-2.9.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

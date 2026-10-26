@@ -20,6 +20,7 @@ d:autoconf2.13
 d:pkgconf
 d:nasm
 d:glslc
+d:gcc-fortran
 d:apache-ant
 d:autoconf
 d:iasl
@@ -97,6 +98,7 @@ f:f91049239b4340e5eecf3e133a9a8674:nasm/.pkgfiles
 f:2795ecf8b61b83802436f031aa1c6174:nasm/spkgbuild
 f:34a907a9794dafc4bb7975aca12d5334:glslc/.pkgfiles
 f:b3123dc10416432ca6bc7328a43ead1a:glslc/spkgbuild
+f:f0531b5b3177f8d045f919e10501e166:gcc-fortran/spkgbuild
 f:5ec68bf05862edf34cc5b167ff360909:apache-ant/.pkgfiles
 f:603ababf2529f9ca3957861f246bead4:apache-ant/CHANGELOG
 f:d12fcf021316bb31fc95e469d0423c97:apache-ant/post-install.sh

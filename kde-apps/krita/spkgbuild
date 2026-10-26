@@ -1,0 +1,16 @@
+# description : Krita
+# depends : boost eigen exiv2 extra-cmake-modules ffmpeg fftw fontconfig freetype2 fribidi giflib harfbuzz immer kcolorscheme kcompletion kconfig kcoreaddons kcrash kde-deps-installer kguiaddons ki18n kitemviews kwidgetsaddons lager lcms2 libheif libjpeg-turbo libjxl libkdcraw libmypaint libpng libtiff libunibreak libwebp libxi opencolorio openexr openjpeg poppler qt6 sdl2 xsimd zlib zug
+
+name=krita
+version=6.0.4.1
+release=2
+options="!checksum"
+source="krita-6.0.4.1.tar.xz::https://download.kde.org/stable/krita/6.0.4.1/krita-6.0.4.1.tar.xz"
+
+build() {
+    cd "krita-6.0.4.1"
+    plasma-package-installer \
+        -DBUILD_WITH_QT6=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

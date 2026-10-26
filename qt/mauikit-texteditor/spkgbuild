@@ -1,0 +1,15 @@
+# description : mauikit-texteditor
+# depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n mauikit qt6 syntax-highlighting
+
+name=mauikit-texteditor
+version=4.0.2
+release=2
+options="!checksum"
+source="mauikit-texteditor-4.0.2.tar.xz::https://download.kde.org/stable/maui/mauikit-texteditor/4.0.2/mauikit-texteditor-4.0.2.tar.xz"
+
+build() {
+    cd "mauikit-texteditor-4.0.2"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

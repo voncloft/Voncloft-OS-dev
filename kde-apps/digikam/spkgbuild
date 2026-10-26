@@ -1,0 +1,17 @@
+# description : digiKam
+# depends : bison boost eigen exiv2 expat extra-cmake-modules ffmpeg flex glib kcalendarcore kconfig kcontacts kcoreaddons kde-deps-installer kfilemetadata ki18n kiconthemes kio knotifications knotifyconfig kservice kwindowsystem kxmlgui lcms2 lensfun libgphoto2 libheif libjpeg-turbo libjxl libkdcraw libksane libpng libtiff libxml2 libxslt opencv qt6 solid sonnet threadweaver
+
+name=digikam
+version=9.1.0
+release=2
+options="!checksum"
+source="digikam-9.1.0.tar.xz::https://download.kde.org/stable/digikam/9.1.0/digiKam-9.1.0.tar.xz"
+
+build() {
+    cd "digikam-9.1.0"
+    plasma-package-installer \
+        -DBUILD_WITH_QT6=ON \
+        -DENABLE_SHOWFOTO=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

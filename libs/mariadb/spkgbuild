@@ -1,0 +1,32 @@
+# description : mariadb
+# depends : bison cmake curl libaio libxml2 lz4 make ncurses openssl pcre2 readline zlib zstd
+
+name=mariadb
+version=11.8.9
+release=2
+options="!checksum"
+source="mariadb-11.8.9.tar.gz::https://archive.mariadb.org/mariadb-11.8.9/source/mariadb-11.8.9.tar.gz"
+
+build() {
+    cd "mariadb-11.8.9"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DINSTALL_LAYOUT=RPM \
+        -DINSTALL_LIBDIR=lib64 \
+        -DINSTALL_SYSCONFDIR=/etc \
+        -DINSTALL_SYSCONF2DIR=/etc/my.cnf.d \
+        -DINSTALL_SYSTEMD_UNITDIR= \
+        -DMYSQL_DATADIR=/var/lib/mysql \
+        -DWITH_EMBEDDED_SERVER=ON \
+        -DWITH_UNIT_TESTS=OFF \
+        -DWITH_SYSTEMD=no \
+        -DWITH_SSL=system \
+        -DWITH_ZLIB=system \
+        -DWITH_PCRE=system \
+        -DWITH_WSREP=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

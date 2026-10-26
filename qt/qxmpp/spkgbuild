@@ -1,0 +1,20 @@
+# description : qxmpp
+# depends : extra-cmake-modules gst-plugins-base gstreamer kde-deps-installer libomemo-c openssl qt6
+
+name=qxmpp
+version=1.17.0
+release=2
+options="!checksum"
+source="qxmpp-1.17.0.tar.gz::https://invent.kde.org/libraries/qxmpp/-/archive/v1.17.0/qxmpp-v1.17.0.tar.gz"
+
+build() {
+    cd "qxmpp-v1.17.0"
+    plasma-package-installer \
+        -DBUILD_OMEMO=ON \
+        -DWITH_GSTREAMER=ON \
+        -DWITH_ENCRYPTION=ON \
+        -DBUILD_DOCUMENTATION=OFF \
+        -DBUILD_EXAMPLES=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

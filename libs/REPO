@@ -36,6 +36,7 @@ d:libmpd
 d:cmark
 d:libgudev
 d:gpgme
+d:xsimd
 d:exiv2
 d:libglvnd
 d:js78
@@ -97,17 +98,20 @@ d:libssh
 d:libseccomp
 d:libsm
 d:sdl
+d:libjxl
 d:libftdi
 d:libxpm
 d:soundtouch
 d:libvdpau
 d:libraw
+d:libunibreak
 d:libtheora
 d:icu
 d:libatasmart
 d:libxdamage
 d:libcdio-paranoia
 d:liblastfm-qt5
+d:zug
 d:libtorrent-rasterbar
 d:rinutils
 d:gvfs
@@ -119,6 +123,8 @@ d:gcab
 d:libksba
 d:libxft
 d:libappindicator
+d:lensfun
+d:md4c
 d:libpwquality
 d:libsigc++
 d:libva-intel
@@ -131,10 +137,12 @@ d:libisoburn
 d:libxcb
 d:avahi
 d:librsvg
+d:mariadb
 d:libcue
 d:shapelib
 d:libxmlb
 d:libmypaint
+d:minizip-ng
 d:libquotient
 d:libfm-extra
 d:libutempter
@@ -143,6 +151,7 @@ d:dotconf
 d:libfilezilla
 d:libass
 d:libepoxy
+d:opencolorio
 d:libxpresent
 d:opensp
 d:glibc
@@ -159,11 +168,13 @@ d:libfontenc
 d:xapp
 d:libudfread
 d:liba52
+d:libnova
 d:libuninameslist
 d:libice
 d:fftw
 d:libxmu
 d:libspiro
+d:indi
 d:c-ares
 d:libaacs
 d:libblockdev
@@ -186,6 +197,7 @@ d:libnsl
 d:openexr
 d:aqbanking
 d:alsa-lib
+d:immer
 d:libdaemon
 d:libimagequant
 d:libaccounts-glib
@@ -195,6 +207,8 @@ d:libpeas
 d:libavif
 d:hdf5
 d:libressl
+d:netcdf
+d:libplacebo
 d:jansson
 d:lirc
 d:libaec
@@ -215,6 +229,7 @@ d:liburcu
 d:libgcrypt
 d:libxdg-basedir
 d:libcdio
+d:libomemo-c
 d:libxau
 d:libpsl
 d:libxtst
@@ -229,6 +244,7 @@ d:libtommath
 d:nng
 d:libinput
 d:kirigami-app-components
+d:pystring
 d:libfm
 d:libcroco
 d:npth
@@ -242,6 +258,7 @@ d:libdisplay-info
 d:fmt
 d:libmodplug
 d:libmpcdec
+d:libheif
 d:json-glib
 d:xine-lib
 d:libgnome-keyring
@@ -278,6 +295,7 @@ d:libuv
 d:libgphoto2
 d:libdbusmenu
 d:glibmm
+d:wcslib
 d:libclc
 d:libatomic_ops
 d:libogg
@@ -298,6 +316,7 @@ d:libxfce4ui
 d:libgtop
 d:libmicrohttpd
 d:liblzf
+d:sqlcipher
 d:wxwidgets
 d:cairo
 d:libaom
@@ -308,6 +327,7 @@ d:plymouth
 d:libxrender
 d:libfs
 d:spdlog
+d:cfitsio
 d:atkmm
 d:libmtp
 d:glm
@@ -321,6 +341,7 @@ d:flatpak
 d:libmng
 d:pybind11
 d:libsodium
+d:lager
 d:liblinear
 d:cblas
 d:libxt
@@ -409,6 +430,7 @@ f:c52f22c7c85d292fb70087e4e46f02ff:libgudev/spkgbuild
 f:e122c9815283568e6701b1e57f227fcc:gpgme/.pkgfiles
 f:a4965bec473af67c6211bcc7bd2345ef:gpgme/CHANGELOG
 f:e800b094ce4d9cab6afe5c0dc7d0f132:gpgme/spkgbuild
+f:4423ecf09119041c73080af1d6f5919e:xsimd/spkgbuild
 f:b188f556eb8b99e0342e31bfe2976cfd:exiv2/.pkgfiles
 f:eef5e59ed46c2ac3b373473342524741:exiv2/spkgbuild
 f:d0ed9acd976cf89decf309a757eac73a:libglvnd/.pkgfiles
@@ -496,7 +518,7 @@ f:0578f2cda984a4e0412bf45b373c5df8:glib/spkgbuild
 f:a221652c98575179869f27ae19231dfa:libcanberra/.pkgfiles
 f:abdf320e22e04f0502d5beb4a13542e4:libcanberra/spkgbuild
 f:82f39b55fc64d5bc3f4d6127255ce504:opencv/.pkgfiles
-f:41a2250634d43a998f4aa599e09b81c4:opencv/spkgbuild
+f:3c2fe5e90e3665c3b527e334f79916a6:opencv/spkgbuild
 f:7dade8f54263d786057bfe597ada1ae2:modemmanager/.pkgfiles
 f:c2a480a4dae7ef713a70b0aa6845fbbb:modemmanager/spkgbuild
 f:0396ecb2a23984d15a9aaf024490a836:libconfig/CHANGELOG
@@ -542,6 +564,7 @@ f:0d4f3150cf57ec61e39264d193d2968a:libseccomp/spkgbuild
 f:d668c5c66d911f2650af6dd34fa93c77:libsm/.pkgfiles
 f:0cee4cbb3573935b55418276bbca85f3:libsm/spkgbuild
 f:9652206f589e2e8ad5a3095af54bc5c9:sdl/spkgbuild
+f:39dd26f30fbf915391a9115b94c03711:libjxl/spkgbuild
 f:079f9c832f587f45f9504e4d3c41a4d3:libftdi/spkgbuild
 f:82c8d8aaec419741cb79a01ea606d9a1:libxpm/.pkgfiles
 f:73849a6f8a826b4994721d160813a853:libxpm/spkgbuild
@@ -552,6 +575,7 @@ f:733510600f71f553e40a6329d32269a9:libvdpau/.pkgfiles
 f:b977f1d2059d68b8eca3c63cd210d8cc:libvdpau/spkgbuild
 f:998b0ba48abf8e36034ec3f5d69325e2:libraw/.pkgfiles
 f:c8f00cc99861ff8ce9ce71f0426987c1:libraw/spkgbuild
+f:8459e639b5ce7425cd9f20d16cf0d877:libunibreak/spkgbuild
 f:09ccc0ed63d89ed5991f34efddac9328:libtheora/.pkgfiles
 f:50dd75ef6e2075bb47c1ff9985f28412:libtheora/CHANGELOG
 f:b7d9cd47d195c4ed85a52d1137d84e03:libtheora/spkgbuild
@@ -566,6 +590,7 @@ f:d472f4e112b787b34503fb20103eb231:libcdio-paranoia/spkgbuild
 f:fdc5e1c465157fcb7dea421dab229878:liblastfm-qt5/.pkgfiles
 f:fcd6515962b376624de7136f7e2260ad:liblastfm-qt5/CHANGELOG
 f:ff0ca686de0f9fd1f8c40ab4bb0f5218:liblastfm-qt5/spkgbuild
+f:631719b80ea4acd5a3b4d1ba6f83e82c:zug/spkgbuild
 f:2a79229dfa08b19f1b6b30e5572ea792:libtorrent-rasterbar/.pkgfiles
 f:d12b1717e9f31bef519e1c62c4683d5e:libtorrent-rasterbar/CHANGELOG
 f:58cfd1d2eea475d43d29d7f3fa31a968:libtorrent-rasterbar/spkgbuild
@@ -586,6 +611,8 @@ f:4190c6eae7c6acc732807d5c8acdcd53:libxft/.pkgfiles
 f:33cfc58d0ce37663b85d3f75b758f1cf:libxft/spkgbuild
 f:36f72f9d8f4aa7729fd3561635d1b3bd:libappindicator/spkgbuild
 f:54cc5c8643bf53edce25cffa716fcb0e:libappindicator/no-python.patch
+f:5ae3b9cdb678b012d391a97efc182134:lensfun/spkgbuild
+f:bbe0d16c1e7f3dcffbee5552ba8a21f1:md4c/spkgbuild
 f:3769d268f598d84c520ea22c062f261a:libpwquality/system-password
 f:0b2f1ff1bedfb169888ffbe8e37cb8f6:libpwquality/CHANGELOG
 f:c714a76240aea176166c7a745d9c7a71:libpwquality/spkgbuild
@@ -613,12 +640,14 @@ f:90c20b9a3fa80000e8fc31bcec810637:avahi/spkgbuild
 f:5b4736ba9c52389c7ef1bc75210ad4dc:avahi/pre-install.sh
 f:d9d2d42b42a778d6b65d0608a3d296c8:librsvg/.pkgfiles
 f:3de1fd6f8f46e2bf92ba2a107daff60f:librsvg/spkgbuild
+f:b6d6c6ae28c84b439d5e08eb38948266:mariadb/spkgbuild
 f:47cea3f6286bbf3e50146ee61cf2c4c6:libcue/CHANGELOG
 f:d25c648a0964942661de0129efb7bb83:libcue/spkgbuild
 f:6ef7eb607d341ca9ac023b12b62f3e02:shapelib/spkgbuild
 f:8c73753408f743d34840968af4dec384:libxmlb/.pkgfiles
 f:8faa8ccac5372c9d1fb1e1121f3a76d4:libxmlb/spkgbuild
 f:ea461240042573d41ca3e3fe89ab514c:libmypaint/spkgbuild
+f:d1fce62f18cd13687e3f4281aa42bb86:minizip-ng/spkgbuild
 f:5913368513e2108f3cd8a66053a46b3e:libquotient/spkgbuild
 f:6fb34a5a44149b0e85b2d7d6f3cf4975:libfm-extra/spkgbuild
 f:e3de1fd7d260ac2e97ea7e62c1e85766:libutempter/.pkgfiles
@@ -636,6 +665,7 @@ f:ca8d8468f271b81942d9020760d8de8f:libass/spkgbuild
 f:ab48c64e63fb6c071f85bc059385c48f:libepoxy/.pkgfiles
 f:04888ab1a1ea8a86eac05b5d16739f6a:libepoxy/CHANGELOG
 f:7e806dfb710d659f82c9bb6b1f208455:libepoxy/spkgbuild
+f:cb26aaf9c28b9d425edc4ef11d5c72e2:opencolorio/spkgbuild
 f:8164fc703d47e98bb178aa172bc1ef45:libxpresent/spkgbuild
 f:987864f7de70b563fd66bd097b81cceb:opensp/spkgbuild
 f:2eb55a1e6a882c0527bec9519f5a709b:glibc/.pkgfiles
@@ -674,6 +704,7 @@ f:ab8ca77860fb35bff9c409b0b1a24e89:libudfread/.pkgfiles
 f:2c5c7051fd9ae42e06f7921bd64155d4:libudfread/spkgbuild
 f:a7d07351f39efda00752b19ef04960ad:liba52/.pkgfiles
 f:536d8d474b37c0f6f109ce31d5d36ad2:liba52/spkgbuild
+f:3be56334f58c9133381419d308955195:libnova/spkgbuild
 f:cd446c27d4f708ac701bbc8dda63f92a:libuninameslist/spkgbuild
 f:3e4856af36685dcf28a32116dbd7f58e:libice/.pkgfiles
 f:a3bd3de8b21b1f57d91091928f60b167:libice/spkgbuild
@@ -681,6 +712,7 @@ f:eba03e443525d67d9c6ed3176b0f9aa5:fftw/spkgbuild
 f:525e71d5d9421a87862d51fbc330ff42:libxmu/.pkgfiles
 f:d81effd20ab2a35cf017f573c7fc5eec:libxmu/spkgbuild
 f:9b2c018b46a790793cee9ed44639996b:libspiro/spkgbuild
+f:e14af1f4c9cefe3a279a4a9998461a75:indi/spkgbuild
 f:e479d11d0432866f5201e66b88d17a52:c-ares/.pkgfiles
 f:38510583f4166fa5c0cfc37d0fcd744d:c-ares/CHANGELOG
 f:4cbae255efcea62373f6fdfc1e39af79:c-ares/spkgbuild
@@ -736,6 +768,7 @@ f:847393056ec0db4770542555221c2c42:alsa-lib/.pkgfiles
 f:76226b0dee30494f6932b0a92d1ee6f4:alsa-lib/readme
 f:5b84de9cdd4eb433020a4e21eeb313ac:alsa-lib/CHANGELOG
 f:83fd35f787168ba05bab1505ddbcb191:alsa-lib/spkgbuild
+f:39d91e047a6fa81f0bb8f41cf0002bd8:immer/spkgbuild
 f:db1d31b8776cea188f28c984bfdecab4:libdaemon/.pkgfiles
 f:6a576b3cee52d18f1930e8b094d99813:libdaemon/spkgbuild
 f:44142e6a6ab7484ed13dfa93c50d73ae:libimagequant/.pkgfiles
@@ -753,9 +786,11 @@ f:8967e059eee6e4ca1c4b81b6fe83ff4d:snappy/spkgbuild
 f:3fd86ab8810e214e6b1531906b2154a6:libpeas/spkgbuild
 f:97935a4fc180c3831f7d02c9ac52f819:libavif/.pkgfiles
 f:3c6d22c60210abdc0fb9ca5937cc2d40:libavif/spkgbuild
-f:104c25389156c85f0d9ca9df802b5c62:hdf5/spkgbuild
+f:955ebae87c5e565ceecb1a6f1ea8d179:hdf5/spkgbuild
 f:9e45991a79ceb9c2ff2bca0cb26049c2:libressl/CHANGELOG
 f:9974c576197d783e56269c3023e49b8c:libressl/spkgbuild
+f:f3e41c2f6d11d5076ab6d38950f4a907:netcdf/spkgbuild
+f:82874f40cc0c6b43fea93f4ba6629f14:libplacebo/spkgbuild
 f:049ab2227793f15830f0f2e40db24643:jansson/.pkgfiles
 f:eacd9707e0b6df6254ca94dde06c9f47:jansson/spkgbuild
 f:58ffcea1a165366f89b94a1dedcf8c24:lirc/.pkgfiles
@@ -803,6 +838,7 @@ f:2a3670ec13357c4e3c8d55f07d1ec699:libxdg-basedir/xdgGetRelativeHome-overflow.pa
 f:f98016b5a78ebdc4eddd8d322f4d1622:libxdg-basedir/spkgbuild
 f:879baaca39ab337a15cc7fb9e9d12ecf:libcdio/.pkgfiles
 f:d125ac121aff96741e5c7f96019415ff:libcdio/spkgbuild
+f:177f8ccb0bac9fc4aa27cd6438824688:libomemo-c/spkgbuild
 f:2a8ebf88bbe8a019e2f30c0c14c39fc1:libxau/.pkgfiles
 f:d37e264344d907bd75c677bde3255927:libxau/spkgbuild
 f:2db3dc93103349ec8975b536d09f9496:libpsl/.pkgfiles
@@ -831,6 +867,7 @@ f:e58c034da322ff1e9bca9ede536d6803:libinput/.pkgfiles
 f:99a4217bce7d873395de2846207ab55d:libinput/CHANGELOG
 f:eb8148faa05c2963d0336f0e47de93ba:libinput/spkgbuild
 f:6af1fd741609175a43d8efd4dc6a6a43:kirigami-app-components/spkgbuild
+f:d55ae9f4053a14b93adaabf5d32de06f:pystring/spkgbuild
 f:45a6e973f149dee002f204b42a926cff:libfm/CHANGELOG
 f:9a9a911da9452b3a98c1c9d43be2ad6c:libfm/spkgbuild
 f:b69b528488730410c45f949a4f58b57a:libcroco/spkgbuild
@@ -859,6 +896,7 @@ f:cd84e5539cb75d3cc0622c1de3818f00:fmt/CHANGELOG
 f:0d67088966d0db08c53d2800db71bb6d:fmt/spkgbuild
 f:ee4703e47a5310db455181fce9cc57a4:libmodplug/spkgbuild
 f:7e7f75f48bd57a9342c586adc2c96fc6:libmpcdec/spkgbuild
+f:40135a2649b35532cd36c886cbd4da91:libheif/spkgbuild
 f:1bfc914d64a7848bb924e193477bf499:json-glib/.pkgfiles
 f:a2be00f3b0cccaed36ffa2f96f8aba2d:json-glib/spkgbuild
 f:20967723cacab4e332344a7d6e2e338c:xine-lib/patch.patch
@@ -939,6 +977,7 @@ f:c8b5063c398bf74f9edc6a8221e34967:libgphoto2/spkgbuild
 f:79ae33c182a658afc7a092442883c994:libdbusmenu/spkgbuild
 f:13cbea1c4184c209e3a064ccf285daf7:glibmm/CHANGELOG
 f:f9e06cbbffd540965fe71eee5005bea9:glibmm/spkgbuild
+f:5d388f9067506b0a992c73d2d6e0c580:wcslib/spkgbuild
 f:69c56a5b8797edf7a1d8d4ee5f23f3ea:libclc/.pkgfiles
 f:c309e2a03e090effd6ec8c5b33afcebe:libclc/spkgbuild
 f:02f53cb3b067123d2b9e8c085816171b:libatomic_ops/.pkgfiles
@@ -987,6 +1026,7 @@ f:e3b49a59454c477a6d5d31d669001f32:libmicrohttpd/.pkgfiles
 f:0bccac4293668db94265e644fe5dd4ee:libmicrohttpd/CHANGELOG
 f:240c63f7e30562afc943e2c0c431a182:libmicrohttpd/spkgbuild
 f:34d34e099d543154d1cfebb4cfb24bcc:liblzf/spkgbuild
+f:b7778e01b59660aad516b9d6a461ec8d:sqlcipher/spkgbuild
 f:e3a06aabfce88b33e1105500a508d960:wxwidgets/.pkgfiles
 f:7ae32607871a8991bfa003336f479df6:wxwidgets/spkgbuild
 f:df34337c187de6b3566e6c6b6869b1c2:cairo/.pkgfiles
@@ -1007,6 +1047,7 @@ f:9c2e7770d7fdc30ef884688c510655d5:libfs/spkgbuild
 f:01fba4f5dcd8108dad26cea80e4bfd07:spdlog/.pkgfiles
 f:8c5c397fac28ae560381d687e212e97a:spdlog/CHANGELOG
 f:b6d092c0e8905964541102a7083100ae:spdlog/spkgbuild
+f:025e618c8d58d5d96ff153c35f89a854:cfitsio/spkgbuild
 f:dd4716b4787c5b1290791f3c4046248c:atkmm/spkgbuild
 f:c24bdc076c31d3dfbd1204a7e550475a:libmtp/.pkgfiles
 f:2a57d1ae11d5a4c8e3b67b815bd06c92:libmtp/CHANGELOG
@@ -1037,6 +1078,7 @@ f:19b3e00d381b6ffbde04c972044d1651:libmng/spkgbuild
 f:d4150b19e249e38ec591543033cadd81:pybind11/spkgbuild
 f:faf237d5dc6864cdb92a1000b427d06a:libsodium/CHANGELOG
 f:63f06d8cf582693456d24d5bf65c343b:libsodium/spkgbuild
+f:7682642e352b1479ba6e4d28f9b12c6f:lager/spkgbuild
 f:e830bb36e02d094a0d819b42694aa17b:liblinear/.pkgfiles
 f:3931a1ad50aceb15c485be6c2d32f55a:liblinear/CHANGELOG
 f:1d252e3a46e3c02b1b5218b3b8060050:liblinear/spkgbuild
@@ -1054,6 +1096,6 @@ f:573fd5de8a7d45d0ab9ef44305c49c90:sdl3/spkgbuild
 f:382a404c38e6f731a9a64a3412b2c0e0:liblxqt/CHANGELOG
 f:0854618ed4bcdb28e05dbcbbd1ebc809:liblxqt/spkgbuild
 f:8acaf986a40c1ad6d8183862c7671acb:highway/.pkgfiles
-f:75d7666ada6e233ae80911fc807b1cdb:highway/spkgbuild
+f:9a70c19b551887180a3fa229d76d6279:highway/spkgbuild
 f:8c70d6e4c46c8b4d4b5fab5daf3a483c:muparser/CHANGELOG
 f:f413234a6efd1227afe73889bdb2e068:muparser/spkgbuild

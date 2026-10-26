@@ -1,0 +1,16 @@
+# description : Kid3
+# depends : chromaprint extra-cmake-modules ffmpeg flac kconfig kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui libvorbis python qt6 taglib
+
+name=kid3
+version=3.10.2
+release=2
+options="!checksum"
+source="kid3-3.10.2.tar.xz::https://download.kde.org/stable/kid3/3.10.2/kid3-3.10.2.tar.xz"
+
+build() {
+    cd "kid3-3.10.2"
+    plasma-package-installer \
+        -DBUILD_WITH_QT6=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

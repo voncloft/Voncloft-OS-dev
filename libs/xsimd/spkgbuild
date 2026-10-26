@@ -1,0 +1,22 @@
+# description : xsimd
+# depends : cmake make
+
+name=xsimd
+version=14.3.0
+release=2
+options="!checksum"
+source="xsimd-14.3.0.tar.gz::https://github.com/xtensor-stack/xsimd/archive/refs/tags/14.3.0.tar.gz"
+
+build() {
+    cd "xsimd-14.3.0"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_TESTS=OFF \
+        -DBUILD_EXAMPLES=OFF \
+        -DENABLE_XTL_COMPLEX=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

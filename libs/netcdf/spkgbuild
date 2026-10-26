@@ -1,0 +1,23 @@
+# description : netcdf
+# depends : cmake curl hdf5 libxml2 make zlib
+
+name=netcdf
+version=4.10.1
+release=2
+options="!checksum"
+source="netcdf-4.10.1.tar.gz::https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.10.1.tar.gz"
+
+build() {
+    cd "netcdf-c-4.10.1"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -DNETCDF_ENABLE_TESTS=OFF \
+        -DNETCDF_ENABLE_EXAMPLES=OFF \
+        -DNETCDF_ENABLE_HDF5=ON
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

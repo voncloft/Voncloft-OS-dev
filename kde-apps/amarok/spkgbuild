@@ -1,0 +1,17 @@
+# description : Amarok
+# depends : curl extra-cmake-modules fftw gst-plugins-base gstreamer karchive kcmutils kcodecs kcolorscheme kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools kglobalaccel kguiaddons ki18n kiconthemes kio kirigami knotifications kpackage kstatusnotifieritem ktexteditor ktextwidgets kwidgetsaddons kwindowsystem libgcrypt libxml2 mariadb openssl qt6 solid taglib threadweaver zlib
+
+name=amarok
+version=3.3.3
+release=2
+options="!checksum"
+source="amarok-3.3.3.tar.xz::https://download.kde.org/stable/amarok/3.3.3/amarok-3.3.3.tar.xz"
+
+build() {
+    cd "amarok-3.3.3"
+    plasma-package-installer \
+        -DWITH_LASTFM=OFF \
+        -DWITH_GPODDER=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

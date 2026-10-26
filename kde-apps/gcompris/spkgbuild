@@ -1,0 +1,21 @@
+# description : GCompris
+# depends : extra-cmake-modules kde-deps-installer kdoctools openssl qt6
+
+name=gcompris
+version=26.2
+release=2
+options="!checksum"
+source="gcompris-26.2.tar.xz::https://download.kde.org/stable/gcompris/qt/src/gcompris-qt-26.2.tar.xz
+    qml-box2d-e3674e0fe030c406a1d915e47eab760624fffa55.tar.gz::https://github.com/qml-box2d/qml-box2d/archive/e3674e0fe030c406a1d915e47eab760624fffa55.tar.gz"
+
+build() {
+    cd "gcompris-qt-26.2"
+    cp -a "$SRC/qml-box2d-e3674e0fe030c406a1d915e47eab760624fffa55/." external/qml-box2d/
+    plasma-package-installer \
+        -DBUILD_STANDALONE=OFF \
+        -DCOMPILE_DOC=ON \
+        -DBUILD_SERVER=ON \
+        -DPACKAGE_SERVER=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

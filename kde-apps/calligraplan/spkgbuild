@@ -1,0 +1,15 @@
+# description : Plan
+# depends : extra-cmake-modules karchive kcalendarcore kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdiagram kguiaddons kholidays ki18n kiconthemes kio kitemmodels kitemviews kjobwidgets knotifications kparts ktextwidgets kwallet kwidgetsaddons kwindowsystem kxmlgui perl plasma-activities qca qt6 shared-mime-info sonnet
+
+name=calligraplan
+version=4.0.1
+release=2
+options="!checksum"
+source="calligraplan-4.0.1.tar.xz::https://download.kde.org/stable/calligraplan/calligraplan-4.0.1.tar.xz"
+
+build() {
+    cd "calligraplan-4.0.1"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

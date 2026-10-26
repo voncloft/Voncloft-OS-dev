@@ -1,0 +1,15 @@
+# description : Hana
+# depends : extra-cmake-modules ffmpeg kconfig kcoreaddons kde-deps-installer ki18n kio kirigami qt6
+
+name=hana
+version=1.0.0
+release=2
+options="!checksum"
+source="hana-1.0.0.tar.xz::https://download.kde.org/stable/hana/1.0.0/hana-1.0.0.tar.xz"
+
+build() {
+    cd "hana-1.0.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

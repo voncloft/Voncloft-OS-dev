@@ -1,0 +1,16 @@
+# description : KStars
+# depends : cfitsio curl eigen extra-cmake-modules gsl indi kconfig kconfigwidgets kcrash kdbusaddons kde-deps-installer ki18n kio knewstuff knotifications knotifyconfig kplotting kwidgetsaddons kxmlgui libnova libraw opencv qt6 qtkeychain stellarsolver wcslib
+
+name=kstars
+version=3.8.5
+release=2
+options="!checksum"
+source="kstars-3.8.5.tar.xz::https://download.kde.org/stable/kstars/3.8.5/kstars-3.8.5.tar.xz"
+
+build() {
+    cd "kstars-3.8.5"
+    plasma-package-installer \
+        -DBUILD_WITH_QT6=ON
+    cd build
+    make DESTDIR="$PKG" install
+}

@@ -1,0 +1,15 @@
+# description : KGeoTag
+# depends : extra-cmake-modules kcolorscheme kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kxmlgui libkexiv2 marble qt6
+
+name=kgeotag
+version=2.0.0
+release=2
+options="!checksum"
+source="kgeotag-2.0.0.tar.xz::https://download.kde.org/stable/kgeotag/2.0.0/kgeotag-2.0.0.tar.xz"
+
+build() {
+    cd "kgeotag-2.0.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

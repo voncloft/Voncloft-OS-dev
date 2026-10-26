@@ -1,0 +1,15 @@
+# description : jpegoptim
+# depends : libjpeg-turbo make
+
+name=jpegoptim
+version=1.5.6
+release=2
+options="!checksum"
+source="jpegoptim-1.5.6.tar.gz::https://github.com/tjko/jpegoptim/archive/refs/tags/v1.5.6.tar.gz"
+
+build() {
+    cd "jpegoptim-1.5.6"
+    ./configure --prefix=/usr
+    make
+    make DESTDIR="$PKG" install
+}

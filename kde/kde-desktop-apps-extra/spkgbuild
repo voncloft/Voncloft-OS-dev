@@ -1,0 +1,12 @@
+# description : Stable Qt 6 desktop applications released independently of KDE Gear
+# depends : amarok calligraplan crow-translate digikam drawy gcompris glaxnimate hana haruna hash-o-matic heaptrack index-fm kaichat kaidan kdiff3 kgeotag kid3 klevernotes kmymoney kodaskanna kommit komodo kookbook kphotoalbum krita krusader kst kstars ktimetracker labplot liquidshell marknote nota optiimage rkward rolisteam rsibreak ruqola skrooge smb4k subtitlecomposer tellico vvave
+
+name=kde-desktop-apps-extra
+version=2026.10.25
+release=1
+options="!checksum"
+source="apps.list"
+
+build() {
+    install -Dm644 "$SRC/apps.list" "$PKG/usr/share/kde-desktop-apps-extra/apps.list"
+}

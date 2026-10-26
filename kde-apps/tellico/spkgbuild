@@ -1,0 +1,15 @@
+# description : Tellico
+# depends : exiv2 extra-cmake-modules gettext karchive kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools kfilemetadata kguiaddons ki18n kiconthemes kio kitemmodels kjobwidgets knewstuff ktextwidgets kwidgetsaddons kxmlgui libkcddb libksane libxml2 libxslt poppler qt6 solid sonnet taglib
+
+name=tellico
+version=4.3
+release=2
+options="!checksum"
+source="tellico-4.3.tar.gz::https://invent.kde.org/office/tellico/-/archive/v4.3/tellico-v4.3.tar.gz"
+
+build() {
+    cd "tellico-v4.3"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

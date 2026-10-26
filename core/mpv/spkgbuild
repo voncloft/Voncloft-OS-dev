@@ -1,22 +1,16 @@
-# description	: A free, open source, and cross-platform media player
-# depends	: mesa lcms2 ffmpeg libass libarchive luajit
+# description : mpv
+# depends : alsa-lib ffmpeg lcms2 libarchive libass libplacebo libx11 libxext libxinerama libxkbcommon libxpresent libxrandr libxss libxv luajit meson ninja pipewire pkgconf pulseaudio python wayland wayland-protocols
 
 name=mpv
-version=0.40.0
-release=1
-source="https://github.com/mpv-player/mpv/archive/v$version/$name-$version.tar.gz"
+version=0.41.0
+release=2
+options="!checksum"
+source="mpv-0.41.0.tar.gz::https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
 
 build() {
-	cd $name-$version
-	./bootstrap.py
-	./waf configure \
-	    --prefix=/usr \
-	    --confdir=/etc/mpv \
-	    --enable-cdda \
-	    --enable-dvb \
-	    --enable-libarchive \
-	    --enable-lua \
-	    --enable-libmpv-shared
-	./waf build
-	./waf install --destdir=$PKG
+    cd "mpv-0.41.0"
+    meson setup build --prefix=/usr --libdir=lib64 --buildtype=release \
+        -Dlibmpv=true
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

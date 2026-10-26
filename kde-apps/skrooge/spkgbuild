@@ -1,0 +1,17 @@
+# description : Skrooge
+# depends : extra-cmake-modules karchive kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kio kitemviews knewstuff knotifications knotifyconfig kparts ktexttemplate kwallet kwidgetsaddons kxmlgui qt6 sqlcipher
+
+name=skrooge
+version=26.8.0
+release=2
+options="!checksum"
+source="skrooge-26.8.0.tar.xz::https://download.kde.org/stable/skrooge/skrooge-26.8.0.tar.xz"
+
+build() {
+    cd "skrooge-26.8.0"
+    plasma-package-installer \
+        -DSKG_BUILD_TEST=OFF \
+        -DSKG_DESIGNER=OFF
+    cd build
+    make DESTDIR="$PKG" install
+}

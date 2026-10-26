@@ -1,0 +1,15 @@
+# description : KomoDo
+# depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kirigami kirigami-addons kitemmodels qqc2-desktop-style qt6
+
+name=komodo
+version=1.6.0
+release=2
+options="!checksum"
+source="komodo-1.6.0.tar.xz::https://download.kde.org/stable/komodo/1.6.0/komodo-1.6.0.tar.xz"
+
+build() {
+    cd "komodo-1.6.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

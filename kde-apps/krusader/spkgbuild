@@ -1,0 +1,15 @@
+# description : Krusader
+# depends : extra-cmake-modules karchive kbookmarks kcodecs kcompletion kconfig kcoreaddons kcrash kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kiconthemes kio kitemviews knotifications kparts kstatusnotifieritem ktextwidgets kwallet kwidgetsaddons kwindowsystem kxmlgui qt6 solid
+
+name=krusader
+version=2.9.0
+release=2
+options="!checksum"
+source="krusader-2.9.0.tar.gz::https://invent.kde.org/utilities/krusader/-/archive/v2.9.0/krusader-v2.9.0.tar.gz"
+
+build() {
+    cd "krusader-v2.9.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

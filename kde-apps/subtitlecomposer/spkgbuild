@@ -1,0 +1,16 @@
+# description : Subtitle Composer
+# depends : extra-cmake-modules ffmpeg icu kcodecs kconfig kconfigwidgets kcoreaddons kde-deps-installer ki18n kio ktextwidgets kwidgetsaddons kxmlgui openal openssl qt6 sonnet
+
+name=subtitlecomposer
+version=0.8.2
+release=2
+options="!checksum"
+source="subtitlecomposer-0.8.2.tar.xz::https://download.kde.org/stable/subtitlecomposer/subtitlecomposer-0.8.2.tar.xz"
+
+build() {
+    cd "subtitlecomposer-0.8.2"
+    plasma-package-installer \
+        -DQT_MAJOR_VERSION=6
+    cd build
+    make DESTDIR="$PKG" install
+}

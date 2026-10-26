@@ -1,0 +1,16 @@
+# description : libnova
+# depends : make
+
+name=libnova
+version=0.15.0
+release=2
+options="!checksum"
+source="libnova-0.15.0.tar.gz::https://downloads.sourceforge.net/project/libnova/libnova/v%200.15.0/libnova-0.15.0.tar.gz"
+
+build() {
+    cd "libnova-0.15.0"
+    export CFLAGS="$CFLAGS -std=gnu17"
+    ./configure --prefix=/usr --libdir=/usr/lib64 --disable-static
+    make
+    make DESTDIR="$PKG" install
+}

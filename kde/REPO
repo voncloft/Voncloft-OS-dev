@@ -1,6 +1,9 @@
+d:kde-desktop-apps-extra
 d:kde6
 d:kde-deps
 d:kde-deps-installer
+f:8222d4904d43d112eacb6429d3609eea:kde-desktop-apps-extra/apps.list
+f:90c1d45f20da1fec7f43c4233a8fb6ff:kde-desktop-apps-extra/spkgbuild
 f:376599300cae9e8ae810a047c2575940:.httpup-urlinfo
 f:e1b724cdf9921d7856c48ba93307dbf9:kde6/spkgbuild
 f:fef41605beea8f2071546304fa5153fd:kde-deps/.pkgfiles

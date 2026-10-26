@@ -1,0 +1,23 @@
+# description : indi
+# depends : cfitsio cmake curl gsl libjpeg-turbo libnova libusb make zlib
+
+name=indi
+version=2.2.5
+release=2
+options="!checksum"
+source="indi-2.2.5.tar.gz::https://github.com/indilib/indi/archive/refs/tags/v2.2.5.tar.gz"
+
+build() {
+    cd "indi-2.2.5"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DINDI_BUILD_XISF=OFF \
+        -DINDI_BUILD_UNITTESTS=OFF \
+        -DINDI_BUILD_INTEGTESTS=OFF \
+        -DINDI_BUILD_STATIC=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

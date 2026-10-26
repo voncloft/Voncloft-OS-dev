@@ -1,0 +1,15 @@
+# description : KTimeTracker
+# depends : extra-cmake-modules kcalendarcore kcmutils kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kidletime kio kjobwidgets knotifications kstatusnotifieritem ktextwidgets kwindowsystem kxmlgui qt6
+
+name=ktimetracker
+version=6.0.0
+release=2
+options="!checksum"
+source="ktimetracker-6.0.0.tar.gz::https://invent.kde.org/pim/ktimetracker/-/archive/v6.0.0/ktimetracker-v6.0.0.tar.gz"
+
+build() {
+    cd "ktimetracker-v6.0.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

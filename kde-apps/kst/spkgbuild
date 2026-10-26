@@ -1,0 +1,15 @@
+# description : Kst
+# depends : cfitsio extra-cmake-modules gsl hdf5 kde-deps-installer libtiff netcdf qt6
+
+name=kst
+version=3.0.0
+release=2
+options="!checksum"
+source="kst-3.0.0.tar.gz::https://invent.kde.org/graphics/kst-plot/-/archive/3.0.0/kst-plot-3.0.0.tar.gz"
+
+build() {
+    cd "kst-plot-3.0.0"
+    plasma-package-installer
+    cd build
+    make DESTDIR="$PKG" install
+}

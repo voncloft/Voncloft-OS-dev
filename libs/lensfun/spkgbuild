@@ -1,0 +1,25 @@
+# description : lensfun
+# depends : cmake glib libpng make python zlib
+
+name=lensfun
+version=0.3.4
+release=2
+options="!checksum"
+source="lensfun-0.3.4.tar.gz::https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz"
+
+build() {
+    cd "lensfun-0.3.4"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_TESTS=OFF \
+        -DBUILD_STATIC=OFF \
+        -DBUILD_DOC=OFF \
+        -DINSTALL_HELPER_SCRIPTS=OFF \
+        -DPYTHON=PYTHON-NOTFOUND \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}

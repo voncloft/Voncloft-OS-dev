@@ -1,0 +1,22 @@
+# description : libomemo-c
+# depends : cmake make
+
+name=libomemo-c
+version=0.5.1
+release=2
+options="!checksum"
+source="libomemo-c-0.5.1.tar.gz::https://github.com/dino/libomemo-c/releases/download/v0.5.1/libomemo-c-0.5.1.tar.gz"
+
+build() {
+    cd "libomemo-c-0.5.1"
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -DLIB_SUFFIX=64 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+}
