@@ -1,0 +1,17 @@
+# description : Channel scanner that creates ATSC and DVB television tuning lists without initial frequency data
+# depends : autoconf automake gcc libiconv linux-api-headers make
+
+name=w_scan2
+version=1.0.17
+release=1
+_commit=ae909ace5c1c8ccabfb5debb1ff0e16da6ca3884
+source="$name-$_commit.tar.gz::https://github.com/stefantalpalaru/w_scan2/archive/$_commit.tar.gz"
+
+build() {
+    cd "$name-$_commit"
+    # Regenerate the stale configure script shipped in the upstream snapshot.
+    autoreconf -fi
+    LIBS="${LIBS:+$LIBS }-liconv" ./configure --prefix=/usr --disable-maintainer-mode
+    make
+    make DESTDIR="$PKG" install
+}

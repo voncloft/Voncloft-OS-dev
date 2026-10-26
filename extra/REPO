@@ -65,6 +65,7 @@ d:ngspice
 d:onboard
 d:minecraft-launcher
 d:geoip-database
+d:w_scan2
 d:gtk2
 d:kicad-library
 d:gtk4
@@ -241,6 +242,9 @@ f:b78826ef54e0cab77d9ea4c4b7c50174:minecraft-launcher/CHANGELOG
 f:c759c05311ef7eb0ca4b6c3767375f03:minecraft-launcher/spkgbuild
 f:61a694a2574ed840f1509039d18e8b1e:minecraft-launcher/minecraft-launcher.desktop
 f:80a0050adc4e383a71fca11c158c09a8:geoip-database/spkgbuild
+f:3522a77ebebd16fd4f464443ac89f094:w_scan2/.pkgfiles
+f:851f13fe1782a2a0b39cf042e4c59df1:w_scan2/spkgbuild
+f:ad854f09210f85fc72b62e2529a10b48:w_scan2/.checksums
 f:bb0ad7d077d5a01e5aa061e1662d37fa:gtk2/post-install.sh
 f:13f2c9445f7358f37ebde4fd22c3a024:gtk2/spkgbuild
 f:633bae522b47c51f89fbd8da859bac05:kicad-library/.pkgfiles

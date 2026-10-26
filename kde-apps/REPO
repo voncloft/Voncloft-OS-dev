@@ -33,6 +33,7 @@ d:knotes
 d:drawy
 d:kclock
 d:akonadi-calendar
+d:todolist
 d:kcolorchooser
 d:akonadi-calendar-tools
 d:krfb
@@ -95,6 +96,7 @@ d:kdev-python
 d:keysmith
 d:kshisen
 d:optiimage
+d:smarthome
 d:calindori
 d:krecorder
 d:kgeography
@@ -154,6 +156,7 @@ d:kblackbox
 d:khealthcertificate
 d:kirigami-gallery
 d:klines
+d:etrade-widget
 d:angelfish
 d:kde-dev-scripts
 d:kbreakout
@@ -178,6 +181,7 @@ d:kanagram
 d:sweeper
 d:digikam
 d:kdesdk-thumbnailers
+d:kde-calendar
 d:kdominate
 d:akonadi
 d:kigo
@@ -196,10 +200,12 @@ d:komodo
 d:ruqola
 d:klevernotes
 d:kmime
+d:varpeggio
 d:rocs
 d:kamera
 d:kaccounts-providers
 d:kimap
+d:voncloft-tv
 d:ksirk
 d:ksnakeduel
 d:libkipi
@@ -233,6 +239,7 @@ d:qrca
 d:kmahjongg
 d:artikulate
 d:kapptemplate
+d:kde-monitor-default
 d:messagelib
 d:kodaskanna
 d:kturtle
@@ -394,6 +401,9 @@ f:e78469f821383e40b95fe7e9156cdf15:kclock/spkgbuild
 f:a836e71ef2e661f99a699b4c01fe95f2:akonadi-calendar/.pkgfiles
 f:7305118dd16518f2bf6295937df505db:akonadi-calendar/CHANGELOG
 f:cfaea6e57f4ff3b7c826b04a5aba8304:akonadi-calendar/spkgbuild
+f:ac086ea97d3f96538eddf311ab679e52:todolist/.pkgfiles
+f:6768df856e4721bb984186e27ef745ed:todolist/spkgbuild
+f:73e7ac834d461f74090e5886059a9e76:todolist/.checksums
 f:dfd121289e2e162f6239877c0d170eea:kcolorchooser/CHANGELOG
 f:2770f4775e41a5a2e8073843b61184d0:kcolorchooser/spkgbuild
 f:26c2eed35644b4dee82a683f3991306f:akonadi-calendar-tools/CHANGELOG
@@ -519,6 +529,9 @@ f:565d48093b65b79fa35cc1b2c33dfa70:keysmith/spkgbuild
 f:e3ec811f12a6d7f6633fa0e202ee617e:kshisen/CHANGELOG
 f:817e1dbb6710969594b672ce58042993:kshisen/spkgbuild
 f:a4f3efbedd423e2804e1441f045cb15f:optiimage/spkgbuild
+f:d6c4f965058087609f7362e65560980a:smarthome/.pkgfiles
+f:57ec00ec1d278d0932a6d9296d573281:smarthome/spkgbuild
+f:bbd8f9179cacde69f910d9932921cb45:smarthome/.checksums
 f:a3de5d47dbc5a0cc7792a8eb4d7d67a9:calindori/spkgbuild
 f:71d83d7f9e71db8ca180b13f3333addd:krecorder/spkgbuild
 f:327c0d32fad4b7d66d9e6b0e29308061:kgeography/CHANGELOG
@@ -632,6 +645,9 @@ f:f05e71acac48f8ee0dfe0ebb333ff3f3:kirigami-gallery/CHANGELOG
 f:e002e275e78bff25c0926256b05c707c:kirigami-gallery/spkgbuild
 f:5b2a04c713c4185e41d6c4d52c21d020:klines/CHANGELOG
 f:5e0b1ac7c99272cce1731bb0520cd6cb:klines/spkgbuild
+f:d8ba61d4597fdbfc14fa59e744df3780:etrade-widget/.pkgfiles
+f:44867ba6eb1c36ae8eadd5a3dafe76cf:etrade-widget/spkgbuild
+f:4a25a692644cb548855abb53e292fb5d:etrade-widget/.checksums
 f:b21ad7a0d3a15588125a65457f0dc946:angelfish/spkgbuild
 f:20cb5935479b279a10eca3aa71c80f44:kde-dev-scripts/CHANGELOG
 f:10ccc990bfe756a164180b14f36c0668:kde-dev-scripts/spkgbuild
@@ -674,6 +690,9 @@ f:1d0220a66a363f6d50f3b015a2df434f:digikam/spkgbuild
 f:cecc947de7a6d26fbfc87993a3eb49a6:kdesdk-thumbnailers/.pkgfiles
 f:071531f7670cb46f13f1c1a7fd41a76e:kdesdk-thumbnailers/CHANGELOG
 f:ef2ab13e0be7cb58104a67970333fa4b:kdesdk-thumbnailers/spkgbuild
+f:9b0e31e65b1d26b2ca8b80d9bd2bcd7e:kde-calendar/.pkgfiles
+f:a3631aa893264bac91319bdaa5e18030:kde-calendar/spkgbuild
+f:6b73ce7bf79481caa3480b78c1774e55:kde-calendar/.checksums
 f:f81514d83a97e67eed15fa043d4f94d5:kdominate/spkgbuild
 f:789c151ed61ad1c7edc457f6fda6186d:akonadi/.pkgfiles
 f:724c0be169fd5ee365645b9732eca701:akonadi/CHANGELOG
@@ -709,6 +728,9 @@ f:7425f7c349030fc7bcc7434ee0021a2c:klevernotes/spkgbuild
 f:0b79fde0f0ae6f08d309e17280459749:kmime/.pkgfiles
 f:1be8e1220fbef9196d5314bffe9a0dbb:kmime/CHANGELOG
 f:d4990c0394bbbc970b7b9fd04e55b890:kmime/spkgbuild
+f:fbf5dbd2e61de33829cd6dc533d0e9f2:varpeggio/.pkgfiles
+f:6698383b72c77773b9a21bde1b507003:varpeggio/spkgbuild
+f:6d6dc2f84e7540815a95a8662a72b642:varpeggio/.checksums
 f:197b91499374c4c69be5ad88f2b2af2b:rocs/CHANGELOG
 f:4a26c66ed8a2a4b1061f80a0311c5a0a:rocs/spkgbuild
 f:1dd9d99b884feea715aab7dd926c292d:kamera/CHANGELOG
@@ -718,6 +740,9 @@ f:f9f9dd5e167a082a79f9f8a425e2daa3:kaccounts-providers/spkgbuild
 f:02054e6ddd9663faab6c72ce3e086c2f:kimap/.pkgfiles
 f:77193a92a4acd7b1ed718b62eed5fd89:kimap/CHANGELOG
 f:2bbe0a243e8fb1f3542ec0e9caa811d6:kimap/spkgbuild
+f:f28559883daf396af3eb7390ea07405c:voncloft-tv/.pkgfiles
+f:0ff83164230fbc014112aeba8c4728ab:voncloft-tv/spkgbuild
+f:6892cb3ea74dcf8de711acc234f2cdb6:voncloft-tv/.checksums
 f:0ce3c0f32b7cef951ed0644fccdef43a:ksirk/.pkgfiles
 f:4a2b9393051c9fc26dc809851f37804b:ksirk/CHANGELOG
 f:f9daabe06983a69db49dbea93d39af1c:ksirk/spkgbuild
@@ -789,6 +814,9 @@ f:fc94ca281d1208997d131200368b0c8e:artikulate/CHANGELOG
 f:e507c95eddbc71a98db13ab631fd15d8:artikulate/spkgbuild
 f:5502556aae279af7971964a2aeb90a57:kapptemplate/CHANGELOG
 f:6a6a10cc211aebe2e1cf6dbcd0dadccf:kapptemplate/spkgbuild
+f:2df8f3e268c628060a623a624ae5e81e:kde-monitor-default/.pkgfiles
+f:34f3960f6ec22aa9d547aa326491919b:kde-monitor-default/spkgbuild
+f:3a9df9577b45e4ac54ccd5677db93f71:kde-monitor-default/.checksums
 f:1dc4334a57ede730e966aff93580b155:messagelib/.pkgfiles
 f:64dc47e109e8920f0f8a3c20695ad36e:messagelib/CHANGELOG
 f:c6b9ac9513dc918b03756b20a99312c9:messagelib/spkgbuild

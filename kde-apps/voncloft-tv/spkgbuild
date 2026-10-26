@@ -1,0 +1,16 @@
+# description : Qt 6 television tuner for scanning and watching DVB/ATSC channels with a program guide and scheduled tuning
+# depends : coreutils ffmpeg kde-deps-installer qt6 v4l-utils w_scan2
+
+name=voncloft-tv
+version=0.2.0.git20260327
+release=1
+_commit=75d591dced2e225c31a897527b6672217b4aae91
+source="$name-$_commit.tar.gz::https://github.com/voncloft/qt6_tv_tuner/archive/$_commit.tar.gz"
+
+build() {
+    cd "qt6_tv_tuner-$_commit"
+    # Discard any build directory committed by upstream before configuring.
+    rm -rf build
+    plasma-package-installer
+    DESTDIR="$PKG" cmake --install build
+}

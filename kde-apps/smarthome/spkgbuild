@@ -1,0 +1,31 @@
+# description : Govee smart-light controller with brightness, colors, schedules, presence detection, and audio-reactive lighting
+# depends : inetutils kde-deps-installer pulseaudio qt6
+
+name=smarthome
+version=0.1.git20260314
+release=1
+_commit=12d028126b3deff57ee7090e0eb1332000761505
+source="$name-$_commit.tar.gz::https://github.com/voncloft/Smarthome/archive/$_commit.tar.gz"
+
+build() {
+    cd "Smarthome-$_commit"
+    # Discard any build directory committed by upstream before configuring.
+    rm -rf build
+    # This snapshot references resources.qrc but does not include it.
+    cat > resources.qrc <<'EOF'
+<RCC>
+    <qresource prefix="/">
+        <file>assets/lightbulb.svg</file>
+    </qresource>
+</RCC>
+EOF
+    plasma-package-installer
+    # Upstream has no install target and its launcher uses a developer home path.
+    install -Dm755 build/Lights "$PKG/usr/bin/Lights"
+    install -Dm644 assets/lightbulb.svg \
+        "$PKG/usr/share/icons/hicolor/scalable/apps/lights.svg"
+    sed -e 's|^Exec=.*|Exec=Lights|' -e 's|^Icon=.*|Icon=lights|' \
+        -e 's|^Comment=.*|Comment=Control Govee smart lights and lighting routines|' \
+        Lights.desktop > build/lights.desktop
+    install -Dm644 build/lights.desktop "$PKG/usr/share/applications/lights.desktop"
+}

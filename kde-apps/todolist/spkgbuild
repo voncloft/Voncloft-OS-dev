@@ -1,0 +1,28 @@
+# description : Qt 6 checklist application with editable tasks, themes, JSON files, and a Dolphin context-menu action
+# depends : kde-deps-installer qt6
+
+name=todolist
+version=0.1.0.git20260621
+release=1
+_commit=690599ea27158280995f4b4ef6e9293a33eeb9aa
+source="$name-$_commit.tar.gz::https://github.com/voncloft/Todolist/archive/$_commit.tar.gz"
+
+build() {
+    cd "Todolist-$_commit"
+    # Discard any build directory committed by upstream before configuring.
+    rm -rf build
+    plasma-package-installer
+    # Upstream has no system install target; stage its application and KDE entries.
+    install -Dm755 build/todolist "$PKG/usr/bin/todolist"
+    ln -s todolist "$PKG/usr/bin/todolist-launcher"
+    install -Dm644 assets/todolist-icon.svg \
+        "$PKG/usr/share/icons/hicolor/scalable/apps/com.von.TodoList.svg"
+    sed 's|@LAUNCHER@|/usr/bin/todolist|g' \
+        packaging/com.von.TodoList.desktop.in > build/com.von.TodoList.desktop
+    sed 's|@LAUNCHER@|/usr/bin/todolist|g' \
+        packaging/create-todo-list-servicemenu.desktop.in > build/create-todo-list.desktop
+    install -Dm644 build/com.von.TodoList.desktop \
+        "$PKG/usr/share/applications/com.von.TodoList.desktop"
+    install -Dm755 build/create-todo-list.desktop \
+        "$PKG/usr/share/kio/servicemenus/create-todo-list.desktop"
+}

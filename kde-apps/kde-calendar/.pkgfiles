@@ -1,0 +1,21 @@
+kde-calendar-0.1.0.git20260211-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/qml/
+drwxr-xr-x root/root    usr/lib64/qml/org/
+drwxr-xr-x root/root    usr/lib64/qml/org/nick/
+drwxr-xr-x root/root    usr/lib64/qml/org/nick/radicaleagenda/
+-rwxr-xr-x root/root    usr/lib64/qml/org/nick/radicaleagenda/libradicaleagenda.so
+-rw-r--r-- root/root    usr/lib64/qml/org/nick/radicaleagenda/qmldir
+-rw-r--r-- root/root    usr/lib64/qml/org/nick/radicaleagenda/radicaleagenda_plugin.json
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/plasma/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/contents/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/contents/config/
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/contents/config/config.qml
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/contents/config/main.xml
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/contents/ui/
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/contents/ui/main.qml
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.nick.radicaleagenda/metadata.json

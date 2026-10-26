@@ -1,0 +1,20 @@
+etrade-widget-0.1.0.git20260831-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/qml/
+drwxr-xr-x root/root    usr/lib64/qml/org/
+drwxr-xr-x root/root    usr/lib64/qml/org/von/
+drwxr-xr-x root/root    usr/lib64/qml/org/von/etrade/
+-rw-r--r-- root/root    usr/lib64/qml/org/von/etrade/etrade_plugin.json
+-rwxr-xr-x root/root    usr/lib64/qml/org/von/etrade/libetrade.so
+-rw-r--r-- root/root    usr/lib64/qml/org/von/etrade/qmldir
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/plasma/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/org.von.etrade/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/org.von.etrade/contents/
+drwxr-xr-x root/root    usr/share/plasma/plasmoids/org.von.etrade/contents/ui/
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.von.etrade/contents/ui/LineChart.qml
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.von.etrade/contents/ui/main.qml
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.von.etrade/contents/ui/PerformanceChart.qml
+-rw-r--r-- root/root    usr/share/plasma/plasmoids/org.von.etrade/metadata.json

@@ -1,0 +1,16 @@
+# description : Piano practice and notation application with MIDI input, guided lessons, recording, and sheet music import
+# depends : alsa-lib ffmpeg kde-deps-installer libarchive librsvg libsndfile opencv pkgconf poppler pulseaudio python qt6 zlib
+
+name=varpeggio
+version=0.2.46.git20261020
+release=1
+_commit=ceb779b748393831898f52131bddbae635380b19
+source="$name-$_commit.tar.gz::https://github.com/voncloft/VArpeggio/archive/$_commit.tar.gz"
+
+build() {
+    cd "VArpeggio-$_commit"
+    # Discard any build directory committed by upstream before configuring.
+    rm -rf build
+    plasma-package-installer
+    DESTDIR="$PKG" cmake --install build
+}
