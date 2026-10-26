@@ -3,7 +3,7 @@
 
 name=update-repo
 version=20261026
-release=2
+release=3
 source="update-repo changelog"
 
 build() {

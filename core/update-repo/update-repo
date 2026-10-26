@@ -7,6 +7,12 @@ if [ ! -f "$changelog_program" ];then
 	changelog_program=/sources/Voncloft-OS-dev/core/update-repo/changelog
 fi
 
+# Overrides are sourced into this shell. Keep their legacy egrep calls quiet
+# without changing the system egrep command or requiring per-override edits.
+egrep() {
+        command grep -E "$@"
+}
+
 print_progress() {
         echo -ne " $@\033[0K\r"
 }
@@ -108,7 +114,7 @@ cmd_torun()
                 		uversion=$(grep -Eio [0-9a-z.]+.tar.[bgx]z2? index.html \
 				| sed "s/.tar.*//g"	\
         	        	| sort -V -r \
-				| egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
+				| grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
                 		| uniq \
                 		| head -n1)
 			fi
@@ -154,7 +160,7 @@ cmd_torun()
 	                	fetch
 				uversion=$(grep -i "href" index.html \
 					| grep -Po '(?<=href=")[^"]*' \
-					| egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
+					| grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
 					| sort -V -r \
 					| head -n1)
 			fi
@@ -168,7 +174,7 @@ cmd_torun()
                                 fetch
                                 uversion=$(grep -i "href" index.html \
                                         | grep -Po '(?<=href=")[^"]*' \
-                                        | egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
+                                        | grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
                                         | sort -V -r \
                                         | head -n1)
                         fi
@@ -188,13 +194,13 @@ cmd_torun()
                 		run_manual_upd
                 	else
  		               	fetch
-                		uversion=$(egrep -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
+                                uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                 		| sort -V -r \
                         	| head -n1)
                         	url=$url$uversion/
                         	rm index.html
                         	fetch
-                        	uversion=$(egrep -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
+                                uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                         	| sort -V -r \
                         	| head -n1)
                         fi
@@ -206,7 +212,7 @@ cmd_torun()
 				run_manual_upd
 			else
 				fetch 
-				uversion=$(egrep -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
+				uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
 				| sort -V -r \
                         	| head -n1)
                         fi
@@ -218,7 +224,7 @@ cmd_torun()
                 		run_manual_upd
                 	else
                 		fetch
-                		uversion=$(egrep -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
+                                uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                 		| sort -V -r \
                 		| head -n1).0
                 	fi
@@ -230,7 +236,7 @@ cmd_torun()
 				run_manual_upd
 			else
                 		fetch
-                		uversion=$(egrep -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
+                                uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                 		| sort -V -r \
                 		| head -n1)
                 	fi
@@ -253,7 +259,7 @@ cmd_torun()
 				uversion=$(grep $name index.html \
 				| grep -i "href" \
 				| grep -Po '(?<=href=")[^"]*' \
-				| egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
+				| grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
 				| sort -V -r \
 				| uniq \
 				| head -n1)
@@ -266,7 +272,7 @@ cmd_torun()
 			then
 				run_manual_upd
 			else
-				echo -e "${FRED}ERROR:     Update script does not exist for $name trying manually${NC}"
+				echo -e "${FRED}No override for $name; checking the source listing${NC}"
 				fetch
 				if [ ! -f index.html ];then
 					retry_index
@@ -275,7 +281,7 @@ cmd_torun()
 				uversion=$(grep -Eio $name[_-][0-9a-z.]+.tar.[bgx]z2? index.html \
         				| sed "s/$name[-_]//;s/\.tar.*//" \
         				| grep -Evi '(alpha|beta|rc|pre|latest)' \
-        				| egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
+                                        | grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
         				| sort -V -r \
         				| uniq \
         				| head -n1)
@@ -284,7 +290,7 @@ cmd_torun()
 				#| grep -v : \
 				#| tr '[:upper:]' '[:lower:]' \
 				#| grep $name \
-				#| egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
+				#| grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
 				#| uniq \
 				#| sort -V -r \
 				#| head -n1)

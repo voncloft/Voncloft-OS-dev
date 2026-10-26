@@ -1061,10 +1061,10 @@ f:51c522e0e65cb42ea65f150f945bf743:gnutls/spkgbuild
 f:1456ecea4258ff3b424ce82fe806d0f0:jasper/.pkgfiles
 f:6601857e367b158a0b2f090ce5cfd716:jasper/spkgbuild
 f:8892370fd53fa5bc8c86d694703ab523:update-repo/.pkgfiles
-f:89eb4132da342f8f46da911c0ba4ea77:update-repo/update-repo
+f:dc9aac74745037fdf99f971746f6c808:update-repo/update-repo
 f:69373343806592fb0edc5f0c1086ecc0:update-repo/changelog
-f:d1596dea40e90a2e6ae3dfdfd21a334d:update-repo/spkgbuild
-f:47e65567e9ea161eb3093372559d6c79:update-repo/.checksums
+f:080f94d2a62692e5a2082cd123a4edc2:update-repo/spkgbuild
+f:bd0ee216fcae081fbb1e2de107804a1f:update-repo/.checksums
 f:6b9fec89392cad502d89f69f3d87147a:viewnior/CHANGELOG
 f:10bf533629a5d300157e3b8b31c5a24b:viewnior/spkgbuild
 f:3db606db50137ad150a0577af5d717de:enchant/.pkgfiles

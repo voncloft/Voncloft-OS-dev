@@ -1,16 +1,21 @@
-# description	: Full featured cross platform office suite (binary)
+# description : Full featured cross platform office suite (binary)
+# depends : libarchive
 
 name=libreoffice
 version=26.8.1
-release=1
+release=2
 source="http://download.documentfoundation.org/$name/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz"
 options="!checksum"
 
 build() {
-	for rpm in $SRC/LibreOffice_${version}*/RPMS/*; do
-		bsdtar -xf $rpm -p -o -C $PKG
+	for rpm in "$SRC"/LibreOffice_${version}*/RPMS/*.rpm; do
+		if [ ! -f "$rpm" ]; then
+			printf '%s\n' "No LibreOffice RPM files found under $SRC" >&2
+			return 1
+		fi
+		bsdtar -xf "$rpm" -p -o -C "$PKG"
 	done
-	rm $PKG/opt/libreoffice*/CREDITS* \
-	   $PKG/opt/libreoffice*/LICENSE* \
-	   $PKG/opt/libreoffice*/NOTICE
+	rm -f "$PKG"/opt/libreoffice*/CREDITS* \
+	      "$PKG"/opt/libreoffice*/LICENSE* \
+	      "$PKG"/opt/libreoffice*/NOTICE
 }
