@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma audio applet for controlling volume, playback devices, recording devices, and application audio
 # depends : extra-cmake-modules glib kcmutils kconfig kcoreaddons kdbusaddons kde-deps-installer kdeclarative kdoctools kglobalaccel ki18n kirigami-addons kitemmodels kpackage kstatusnotifieritem ksvg libcanberra libplasma pulseaudio pulseaudio-qt qt6
 
 name=plasma-pa

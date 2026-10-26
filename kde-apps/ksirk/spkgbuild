@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : World conquest strategy game in which players deploy armies and capture territories
 # depends : extra-cmake-modules kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio knewstuff kwallet kwidgetsaddons kxmlgui libkdegames qt6
 
 name=ksirk

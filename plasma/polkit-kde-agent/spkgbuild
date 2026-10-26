@@ -1,4 +1,4 @@
-# description : Compatibility package name; replaced upstream by polkit-kde-agent-1
+# description : Compatibility meta-package that installs Plasma authorization prompts through polkit-kde-agent-1
 # depends : polkit-kde-agent-1
 # note : Contains no application files. Use polkit-kde-agent-1 for the maintained source package.
 

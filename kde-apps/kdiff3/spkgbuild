@@ -1,4 +1,4 @@
-# description : KDiff3
+# description : File and folder comparison tool with automatic and interactive three-way merging
 # depends : boost extra-cmake-modules icu kconfig kcoreaddons kcrash kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui qt6
 
 name=kdiff3

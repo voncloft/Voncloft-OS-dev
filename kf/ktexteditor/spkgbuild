@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Embeddable text editor component with syntax highlighting, code navigation, and editing tools
 # depends : breeze-icons extra-cmake-modules karchive kauth kcolorscheme kconfig kde-deps-installer kguiaddons ki18n kio kjobwidgets kparts kxmlgui qt6 sonnet syntax-highlighting
 
 name=ktexteditor

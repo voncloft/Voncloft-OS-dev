@@ -1,4 +1,4 @@
-# description : Kid3
+# description : Audio tag editor for modifying metadata and artwork across many music file formats
 # depends : chromaprint extra-cmake-modules ffmpeg flac kconfig kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui libvorbis python qt6 taglib
 
 name=kid3

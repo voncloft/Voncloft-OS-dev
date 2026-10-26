@@ -1,4 +1,4 @@
-# description : RKWard
+# description : Graphical environment for statistical analysis with R, including data editing, scripts, and plots
 # depends : breeze-icons extra-cmake-modules gettext karchive kconfig kcoreaddons kcrash kde-deps-installer kdoctools kdsingleapplication ki18n knotifications kparts ktexteditor kwidgetsaddons kwindowsystem kxmlgui qt6 r
 
 name=rkward

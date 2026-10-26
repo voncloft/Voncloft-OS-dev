@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graphical software center for browsing, installing, and updating applications through supported backends
 # depends : appstream-qt attica extra-cmake-modules karchive kauth kcmutils kcodecs kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kidletime kio kirigami kirigami-addons kitemmodels knewstuff knotifications kservice kstatusnotifieritem kuserfeedback kwidgetsaddons kwindowsystem kxmlgui packagekit-qt pkgconf purpose qcoro qt6
 
 name=discover

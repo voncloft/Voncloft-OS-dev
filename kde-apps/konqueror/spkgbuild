@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Web browser and file manager with support for embedded document viewers
 # depends : extra-cmake-modules karchive kcmutils kcodecs kcrash kdbusaddons kde-deps-installer kdesu kdoctools kguiaddons ki18n kiconthemes kio kparts ktexteditor ktextwidgets kwindowsystem plasma-activities qt6 sonnet
 
 name=konqueror

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for defining application menus, toolbars, and actions through XML descriptions
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kde-deps-installer kglobalaccel kguiaddons ki18n kiconthemes kitemviews ktextwidgets kwidgetsaddons qt6
 
 name=kxmlgui

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Match-three puzzle game in which players swap colored diamonds to clear groups
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes knotifications knotifyconfig kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kdiamond

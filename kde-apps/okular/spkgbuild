@@ -1,5 +1,5 @@
 # depends : breeze-icons extra-cmake-modules karchive kbookmarks kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdegraphics-mobipocket ki18n kiconthemes kio kparts ktextwidgets kwidgetsaddons kwindowsystem kxmlgui libkexiv2 phonon poppler purpose qt6 threadweaver zlib
-# description : Okular is a document viewer for KDE
+# description : Document viewer for PDF, ebooks, comics, and other formats with annotations and printing
 
 name=okular
 version=26.08.2

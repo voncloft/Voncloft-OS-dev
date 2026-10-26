@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Utility for importing email messages from mbox archives into Akonadi
 # depends : akonadi extra-cmake-modules kconfig kcrash kde-deps-installer ki18n kiconthemes kidentitymanagement kservice mailcommon mailimporter qt6
 
 name=mbox-importer

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Children's picture-building game for decorating characters and scenes with movable objects
 # depends : extra-cmake-modules kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui libkdegames qt6
 
 name=ktuberling

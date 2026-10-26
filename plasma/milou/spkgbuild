@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma search interface for presenting results from KRunner search plugins
 # depends : extra-cmake-modules kconfig kde-deps-installer ki18n krunner ksvg libplasma qt6
 
 name=milou

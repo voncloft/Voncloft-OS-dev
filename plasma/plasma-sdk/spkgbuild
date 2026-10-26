@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Developer tools for creating, testing, and inspecting Plasma widgets and themes
 # depends : extra-cmake-modules karchive kauth kcmutils kcodecs kcompletion kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kio kitemmodels kjobwidgets kpackage kparts ksvg ktexteditor ktextwidgets kwidgetsaddons kwindowsystem kxmlgui libplasma plasma5support qt6 solid sonnet syntax-highlighting
 
 name=plasma-sdk

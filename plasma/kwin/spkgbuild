@@ -1,5 +1,5 @@
 # depends : breeze-icons extra-cmake-modules hwdata kauth kcmutils kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdeclarative kdecoration kdoctools kglobalaccel kglobalacceld kguiaddons ki18n kidletime knewstuff knighttime knotifications kpackage kpipewire krunner kscreenlocker kservice ksvg kwayland kwidgetsaddons kwindowsystem kxmlgui lcms2 libcanberra libcap libdisplay-info libdrm libei libepoxy libevdev libinput libqaccessibilityclient libx11 libxcb libxcvt libxext libxfixes libxi libxkbcommon libxrender libxtst mesa milou pipewire plasma-activities plasma-wayland-protocols qt6 udev vulkan-headers vulkan-loader wayland wayland-protocols xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm xwayland
-# description : Core components for the kde desktop
+# description : Plasma Wayland compositor that manages windows, displays, input, and desktop effects
 
 name=kwin
 version=6.8.1

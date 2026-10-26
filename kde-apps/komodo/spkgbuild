@@ -1,4 +1,4 @@
-# description : KomoDo
+# description : Task manager that stores and organizes to-do lists in the plain-text todo.txt format
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kirigami kirigami-addons kitemmodels qqc2-desktop-style qt6
 
 name=komodo

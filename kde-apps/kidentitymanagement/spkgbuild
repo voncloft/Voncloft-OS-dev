@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for managing user identities and sender profiles in KDE email applications
 # depends : extra-cmake-modules kcodecs kconfig kcoreaddons kde-deps-installer ki18n kio kirigami-addons kpimtextedit ktextaddons kxmlgui qt6
 
 name=kidentitymanagement

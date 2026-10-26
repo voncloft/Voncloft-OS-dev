@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for requesting authorization and running privileged helper actions through PolicyKit
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer kwindowsystem polkit-qt qt6
 
 name=kauth

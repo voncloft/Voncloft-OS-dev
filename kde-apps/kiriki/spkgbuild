@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Yahtzee-style dice game in which players combine rolls to fill scoring categories
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kiriki

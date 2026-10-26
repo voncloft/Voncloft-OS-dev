@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Calendar and task manager for scheduling appointments, reminders, and to-do lists
 # depends : akonadi akonadi-calendar akonadi-contacts calendarsupport eventviews extra-cmake-modules incidenceeditor kcalendarcore kcalutils kcmutils kconfig kcontacts kcoreaddons kcrash kde-deps-installer kdiagram kdoctools kholidays ki18n kiconthemes kitemviews kjobwidgets kldap kmailtransport kmime kontactinterface kparts ktextaddons kuserfeedback kwidgetsaddons kwindowsystem kxmlgui libkdepim pimcommon plasma-activities qt6
 
 name=korganizer

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graphical difference viewer for comparing text files and applying patches
 # depends : extra-cmake-modules kcodecs kconfig kcoreaddons kde-deps-installer kdoctools ki18n kiconthemes kjobwidgets kparts ktexteditor kwidgetsaddons libkomparediff2 qt6
 
 name=kompare

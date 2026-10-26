@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Falling-block puzzle game in which players arrange pieces to clear complete rows
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kblocks

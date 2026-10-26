@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Component framework for embedding document viewers and editors inside other applications
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kio kjobwidgets knotifications kservice kwidgetsaddons kxmlgui qt6
 
 name=kparts

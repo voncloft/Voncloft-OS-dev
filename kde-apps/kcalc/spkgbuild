@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Scientific calculator with trigonometric, statistical, and numeric base conversion functions
 # depends : extra-cmake-modules kcolorscheme kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools kguiaddons ki18n kiconthemes knotifications kxmlgui qt6
 
 name=kcalc

@@ -1,4 +1,4 @@
-# description : Drawy
+# description : Infinite whiteboard for drawing diagrams, handwriting notes, and arranging text, images, and shapes
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui qt6 shared-mime-info syntax-highlighting zstd
 
 name=drawy

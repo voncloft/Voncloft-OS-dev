@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Dolphin extensions for version control integration and additional file management actions
 # depends : dolphin extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kio kservice ktexteditor ktextwidgets kxmlgui qt6 solid
 
 name=dolphin-plugins

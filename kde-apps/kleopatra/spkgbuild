@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Certificate and encryption key manager for signing, verifying, encrypting, and decrypting data
 # depends : extra-cmake-modules gpgmepp kcmutils kcodecs kcolorscheme kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools kdsingleapplication ki18n kiconthemes kidentitymanagement kio kitemmodels kmailtransport kmime kwidgetsaddons kwindowsystem kxmlgui libassuan libgpg-error libkleo mimetreeparser qgpgme-qt qt6
 
 name=kleopatra

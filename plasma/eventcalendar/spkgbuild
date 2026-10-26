@@ -1,5 +1,5 @@
 # status : Latest upstream tag is v76; Plasma 5 widget, excluded from Plasma 6 group.
-# description : extended calendar plasmoid much better than default
+# description : Plasma clock and calendar widget with agenda, weather, and timer features
 
 name=eventcalendar
 version=76

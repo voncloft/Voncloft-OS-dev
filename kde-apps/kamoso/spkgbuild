@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Webcam application for taking photographs and recording videos
 # depends : extra-cmake-modules kconfig kde-deps-installer kdoctools ki18n kio knotifications pkgconf purpose qt6
 
 name=kamoso

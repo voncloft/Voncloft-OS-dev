@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Indexing and search components for email, contacts, and other Akonadi data
 # depends : akonadi akonadi-mime corrosion extra-cmake-modules kcalendarcore kcmutils kconfig kcontacts kcrash kdbusaddons kde-deps-installer ki18n kio kmime krunner ktextaddons qt6 rust xapian
 
 name=akonadi-search

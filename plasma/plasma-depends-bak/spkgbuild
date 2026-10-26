@@ -1,4 +1,4 @@
-# description : Compatibility package name; replaced upstream by plasma-depends
+# description : Compatibility meta-package that pulls in the Plasma base dependency group through plasma-depends
 # depends : plasma-depends
 # note : Contains no application files. Use plasma-depends for the maintained source package.
 

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma tools for creating, unlocking, and managing encrypted folders
 # depends : extra-cmake-modules kauth kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer ki18n kio kitemmodels kjobwidgets kpackage kservice kwidgetsaddons kwindowsystem libksysguard libplasma networkmanager-qt plasma-activities qt6 solid
 
 name=plasma-vault

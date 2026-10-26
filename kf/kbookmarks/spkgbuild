@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for storing, organizing, and displaying application bookmarks
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kwidgetsaddons qt6
 
 name=kbookmarks

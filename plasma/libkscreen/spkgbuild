@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for querying and configuring connected displays, output modes, and screen layouts
 # depends : extra-cmake-modules kde-deps-installer plasma-wayland-protocols qt6 wayland
 
 name=libkscreen

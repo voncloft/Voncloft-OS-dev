@@ -1,4 +1,4 @@
-# description : Compatibility package name; replaced upstream by merkuro
+# description : Compatibility meta-package that installs the Merkuro calendar and personal organizer
 # depends : merkuro
 # note : Contains no application files. Use merkuro for the maintained source package.
 

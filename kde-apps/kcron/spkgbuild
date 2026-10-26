@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graphical editor for scheduling commands and recurring jobs through cron
 # depends : extra-cmake-modules kauth kcmutils kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kirigami-addons qt6
 
 name=kcron

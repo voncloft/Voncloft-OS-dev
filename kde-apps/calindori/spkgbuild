@@ -1,4 +1,4 @@
-# description : calindori - KDE gear component
+# description : Calendar application for managing events and tasks on mobile and desktop devices
 # depends : extra-cmake-modules kcalendarcore kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kirigami knotifications kpeople qt6
 
 name=calindori

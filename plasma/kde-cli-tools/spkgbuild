@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Command-line tools for launching applications, opening URLs, and managing KDE desktop integration
 # depends : extra-cmake-modules kcmutils kcompletion kconfig kcoreaddons kde-deps-installer kdesu kdoctools ki18n kiconthemes kio kparts kservice kwidgetsaddons kwindowsystem qt6
 
 name=kde-cli-tools

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Calculator with basic arithmetic and scientific functions for desktop and mobile devices
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kirigami kirigami-addons kunitconversion libqalculate pkgconf qqc2-desktop-style qt6
 
 name=kalk

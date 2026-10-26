@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for storing contact details and reading and writing vCard address books
 # depends : extra-cmake-modules kcodecs kconfig kde-deps-installer ki18n qt6
 
 name=kcontacts

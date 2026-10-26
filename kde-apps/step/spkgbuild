@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Interactive physics simulator for constructing experiments and observing forces and motion
 # depends : eigen extra-cmake-modules kconfig kcrash kde-deps-installer kdoctools ki18n kiconthemes kio knewstuff kplotting ktextwidgets kxmlgui qt6 shared-mime-info
 
 name=step

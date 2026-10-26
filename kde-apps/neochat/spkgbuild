@@ -1,4 +1,4 @@
-# description : neochat - KDE gear component
+# description : Matrix chat client for direct messages, group rooms, and media sharing
 # depends : cmark extra-cmake-modules icu kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kquickcharts kquickimageeditor kunifiedpush kwindowsystem libquotient prison purpose qcoro qqc2-desktop-style qt6 qtkeychain sonnet syntax-highlighting
 
 name=neochat

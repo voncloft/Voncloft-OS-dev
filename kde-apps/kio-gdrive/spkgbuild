@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KIO worker for browsing and managing Google Drive files from KDE applications
 # depends : extra-cmake-modules kaccounts-integration kde-deps-installer kdoctools ki18n kio libkgapi purpose qt6 qtkeychain
 
 name=kio-gdrive

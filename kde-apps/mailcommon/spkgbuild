@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Shared email management widgets and utilities for KDE mail applications
 # depends : akonadi akonadi-contacts akonadi-mime extra-cmake-modules gpgmepp karchive kcodecs kcolorscheme kcompletion kconfig kdbusaddons kde-deps-installer kguiaddons ki18n kiconthemes kidentitymanagement kio kitemmodels kitemviews kmailtransport kmime ktextaddons kwidgetsaddons kxmlgui libkdepim mailimporter messagelib pimcommon plasma-activities qgpgme-qt qt6 syntax-highlighting
 
 name=mailcommon

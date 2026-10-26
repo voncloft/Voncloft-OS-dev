@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Two-player board game in which players try to connect four counters in a row
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kfourinline

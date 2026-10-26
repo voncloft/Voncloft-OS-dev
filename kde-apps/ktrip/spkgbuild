@@ -1,4 +1,4 @@
-# description : ktrip - KDE gear component
+# description : Public transport journey planner for finding routes and departure information
 # depends : extra-cmake-modules kconfig kcontacts kcoreaddons kcrash kde-deps-installer ki18n kirigami kirigami-addons kpublictransport qqc2-desktop-style qt6
 
 name=ktrip

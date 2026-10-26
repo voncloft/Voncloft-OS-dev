@@ -1,4 +1,4 @@
-# description : massif-visualizer - KDE gear component
+# description : Graphical viewer for inspecting heap memory profiles produced by Valgrind Massif
 # depends : extra-cmake-modules karchive kconfig kcoreaddons kde-deps-installer kdiagram kgraphviewer ki18n kio kparts qt6
 
 name=massif-visualizer

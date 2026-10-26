@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : On-screen ruler for measuring pixel distances and checking alignment
 # depends : extra-cmake-modules kcoreaddons kcrash kde-deps-installer kdoctools ki18n knotifications kstatusnotifieritem kwindowsystem kxmlgui qt6
 
 name=kruler

@@ -1,4 +1,4 @@
-# description : Kodaskanna
+# description : Barcode scanning application for reading one- and two-dimensional codes from images and other inputs
 # depends : extra-cmake-modules kconfigwidgets kcoreaddons kcrash kde-deps-installer ki18n kio kwidgetsaddons kxmlgui purpose qt6 zxing-cpp
 
 name=kodaskanna

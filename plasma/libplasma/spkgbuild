@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Libraries and QML components for building Plasma desktop shells, panels, and widgets
 # depends : extra-cmake-modules karchive kcolorscheme kconfig kcoreaddons kdbusaddons kde-deps-installer kglobalaccel kguiaddons ki18n kiconthemes kio kirigami knotifications kpackage kparts ksvg kwidgetsaddons kwindowsystem plasma-activities plasma-wayland-protocols qt6 wayland wayland-protocols
 
 name=libplasma

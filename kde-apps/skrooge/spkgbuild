@@ -1,4 +1,4 @@
-# description : Skrooge
+# description : Personal finance manager for tracking transactions, categorizing spending, and creating financial reports
 # depends : extra-cmake-modules karchive kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kio kitemviews knewstuff knotifications knotifyconfig kparts ktexttemplate kwallet kwidgetsaddons kxmlgui qt6 sqlcipher
 
 name=skrooge

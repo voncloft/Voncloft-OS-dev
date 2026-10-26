@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : BitTorrent client for downloading and sharing files with queue, bandwidth, and torrent management
 # depends : boost extra-cmake-modules karchive kcmutils kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools kglobalaccel ki18n kiconthemes kio kitemviews knotifications knotifyconfig kparts kplotting kstatusnotifieritem ktextwidgets kwidgetsaddons kwindowsystem kxmlgui libktorrent qt6 syndication
 
 name=ktorrent

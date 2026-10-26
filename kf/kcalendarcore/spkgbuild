@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for calendars, events, tasks, and journals using the iCalendar format
 # depends : extra-cmake-modules kde-deps-installer libical qt6
 
 name=kcalendarcore

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Task management application for organizing to-do lists, projects, and action items
 # depends : akonadi akonadi-calendar boost extra-cmake-modules kcalendarcore kcoreaddons kcrash kde-deps-installer ki18n kontactinterface kparts krunner kwindowsystem qt6
 
 name=zanshin

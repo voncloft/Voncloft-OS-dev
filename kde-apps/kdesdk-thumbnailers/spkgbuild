@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Thumbnail generators for software development files such as gettext translation catalogs
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer kio qt6
 
 name=kdesdk-thumbnailers

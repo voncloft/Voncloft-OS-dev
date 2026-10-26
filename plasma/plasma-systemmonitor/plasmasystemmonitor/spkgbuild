@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graphical system monitor for viewing running processes, hardware sensors, and resource usage
 
 name=plasma-systemmonitor
 version=6.3.4

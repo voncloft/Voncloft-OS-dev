@@ -1,4 +1,4 @@
-# description : kclock - KDE gear component
+# description : Clock application with alarms, timers, a stopwatch, and world clocks
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kio kirigami kirigami-addons kjobwidgets knotifications kstatusnotifieritem ksvg libplasma qt6 wayland-protocols
 
 name=kclock

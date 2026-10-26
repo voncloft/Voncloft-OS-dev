@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Snake racing game in which players avoid walls and the trails left by moving snakes
 # depends : extra-cmake-modules kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=ksnakeduel

@@ -1,5 +1,5 @@
 # depends : breeze-icons extra-cmake-modules ffmpeg imath karchive kbookmarks kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kddockwidgets kde-deps-installer kdoctools kfilemetadata kguiaddons ki18n kiconthemes kio kitemviews kjobwidgets knewstuff knotifications knotifyconfig kplotting kservice ktextwidgets kwidgetsaddons kxmlgui mlt opentimelineio purpose qt6 solid
-# description : Core components for the kde desktop
+# description : Video editor with multitrack timelines, effects, transitions, titles, and audio editing
 
 name=kdenlive
 version=26.08.2

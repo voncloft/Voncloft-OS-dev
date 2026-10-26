@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Mahjong solitaire game in which players remove matching pairs of tiles
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n knewstuff kxmlgui libkdegames libkmahjongg qt6
 
 name=kmahjongg

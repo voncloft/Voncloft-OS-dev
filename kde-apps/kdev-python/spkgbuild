@@ -1,4 +1,4 @@
-# description : kdev-python - KDE gear component
+# description : KDevelop plugin providing Python code completion, navigation, and language analysis
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kdevelop ki18n kparts kservice ktexteditor kwidgetsaddons kxmlgui python qt6 threadweaver
 
 name=kdev-python

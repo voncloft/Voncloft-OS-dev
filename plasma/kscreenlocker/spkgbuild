@@ -1,5 +1,5 @@
 # depends : elogind extra-cmake-modules kauth kcmutils kcodecs kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kglobalaccel ki18n kidletime kio knotifications kservice ksvg kwidgetsaddons kwindowsystem kxmlgui layer-shell-qt libkscreen libplasma linux-pam qt6 solid
-# description : Core components for the kde desktop
+# description : Plasma screen locking and unlock interface
 
 name=kscreenlocker
 version=6.8.1

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library and workers for accessing, copying, and managing local and remote files
 # depends : extra-cmake-modules karchive kbookmarks kcolorscheme kcompletion kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kitemviews kjobwidgets knotifications kservice kwallet kwidgetsaddons kwindowsystem qt6 solid util-linux
 
 name=kio

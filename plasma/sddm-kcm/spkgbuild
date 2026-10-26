@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : System Settings module for configuring the SDDM login screen and its theme
 # depends : extra-cmake-modules karchive kauth kcmutils kcoreaddons kde-deps-installer ki18n kio knewstuff kservice qt6
 
 name=sddm-kcm

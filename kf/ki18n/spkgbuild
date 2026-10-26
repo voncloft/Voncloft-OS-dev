@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library and tools for translating application text with gettext message catalogs
 # depends : extra-cmake-modules gettext kde-deps-installer python qt6
 
 name=ki18n

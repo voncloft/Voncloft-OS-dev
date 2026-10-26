@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Settings widgets for configuring application notification events and actions
 # depends : extra-cmake-modules kcompletion kconfig kde-deps-installer ki18n kio knotifications kxmlgui qt6
 
 name=knotifyconfig

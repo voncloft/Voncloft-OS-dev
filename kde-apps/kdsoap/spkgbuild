@@ -1,4 +1,4 @@
-# description : kdsoap - KDE dependency
+# description : Qt library and code generator for building SOAP web service clients and servers
 # depends : kde-deps-installer qt6
 
 name=kdsoap

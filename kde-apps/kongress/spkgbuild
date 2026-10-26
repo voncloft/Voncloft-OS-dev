@@ -1,4 +1,4 @@
-# description : kongress - KDE gear component
+# description : Conference companion for browsing event schedules, session details, and favorite talks
 # depends : extra-cmake-modules kcalendarcore kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kirigami kirigami-addons knotifications kosmindoormap qt6
 
 name=kongress

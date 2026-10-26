@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Password wallet service and libraries for storing application credentials securely
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes knotifications kwidgetsaddons kwindowsystem qca qt6
 
 name=kwallet

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : System information viewer for hardware, graphics, memory, networks, and operating system details
 # depends : extra-cmake-modules kauth kcmutils kcodecs kcompletion kconfig kcoreaddons kde-deps-installer kdoctools ki18n kio kjobwidgets kservice kwindowsystem libdrm mesa plasma-systemmonitor qt6 solid systemsettings udev
 
 name=kinfocenter

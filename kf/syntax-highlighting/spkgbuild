@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Syntax definitions and highlighting engine for source code and other structured text
 # depends : extra-cmake-modules kde-deps-installer perl qt6
 
 name=syntax-highlighting

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Spell checking framework with dictionaries, language detection, and text editor integration
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=sonnet

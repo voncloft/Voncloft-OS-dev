@@ -1,4 +1,4 @@
-# description : union - KDE plasma component
+# description : CSS-based theme engine for styling Qt Quick and Qt Widgets applications
 # depends : cxx-rust-cssparser extra-cmake-modules kcolorscheme kconfig kcoreaddons kde-deps-installer kguiaddons kiconthemes kirigami qt6 zlib
 
 name=union

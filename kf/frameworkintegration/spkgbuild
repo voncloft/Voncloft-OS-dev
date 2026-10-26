@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plugins that integrate Qt applications with KDE dialogs, settings, and desktop behavior
 # depends : appstream-qt extra-cmake-modules kcolorscheme kconfig kconfigwidgets kde-deps-installer kguiaddons ki18n kiconthemes kio kitemviews knewstuff knotifications kpackage kwidgetsaddons oxygen-icons qt6
 
 name=frameworkintegration

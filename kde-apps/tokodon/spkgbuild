@@ -1,4 +1,4 @@
-# description : tokodon - KDE gear component
+# description : Mastodon client for reading timelines, publishing posts, and interacting with the Fediverse
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdeclarative ki18n kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kunifiedpush kwindowsystem openssl prison purpose qcoro qqc2-desktop-style qt6 qtkeychain
 
 name=tokodon

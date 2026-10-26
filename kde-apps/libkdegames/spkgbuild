@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Shared libraries, widgets, and data used by KDE games
 # depends : extra-cmake-modules karchive kcolorscheme kcompletion kconfig kconfigwidgets kde-deps-installer kdnssd kguiaddons ki18n kiconthemes knewstuff kxmlgui libsndfile openal qt6
 
 name=libkdegames

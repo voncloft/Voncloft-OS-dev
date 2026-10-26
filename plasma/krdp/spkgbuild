@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Remote desktop server and libraries for sharing a Plasma session over RDP
 # depends : extra-cmake-modules freerdp kcmutils kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kguiaddons ki18n kirigami-addons kpipewire kstatusnotifieritem libei libxkbcommon linux-pam pkgconf plasma-wayland-protocols qt6 qtkeychain
 
 name=krdp

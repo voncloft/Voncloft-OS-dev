@@ -1,4 +1,4 @@
-# description : Kst
+# description : Data plotting and analysis application for large datasets and live data streams
 # depends : cfitsio extra-cmake-modules gsl hdf5 kde-deps-installer libtiff netcdf qt6
 
 name=kst

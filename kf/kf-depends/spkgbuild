@@ -1,5 +1,5 @@
 # depends : qt6
-# description : KDE Frameworks 6 environment configuration
+# description : Qt 6 profile settings and sudo environment rules for the KDE Frameworks environment
 name=kf-depends
 version=6.31.0
 release=1

@@ -1,4 +1,4 @@
-# description : Amarok
+# description : Music player for organizing a collection, creating playlists, and listening to local or online audio
 # depends : curl extra-cmake-modules fftw gst-plugins-base gstreamer karchive kcmutils kcodecs kcolorscheme kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools kglobalaccel kguiaddons ki18n kiconthemes kio kirigami knotifications kpackage kstatusnotifieritem ktexteditor ktextwidgets kwidgetsaddons kwindowsystem libgcrypt libxml2 mariadb openssl qt6 solid taglib threadweaver zlib
 
 name=amarok

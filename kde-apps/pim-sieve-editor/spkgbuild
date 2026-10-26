@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Editor for creating, testing, and managing server-side Sieve email filtering scripts
 # depends : extra-cmake-modules kbookmarks kcoreaddons kcrash kdbusaddons kde-deps-installer kdsingleapplication ki18n kiconthemes kimap kio kmailtransport ktextaddons kuserfeedback kwindowsystem kxmlgui libksieve pimcommon qt6 qtkeychain
 
 name=pim-sieve-editor

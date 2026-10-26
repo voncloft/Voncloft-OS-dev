@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Platform puzzle game in which players collect gold, evade enemies, and escape through ladders
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kgoldrunner

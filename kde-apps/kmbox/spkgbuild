@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for reading and writing email messages stored in mbox mailbox files
 # depends : extra-cmake-modules kde-deps-installer kmime qt6
 
 name=kmbox

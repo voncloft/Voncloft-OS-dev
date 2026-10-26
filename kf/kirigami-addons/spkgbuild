@@ -1,4 +1,4 @@
-# description : addons for kirigami framework
+# description : Additional Kirigami components for settings, forms, navigation, and common application interfaces
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kde-deps-installer kglobalaccel kguiaddons ki18n kiconthemes kirigami qt6
 
 name=kirigami-addons

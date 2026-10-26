@@ -1,5 +1,5 @@
 # depends : dbus extra-cmake-modules kcmutils kcolorscheme kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kguiaddons ki18n kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kpackage kpeople kservice kstatusnotifieritem kwidgetsaddons kwindowsystem modemmanager-qt pkgconf plasma-wayland-protocols pulseaudio-qt qqc2-desktop-style qt6 solid wayland wayland-protocols
-# description : Core components for the kde desktop
+# description : Desktop and phone integration for sharing files, notifications, clipboard contents, and remote controls
 
 name=kdeconnect-kde
 version=26.08.2

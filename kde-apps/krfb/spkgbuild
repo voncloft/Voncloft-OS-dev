@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Desktop sharing server that allows remote users to view and control a session through VNC
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools ki18n knotifications kpipewire kstatusnotifieritem kwallet kwayland kwidgetsaddons kwindowsystem kxmlgui libvncserver libx11 libxcb libxext libxfixes libxi libxrender libxtst plasma-wayland-protocols qt6 wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=krfb

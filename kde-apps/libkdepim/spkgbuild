@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Shared utility libraries and widgets for KDE personal information applications
 # depends : extra-cmake-modules kcompletion kde-deps-installer ki18n kwidgetsaddons qt6
 
 name=libkdepim

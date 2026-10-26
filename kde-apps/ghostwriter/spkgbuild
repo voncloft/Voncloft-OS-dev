@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Markdown text editor with live preview and document export
 # depends : extra-cmake-modules kconfigwidgets kcoreaddons kde-deps-installer kxmlgui qt6 sonnet
 
 name=ghostwriter

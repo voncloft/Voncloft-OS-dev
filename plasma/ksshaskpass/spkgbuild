@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graphical password and passphrase prompt for SSH clients and ssh-add
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kdoctools ki18n kwidgetsaddons qt6 qtkeychain
 
 name=ksshaskpass

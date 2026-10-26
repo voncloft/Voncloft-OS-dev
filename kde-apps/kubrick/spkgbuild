@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Three-dimensional puzzle game based on Rubik's cubes and related twisty puzzles
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kwidgetsaddons kxmlgui libkdegames mesa qt6
 
 name=kubrick

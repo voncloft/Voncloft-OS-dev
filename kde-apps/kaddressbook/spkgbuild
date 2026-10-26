@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Address book for managing contacts, contact groups, and synchronized address books
 # depends : akonadi akonadi-contacts akonadi-search extra-cmake-modules grantleetheme kcmutils kcolorscheme kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kldap kontactinterface ktextaddons kuserfeedback libkdepim pimcommon plasma-activities qt6
 
 name=kaddressbook

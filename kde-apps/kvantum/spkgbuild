@@ -1,4 +1,4 @@
-# description : kvantum - KDE dependency
+# description : SVG-based Qt widget style engine with a theme manager for customizing application appearance
 # depends : kde-deps-installer kwindowsystem qt6
 
 name=kvantum

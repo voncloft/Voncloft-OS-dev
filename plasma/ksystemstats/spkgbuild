@@ -1,4 +1,4 @@
-# description : A plugin based system monitoring daemon
+# description : Background service that collects system sensor data for monitoring applications and widgets
 # depends : extra-cmake-modules kcoreaddons kcrash kde-deps-installer kio libksysguard libnl lm-sensors networkmanager-qt qt6 solid
 
 name=ksystemstats

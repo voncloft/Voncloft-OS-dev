@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : PAM module that unlocks the KDE password wallet when the user logs in
 # depends : extra-cmake-modules kde-deps-installer kwallet libgcrypt linux-pam pkgconf qt6
 
 name=kwallet-pam

@@ -1,6 +1,6 @@
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Library for storing and retrieving notes through Akonadi
 
 name=akonadi-notes
 version=24.08.3

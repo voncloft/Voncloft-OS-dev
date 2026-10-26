@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Additional Qt widgets for dialogs, selectors, buttons, and other common interface elements
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kwidgetsaddons

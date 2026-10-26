@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library that handles application crashes and starts the KDE crash reporting tool
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer libx11 libxext libxfixes libxi libxrender libxtst qt6
 
 name=kcrash

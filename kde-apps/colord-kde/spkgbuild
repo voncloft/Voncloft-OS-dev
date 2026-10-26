@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KDE interface for assigning and managing device color profiles through colord
 # depends : extra-cmake-modules kcmutils kcoreaddons kdbusaddons kde-deps-installer ki18n kitemmodels kwidgetsaddons kwindowsystem lcms2 libxcb qt6 xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=colord-kde

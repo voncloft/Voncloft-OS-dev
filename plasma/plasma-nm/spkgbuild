@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma applet and settings for managing wired, wireless, mobile broadband, and VPN connections through NetworkManager
 # depends : extra-cmake-modules kauth kcmutils kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdeclarative ki18n kio kirigami-addons kjobwidgets knotifications kpackage kquickcharts kservice kwidgetsaddons kwindowsystem libplasma modemmanager-qt networkmanager networkmanager-qt openssl pkgconf prison qcoro qt6 qtkeychain solid
 
 name=plasma-nm

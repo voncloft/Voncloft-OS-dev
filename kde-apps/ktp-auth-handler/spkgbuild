@@ -1,7 +1,7 @@
 # note : Requires a separate Qt 5/KF5 stack; the KF6 upgrade does not supply it.
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Authentication handler for signing KDE Telepathy accounts into messaging services
 
 name=ktp-auth-handler
 version=23.04.3

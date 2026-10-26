@@ -1,4 +1,4 @@
-# description : The plasma-activities-6
+# description : Library for applications to interact with Plasma desktop activities and associated resources
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kwindowsystem qt6
 
 name=plasma-activities

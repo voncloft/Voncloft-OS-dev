@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library and editing components for managing Sieve email filtering scripts
 # depends : cyrus-sasl extra-cmake-modules karchive kcolorscheme kcoreaddons kde-deps-installer ki18n kiconthemes kidentitymanagement kimap kio kmailtransport kmime knewstuff ktextaddons libkdepim pimcommon qt6 sonnet syntax-highlighting
 
 name=libksieve

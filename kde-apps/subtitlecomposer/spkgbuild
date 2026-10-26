@@ -1,4 +1,4 @@
-# description : Subtitle Composer
+# description : Subtitle editor for creating, translating, timing, and synchronizing video subtitles
 # depends : extra-cmake-modules ffmpeg icu kcodecs kconfig kconfigwidgets kcoreaddons kde-deps-installer ki18n kio ktextwidgets kwidgetsaddons kxmlgui openal openssl qt6 sonnet
 
 name=subtitlecomposer

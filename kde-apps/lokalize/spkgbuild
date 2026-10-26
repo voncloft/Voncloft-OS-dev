@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Computer-assisted translation tool for editing software message catalogs and managing translation projects
 # depends : extra-cmake-modules hunspell kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kddockwidgets kde-deps-installer kdoctools ki18n kiconthemes kio knotifications ktextwidgets kxmlgui qt6 sonnet
 
 name=lokalize

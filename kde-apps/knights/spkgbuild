@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Chess interface with local play, chess engine opponents, and online server support
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio kplotting ksvg ktextwidgets kwallet kwidgetsaddons kxmlgui libkdegames libplasma qt6
 
 name=knights

@@ -1,4 +1,4 @@
-# description : LabPlot
+# description : Scientific plotting and data analysis application with spreadsheets, curve fitting, and visualization tools
 # depends : bison cantor cfitsio eigen extra-cmake-modules fftw gsl hdf5 karchive kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kiconthemes kio knewstuff kparts kservice ktextwidgets kuserfeedback kwidgetsaddons kxmlgui lz4 netcdf poppler purpose qt6 syntax-highlighting zlib zstd
 
 name=labplot

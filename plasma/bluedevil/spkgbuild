@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma Bluetooth tools for pairing devices, managing connections, and transferring files
 # depends : bluez-qt extra-cmake-modules kauth kcmutils kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdoctools ki18n kio kitemviews kjobwidgets knotifications kservice ksvg kwidgetsaddons kwindowsystem kxmlgui libplasma plasma-workspace qt6 shared-mime-info solid
 
 name=bluedevil

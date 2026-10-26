@@ -1,7 +1,7 @@
 # note : Requires a separate Qt 5/KF5 stack; the KF6 upgrade does not supply it.
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Web browser with an interface designed for televisions and Plasma Bigscreen
 name=aura-browser
 version=5.27.12
 release=1

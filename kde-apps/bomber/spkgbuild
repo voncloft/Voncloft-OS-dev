@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Arcade game in which a descending aircraft drops bombs to clear buildings
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=bomber

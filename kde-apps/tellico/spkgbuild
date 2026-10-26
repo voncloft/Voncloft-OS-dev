@@ -1,4 +1,4 @@
-# description : Tellico
+# description : Collection manager for cataloging books, films, music, games, and other personal collections
 # depends : exiv2 extra-cmake-modules gettext karchive kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools kfilemetadata kguiaddons ki18n kiconthemes kio kitemmodels kjobwidgets knewstuff ktextwidgets kwidgetsaddons kxmlgui libkcddb libksane libxml2 libxslt poppler qt6 solid sonnet taglib
 
 name=tellico

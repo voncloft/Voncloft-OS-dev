@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Sudoku game with puzzle generation, solving assistance, and several board variants
 # depends : extra-cmake-modules karchive kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kio kjobwidgets kwidgetsaddons kxmlgui libkdegames qt6
 
 name=ksudoku

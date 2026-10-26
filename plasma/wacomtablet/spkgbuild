@@ -1,7 +1,7 @@
 # note : X11 component from Plasma 6.7; not part of the Wayland-only Plasma 6.8 desktop.
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Plasma settings and profiles for configuring Wacom tablet mapping, buttons, and pen behavior
 
 name=wacomtablet
 version=6.7.5

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Color contrast checker for choosing readable text and background combinations
 # depends : extra-cmake-modules futuresql kcoreaddons kcrash kde-deps-installer kdoctools ki18n kirigami kirigami-addons qcoro qt6
 
 name=kontrast

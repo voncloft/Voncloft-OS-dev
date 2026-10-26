@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Ocean desktop sound theme for notifications, login, and other Plasma events
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=ocean-sound-theme

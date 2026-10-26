@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Email client for reading, composing, organizing, filtering, and securing messages
 # depends : akonadi akonadi-contacts akonadi-mime akonadi-search extra-cmake-modules gpgmepp kbookmarks kcalendarcore kcalutils kcmutils kconfig kconfigwidgets kcontacts kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kidentitymanagement kio kitemviews kjobwidgets kldap kmailtransport kmime knotifications knotifyconfig kontactinterface kparts kpimtextedit kservice kstatusnotifieritem ktextaddons ktnef kuserfeedback kwidgetsaddons kwindowsystem kxmlgui libgpg-error libgravatar libkdepim libkleo libksieve mailcommon messagelib pimcommon plasma-activities qt6 qtkeychain sonnet
 
 name=kmail

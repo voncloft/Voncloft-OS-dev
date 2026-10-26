@@ -1,4 +1,4 @@
-# description : calligra - KDE gear component
+# description : Office suite with tools for word processing, spreadsheets, presentations, and vector graphics
 # depends : boost extra-cmake-modules karchive kcmutils kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdiagram kdoctools kguiaddons ki18n kiconthemes kio kitemviews kjobwidgets knotifications knotifyconfig ktextwidgets kwidgetsaddons kwindowsystem kxmlgui openssl perl qt6 qtkeychain sonnet threadweaver zlib
 
 name=calligra

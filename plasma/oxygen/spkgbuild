@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Oxygen application style and window decorations for KDE
 # depends : extra-cmake-modules frameworkintegration kcmutils kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kde-deps-installer kdecoration kguiaddons ki18n kservice kwidgetsaddons kwindowsystem libplasma qt6
 
 name=oxygen

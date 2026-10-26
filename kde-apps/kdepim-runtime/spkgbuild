@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Akonadi resource agents and services for synchronizing email, calendars, and contacts with external sources
 # depends : akonadi akonadi-calendar akonadi-contacts akonadi-mime cyrus-sasl extra-cmake-modules kcalendarcore kcalutils kcmutils kcodecs kconfig kconfigwidgets kcontacts kdav kde-deps-installer ki18n kidentitymanagement kimap kio kitemmodels kldap kmailtransport kmbox kmime knotifications knotifyconfig ktextaddons kwindowsystem libkgapi plasma-activities qca qt6 qtkeychain shared-mime-info
 
 name=kdepim-runtime

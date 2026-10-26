@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Breeze visual style for Qt Quick Controls applications
 # depends : extra-cmake-modules kcodecs kcolorscheme kconfig kde-deps-installer kguiaddons kiconthemes kirigami qt6
 
 name=qqc2-breeze-style

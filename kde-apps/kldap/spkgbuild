@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library and widgets for accessing directory services through LDAP
 # depends : cyrus-sasl extra-cmake-modules kde-deps-installer kdoctools ki18n kio kwidgetsaddons qt6 qtkeychain
 
 name=kldap

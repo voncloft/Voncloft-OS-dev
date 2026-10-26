@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Dots and boxes game in which players draw lines to claim squares
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kwidgetsaddons kxmlgui libkdegames qt6
 
 name=ksquares

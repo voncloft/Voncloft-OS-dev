@@ -1,4 +1,4 @@
-# description : koko - KDE gear component
+# description : Image gallery for browsing, organizing, and viewing photos on desktop and mobile devices
 # depends : exiv2 extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdeclarative kfilemetadata ki18n kio kirigami kirigami-addons kirigami-app-components knotifications kquickimageeditor purpose qt6
 
 name=koko

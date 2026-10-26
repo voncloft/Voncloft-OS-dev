@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt wrappers for interacting with Wayland display protocols
 # depends : extra-cmake-modules kde-deps-installer mesa plasma-wayland-protocols qt6 wayland wayland-protocols
 
 name=kwayland

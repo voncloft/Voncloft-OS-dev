@@ -1,4 +1,4 @@
-# description : components to pipewire plasma
+# description : Qt and QML components for displaying and recording PipeWire video streams
 # depends : extra-cmake-modules ffmpeg kcoreaddons kde-deps-installer ki18n libdrm libepoxy libva mesa pipewire plasma-wayland-protocols qt6 wayland
 
 name=kpipewire

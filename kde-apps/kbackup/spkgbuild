@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Backup application for saving selected files and folders into archive sets
 # depends : extra-cmake-modules karchive kconfig kcoreaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kio knotifications kstatusnotifieritem kwidgetsaddons kxmlgui libarchive qt6 shared-mime-info
 
 name=kbackup

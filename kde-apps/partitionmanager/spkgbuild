@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Disk partition editor for creating, deleting, resizing, moving, and checking partitions and filesystems
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio kjobwidgets kpmcore kwidgetsaddons kwindowsystem kxmlgui polkit-qt qt6
 
 name=partitionmanager

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Configuration tool for enabling and filtering Qt and KDE application debug logging
 # depends : extra-cmake-modules kcompletion kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdsingleapplication ki18n kiconthemes kitemviews kwidgetsaddons kwindowsystem kxmlgui qt6
 
 name=kdebugsettings

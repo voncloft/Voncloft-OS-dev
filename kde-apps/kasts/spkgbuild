@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Podcast application for finding feeds, downloading episodes, and tracking playback progress
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kirigami kirigami-addons kwindowsystem qqc2-desktop-style qt6 qtkeychain syndication taglib threadweaver
 
 name=kasts

@@ -1,4 +1,4 @@
-# description : plasmatube - KDE gear component
+# description : Video browsing and playback application for YouTube and supported alternative video services
 # depends : extra-cmake-modules kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kirigami kirigami-addons kitemmodels kwindowsystem mpvqt purpose qqc2-desktop-style qt6 qtkeychain
 
 name=plasmatube

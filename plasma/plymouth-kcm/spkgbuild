@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : System Settings module for choosing and configuring the Plymouth boot splash theme
 # depends : extra-cmake-modules karchive kauth kcmutils kcodecs kconfig kconfigwidgets kcoreaddons kde-deps-installer ki18n kio knewstuff kservice kwidgetsaddons kxmlgui plymouth qt6
 
 name=plymouth-kcm

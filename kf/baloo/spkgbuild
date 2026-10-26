@@ -1,5 +1,5 @@
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kfilemetadata ki18n kidletime kio lmdb qt6 solid
-# description : Core components for the kde desktop
+# description : File indexing and search service for finding documents by name, content, and metadata
 
 name=baloo
 version=6.31.0

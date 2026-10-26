@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KIO worker for browsing audio CDs and copying tracks into encoded audio files
 # depends : cdparanoia extra-cmake-modules kcmutils kconfig kde-deps-installer kdoctools ki18n kio kwidgetsaddons libkcddb qt6 solid
 
 name=audiocd-kio

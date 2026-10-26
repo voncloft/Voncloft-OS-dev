@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Backup and restore tool for KDE email, calendar, contact data, and application settings
 # depends : akonadi extra-cmake-modules karchive kcalendarcore kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kiconthemes kidentitymanagement kio kitemviews kmailtransport kmime knotifications kstatusnotifieritem ktextaddons kuserfeedback kwidgetsaddons kxmlgui mailcommon pimcommon qt6
 
 name=pim-data-exporter

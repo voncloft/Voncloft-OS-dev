@@ -1,5 +1,5 @@
 # depends : elogind extra-cmake-modules kauth kcmutils kcodecs kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kglobalaccel ki18n kidletime kio kirigami kitemmodels kjobwidgets knotifications krunner kservice kwindowsystem kxmlgui libkscreen libplasma plasma-activities plasma-wayland-protocols plasma-workspace qcoro qt6 solid udev upower wayland
-# description : Core components for the kde desktop
+# description : Plasma power management service for brightness, battery settings, suspend, and energy-saving actions
 
 name=powerdevil
 version=6.8.1

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Background service that displays terminal messages from write and wall as desktop notifications
 # depends : extra-cmake-modules kcoreaddons kdbusaddons kde-deps-installer ki18n knotifications kpty qt6
 
 name=kwrited

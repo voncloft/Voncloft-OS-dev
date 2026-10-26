@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Breeze boot splash theme for Plymouth
 # depends : extra-cmake-modules kde-deps-installer plymouth qt6
 
 name=breeze-plymouth

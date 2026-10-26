@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KIO worker for browsing and transferring photos from digital cameras through gPhoto2
 # depends : extra-cmake-modules kcmutils kconfig kconfigwidgets kde-deps-installer kdoctools ki18n kio kxmlgui libgphoto2 qt6
 
 name=kamera

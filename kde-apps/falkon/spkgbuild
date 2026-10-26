@@ -1,4 +1,4 @@
-# description : falkon - KDE gear component
+# description : Qt WebEngine web browser with tabs, bookmarks, history, and ad blocking
 # depends : extra-cmake-modules karchive kcoreaddons kcrash kde-deps-installer ki18n kio kwallet libxcb openssl purpose qt6 xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=falkon

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Bomberman-style game in which players place bombs, destroy obstacles, and defeat opponents
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=granatier

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Libraries and settings components for integrating online accounts with KDE applications
 # depends : extra-cmake-modules kcmutils kcoreaddons kdbusaddons kde-deps-installer ki18n kio kwallet libaccounts-qt qcoro qt6 signond
 
 name=kaccounts-integration

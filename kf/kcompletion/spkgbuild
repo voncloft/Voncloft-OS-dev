@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Text completion library and input widgets with suggestions and history
 # depends : extra-cmake-modules kcodecs kconfig kde-deps-installer kwidgetsaddons qt6
 
 name=kcompletion

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Administration and debugging tool for inspecting Akonadi resources, data, and database activity
 # depends : akonadi akonadi-contacts akonadi-mime akonadi-search calendarsupport extra-cmake-modules kcalendarcore kcompletion kconfig kcontacts kcrash kdbusaddons kde-deps-installer kdoctools ki18n kimap kio kitemmodels kitemviews kmime ktextwidgets kwidgetsaddons kxmlgui libkdepim messagelib qt6 xapian
 
 name=akonadiconsole

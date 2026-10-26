@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Remote desktop client for connecting to other computers through RDP or VNC
 # depends : extra-cmake-modules freerdp kbookmarks kcmutils kcompletion kconfig kcrash kde-deps-installer kdnssd kguiaddons ki18n kiconthemes kio knotifications knotifyconfig kstatusnotifieritem kwidgetsaddons kwindowsystem kxmlgui libvncserver pkgconf qt6 qtkeychain
 
 name=krdc

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graph theory teaching application for creating graphs and experimenting with graph algorithms
 # depends : boost extra-cmake-modules karchive kconfig kcoreaddons kcrash kde-deps-installer kdoctools ki18n kitemviews ktexteditor ktexttemplate ktextwidgets kxmlgui qt6
 
 name=rocs

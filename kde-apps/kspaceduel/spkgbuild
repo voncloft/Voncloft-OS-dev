@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Two-player space combat game with orbiting spacecraft, gravity, and projectiles
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kxmlgui libkdegames qt6
 
 name=kspaceduel

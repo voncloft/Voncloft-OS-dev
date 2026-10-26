@@ -1,7 +1,7 @@
 # note : Requires a separate Qt 5/KF5 stack; the KF6 upgrade does not supply it.
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Legacy library for exposing Qt objects to scripts running in the KJS JavaScript engine
 
 name=kjsembed
 version=5.116.0

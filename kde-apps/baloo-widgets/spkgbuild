@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Widgets for displaying file metadata and information from the Baloo indexing framework
 # depends : baloo extra-cmake-modules kconfig kde-deps-installer kfilemetadata ki18n kio kservice qt6
 
 name=baloo-widgets

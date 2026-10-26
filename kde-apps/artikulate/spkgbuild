@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Language pronunciation trainer with recordings by native speakers and spoken practice exercises
 # depends : extra-cmake-modules karchive kconfig kcrash kde-deps-installer ki18n kirigami kitemmodels knewstuff libxml2 qt6
 
 name=artikulate

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library and tools for running commands as another user with graphical password prompts
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kpty qt6
 
 name=kdesu

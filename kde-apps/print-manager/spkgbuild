@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KDE printer configuration, print queue management, and printer status tools
 # depends : cups extra-cmake-modules kcmutils kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdeclarative ki18n kio kirigami kirigami-addons kitemmodels knotifications kwidgetsaddons kwindowsystem libplasma plasma-workspace qqc2-desktop-style qt6
 
 name=print-manager

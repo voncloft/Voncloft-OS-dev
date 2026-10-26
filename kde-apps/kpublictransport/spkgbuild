@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for querying public transport journeys, stops, departures, and service information
 # depends : extra-cmake-modules kde-deps-installer ki18n kirigami-addons kitemmodels networkmanager-qt qt6 zlib
 
 name=kpublictransport

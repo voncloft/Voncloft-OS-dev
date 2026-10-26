@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Libraries for composing, displaying, parsing, and managing email messages in KDE applications
 # depends : akonadi akonadi-contacts akonadi-mime akonadi-search extra-cmake-modules gpgmepp grantleetheme karchive kcalendarcore kcodecs kcolorscheme kcompletion kconfig kcontacts kcoreaddons kde-deps-installer kguiaddons ki18n kiconthemes kidentitymanagement kio kitemviews kjobwidgets kmailtransport kmbox kmime knewstuff knotifications kpimtextedit kservice ktextaddons ktexttemplate ktextwidgets kwidgetsaddons kxmlgui libgravatar libkdepim libkleo openssl pimcommon qca qgpgme-qt qt6 sonnet syntax-highlighting
 
 name=messagelib

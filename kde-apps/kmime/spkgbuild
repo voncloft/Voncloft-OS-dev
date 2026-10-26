@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for parsing and generating MIME email messages and headers
 # depends : extra-cmake-modules kcodecs kde-deps-installer qt6
 
 name=kmime

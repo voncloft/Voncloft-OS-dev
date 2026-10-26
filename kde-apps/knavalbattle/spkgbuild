@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Battleship-style game in which players locate and sink an opponent's hidden ships
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools ki18n ktextwidgets kwidgetsaddons kxmlgui libkdegames qt6
 
 name=knavalbattle

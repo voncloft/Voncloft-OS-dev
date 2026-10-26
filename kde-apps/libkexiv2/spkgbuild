@@ -1,4 +1,4 @@
-# description : Libkexiv2 is a KDE wrapper around the Exiv2 library for manipulating image metadata
+# description : Qt wrapper around Exiv2 for reading and editing image metadata such as EXIF, IPTC, and XMP
 # depends : exiv2 extra-cmake-modules kde-deps-installer qt6
 
 name=libkexiv2

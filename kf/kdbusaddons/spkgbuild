@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt helpers for D-Bus communication, service registration, and single-instance applications
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kdbusaddons

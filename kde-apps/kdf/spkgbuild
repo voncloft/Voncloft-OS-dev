@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Disk space viewer for checking storage usage and mounting or unmounting filesystems
 # depends : extra-cmake-modules kcmutils kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kiconthemes kio kjobwidgets knotifications kservice kstatusnotifieritem kwidgetsaddons kxmlgui qt6
 
 name=kdf

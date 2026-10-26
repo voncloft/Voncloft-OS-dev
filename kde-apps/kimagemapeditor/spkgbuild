@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Editor for defining clickable regions and links in HTML image maps
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kparts kwidgetsaddons kxmlgui qt6
 
 name=kimagemapeditor

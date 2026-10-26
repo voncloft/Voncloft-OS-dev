@@ -1,4 +1,4 @@
-# description : ktextaddons
+# description : Text editing libraries with features such as translation, text-to-speech, and grammar checking
 # depends : breeze-icons extra-cmake-modules karchive kcolorscheme kconfig kcoreaddons kde-deps-installer ki18n kiconthemes kio kitemviews kservice ktextwidgets kwidgetsaddons qt6 qtkeychain sonnet syntax-highlighting
 
 name=ktextaddons

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Breeze application style, window decorations, cursors, and other Plasma theme assets
 # depends : extra-cmake-modules frameworkintegration kcmutils kcolorscheme kconfig kcoreaddons kde-deps-installer kdecoration kguiaddons ki18n kiconthemes kirigami kwindowsystem qt6
 
 name=breeze

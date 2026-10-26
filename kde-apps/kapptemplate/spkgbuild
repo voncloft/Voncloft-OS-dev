@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Project generator that creates application source code from development templates
 # depends : extra-cmake-modules karchive kconfig kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kiconthemes kirigami kirigami-addons qt6
 
 name=kapptemplate

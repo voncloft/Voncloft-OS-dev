@@ -1,4 +1,4 @@
-# description : library interface for scanner
+# description : Qt library for detecting and operating scanners through the SANE scanning system
 # depends : extra-cmake-modules kde-deps-installer ki18n qt6 sane
 
 name=ksanecore

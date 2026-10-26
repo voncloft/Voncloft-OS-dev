@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plugin that stores signond online account credentials in KDE password wallets
 # depends : extra-cmake-modules kde-deps-installer kwallet qt6 signond
 
 name=signon-kwallet-extension

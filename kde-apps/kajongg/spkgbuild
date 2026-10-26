@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Four-player Mahjong game with scoring, computer opponents, and network play
 # depends : extra-cmake-modules kde-deps-installer kdoctools ki18n libkmahjongg python python-twisted qt6
 
 name=kajongg

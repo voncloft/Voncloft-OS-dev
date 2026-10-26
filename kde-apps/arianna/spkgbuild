@@ -1,4 +1,4 @@
-# description : arianna - KDE gear component
+# description : EPUB ebook reader with a library view and reading progress tracking
 # depends : baloo extra-cmake-modules karchive kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kfilemetadata ki18n kirigami kirigami-addons kquickcharts kwindowsystem qqc2-desktop-style qt6
 
 name=arianna

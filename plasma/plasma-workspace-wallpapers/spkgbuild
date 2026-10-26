@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Wallpaper image collection for the Plasma desktop
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=plasma-workspace-wallpapers

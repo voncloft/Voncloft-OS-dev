@@ -1,5 +1,5 @@
 # note : Preserves the local kaffeine.tar.xz Qt6 port (source identifies itself as 2.1.0).
-# description : Core components for the kde desktop
+# description : Media player with digital television tuning, channel management, and recording support
 # depends : kde-deps-installer extra-cmake-modules qt6 kcoreaddons kconfig ki18n kxmlgui kio solid kdbusaddons vlc v4l-utils
 
 name=kaffeine

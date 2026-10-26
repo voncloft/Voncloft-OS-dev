@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Privacy cleanup tool for removing temporary files, recent document lists, and browsing traces
 # depends : extra-cmake-modules kbookmarks kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n ktextwidgets kxmlgui plasma-activities-stats qt6
 
 name=sweeper

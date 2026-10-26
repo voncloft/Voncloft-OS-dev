@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Shared data files and icons used by KDE educational applications
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kdeedu-data

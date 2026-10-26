@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt platform integration that applies Plasma dialogs, fonts, icons, and settings to Qt applications
 # depends : breeze extra-cmake-modules kcolorscheme kconfig kconfigwidgets kcoreaddons kde-deps-installer kguiaddons ki18n kiconthemes kio kjobwidgets knotifications kservice kstatusnotifieritem kwayland kwidgetsaddons kwindowsystem libx11 libxcb libxext libxfixes libxi libxrender libxtst plasma-wayland-protocols qt6 wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=plasma-integration

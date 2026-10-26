@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Additional Plasma widgets, desktop effects, wallpapers, and search plugins
 # depends : attica corrosion extra-cmake-modules kauth kcmutils kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdeclarative kglobalaccel kguiaddons kholidays ki18n kio kirigami-addons kjobwidgets knewstuff knotifications kpackage krunner kservice ksvg kunitconversion kwidgetsaddons kxmlgui libplasma plasma-workspace qt6 rust solid sonnet
 
 name=kdeplasma-addons

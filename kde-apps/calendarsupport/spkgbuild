@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Shared calendar utilities and widgets used by KDE personal information applications
 # depends : akonadi akonadi-calendar extra-cmake-modules kcalendarcore kcalutils kcodecs kde-deps-installer kguiaddons kholidays ki18n kidentitymanagement kio kmime ktextaddons qt6
 
 name=calendarsupport

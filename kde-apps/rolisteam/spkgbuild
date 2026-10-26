@@ -1,4 +1,4 @@
-# description : rolisteam
+# description : Virtual tabletop for playing role-playing games online with maps, dice, chat, and shared materials
 # depends : extra-cmake-modules gettext karchive kde-deps-installer qt6
 
 name=rolisteam

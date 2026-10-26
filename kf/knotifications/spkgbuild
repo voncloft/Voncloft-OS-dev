@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for sending desktop notifications with sounds, actions, and other feedback
 # depends : extra-cmake-modules kconfig kde-deps-installer libcanberra qt6
 
 name=knotifications

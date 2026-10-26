@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Screen magnifier for enlarging text and other on-screen content
 # depends : extra-cmake-modules kcrash kde-deps-installer kdoctools ki18n kio kxmlgui libqaccessibilityclient qt6
 
 name=kmag

@@ -1,4 +1,4 @@
-# description : core package for the kde desktop
+# description : Wayland protocol definitions for communication between Plasma and desktop applications
 # depends : extra-cmake-modules kde-deps-installer qt6 wayland
 
 name=plasma-wayland-protocols

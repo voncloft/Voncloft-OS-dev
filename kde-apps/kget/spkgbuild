@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Download manager with queues, pause and resume support, and file integrity checks
 # depends : extra-cmake-modules kcmutils kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio kitemviews knotifications knotifyconfig kservice kstatusnotifieritem kwallet kwidgetsaddons kwindowsystem kxmlgui libktorrent qgpgme-qt qt6
 
 name=kget

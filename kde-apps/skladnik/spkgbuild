@@ -1,4 +1,4 @@
-# description : skladnik - KDE gear component
+# description : Sokoban puzzle game in which players push crates onto designated storage squares
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui libkdegames qt6
 
 name=skladnik

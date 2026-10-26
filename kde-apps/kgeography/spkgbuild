@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Geography learning application with maps and quizzes about countries, regions, capitals, and flags
 # depends : extra-cmake-modules kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kiconthemes kitemviews kwidgetsaddons kxmlgui qt6
 
 name=kgeography

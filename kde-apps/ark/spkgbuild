@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Archive manager for creating, viewing, extracting, and modifying compressed files
 # depends : extra-cmake-modules karchive kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kfilemetadata ki18n kiconthemes kio kparts kpty kservice kwidgetsaddons kwindowsystem libarchive qt6
 
 name=ark

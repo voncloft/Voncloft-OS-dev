@@ -1,4 +1,4 @@
-# description : Index
+# description : Maui file manager for browsing and organizing local and remote files
 # depends : extra-cmake-modules karchive kcoreaddons kde-deps-installer ki18n kio mauikit mauikit-filebrowsing qt6
 
 name=index-fm

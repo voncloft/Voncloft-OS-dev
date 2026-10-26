@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Calculator for evaluating mathematical expressions and plotting two- and three-dimensional functions
 # depends : analitza extra-cmake-modules kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui libplasma qt6
 
 name=kalgebra

@@ -1,4 +1,4 @@
-# description : Nota
+# description : Maui text editor for creating and editing plain text documents
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n mauikit mauikit-filebrowsing mauikit-texteditor qt6
 
 name=nota

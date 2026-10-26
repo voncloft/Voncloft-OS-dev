@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Command-line tool for displaying KDE dialogs and collecting input from shell scripts
 # depends : extra-cmake-modules kdbusaddons kde-deps-installer kguiaddons kiconthemes kio knotifications ktextwidgets kwindowsystem qt6
 
 name=kdialog

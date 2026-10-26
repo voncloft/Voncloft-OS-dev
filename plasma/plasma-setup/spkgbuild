@@ -1,4 +1,4 @@
-# description : plasma-setup - KDE plasma component
+# description : Initial setup wizard for creating a user account and choosing language, keyboard, network, and time zone settings
 # depends : extra-cmake-modules kauth kconfig kcoreaddons kde-deps-installer ki18n kpackage libkscreen pkgconf plasma-desktop plasma-workspace qt6
 
 name=plasma-setup

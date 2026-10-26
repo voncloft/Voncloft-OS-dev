@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Help browser for KDE application handbooks and system documentation
 # depends : extra-cmake-modules karchive kbookmarks kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdoctools ki18n kio kservice ktexttemplate kwidgetsaddons kwindowsystem kxmlgui libxml2 qt6 xapian
 
 name=khelpcenter

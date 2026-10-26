@@ -1,4 +1,4 @@
-# description : Compatibility package name; replaced upstream by kio-zeroconf
+# description : Compatibility meta-package that installs local network service browsing through kio-zeroconf
 # depends : kio-zeroconf
 # note : Contains no application files. Use kio-zeroconf for the maintained source package.
 

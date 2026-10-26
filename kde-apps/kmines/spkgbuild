@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Minesweeper puzzle game in which players uncover squares while avoiding hidden mines
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes ktextwidgets kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kmines

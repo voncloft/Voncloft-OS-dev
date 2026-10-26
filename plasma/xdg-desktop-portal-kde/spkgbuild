@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma desktop portal backend for application file dialogs, screen sharing, screenshots, and other desktop services
 # depends : extra-cmake-modules kauth kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdeclarative kglobalaccel ki18n kiconthemes kio kirigami kitemviews kjobwidgets knotifications kpipewire kservice kstatusnotifieritem kwayland kwidgetsaddons kwindowsystem kxmlgui libxkbcommon pipewire plasma-wayland-protocols plasma-workspace qt6 solid wayland wayland-protocols
 
 name=xdg-desktop-portal-kde

@@ -1,4 +1,4 @@
-# description : OptiImage
+# description : Image optimization tool for reducing picture file sizes
 # depends : extra-cmake-modules jpegoptim kconfig kcoreaddons kcrash kde-deps-installer ki18n kiconthemes kio kirigami kirigami-addons libwebp oxipng python-scour qcoro qt6
 
 name=optiimage

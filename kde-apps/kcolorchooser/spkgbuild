@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Color selection tool for sampling screen colors and reading their numeric values
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n kxmlgui qt6
 
 name=kcolorchooser

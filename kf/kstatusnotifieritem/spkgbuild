@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for adding application icons, menus, and status information to the system tray
 # depends : extra-cmake-modules kde-deps-installer kwindowsystem qt6
 
 name=kstatusnotifieritem

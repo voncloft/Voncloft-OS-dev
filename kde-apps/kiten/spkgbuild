@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Japanese dictionary and study tool with kanji lookup and learning exercises
 # depends : extra-cmake-modules karchive kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kio kxmlgui qt6
 
 name=kiten

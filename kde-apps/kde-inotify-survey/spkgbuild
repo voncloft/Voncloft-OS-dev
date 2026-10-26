@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Tools and background monitoring that report inotify file-watch usage and warn when limits are reached
 # depends : extra-cmake-modules kauth kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdeclarative ki18n kidletime kio kjobwidgets knotifications kservice kwallet kwidgetsaddons kwindowsystem qt6 solid syntax-highlighting
 
 name=kde-inotify-survey

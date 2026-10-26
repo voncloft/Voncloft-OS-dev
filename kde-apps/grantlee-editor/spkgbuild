@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Editors for designing Grantlee templates used to display contacts and other KDE PIM information
 # depends : akonadi-contacts extra-cmake-modules grantleetheme karchive kcrash kdbusaddons kde-deps-installer ki18n kimap kmime ktextaddons ktexttemplate kxmlgui messagelib pimcommon qt6 syntax-highlighting
 
 name=grantlee-editor

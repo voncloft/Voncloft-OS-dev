@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Framework for offering context-sensitive actions such as sharing files through service plugins
 # depends : extra-cmake-modules kcmutils kconfig kcoreaddons kde-deps-installer ki18n kio kirigami kitemmodels knotifications kservice prison qt6
 
 name=purpose

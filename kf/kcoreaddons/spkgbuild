@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt utility library for jobs, plugins, file handling, text processing, and other common tasks
 # depends : extra-cmake-modules kde-deps-installer qt6 util-linux
 
 name=kcoreaddons

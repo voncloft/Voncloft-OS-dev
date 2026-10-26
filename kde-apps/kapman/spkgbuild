@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Pac-Man-style maze game in which players collect pills while avoiding ghosts
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kapman

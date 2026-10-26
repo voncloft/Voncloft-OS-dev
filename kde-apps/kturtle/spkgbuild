@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Educational programming environment using turtle graphics to teach basic coding concepts
 # depends : extra-cmake-modules kcoreaddons kcrash kde-deps-installer kdoctools ki18n kio knewstuff ktextwidgets kxmlgui qt6
 
 name=kturtle

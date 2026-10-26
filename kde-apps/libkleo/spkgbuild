@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for encryption key management and certificate selection in KDE applications
 # depends : boost extra-cmake-modules gpgmepp kcodecs kcolorscheme kcompletion kconfig kcoreaddons kde-deps-installer ki18n kitemmodels ktextaddons kwidgetsaddons libgpg-error qgpgme-qt qt6
 
 name=libkleo

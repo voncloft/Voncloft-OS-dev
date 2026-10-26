@@ -1,4 +1,4 @@
-# description : Compatibility package name; replaced upstream by plasma-mobile
+# description : Compatibility meta-package that installs the Plasma Mobile phone interface through plasma-mobile
 # depends : plasma-mobile
 # note : Contains no application files. Use plasma-mobile for the maintained source package.
 

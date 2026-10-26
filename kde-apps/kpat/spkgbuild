@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Solitaire card game collection including Klondike, FreeCell, Spider, and other variations
 # depends : extra-cmake-modules freecell-solver kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kio knewstuff kwidgetsaddons kxmlgui libblack-hole-solver libkdegames qt6
 
 name=kpat

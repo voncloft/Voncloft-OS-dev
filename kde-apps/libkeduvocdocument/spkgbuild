@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for reading and writing vocabulary documents used by language learning applications
 # depends : extra-cmake-modules karchive kde-deps-installer ki18n kio qt6
 
 name=libkeduvocdocument

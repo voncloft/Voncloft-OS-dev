@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Text-to-speech interface for speaking typed text and stored phrases
 # depends : extra-cmake-modules kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui qt6
 
 name=kmouth

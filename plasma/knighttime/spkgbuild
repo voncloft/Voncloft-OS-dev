@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Service and client library for scheduling day and night transitions used by Plasma features
 # depends : extra-cmake-modules kconfig kcoreaddons kdbusaddons kde-deps-installer kholidays ki18n qt6
 
 name=knighttime

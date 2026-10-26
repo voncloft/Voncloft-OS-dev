@@ -1,4 +1,4 @@
-# description : KGeoTag
+# description : Photo geotagging tool that matches image timestamps to GPS tracks and writes location metadata
 # depends : extra-cmake-modules kcolorscheme kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kxmlgui libkexiv2 marble qt6
 
 name=kgeotag

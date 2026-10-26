@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Tools and stylesheets for generating application handbooks from DocBook sources
 # depends : docbook-xml docbook-xsl extra-cmake-modules karchive kde-deps-installer ki18n libxml2 libxslt qt6
 
 name=kdoctools

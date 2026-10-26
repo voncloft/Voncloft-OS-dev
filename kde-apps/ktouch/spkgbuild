@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Touch typing tutor with lessons, keyboard guidance, and progress statistics
 # depends : extra-cmake-modules kcmutils kcompletion kconfig kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kiconthemes kitemviews ktextwidgets kwidgetsaddons kwindowsystem kxmlgui libxml2 qt6
 
 name=ktouch

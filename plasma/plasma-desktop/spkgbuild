@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Desktop-specific Plasma components including the task manager, application launchers, and settings modules
 # depends : attica baloo breeze extra-cmake-modules kaccounts-integration kauth kcmutils kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kded kdoctools kfilemetadata kglobalaccel kguiaddons ki18n kiconthemes kio kirigami-addons kitemmodels kitemviews kjobwidgets knewstuff knotifications knotifyconfig kpackage kparts krunner kscreenlocker kservice ksvg ktextwidgets kunitconversion kwidgetsaddons kwin kwindowsystem kxmlgui libcanberra libksysguard libplasma libwacom libx11 libxcb libxext libxfixes libxi libxkbcommon libxrender libxtst packagekit-qt pkgconf plasma-activities plasma-activities-stats plasma-sdk plasma-workspace plasma5support polkit-qt powerdevil qt6 solid sonnet systemsettings wayland wayland-protocols xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=plasma-desktop

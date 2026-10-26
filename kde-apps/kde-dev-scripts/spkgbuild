@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Developer scripts for maintaining, checking, and working with KDE source trees
 # depends : extra-cmake-modules kde-deps-installer kdoctools qt6
 
 name=kde-dev-scripts

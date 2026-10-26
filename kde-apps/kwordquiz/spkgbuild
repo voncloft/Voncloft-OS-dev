@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Flashcard application for practicing vocabulary and other question-and-answer material
 # depends : extra-cmake-modules kconfig kcrash kdbusaddons kde-deps-installer kdoctools ki18n kirigami kirigami-addons knewstuff libkeduvocdocument qt6
 
 name=kwordquiz

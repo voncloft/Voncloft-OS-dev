@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Background service that registers global keyboard shortcuts and dispatches them to applications
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kglobalaccel kio kjobwidgets kservice qt6
 
 name=kglobalacceld

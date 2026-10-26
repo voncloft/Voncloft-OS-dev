@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Interactive geometry application for constructing and exploring geometric figures
 # depends : extra-cmake-modules karchive kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kiconthemes kparts ktexteditor kxmlgui qt6
 
 name=kig

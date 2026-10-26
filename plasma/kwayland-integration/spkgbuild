@@ -1,7 +1,7 @@
 # depends : extra-cmake-modules kde-deps-installer kguiaddons kidletime kwayland kwindowsystem pkgconf plasma-wayland-protocols wayland wayland-protocols
 # note : Optional Qt5 Wayland integration; requires a separate KF5 stack and is excluded from the Plasma 6 group.
 # note : Optional Qt5 Wayland integration; requires a separate KF5 stack and is excluded from the Plasma 6 group.
-# description : Core components for the kde desktop
+# description : Plugins that integrate KDE services with Qt applications running on Wayland
 
 name=kwayland-integration
 version=6.8.1

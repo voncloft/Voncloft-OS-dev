@@ -1,6 +1,6 @@
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Library for accessing audio CD drives and controlling disc playback
 
 name=libkcompactdisc
 version=25.12.3

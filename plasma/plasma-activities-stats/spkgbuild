@@ -1,4 +1,4 @@
-# description : The plasma-activities-stats-6
+# description : Library for querying and ranking files and applications using Plasma activity history
 # depends : extra-cmake-modules kactivitymanagerd kconfig kde-deps-installer plasma-activities qt6
 
 name=plasma-activities-stats

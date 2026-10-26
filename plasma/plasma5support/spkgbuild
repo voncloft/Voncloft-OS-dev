@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Compatibility libraries for using legacy Plasma data engines in Plasma 6
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kguiaddons kholidays ki18n kidletime kio knotifications kservice kunitconversion libksysguard networkmanager-qt plasma-activities qt6 solid
 
 name=plasma5support

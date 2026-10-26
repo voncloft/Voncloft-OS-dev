@@ -1,4 +1,4 @@
-# description : create business diagrams
+# description : Qt libraries for drawing charts and Gantt project timelines
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kdiagram

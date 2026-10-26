@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt library for accessing Google services such as calendars, contacts, and Drive
 # depends : cyrus-sasl extra-cmake-modules kcalendarcore kcontacts kde-deps-installer kwallet qt6
 
 name=libkgapi

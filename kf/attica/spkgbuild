@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt library for accessing Open Collaboration Services such as downloadable community content
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=attica

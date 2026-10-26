@@ -1,4 +1,4 @@
-# description : kopeninghours - KDE gear component
+# description : Library for parsing and evaluating OpenStreetMap opening-hours expressions
 # depends : bison extra-cmake-modules flex kde-deps-installer kholidays ki18n qt6
 
 name=kopeninghours

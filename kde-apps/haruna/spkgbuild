@@ -1,4 +1,4 @@
-# description : Haruna
+# description : MPV-based media player with playlist controls and support for local files and online video
 # depends : breeze extra-cmake-modules ffmpeg kcolorscheme kconfig kcoreaddons kcrash kde-deps-installer kdsingleapplication kfilemetadata ki18n kiconthemes kio kirigami kwindowsystem mpvqt qt6 yt-dlp
 
 name=haruna

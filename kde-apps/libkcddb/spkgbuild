@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for looking up audio CD album and track metadata
 # depends : extra-cmake-modules kcmutils kconfig kconfigwidgets kde-deps-installer kdoctools ki18n kio kwidgetsaddons qt6
 
 name=libkcddb

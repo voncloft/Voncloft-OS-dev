@@ -1,4 +1,4 @@
-# description : Hana
+# description : Video thumbnail generator that combines selected frames into a single contact sheet image
 # depends : extra-cmake-modules ffmpeg kconfig kcoreaddons kde-deps-installer ki18n kio kirigami qt6
 
 name=hana

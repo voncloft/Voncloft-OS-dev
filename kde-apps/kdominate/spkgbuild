@@ -1,4 +1,4 @@
-# description : kdominate - KDE gear component
+# description : Board strategy game in which players expand their pieces and capture neighboring opponents
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kxmlgui libkdegames qt6
 
 name=kdominate

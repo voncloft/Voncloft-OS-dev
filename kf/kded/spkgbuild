@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Background service that loads KDE modules for shared desktop tasks
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kservice qt6
 
 name=kded

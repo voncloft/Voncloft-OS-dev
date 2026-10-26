@@ -1,5 +1,5 @@
 # depends : appstream-qt attica baloo dbus elogind extra-cmake-modules icu karchive kauth kbookmarks kcmutils kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdeclarative kded kdoctools kfilemetadata kglobalaccel kglobalacceld kguiaddons kholidays ki18n kiconthemes kidletime kio kirigami-addons kitemmodels kitemviews kjobwidgets knewstuff knighttime knotifications kpackage kparts kquickcharts krunner kscreenlocker kservice kstatusnotifieritem ksvg ktexteditor ktextwidgets kuserfeedback kwallet kwayland kwidgetsaddons kwin kwindowsystem kxmlgui layer-shell-qt libcanberra libkexiv2 libkscreen libksysguard libplasma libx11 libxcb libxext libxfixes libxi libxrender libxtst networkmanager-qt packagekit-qt pkgconf plasma-activities plasma-activities-stats plasma-nano plasma-wayland-protocols polkit-qt prison qcoro qt6 solid sonnet udev union wayland wayland-protocols xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm zlib
-# description : Core components for the kde desktop
+# description : Core Plasma session services, desktop shell, panels, notifications, and workspace components
 
 name=plasma-workspace
 version=6.8.1

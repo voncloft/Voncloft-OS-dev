@@ -1,4 +1,4 @@
-# description : accessibility-inspector - KDE gear component
+# description : Developer tool for inspecting application accessibility information exposed to assistive technologies
 # depends : extra-cmake-modules kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kxmlgui libqaccessibilityclient qt6
 
 name=accessibility-inspector

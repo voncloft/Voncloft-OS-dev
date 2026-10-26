@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Travel planner that organizes tickets, reservations, transport connections, and journey information
 # depends : extra-cmake-modules karchive kcalendarcore kcolorscheme kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kfilemetadata khealthcertificate kholidays ki18n kio kirigami kirigami-addons kitemmodels kitinerary kmime knotifications kosmindoormap kpkpass kpublictransport kunitconversion kwindowsystem libquotient prison qcoro qqc2-desktop-style qt6 qtkeychain shared-mime-info zlib
 
 name=itinerary

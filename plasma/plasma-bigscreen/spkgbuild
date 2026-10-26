@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma interface for televisions, with large controls and remote-friendly navigation
 # depends : bluez-qt extra-cmake-modules kauth kcmutils kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdeconnect-kde kglobalaccel ki18n kiconthemes kio kirigami kjobwidgets knotifications kpackage kservice ksvg kwayland kwidgetsaddons kwindowsystem libkscreen libplasma pkgconf plasma-activities plasma-activities-stats plasma-wayland-protocols plasma-workspace plasma5support qcoro qt6 sdl3 solid wayland
 
 name=plasma-bigscreen

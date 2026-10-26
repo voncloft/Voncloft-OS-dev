@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Drop-down terminal emulator with tabs and configurable keyboard shortcuts
 # depends : extra-cmake-modules karchive kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kglobalaccel ki18n kiconthemes kio knewstuff knotifications knotifyconfig kparts kstatusnotifieritem kwayland kwidgetsaddons kwindowsystem libxcb plasma-wayland-protocols qt6 xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=yakuake

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt text editing widgets with spell checking, search, and rich text support
 # depends : extra-cmake-modules kcompletion kconfig kde-deps-installer ki18n kwidgetsaddons qt6 sonnet
 
 name=ktextwidgets

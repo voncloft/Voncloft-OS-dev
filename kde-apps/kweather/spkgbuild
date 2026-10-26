@@ -1,4 +1,4 @@
-# description : kweather - KDE gear component
+# description : Weather application for viewing current conditions and forecasts for selected locations
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kde-deps-installer ki18n kirigami kirigami-addons knotifications krunner kweathercore libplasma qt6
 
 name=kweather

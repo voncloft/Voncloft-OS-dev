@@ -1,4 +1,4 @@
-# description : Smb4K
+# description : Samba network browser for discovering, mounting, and managing shared network folders
 # depends : cifs-utils extra-cmake-modules kauth kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools ki18n kiconthemes kio kirigami kjobwidgets knotifications kstatusnotifieritem kwallet kwidgetsaddons kwindowsystem kxmlgui libplasma qt6 qtkeychain samba solid
 
 name=smb4k

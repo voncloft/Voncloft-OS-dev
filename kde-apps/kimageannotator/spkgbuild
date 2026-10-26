@@ -1,4 +1,4 @@
-# description : kimageannotator - KDE dependency
+# description : Qt image annotation library with drawing, highlighting, text, and other markup tools
 # depends : kcolorpicker kde-deps-installer qt6
 
 name=kimageannotator

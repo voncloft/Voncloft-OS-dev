@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Reversi board game in which players flip opposing pieces to control the board
 # depends : extra-cmake-modules kcolorscheme kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio kjobwidgets kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kreversi

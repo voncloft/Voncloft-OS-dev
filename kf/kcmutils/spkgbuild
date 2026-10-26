@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Tools and libraries for loading and displaying KDE settings modules
 # depends : extra-cmake-modules kconfigwidgets kcoreaddons kde-deps-installer kguiaddons ki18n kio kirigami kitemviews kwidgetsaddons kxmlgui qt6
 
 name=kcmutils

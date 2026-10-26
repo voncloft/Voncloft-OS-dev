@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : PolicyKit authentication agent that displays Plasma password prompts for privileged actions
 # depends : extra-cmake-modules kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kirigami knotifications kwindowsystem polkit-qt qt6
 
 name=polkit-kde-agent-1

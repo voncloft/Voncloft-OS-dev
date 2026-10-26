@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Embeddable viewer component for displaying SVG vector images in KDE applications
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kde-deps-installer ki18n kparts kxmlgui qt6
 
 name=svgpart

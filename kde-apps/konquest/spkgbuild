@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Turn-based space strategy game in which players send fleets to conquer planets
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kwidgetsaddons kxmlgui libkdegames qt6
 
 name=konquest

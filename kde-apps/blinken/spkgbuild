@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Memory game in which players repeat sequences of colored lights and sounds
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kirigami kirigami-addons kxmlgui qt6
 
 name=blinken

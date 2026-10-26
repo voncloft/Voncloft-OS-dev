@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Profiler results viewer for exploring call graphs and program performance costs
 # depends : extra-cmake-modules karchive kconfig kcoreaddons kdbusaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui qt6
 
 name=kcachegrind

@@ -1,4 +1,4 @@
-# description : plasma-mobile - KDE plasma component
+# description : Touch-oriented Plasma shell with a home screen, app launcher, and phone interface
 # depends : extra-cmake-modules kauth kcmutils kconfig kcoreaddons kdbusaddons kde-deps-installer kglobalaccel ki18n kio kirigami-addons kitemmodels kjobwidgets knotifications kpackage kpipewire kservice kwayland kwin kwindowsystem layer-shell-qt libepoxy libkscreen libplasma libxcb modemmanager-qt networkmanager-qt pkgconf plasma-activities plasma-wayland-protocols plasma-workspace powerdevil qcoro qt6 udev wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=plasma-mobile

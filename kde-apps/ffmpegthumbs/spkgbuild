@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : FFmpeg-based video thumbnail generator for Dolphin and other KDE file browsers
 # depends : extra-cmake-modules ffmpeg kconfig kde-deps-installer kio qt6
 
 name=ffmpegthumbs

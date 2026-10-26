@@ -1,6 +1,6 @@
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Graphical CVS version control client for browsing changes, committing files, and managing working copies
 
 name=cervisia
 version=25.04.3

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Reusable calendar views for displaying agendas, events, and tasks in KDE applications
 # depends : akonadi akonadi-calendar calendarsupport extra-cmake-modules kcalendarcore kcalutils kcodecs kcolorscheme kcompletion kcontacts kde-deps-installer kdiagram kguiaddons kholidays ki18n kiconthemes kitemmodels kservice libkdepim qt6
 
 name=eventviews

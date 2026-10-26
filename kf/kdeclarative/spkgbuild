@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for integrating KDE functionality and configuration with QML interfaces
 # depends : extra-cmake-modules kconfig kde-deps-installer kglobalaccel kguiaddons ki18n kwidgetsaddons qt6
 
 name=kdeclarative

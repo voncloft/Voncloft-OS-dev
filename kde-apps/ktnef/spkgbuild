@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library and viewer for extracting attachments from TNEF email files such as winmail.dat
 # depends : extra-cmake-modules kcalendarcore kcalutils kcontacts kde-deps-installer ki18n qt6
 
 name=ktnef

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : RSS and Atom feed reader for following news and website updates
 # depends : extra-cmake-modules grantleetheme kcmutils kcodecs kcrash kde-deps-installer ki18n kiconthemes knotifications knotifyconfig kontactinterface kparts kstatusnotifieritem ktextaddons kuserfeedback kxmlgui libkdepim messagelib pimcommon plasma-activities qt6 syndication
 
 name=akregator

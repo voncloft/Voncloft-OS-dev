@@ -1,4 +1,4 @@
-# description : KPhotoAlbum
+# description : Photo and video organizer with tags, annotations, and powerful collection searches
 # depends : extra-cmake-modules karchive kcolorscheme kcompletion kconfig kcoreaddons kde-deps-installer kdoctools ki18n kiconthemes kio kjobwidgets ktextwidgets kwidgetsaddons kxmlgui libjpeg-turbo libkdcraw marble purpose qt6 vlc
 
 name=kphotoalbum

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graphical GnuPG interface for managing keys and encrypting, decrypting, or signing files
 # depends : akonadi-contacts extra-cmake-modules gpgme karchive kcodecs kconfigwidgets kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kio kjobwidgets knotifications kservice kstatusnotifieritem ktextwidgets kwidgetsaddons kwindowsystem kxmlgui qt6
 
 name=kgpg

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Terminal emulator with tabs, split views, profiles, and command-line session management
 # depends : extra-cmake-modules icu kbookmarks kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kiconthemes kio knewstuff knotifications knotifyconfig kparts kpty kservice ktextwidgets kwidgetsaddons kwindowsystem kxmlgui libssh qt6
 
 name=konsole

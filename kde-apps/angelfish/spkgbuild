@@ -1,4 +1,4 @@
-# description : angelfish - KDE gear component
+# description : Web browser with a touch-friendly interface for Plasma Mobile and desktop use
 # depends : extra-cmake-modules futuresql kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kirigami kirigami-addons knotifications kwindowsystem purpose qcoro qqc2-desktop-style qt6
 
 name=angelfish

@@ -1,4 +1,4 @@
-# description : Kaidan
+# description : XMPP messaging client for exchanging messages and files on desktop and mobile devices
 # depends : extra-cmake-modules gstreamer icu kcrash kde-deps-installer kdsingleapplication kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kwindowsystem openssl prison qqc2-desktop-style qt6 qtkeychain qxmpp sqlite
 
 name=kaidan

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Alphabet learning application that teaches letters and syllables through recorded pronunciation
 # depends : extra-cmake-modules kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n knewstuff kwidgetsaddons kxmlgui qt6
 
 name=klettres

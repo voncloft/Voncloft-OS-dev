@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Oxygen sound theme for desktop notifications and system events
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=oxygen-sounds

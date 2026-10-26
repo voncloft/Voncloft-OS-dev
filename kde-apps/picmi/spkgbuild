@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Nonogram puzzle game in which numerical clues reveal a hidden picture
 # depends : extra-cmake-modules kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes knewstuff kwidgetsaddons kxmlgui libkdegames qt6
 
 name=picmi

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Audio mixer for adjusting playback and recording levels and selecting sound channels
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel ki18n knotifications kstatusnotifieritem kwidgetsaddons kwindowsystem kxmlgui qt6 solid
 
 name=kmix

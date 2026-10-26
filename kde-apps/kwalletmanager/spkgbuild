@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Graphical tool for creating, opening, and managing KDE password wallets and stored entries
 # depends : extra-cmake-modules karchive kauth kcmutils kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kio kservice kstatusnotifieritem kwallet kwidgetsaddons kwindowsystem kxmlgui qt6
 
 name=kwalletmanager

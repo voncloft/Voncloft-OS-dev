@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Developer utilities for inspecting Qt interfaces and testing KDE application components
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n kio kparts kwidgetsaddons qt6
 
 name=kde-dev-utils

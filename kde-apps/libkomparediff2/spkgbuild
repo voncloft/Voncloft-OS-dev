@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for parsing and handling file differences and patches in graphical comparison tools
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kio kxmlgui qt6
 
 name=libkomparediff2

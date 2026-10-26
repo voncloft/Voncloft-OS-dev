@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Libraries and widgets for accessing and editing contacts stored in Akonadi
 # depends : akonadi extra-cmake-modules grantleetheme kcodecs kcolorscheme kcompletion kcontacts kcoreaddons kde-deps-installer kguiaddons ki18n kiconthemes kio kmime kservice ktextaddons ktexttemplate ktextwidgets kwidgetsaddons kxmlgui prison qt6
 
 name=akonadi-contacts

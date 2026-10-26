@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Framework for search plugins that return desktop search results and executable actions
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kitemmodels kwindowsystem qt6 threadweaver
 
 name=krunner

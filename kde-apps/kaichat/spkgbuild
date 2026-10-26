@@ -1,4 +1,4 @@
-# description : KAIChat
+# description : AI chat application for conversations with local and online language model services
 # depends : extra-cmake-modules kcmutils kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kdsingleapplication kglobalaccel ki18n kiconthemes kio knotifications knotifyconfig kstatusnotifieritem ktextaddons kuserfeedback kwidgetsaddons kwindowsystem kxmlgui purpose qt6 shared-mime-info sonnet syntax-highlighting
 
 name=kaichat

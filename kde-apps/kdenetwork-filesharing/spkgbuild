@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Dolphin folder sharing interface for configuring Samba network shares
 # depends : extra-cmake-modules kauth kcompletion kcoreaddons kde-deps-installer ki18n kio kwidgetsaddons packagekit-qt qcoro qt6
 
 name=kdenetwork-filesharing

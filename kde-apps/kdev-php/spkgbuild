@@ -1,4 +1,4 @@
-# description : kdev-php - KDE gear component
+# description : KDevelop plugin providing PHP code completion, navigation, and language analysis
 # depends : extra-cmake-modules kcmutils kde-deps-installer kdevelop kdevelop-pg-qt ki18n ktexteditor qt6 threadweaver
 
 name=kdev-php

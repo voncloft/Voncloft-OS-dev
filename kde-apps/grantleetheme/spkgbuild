@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for loading and managing Grantlee-based display themes in KDE PIM applications
 # depends : extra-cmake-modules kcolorscheme kde-deps-installer kguiaddons ki18n kiconthemes knewstuff ktexttemplate kxmlgui qt6
 
 name=grantleetheme

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Disc authoring application for burning and copying CDs, DVDs, and Blu-ray discs
 # depends : extra-cmake-modules karchive kauth kcmutils kconfig kcoreaddons kde-deps-installer kdoctools kfilemetadata ki18n kiconthemes kio kjobwidgets knewstuff knotifications knotifyconfig kwidgetsaddons kxmlgui libkcddb libsamplerate qt6 solid
 
 name=k3b

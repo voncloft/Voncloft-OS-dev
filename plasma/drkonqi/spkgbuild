@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KDE crash reporting assistant for collecting backtraces and submitting application bug reports
 # depends : extra-cmake-modules kauth kcmutils kcodecs kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kguiaddons ki18n kidletime kio kitemmodels kjobwidgets knotifications kservice kstatusnotifieritem kwallet kwidgetsaddons kwindowsystem polkit-qt qt6 solid syntax-highlighting
 # platform : Requires systemd; excluded from the SysVinit desktop aggregate.
 

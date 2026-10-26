@@ -1,4 +1,4 @@
-# description : GCompris
+# description : Educational activity collection for children covering reading, arithmetic, science, and computer skills
 # depends : extra-cmake-modules kde-deps-installer kdoctools openssl qt6
 
 name=gcompris

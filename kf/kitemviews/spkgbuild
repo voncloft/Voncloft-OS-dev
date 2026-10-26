@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Enhanced Qt item views and delegates for displaying lists, trees, and tables
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kitemviews

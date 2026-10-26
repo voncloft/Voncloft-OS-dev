@@ -1,4 +1,4 @@
-# description : kcolorpicker - KDE dependency
+# description : Qt color picker widget library with palette selection and custom color support
 # depends : kde-deps-installer qt6
 
 name=kcolorpicker

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Settings and background integration for matching GTK application appearance to Plasma
 # depends : extra-cmake-modules glib gsettings-desktop-schemas gtk3 kauth kcodecs kcolorscheme kconfig kcoreaddons kdbusaddons kde-deps-installer kdecoration kguiaddons kwidgetsaddons kwindowsystem pkgconf qt6 sassc
 
 name=kde-gtk-config

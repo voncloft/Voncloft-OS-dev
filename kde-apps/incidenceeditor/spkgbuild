@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Calendar editing widgets and dialogs for creating and modifying events, tasks, and journal entries
 # depends : akonadi akonadi-calendar akonadi-mime calendarsupport eventviews extra-cmake-modules kcalendarcore kcalutils kcodecs kde-deps-installer kdiagram kguiaddons ki18n kiconthemes kidentitymanagement kio kldap kmime kpimtextedit ktextwidgets libkdepim pimcommon qt6
 
 name=incidenceeditor

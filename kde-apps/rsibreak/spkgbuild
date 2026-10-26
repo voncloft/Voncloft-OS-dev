@@ -1,4 +1,4 @@
-# description : RSI Break
+# description : Break reminder that monitors computer use and encourages regular rest periods
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kidletime knotifications knotifyconfig kstatusnotifieritem ktextwidgets kwindowsystem kxmlgui qt6
 
 name=rsibreak

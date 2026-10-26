@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Minimal Plasma shell for building embedded and specialized device interfaces
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kitemmodels kservice ksvg kwayland kwindowsystem libplasma qt6
 
 name=plasma-nano

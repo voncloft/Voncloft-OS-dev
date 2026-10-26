@@ -1,4 +1,4 @@
-# description : Ruqola
+# description : Rocket.Chat messaging client with channels, direct messages, notifications, and file sharing
 # depends : extra-cmake-modules karchive kcodecs kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kdsingleapplication ki18n kiconthemes kidletime kio kitemviews knotifications knotifyconfig kstatusnotifieritem ktextaddons ktextwidgets kuserfeedback kxmlgui networkmanager-qt openssl plasma-activities prison purpose qt6 qtkeychain sonnet syntax-highlighting
 
 name=ruqola

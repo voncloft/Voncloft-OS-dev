@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for discovering hardware devices and accessing information about storage and power
 # depends : bison extra-cmake-modules flex kde-deps-installer qt6 udev util-linux
 
 name=solid

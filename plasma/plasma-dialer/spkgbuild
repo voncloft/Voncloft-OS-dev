@@ -1,4 +1,4 @@
-# description : plasma-dialer - KDE plasma component
+# description : Phone application for placing and receiving calls on Plasma Mobile
 # depends : extra-cmake-modules kconfig kcontacts kcoreaddons kdbusaddons kde-deps-installer ki18n kio kirigami kirigami-addons knotifications kpeople kwindowsystem modemmanager-qt qt6 wayland
 
 name=plasma-dialer

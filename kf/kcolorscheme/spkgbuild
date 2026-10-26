@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for applying KDE color schemes and reading standard interface colors
 # depends : extra-cmake-modules kconfig kde-deps-installer kguiaddons ki18n qt6
 
 name=kcolorscheme

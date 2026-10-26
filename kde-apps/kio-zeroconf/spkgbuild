@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KIO worker for browsing local network services advertised through Zeroconf
 # depends : extra-cmake-modules kdbusaddons kde-deps-installer kdnssd ki18n kio qt6
 
 name=kio-zeroconf

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Command-line utilities for importing, exporting, and working with Akonadi calendar data
 # depends : akonadi akonadi-calendar calendarsupport extra-cmake-modules kcalendarcore kde-deps-installer ki18n qt6
 
 name=akonadi-calendar-tools

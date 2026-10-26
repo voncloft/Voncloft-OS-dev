@@ -1,4 +1,4 @@
-# description : digiKam
+# description : Photo manager for organizing, tagging, editing, and searching large image collections
 # depends : bison boost eigen exiv2 expat extra-cmake-modules ffmpeg flex glib kcalendarcore kconfig kcontacts kcoreaddons kde-deps-installer kfilemetadata ki18n kiconthemes kio knotifications knotifyconfig kservice kwindowsystem kxmlgui lcms2 lensfun libgphoto2 libheif libjpeg-turbo libjxl libkdcraw libksane libpng libtiff libxml2 libxslt opencv qt6 solid sonnet threadweaver
 
 name=digikam

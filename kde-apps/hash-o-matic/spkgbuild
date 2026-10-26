@@ -1,4 +1,4 @@
-# description : Hash-o-matic
+# description : Utility for calculating file hashes, comparing checksums, and checking file signatures
 # depends : extra-cmake-modules gpgmepp kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kirigami kwindowsystem libkleo qgpgme-qt qt6
 
 name=hash-o-matic

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for collecting optional application usage statistics and presenting user surveys
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kuserfeedback

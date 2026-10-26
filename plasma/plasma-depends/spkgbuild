@@ -1,5 +1,5 @@
 # depends : elogind libdisplay-info libdrm libinput libxkbcommon pipewire plasma-wayland-protocols polkit-qt qt6 wayland wayland-protocols
-# description : Base dependencies for Plasma on SysVinit
+# description : Meta-package that pulls in graphics, input, audio, and session dependencies for Plasma on SysVinit
 
 name=plasma-depends
 version=6.8.1

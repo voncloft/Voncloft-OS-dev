@@ -1,4 +1,4 @@
-# description : Gwenview is a fast and easy-to-use image viewer for KDE
+# description : Image viewer with thumbnail browsing, slideshows, and basic rotation, cropping, and resizing tools
 # depends : exiv2 extra-cmake-modules kcolorpicker kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kiconthemes kimageannotator kio kitemmodels knewstuff knotifications kparts kwidgetsaddons kwindowsystem kxmlgui lcms2 libjpeg-turbo libkdcraw libpng plasma-activities purpose qt6 wayland wayland-protocols
 
 name=gwenview

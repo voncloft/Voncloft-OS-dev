@@ -1,4 +1,4 @@
-# description : francis - KDE gear component
+# description : Pomodoro timer for alternating focused work sessions and breaks
 # depends : extra-cmake-modules kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kirigami kirigami-addons kwindowsystem qqc2-desktop-style qt6
 
 name=francis

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Music education application with ear training exercises for intervals, chords, rhythms, and scales
 # depends : aubio extra-cmake-modules fluidsynth kcolorscheme kcoreaddons kcrash kde-deps-installer kdoctools ki18n kirigami kirigami-addons pkgconf qqc2-desktop-style qt6
 
 name=minuet

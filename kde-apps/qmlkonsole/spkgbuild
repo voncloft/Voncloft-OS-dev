@@ -1,4 +1,4 @@
-# description : qmlkonsole - KDE gear component
+# description : Terminal emulator with a QML interface suited to mobile devices
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kirigami kirigami-addons kpty kwindowsystem qt6
 
 name=qmlkonsole

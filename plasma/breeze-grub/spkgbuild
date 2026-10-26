@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Breeze theme for the GRUB boot menu
 # depends : grub
 
 name=breeze-grub

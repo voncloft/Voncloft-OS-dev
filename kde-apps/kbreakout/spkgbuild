@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Brick-breaking arcade game in which players bounce a ball with a paddle
 # depends : extra-cmake-modules kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kbreakout

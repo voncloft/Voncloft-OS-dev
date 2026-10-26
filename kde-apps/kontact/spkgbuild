@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Personal information suite combining email, calendars, contacts, tasks, and other organizer tools
 # depends : extra-cmake-modules grantleetheme kcmutils kcrash kdbusaddons kde-deps-installer kguiaddons ki18n kiconthemes kontactinterface ktextaddons ktexttemplate libkdepim pimcommon qt6
 
 name=kontact

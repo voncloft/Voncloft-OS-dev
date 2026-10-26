@@ -1,5 +1,5 @@
 # depends : extra-cmake-modules kde-deps-installer libdmtx qrencode qt6 zxing-cpp
-# description : Core components for the kde desktop
+# description : Library and QML components for generating and reading barcodes and QR codes
 
 name=prison
 version=6.31.0

@@ -1,4 +1,4 @@
-# description : Kookbook
+# description : Recipe manager for browsing and organizing recipes stored as text files
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kookbook

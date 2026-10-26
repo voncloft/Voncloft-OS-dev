@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt image plugins for reading and writing additional graphics formats
 # depends : extra-cmake-modules karchive kde-deps-installer qt6
 
 name=kimageformats

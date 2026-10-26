@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Audio editor for recording, cutting, processing, and exporting sound files
 # depends : extra-cmake-modules karchive kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio ktextwidgets kwidgetsaddons kxmlgui qt6
 
 name=kwave

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Demonstration application showing Kirigami interface components and example layouts
 # depends : extra-cmake-modules kde-deps-installer kirigami kitemmodels qt6
 
 name=kirigami-gallery

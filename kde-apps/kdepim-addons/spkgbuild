@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Additional plugins and features for KDE email, address book, and calendar applications
 # depends : akonadi akonadi-calendar akonadi-contacts akonadi-import-wizard calendarsupport corrosion extra-cmake-modules gpgmepp grantleetheme incidenceeditor kaddressbook kcalendarcore kcalutils kcmutils kcolorscheme kconfig kconfigwidgets kcontacts kdbusaddons kde-deps-installer kdeclarative kguiaddons kholidays ki18n kiconthemes kidentitymanagement kimap kio kitinerary kldap kmailtransport kmime kparts kpimtextedit kpkpass ktextaddons ktexttemplate ktnef kxmlgui libgravatar libkdepim libkleo libksieve mailcommon mailimporter messagelib pimcommon plasma-activities prison qt6 rust syntax-highlighting
 
 name=kdepim-addons

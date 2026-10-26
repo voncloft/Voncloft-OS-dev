@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KWin window decoration engine for rendering configurable SVG-based window borders
 # depends : extra-cmake-modules kcmutils kcolorscheme kconfig kcoreaddons kde-deps-installer kdecoration ki18n knewstuff kpackage ksvg qt6
 
 name=aurorae

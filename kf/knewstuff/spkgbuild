@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for browsing, downloading, and installing application add-ons and shared content
 # depends : attica extra-cmake-modules karchive kconfig kcoreaddons kde-deps-installer ki18n kirigami kpackage kwidgetsaddons qt6 syndication
 
 name=knewstuff

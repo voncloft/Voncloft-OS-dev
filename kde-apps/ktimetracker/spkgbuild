@@ -1,4 +1,4 @@
-# description : KTimeTracker
+# description : Time tracking application for recording how long is spent on tasks and projects
 # depends : extra-cmake-modules kcalendarcore kcmutils kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kidletime kio kjobwidgets knotifications kstatusnotifieritem ktextwidgets kwindowsystem kxmlgui qt6
 
 name=ktimetracker

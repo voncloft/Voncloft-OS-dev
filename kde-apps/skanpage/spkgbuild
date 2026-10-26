@@ -1,4 +1,4 @@
-# description : frontend for scanner
+# description : Document scanning application for collecting multiple pages and saving them as PDF or image files
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kde-deps-installer ki18n kio kirigami kquickimageeditor ksanecore kxmlgui leptonica purpose qt6 tesseract
 
 name=skanpage

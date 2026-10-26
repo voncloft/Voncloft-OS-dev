@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Tools for translating XML documentation using gettext PO message catalogs
 # depends : extra-cmake-modules gettext kde-deps-installer kdoctools qt6
 
 name=poxml

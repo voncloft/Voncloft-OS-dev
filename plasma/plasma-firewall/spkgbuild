@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : System Settings interface for configuring supported system firewall backends
 # depends : extra-cmake-modules kauth kcmutils kconfig kcoreaddons kde-deps-installer ki18n qt6
 
 name=plasma-firewall

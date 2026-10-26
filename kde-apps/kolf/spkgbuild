@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Miniature golf game with obstacles, multiple courses, and a course editor
 # depends : extra-cmake-modules kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio ktextwidgets kwidgetsaddons kxmlgui libkdegames qt6
 
 name=kolf

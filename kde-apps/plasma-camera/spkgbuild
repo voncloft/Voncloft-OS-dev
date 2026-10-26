@@ -1,4 +1,4 @@
-# description : plasma-camera - KDE gear component
+# description : Camera application for taking photos on Plasma Mobile devices
 # depends : exiv2 extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n kirigami qt6
 
 name=plasma-camera

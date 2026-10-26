@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Tools for generating KDE library API documentation from source code and metadata
 # depends : kde-deps-installer extra-cmake-modules python python-setuptools python-wheel python-doxypypy python-doxyqml python-requests jinja2 python-yaml doxygen graphviz
 
 name=kapidox

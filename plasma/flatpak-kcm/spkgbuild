@@ -1,4 +1,4 @@
-# description : flatpak-kcm - KDE plasma component
+# description : System Settings module for viewing and changing Flatpak application permissions
 # depends : extra-cmake-modules flatpak kcmutils kconfig kconfigwidgets kcoreaddons kde-deps-installer ki18n kitemmodels kservice pkgconf qt6
 
 name=flatpak-kcm

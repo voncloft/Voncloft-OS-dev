@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for reading Apple Wallet pass files containing tickets, boarding passes, and other passes
 # depends : extra-cmake-modules karchive kde-deps-installer qt6 shared-mime-info
 
 name=kpkpass

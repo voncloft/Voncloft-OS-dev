@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Breeze icon theme for KDE applications and the Plasma desktop
 # depends : extra-cmake-modules kde-deps-installer python qt6
 
 name=breeze-icons

@@ -1,4 +1,4 @@
-# description : Crow Translate
+# description : Text translation application with speech playback and support for online translation services
 # depends : extra-cmake-modules kde-deps-installer kiconthemes kwayland libxcb qt6 tesseract
 
 name=crow-translate

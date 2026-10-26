@@ -1,4 +1,4 @@
-# description : KleverNotes
+# description : Markdown note-taking application for writing, organizing, and previewing notes
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kde-deps-installer ki18n kiconthemes kio kirigami kirigami-addons qt6
 
 name=klevernotes

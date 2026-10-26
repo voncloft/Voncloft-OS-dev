@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Plasma settings and device authorization interface for Thunderbolt hardware
 # depends : extra-cmake-modules kcmutils kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n knotifications kservice qt6
 
 name=plasma-thunderbolt

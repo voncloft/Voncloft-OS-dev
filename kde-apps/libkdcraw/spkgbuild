@@ -1,4 +1,4 @@
-# description : Libkdcraw is a KDE wrapper around the libraw-0
+# description : Qt library wrapper around LibRaw for decoding digital camera RAW images
 # depends : extra-cmake-modules kde-deps-installer libraw qt6
 
 name=libkdcraw

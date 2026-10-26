@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Widgets for displaying progress and handling user interaction during background jobs
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer knotifications kwidgetsaddons qt6
 
 name=kjobwidgets

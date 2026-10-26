@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Advanced text editor with syntax highlighting, multiple documents, project tools, and programming support
 # depends : breeze-icons extra-cmake-modules gettext kcoreaddons kcrash kde-deps-installer kdoctools kguiaddons ki18n kiconthemes knewstuff ktexteditor kuserfeedback qt6 qtkeychain
 
 name=kate

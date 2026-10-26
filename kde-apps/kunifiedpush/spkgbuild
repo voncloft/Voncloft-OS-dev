@@ -1,4 +1,4 @@
-# description : kunifiedpush - KDE gear component
+# description : Libraries and tools for delivering push notifications to applications through the UnifiedPush protocol
 # depends : extra-cmake-modules kcmutils kcoreaddons kcrash kde-deps-installer ki18n kservice openssl qt6 solid
 
 name=kunifiedpush

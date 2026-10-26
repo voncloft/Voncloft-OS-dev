@@ -1,4 +1,4 @@
-# description : kweathercore - KDE gear component
+# description : Library for retrieving weather forecasts and alerts for use in Qt applications
 # depends : extra-cmake-modules kde-deps-installer kholidays ki18n qt6
 
 name=kweathercore

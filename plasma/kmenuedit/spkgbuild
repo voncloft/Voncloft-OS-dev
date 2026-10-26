@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Editor for organizing application launcher entries, categories, and launch commands
 # depends : extra-cmake-modules kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel ki18n kiconthemes kio kitemviews kwindowsystem kxmlgui qt6 sonnet
 
 name=kmenuedit

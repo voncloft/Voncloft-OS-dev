@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Background service that manages desktop activities and records associated resource usage
 # depends : extra-cmake-modules kauth kcodecs kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kglobalaccel ki18n kio kservice kwidgetsaddons kxmlgui qt6
 
 name=kactivitymanagerd

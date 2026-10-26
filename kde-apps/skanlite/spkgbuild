@@ -1,4 +1,4 @@
-# description : skanlite - KDE gear component
+# description : Scanner application for capturing images and documents through SANE
 # depends : extra-cmake-modules kcoreaddons kcrash kde-deps-installer kdoctools ki18n kio kxmlgui libksane qt6
 
 name=skanlite

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Tea brewing timer that notifies the user when a selected steeping time has elapsed
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kde-deps-installer kdoctools kguiaddons ki18n kiconthemes knotifications knotifyconfig kstatusnotifieritem ktextwidgets kxmlgui qt6
 
 name=kteatime

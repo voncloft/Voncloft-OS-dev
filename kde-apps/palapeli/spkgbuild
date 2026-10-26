@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Jigsaw puzzle game with a puzzle collection and tools for creating puzzles from images
 # depends : extra-cmake-modules karchive kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio kitemviews knotifications kwidgetsaddons kxmlgui libkdegames qt6
 
 name=palapeli

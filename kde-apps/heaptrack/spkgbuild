@@ -1,4 +1,4 @@
-# description : Heaptrack
+# description : Heap memory profiler for finding allocation hotspots, excessive allocations, and memory leaks
 # depends : boost elfutils extra-cmake-modules kde-deps-installer libunwind qt6 zlib zstd
 
 name=heaptrack

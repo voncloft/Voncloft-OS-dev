@@ -1,4 +1,4 @@
-# description : Vvave
+# description : Maui music player for organizing audio collections and playing tracks and playlists
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n mauikit mauikit-filebrowsing qt6 taglib
 
 name=vvave

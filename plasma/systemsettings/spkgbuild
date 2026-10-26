@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Central application for configuring Plasma appearance, hardware, accounts, and desktop behavior
 # depends : extra-cmake-modules kauth kcmutils kcolorscheme kconfig kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kio kirigami kitemmodels kitemviews kjobwidgets krunner kservice kwidgetsaddons kwindowsystem kxmlgui plasma-activities qt6
 
 name=systemsettings

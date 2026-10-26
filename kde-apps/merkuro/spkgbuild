@@ -1,4 +1,4 @@
-# description : merkuro - KDE gear component
+# description : Calendar and personal organizer for managing events, tasks, and contacts
 # depends : akonadi akonadi-calendar akonadi-contacts akonadi-mime akonadi-search extra-cmake-modules gpgmepp kcalendarcore kcalutils kconfigwidgets kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kdepim-runtime kholidays ki18n kiconthemes kidentitymanagement kio kirigami kirigami-addons kitemmodels kmailtransport kmbox kmime knotifications kwindowsystem kxmlgui libkdepim libkleo mailcommon messagelib mimetreeparser pimcommon qqc2-desktop-style qt6
 
 name=merkuro

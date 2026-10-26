@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Setup wizard for configuring email accounts and related services in KMail
 # depends : akonadi extra-cmake-modules kcrash kdbusaddons kde-deps-installer kdoctools ki18n kidentitymanagement kio kmailtransport kmime qt6
 
 name=kmail-account-wizard

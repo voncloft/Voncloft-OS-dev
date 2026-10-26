@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : KIO worker that allows authorized applications to access files with administrator privileges
 # depends : extra-cmake-modules kde-deps-installer ki18n kio polkit-qt qt6
 
 name=kio-admin

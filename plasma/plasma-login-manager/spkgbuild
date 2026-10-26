@@ -1,4 +1,4 @@
-# description : plasma-login-manager - KDE plasma component
+# description : Plasma graphical login manager with a greeter and settings module; requires systemd
 # depends : extra-cmake-modules kauth kcmutils kconfig kcoreaddons kdbusaddons kde-deps-installer ki18n kio kpackage kwindowsystem layer-shell-qt libkscreen libplasma libxau linux-pam plasma-workspace qt6
 # platform : Requires systemd; excluded from the SysVinit desktop aggregate.
 

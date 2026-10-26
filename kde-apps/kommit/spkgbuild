@@ -1,4 +1,4 @@
-# description : Kommit
+# description : Graphical Git client for reviewing changes, browsing history, and managing branches and commits
 # depends : dolphin extra-cmake-modules kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kio ktexteditor ktextwidgets kxmlgui libgit2 openssl qt6 syntax-highlighting
 
 name=kommit

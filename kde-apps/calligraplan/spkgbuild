@@ -1,4 +1,4 @@
-# description : Plan
+# description : Project planning application for scheduling tasks, allocating resources, and tracking progress
 # depends : extra-cmake-modules karchive kcalendarcore kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdiagram kguiaddons kholidays ki18n kiconthemes kio kitemmodels kitemviews kjobwidgets knotifications kparts ktextwidgets kwallet kwidgetsaddons kwindowsystem kxmlgui perl plasma-activities qca qt6 shared-mime-info sonnet
 
 name=calligraplan

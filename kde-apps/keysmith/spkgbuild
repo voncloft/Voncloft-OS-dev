@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Authenticator that generates time-based and counter-based codes for two-factor authentication
 # depends : extra-cmake-modules kconfig kcoreaddons kdbusaddons kde-deps-installer kguiaddons ki18n kirigami kirigami-addons kwidgetsaddons kwindowsystem libsodium openssl prison qqc2-desktop-style qt6
 
 name=keysmith

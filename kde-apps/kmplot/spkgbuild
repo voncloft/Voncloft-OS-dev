@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Mathematical function plotter with graph analysis, derivatives, and integral tools
 # depends : extra-cmake-modules kcompletion kconfig kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kio kjobwidgets kparts ktextwidgets kwidgetsaddons qt6
 
 name=kmplot

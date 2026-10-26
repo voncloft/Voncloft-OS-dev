@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Interactive periodic table with chemical element properties, isotope information, and chemistry tools
 # depends : extra-cmake-modules gettext karchive kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools ki18n kio kitemviews knewstuff kplotting ktextwidgets kunitconversion kwidgetsaddons kxmlgui qt6
 
 name=kalzium

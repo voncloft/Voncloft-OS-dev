@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for discovering and advertising local network services using DNS-SD
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kdnssd

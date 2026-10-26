@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for handling email messages and folders stored in Akonadi
 # depends : akonadi extra-cmake-modules kde-deps-installer ki18n kio kitemmodels kmime kxmlgui libxslt qt6 shared-mime-info
 
 name=akonadi-mime

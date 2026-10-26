@@ -1,6 +1,6 @@
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Desktop sticky notes application for keeping reminders and short pieces of text
 
 name=knotes
 version=24.05.2

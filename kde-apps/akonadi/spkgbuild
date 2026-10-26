@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Background service for storing and accessing email, contacts, calendars, and other personal information
 # depends : extra-cmake-modules kcolorscheme kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer ki18n kiconthemes kirigami kirigami-addons kitemmodels kwidgetsaddons kwindowsystem kxmlgui qt6 shared-mime-info xz
 
 name=akonadi

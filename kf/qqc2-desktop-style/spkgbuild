@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt Quick Controls style that follows the desktop Qt widget theme and settings
 # depends : extra-cmake-modules kcolorscheme kconfig kde-deps-installer kiconthemes kirigami qt6 sonnet
 
 name=qqc2-desktop-style

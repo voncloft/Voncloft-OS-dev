@@ -1,7 +1,7 @@
 # note : Requires a separate Qt 5/KF5 stack; the KF6 upgrade does not supply it.
 # depends : kde-deps-installer
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
-# description : Core components for the kde desktop
+# description : Language interpreter plugins for running scripts through the Kross scripting framework
 
 name=kross-interpreters
 version=24.12.3

@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt scanner interface widgets for configuring scans and acquiring images through SANE
 # depends : extra-cmake-modules kde-deps-installer ki18n ksanecore ktextwidgets kwallet kwidgetsaddons qt6
 
 name=libksane

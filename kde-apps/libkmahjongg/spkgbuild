@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Shared Mahjong tile graphics, backgrounds, and rendering support for KDE games
 # depends : extra-cmake-modules imagemagick7 kconfig kconfigwidgets kcoreaddons kde-deps-installer ki18n kwidgetsaddons qt6
 
 name=libkmahjongg

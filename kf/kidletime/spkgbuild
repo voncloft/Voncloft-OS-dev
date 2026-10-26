@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Library for detecting user inactivity and tracking desktop idle time
 # depends : extra-cmake-modules kde-deps-installer libx11 libxcb libxext libxfixes libxi libxrender libxtst plasma-wayland-protocols qt6 wayland wayland-protocols xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=kidletime

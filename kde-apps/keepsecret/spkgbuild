@@ -1,4 +1,4 @@
-# description : keepsecret - KDE gear component
+# description : Password manager for viewing and editing credentials stored by Secret Service-compatible backends
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kirigami kirigami-addons kirigami-app-components kitemmodels libsecret pkgconf qqc2-desktop-style qt6
 
 name=keepsecret

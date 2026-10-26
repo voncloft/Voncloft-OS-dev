@@ -1,4 +1,4 @@
-# description : The kdsoap-ws-discovery-client package contains a library that provides support for the WS-Discovery protocol, a recent protocol used to discover services available on a local network
+# description : Qt library for discovering network services and devices using the WS-Discovery protocol
 # depends : extra-cmake-modules kde-deps-installer kdsoap qt6
 
 name=kdsoap-ws-discovery-client

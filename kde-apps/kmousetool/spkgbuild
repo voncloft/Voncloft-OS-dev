@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Accessibility utility that clicks the mouse automatically when the pointer stops moving
 # depends : extra-cmake-modules kconfig kcoreaddons kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kstatusnotifieritem kwidgetsaddons kwindowsystem kxmlgui libx11 libxext libxfixes libxi libxrender libxtst qt6
 
 name=kmousetool

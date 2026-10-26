@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : File preview generators for graphics formats such as camera RAW, PDF, and PostScript
 # depends : extra-cmake-modules karchive kde-deps-installer kdegraphics-mobipocket kio libkdcraw libkexiv2 qt6
 
 name=kdegraphics-thumbnailers

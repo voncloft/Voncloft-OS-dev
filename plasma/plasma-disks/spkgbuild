@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Disk health monitoring and failure notifications using SMART information
 # depends : extra-cmake-modules kauth kcmutils kcodecs kconfig kcoreaddons kdbusaddons kde-deps-installer kdeclarative ki18n kio knotifications kservice kwidgetsaddons kwindowsystem qt6 solid
 
 name=plasma-disks

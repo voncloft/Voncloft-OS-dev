@@ -1,4 +1,4 @@
-# description : qrca - KDE gear component
+# description : Barcode and QR code scanner for reading codes from a camera or image
 # depends : extra-cmake-modules kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kio kirigami kirigami-addons knotifications kservice networkmanager-qt prison qt6
 
 name=qrca

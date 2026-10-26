@@ -1,4 +1,4 @@
-# description : Core components for the kde desktop
+# description : Qt Quick components for displaying charts in QML applications
 # depends : extra-cmake-modules kde-deps-installer qt6
 
 name=kqtquickcharts
