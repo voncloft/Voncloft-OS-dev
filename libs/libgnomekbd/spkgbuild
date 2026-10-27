@@ -2,14 +2,14 @@
 # depends : gtk3 intltool libxklavier glib
 
 name=libgnomekbd
-version=3.26.1+2+g8d02ebd
+version=3.28.1
 release=1
 
-source="https://gitlab.gnome.org/GNOME/$name/-/archive/$version/$name-$version.tar.gz"
+source="https://download.gnome.org/sources/libgnomekbd/3.28/libgnomekbd-3.28.1.tar.xz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/libgnomekbd*/
 	autoreconf -ifv
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
       	--disable-schemas-compile --disable-static

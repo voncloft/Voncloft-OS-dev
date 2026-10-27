@@ -2,9 +2,9 @@
 # depends	: autoconf2.13 icu rust which
 
 name=mozjs
-version=102.9.0
+version=102.15.1
 release=1
-source="https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz"
+source="https://archive.mozilla.org/pub/firefox/releases/102.15.1esr/source/firefox-102.15.1esr.source.tar.xz"
 options="!checksum"
 build() {
 	cd firefox-$version

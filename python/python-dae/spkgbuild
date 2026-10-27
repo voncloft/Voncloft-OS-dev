@@ -2,14 +2,14 @@
 # depends : python-xlib python-pyqt6
 
 name=python-dae
-version=1.0.2
+version=2014.2.1
 release=2
 
-source="git+https://github.com/linuxdeepin/dae.git#tag=1.0.2"
+source="https://github.com/linuxdeepin/dae/archive/refs/tags/2014.2.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/dae*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

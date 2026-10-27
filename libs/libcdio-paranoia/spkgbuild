@@ -2,12 +2,12 @@
 # depends	: libcdio
 
 name=libcdio-paranoia
-version=10.2+2.0.1
+version=10.2+2.0.2
 release=1
-source="https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-$version.tar.bz2"
+source="https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-10.2+2.0.2.tar.bz2"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/libcdio-paranoia*/
 
 	./configure --prefix=/usr --disable-static
 	make

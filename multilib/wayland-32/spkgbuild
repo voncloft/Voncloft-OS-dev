@@ -2,12 +2,12 @@
 # depends	: libxml2-32 wayland
 
 name=wayland-32
-version=1.24.0
+version=1.26.0
 release=1
-source="https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.24.0/downloads/wayland-1.24.0.tar.xz"
+source="https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.26.0/downloads/wayland-1.26.0.tar.xz"
 
 build() {
-	cd wayland-$version
+	cd "$SRC"/wayland*/
 
 	export CC="gcc -m32"
 	export CXX="g++ -m32"

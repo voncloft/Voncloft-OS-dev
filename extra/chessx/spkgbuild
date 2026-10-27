@@ -2,14 +2,14 @@
 # depends : qt6-speech qt6-svg qt6
 
 name=chessx
-version=1.5.4
+version=1.6.10
 release=1
 
-source="https://sourceforge.net/projects/$pkgname/files/$name/$pkgver/$name-$version.tgz"
+source="https://downloads.sourceforge.net/project/chessx/chessx/1.6.10/chessx-1.6.10.tgz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/chessx-master*/
 	  lrelease i18n/*
   	qmake
   	make

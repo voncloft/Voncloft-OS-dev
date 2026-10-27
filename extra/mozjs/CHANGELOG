@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+mozjs
+Version=102.15.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 102.9.0 to version 102.15.1

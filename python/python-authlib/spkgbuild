@@ -2,14 +2,14 @@
 # depends : python-cryptography
 
 name=python-authlib
-version=1.0.0
+version=1.9.1
 release=3
 
-source="git+https://github.com/lepture/authlib.git#commit=b3e935355afcfb5240bac5a99707ffecc35772a2?signed"
+source="https://files.pythonhosted.org/packages/c9/dc/087c08741a98d234c9b98beef8a28d3c309f814d14b6156422c5815bf6d6/authlib-1.9.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/authlib*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

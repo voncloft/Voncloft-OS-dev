@@ -2,10 +2,10 @@
 # depends : python-chardet python-cryptography python-sortedcontainers
 
 name=python-pdfminer
-version=20201018
+version=20260107
 release=2
 
-source="https://github.com/pdfminer/pdfminer.six/archive/refs/tags/$version.tar.gz"
+source="https://github.com/pdfminer/pdfminer.six/archive/refs/tags/20260107.tar.gz"
 options="!checksum"
 
 build() {

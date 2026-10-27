@@ -2,9 +2,9 @@
 # depends       : cups html5lib nodejs nss pciutils qt6 alsa-lib pulseaudio ffmpeg icu libevent libwebp libxslt opus pipewire
 
 name=qtwebengine
-version=6.9.1    
+version=6.9.3    
 release=1
-source="https://download.qt.io/official_releases/qt/6.9/6.9.1/submodules/qtwebengine-everywhere-src-6.9.1.tar.xz"
+source="https://download.qt.io/archive/qt/6.9/6.9.3/submodules/qtwebengine-everywhere-src-6.9.3.zip"
 
 options="!checksum"
 

@@ -2,10 +2,10 @@
 # depends : python taglib
 
 name=python-pytaglib
-version=1.4.6
+version=3.2.0
 release=4
 
-source="https://pypi.org/packages/source/p/pytaglib/pytaglib-1.4.6.tar.gz"
+source="https://files.pythonhosted.org/packages/c3/ff/4e81cc7aae32c85eaaad614defe6fa9d4da82ea9dc452db9001036acfa64/pytaglib-3.2.0.tar.gz"
 options="!checksum"
 
 build() {

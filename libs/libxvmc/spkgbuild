@@ -2,9 +2,9 @@
 # depends	: libx11 libxext libxv 
 
 name=libxvmc
-version=1.0.14
+version=1.0.15
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXvMC-$version.tar.xz"
+source="https://www.x.org/pub/individual/lib/libXvMC-1.0.15.tar.gz"
 
 build() {
 	cd libXvMC-$version

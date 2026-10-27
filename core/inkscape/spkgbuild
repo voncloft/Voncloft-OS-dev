@@ -2,12 +2,12 @@
 # depends	: gsl boost imagemagick6 gc lcms2 poppler-glib popt libxslt gtkmm2 double-conversion potrace
 
 name=inkscape
-version=1.4.2
+version=1.4.4
 release=1
-source="https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_${version/./_}/inkscape-INKSCAPE_${version/./_}.tar.bz2"
+source="https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_1_4_4/inkscape-INKSCAPE_1_4_4.tar.gz"
 options="!checksum"
 build() {
-	cd $name-INKSCAPE_${version/./_}
+	cd "$SRC"/inkscape-INKSCAPE*/
 
 	mkdir build
 	cd    build

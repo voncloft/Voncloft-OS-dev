@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:29:43 AM EDT 2026
+
+Version=20260301-source
+Release=2
+
+Synopsis:
+Upgraded from version 20250308-source to version 20260301-source

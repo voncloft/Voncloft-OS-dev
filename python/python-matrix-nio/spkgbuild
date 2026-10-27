@@ -2,14 +2,14 @@
 # depends : python python-aiofiles python-aiohttp python-atomicwrites python-cachetools
 
 name=python-matrix-nio
-version=0.18.7
+version=0.26.0
 release=1
 
-source="git+https://github.com/poljar/matrix-nio.git?signed#tag="
+source="https://files.pythonhosted.org/packages/a5/74/46fe787ef96993903bfa40f806f28f0f16eb4b482c69cb70a1ff8b774223/matrix_nio-0.26.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/matrix_nio*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

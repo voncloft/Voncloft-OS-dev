@@ -2,7 +2,7 @@
 # depends : python-pyhamcrest
 
 name=python-doublex
-version=1.9.6
+version=1.9.6.1
 release=1
 
 source="https://github.com/davidvilla/python-doublex/archive/v1.9.6/python-doublex-1.9.6.tar.gz"

@@ -2,14 +2,14 @@
 # depends : python-nmigen
 
 name=python-nmigen-boards
-version=r193.cb18fc5
+version=r193.cb18fc5.git20260813213950
 release=1
 
-source="git+https://github.com/nmigen/nmigen-boards#commit=b3e935355afcfb5240bac5a99707ffecc35772a2"
+source="https://github.com/nmigen/nmigen-boards/archive/f270d210e36b0787d62db77176c7b0e8032178d3.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/amaranth-boards*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

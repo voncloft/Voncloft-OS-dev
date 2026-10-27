@@ -1,12 +1,12 @@
 # description	: display directory contents, including directories, files, links, in a terminal
 
 name=tree
-version=2.2.1
+version=2.3.2
 release=1
-source="http://mama.indstate.edu/users/ice/$name/src/$name-$version.tgz"
+source="https://oldmanprogrammer.net/tar/tree/tree-2.3.2.tgz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/tree*/
 
   	make
 	make prefix=$PKG/usr MANDIR=$PKG/usr/share/man/man1 install

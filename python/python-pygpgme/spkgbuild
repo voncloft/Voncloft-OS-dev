@@ -2,14 +2,14 @@
 # depends : python gpgme
 
 name=python-pygpgme
-version=0.3
+version=0.6
 release=9
 
-source="https://launchpad.net/pygpgme/trunk/0.3/+download/pygpgme-0.3.tar.gz"
+source="https://files.pythonhosted.org/packages/a2/51/c2f5b4dfaff04fec88def7d9710ca3d5f05467cfb486377484196c3634cd/pygpgme-0.6.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pygpgme*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

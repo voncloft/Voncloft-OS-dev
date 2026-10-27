@@ -2,9 +2,9 @@
 # depends	: libxcomposite
 
 name=libxcomposite-32
-version=0.4.5
+version=0.4.7
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXcomposite-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXcomposite-0.4.7.tar.gz"
 
 build() {
 	cd libXcomposite-$version

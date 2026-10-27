@@ -2,13 +2,13 @@
 # depends	: libx11 libxft libxrender fontconfig freetype2 ohsnap
 
 name=st
-version=20200408
+version=20200408155047
 release=1
 _commit=9203c816d2bd58ce1971ae50e756b4eef18fa83c
-source="$name-$_commit.tar.gz::https://github.com/emmett1/st/archive/$_commit.tar.gz"
+source="$name-$_commit.tar.gz::https://github.com/emmett1/st/archive/9203c816d2bd58ce1971ae50e756b4eef18fa83c.tar.gz"
 
 build() {
-	cd $name-$_commit
+	cd "$SRC"/st*/
 	make PREFIX=/usr
 	make PREFIX=/usr DESTDIR=$PKG install
 }

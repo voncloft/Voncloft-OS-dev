@@ -8,7 +8,7 @@ options="!checksum"
 source="libunibreak-8.0.tar.gz::https://github.com/adah1972/libunibreak/releases/download/libunibreak_8_0/libunibreak-8.0.tar.gz"
 
 build() {
-    cd "libunibreak-8.0"
+    cd "libunibreak-${version}"
     ./configure --prefix=/usr --libdir=/usr/lib64 --disable-static
     make
     make DESTDIR="$PKG" install

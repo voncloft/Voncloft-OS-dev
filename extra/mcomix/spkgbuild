@@ -2,14 +2,14 @@
 # depends : gtk3 python-cairo python-gobject3 python-pillow lhasa unrar p7zip unrar unzip git
 
 name=mcomix
-version=1.3.0
+version=1.3.0.git20221027142238
 release=4
 
-source="https://github.com/multiSnow/mcomix3/archive/refs/heads/gtk3.zip"
+source="https://github.com/multiSnow/mcomix3/archive/cb63d286a0357af45b2b5defd70618c70b9e709d.tar.gz"
 options="!checksum"
 
 build() {
-	cd mcomix3-gtk3
+	cd "$SRC"/mcomix3*/
 	python installer.py --srcdir=mcomix --target=$PKG/usr/share
 	install -dm755 "$PKG"/usr/bin
  	ln -s /usr/share/mcomix/mcomixstarter.py "$PKG"/usr/bin/mcomix

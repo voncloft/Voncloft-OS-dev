@@ -2,9 +2,9 @@
 # depends	: libxfixes
 
 name=libxfixes-32
-version=5.0.3
+version=6.0.2
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXfixes-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXfixes-6.0.2.tar.gz"
 
 build() {
 	cd libXfixes-$version

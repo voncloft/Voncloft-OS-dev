@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:43 AM EDT 2026
+
+grub-efi
+Version=2.14
+Release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.04 to version 2.14

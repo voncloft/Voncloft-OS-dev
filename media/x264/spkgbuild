@@ -2,9 +2,9 @@
 # depends	: nasm
 
 name=x264
-version=20250212
+version=20250815
 release=1
-source="https://anduin.linuxfromscratch.org/BLFS/x264/x264-$version.tar.xz"
+source="https://anduin.linuxfromscratch.org/BLFS/x264/x264-20250815.tar.xz"
 
 build() {
 	cd *

@@ -2,9 +2,9 @@
 # depends	: libxt libxext libx11 
 
 name=libxpm
-version=3.5.17
+version=3.5.20
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXpm-$version.tar.xz"
+source="https://www.x.org/pub/individual/lib/libXpm-3.5.20.tar.gz"
 
 build() {
 	cd libXpm-$version

@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:45 AM EDT 2026
+
+libxrandr
+Version=1.5.5
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.5.4 to version 1.5.5

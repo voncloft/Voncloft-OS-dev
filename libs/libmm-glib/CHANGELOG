@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+libmm-glib
+Version=1.18.12
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.14.10 to version 1.18.12

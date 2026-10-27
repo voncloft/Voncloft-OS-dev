@@ -2,12 +2,12 @@
 # depends	: gcc
 
 name=ncurses
-version=6.5
+version=6.6
 release=20250531
-source="https://invisible-mirror.net/archives/ncurses/current/ncurses-$version-$release.tgz"
+source="https://ftp.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz"
 
 build() {
-	cd $name-$version-$release
+	cd "$SRC"/ncurses*/
 
 	./configure --prefix=/usr           \
             --mandir=/usr/share/man \

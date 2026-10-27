@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:45 AM EDT 2026
+
+glib-32
+Version=2.90.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.84.3 to version 2.90.1

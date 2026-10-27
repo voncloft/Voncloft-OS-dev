@@ -2,9 +2,9 @@
 # depends : python python-setuptools python-wheel
 
 name=certifi
-version=2025.1.31
+version=2026.10.23
 release=2
-source="https://files.pythonhosted.org/packages/source/c/certifi/certifi-$version.tar.gz"
+source="https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz"
 options="!checksum"
 
 build() {

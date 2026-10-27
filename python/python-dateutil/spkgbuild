@@ -2,14 +2,14 @@
 # depends : python-six
 
 name=python-dateutil
-version=2.8.2
+version=3.0.0
 release=5
 
-source="git+https://github.com/dateutil/dateutil.git#commit=6b035517571e63b6a63a493740c5506ec1e5da44?signed"
+source="https://files.pythonhosted.org/packages/0e/df/f15f80383f152452d8985b36d95cb8751f901a3e0ff4cd27f7e118f168e2/python_dateutil-3.0.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "$SRC"/python_dateutil*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

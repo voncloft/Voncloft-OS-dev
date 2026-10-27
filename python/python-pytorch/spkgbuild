@@ -2,14 +2,14 @@
 # depends : google-glog gflags opencv openmp nccl pybind11 python python-yaml libuv
 
 name=python-pytorch
-version=1.9.0
+version=2.14.1
 release=4
 
-source="pytorch-1.9.0::git+https://github.com/pytorch/pytorch.git#tag=v1.9.0"
+source="https://github.com/pytorch/pytorch/archive/refs/tags/v2.14.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pytorch*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

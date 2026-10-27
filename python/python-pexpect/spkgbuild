@@ -2,10 +2,10 @@
 # depends : python python-ptyprocess
 
 name=python-pexpect
-version=4.8.0
+version=4.9.0
 release=3
 
-source="git+https://github.com/pexpect/pexpect#commit=5eed1a31a2853a09b7367c59fbd1a4a0b53341df"
+source="https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python-numpy
 
 name=python-gdspy
-version=1.6.8
+version=1.6.13
 release=1
 
-source="https://files.pythonhosted.org/packages/source/${name:7:1}/${name#python-}/${name#python-}-${version}.tar.gz"
+source="https://files.pythonhosted.org/packages/7a/c5/01a4b160bc9ac9b0f8621dd6f90e964596e60a369ff2d076ebb4ce52c402/gdspy-1.6.13.zip"
 options="!checksum"
 
 build() {

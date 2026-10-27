@@ -39,6 +39,7 @@ f:88dbe5b4124a8d60fced846bd6ce5060:mate-settings-daemon/spkgbuild
 f:fa367c8f671e294ea92acc0fc8fb1224:mate-screensaver/CHANGELOG
 f:2e3a66a234c26d8f0e7e9fafdb75b7ae:mate-screensaver/spkgbuild
 f:299b58929a535a08fc0fb8e4777940a9:mate-extra/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:mate-extra/override
 f:cb6a69c1cc0bc36d16d81a35cc22f47a:engrampa/CHANGELOG
 f:fdce4f5e18e04a633a9e4d6797c93b88:engrampa/spkgbuild
 f:c05f9c7accea8959b2867d2e9efb2a6a:marco/CHANGELOG
@@ -60,6 +61,7 @@ f:eca6d968d3ab99a01f0465653fb3a233:mate-power-manager/CHANGELOG
 f:3f0e07d7b38bcff4e7eab08c7f9b20a9:mate-power-manager/spkgbuild
 f:2aaa8809f7b46a3c0d6225c85c66b9cd:mate-user-guide/spkgbuild
 f:d026a9dc67afd3bf176921e83cf9a474:mate-meta/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:mate-meta/override
 f:ce881be533f359740bc68b1435bdf5c1:mate-backgrounds/spkgbuild
 f:059df92252e6ea85bd1e53dd9a20de52:mate-menus/spkgbuild
 f:1093d8c205381c5d0bf19f4cb52fb260:caja-extensions/spkgbuild

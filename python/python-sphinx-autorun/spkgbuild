@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-sphinx-autorun
-version=1.1.1
+version=2.0.0
 release=3
 
-source="git+https://github.com/WhyNotHugo/sphinx-autorun#commit=b3e935355afcfb5240bac5a99707ffecc35772a2"
+source="https://files.pythonhosted.org/packages/00/ca/0a4c9362ee0102431665066a858ad647b0c14b93eaa5c2ddb21fc8f0d246/sphinx_autorun-2.0.0.tar.gz"
 options="!checksum"
 
 build() {

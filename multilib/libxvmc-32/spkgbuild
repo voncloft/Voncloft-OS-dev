@@ -2,9 +2,9 @@
 # depends	: libxvmc
 
 name=libxvmc-32
-version=1.0.12
+version=1.0.15
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXvMC-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXvMC-1.0.15.tar.gz"
 
 build() {
 	cd libXvMC-$version

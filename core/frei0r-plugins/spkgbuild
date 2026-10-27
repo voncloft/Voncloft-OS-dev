@@ -2,12 +2,12 @@
 # depends	: gavl
 
 name=frei0r-plugins
-version=1.8.0
+version=3.6.0
 release=1
-source="https://files.dyne.org/frei0r/releases/$name-$version.tar.gz"
+source="https://github.com/dyne/frei0r/archive/refs/tags/v3.6.0.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/frei0r*/
 	
 	mkdir -vp build
 	cd        build

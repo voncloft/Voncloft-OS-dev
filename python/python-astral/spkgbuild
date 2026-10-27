@@ -2,10 +2,10 @@
 # depends : python 
 
 name=python-astral
-version=2.2
+version=3.2
 release=3
 
-source="git+https://github.com/sffjunkie/astral.git#tag=3282d7b437349bc035c8a7dff5c27ec9997a2cdf"
+source="https://files.pythonhosted.org/packages/04/d1/1adbf06a38dc339e41a1666f6c7135924594c20fd46e060fb263248c564d/astral-3.2.tar.gz"
 options="!checksum"
 
 build() {

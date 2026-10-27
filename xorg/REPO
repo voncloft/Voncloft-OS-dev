@@ -71,6 +71,7 @@ d:xev
 d:xinput
 f:60a16c105ccb6b7ad3986b4028b708d7:xorg-input/.pkgfiles
 f:a1f6da915c9dfa74b398336bf5c5685b:xorg-input/spkgbuild
+f:3aea4357ebc3026a501cb02ab64af2ce:xorg-input/override
 f:0513ed71e0a727a1737230b52dfc1f13:xkeyboard-config/.pkgfiles
 f:cc34252574bf3f1682c761c44dc9c88a:xkeyboard-config/CHANGELOG
 f:fb683f13c7cf2e6b128769476516be80:xkeyboard-config/spkgbuild
@@ -88,6 +89,7 @@ f:648f43313e30fe9f25d97d6dea528758:sessreg/.pkgfiles
 f:4c1d7c90ccb94d7b3875ae366231dcca:sessreg/CHANGELOG
 f:8a4b4930345cad68ab9e758d7de512a4:sessreg/spkgbuild
 f:52d98291d4700957019f066a9530b81e:xorg-video-drivers/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:xorg-video-drivers/override
 f:b3a6782655f3af35f0963d9dfb67a454:xlsclients/.pkgfiles
 f:c806fdb5a4f32e16ee008cef294f71ce:xlsclients/CHANGELOG
 f:ce70025acb147baa3ba3a9ea36756f5a:xlsclients/spkgbuild
@@ -120,6 +122,7 @@ f:1ca0808643fcf70c7d76fae12d905011:xdgmenumaker/spkgbuild
 f:4a8475e4f748aa08f0a0552ca6eaff57:tty-clock/spkgbuild
 f:e22868234909a7d4037c771469767636:xorg-libraries/.pkgfiles
 f:252216456e42d04a8dd2f86b5f1641cb:xorg-libraries/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:xorg-libraries/override
 f:84b3664a85e750c0a9dfecc7d7e2430a:xdg-desktop-portal-gtk/.pkgfiles
 f:9dd9790b3acd9c53b931ba3fa7cef681:xdg-desktop-portal-gtk/post-upgrade.sh
 f:171eaa10a0e946dfb132d886bad8320f:xdg-desktop-portal-gtk/CHANGELOG
@@ -141,9 +144,9 @@ f:3f391e714610d5f60d7cec22ff32815e:xhost/.pkgfiles
 f:2012be733c6244bfdfa737e8e01aafe9:xhost/CHANGELOG
 f:6a749f2a1b2312bab08db743209c4eef:xhost/spkgbuild
 f:b903000cd25849d1ba345292e5f9f4fb:xpr/.pkgfiles
-f:ea2dc001f25f9cd15fda2198ded57682:xpr/CHANGELOG
-f:23274d451d54b52b692ef9a928aab5ed:xpr/spkgbuild
-f:835e7b01a3181cf0efc82b826c2d3e87:xpr/override
+f:faa9e901b49d46a9335ef6c5b20d6c8c:xpr/CHANGELOG
+f:544a9621c27d72a03e0409eb2d48f413:xpr/spkgbuild
+f:0ac55e57d3b966c5e8a147d23a2adb5e:xpr/override
 f:633934a4f6959d498e27218c5af94929:xlsatoms/.pkgfiles
 f:3182052b459eed434ce0d1b4c2ba6629:xlsatoms/CHANGELOG
 f:73f55904407863abca8aff8797a48783:xlsatoms/spkgbuild
@@ -158,6 +161,7 @@ f:295fc2a9cf201d13b9d69044211b99ba:xorg-server/glvnd.patch
 f:cb9fb0b71ce9b0ecb3a87b02a1810fc1:xorg-server/spkgbuild.meson
 f:ee651ab3586796cf399fb537f044d32f:xdg-utils/.pkgfiles
 f:51751ea13507b595d48b3c6b1fbb1342:xdg-utils/spkgbuild
+f:058d047b05892c483609e67d91814d25:xdg-utils/override
 f:b2df094b61ebe06f74f918d06efb6084:xcursorgen/.pkgfiles
 f:a826456149ef372be58fe1f3ac0ed5b1:xcursorgen/CHANGELOG
 f:c227d92523b43416c0873ac3180c5404:xcursorgen/spkgbuild
@@ -193,6 +197,7 @@ f:0dadacd04d84bf77788702b729f9b09a:xwd/CHANGELOG
 f:ff026a4465715fdaa6c076c217fad309:xwd/spkgbuild
 f:6a2e3b7faf31e290f28d8e509154d265:xorg-applications/.pkgfiles
 f:71d253765a741fae3131d22224736c67:xorg-applications/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:xorg-applications/override
 f:ed30ef01340f9cd132cef0aa507e1849:xdg-dbus-proxy/.pkgfiles
 f:36856acc35f8802d0cba6fbfd3e3f56a:xdg-dbus-proxy/musl.patch
 f:ea9d9242a6702be8fe23e3e480150fff:xdg-dbus-proxy/CHANGELOG
@@ -226,6 +231,7 @@ f:f5d173e13305ac0fe8e94de4c3e76052:xinit/CHANGELOG
 f:362421aad05c028f1ddb4c0cd17a6fb4:xinit/spkgbuild
 f:f08e572d7134d0b1046434364e6570cc:xorg-fonts/.pkgfiles
 f:2de3fab3ee78a1e8f388a8c0efa682c4:xorg-fonts/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:xorg-fonts/override
 f:736340b121e6a9c9b3d6c5665d06fdde:encodings/.pkgfiles
 f:3bb16d02ac692afec45810c0369ba518:encodings/CHANGELOG
 f:43742856734aac7166e57a3a84c836dc:encodings/spkgbuild
@@ -254,14 +260,19 @@ f:c5a3d1794a6eeddd846ea05e0c5533ba:iceauth/.pkgfiles
 f:5c8699e15b19991d45605ad0ceee7bce:iceauth/CHANGELOG
 f:d00e3727495e018509b5fcd1ee06cd78:iceauth/spkgbuild
 f:ef8d7ffd117afa3e07533df594a7eb40:xterm/.pkgfiles
-f:694ebd0b4ac5983143dea60f946454e9:xterm/spkgbuild
+f:9e58e32f0a55793abc22f2f23999d21c:xterm/CHANGELOG
+f:a92d2674a7e59a68d0c335e14db9083a:xterm/spkgbuild
+f:265708bf7b35070f8a82f9bc197cf63d:xterm/override
 f:ed92152532bcbb53b35b7ce889ece4eb:xorg/.pkgfiles
 f:f7beffc4a88aa59be2c97436c597820d:xorg/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:xorg/override
 f:12eaf88cca124ca2108731eb4092211e:xtrans/.pkgfiles
 f:0a1b1abc7bf632e53ae594f97cb81dad:xtrans/CHANGELOG
 f:2d5b6139305afc43aff30a2c92de27d3:xtrans/spkgbuild
 f:4b3d7b357179f474d14275715cffe7c9:luit/.pkgfiles
-f:403b73590a62fe4bdb90c92626228cb6:luit/spkgbuild
+f:a65514dd453ba39dace2246569194e82:luit/CHANGELOG
+f:ac570d69839370668618bbd85d263d9a:luit/spkgbuild
+f:fc1890b56d6e82bf9e59d1f3c3cb065e:luit/override
 f:980f2cf8ae8fea156b46f73230b45e29:xorgproto/.pkgfiles
 f:bff42839cd4cac1ec1745cf265fea323:xorgproto/CHANGELOG
 f:e3263e86779807caa88169982ea003ee:xorgproto/spkgbuild

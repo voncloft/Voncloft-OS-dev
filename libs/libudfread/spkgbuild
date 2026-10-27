@@ -2,14 +2,14 @@
 # depends : glibc
 
 name=libudfread
-version=1.0.0.32.g09059bb
+version=1.2.0
 release=1
 
-source="https://code.videolan.org/videolan/libudfread/-/archive/master/$name-master.tar.gz"
+source="https://code.videolan.org/videolan/libudfread/-/archive/1.2.0/libudfread-1.2.0.tar.gz"
 options="!checksum"
 
 build() {
-	cd libudfread-master
+	cd "$SRC"/libudfread*/
 	mkdir -pv build
 	./bootstrap
 	cd build

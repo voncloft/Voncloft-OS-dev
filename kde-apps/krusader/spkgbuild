@@ -8,7 +8,7 @@ options="!checksum"
 source="krusader-2.9.0.tar.gz::https://invent.kde.org/utilities/krusader/-/archive/v2.9.0/krusader-v2.9.0.tar.gz"
 
 build() {
-    cd "krusader-v2.9.0"
+    cd "krusader-v${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

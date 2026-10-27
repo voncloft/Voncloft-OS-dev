@@ -2,12 +2,12 @@
 # depends	: ruby
 
 name=ck4up
-version=1.4
+version=1.6
 release=1
-source="http://jue.li/crux/$name/$name-$version.tar.gz"
+source="https://github.com/fjaell/ck4up/archive/refs/tags/1.6.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/ck4up*/
 	make DESTDIR=$PKG MANDIR=/usr/share/man/man1 install
 	install -Dm644 $name.conf $PKG/usr/share/$name/$name.conf.example
 }

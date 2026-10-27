@@ -2,12 +2,12 @@
 # depends	: curl libevent openssl intltool
 
 name=transmission-cli
-version=3.00
+version=4.1.4
 release=1
-source="https://github.com/transmission/transmission-releases/raw/master/transmission-$version.tar.xz"
+source="https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4.tar.xz"
 
 build() {
-	cd transmission-$version
+	cd "$SRC"/transmission*/
 
 	./configure --prefix=/usr
 	make

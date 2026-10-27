@@ -2,10 +2,10 @@
 # depends : python-packaging
 
 name=python-dephell-specifier
-version=0.2.2
+version=0.3.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/dephell_specifier/dephell_specifier-0.2.2.tar.gz"
+source="https://files.pythonhosted.org/packages/78/e7/52ecc5a90cf6075dd1cf49bfd45d93731764d641e144e2dcd490d9cc3767/dephell-specifier-0.3.0.tar.gz"
 options="!checksum"
 
 build() {

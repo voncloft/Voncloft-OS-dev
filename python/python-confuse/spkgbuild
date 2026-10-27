@@ -2,10 +2,10 @@
 # depends : python-yaml
 
 name=python-confuse
-version=1.5.0
+version=2.3.0
 release=1
 
-source="git+https://github.com/beetbox/confuse.git#tag="
+source="https://files.pythonhosted.org/packages/41/89/d4451e170e9c02dd981cfd517b051658aa4d5a53060e57808bec63cf785b/confuse-2.3.0.tar.gz"
 options="!checksum"
 
 build() {

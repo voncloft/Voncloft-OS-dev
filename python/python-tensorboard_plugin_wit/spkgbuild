@@ -5,14 +5,14 @@
 # depends : ${_common_depends[@]} python-tensorboard_plugin_wit
 
 name=python-tensorboard_plugin_wit
-version=1.8.0
+version=1.8.1
 release=2
 
-source="tensorboard_plugin_wit-1.8.0::git+https://github.com/PAIR-code/what-if-tool#tag=v1.8.0"
+source="https://github.com/PAIR-code/what-if-tool/archive/refs/tags/v1.8.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "$SRC"/what-if-tool*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

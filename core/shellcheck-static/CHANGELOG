@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+shellcheck-static
+Version=0.11.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.7.1 to version 0.11.0

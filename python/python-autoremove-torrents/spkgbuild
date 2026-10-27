@@ -2,14 +2,14 @@
 # depends	: python
 
 name=python-autoremove-torrents
-version=1.5.3
+version=1.5.4
 release=1
 
-source="https://files.pythonhosted.org/packages/44/55/62c76d9b70da71ba1d0db623bc24c81ea0dbf9601fcb4cc0ce97001e0f1a/autoremove-torrents-1.5.3.tar.gz"
+source="https://files.pythonhosted.org/packages/ab/7a/fe4c9ef1fad548b4696929e144597dd220c0e390ced0f71c2556cb2fe3c3/autoremove-torrents-1.5.4.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/autoremove-torrents*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

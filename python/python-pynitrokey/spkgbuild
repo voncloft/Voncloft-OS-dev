@@ -2,14 +2,14 @@
 # depends : python-cbor python-cffi python-click python-cryptography
 
 name=python-pynitrokey
-version=0.4.6
+version=0.14.1
 release=3
 
-source="git+https://github.com/nitrokey/pynitrokey#tag=v0.4.6.nitrokey?signed"
+source="https://files.pythonhosted.org/packages/fc/c9/c1663840d56dfabba7c984d2be8df406b00b9b70858669bad8691fccbabd/pynitrokey-0.14.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pynitrokey*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

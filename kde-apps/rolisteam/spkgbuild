@@ -9,7 +9,7 @@ source="rolisteam-1.10.0.tar.gz::https://invent.kde.org/rolisteam/rolisteam/-/ar
     rolisteam-diceparser-1086c22300d1db477f0109a743581e493b1d9ae8.tar.gz::https://invent.kde.org/rolisteam/rolisteam-diceparser/-/archive/1086c22300d1db477f0109a743581e493b1d9ae8/rolisteam-diceparser-1086c22300d1db477f0109a743581e493b1d9ae8.tar.gz"
 
 build() {
-    cd "rolisteam-v1.10.0"
+    cd "rolisteam-v${version}"
     cp -a "$SRC/rolisteam-diceparser-1086c22300d1db477f0109a743581e493b1d9ae8/." src/libraries/diceparser/
     plasma-package-installer \
         -DNO_BUILD_CLI=ON

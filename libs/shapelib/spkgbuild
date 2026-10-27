@@ -2,14 +2,14 @@
 # depends : gcc
 
 name=shapelib
-version=1.5.0
+version=1.6.3
 release=3
 
-source="https://download.osgeo.org/$pkgname/$pkgname-$pkgver.tar.gz"
+source="https://download.osgeo.org/shapelib/shapelib-1.6.3.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/shapelib*/
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install

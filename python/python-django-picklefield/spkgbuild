@@ -2,14 +2,14 @@
 # depends : python-django
 
 name=python-django-picklefield
-version=3.0.1
+version=3.4.0
 release=3
 
-source="git+https://github.com/gintas/django-picklefield.git#tag=4d5e3b2995df6597d45ad59d92ead38abc5c34af"
+source="https://files.pythonhosted.org/packages/93/03/13114bccbd1ec8c026ac1ff33dae75ae6c6a5632e4769ee9cda283b9f57e/django_picklefield-3.4.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/django_picklefield*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

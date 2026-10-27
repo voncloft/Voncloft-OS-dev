@@ -2,9 +2,9 @@
 # depends : python meson ninja python-packaging python-metadata
 
 name=python-meson
-version=0.17.1
+version=0.22.1
 release=2
-source="https://files.pythonhosted.org/packages/source/m/meson_python/meson_python-$version.tar.gz"
+source="https://files.pythonhosted.org/packages/b4/40/343ae23722d5d66a7b94b752d1b194202640995296379333b274b1860871/meson_python-0.22.1.tar.gz"
 options="!checksum"
 
 build() {

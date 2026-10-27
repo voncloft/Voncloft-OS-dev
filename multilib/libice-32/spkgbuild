@@ -2,9 +2,9 @@
 # depends	: libice
 
 name=libice-32
-version=1.0.10
+version=1.1.2
 release=1
-source="http://ftp.x.org/pub/individual/lib/libICE-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libICE-1.1.2.tar.gz"
 
 build() {
 	cd libICE-$version

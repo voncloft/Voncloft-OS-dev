@@ -2,14 +2,14 @@
 # depends : python
 
 name=python-minidb
-version=2.0.5
+version=2.0.8
 release=3
 
-source="http://thp.io/2010/minidb/minidb-2.0.5.tar.gz"
+source="https://files.pythonhosted.org/packages/aa/ea/5b803a05d523733735f8581cc8a51306cbea1a65ee4a5067abd98a969c4b/minidb-2.0.8.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/minidb*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

@@ -2,14 +2,14 @@
 # depends : qt6
 
 name=libmygpo-qt6
-version=1.1.0
+version=1.2.0
 release=3
 
-source="http://stefan.derkits.at/files/libmygpo-qt/libmygpo-qt.${version}.tar.gz"
+source="https://github.com/gpodder/libmygpo-qt/archive/refs/tags/1.2.0.tar.gz"
 options="!checksum"
 
 build() {
-	cd libmygpo-qt.$version
+	cd "$SRC"/libmygpo-qt*/
 	mkdir build
 	cd build
 	cmake ..  \

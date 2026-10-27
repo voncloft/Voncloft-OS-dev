@@ -2,9 +2,9 @@
 # depends	: gtk3 gtk2 libxt dbus-glib alsa-lib libvpx libevent nss sqlite icu unzip zip diffutils gconf python yasm mesa inetutils autoconf2.13 rust cbindgen nodejs nasm
 
 name=firefox-esr
-version=68.9.0
+version=153.6.0
 release=1
-source="https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz
+source="https://archive.mozilla.org/pub/firefox/releases/153.6.0esr/source/firefox-153.6.0esr.source.tar.xz
         firefox.desktop"
 
 build() {

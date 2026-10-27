@@ -2,14 +2,14 @@
 # depends : python
 
 name=python-mpd2
-version=3.0.4
+version=3.1.1
 release=1
 
-source="git+https://github.com/Mic92/python-mpd2.git#tag="
+source="https://files.pythonhosted.org/packages/53/be/e77206eb35eb37ccd3506fba237e1431431d04c482707730ce2a6802e95c/python-mpd2-3.1.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "$SRC"/python-mpd2*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

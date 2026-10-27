@@ -2,7 +2,7 @@
 # depends : 
 
 name=geoip-database
-version=20210126
+version=20260128
 release=1
 
 _source_base=https://sources.archlinux.org/other/packages/$name/$version

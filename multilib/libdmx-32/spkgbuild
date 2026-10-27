@@ -2,9 +2,9 @@
 # depends	: libdmx
 
 name=libdmx-32
-version=1.1.4
+version=1.1.5
 release=1
-source="http://ftp.x.org/pub/individual/lib/libdmx-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libdmx-1.1.5.tar.gz"
 
 build() {
 	cd libdmx-$version

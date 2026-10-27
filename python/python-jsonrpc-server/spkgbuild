@@ -9,7 +9,7 @@ source="https://files.pythonhosted.org/packages/source/p/python-jsonrpc-server/p
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd python-jsonrpc-server-$version
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-image-exiftool
-version=12.30
+version=13.55
 release=1
 
-source="https://exiftool.org/Image-ExifTool-12.30.tar.gz"
+source="https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-13.55.tar.gz"
 options="!checksum"
 
 build() {

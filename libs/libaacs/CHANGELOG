@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+libaacs
+Version=0.12.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.11.0 to version 0.12.0

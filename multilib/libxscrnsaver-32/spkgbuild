@@ -1,9 +1,9 @@
 # description	: X11 Screen Saver extension client library
 
 name=libxscrnsaver-32
-version=1.2.3
+version=1.2.5
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXScrnSaver-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXScrnSaver-1.2.5.tar.gz"
 
 build() {
 	cd libXScrnSaver-$version

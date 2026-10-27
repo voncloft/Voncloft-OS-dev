@@ -2,14 +2,14 @@
 # depends : gwenhywfar ktoblzcheck libofx
 
 name=aqbanking
-version=6.2.10
+version=6.9.2
 release=1
 
-source="https://www.aquamaniac.de/rdm/attachments/download/368/$name-$version.tar.gz"
+source="https://www.aquamaniac.de/rdm/attachments/download/654/aqbanking-6.9.2.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/aqbanking*/
 	export PKG_CONFIG=/usr/bin/pkg-config
   	./configure --prefix=/usr --enable-gwenhywfar \
               --with-backends="aqhbci aqofxconnect aqpaypal"

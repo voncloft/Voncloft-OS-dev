@@ -2,9 +2,9 @@
 # depends	: libxext libxrender libx11 
 
 name=libxrandr
-version=1.5.4
+version=1.5.5
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXrandr-$version.tar.xz"
+source="https://www.x.org/pub/individual/lib/libXrandr-1.5.5.tar.gz"
 
 build() {
 	cd libXrandr-$version

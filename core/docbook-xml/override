@@ -1,0 +1,5 @@
+# This package has no independent, automatically applicable upstream release.
+source=local
+url=$source
+update_repo_skip='Compatibility bundle of fixed DocBook 4.x DTD releases; not a single rolling upstream version.'
+update_repo_skip_status='Manual update'

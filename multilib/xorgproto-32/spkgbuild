@@ -2,9 +2,9 @@
 # depends	: meson
 
 name=xorgproto-32
-version=2024.1
+version=2026.1
 release=1
-source="https://xorg.freedesktop.org/archive/individual/proto/xorgproto-$version.tar.xz"
+source="https://www.x.org/pub/individual/proto/xorgproto-2026.1.tar.gz"
 
 build() {
 	cd xorgproto-$version

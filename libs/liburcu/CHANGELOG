@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:45 AM EDT 2026
+
+liburcu
+Version=0.15.7
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.15.3 to version 0.15.7

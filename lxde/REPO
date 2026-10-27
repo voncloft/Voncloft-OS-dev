@@ -40,6 +40,7 @@ f:a991fa4061008196bb33c3ab56365dc3:gpicview/spkgbuild
 f:03c54079e84b5634051caa7090f9dad7:lxde-common/readme
 f:27d02f0cc75e7325fb210e93f8ed796f:lxde-common/spkgbuild
 f:affa084d3f46f1906bc28c7cde16d7d2:lxde/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:lxde/override
 f:3d1df1cc52d1406cf304dcd23799c037:lxde-icon-theme/spkgbuild
 f:edea10ca6d46719b69f81ae1f0ad7a97:lximage-qt/CHANGELOG
 f:c035c6bf43bd0901b6ce110521b3543d:lximage-qt/spkgbuild

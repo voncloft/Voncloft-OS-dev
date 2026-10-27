@@ -3,10 +3,10 @@
   # depends : python python-paramiko
 
 name=python-sshtunnel
-version=0.4.0
+version=0.5.1
 release=5
 
-source="python-sshtunnel::git+https://github.com/pahaz/sshtunnel#commit="
+source="python-sshtunnel::https://files.pythonhosted.org/packages/27/31/03d5a93a1f8a3bdc40d669d95e3b2b95f1f9df65f1b9cfdb9c44ba5c233f/sshtunnel-0.5.1.tar.gz"
 options="!checksum"
 
 build() {

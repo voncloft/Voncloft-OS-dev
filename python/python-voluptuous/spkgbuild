@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-voluptuous
-version=0.13.1
+version=0.16.0
 release=1
 
 source="https://github.com/alecthomas/voluptuous/archive/refs/tags/0.13.1/python-voluptuous-0.13.1.tar.gz"

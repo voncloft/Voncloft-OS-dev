@@ -2,14 +2,14 @@
 # depends : python python-sphinx python-typing_extensions
 
 name=python-sphinx-autodoc-typehints
-version=1.12.0
+version=3.17.3
 release=2
 
-source="git+https://github.com/agronholm/sphinx-autodoc-typehints#commit="
+source="https://files.pythonhosted.org/packages/5b/8c/2ab7bd22aa2988c9e4f4791688d6de24a00395afbd5d7dffa16b35db81fb/sphinx_autodoc_typehints-3.17.3.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/sphinx_autodoc_typehints*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

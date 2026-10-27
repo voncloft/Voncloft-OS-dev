@@ -2,12 +2,12 @@
 # depends	: libtorrent boost qt6
 
 name=qbittorrent-nox
-version=4.2.5
+version=5.3.0
 release=1
-source="https://downloads.sourceforge.net/qbittorrent/qbittorrent-$version.tar.xz"
+source="https://downloads.sourceforge.net/project/qbittorrent/qbittorrent/qbittorrent-5.3.0/qbittorrent-5.3.0.tar.xz"
 
 build() {
-	cd qbittorrent-$version
+	cd "$SRC"/qbittorrent*/
 
 	export QBT_ADD_CONFIG='nostrip'
 

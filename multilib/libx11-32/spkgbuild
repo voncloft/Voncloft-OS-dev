@@ -2,9 +2,9 @@
 # depends	: libx11 libxcb-32 xtrans-32
 
 name=libx11-32
-version=1.8.12
+version=1.8.14
 release=1
-source="http://ftp.x.org/pub/individual/lib/libX11-$version.tar.xz"
+source="https://www.x.org/pub/individual/lib/libX11-1.8.14.tar.gz"
 
 build() {
 	cd libX11-$version

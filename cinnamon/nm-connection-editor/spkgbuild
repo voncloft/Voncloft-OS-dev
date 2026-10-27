@@ -2,10 +2,10 @@
 # depends : gtk3 libnma libnotify libsecret glib libmm-glib polkit
 
 name=nm-connection-editor
-version=1.20.0
+version=1.36.0
 release=1
 
-source="https://download.gnome.org/sources/network-manager-applet/1.20/network-manager-applet-$version.tar.xz"
+source="https://download.gnome.org/sources/network-manager-applet/1.36/network-manager-applet-1.36.0.tar.xz"
 options="!checksum"
 
 build() {

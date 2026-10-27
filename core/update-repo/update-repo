@@ -220,7 +220,12 @@ screen_end_package()
     screen_checked=$((screen_checked+1))
     screen_command=${cmd:-}
     screen_found=${uversion:-Not found}
-    if [ -z "${uversion:-}" ]; then
+    if [ -n "${update_repo_skip:-}" ]; then
+        screen_found='Not applicable'
+        screen_status=${update_repo_skip_status:-Manual update}
+    elif [ -n "${update_repo_review_reason:-}" ] && [ -n "${uversion:-}" ]; then
+        screen_status='Packaging review required'
+    elif [ -z "${uversion:-}" ]; then
         screen_status='Version not found'
     elif [ "$uversion" = "$screen_version" ]; then
         screen_status='Already current'
@@ -369,6 +374,8 @@ vercomp() {
 get_url()
 {
 	local source_entry remaining_sources
+	# Override settings belong to one package only.
+	unset update_repo_skip update_repo_skip_status update_repo_fetch_kind update_repo_review_reason
 	source "$1"
 	ppath=$1
 	unset uversion
@@ -391,21 +398,38 @@ fetch() {
 	screen_fetch
 	# Never reuse an earlier package's listing after a failed fetch.
 	rm -f index.html
-	curl -L -f "$url" -o index.html -s --max-time 5 || {
+	local fetch_status=0
+	case "${update_repo_fetch_kind:-http}" in
+		git-tags)
+			GIT_TERMINAL_PROMPT=0 timeout 30 git ls-remote --tags --refs "$url" > index.html || fetch_status=$?
+			;;
+		deb-control)
+			python3 - "$url" <<'PYCONTROL' || fetch_status=$?
+import pathlib,sys,urllib.request
+with urllib.request.urlopen(urllib.request.Request(sys.argv[1],headers={'Range':'bytes=0-1048575'}),timeout=20) as response:
+    pathlib.Path('index.html').write_bytes(response.read(1048576))
+PYCONTROL
+			;;
+		headers)
+			curl -fLsS -I --max-time 20 "$url" -o index.html || fetch_status=$?
+			;;
+		*) curl -fLsS --max-time 20 "$url" -o index.html || fetch_status=$? ;;
+	esac
+	if [ "$fetch_status" != 0 ]; then
 		rm -f index.html
 		unset uversion
 		printf 'ERROR: Unable to download listing: %s\n' "$url" >&2
 		return 1
-	}
+	fi
 }
 alter_per_url() {
         case $url in
                 *github.com*)
                         url=https://github.com/$(echo $url | cut -d / -f4,5)/tags;;
                 *downloads.sourceforge.net*)
-                        url="https://sourceforge.net/projects/$(echo $url | cut -d / -f4)/rss?limit=200";;
+                        url="https://sourceforge.net/projects/$(echo $url | cut -d / -f4)/rss?path=/";;
                 *sourceforge.net*)
-                        url="https://sourceforge.net/projects/$(echo $url | cut -d / -f5)/rss?limit=200";;
+                        url="https://sourceforge.net/projects/$(echo $url | cut -d / -f5)/rss?path=/";;
                 *gitlab.com*)
                         url=$(echo $url | cut -d/ -f1-5)/tags;;
                 *python.org*|*pypi.org*|*pythonhosted.org*|*pypi.io*|*pypi.org*)
@@ -479,6 +503,11 @@ run_manual_upd()
 	echo -e "${CYAN}ALERT:     Update script found in $update_script${NC}"
 	cmd="override"
 	source "$update_script" || return 1
+	if [ -n "${update_repo_skip:-}" ]; then
+		unset uversion
+		printf '%s: %s\n' "${update_repo_skip_status:-Manual update}" "$update_repo_skip"
+		return 0
+	fi
 	fetch || return 1
 	get_generic
 }
@@ -759,7 +788,11 @@ upgrade_process()
 {
         #find upgraded version from fetch code compare and then upgrade package using uversion as variable name
         check=${#uversion}
-        if [ $check -ge 1 ];
+        if [ -n "${update_repo_skip:-}" ]; then
+            : # Intentionally local/manual, not a failed upstream lookup.
+        elif [ -n "${update_repo_review_reason:-}" ] && [ $check -ge 1 ]; then
+            printf '%s\n' "$update_repo_review_reason"
+        elif [ $check -ge 1 ];
         then
                 if [ "$uversion" != "$version" ];
                 then

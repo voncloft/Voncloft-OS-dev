@@ -2,10 +2,10 @@
 # depends : glfw python
 
 name=python-glfw
-version=2.2.0
+version=2.11.0
 release=2
 
-source="git+https://github.com/FlorianRhiem/pyGLFW#commit=0555e765cd31902899afae3479e31269fdf0cf9a"
+source="https://files.pythonhosted.org/packages/b2/89/fa9cb2611314b84ffa68d76f154e1e508971d6e402b14bd2152684e35e5d/glfw-2.11.0.tar.gz"
 options="!checksum"
 
 build() {

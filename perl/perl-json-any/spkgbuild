@@ -2,10 +2,10 @@
 # depends : perl-json perl-json-xs perl-yaml-syck perl-namespace-clean
 
 name=perl-json-any
-version=1.39
+version=1.42
 release=5
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-Any-1.39.tar.gz"
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-Any-1.42.tar.gz"
 options="!checksum"
 
 build() {

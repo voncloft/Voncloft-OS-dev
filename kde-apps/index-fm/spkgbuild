@@ -8,7 +8,7 @@ options="!checksum"
 source="index-fm-4.0.2.tar.gz::https://invent.kde.org/maui/index-fm/-/archive/v4.0.2/index-fm-v4.0.2.tar.gz"
 
 build() {
-    cd "index-fm-v4.0.2"
+    cd "index-fm-v${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

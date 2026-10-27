@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:46 AM EDT 2026
+
+python-memcached
+Version=1.62
+Release=7
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.59 to version 1.62

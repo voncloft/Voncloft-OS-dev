@@ -2,9 +2,9 @@
 # depends	: libxi
 
 name=libxi-32
-version=1.7.10
+version=1.8.4
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXi-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXi-1.8.4.tar.gz"
 
 build() {
 	cd libXi-$version

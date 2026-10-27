@@ -2,14 +2,14 @@
 # depends : python soqt
 
 name=python-pivy
-version=0.6.6
+version=0.6.11
 release=3
 
-source="git+https://github.com/coin3d/pivy#commit=55e659de7ea346d3caf176d7fe254224d36e4791"
+source="https://github.com/coin3d/pivy/archive/refs/tags/0.6.11.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "$SRC"/pivy*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

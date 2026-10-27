@@ -253,6 +253,7 @@ f:0b55d20f1d332c3e9b879be208f3356e:plasma-desktop/browser-live-previews.patch
 f:295e96ff9f832bd72bb06a8d8d6cced8:plasma-desktop/spkgbuild
 f:e0015ac997685c78d04fe2c2e105c10a:eventcalendar/CHANGELOG
 f:c8031695b8995aa617e7b5346b904dff:eventcalendar/spkgbuild
+f:96274b5b3de80e927f05438932745c6d:eventcalendar/override
 f:0bf84fedd02dedb0b36593443b63e316:plasma-systemmonitor/.pkgfiles
 f:b0a13c75196707439badbcbb8b7604b2:plasma-systemmonitor/plasmasystemmonitor/spkgbuild
 f:77ce25f7f570f7902eb49372d826a20f:plasma-systemmonitor/CHANGELOG

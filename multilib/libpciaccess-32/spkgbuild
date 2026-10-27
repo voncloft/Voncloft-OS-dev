@@ -2,9 +2,9 @@
 # depends	: libpciaccess util-macros
 
 name=libpciaccess-32
-version=0.16
+version=0.19
 release=1
-source="http://ftp.x.org/pub/individual/lib/libpciaccess-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libpciaccess-0.19.tar.xz"
 
 build() {
 	cd libpciaccess-$version

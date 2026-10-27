@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:43 AM EDT 2026
+
+gobject-introspection
+Version=1.86.0
+Release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.70.0 to version 1.86.0

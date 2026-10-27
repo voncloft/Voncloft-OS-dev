@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-patiencediff
-version=0.2.2
+version=1.0.2
 release=3
 
-source="git+https://github.com/breezy-team/patiencediff.git#tag="
+source="https://files.pythonhosted.org/packages/bd/ca/7d530d7bf5e3094f86a67b9698045ccb86fc122f2ed024472ee9f6dc55c6/patiencediff-1.0.2.tar.gz"
 options="!checksum"
 
 build() {

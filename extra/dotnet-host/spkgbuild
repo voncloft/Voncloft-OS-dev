@@ -2,9 +2,9 @@
 # depends : gcc glibc
 name=dotnet-host
 _runtimever=6.0.6
-version=6.0.301
+version=6.0.428
 release=1
-source="https://download.visualstudio.microsoft.com/download/pr/77d472e5-194c-421e-992d-e4ca1d08e6cc/56c61ac303ddf1b12026151f4f000a2b/dotnet-sdk-6.0.301-linux-x64.tar.gz
+source="https://builds.dotnet.microsoft.com/dotnet/Sdk/6.0.428/dotnet-sdk-6.0.428-linux-x64.tar.gz
 	dotnet.sh"
 build() {
 	ls -la

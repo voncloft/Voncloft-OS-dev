@@ -2,9 +2,9 @@
 # depends	: 
 
 name=lfs-bootscripts
-version=20240825
+version=20250827
 release=1
-source="https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-$version.tar.xz"
+source="https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-20250827.tar.xz"
 options="!checksum"
 build() {
 	cd $name-$version

@@ -2,9 +2,9 @@
 # depends	: wine cabextract unzip xmessage zenity
 
 name=winetricks
-version=20200412
+version=20260125
 release=1
-source="https://github.com/Winetricks/winetricks/archive/$version/$name-$version.tar.gz"
+source="https://github.com/Winetricks/winetricks/archive/20260125/winetricks-20260125.tar.gz"
 
 build() {
 	cd $name-$version

@@ -2,13 +2,13 @@
 # depends	: bash
 
 name=fftw
-version=3.3.10
+version=3.3.11
 release=1
-source="http://www.fftw.org/$name-$version.tar.gz"
+source="https://www.fftw.org/fftw-3.3.11.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/fftw*/
 
 	./configure --prefix=/usr    \
             --enable-shared  \

@@ -1,0 +1,158 @@
+# Read the upstream release metadata; do not scrape versions from unrelated text.
+source=https://pypi.org/pypi/gitpython/json
+# update-repo sources this again immediately before fetching index.html.
+url=$source
+
+get_generic()
+{
+    local detected next_version source_edit recipe comparison
+    unset uversion
+    recipe="${ppath%/*}/spkgbuild"
+    detected=$(python3 - '{"mode":"pypi","url":"https://pypi.org/pypi/gitpython/json","pattern":"","project":"gitpython"}' "$recipe" "$version" <<'PY'
+# Embedded in each override so recipes do not depend on another repository file.
+import json
+import pathlib
+import re
+import sys
+import urllib.parse
+import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
+
+cfg = json.loads(sys.argv[1])
+recipe = pathlib.Path(sys.argv[2])
+current = sys.argv[3]
+
+def numeric(value):
+    return bool(re.fullmatch(r'[0-9]+(?:\.[0-9]+)*', value))
+
+def key(value):
+    return tuple(map(int, value.split('.')))
+
+try:
+    text = pathlib.Path('index.html').read_text(encoding='utf-8')
+    matches = []
+    if cfg['mode'] == 'pypi':
+        obj = json.loads(text)
+        normalize = lambda s: re.sub(r'[-_.]+', '-', s).lower()
+        if normalize(obj['info']['name']) != normalize(cfg['project']):
+            raise ValueError('PyPI project identity mismatch')
+        latest = obj['info']['version']
+        if not numeric(latest):
+            raise ValueError('latest release is not a stable numeric version')
+        files = [f for f in obj['urls'] if f['packagetype'] == 'sdist' and not f.get('yanked')]
+        if len(files) != 1 or urllib.parse.urlsplit(files[0]['url']).hostname != 'files.pythonhosted.org':
+            raise ValueError('no unique non-yanked PyPI source archive')
+        matches.append((latest, files[0]['url']))
+    elif cfg['mode'] == 'github_releases':
+        for release in json.loads(text):
+            if release.get('draft') or release.get('prerelease'):
+                continue
+            for asset in release.get('assets', []):
+                match = re.fullmatch(cfg['pattern'], asset['name'])
+                if match:
+                    matches.append((match[1], asset['browser_download_url']))
+    elif cfg['mode'] == 'metacpan':
+        release = json.loads(text)
+        if release['distribution'] != cfg['project'] or release.get('maturity') != 'released':
+            raise ValueError('CPAN distribution identity or release maturity mismatch')
+        version = str(release['version'])
+        if numeric(version):
+            matches.append((version, release['download_url']))
+    elif cfg['mode'] == 'rss':
+        for item in ET.fromstring(text).iter('item'):
+            link = item.findtext('link') or ''
+            path = urllib.parse.urlsplit(link).path.removesuffix('/download')
+            match = re.fullmatch(cfg['pattern'], urllib.parse.unquote(path.rsplit('/', 1)[-1]))
+            if match:
+                location = re.fullmatch(r'/projects/([^/]+)/files/(.+)', path)
+                if location:
+                    archive = 'https://downloads.sourceforge.net/project/' + location[1] + '/' + location[2]
+                    matches.append((match[1], archive))
+    elif cfg['mode'] == 'tags':
+        for row in json.loads(text):
+            match = re.fullmatch(cfg['pattern'], row['name'])
+            if match:
+                matches.append((match[1], cfg['archive'].replace('@VERSION@', match[1])))
+    elif cfg['mode'] == 'gnome':
+        releases = json.loads(text)[1][cfg['project']]
+        for version, files in releases.items():
+            if not numeric(version):
+                continue
+            if not version.startswith(cfg.get('series', '')):
+                continue
+            parts = key(version)
+            if cfg['project'] in ('gtk', 'gtkmm') and len(parts) > 1 and parts[1] >= 90:
+                continue  # GTK uses these series to preview the next major ABI.
+            # GNOME's older projects use even minor numbers for stable releases.
+            if cfg['project'] not in ('libxml2', 'libxslt') and parts[0] < 40 and len(parts) > 1 and parts[1] % 2:
+                continue
+            for extension in ('tar.xz', 'tar.bz2', 'tar.gz'):
+                if extension in files:
+                    matches.append((version, urllib.parse.urljoin(cfg['url'], files[extension])))
+                    break
+    elif cfg['mode'] == 'listing':
+        class Listing(HTMLParser):
+            def handle_starttag(self, tag, attrs):
+                if tag != 'a':
+                    return
+                for name, value in attrs:
+                    if name != 'href' or not value:
+                        continue
+                    filename = urllib.parse.unquote(urllib.parse.urlsplit(value).path.rsplit('/', 1)[-1])
+                    match = re.fullmatch(cfg['pattern'], filename)
+                    if match:
+                        if 'www.x.org/' in cfg['url'] and '99' in match[1].split('.'):
+                            continue  # Xorg's .99 series are development snapshots.
+                        matches.append((match[1], urllib.parse.urljoin(cfg['url'], value)))
+        Listing().feed(text)
+    else:
+        raise ValueError('unknown upstream format')
+    if not matches:
+        raise ValueError('no matching stable upstream source release')
+    latest, archive = max(matches, key=lambda item: key(item[0]))
+    # Metadata is data, never shell code. Reject unexpected URL characters.
+    if not re.fullmatch(r'https?://[A-Za-z0-9_./:%+?=&~#-]+', archive):
+        raise ValueError('invalid upstream archive URL')
+    raw = recipe.read_text()
+    source = re.search(r'^source=(?:"([^\"]*)"|\x27([^\x27]*)\x27|([^\n]*))', raw, re.M)
+    if not source:
+        raise ValueError('recipe has no scalar source assignment')
+    entries = next(group for group in source.groups() if group is not None)
+    first = entries.split()[0]
+    # Retain the local archive alias and every secondary source or patch.
+    alias = first.split('::', 1)[0] + '::' if '::' in first else ''
+    if alias:
+        alias = alias.replace(current, '${version}')
+        # An archive alias must retain the downloaded compression format.
+        suffix = re.search(r'(\.tar\.(?:gz|bz2|xz)|\.tgz|\.zip)$', urllib.parse.urlsplit(archive).path)
+        if suffix:
+            alias = re.sub(r'(\.tar\.(?:gz|bz2|xz)|\.tgz|\.zip)(?=::$)', suffix[0], alias)
+    replacement = alias + archive
+    # Generate a literal sed BRE, escaping both the expression and replacement.
+    pattern = re.sub(r'([\\.^$\[\]*|])', r'\\\1', first)
+    replacement = replacement.replace('\\', '\\\\').replace('&', r'\&').replace('|', r'\|')
+    edit = f's|{pattern}|{replacement}|'
+    print(latest)
+    print(edit)
+except (OSError, ValueError, KeyError, IndexError, TypeError, ET.ParseError) as error:
+    print(f'ERROR: Unable to read upstream version: {error}', file=sys.stderr)
+    sys.exit(1)
+PY
+    ) || return 1
+    next_version=${detected%%$'\n'*}
+    source_edit=${detected#*$'\n'}
+    [ -n "$next_version" ] && [ -n "$source_edit" ] || return 1
+
+    # Keep the source archive aligned with the version. Test mode queues the
+    # source edit alongside update-repo's version edit without changing recipes.
+    vercomp "$next_version" "$version" >/dev/null
+    comparison=$?
+    if [ "$comparison" = 2 ]; then
+        if [ -n "${test_upgrade:-}" ]; then
+            printf 'sed -i -e %q %q\n' "$source_edit" "$recipe" >> test_updates.sh || return 1
+        else
+            sed -i -e "$source_edit" "$recipe" || return 1
+        fi
+    fi
+    uversion=$next_version
+}

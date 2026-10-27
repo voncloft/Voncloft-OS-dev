@@ -2,15 +2,15 @@
 # depends : libxml2 pango dejavu-fonts perl ruby python lua automake
 
 name=rrdtool
-version=1.7.2
+version=1.11.0
 release=7
 lua=5.4
 
-source="https://oss.oetiker.ch/rrdtool/pub/rrdtool-$version.tar.gz"
+source="https://github.com/oetiker/rrdtool-1.x/archive/refs/tags/v1.11.0.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/rrdtool*/
 	sed -e 's/$(RUBY) ${abs_srcdir}\/ruby\/extconf.rb/& --vendor/' -i bindings/Makefile.am
 	aclocal
   	automake

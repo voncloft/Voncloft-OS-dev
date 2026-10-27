@@ -4,6 +4,7 @@ d:kde-deps
 d:kde-deps-installer
 f:8222d4904d43d112eacb6429d3609eea:kde-desktop-apps-extra/apps.list
 f:90c1d45f20da1fec7f43c4233a8fb6ff:kde-desktop-apps-extra/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:kde-desktop-apps-extra/override
 f:376599300cae9e8ae810a047c2575940:.httpup-urlinfo
 f:c954e0ba1b9816874bae66b30cb964a0:kde6/CHANGELOG
 f:b7c6102220bcd19d94f85e70b6174c4a:kde6/spkgbuild
@@ -14,4 +15,5 @@ f:d435698b42ba03a63ccda272e1d6bd10:kde-deps-installer/.pkgfiles
 f:649751f553cc95d70315f7bf0e25bd1b:kde-deps-installer/plasma-package-installer
 f:abb32f36bc8a072459062495ccb16d66:kde-deps-installer/kf-package-installer
 f:a1312b8957d97084c259fe8a30e6d72a:kde-deps-installer/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:kde-deps-installer/override
 f:0d1db0afd7fd666ee324d40ce69b59d2:.httpup-repo.current

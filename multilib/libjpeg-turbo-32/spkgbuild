@@ -2,12 +2,12 @@
 # depends	: libjpeg-turbo
 
 name=libjpeg-turbo-32
-version=2.0.5
+version=3.0.1
 release=1
-source="https://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-$version.tar.gz"
+source="https://downloads.sourceforge.net/project/libjpeg-turbo/3.0.1/libjpeg-turbo-3.0.1.tar.gz"
 
 build() {
-	cd libjpeg-turbo-$version
+	cd "$SRC"/libjpeg-turbo*/
 
 	export CC="gcc -m32"
 	export CXX="g++ -m32"

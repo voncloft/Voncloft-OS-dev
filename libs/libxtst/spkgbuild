@@ -2,9 +2,9 @@
 # depends	: libx11 libxext libxi 
 
 name=libxtst
-version=1.2.5
+version=1.2.6
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXtst-$version.tar.xz"
+source="https://www.x.org/pub/individual/lib/libXtst-1.2.6.tar.gz"
 
 build() {
 	cd libXtst-$version

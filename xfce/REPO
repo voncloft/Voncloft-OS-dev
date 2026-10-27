@@ -78,11 +78,13 @@ f:12da4b184288c50604d9a33d5424bb66:xfce4-mailwatch-plugin/CHANGELOG
 f:98c5c6c18f7b1a1e49ad5b758858216e:xfce4-mailwatch-plugin/spkgbuild
 f:aa2144365a353bb4109cd7b5d87fa982:xfce4-datetime-plugin/CHANGELOG
 f:219d406f92759abcb248db64338b1b52:xfce4-datetime-plugin/spkgbuild
+f:8524ee3926884bdd5ea65168ab0540de:xfce4-datetime-plugin/override
 f:08829693644d3ee8af7809de74eefc6c:xfce4-places-plugin/CHANGELOG
 f:002ebd633c325c345851ec6bfc646536:xfce4-places-plugin/spkgbuild
 f:33a2440df1985c62c4f14fdaa772e509:ristretto/CHANGELOG
 f:6a4e0c006f858fdad62c0b5cd20da11f:ristretto/spkgbuild
 f:1a8cba46b7f7078b9fb00b354b91a01c:xfce4-embed-plugin/spkgbuild
+f:bc10c9e1ac71bf8fed294f34b9cfa69b:xfce4-embed-plugin/override
 f:7fa7561144ee640a9d89acc34e39e27d:xfce4-whiskermenu-plugin/CHANGELOG
 f:8e973048a5874cc2de0188b2b3ca4a4f:xfce4-whiskermenu-plugin/spkgbuild
 f:47389643d95b4f6b0332d37cf2ef0fd0:xfsprogs/CHANGELOG
@@ -104,6 +106,7 @@ f:ad502f65ee2ce0f6b21bdd2544465e81:xfce4-wavelan-plugin/spkgbuild
 f:50b2e03052c9e82858baa51c1e8aa10b:xfce4-cpugraph-plugin/CHANGELOG
 f:371fa8e87111a97d0616d963bc5955dc:xfce4-cpugraph-plugin/spkgbuild
 f:5fec7dca0cddbca1bc8dc2b96a827cc7:xfce4/spkgbuild
+f:bc0eb9536e58d3d6fe6343eb194ede82:xfce4/override
 f:295ae5484ee0c41937bcd3f7f0e0af74:xfce4-mpc-plugin/CHANGELOG
 f:f442ecc1873bb4a793d2853a5afe77d6:xfce4-mpc-plugin/spkgbuild
 f:07a9a03e5cb2e281a966d6b7f16582af:xfce4-notifyd/CHANGELOG
@@ -145,8 +148,9 @@ f:bf732d8aec631e06d8553236b9c92c81:xfburn/CHANGELOG
 f:6c2bf9d45ebfe5d800039135f0b3ef00:xfburn/spkgbuild
 f:4a646629a5a457bbda09f2be6b937853:xfce4-power-manager/CHANGELOG
 f:98ee0e9b4aee8d1bd31ec7f3546b3566:xfce4-power-manager/spkgbuild
-f:154799027a20daed856aa946ffbe0fdc:xfd/CHANGELOG
-f:af25e7c47228c9ce04a1d69cfcc95935:xfd/spkgbuild
+f:2874578535e2e097e2e3c5e7384329de:xfd/CHANGELOG
+f:6b70a16de2965ede1e013eb6f4a82991:xfd/spkgbuild
+f:07e4a3f6c0a078a78a8f03b0797b7968:xfd/override
 f:46a029d1007c1d9f7fb854f77cc76255:orage/libical3.patch
 f:36e64d0e2cb0a11c351d093240795c5f:orage/CHANGELOG
 f:7b417780f7eae6cb486971c2bbd3a95b:orage/spkgbuild

@@ -2,10 +2,10 @@
 # depends	: python
 
 name=python-sip
-version=6.1.1
+version=6.17.2
 release=1
 
-source="https://files.pythonhosted.org/packages/f8/b2/fcd5e964eefce0737512fb4ea263308769c671c3b1b9b1e380a5008ffef0/sip-6.1.1.tar.gz"
+source="https://files.pythonhosted.org/packages/c9/16/50c3758ae06375796dde6c94592f1bdd80a1ca709f776a09fd763682280d/sip-6.17.2.tar.gz"
 options="!checksum"
 
 build() {

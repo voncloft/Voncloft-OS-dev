@@ -2,14 +2,14 @@
 # depends	: at-spi2-core python-gobject3
 
 name=python-atspi
-version=2.38.1
+version=2.58.2
 release=1
 _pverz=2_38_1
-source="https://gitlab.gnome.org/GNOME/pyatspi2/-/archive/PYATSPI_$_pverz/pyatspi2-PYATSPI_$_pverz.tar.gz"
+source="https://download.gnome.org/sources/pyatspi/2.58/pyatspi-2.58.2.tar.xz"
 options="!checksum"
 
 build() {
-   cd pyatspi2-PYATSPI_2_38_1
+   cd "$SRC"/pyatspi*/
    #python setup.py build
    #python setup.py install --optimize=1 --root=$PKG
 	NOCONFIGURE=1 ./autogen.sh

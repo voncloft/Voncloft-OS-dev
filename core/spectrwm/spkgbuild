@@ -2,14 +2,14 @@
 # depends	: libx11 xcb-util xcb-util-wm xcb-util-keysyms libxcb libxcursor libxft libxrandr libxt freetype2
 
 name=spectrwm
-version=3.4.1
+version=3.7.0
 verzion=$(echo $version | tr '.' '_')
 release=1
-source="https://github.com/conformal/spectrwm/archive/SPECTRWM_$verzion.tar.gz
+source="https://github.com/conformal/spectrwm/archive/refs/tags/SPECTRWM_3_7_0.tar.gz
 	baraction.sh"
 
 build() {
-	cd $name-SPECTRWM_$verzion
+	cd "$SRC"/spectrwm-SPECTRWM*/
 	make -C linux PREFIX=/usr SYSCONFDIR=/etc
 	make -C linux PREFIX=/usr SYSCONFDIR=/etc DESTDIR=$PKG install
 	install -d $PKG/usr/share/$name

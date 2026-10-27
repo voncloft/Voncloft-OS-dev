@@ -2,10 +2,10 @@
 # depends : python-pytest python-six
 
 name=python-pytest-verbose-parametrize
-version=1.7.0
+version=1.8.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-verbose-parametrize/pytest-verbose-parametrize-1.7.0.tar.gz"
+source="https://files.pythonhosted.org/packages/b8/16/ad8af617348ae278728881d893970463a0ff56e569cec5d585c89d15befb/pytest-verbose-parametrize-1.8.1.tar.gz"
 options="!checksum"
 
 build() {

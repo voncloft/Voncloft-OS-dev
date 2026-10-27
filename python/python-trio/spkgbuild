@@ -2,10 +2,10 @@
 # depends : 
 
 name=python-trio
-version=0.19.0
+version=0.34.0
 release=1
 
-source="git+https://github.com/python-trio/trio.git#tag="
+source="https://files.pythonhosted.org/packages/92/dc/a2d25ed73ad49cfd79bf18d262577c3731c98e382284e28d522f49a0df35/trio-0.34.0.tar.gz"
 options="!checksum"
 
 build() {

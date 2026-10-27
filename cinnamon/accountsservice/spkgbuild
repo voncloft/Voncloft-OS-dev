@@ -1,15 +1,14 @@
 # description : D-Bus interface for user account query and manipulation
-# depends : glib libxcrypt polkit shadow git glib meson systemd
+# depends : glib libxcrypt polkit shadow git meson
 
 name=accountsservice
-version=23.13.9
-release=3
-
-source=""
+version=26.27.3
+release=4
+source="https://gitlab.freedesktop.org/accountsservice/accountsservice/-/archive/26.27.3/accountsservice-26.27.3.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/accountsservice*/
 	sed -i '/dbus_conf_dir/s/sysconfdir/datadir/g' meson.build
 	mkdir build
 	cd build
@@ -17,7 +16,7 @@ build() {
 		-D admin_group=wheel \
 		-D systemd=false \
 		-D docbook=false \
-		-D gtk_dock=false \
+		-D gtk_doc=false \
 		-D user_heuristics=false\
 		-D systemd=false
 	ninja

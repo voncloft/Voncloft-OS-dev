@@ -2,9 +2,9 @@
 # depends: python-entrypoints python-mccabe python-pycodestyle python-pyflakes
 
 name=python-flake8
-version=3.9.2
+version=7.4.1
 
-source="https://files.pythonhosted.org/packages/source/${name:7:1}/${name#python-}/${name#python-}-${version}.tar.gz"
+source="https://files.pythonhosted.org/packages/c2/94/85870fc02dfe4ab0885c440e7e41f6a986b10e43eca6717e90f8ce1215cc/flake8-7.4.1.tar.gz"
 options="!checksum"
 
 build() {

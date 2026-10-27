@@ -2,10 +2,10 @@
 # depends       : xorg-libraries libdrm-32
 
 name=mesa-32
-version=25.1.3
+version=26.2.5
 release=1
 
-source="https://mesa.freedesktop.org/archive/mesa-${version}.tar.xz"
+source="https://mesa.freedesktop.org/archive/mesa-26.2.5.tar.xz"
 
 options="!checksum"
 

@@ -8,7 +8,7 @@ options="!checksum"
 source="qxmpp-1.17.0.tar.gz::https://invent.kde.org/libraries/qxmpp/-/archive/v1.17.0/qxmpp-v1.17.0.tar.gz"
 
 build() {
-    cd "qxmpp-v1.17.0"
+    cd "qxmpp-v${version}"
     plasma-package-installer \
         -DBUILD_OMEMO=ON \
         -DWITH_GSTREAMER=ON \

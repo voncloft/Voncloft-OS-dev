@@ -2,10 +2,10 @@
 # depends	: python
 
 name=python-xdg
-version=5.1.1
+version=6.0.0
 release=1
 
-source="https://files.pythonhosted.org/packages/33/fe/67bc1f8ee2782bca3cdc63558a64f843bb9f88e15793475350809fbd8e01/xdg-5.1.1.tar.gz"
+source="https://files.pythonhosted.org/packages/2a/b9/0e6e6f19fb75cf5e1758f4f33c1256738f718966700cffc0fde2f966218b/xdg-6.0.0.tar.gz"
 options="!checksum"
 
 build() {

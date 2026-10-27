@@ -7,3 +7,13 @@ Release=3
 Synopsis:
 Added Changelog to package
 Upgraded from version 5.39 to version 5.40
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:29:46 AM EDT 2026
+
+Version=5.48
+Release=3
+
+Synopsis:
+Upgraded from version 5.40 to version 5.48

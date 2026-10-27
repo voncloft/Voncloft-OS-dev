@@ -8,7 +8,7 @@ source="https://files.pythonhosted.org/packages/df/bf/f7da0350254c0ed7c72f3e33ce
 options="!checksum"
 
 build() {
-    cd "jinja2-3.1.6"
+    cd "jinja2-${version}"
     pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
     pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

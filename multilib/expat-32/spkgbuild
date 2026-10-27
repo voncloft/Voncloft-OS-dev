@@ -2,12 +2,12 @@
 # depends	: expat
 
 name=expat-32
-version=2.7.1
+version=2.9.0
 release=1
-source="http://prdownloads.sourceforge.net/expat/expat-$version.tar.xz"
+source="https://downloads.sourceforge.net/project/expat/expat/2.9.0/expat-2.9.0.tar.xz"
 
 build() {
-	cd expat-$version
+	cd "$SRC"/expat*/
 
 	export CC="gcc -m32"
 	export CXX="g++ -m32"

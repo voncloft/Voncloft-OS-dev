@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-argcomplete
-version=1.12.3
+version=3.7.2
 release=1
 
-source="https://github.com/kislyuk/argcomplete#commit=?signed/archive/refs/tags/$version.tar.gz"
+source="https://files.pythonhosted.org/packages/87/6f/5a73f04007ca950701765949209f068da628bd11f9c2da287278ce91e0ee/argcomplete-3.7.2.tar.gz"
 options="!checksum"
 
 build() {

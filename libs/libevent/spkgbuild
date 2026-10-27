@@ -2,9 +2,9 @@
 # depends	: openssl
 
 name=libevent
-version=2.1.12
+version=2.1.13
 release=1
-source="https://github.com/$name/$name/releases/download/release-$version-stable/$name-$version-stable.tar.gz"
+source="https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz"
 
 build() {
 	cd $name-$version-stable

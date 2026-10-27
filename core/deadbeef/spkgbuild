@@ -2,12 +2,12 @@
 # depends	: alsa-lib desktop-file-utils jansson libmad gtk3
 
 name=deadbeef
-version=1.10.0
+version=1.10.3
 release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.bz2"
+source="https://downloads.sourceforge.net/project/deadbeef/Builds/1.10.3/linux/deadbeef-1.10.3.tar.bz2"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/deadbeef*/
 	./configure --prefix=/usr \
 		    --disable-nls
 	make

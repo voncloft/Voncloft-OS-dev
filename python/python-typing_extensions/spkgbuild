@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-typing_extensions
-version=3.10.0.2
+version=4.16.0
 release=3
 
-source="git+https://github.com/python/typing.git#tag="
+source="https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,15 +2,15 @@
 # depends       : curl cmake python3 llvm libssh2
 
 name=rust-32
-version=1.88.0
+version=1.99.1
 release=1
 
-source="https://static.rust-lang.org/dist/rustc-$version-src.tar.xz"
+source="https://static.rust-lang.org/dist/rustc-1.99.1-src.tar.xz"
 options="!checksum"
 
 build()
 {
-    cd rustc-${version}-src
+    cd "$SRC"/rustc*/
 cat > bootstrap.toml << "EOF" &&
 # See bootstrap.toml.example for more possible options,
 # and see src/bootstrap/defaults/bootstrap.dist.toml for a few options

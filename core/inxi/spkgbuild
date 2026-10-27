@@ -2,14 +2,14 @@
 # depends	: coreutils gawk grep pciutils procps-ng sed
 
 name=inxi
-version=3.1.06.1
+version=3.3.31.2
 _ver=${version%.*}
 _sion=${version##*.}
 release=1
-source="https://github.com/smxi/inxi/archive/${_ver}-${_sion}/$name-$version.tar.gz"
+source="https://github.com/smxi/inxi/archive/refs/tags/3.3.31-2.tar.gz"
 
 build() {
-	cd $name-${_ver}-${_sion}
+	cd "$SRC"/inxi*/
 	install -D -m755 inxi $PKG/usr/bin/inxi
 	install -D -m755 inxi.1 $PKG/usr/share/man/man1/inxi.1
 }

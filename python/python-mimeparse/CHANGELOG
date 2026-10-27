@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:46 AM EDT 2026
+
+python-mimeparse
+Version=2.0.0
+Release=8
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.6.0 to version 2.0.0

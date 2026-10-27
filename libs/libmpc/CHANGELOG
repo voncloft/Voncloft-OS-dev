@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+libmpc
+Version=1.4.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.2.0 to version 1.4.1

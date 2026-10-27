@@ -337,7 +337,8 @@ d:kdialog
 f:346b9ccc0161a9d5b83ea551822eb17a:labplot/spkgbuild
 f:4f3706e829932bb07c5fb9fc0621a64c:kbounce/CHANGELOG
 f:71c09d862861bc868553d9f8ebbee580:kbounce/spkgbuild
-f:f979d2dc75082578dfd59ee19ba11a4a:rolisteam/spkgbuild
+f:927d2068ad3a592a6667e753887f9309:rolisteam/spkgbuild
+f:a47e81d6a95ab95779ae27c61995dce4:rolisteam/override
 f:37659438e5f819852ad6999f0a462b85:kaccounts-integration/.pkgfiles
 f:b8def186e9ea60fd2d25e44f5b0f743e:kaccounts-integration/CHANGELOG
 f:f3477a6cff28af7ff31da6a6bef94139:kaccounts-integration/spkgbuild
@@ -369,13 +370,15 @@ f:05fc5875abb65c2db130967cb5c24d91:kfind/CHANGELOG
 f:ea58a2d704c81c5c4a8a54bb7d552101:kfind/spkgbuild
 f:459684558e56d0bde8a785ab2b96dc57:kapman/CHANGELOG
 f:3f69bca5df9f726db93d0a971e29c0a5:kapman/spkgbuild
-f:fc92881cdd3cf6a9aa1c2caf8ece73cc:kst/spkgbuild
+f:0c3057b12df73ef72d5c8f42614bd7fe:kst/spkgbuild
+f:5e1b57312add92d215b12e7d6226dfa0:kst/override
 f:8847126fca537e9a0be0ad1f0f5999d8:kolourpaint/.pkgfiles
 f:2d3ab7383542caa00ec8c6386b8b24b8:kolourpaint/CHANGELOG
 f:8631f885667c2d367cf1d68b7beadbfe:kolourpaint/spkgbuild
 f:04c8c787c937ef7dcae010e08300060c:kmail/CHANGELOG
 f:adb53797c674e17d5e9ea261554eea7a:kmail/spkgbuild
-f:cd5260a3c022b3f4fcc89287b4d0d7f6:ktimetracker/spkgbuild
+f:1dbfc497d0ce6ac58712cb469fd4e575:ktimetracker/spkgbuild
+f:379acb96f3e777477e13e5f08fb29de9:ktimetracker/override
 f:209cecabad4fa4e987a8fa3209af84f7:kollision/CHANGELOG
 f:b0dd7bf5a9cd2b49ded4db4e3d55abbb:kollision/spkgbuild
 f:1cf5fa4c39d954729b943f61ad16a366:kitinerary/.pkgfiles
@@ -467,6 +470,7 @@ f:eac2c48532ed4781a4aef5701f15bc31:ktimer/CHANGELOG
 f:c99006b992890ddc6c7a5891dd5d7799:ktimer/spkgbuild
 f:43fe5d8fd3895b1ed5993f4bc3dc3173:rsibreak/spkgbuild
 f:723d46468a951034ae8b6ddf68d61a0a:arianna/spkgbuild
+f:d2fdbbee30607edf650419e49d009edd:arianna/override
 f:08cc18a702129af7d147685bfbea3ac8:ktp-text-ui/CHANGELOG
 f:ab82f6a7099ba5f870a82e4c65e7616d:ktp-text-ui/spkgbuild
 f:a8ef3fd53d246f482f915129633f594e:korganizer/.pkgfiles
@@ -506,7 +510,8 @@ f:da6c81e451839c986458237bd220caa8:palapeli/spkgbuild
 f:a974189978c4c3b247cf8327f2f362b9:pimcommon/.pkgfiles
 f:0dc9feb928ebb1988b9f83df9443a3ef:pimcommon/CHANGELOG
 f:1456f047a775aefd04460c2c48d492c6:pimcommon/spkgbuild
-f:94a98016933b2919757c45d038110fb6:vvave/spkgbuild
+f:a57ec7e988dbbeed1ffb8a090f421114:vvave/spkgbuild
+f:ba017d1b3d1c0714c064037a6b84f9ec:vvave/override
 f:bbae6f873c985e9da0b283bea1ea3cd8:kaffeine/.pkgfiles
 f:3ffc801f8d5780f898602b2f4605bba7:kaffeine/CHANGELOG
 f:7f8f2370262da82dda8f7b009c3f549d:kaffeine/kaffeine.tar.xz
@@ -517,7 +522,8 @@ f:bdde3038ee7b49857ffc012991e991c8:audiotube/CHANGELOG
 f:2ab0662d610c7943eaeccc70c19663e2:audiotube/spkgbuild
 f:537e09d02d38aaf9810c1bcdd29b4bef:kcharselect/CHANGELOG
 f:9339db01b277518a476bbecdced40264:kcharselect/spkgbuild
-f:ba1bc3bbcbca60110fc87b80fc75dc61:kommit/spkgbuild
+f:07af18a335216916bbf60cb8f85e7326:kommit/spkgbuild
+f:1884ebb4a62d479232d4835a629834d0:kommit/override
 f:4088628c9b092b0df6f96f199df14768:kalzium/CHANGELOG
 f:79afcca38018ff6afeba737423c00173:kalzium/spkgbuild
 f:f1d765a1abc757a8c3cec1f321b36651:kosmindoormap/CHANGELOG
@@ -529,7 +535,8 @@ f:a77d61aaa5ad2f2c22ecf4f876d24bc1:keysmith/CHANGELOG
 f:565d48093b65b79fa35cc1b2c33dfa70:keysmith/spkgbuild
 f:e3ec811f12a6d7f6633fa0e202ee617e:kshisen/CHANGELOG
 f:817e1dbb6710969594b672ce58042993:kshisen/spkgbuild
-f:a4f3efbedd423e2804e1441f045cb15f:optiimage/spkgbuild
+f:6877cad70391478853d08ea771111b39:optiimage/spkgbuild
+f:15febe2b3c0783a58ac3aeb812c45c02:optiimage/override
 f:d6c4f965058087609f7362e65560980a:smarthome/.pkgfiles
 f:57ec00ec1d278d0932a6d9296d573281:smarthome/spkgbuild
 f:79cb3b99b4f914fd266ee5f9cb7c23fe:smarthome/override
@@ -608,7 +615,8 @@ f:b5ef731c76f8db3b14b2e4a929be214b:kontact/spkgbuild
 f:cb632f21b67c0016054c76333497eb64:kreversi/CHANGELOG
 f:27a674a1a0f260faa606a32885d0a6c4:kreversi/spkgbuild
 f:e4a5c5c8b6cd1af3c83f24afd0ba12f2:hana/spkgbuild
-f:6525c8599330b41a8550f6486db69de1:gcompris/spkgbuild
+f:eaf86e0aefea8012815f190fad559a32:gcompris/spkgbuild
+f:0e6a9cae2d0a8028f520c653a6e5550e:gcompris/override
 f:b46c4e0927f8eb117c6672ba71d0e58a:zanshin/CHANGELOG
 f:ba805df48ffaf9de9bdbbcf78da68421:zanshin/spkgbuild
 f:f82c840a577d177fdd8b6a9209e0e6bb:kdebugsettings/CHANGELOG
@@ -631,7 +639,8 @@ f:ab76dfa7289c0cc16ec74607e13bf8cc:ktp-call-ui/spkgbuild
 f:6c5d1aeb26446833582ee45d4343ce3e:umbrello/CHANGELOG
 f:cd4ed73321fcb3f2dcbe843c7fdb8283:umbrello/spkgbuild
 f:6dee28c8d95e873bb71f104e39a30073:marknote/spkgbuild
-f:0ce28f8d883ecf0450588ecfcf215367:kaidan/spkgbuild
+f:7fc26c104ca1326da640cf7430bd71bd:kaidan/spkgbuild
+f:cdc153b74cc2769de2ca3a1080264b8e:kaidan/override
 f:2dbfb11c637ded2224f0db537e30de96:kdepim-addons/.pkgfiles
 f:fb81a3bbdfce7f332173cf3975296b10:kdepim-addons/CHANGELOG
 f:f3a833ed34d4d03f685a25e2662ed5c4:kdepim-addons/spkgbuild
@@ -652,6 +661,7 @@ f:44867ba6eb1c36ae8eadd5a3dafe76cf:etrade-widget/spkgbuild
 f:a28596c0f800edc18cf1a90908619ee1:etrade-widget/override
 f:4a25a692644cb548855abb53e292fb5d:etrade-widget/.checksums
 f:b21ad7a0d3a15588125a65457f0dc946:angelfish/spkgbuild
+f:7b3da8a409d277ad90cfc1ab51f0c8b1:angelfish/override
 f:20cb5935479b279a10eca3aa71c80f44:kde-dev-scripts/CHANGELOG
 f:10ccc990bfe756a164180b14f36c0668:kde-dev-scripts/spkgbuild
 f:1a881334788fa62d6f808d9516a784da:kbreakout/CHANGELOG
@@ -661,7 +671,8 @@ f:9506eb590421ce676e99b9d3750fe035:kcolorpicker/.pkgfiles
 f:2cbf36090a4e42f3809ffb5c01116afb:kcolorpicker/spkgbuild
 f:68c41684d6d699a8c4b2f1362e69736e:konversation/CHANGELOG
 f:a40f1e1ba871b1db7c301664d28be432:konversation/spkgbuild
-f:fc20e4338742a80585b370e5727d013c:smb4k/spkgbuild
+f:f3414519b8cb8ffa18773cc0ba6e5b3a:smb4k/spkgbuild
+f:84a91b9dff0f6c650863c38d739eb1de:smb4k/override
 f:c89b7477a0776adafe45280cf13ec9d9:kamoso/CHANGELOG
 f:5fdd19d1c9128376de0fc76da3227299:kamoso/spkgbuild
 f:dfec01ee94586d28d56c7f62760473a6:kate/.pkgfiles
@@ -677,7 +688,8 @@ f:650d5c563e3c302bcfe4010a78f4d290:kiten/CHANGELOG
 f:8c52dee3a9bec62f68e4eae0a9129bad:kiten/spkgbuild
 f:19c2073a20b399c9558626cf69b58db7:parley/CHANGELOG
 f:6f41df0c7207e902e295727f4db329d4:parley/spkgbuild
-f:f219257c7f4734c4ba0c4265cbb4419b:index-fm/spkgbuild
+f:776af1adedfe594363801a98440c9c33:index-fm/spkgbuild
+f:49e28061fba35d53ad34f3b220cb88f4:index-fm/override
 f:decf8651fe0f69b5f3e5275531de5fb9:picmi/CHANGELOG
 f:8edf861f34b6de80747a208dfefba7fc:picmi/spkgbuild
 f:7f85d6e6ea9ad9176d55d9a787b9dd5e:kmines/CHANGELOG
@@ -695,7 +707,7 @@ f:071531f7670cb46f13f1c1a7fd41a76e:kdesdk-thumbnailers/CHANGELOG
 f:ef2ab13e0be7cb58104a67970333fa4b:kdesdk-thumbnailers/spkgbuild
 f:9b0e31e65b1d26b2ca8b80d9bd2bcd7e:kde-calendar/.pkgfiles
 f:a3631aa893264bac91319bdaa5e18030:kde-calendar/spkgbuild
-f:8a47a36768ca6175ffc35276d4461741:kde-calendar/override
+f:78df867b17c493bae0ee3117053d5923:kde-calendar/override
 f:6b73ce7bf79481caa3480b78c1774e55:kde-calendar/.checksums
 f:f81514d83a97e67eed15fa043d4f94d5:kdominate/spkgbuild
 f:789c151ed61ad1c7edc457f6fda6186d:akonadi/.pkgfiles
@@ -735,7 +747,7 @@ f:d4990c0394bbbc970b7b9fd04e55b890:kmime/spkgbuild
 f:fbf5dbd2e61de33829cd6dc533d0e9f2:varpeggio/.pkgfiles
 f:e6b470d4605e1e43c903347f7008ee9f:varpeggio/CHANGELOG
 f:aba5de5b0541e4cd7482659ed688fd74:varpeggio/spkgbuild
-f:355ae57e747736bdebe9fc59afd7ee45:varpeggio/override
+f:ec7efa2e1914aa87bb740c8eaf38d0ca:varpeggio/override
 f:6d6dc2f84e7540815a95a8662a72b642:varpeggio/.checksums
 f:197b91499374c4c69be5ad88f2b2af2b:rocs/CHANGELOG
 f:4a26c66ed8a2a4b1061f80a0311c5a0a:rocs/spkgbuild
@@ -802,7 +814,8 @@ f:29f5c96c5007dc7cca72b4787dbd8e2c:incidenceeditor/CHANGELOG
 f:9a4cc057876ead2e5ffe9612ca52026e:incidenceeditor/spkgbuild
 f:f4653c3221d5998a6d6c00a8149fccd6:subtitlecomposer/spkgbuild
 f:ef95eb3750f194f4e2a04d2e3b79ab5a:francis/spkgbuild
-f:ade9cfc0999f4e1d3a234ea9b8490809:krusader/spkgbuild
+f:eb8d5ccf125edc8722dcb2aa87189361:krusader/spkgbuild
+f:b3d88708bfadef7a71825739b5d3988e:krusader/override
 f:5572dca3dc7cdbb45ed11410e67392f6:lskat/CHANGELOG
 f:63e8d634db37b7433fd53bbe2398368a:lskat/spkgbuild
 f:fdda57de3479fbbae88fc76b5d438506:ktp-send-file/CHANGELOG
@@ -828,7 +841,8 @@ f:3a9df9577b45e4ac54ccd5677db93f71:kde-monitor-default/.checksums
 f:1dc4334a57ede730e966aff93580b155:messagelib/.pkgfiles
 f:64dc47e109e8920f0f8a3c20695ad36e:messagelib/CHANGELOG
 f:c6b9ac9513dc918b03756b20a99312c9:messagelib/spkgbuild
-f:44e27e1f3b173efc1d9dac0eed50fef4:kodaskanna/spkgbuild
+f:edb63f3f893b008cf2e871a7714e8295:kodaskanna/spkgbuild
+f:b447bd07c0f08f525db56fe3b916991e:kodaskanna/override
 f:626f679d5b1a9abe62bdccc22e3dbf81:kturtle/CHANGELOG
 f:f282953753006fe8614037c2f4979d32:kturtle/spkgbuild
 f:a82eb687e3a87f91e4c84800b37fd0bc:kdenlive/CHANGELOG
@@ -846,7 +860,8 @@ f:c8c90c84fede1ba58f1d0316f56f582e:ktp-desktop-applets/CHANGELOG
 f:2047df72221b5b20a39026e03736c586:ktp-desktop-applets/spkgbuild
 f:4b7fdd28454e4e0569de4e0345ec5693:kalendar/CHANGELOG
 f:f7e20abc5268045ca2c7c960dbf21a51:kalendar/spkgbuild
-f:6681280d2f1d05033bd8b4bbb7595083:heaptrack/spkgbuild
+f:8cf477c4eb7a12fb358ee708753dbd74:heaptrack/spkgbuild
+f:95a1dd3355dcd434283a78557176309d:heaptrack/override
 f:f586814a4d2009476c6144503a17f069:ktorrent/CHANGELOG
 f:5f84854546fc9761b562be70974b37f6:ktorrent/spkgbuild
 f:02fd3b35d000fc753a889a02138ed833:kdepim-runtime/.pkgfiles
@@ -895,7 +910,8 @@ f:5791ada36b31cfe7fe19d453a8ee6ca0:kontactinterface/.pkgfiles
 f:6b389f663a6e4623a7aeaf34d136e3fb:kontactinterface/CHANGELOG
 f:fdc62ec5cedf349e8a770b8eaaa0cd3d:kontactinterface/spkgbuild
 f:cef8cd1d31834f706a7c8f70b5f2f9cf:rkward/spkgbuild
-f:c27c31bc9114a5accdca6323e954bc98:nota/spkgbuild
+f:e4e6b77cb7f7bc6961280b4bd06f10c0:nota/spkgbuild
+f:4e348e2492bf9fc7780c21a5ee4b29fe:nota/override
 f:edec1865a22ac60ef582892498b6ed41:kmousetool/CHANGELOG
 f:cb240fa28ef298944b9b32b64b362dbb:kmousetool/spkgbuild
 f:6a7b4ae261e8d3e3bd6cf6f394f7483d:kio-extras/.pkgfiles
@@ -965,7 +981,8 @@ f:c9a590b6aef816005c51c7a7de262cf1:kdiamond/CHANGELOG
 f:674759e6203fba3a8431acb283153143:kdiamond/spkgbuild
 f:e621c147249f73febf4c443075cff2ee:ktp-approver/CHANGELOG
 f:3f57dc36d11ddf31ecc6954a5925b95b:ktp-approver/spkgbuild
-f:660a5f90e0722b95802b51f058df9e05:hash-o-matic/spkgbuild
+f:d37d531c095047c11e4de2154007fdc7:hash-o-matic/spkgbuild
+f:d91fa4225420db675894d94eace292e5:hash-o-matic/override
 f:3c40f9f40adb60fd3a7e6b990d5e6ac0:kmail-account-wizard/CHANGELOG
 f:9d3d3171a2185e6cd7c209ed31bf177a:kmail-account-wizard/spkgbuild
 f:84dc98fd83892c34991775cee9b0b8d5:granatier/CHANGELOG
@@ -989,7 +1006,8 @@ f:aa6da3821add7d0d7392703e6973dc7f:kpmcore/CHANGELOG
 f:e3635cf5ba0ac4ec7df11a6370c2ff34:kpmcore/spkgbuild
 f:798678b52a60907bf632e53b15776f03:ktp-common-internals/CHANGELOG
 f:0d4a49b2d2c72ae58cb1461103a994e4:ktp-common-internals/spkgbuild
-f:edca3e86f20d96f22e88a04af44375c7:tellico/spkgbuild
+f:19e89cebf15a970d850409233b30a46f:tellico/spkgbuild
+f:cc54a86352dc17601be86844d1f5cfec:tellico/override
 f:394ad821ddb3d0108eae169de06e9e0a:dolphin-plugins/.pkgfiles
 f:af936bb768e6b826b164df52769c601a:dolphin-plugins/CHANGELOG
 f:e72199f0a17a7eea8fe9a1e4bbb83767:dolphin-plugins/spkgbuild

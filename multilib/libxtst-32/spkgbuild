@@ -2,9 +2,9 @@
 # depends	: libxtst
 
 name=libxtst-32
-version=1.2.3
+version=1.2.6
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXtst-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXtst-1.2.6.tar.gz"
 
 build() {
 	cd libXtst-$version

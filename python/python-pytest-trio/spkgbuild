@@ -2,10 +2,10 @@
 # depends : 
 
 name=python-pytest-trio
-version=0.7.0
+version=0.8.0
 release=3
 
-source="git+https://github.com/python-trio/pytest-trio.git#tag="
+source="https://files.pythonhosted.org/packages/13/08/056279526554c6c6e6ad6d4a479a338d14dc785ac30be8bdc6ca0153c1be/pytest-trio-0.8.0.tar.gz"
 options="!checksum"
 
 build() {

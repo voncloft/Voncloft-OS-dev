@@ -2,7 +2,7 @@
 # depends : python texlive-core
 
 name=python-pyx
-version=0.16
+version=0.18
 release=4
 
 source="https://github.com/pyx-project/pyx/archive/refs/tags/0.16/python-pyx-0.16.tar.gz"

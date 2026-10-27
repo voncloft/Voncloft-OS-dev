@@ -2,14 +2,14 @@
 # depends : 
 
 name=python-graphene
-version=3.0.0b7
+version=3.4.3
 release=1
 
-source="git+https://github.com/graphql-python/graphene.git#tag="
+source="https://files.pythonhosted.org/packages/cc/f6/bf62ff950c317ed03e77f3f6ddd7e34aaa98fe89d79ebd660c55343d8054/graphene-3.4.3.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/graphene*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

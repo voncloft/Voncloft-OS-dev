@@ -1,0 +1,5 @@
+# This package has no independent, automatically applicable upstream release.
+source=local
+url=$source
+update_repo_skip='Firefox nightly is maintained manually as requested.'
+update_repo_skip_status='Manual update'

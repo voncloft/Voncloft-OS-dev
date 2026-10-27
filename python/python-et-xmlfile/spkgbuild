@@ -2,14 +2,14 @@
 # depends : python-lxml
 
 name=python-et-xmlfile
-version=1.1.0
+version=2.0.0
 release=9
 
-source="https://foss.heptapod.net/openpyxl/et_xmlfile/-/archive/1.1/et_xmlfile-1.1.tar.gz"
+source="https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/et_xmlfile*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

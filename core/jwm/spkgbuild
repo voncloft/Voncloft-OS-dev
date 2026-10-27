@@ -2,14 +2,14 @@
 # depends	: libxext libxmu libxinerama libxpm libjpeg-turbo libpng librsvg cairo libxft 
 
 name=jwm
-version=2.4.0
+version=2.4.6
 release=2
 backup="etc/system.jwmrc"
-source="http://joewing.net/projects/jwm/releases/jwm-2.4.0.tar.xz
+source="https://github.com/joewing/jwm/archive/refs/tags/v2.4.6.tar.gz
 	jwm.desktop"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/jwm*/
 
 	sed -i 's|/usr/local/share/|/usr/share/|' contrib/Makefile po/Makefile* example.jwmrc
 	sed "s/autohide/height=\"20\" autohide/" -i example.jwmrc

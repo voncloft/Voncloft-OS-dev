@@ -2,10 +2,10 @@
 # depends : autoconf icu rustc which gcc
 
 name=js78
-version=78.9.0
+version=78.15.0
 release=1
 
-source="https://archive.mozilla.org/pub/firefox/releases/${version}esr/source/firefox-${version}esr.source.tar.xz"
+source="https://archive.mozilla.org/pub/firefox/releases/78.15.0esr/source/firefox-78.15.0esr.source.tar.xz"
 options="!checksum"
 
 build() {

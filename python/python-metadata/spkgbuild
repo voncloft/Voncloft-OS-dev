@@ -2,9 +2,9 @@
 # depends : python python-flit python-packaging
 
 name=python-metadata
-version=0.9.0
+version=0.12.1
 release=2
-source="https://files.pythonhosted.org/packages/source/p/pyproject_metadata/pyproject_metadata-$version.tar.gz"
+source="https://files.pythonhosted.org/packages/4f/76/1cae539918a7b1746d624c2f01560b793c22cd8c081157505bb9bbf0e34d/pyproject_metadata-0.12.1.tar.gz"
 options="!checksum"
 
 build() {

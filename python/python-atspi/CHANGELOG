@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:46 AM EDT 2026
+
+python-atspi
+Version=2.58.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.38.1 to version 2.58.2

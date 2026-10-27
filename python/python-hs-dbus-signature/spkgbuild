@@ -2,14 +2,14 @@
 # depends : python-hypothesis 
 
 name=python-hs-dbus-signature
-version=0.7
+version=0.8.1
 release=1
 
-source="https://github.com/stratis-storage/hs-dbus-signature/archive/refs/tags/v$version.tar.gz"
+source="https://files.pythonhosted.org/packages/fe/53/b510c437bbf4998fb816ebabec1b9b5c6130d344d77fab486b6d4188fc75/hs_dbus_signature-0.8.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/hs_dbus_signature*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

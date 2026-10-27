@@ -8,7 +8,7 @@ source="https://files.pythonhosted.org/packages/ad/e7/2a691db7d076b75d099fdba1a1
 options="!checksum"
 
 build() {
-    cd "vcs_versioning-2.6.0"
+    cd "vcs_versioning-${version}"
     pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
     pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

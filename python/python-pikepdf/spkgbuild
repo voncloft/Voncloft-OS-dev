@@ -2,7 +2,7 @@
 # depends : python-lxml python-pillow qpdf
 
 name=python-pikepdf
-version=7.2.0
+version=10.17.0
 release=1
 
 source="https://github.com/pikepdf/pikepdf/archive/v7.2.0/python-pikepdf-7.2.0.tar.gz"

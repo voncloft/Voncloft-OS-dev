@@ -2,14 +2,14 @@
 # depends : python-pytest
 
 name=python-pyfakefs
-version=4.5.1
+version=6.2.0
 release=1
 
-source="git+https://github.com/jmcgeheeiv/pyfakefs.git#tag="
+source="https://files.pythonhosted.org/packages/98/0d/c80012ee6e885c293ad63c5f5b049d3ef3fd2b32bbe6fa8739145f392ec6/pyfakefs-6.2.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pyfakefs*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

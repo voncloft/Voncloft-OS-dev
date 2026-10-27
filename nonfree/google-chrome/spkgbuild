@@ -2,7 +2,7 @@
 # depends	: alsa-lib gconf gtk3 libxtst nss cups libarchive
 
 name=google-chrome
-version=120.0.6099.62
+version=156.0.8078.47
 release=1
 options="!strip !checksum"
 _channel=stable

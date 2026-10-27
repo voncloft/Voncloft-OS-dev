@@ -2,9 +2,9 @@
 # depends	: libxft fontconfig freetype2 libxext libxaw libxmu libxinerama libxpm libice libxt libx11 ncurses 
 
 name=xterm
-version=401
+version=412
 release=1
-source="http://invisible-mirror.net/archives/$name/$name-$version.tgz"
+source="https://invisible-mirror.net/archives/xterm/xterm-412.tgz"
 	
 build() {
 	cd $name-$version

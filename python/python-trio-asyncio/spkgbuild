@@ -2,10 +2,10 @@
 # depends : 
 
 name=python-trio-asyncio
-version=0.12.0
+version=0.16.0
 release=1
 
-source="git+https://github.com/python-trio/trio-asyncio.git#tag="
+source="https://files.pythonhosted.org/packages/e1/76/b6317ad0536e155a9cce6c3f0db9a3b3f63e579e176779712ef3403d4af5/trio_asyncio-0.16.0.tar.gz"
 options="!checksum"
 
 build() {

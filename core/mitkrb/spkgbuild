@@ -2,15 +2,15 @@
 # depends       : 
 
 name=mitkrb
-version=1.21.3    
+version=1.22.2    
 release=1
-source="https://kerberos.org/dist/krb5/1.21/krb5-1.21.3.tar.gz
+source="https://kerberos.org/dist/krb5/1.22/krb5-1.22.2.tar.gz
 https://www.linuxfromscratch.org/patches/blfs/svn/mitkrb-1.21.3-gcc15_fixes-1.patch"
 
 options="!checksum"
 
 build() {
-        cd krb5-$version
+        cd "$SRC"/krb5*/
 patch -Np1 -i $SRC/mitkrb-1.21.3-gcc15_fixes-1.patch
 cd src 
 sed -i -e '/eq 0/{N;s/12 //}' plugins/kdb/db2/libdb2/test/run.test 

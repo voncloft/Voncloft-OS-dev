@@ -2,10 +2,10 @@
 # depends : python-six python-wcwidth
 
 name=python-blessed
-version=1.18.1
+version=1.52.0
 release=1
 
-source="git+https://github.com/jquast/blessed.git#tag="
+source="https://files.pythonhosted.org/packages/8f/e3/53462b28d7a06f2fcf820863f951255f4e022e4988981b0a5ca339f7773b/blessed-1.52.0.tar.gz"
 options="!checksum"
 
 build() {

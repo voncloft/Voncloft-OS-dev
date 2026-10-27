@@ -2,10 +2,10 @@
 # depends : python-setuptools python-toml
 
 name=python-pyproject2setuppy
-version=20
+version=22
 release=2
 
-source="https://github.com/mgorny/pyproject2setuppy/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/mgorny/pyproject2setuppy/archive/refs/tags/v22.tar.gz"
 options="!checksum"
 
 build() {

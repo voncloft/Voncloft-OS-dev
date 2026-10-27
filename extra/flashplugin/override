@@ -1,0 +1,5 @@
+# This package has no independent, automatically applicable upstream release.
+source=local
+url=$source
+update_repo_skip='Adobe Flash is discontinued; the archived plugin is maintained manually.'
+update_repo_skip_status='Manual update'

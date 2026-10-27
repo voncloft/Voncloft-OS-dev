@@ -8,7 +8,7 @@ source="https://files.pythonhosted.org/packages/bf/5c/a8a1552bdd6b9e0f7371497b7e
 options="!checksum"
 
 build() {
-    cd "doxyqml-0.6.0"
+    cd "doxyqml-${version}"
     pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
     pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

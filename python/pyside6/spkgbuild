@@ -1,15 +1,18 @@
-# description : library for retrieving info on running processes
-# depends : 
+# description : Python bindings and binding generator for the Qt 6 framework
+# depends : python qt6 cmake ninja clang llvm python-packaging python-setuptools
 
-name=psutil
-version=7.0.0
-release=1
+name=pyside6
+version=6.12.0
+release=2
+source="https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-$version-src/pyside-setup-everywhere-src-$version.tar.xz"
 
-source="https://files.pythonhosted.org/packages/source/p/psutil/$version-7.0.0.tar.gz"
-
-build()
-{
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user psutil --root=$PKG
+build() {
+    cd "$SRC/pyside-setup-everywhere-src-$version"
+    cmake -S . -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DPYTHON_EXECUTABLE=/usr/bin/python3 \
+        -DBUILD_TESTS=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
 }

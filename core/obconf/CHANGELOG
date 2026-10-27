@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+obconf
+Version=2.0.4+git20150213
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.0.4 to version 2.0.4+git20150213

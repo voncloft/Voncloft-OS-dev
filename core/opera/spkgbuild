@@ -2,9 +2,9 @@
 # depends	: curl desktop-file-utils gtk3 hicolor-icon-theme nss shared-mime-info alsa-lib cups
 
 name=opera
-version=79.0.4143.22
+version=139.0.6053.14
 release=1
-source="https://download3.operacdn.com/pub/opera/desktop/${version}/linux/${name}-stable_${version}_amd64.deb"
+source="https://deb.opera.com/opera/pool/non-free/o/opera-stable/opera-stable_139.0.6053.14_amd64.deb"
 
 build() {
 	bsdtar -xf ${name}-stable_${version}_amd64.deb

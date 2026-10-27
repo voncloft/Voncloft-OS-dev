@@ -2,14 +2,14 @@
 # depends : python-dbus python-gobject
 
 name=python-dbusmock
-version=0.23.1
+version=0.38.1
 release=1
 
-source="git+https://github.com/martinpitt/python-dbusmock#commit=b3e935355afcfb5240bac5a99707ffecc35772a2"
+source="https://files.pythonhosted.org/packages/7b/56/fb685394b46925ea4bd0ff09ad2d772820734bdf96583468c5cf0f767ca0/python_dbusmock-0.38.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "$SRC"/python_dbusmock*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

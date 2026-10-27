@@ -1,9 +1,9 @@
 # description	: User space library for accessing the DRM, on operating systems that support the ioctl interface (32bit)
 # depends : xorg-libraries libpciaccess-32
 name=libdrm-32
-version=2.4.125
+version=2.4.134
 release=1
-source="https://dri.freedesktop.org/libdrm/libdrm-$version.tar.xz"
+source="https://dri.freedesktop.org/libdrm/libdrm-2.4.134.tar.xz"
 
 build() {
 	cd libdrm-$version

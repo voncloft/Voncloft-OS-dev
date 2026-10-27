@@ -2,10 +2,10 @@
 # depends : python python-parso
 
 name=python-jedi
-version=0.18.0
+version=0.20.1
 release=3
 
-source="git+https://github.com/davidhalter/jedi#commit="
+source="https://files.pythonhosted.org/packages/a3/a4/4692ecd7fa700ac1066b1c1f6cadef60aa2e01e5e364710235137d823e0a/jedi-0.20.1.tar.gz"
 options="!checksum"
 
 build() {

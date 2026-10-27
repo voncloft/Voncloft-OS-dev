@@ -1,0 +1,5 @@
+# This package has no independent, automatically applicable upstream release.
+source=local
+url=$source
+update_repo_skip='Cisco archive is supplied manually after signing in; no public release feed.'
+update_repo_skip_status='Manual update'

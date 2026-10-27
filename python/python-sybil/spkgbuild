@@ -2,14 +2,14 @@
 # depends : python
 
 name=python-sybil
-version=9.1.0
+version=10.1.0
 release=1
 
-source="https://github.com/cjw296/sybil/archive/refs/tags/$version.tar.gz"
+source="https://files.pythonhosted.org/packages/1c/03/50135b55ba14509654b2f624eaf7e318d654182ebe9f712fb74e98e418d0/sybil-10.1.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/sybil*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

@@ -1,9 +1,9 @@
 # description : Checks Scratchpkg recipe versions with a live terminal display and records or applies repository updates
-# depends : bash coreutils curl findutils foltotar grep gzip nano sed tar
+# depends : bash coreutils curl findutils git foltotar grep gzip nano python sed tar
 
 name=update-repo
 version=20261026
-release=4
+release=5
 source="update-repo changelog"
 
 build() {

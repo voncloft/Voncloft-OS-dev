@@ -2,16 +2,16 @@
 # depends	: libxv
 
 name=json-c-32
-version=0.16
+version=0.19
 release=1
-source="https://s3.amazonaws.com/json-c_releases/releases/json-c-$version.tar.gz"
+source="https://github.com/json-c/json-c/archive/refs/tags/json-c-0.19-20260627.tar.gz"
 build() {
 
 	export CC="gcc -m32"
 	export CXX="g++ -m32"
 	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
 
-        cd json-c-$version
+        cd "$SRC"/json-c-json-c*/
         mkdir build
         cd build
         cmake .. \

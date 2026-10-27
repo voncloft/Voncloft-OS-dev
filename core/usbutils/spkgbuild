@@ -2,9 +2,9 @@
 # depends       : libusb hwdata
 
 name=usbutils
-version=018
+version=020
 release=1
-source=" https://kernel.org/pub/linux/utils/usb/usbutils/usbutils-018.tar.xz"
+source=" https://kernel.org/pub/linux/utils/usb/usbutils/usbutils-020.tar.gz"
 options="!checksum"
 
 build() {

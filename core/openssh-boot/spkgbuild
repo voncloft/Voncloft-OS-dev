@@ -2,10 +2,10 @@
 # depends :
 
 name=openssh-boot
-version=20250225
+version=20251220
 release=1
 
-source="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-$version.tar.xz"
+source="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz"
 options="!checksum"
 
 build() {

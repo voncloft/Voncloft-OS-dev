@@ -7,3 +7,13 @@ Release=3
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.6.5 to version 0.6.6
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:29:47 AM EDT 2026
+
+Version=0.6.11
+Release=3
+
+Synopsis:
+Upgraded from version 0.6.6 to version 0.6.11

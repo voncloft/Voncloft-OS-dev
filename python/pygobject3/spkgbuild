@@ -2,9 +2,9 @@
 # depends : python glib pycairo meson ninja pkgconf
 
 name=pygobject3
-version=3.52.3
+version=3.58.1
 release=2
-source="https://download.gnome.org/sources/pygobject/3.52/pygobject-$version.tar.gz"
+source="https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.1.tar.gz"
 options="!checksum"
 
 build() {

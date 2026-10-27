@@ -8,7 +8,7 @@ options="!checksum"
 source="optiimage-1.0.0.tar.gz::https://invent.kde.org/graphics/optiimage/-/archive/v1.0.0/optiimage-v1.0.0.tar.gz"
 
 build() {
-    cd "optiimage-v1.0.0"
+    cd "optiimage-v${version}"
     sed -i 's/COMPONENTS Kirigami2 /COMPONENTS Kirigami /' CMakeLists.txt
     plasma-package-installer
     cd build

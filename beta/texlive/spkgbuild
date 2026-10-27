@@ -2,13 +2,12 @@
 # depends : ghostscript cairo fontconfig freetype gc graphite harfbuzz icu libpaper libpng python2
 
 name=texlive
-version=20250308-source
-release=1
-
-source="https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/texlive-$version-source.tar.xz"
+version=20260301-source
+release=2
+source="https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2026/texlive-20260301-source.tar.xz"
 
 build() {
-	cd $name-$version-source
+	cd "$SRC"/texlive*/
 	export TEXARCH=$(uname -m | sed -e 's/i.86/i386/' -e 's/$/-linux/') &&
 
 mkdir texlive-build &&

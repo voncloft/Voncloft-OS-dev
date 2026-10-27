@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:43 AM EDT 2026
+
+gdk-pixbuf
+Version=2.44.8
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.42.12 to version 2.44.8

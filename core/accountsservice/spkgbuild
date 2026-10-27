@@ -2,13 +2,13 @@
 # depends       : polkit glib vala
 
 name=accountsservice
-version=23.13.9
+version=26.27.3
 release=1
-source=" https://www.freedesktop.org/software/accountsservice/accountsservice-23.13.9.tar.xz"
+source=" https://gitlab.freedesktop.org/accountsservice/accountsservice/-/archive/26.27.3/accountsservice-26.27.3.tar.gz"
 options="!checksum"
 
 build() {
-        cd $name-$version
+        cd "$SRC"/accountsservice*/
         mv tests/dbusmock{,-tests}
 sed -e '/accounts_service\.py/s/dbusmock/dbusmock-tests/' \
 -e 's/assertEquals/assertEqual/'                      \

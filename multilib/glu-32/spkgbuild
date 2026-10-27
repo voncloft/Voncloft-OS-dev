@@ -2,12 +2,12 @@
 # depends	: glu mesa-32
 
 name=glu-32
-version=9.0.1
+version=9.0.3
 release=1
-source="ftp://ftp.freedesktop.org/pub/mesa/glu/glu-$version.tar.xz"
+source="https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz"
 
 build() {
-	cd glu-$version
+	cd "$SRC"/glu*/
 
 	export CC="gcc -m32"
 	export CXX="g++ -m32"

@@ -2,14 +2,14 @@
 # depends : python python-dbus
 
 name=python-libcharon
-version=5.0.0
+version=17.0.0
 release=1
 
-source="https://github.com/Ultimaker/libCharon/archive/refs/tags/d$version.tar.gz"
+source="https://github.com/Ultimaker/libCharon/archive/refs/tags/v17.0.0-0.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "$SRC"/libCharon*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

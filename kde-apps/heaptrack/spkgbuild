@@ -8,7 +8,7 @@ options="!checksum"
 source="heaptrack-1.5.0.tar.gz::https://invent.kde.org/sdk/heaptrack/-/archive/v1.5.0/heaptrack-v1.5.0.tar.gz"
 
 build() {
-    cd "heaptrack-v1.5.0"
+    cd "heaptrack-v${version}"
     plasma-package-installer \
         -DHEAPTRACK_USE_QT6=ON \
         -DCMAKE_POLICY_VERSION_MINIMUM=3.5

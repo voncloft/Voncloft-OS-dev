@@ -2,10 +2,10 @@
 # depends	: glib libxml2
 
 name=shared-mime-info
-version=2.4
+version=2.5.1
 release=5
 options="!makeflags"
-source="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/$version/shared-mime-info-$version.tar.gz"
+source="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.5.1/shared-mime-info-2.5.1.tar.gz"
 
 build() {
 	cd $name-$version

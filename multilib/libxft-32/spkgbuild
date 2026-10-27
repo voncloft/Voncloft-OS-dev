@@ -2,9 +2,9 @@
 # depends	: libxft
 
 name=libxft-32
-version=2.3.3
+version=2.3.9
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXft-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXft-2.3.9.tar.gz"
 
 build() {
 	cd libXft-$version

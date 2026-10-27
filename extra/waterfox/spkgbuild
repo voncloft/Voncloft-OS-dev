@@ -2,16 +2,16 @@
 # depends	: alsa-lib gtk3 gtk2 llvm icu nspr nss sqlite freetype2 cairo hunspell libevent dbus-glib pixman autoconf2.13 rust
 
 name=waterfox
-version=56.2.14
+version=2022.11
 release=1
-source="https://github.com/MrAlex94/Waterfox/archive/$version/$name-$version.tar.gz
+source="https://github.com/WaterfoxCo/Waterfox-Classic/archive/refs/tags/2022.11-classic.tar.gz
 	mozconfig
 	waterfox.desktop"
 
 build() {
 	INITDIR=$PWD
 
-	cd Waterfox-$version
+	cd "$SRC"/Waterfox-Classic*/
 
 	cp $SRC/mozconfig .mozconfig
 

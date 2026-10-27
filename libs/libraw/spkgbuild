@@ -2,14 +2,14 @@
 # depends       : libjpeg-turbo jasper lcms2
 
 name=libraw
-version=0.21.4    
+version=0.22.3    
 release=1
-source="https://www.libraw.org/data/LibRaw-0.21.4.tar.gz"
+source="https://github.com/LibRaw/LibRaw/archive/refs/tags/0.22.3.tar.gz"
 
 options="!checksum"
 
 build() {
-        cd *
+        cd "$SRC"/LibRaw*/
         ./configure --prefix=/usr    \
 --enable-jpeg    \
 --enable-jasper  \

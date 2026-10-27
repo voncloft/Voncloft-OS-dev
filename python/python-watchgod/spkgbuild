@@ -2,14 +2,14 @@
 # depends : python
 
 name=python-watchgod
-version=0.7
+version=0.8.2
 release=2
 
-source="git+https://github.com/samuelcolvin/watchgod#tag="
+source="https://files.pythonhosted.org/packages/e8/6e/3904af0715e03fc5b2636cb8cf8b0eabc45b1f2cf6e4cf8453ddb6d23042/watchgod-0.8.2.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/watchgod*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

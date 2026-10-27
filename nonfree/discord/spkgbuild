@@ -2,7 +2,7 @@
 # depends : xdg-desktop-portal-gtk
 
 name=discord
-version=1.0.146
+version=1.0.167
 release=1
 source="https://dl.discordapp.net/apps/linux/$version/discord-$version.tar.gz"
 

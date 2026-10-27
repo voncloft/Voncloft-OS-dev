@@ -3,13 +3,13 @@
 
 name=docbook-xml
 version=5.0
-release=4
+release=5
 noextract="docbook-xml-4.5.zip
 	docbook-xml-4.4.zip
 	docbook-xml-4.3.zip
 	docbook-xml-4.2.zip
 	docbkx412.zip"
-source="https://docbook.org/xml/4.1.2/docbkx412.zip
+source="https://www.docbook.org/xml/4.5/docbook-xml-4.5.zip
 	https://www.docbook.org/xml/4.4/docbook-xml-4.4.zip
 	https://www.docbook.org/xml/4.3/docbook-xml-4.3.zip
 	https://www.docbook.org/xml/4.2/docbook-xml-4.2.zip

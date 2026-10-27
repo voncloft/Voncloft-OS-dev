@@ -3,7 +3,7 @@
 # description   : FFmpeg is a solution to record, convert and stream audio and video
 
 name=ffmpeg
-version=7.1.1    
+version=9.0.2    
 release=3
 source="https://ffmpeg.org/releases/ffmpeg-7.1.1.tar.xz
 https://www.linuxfromscratch.org/patches/downloads/ffmpeg/ffmpeg-7.1.1-chromium_method-1.patch"

@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-pyxattr
-version=0.7.2
+version=0.8.1
 release=1
 
-source="https://pyxattr.k1024.org/downloads/pyxattr-0.7.2.tar.gz"
+source="https://pyxattr.k1024.org/downloads/pyxattr-0.8.1.tar.gz"
 options="!checksum"
 
 build() {

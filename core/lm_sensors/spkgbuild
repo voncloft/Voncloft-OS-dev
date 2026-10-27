@@ -2,13 +2,13 @@
 # depends	: which
 
 name=lm_sensors
-version=3.6.0
+version=3.6.2
 release=1
-source="https://github.com/lm-sensors/lm-sensors/archive/V${version//./-}/$name-$version.tar.gz
+source="https://github.com/lm-sensors/lm-sensors/archive/refs/tags/V3-6-2.tar.gz
 	run"
 
 build() {
-	cd ${name/_/-}-${version//./-}
+	cd "$SRC"/lm-sensors*/
 	make PREFIX=/usr        \
 	     BUILD_STATIC_LIB=0 \
 	     MANDIR=/usr/share/man

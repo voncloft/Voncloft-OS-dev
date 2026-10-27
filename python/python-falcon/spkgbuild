@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-falcon
-version=3.1.1
+version=4.4.0
 release=6
 
 source="falcon-3.1.1.tar.gz::https://github.com/falconry/falcon/archive/refs/tags/3.1.1.tar.gz"

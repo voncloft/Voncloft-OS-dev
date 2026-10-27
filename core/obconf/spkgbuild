@@ -2,12 +2,12 @@
 # depends	: libglade openbox startup-notification desktop-file-utils gtk2 libsm
 
 name=obconf
-version=2.0.4
+version=2.0.4+git20150213
 release=1
-source="http://www.openbox.org/dist/$name/$name-$version.tar.gz"
+source="https://deb.debian.org/debian/pool/main/o/obconf/obconf_2.0.4+git20150213.orig.tar.xz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/obconf*/
 
 	./configure --prefix=/usr --disable-nls
 	make

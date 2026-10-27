@@ -2,9 +2,9 @@
 # depends	: libgpg-error
 
 name=libgpg-error-32
-version=1.38
+version=1.61
 release=1
-source="https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-$version.tar.bz2"
+source="https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2"
 
 build() {
 	cd libgpg-error-$version

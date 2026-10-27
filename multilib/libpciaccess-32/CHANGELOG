@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:45 AM EDT 2026
+
+libpciaccess-32
+Version=0.19
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.16 to version 0.19

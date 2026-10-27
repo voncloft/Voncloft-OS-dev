@@ -2,14 +2,14 @@
 # depends : python-voluptuous
 
 name=python-voluptuous-serialize
-version=2.4.0
+version=2.7.0
 release=3
 
-source="git+https://github.com/balloob/voluptuous-serialize.git#tag="
+source="https://files.pythonhosted.org/packages/53/70/03a9b61324e1bb8b16682455b8b953bccd1001a28e43478c86f539e26285/voluptuous_serialize-2.7.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/voluptuous_serialize*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

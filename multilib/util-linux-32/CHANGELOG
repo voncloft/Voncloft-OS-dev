@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:45 AM EDT 2026
+
+util-linux-32
+Version=2.42.4
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.36 to version 2.42.4

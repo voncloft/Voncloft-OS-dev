@@ -2,11 +2,11 @@
 # depends	: gmp
 
 name=shellcheck-static
-version=0.7.1
+version=0.11.0
 release=1
-source="$name-$version.tar.xz::https://storage.googleapis.com/shellcheck/shellcheck-stable.linux.x86_64.tar.xz"
+source="$name-$version.tar.xz::https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.x86_64.tar.xz"
 
 build() {
-	cd shellcheck-stable
+	cd "$SRC"/shellcheck*/
 	install -Dt $PKG/usr/bin shellcheck
 }

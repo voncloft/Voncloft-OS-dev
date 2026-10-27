@@ -1,12 +1,12 @@
 # description	: A UNIX init scheme with service supervision
 
 name=runit
-version=2.1.2
+version=2.3.1
 release=2
-source="http://smarden.org/runit/$name-$version.tar.gz"
+source="https://smarden.org/runit/runit-2.3.1.tar.gz"
 
 build() {
-	cd admin/$name-$version
+	cd "$SRC"/admin*/
 
 	# set default service path to /var/service
 	sed -i -e 's:^char \*varservice ="/service/";$:char \*varservice ="/var/service/";:' src/sv.c

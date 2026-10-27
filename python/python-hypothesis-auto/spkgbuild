@@ -2,14 +2,14 @@
 # depends : python-pydantic python-hypothesis
 
 name=python-hypothesis-auto
-version=1.1.4
+version=1.1.5
 release=3
 
-source="https://github.com/timothycrosley/hypothesis-auto/archive/refs/tags/$version.tar.gz"
+source="https://files.pythonhosted.org/packages/14/9d/a491aaf55e61b4fee99508d8d2ede409c760ced3e0156d78bcbd34a8e4df/hypothesis_auto-1.1.5.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/hypothesis_auto*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

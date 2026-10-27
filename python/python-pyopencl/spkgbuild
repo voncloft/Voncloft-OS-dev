@@ -2,10 +2,10 @@
 # depends : opencl-icd-loader opencl-headers mesa boost-libs
 
 name=python-pyopencl
-version=2021.2.6
+version=2026.1.4
 release=2
 
-source="git+https://github.com/inducer/pyopencl.git?signed#tag=v2021.1.4"
+source="https://files.pythonhosted.org/packages/0a/a9/b6133777fc20be05faa88c4dbae9cc0d26d6dc1395c45770ec49b56edc4b/pyopencl-2026.1.4.tar.gz"
 options="!checksum"
 
 build() {

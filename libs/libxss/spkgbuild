@@ -2,10 +2,10 @@
 # depends : libxext
 
 name=libxss
-version=1.2.3
+version=1.2.5
 release=3
 
-source="https://xorg.freedesktop.org/releases/individual/lib/libXScrnSaver-${version}.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXScrnSaver-1.2.5.tar.gz"
 options="!checksum"
 
 build() {

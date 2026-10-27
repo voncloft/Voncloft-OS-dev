@@ -57,3 +57,13 @@ release=3
 
 Synopsis:
 Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:29:46 AM EDT 2026
+
+Version=2022.7.9
+Release=3
+
+Synopsis:
+Upgraded from version 2021.4.18 to version 2022.7.9

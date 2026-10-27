@@ -1,0 +1,13 @@
+# description : Builds Python bindings for Qt with SIP
+# depends : python python-sip python-packaging python-setuptools python-wheel
+
+name=python-pyqt-builder
+version=1.20.3
+release=1
+source="https://files.pythonhosted.org/packages/0a/19/d3dd62568bc69cd4b854f6a8607d3081aebe3b0c915230c3c11c9676930e/pyqt_builder-1.20.3.tar.gz"
+
+build() {
+    cd "$SRC"/pyqt_builder-*/
+    pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir .
+    pip3 install --no-index --find-links dist --no-deps --root="$PKG" --prefix=/usr PyQt-builder
+}

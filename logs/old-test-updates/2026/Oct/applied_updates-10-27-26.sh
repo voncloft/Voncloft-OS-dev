@@ -3215,3 +3215,1250 @@ sed -i -e "s/version=1.1.6/version=1.1.7/g" xorg/xwininfo/spkgbuild
 bash /usr/libexec/update-repo/changelog xorg/xwininfo/spkgbuild Upgraded\ from\ version\ 1.1.6\ to\ version\ 1.1.7
 sed -i -e "s/version=1.0.7/version=1.0.8/g" xorg/xwud/spkgbuild
 bash /usr/libexec/update-repo/changelog xorg/xwud/spkgbuild Upgraded\ from\ version\ 1.0.7\ to\ version\ 1.0.8
+sed -i -e s\|jellyfin-server_\\\$\{version\}_amd64\\.deb::https://repo\\.jellyfin\\.org/releases/server/debian/versions/stable/server/\\\$\{version\}/jellyfin-server_\\\$\{_pkgver\}_amd64\\.deb\|jellyfin-server_\$\{version\}_amd64.deb::https://repo.jellyfin.org/files/server/debian/latest-stable/amd64/jellyfin-server_12.4%2Bdeb12_amd64.deb\| beta/jellyfin-server-bin/spkgbuild
+sed -i -e "s/version=10.8.8/version=12.4/g" beta/jellyfin-server-bin/spkgbuild
+bash /usr/libexec/update-repo/changelog beta/jellyfin-server-bin/spkgbuild Upgraded\ from\ version\ 10.8.8\ to\ version\ 12.4
+sed -i -e s\|jellyfin-web_\\\$\{version\}_all\\.deb::https://repo\\.jellyfin\\.org/releases/server/debian/versions/stable/web/\\\$\{version\}/jellyfin-web_\\\$\{_pkgver\}_all\\.deb\|jellyfin-web_\$\{version\}_all.deb::https://repo.jellyfin.org/files/server/debian/latest-stable/amd64/jellyfin-web_12.4%2Bdeb12_all.deb\| beta/jellyfin-web-bin/spkgbuild
+sed -i -e "s/version=10.8.8/version=12.4/g" beta/jellyfin-web-bin/spkgbuild
+bash /usr/libexec/update-repo/changelog beta/jellyfin-web-bin/spkgbuild Upgraded\ from\ version\ 10.8.8\ to\ version\ 12.4
+sed -i -e s\|https://ftp\\.math\\.utah\\.edu/pub/tex/historic/systems/texlive/\\\$\{version:0:4\}/texlive-\\\$version\\.tar\\.xz\|https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2026/texlive-20260301-source.tar.xz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/texlive*/|' beta/texlive/spkgbuild
+sed -i -e "s/version=20250308-source/version=20260301-source/g" beta/texlive/spkgbuild
+bash /usr/libexec/update-repo/changelog beta/texlive/spkgbuild Upgraded\ from\ version\ 20250308-source\ to\ version\ 20260301-source
+sed -i -e "s/version=20220806/version=20261027/g" beta/tl-unx/spkgbuild
+bash /usr/libexec/update-repo/changelog beta/tl-unx/spkgbuild Upgraded\ from\ version\ 20220806\ to\ version\ 20261027
+sed -i -e s\|https://anduin\\.linuxfromscratch\\.org/BLFS/blfs-bootscripts/blfs-bootscripts-20250225\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz\| -e $'s|\tcd \\*|\tcd "$SRC"/blfs-bootscripts*/|' boot-scripts/cups-boot/spkgbuild
+sed -i -e "s/version=12.3/version=20251220/g" boot-scripts/cups-boot/spkgbuild
+bash /usr/libexec/update-repo/changelog boot-scripts/cups-boot/spkgbuild Upgraded\ from\ version\ 12.3\ to\ version\ 20251220
+sed -i -e s\|https://anduin\\.linuxfromscratch\\.org/BLFS/blfs-bootscripts/blfs-bootscripts-20250225\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz\| -e $'s|\tcd \\*|\tcd "$SRC"/blfs-bootscripts*/|' boot-scripts/dbus-boot/spkgbuild
+sed -i -e "s/version=12.3/version=20251220/g" boot-scripts/dbus-boot/spkgbuild
+bash /usr/libexec/update-repo/changelog boot-scripts/dbus-boot/spkgbuild Upgraded\ from\ version\ 12.3\ to\ version\ 20251220
+sed -i -e s\|https://anduin\\.linuxfromscratch\\.org/BLFS/blfs-bootscripts/blfs-bootscripts-20250225\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz\| -e $'s|\tcd \\*|\tcd "$SRC"/blfs-bootscripts*/|' boot-scripts/fcron-boot/spkgbuild
+sed -i -e "s/version=12.3/version=20251220/g" boot-scripts/fcron-boot/spkgbuild
+bash /usr/libexec/update-repo/changelog boot-scripts/fcron-boot/spkgbuild Upgraded\ from\ version\ 12.3\ to\ version\ 20251220
+sed -i -e s\|https://anduin\\.linuxfromscratch\\.org/BLFS/blfs-bootscripts/blfs-bootscripts-20250225\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz\| -e $'s|\tcd \\*|\tcd "$SRC"/blfs-bootscripts*/|' boot-scripts/ntpd-boot/spkgbuild
+sed -i -e "s/version=12.3/version=20251220/g" boot-scripts/ntpd-boot/spkgbuild
+bash /usr/libexec/update-repo/changelog boot-scripts/ntpd-boot/spkgbuild Upgraded\ from\ version\ 12.3\ to\ version\ 20251220
+sed -i -e s\|https://anduin\\.linuxfromscratch\\.org/BLFS/blfs-bootscripts/blfs-bootscripts-20250225\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz\| -e $'s|\tcd \\*|\tcd "$SRC"/blfs-bootscripts*/|' boot-scripts/sddm-boot/spkgbuild
+sed -i -e "s/version=12.3/version=20251220/g" boot-scripts/sddm-boot/spkgbuild
+bash /usr/libexec/update-repo/changelog boot-scripts/sddm-boot/spkgbuild Upgraded\ from\ version\ 12.3\ to\ version\ 20251220
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/accountsservice/accountsservice/-/archive/\\\$version/accountsservice-\\\$version\\.tar\\.gz\|https://gitlab.freedesktop.org/accountsservice/accountsservice/-/archive/26.27.3/accountsservice-26.27.3.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/accountsservice*/|' cinnamon/accountsservice/spkgbuild
+sed -i -e "s/version=23.13.9/version=26.27.3/g" cinnamon/accountsservice/spkgbuild
+bash /usr/libexec/update-repo/changelog cinnamon/accountsservice/spkgbuild Upgraded\ from\ version\ 23.13.9\ to\ version\ 26.27.3
+sed -i -e s\|https://download\\.gnome\\.org/sources/network-manager-applet/1\\.20/network-manager-applet-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/network-manager-applet/1.36/network-manager-applet-1.36.0.tar.xz\| cinnamon/nm-connection-editor/spkgbuild
+sed -i -e "s/version=1.20.0/version=1.36.0/g" cinnamon/nm-connection-editor/spkgbuild
+bash /usr/libexec/update-repo/changelog cinnamon/nm-connection-editor/spkgbuild Upgraded\ from\ version\ 1.20.0\ to\ version\ 1.36.0
+sed -i -e s\|gcc-fortran-15\\.1\\.0\\.tar\\.xz::https://ftp\\.gnu\\.org/gnu/gcc/gcc-15\\.1\\.0/gcc-15\\.1\\.0\\.tar\\.xz\|gcc-fortran-\$\{version\}.tar.gz::https://ftp.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.gz\| -e s\|\ \ \ \ cd\ \"gcc-15\\.1\\.0\"\|\ \ \ \ cd\ \"\$SRC\"/gcc\*/\| compilers/gcc-fortran/spkgbuild
+sed -i -e "s/version=15.1.0/version=16.2.0/g" compilers/gcc-fortran/spkgbuild
+bash /usr/libexec/update-repo/changelog compilers/gcc-fortran/spkgbuild Upgraded\ from\ version\ 15.1.0\ to\ version\ 16.2.0
+sed -i -e s\|https://acpica\\.org/sites/acpica/files/acpica-unix-20180105\\.tar\\.gz\|https://github.com/open-acpica/acpica/archive/refs/tags/20260930.tar.gz\| -e $'s|\tcd acpica-unix-\\$version|\tcd "$SRC"/acpica*/|' compilers/iasl/spkgbuild
+sed -i -e "s/version=20200717/version=20260930/g" compilers/iasl/spkgbuild
+bash /usr/libexec/update-repo/changelog compilers/iasl/spkgbuild Upgraded\ from\ version\ 20200717\ to\ version\ 20260930
+sed -i -e s\|https://www\\.freedesktop\\.org/software/accountsservice/accountsservice-23\\.13\\.9\\.tar\\.xz\|https://gitlab.freedesktop.org/accountsservice/accountsservice/-/archive/26.27.3/accountsservice-26.27.3.tar.gz\| -e s\|\ \ \ \ \ \ \ \ cd\ \\\$name-\\\$version\|\ \ \ \ \ \ \ \ cd\ \"\$SRC\"/accountsservice\*/\| core/accountsservice/spkgbuild
+sed -i -e "s/version=23.13.9/version=26.27.3/g" core/accountsservice/spkgbuild
+bash /usr/libexec/update-repo/changelog core/accountsservice/spkgbuild Upgraded\ from\ version\ 23.13.9\ to\ version\ 26.27.3
+sed -i -e s\|https://download\\.aircrack-ng\\.org/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/aircrack-ng/aircrack-ng/archive/refs/tags/1.7.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/aircrack-ng*/|' core/aircrack-ng/spkgbuild
+sed -i -e "s/version=1.6/version=1.7/g" core/aircrack-ng/spkgbuild
+bash /usr/libexec/update-repo/changelog core/aircrack-ng/spkgbuild Upgraded\ from\ version\ 1.6\ to\ version\ 1.7
+sed -i -e s\|https://github\\.com/hughsie/appstream-glib/archive/appstream_glib_\\\$\{verzion\}\\.tar\\.gz\|https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_0_8_4.tar.gz\| -e $'s|\tcd appstream-glib-appstream_glib_\\${verzion}|\tcd "$SRC"/appstream-glib-appstream_glib*/|' core/appstream-glib/spkgbuild
+sed -i -e "s/version=0.7.18/version=0.8.4/g" core/appstream-glib/spkgbuild
+bash /usr/libexec/update-repo/changelog core/appstream-glib/spkgbuild Upgraded\ from\ version\ 0.7.18\ to\ version\ 0.8.4
+sed -i -e s\|http://www\\.bitchx\\.com/download/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/BitchX/BitchX1.3/archive/b081e19913f2236c19d0cd710af103b38c0cf704.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/BitchX1*/|' core/bitchx/spkgbuild
+sed -i -e "s/version=1.2.1/version=1.3.git20260228194548/g" core/bitchx/spkgbuild
+bash /usr/libexec/update-repo/changelog core/bitchx/spkgbuild Upgraded\ from\ version\ 1.2.1\ to\ version\ 1.3.git20260228194548
+sed -i -e s\|git+https://github\\.com/bleachbit/bleachbit\\.git#tag=v4\\.4\\.0\?signed\|https://github.com/bleachbit/bleachbit/archive/refs/tags/v6.0.6.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/bleachbit*/|' core/bleachbit/spkgbuild
+sed -i -e "s/version=4.4.0/version=6.0.6/g" core/bleachbit/spkgbuild
+bash /usr/libexec/update-repo/changelog core/bleachbit/spkgbuild Upgraded\ from\ version\ 4.4.0\ to\ version\ 6.0.6
+sed -i -e s\|http://jue\\.li/crux/\\\$name/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/fjaell/ck4up/archive/refs/tags/1.6.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/ck4up*/|' core/ck4up/spkgbuild
+sed -i -e "s/version=1.4/version=1.6/g" core/ck4up/spkgbuild
+bash /usr/libexec/update-repo/changelog core/ck4up/spkgbuild Upgraded\ from\ version\ 1.4\ to\ version\ 1.6
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/c/cython/cython-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/a9/d8/4981ef716ad0e3ff0d3ef383aefc6b03c4a88dee33b272bf8e0d833001ca/cython-3.3.0.tar.gz\| core/cython3/spkgbuild
+sed -i -e "s/version=3.1.2/version=3.3.0/g" core/cython3/spkgbuild
+bash /usr/libexec/update-repo/changelog core/cython3/spkgbuild Upgraded\ from\ version\ 3.1.2\ to\ version\ 3.3.0
+sed -i -e s\|https://downloads\\.sourceforge\\.net/\\\$name/\\\$name-\\\$version\\.tar\\.bz2\|https://downloads.sourceforge.net/project/deadbeef/Builds/1.10.3/linux/deadbeef-1.10.3.tar.bz2\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/deadbeef*/|' core/deadbeef/spkgbuild
+sed -i -e "s/version=1.10.0/version=1.10.3/g" core/deadbeef/spkgbuild
+bash /usr/libexec/update-repo/changelog core/deadbeef/spkgbuild Upgraded\ from\ version\ 1.10.0\ to\ version\ 1.10.3
+sed -i -e s\|https://invisible-mirror\\.net/archives/\\\$name/\\\$name-\\\$verzion\\.tgz\|https://invisible-mirror.net/archives/dialog/dialog-1.3-20260721.tgz\| -e $'s|\tcd \\$name-\\$verzion|\tcd "$SRC"/dialog*/|' core/dialog/spkgbuild
+sed -i -e "s/version=1.3_20210621/version=1.3_20260721/g" core/dialog/spkgbuild
+bash /usr/libexec/update-repo/changelog core/dialog/spkgbuild Upgraded\ from\ version\ 1.3_20210621\ to\ version\ 1.3_20260721
+sed -i -e "s/version=7.5.1/version=7.5.7/g" core/dos2unix/spkgbuild
+bash /usr/libexec/update-repo/changelog core/dos2unix/spkgbuild Upgraded\ from\ version\ 7.5.1\ to\ version\ 7.5.7
+sed -i -e s\|\\\$name-\\\$_commit\\.tar\\.gz::https://github\\.com/emmett1/dwm/archive/\\\$_commit\\.tar\\.gz\|\$name-\$_commit.tar.gz::https://github.com/emmett1/dwm/archive/168239d8a74d48d3e339fd50568144555ccbe311.tar.gz\| -e s\|_commit=168239d8a74d48d3e339fd50568144555ccbe311\|_commit=168239d8a74d48d3e339fd50568144555ccbe311\| -e $'s|\tcd \\$name-\\$_commit|\tcd "$SRC"/dwm*/|' core/dwm/spkgbuild
+sed -i -e "s/version=20200407/version=20200406163801/g" core/dwm/spkgbuild
+bash /usr/libexec/update-repo/changelog core/dwm/spkgbuild Upgraded\ from\ version\ 20200407\ to\ version\ 20200406163801
+sed -i -e s\|https://github\\.com/robm/dzen/archive/488ab66019f475e35e067646621827c18a879ba1\\.tar\\.gz\|https://github.com/robm/dzen/archive/488ab66019f475e35e067646621827c18a879ba1.tar.gz\| -e $'s|\tcd dzen-488ab66019f475e35e067646621827c18a879ba1|\tcd "$SRC"/dzen*/|' core/dzen2/spkgbuild
+sed -i -e "s/version=20130923/version=20130923095739/g" core/dzen2/spkgbuild
+bash /usr/libexec/update-repo/changelog core/dzen2/spkgbuild Upgraded\ from\ version\ 20130923\ to\ version\ 20130923095739
+sed -i -e "s/version=3.6.0/version=3.8.0/g" core/freeglut/spkgbuild
+bash /usr/libexec/update-repo/changelog core/freeglut/spkgbuild Upgraded\ from\ version\ 3.6.0\ to\ version\ 3.8.0
+sed -i -e s\|https://files\\.dyne\\.org/frei0r/releases/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/dyne/frei0r/archive/refs/tags/v3.6.0.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/frei0r*/|' core/frei0r-plugins/spkgbuild
+sed -i -e "s/version=1.8.0/version=3.6.0/g" core/frei0r-plugins/spkgbuild
+bash /usr/libexec/update-repo/changelog core/frei0r-plugins/spkgbuild Upgraded\ from\ version\ 1.8.0\ to\ version\ 3.6.0
+sed -i -e s\|https://ftp\\.gnome\\.org/pub/gnome/sources/\\\$name/\\\$\{version%\\.\\\*\}/\\\$name-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.8.tar.xz\| core/gdk-pixbuf/spkgbuild
+sed -i -e "s/version=2.42.12/version=2.44.8/g" core/gdk-pixbuf/spkgbuild
+bash /usr/libexec/update-repo/changelog core/gdk-pixbuf/spkgbuild Upgraded\ from\ version\ 2.42.12\ to\ version\ 2.44.8
+sed -i -e "s/version=5.2.2/version=6.1.3/g" core/giflib/spkgbuild
+bash /usr/libexec/update-repo/changelog core/giflib/spkgbuild Upgraded\ from\ version\ 5.2.2\ to\ version\ 6.1.3
+sed -i -e s\|https://ftp\\.gnome\\.org/pub/gnome/sources/\\\$name/\\\$\{version%\\.\\\*\}/\\\$name-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/gobject-introspection/1.86/gobject-introspection-1.86.0.tar.xz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/gobject-introspection*/|' core/gobject-introspection/spkgbuild
+sed -i -e "s/version=1.70.0/version=1.86.0/g" core/gobject-introspection/spkgbuild
+bash /usr/libexec/update-repo/changelog core/gobject-introspection/spkgbuild Upgraded\ from\ version\ 1.70.0\ to\ version\ 1.86.0
+sed -i -e "s/version=1.7.0/version=1.8.1/g" core/gparted/spkgbuild
+bash /usr/libexec/update-repo/changelog core/gparted/spkgbuild Upgraded\ from\ version\ 1.7.0\ to\ version\ 1.8.1
+sed -i -e s\|http://www\\.opbyte\\.it/release/grsync-1\\.3\\.0\\.tar\\.gz\|https://downloads.sourceforge.net/project/grsync/grsync-1.3.1.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/grsync*/|' core/grsync/spkgbuild
+sed -i -e "s/version=1.3.0/version=1.3.1/g" core/grsync/spkgbuild
+bash /usr/libexec/update-repo/changelog core/grsync/spkgbuild Upgraded\ from\ version\ 1.3.0\ to\ version\ 1.3.1
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/grub/grub-\\\$version\\.tar\\.xz\|https://ftp.gnu.org/gnu/grub/grub-2.14.tar.gz\| core/grub-efi/spkgbuild
+sed -i -e "s/version=2.04/version=2.14/g" core/grub-efi/spkgbuild
+bash /usr/libexec/update-repo/changelog core/grub-efi/spkgbuild Upgraded\ from\ version\ 2.04\ to\ version\ 2.14
+sed -i -e s\|https://www\\.aquamaniac\\.de/rdm/attachments/download/364/\\\$name-\\\$version\\.tar\\.gz\|https://www.aquamaniac.de/rdm/attachments/download/630/gwenhywfar-5.14.1.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/gwenhywfar*/|' core/gwenhywfar/spkgbuild
+sed -i -e "s/version=5.6.0/version=5.14.1/g" core/gwenhywfar/spkgbuild
+bash /usr/libexec/update-repo/changelog core/gwenhywfar/spkgbuild Upgraded\ from\ version\ 5.6.0\ to\ version\ 5.14.1
+sed -i -e s\|https://github\\.com/Mic92/iana-etc/releases/download/\\\$version/iana-etc-\\\$version\\.tar\\.gz\|https://github.com/Mic92/iana-etc/releases/download/20261022/iana-etc-20261022.tar.gz\| -e $'s|\tcd "\\$SRC"/iana-etc-\\*/|\tcd "$SRC"/iana-etc*/|' core/iana-etc/spkgbuild
+sed -i -e "s/version=20210903/version=20261022/g" core/iana-etc/spkgbuild
+bash /usr/libexec/update-repo/changelog core/iana-etc/spkgbuild Upgraded\ from\ version\ 20210903\ to\ version\ 20261022
+sed -i -e s\|https://code\\.blinkace\\.com/pdw/iftop/-/archive/master/iftop-master\\.tar\\.gz\|https://www.ex-parrot.com/pdw/iftop/download/iftop-1.0pre4.tar.gz\| -e $'s|\tcd iftop\\*|\tcd "$SRC"/iftop*/|' core/iftop/spkgbuild
+sed -i -e "s/version=0.17/version=1.0pre4/g" core/iftop/spkgbuild
+bash /usr/libexec/update-repo/changelog core/iftop/spkgbuild Upgraded\ from\ version\ 0.17\ to\ version\ 1.0pre4
+sed -i -e s\|https://www\\.imagemagick\\.org/download/releases/ImageMagick-\\\$verzion\\.tar\\.xz\|https://download.imagemagick.org/archive/releases/ImageMagick-6.9.13-59.tar.bz2\| -e $'s|\tcd ImageMagick-\\$verzion|\tcd "$SRC"/ImageMagick*/|' core/imagemagick6/spkgbuild
+sed -i -e "s/version=6.9.11.29/version=6.9.13.59/g" core/imagemagick6/spkgbuild
+bash /usr/libexec/update-repo/changelog core/imagemagick6/spkgbuild Upgraded\ from\ version\ 6.9.11.29\ to\ version\ 6.9.13.59
+sed -i -e s\|https://gitlab\\.com/inkscape/inkscape/-/archive/INKSCAPE_\\\$\{version/\\./_\}/inkscape-INKSCAPE_\\\$\{version/\\./_\}\\.tar\\.bz2\|https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_1_4_4/inkscape-INKSCAPE_1_4_4.tar.gz\| -e $'s|\tcd \\$name-INKSCAPE_\\${version/\\./_}|\tcd "$SRC"/inkscape-INKSCAPE*/|' core/inkscape/spkgbuild
+sed -i -e "s/version=1.4.2/version=1.4.4/g" core/inkscape/spkgbuild
+bash /usr/libexec/update-repo/changelog core/inkscape/spkgbuild Upgraded\ from\ version\ 1.4.2\ to\ version\ 1.4.4
+sed -i -e s\|https://github\\.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/microcode-\\\$\{version/\\./\}\\.tar\\.gz\|https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/archive/refs/tags/microcode-20260925.tar.gz\| -e $'s|\tcd Intel-Linux-Processor-Microcode-Data-Files-microcode-\\${version/\\./}|\tcd "$SRC"/Intel-Linux-Processor-Microcode-Data-Files-microcode*/|' core/intel-ucode/spkgbuild
+sed -i -e "s/version=20200616/version=20260925/g" core/intel-ucode/spkgbuild
+bash /usr/libexec/update-repo/changelog core/intel-ucode/spkgbuild Upgraded\ from\ version\ 20200616\ to\ version\ 20260925
+sed -i -e s\|https://github\\.com/smxi/inxi/archive/\\\$\{_ver\}-\\\$\{_sion\}/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/smxi/inxi/archive/refs/tags/3.3.31-2.tar.gz\| -e $'s|\tcd \\$name-\\${_ver}-\\${_sion}|\tcd "$SRC"/inxi*/|' core/inxi/spkgbuild
+sed -i -e "s/version=3.1.06.1/version=3.3.31.2/g" core/inxi/spkgbuild
+bash /usr/libexec/update-repo/changelog core/inxi/spkgbuild Upgraded\ from\ version\ 3.1.06.1\ to\ version\ 3.3.31.2
+sed -i -e s\|https://salsa\\.debian\\.org/iso-codes-team/iso-codes/-/archive/v4\\.8\\.0/iso-codes-v4\\.8\\.0\\.tar\\.gz\|https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v4.20.1/iso-codes-v4.20.1.tar.gz\| core/iso-codes/spkgbuild
+sed -i -e "s/version=4.8.0/version=4.20.1/g" core/iso-codes/spkgbuild
+bash /usr/libexec/update-repo/changelog core/iso-codes/spkgbuild Upgraded\ from\ version\ 4.8.0\ to\ version\ 4.20.1
+sed -i -e s\|http://joewing\\.net/projects/jwm/releases/jwm-2\\.4\\.0\\.tar\\.xz\|https://github.com/joewing/jwm/archive/refs/tags/v2.4.6.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/jwm*/|' core/jwm/spkgbuild
+sed -i -e "s/version=2.4.0/version=2.4.6/g" core/jwm/spkgbuild
+bash /usr/libexec/update-repo/changelog core/jwm/spkgbuild Upgraded\ from\ version\ 2.4.0\ to\ version\ 2.4.6
+sed -i -e "s/version=3.100/version=4.0/g" core/lame/spkgbuild
+bash /usr/libexec/update-repo/changelog core/lame/spkgbuild Upgraded\ from\ version\ 3.100\ to\ version\ 4.0
+sed -i -e "s/version=2.17/version=2.19.1/g" core/lcms2/spkgbuild
+bash /usr/libexec/update-repo/changelog core/lcms2/spkgbuild Upgraded\ from\ version\ 2.17\ to\ version\ 2.19.1
+sed -i -e s\|http://www\\.greenwoodsoftware\\.com/\\\$name/\\\$name-\\\$version\\.tar\\.gz\|https://www.greenwoodsoftware.com/less/less-710.tar.gz\| core/less/spkgbuild
+sed -i -e "s/version=590/version=710/g" core/less/spkgbuild
+bash /usr/libexec/update-repo/changelog core/less/spkgbuild Upgraded\ from\ version\ 590\ to\ version\ 710
+sed -i -e s\|https://www\\.linuxfromscratch\\.org/lfs/downloads/development/lfs-bootscripts-\\\$version\\.tar\\.xz\|https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-20250827.tar.xz\| core/lfs-bootscripts/spkgbuild
+sed -i -e "s/version=20240825/version=20250827/g" core/lfs-bootscripts/spkgbuild
+bash /usr/libexec/update-repo/changelog core/lfs-bootscripts/spkgbuild Upgraded\ from\ version\ 20240825\ to\ version\ 20250827
+sed -i -e s\|https://github\\.com/lm-sensors/lm-sensors/archive/V\\\$\{version//\\./-\}/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/lm-sensors/lm-sensors/archive/refs/tags/V3-6-2.tar.gz\| -e $'s|\tcd \\${name/_/-}-\\${version//\\./-}|\tcd "$SRC"/lm-sensors*/|' core/lm_sensors/spkgbuild
+sed -i -e "s/version=3.6.0/version=3.6.2/g" core/lm_sensors/spkgbuild
+bash /usr/libexec/update-repo/changelog core/lm_sensors/spkgbuild Upgraded\ from\ version\ 3.6.0\ to\ version\ 3.6.2
+sed -i -e s\|https://sourceware\\.org/pub/lvm2/LVM2\\.\\\$version\\.tgz\|https://sourceware.org/pub/lvm2/releases/LVM2.2.03.43.tgz\| -e $'s|\tcd LVM2\\.\\$version|\tcd "$SRC"/LVM2*/|' core/lvm2/spkgbuild
+sed -i -e "s/version=2.03.33/version=2.03.43/g" core/lvm2/spkgbuild
+bash /usr/libexec/update-repo/changelog core/lvm2/spkgbuild Upgraded\ from\ version\ 2.03.33\ to\ version\ 2.03.43
+sed -i -e s\|https://invisible-mirror\\.net/archives/lynx/tarballs/\\\$\{name\}\\\$\{version\}\\.tar\\.bz2\|https://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.3.tar.bz2\| core/lynx/spkgbuild
+sed -i -e "s/version=2.9.2/version=2.9.3/g" core/lynx/spkgbuild
+bash /usr/libexec/update-repo/changelog core/lynx/spkgbuild Upgraded\ from\ version\ 2.9.2\ to\ version\ 2.9.3
+sed -i -e s\|https://pypi\\.org/packages/source/M/MarkupSafe/markupsafe-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/38/9b/e422a865e1d5d57d0e509b4e0bf1c1a70a7f6382c29a5aa428df994c8bc8/markupsafe-3.0.4.tar.gz\| core/markupsafe/spkgbuild
+sed -i -e "s/version=3.0.2/version=3.0.4/g" core/markupsafe/spkgbuild
+bash /usr/libexec/update-repo/changelog core/markupsafe/spkgbuild Upgraded\ from\ version\ 3.0.2\ to\ version\ 3.0.4
+sed -i -e s\|https://kerberos\\.org/dist/krb5/1\\.21/krb5-1\\.21\\.3\\.tar\\.gz\|https://kerberos.org/dist/krb5/1.22/krb5-1.22.2.tar.gz\| -e s\|\ \ \ \ \ \ \ \ cd\ krb5-\\\$version\|\ \ \ \ \ \ \ \ cd\ \"\$SRC\"/krb5\*/\| core/mitkrb/spkgbuild
+sed -i -e "s/version=1.21.3/version=1.22.2/g" core/mitkrb/spkgbuild
+bash /usr/libexec/update-repo/changelog core/mitkrb/spkgbuild Upgraded\ from\ version\ 1.21.3\ to\ version\ 1.22.2
+sed -i -e s\|http://www\\.mirbsd\\.org/MirOS/dist/mir/mksh/\\\$name-\\\$version\\.tgz\|https://deb.debian.org/debian/pool/main/m/mksh/mksh_59c.orig.tar.gz\| -e $'s|\tcd \\$name|\tcd "$SRC"/mksh*/|' core/mksh/spkgbuild
+sed -i -e "s/version=R59b/version=R59c/g" core/mksh/spkgbuild
+bash /usr/libexec/update-repo/changelog core/mksh/spkgbuild Upgraded\ from\ version\ R59b\ to\ version\ R59c
+sed -i -e s\|https://github\\.com/neomutt/neomutt/archive/\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/neomutt/neomutt/archive/20260616/neomutt-20260616.tar.gz\| core/neomutt/spkgbuild
+sed -i -e "s/version=20200821/version=20260616/g" core/neomutt/spkgbuild
+bash /usr/libexec/update-repo/changelog core/neomutt/spkgbuild Upgraded\ from\ version\ 20200821\ to\ version\ 20260616
+sed -i -e s\|http://www\\.openbox\\.org/dist/\\\$name/\\\$name-\\\$version\\.tar\\.gz\|https://deb.debian.org/debian/pool/main/o/obconf/obconf_2.0.4+git20150213.orig.tar.xz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/obconf*/|' core/obconf/spkgbuild
+sed -i -e "s/version=2.0.4/version=2.0.4+git20150213/g" core/obconf/spkgbuild
+bash /usr/libexec/update-repo/changelog core/obconf/spkgbuild Upgraded\ from\ version\ 2.0.4\ to\ version\ 2.0.4+git20150213
+sed -i -e s\|https://anduin\\.linuxfromscratch\\.org/BLFS/blfs-bootscripts/blfs-bootscripts-\\\$version\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz\| core/openssh-boot/spkgbuild
+sed -i -e "s/version=20250225/version=20251220/g" core/openssh-boot/spkgbuild
+bash /usr/libexec/update-repo/changelog core/openssh-boot/spkgbuild Upgraded\ from\ version\ 20250225\ to\ version\ 20251220
+sed -i -e s\|https://download3\\.operacdn\\.com/pub/opera/desktop/\\\$\{version\}/linux/\\\$\{name\}-stable_\\\$\{version\}_amd64\\.deb\|https://deb.opera.com/opera/pool/non-free/o/opera-stable/opera-stable_139.0.6053.14_amd64.deb\| core/opera/spkgbuild
+sed -i -e "s/version=79.0.4143.22/version=139.0.6053.14/g" core/opera/spkgbuild
+bash /usr/libexec/update-repo/changelog core/opera/spkgbuild Upgraded\ from\ version\ 79.0.4143.22\ to\ version\ 139.0.6053.14
+sed -i -e "s/version=28.8.4/version=35.0.2/g" core/palemoon/spkgbuild
+bash /usr/libexec/update-repo/changelog core/palemoon/spkgbuild Upgraded\ from\ version\ 28.8.4\ to\ version\ 35.0.2
+sed -i -e s\|\\\$name-\\\$version\\.tar\\.gz::https://github\\.com/PapirusDevelopmentTeam/\\\$name/archive/\\\$version\\.tar\\.gz\|\$name-\$version.tar.gz::https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/20260801.tar.gz\| core/papirus-icon-theme/spkgbuild
+sed -i -e "s/version=20200801/version=20260801/g" core/papirus-icon-theme/spkgbuild
+bash /usr/libexec/update-repo/changelog core/papirus-icon-theme/spkgbuild Upgraded\ from\ version\ 20200801\ to\ version\ 20260801
+sed -i -e s\|\\\$_name-\\\$version\\.tar\\.gz::https://github\\.com/PapirusDevelopmentTeam/\\\$_name/archive/\\\$version\\.tar\\.gz\|\$_name-\$version.tar.gz::https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/20260801.tar.gz\| core/papirus-icon-theme-dark/spkgbuild
+sed -i -e "s/version=20200801/version=20260801/g" core/papirus-icon-theme-dark/spkgbuild
+bash /usr/libexec/update-repo/changelog core/papirus-icon-theme-dark/spkgbuild Upgraded\ from\ version\ 20200801\ to\ version\ 20260801
+sed -i -e s\|\\\$_name-\\\$version\\.tar\\.gz::https://github\\.com/PapirusDevelopmentTeam/\\\$_name/archive/\\\$version\\.tar\\.gz\|\$_name-\$version.tar.gz::https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/20260801.tar.gz\| core/papirus-icon-theme-light/spkgbuild
+sed -i -e "s/version=20200801/version=20260801/g" core/papirus-icon-theme-light/spkgbuild
+bash /usr/libexec/update-repo/changelog core/papirus-icon-theme-light/spkgbuild Upgraded\ from\ version\ 20200801\ to\ version\ 20260801
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/\\\$name/\\\$name-\\\$version\\.tar\\.bz2\|https://ftp.gnu.org/gnu/parallel/parallel-20260922.tar.bz2\| core/parallel/spkgbuild
+sed -i -e "s/version=20200922/version=20260922/g" core/parallel/spkgbuild
+bash /usr/libexec/update-repo/changelog core/parallel/spkgbuild Upgraded\ from\ version\ 20200922\ to\ version\ 20260922
+sed -i -e s\|\\\$name-\\\$_commit\\.tar\\.gz::https://github\\.com/pop-os/icon-theme/archive/\\\$_commit\\.tar\\.gz\|\$name-\$_commit.tar.gz::https://github.com/pop-os/icon-theme/archive/1a575a8e99b4ae629b9b16543a3a04d148632ba9.tar.gz\| -e s\|_commit=e586523c7fa509cd7083b079e4249bc1e7a03cc1\|_commit=1a575a8e99b4ae629b9b16543a3a04d148632ba9\| -e $'s|\tcd icon-theme-\\$_commit|\tcd "$SRC"/icon-theme*/|' core/pop-icon-theme/spkgbuild
+sed -i -e "s/version=20190104/version=20241001164617/g" core/pop-icon-theme/spkgbuild
+bash /usr/libexec/update-repo/changelog core/pop-icon-theme/spkgbuild Upgraded\ from\ version\ 20190104\ to\ version\ 20241001164617
+sed -i -e s\|https://poppler\\.freedesktop\\.org/poppler-\\\$version\\.tar\\.xz\|https://poppler.freedesktop.org/poppler-26.10.0.tar.xz\| core/poppler-glib/spkgbuild
+sed -i -e "s/version=21.12.0/version=26.10.0/g" core/poppler-glib/spkgbuild
+bash /usr/libexec/update-repo/changelog core/poppler-glib/spkgbuild Upgraded\ from\ version\ 21.12.0\ to\ version\ 26.10.0
+sed -i -e "s/version=4.0.5/version=4.0.7/g" core/procps-ng/spkgbuild
+bash /usr/libexec/update-repo/changelog core/procps-ng/spkgbuild Upgraded\ from\ version\ 4.0.5\ to\ version\ 4.0.7
+sed -i -e s\|https://www\\.ivarch\\.com/programs/sources/\\\$name-\\\$version\\.tar\\.bz2\|https://www.ivarch.com/s/pv-1.12.0.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/pv*/|' core/pv/spkgbuild
+sed -i -e "s/version=1.6.6/version=1.12.0/g" core/pv/spkgbuild
+bash /usr/libexec/update-repo/changelog core/pv/spkgbuild Upgraded\ from\ version\ 1.6.6\ to\ version\ 1.12.0
+sed -i -e s\|http://ranger\\.github\\.io/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/ranger/ranger/archive/refs/tags/v1.9.4.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/ranger*/|' core/ranger/spkgbuild
+sed -i -e "s/version=1.9.3/version=1.9.4/g" core/ranger/spkgbuild
+bash /usr/libexec/update-repo/changelog core/ranger/spkgbuild Upgraded\ from\ version\ 1.9.3\ to\ version\ 1.9.4
+sed -i -e s\|https://github\\.com/venomlinux/rc/archive/93cb0a4e6cdf338329976e9ebbf1a67609422a31\\.tar\\.gz\|https://github.com/venomlinux/rc/archive/65ef608163d72c16a721eeecf1f9865ed76f7920.tar.gz\| -e $'s|\tcd \\$name-93cb0a4e6cdf338329976e9ebbf1a67609422a31|\tcd "$SRC"/rc*/|' core/rc/spkgbuild
+sed -i -e "s/version=20200821/version=20210521131606/g" core/rc/spkgbuild
+bash /usr/libexec/update-repo/changelog core/rc/spkgbuild Upgraded\ from\ version\ 20200821\ to\ version\ 20210521131606
+sed -i -e s\|https://oss\\.oetiker\\.ch/rrdtool/pub/rrdtool-\\\$version\\.tar\\.gz\|https://github.com/oetiker/rrdtool-1.x/archive/refs/tags/v1.11.0.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/rrdtool*/|' core/rrdtool/spkgbuild
+sed -i -e "s/version=1.7.2/version=1.11.0/g" core/rrdtool/spkgbuild
+bash /usr/libexec/update-repo/changelog core/rrdtool/spkgbuild Upgraded\ from\ version\ 1.7.2\ to\ version\ 1.11.0
+sed -i -e s\|http://smarden\\.org/runit/\\\$name-\\\$version\\.tar\\.gz\|https://smarden.org/runit/runit-2.3.1.tar.gz\| -e $'s|\tcd admin/\\$name-\\$version|\tcd "$SRC"/admin*/|' core/runit/spkgbuild
+sed -i -e "s/version=2.1.2/version=2.3.1/g" core/runit/spkgbuild
+bash /usr/libexec/update-repo/changelog core/runit/spkgbuild Upgraded\ from\ version\ 2.1.2\ to\ version\ 2.3.1
+sed -i -e s\|https://github\\.com/venomlinux/runit-rc/archive/\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/venomlinux/runit-rc/archive/40b4b3892256a2e466686e1514253d70cc8f75d5.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/runit-rc*/|' core/runit-rc/spkgbuild
+sed -i -e "s/version=20200403/version=20200423052459/g" core/runit-rc/spkgbuild
+bash /usr/libexec/update-repo/changelog core/runit-rc/spkgbuild Upgraded\ from\ version\ 20200403\ to\ version\ 20200423052459
+sed -i -e "s/version=4.9.1/version=4.11.1/g" core/scons/spkgbuild
+bash /usr/libexec/update-repo/changelog core/scons/spkgbuild Upgraded\ from\ version\ 4.9.1\ to\ version\ 4.11.1
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/xdg/shared-mime-info/-/archive/\\\$version/shared-mime-info-\\\$version\\.tar\\.gz\|https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.5.1/shared-mime-info-2.5.1.tar.gz\| core/shared-mime-info/spkgbuild
+sed -i -e "s/version=2.4/version=2.5.1/g" core/shared-mime-info/spkgbuild
+bash /usr/libexec/update-repo/changelog core/shared-mime-info/spkgbuild Upgraded\ from\ version\ 2.4\ to\ version\ 2.5.1
+sed -i -e s\|\\\$name-\\\$version\\.tar\\.xz::https://storage\\.googleapis\\.com/shellcheck/shellcheck-stable\\.linux\\.x86_64\\.tar\\.xz\|\$name-\$version.tar.xz::https://github.com/koalaman/shellcheck/releases/download/v0.11.0/shellcheck-v0.11.0.linux.x86_64.tar.xz\| -e $'s|\tcd shellcheck-stable|\tcd "$SRC"/shellcheck*/|' core/shellcheck-static/spkgbuild
+sed -i -e "s/version=0.7.1/version=0.11.0/g" core/shellcheck-static/spkgbuild
+bash /usr/libexec/update-repo/changelog core/shellcheck-static/spkgbuild Upgraded\ from\ version\ 0.7.1\ to\ version\ 0.11.0
+sed -i -e s\|https://github\\.com/conformal/spectrwm/archive/SPECTRWM_\\\$verzion\\.tar\\.gz\|https://github.com/conformal/spectrwm/archive/refs/tags/SPECTRWM_3_7_0.tar.gz\| -e $'s|\tcd \\$name-SPECTRWM_\\$verzion|\tcd "$SRC"/spectrwm-SPECTRWM*/|' core/spectrwm/spkgbuild
+sed -i -e "s/version=3.4.1/version=3.7.0/g" core/spectrwm/spkgbuild
+bash /usr/libexec/update-repo/changelog core/spectrwm/spkgbuild Upgraded\ from\ version\ 3.4.1\ to\ version\ 3.7.0
+sed -i -e s\|http://ftp\\.openbsd\\.org/pub/OpenBSD/OpenSSH/portable/openssh-\\\$version\\.tar\\.gz\|https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz\| -e $'s|\tcd openssh-\\$version/contrib|\tcd "$SRC"/openssh*/|' core/ssh-askpass/spkgbuild
+sed -i -e "s/version=10.0p1/version=10.6p1/g" core/ssh-askpass/spkgbuild
+bash /usr/libexec/update-repo/changelog core/ssh-askpass/spkgbuild Upgraded\ from\ version\ 10.0p1\ to\ version\ 10.6p1
+sed -i -e s\|\\\$name-\\\$_commit\\.tar\\.gz::https://github\\.com/emmett1/st/archive/\\\$_commit\\.tar\\.gz\|\$name-\$_commit.tar.gz::https://github.com/emmett1/st/archive/9203c816d2bd58ce1971ae50e756b4eef18fa83c.tar.gz\| -e s\|_commit=9203c816d2bd58ce1971ae50e756b4eef18fa83c\|_commit=9203c816d2bd58ce1971ae50e756b4eef18fa83c\| -e $'s|\tcd \\$name-\\$_commit|\tcd "$SRC"/st*/|' core/st/spkgbuild
+sed -i -e "s/version=20200408/version=20200408155047/g" core/st/spkgbuild
+bash /usr/libexec/update-repo/changelog core/st/spkgbuild Upgraded\ from\ version\ 20200408\ to\ version\ 20200408155047
+sed -i -e s\|\\\$name-\\\$_commit\\.tar\\.gz::https://github\\.com/emmett1/surf/archive/\\\$_commit\\.tar\\.gz\|\$name-\$_commit.tar.gz::https://github.com/emmett1/surf/archive/0787787f863fe34531ee2670a9277e2b327a3b42.tar.gz\| -e s\|_commit=0787787f863fe34531ee2670a9277e2b327a3b42\|_commit=0787787f863fe34531ee2670a9277e2b327a3b42\| -e $'s|\tcd \\$name-\\$_commit|\tcd "$SRC"/surf*/|' core/surf/spkgbuild
+sed -i -e "s/version=20200408/version=20200408154029/g" core/surf/spkgbuild
+bash /usr/libexec/update-repo/changelog core/surf/spkgbuild Upgraded\ from\ version\ 20200408\ to\ version\ 20200408154029
+sed -i -e "s/version=4.3.1/version=4.5.1/g" core/swig/spkgbuild
+bash /usr/libexec/update-repo/changelog core/swig/spkgbuild Upgraded\ from\ version\ 4.3.1\ to\ version\ 4.5.1
+sed -i -e s\|https://github\\.com/transmission/transmission-releases/raw/master/transmission-\\\$version\\.tar\\.xz\|https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4.tar.xz\| -e $'s|\tcd transmission-\\$version|\tcd "$SRC"/transmission*/|' core/transmission-cli/spkgbuild
+sed -i -e "s/version=3.00/version=4.1.4/g" core/transmission-cli/spkgbuild
+bash /usr/libexec/update-repo/changelog core/transmission-cli/spkgbuild Upgraded\ from\ version\ 3.00\ to\ version\ 4.1.4
+sed -i -e s\|https://github\\.com/transmission/transmission-releases/raw/master/transmission-\\\$version\\.tar\\.xz\|https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4.tar.xz\| -e $'s|\tcd transmission-\\$version|\tcd "$SRC"/transmission*/|' core/transmission-gtk/spkgbuild
+sed -i -e "s/version=3.00/version=4.1.4/g" core/transmission-gtk/spkgbuild
+bash /usr/libexec/update-repo/changelog core/transmission-gtk/spkgbuild Upgraded\ from\ version\ 3.00\ to\ version\ 4.1.4
+sed -i -e s\|http://mama\\.indstate\\.edu/users/ice/\\\$name/src/\\\$name-\\\$version\\.tgz\|https://oldmanprogrammer.net/tar/tree/tree-2.3.2.tgz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/tree*/|' core/tree/spkgbuild
+sed -i -e "s/version=2.2.1/version=2.3.2/g" core/tree/spkgbuild
+bash /usr/libexec/update-repo/changelog core/tree/spkgbuild Upgraded\ from\ version\ 2.2.1\ to\ version\ 2.3.2
+sed -i -e s\|https://www\\.iana\\.org/time-zones/repository/releases/\\\$\{name\}\\\$\{version\}\\.tar\\.gz\|https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz\| core/tzdata/spkgbuild
+sed -i -e "s/version=2020a/version=2026e/g" core/tzdata/spkgbuild
+bash /usr/libexec/update-repo/changelog core/tzdata/spkgbuild Upgraded\ from\ version\ 2020a\ to\ version\ 2026e
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/upower/upower/-/archive/v\\\$version/upower-v\\\$version\\.tar\\.bz2\|https://gitlab.freedesktop.org/upower/upower/-/archive/v1.91.5/upower-v1.91.5.tar.bz2\| core/upower/spkgbuild
+sed -i -e "s/version=1.90.9/version=1.91.5/g" core/upower/spkgbuild
+bash /usr/libexec/update-repo/changelog core/upower/spkgbuild Upgraded\ from\ version\ 1.90.9\ to\ version\ 1.91.5
+sed -i -e s\|https://kernel\\.org/pub/linux/utils/usb/usbutils/usbutils-018\\.tar\\.xz\|https://kernel.org/pub/linux/utils/usb/usbutils/usbutils-020.tar.gz\| core/usbutils/spkgbuild
+sed -i -e "s/version=018/version=020/g" core/usbutils/spkgbuild
+bash /usr/libexec/update-repo/changelog core/usbutils/spkgbuild Upgraded\ from\ version\ 018\ to\ version\ 020
+sed -i -e s\|\\\$name-\\\$_commit\\.tar\\.gz::https://github\\.com/vinceliuice/vimix-gtk-themes/archive/\\\$_commit\\.tar\\.gz\|\$name-\$_commit.tar.gz::https://github.com/vinceliuice/vimix-gtk-themes/archive/c11aca86854dcf9e33892c59aef4f296d985bb60.tar.gz\| -e s\|_commit=c6b15d0a94f9c7264e5d6d019c9296171e2ff907\|_commit=c11aca86854dcf9e33892c59aef4f296d985bb60\| -e $'s|\tcd \\$name-\\$_commit|\tcd "$SRC"/Vimix-gtk-themes*/|' core/vimix-gtk-themes/spkgbuild
+sed -i -e "s/version=20190225/version=20250726094149/g" core/vimix-gtk-themes/spkgbuild
+bash /usr/libexec/update-repo/changelog core/vimix-gtk-themes/spkgbuild Upgraded\ from\ version\ 20190225\ to\ version\ 20250726094149
+sed -i -e s\|http://webonastick\\.com/\\\$name/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/dse/vtclock/archive/refs/tags/v0.99.1.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/vtclock*/|' core/vtclock/spkgbuild
+sed -i -e "s/version=0.0.20161228/version=0.99.1/g" core/vtclock/spkgbuild
+bash /usr/libexec/update-repo/changelog core/vtclock/spkgbuild Upgraded\ from\ version\ 0.0.20161228\ to\ version\ 0.99.1
+sed -i -e s\|http://wgetpaste\\.zlin\\.dk/\\\$name-\\\$version\\.tar\\.bz2\|https://github.com/zlin/wgetpaste/archive/refs/tags/2.34.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/wgetpaste*/|' core/wgetpaste/spkgbuild
+sed -i -e "s/version=2.30/version=2.34/g" core/wgetpaste/spkgbuild
+bash /usr/libexec/update-repo/changelog core/wgetpaste/spkgbuild Upgraded\ from\ version\ 2.30\ to\ version\ 2.34
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/aspell/dict/en/aspell6-en-\\\$version-\\\$release\\.tar\\.bz2\|https://ftp.gnu.org/gnu/aspell/dict/en/aspell6-en-2026.02.25-0.tar.bz2\| extra/aspell-english-dictionary/spkgbuild
+sed -i -e "s/version=2020.12.07/version=2026.02.25/g" extra/aspell-english-dictionary/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/aspell-english-dictionary/spkgbuild Upgraded\ from\ version\ 2020.12.07\ to\ version\ 2026.02.25
+sed -i -e s\|https://sourceforge\\.net/projects/\\\$pkgname/files/\\\$name/\\\$pkgver/\\\$name-\\\$version\\.tgz\|https://downloads.sourceforge.net/project/chessx/chessx/1.6.10/chessx-1.6.10.tgz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/chessx-master*/|' extra/chessx/spkgbuild
+sed -i -e "s/version=1.5.4/version=1.6.10/g" extra/chessx/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/chessx/spkgbuild Upgraded\ from\ version\ 1.5.4\ to\ version\ 1.6.10
+sed -i -e s\|https://download\\.visualstudio\\.microsoft\\.com/download/pr/77d472e5-194c-421e-992d-e4ca1d08e6cc/56c61ac303ddf1b12026151f4f000a2b/dotnet-sdk-6\\.0\\.301-linux-x64\\.tar\\.gz\|https://builds.dotnet.microsoft.com/dotnet/Sdk/6.0.428/dotnet-sdk-6.0.428-linux-x64.tar.gz\| extra/dotnet-host/spkgbuild
+sed -i -e "s/version=6.0.301/version=6.0.428/g" extra/dotnet-host/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/dotnet-host/spkgbuild Upgraded\ from\ version\ 6.0.301\ to\ version\ 6.0.428
+sed -i -e "s/version=20210126/version=20260128/g" extra/geoip-database/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/geoip-database/spkgbuild Upgraded\ from\ version\ 20210126\ to\ version\ 20260128
+sed -i -e "s/version=5.12/version=5.17/g" extra/gnucash/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/gnucash/spkgbuild Upgraded\ from\ version\ 5.12\ to\ version\ 5.17
+sed -i -e s\|https://download\\.gnome\\.org/sources/gtk/3\\.24/gtk-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/gtk/3.24/gtk-3.24.52.tar.xz\| extra/gtk3/spkgbuild
+sed -i -e "s/version=3.24.49/version=3.24.52/g" extra/gtk3/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/gtk3/spkgbuild Upgraded\ from\ version\ 3.24.49\ to\ version\ 3.24.52
+sed -i -e s\|https://download\\.gnome\\.org/sources/gtk/4\\.18/gtk-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/gtk/4.24/gtk-4.24.1.tar.xz\| extra/gtk4/spkgbuild
+sed -i -e "s/version=4.18.6/version=4.24.1/g" extra/gtk4/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/gtk4/spkgbuild Upgraded\ from\ version\ 4.18.6\ to\ version\ 4.24.1
+sed -i -e s\|https://github\\.com/multiSnow/mcomix3/archive/refs/heads/gtk3\\.zip\|https://github.com/multiSnow/mcomix3/archive/cb63d286a0357af45b2b5defd70618c70b9e709d.tar.gz\| -e $'s|\tcd mcomix3-gtk3|\tcd "$SRC"/mcomix3*/|' extra/mcomix/spkgbuild
+sed -i -e "s/version=1.3.0/version=1.3.0.git20221027142238/g" extra/mcomix/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/mcomix/spkgbuild Upgraded\ from\ version\ 1.3.0\ to\ version\ 1.3.0.git20221027142238
+sed -i -e s\|https://launcher\\.mojang\\.com/download/linux/x86_64/minecraft-launcher_\\\$\{version\}\\.tar\\.gz\|https://launcher.mojang.com/download/Minecraft.tar.gz\| extra/minecraft-launcher/spkgbuild
+sed -i -e "s/version=1.0.1221/version=2.1.3/g" extra/minecraft-launcher/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/minecraft-launcher/spkgbuild Upgraded\ from\ version\ 1.0.1221\ to\ version\ 2.1.3
+sed -i -e s\|https://archive\\.mozilla\\.org/pub/firefox/releases/\\\$\{version\}esr/source/firefox-\\\$\{version\}esr\\.source\\.tar\\.xz\|https://archive.mozilla.org/pub/firefox/releases/102.15.1esr/source/firefox-102.15.1esr.source.tar.xz\| extra/mozjs/spkgbuild
+sed -i -e "s/version=102.9.0/version=102.15.1/g" extra/mozjs/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/mozjs/spkgbuild Upgraded\ from\ version\ 102.9.0\ to\ version\ 102.15.1
+sed -i -e s\|https://nodejs\\.org/dist/v22\\.17\\.0/node-v22\\.17\\.0\\.tar\\.xz\|https://nodejs.org/dist/v22.23.4/node-v22.23.4.tar.xz\| -e $'s|\tcd \\*|\tcd "$SRC"/node*/|' extra/nodejs/spkgbuild
+sed -i -e "s/version=22.17.0/version=22.23.4/g" extra/nodejs/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/nodejs/spkgbuild Upgraded\ from\ version\ 22.17.0\ to\ version\ 22.23.4
+sed -i -e s\|https://downloads\\.sourceforge\\.net/project/scidvspc/source/scid_vs_pc-4\\.21\\.tgz\|https://downloads.sourceforge.net/project/scidvspc/source/scid_vs_pc-4.27.tgz\| -e s\|cd\ \\\$name-\\\$version\|cd\ \"\$SRC\"/scid_vs_pc\*/\| extra/scid_vs_pc/spkgbuild
+sed -i -e "s/version=4.21/version=4.27/g" extra/scid_vs_pc/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/scid_vs_pc/spkgbuild Upgraded\ from\ version\ 4.21\ to\ version\ 4.27
+sed -i -e s\|http://voncloft\\.dnsfor\\.me/software/Voncloft-OS/tarballs/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/KittyKatt/screenFetch/archive/refs/tags/v3.9.9.tar.gz\| -e $'s|\tcd screenFetch|\tcd "$SRC"/screenFetch*/|' extra/screenfetch/spkgbuild
+sed -i -e "s/version=3.9.1/version=3.9.9/g" extra/screenfetch/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/screenfetch/spkgbuild Upgraded\ from\ version\ 3.9.1\ to\ version\ 3.9.9
+sed -i -e s\|https://github\\.com/MrAlex94/Waterfox/archive/\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/WaterfoxCo/Waterfox-Classic/archive/refs/tags/2022.11-classic.tar.gz\| -e $'s|\tcd Waterfox-\\$version|\tcd "$SRC"/Waterfox-Classic*/|' extra/waterfox/spkgbuild
+sed -i -e "s/version=56.2.14/version=2022.11/g" extra/waterfox/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/waterfox/spkgbuild Upgraded\ from\ version\ 56.2.14\ to\ version\ 2022.11
+sed -i -e s\|https://github\\.com/\\\$name/\\\$name/archive/refs/tags/v\\\$version-stable\\.tar\\.gz\|https://github.com/wolfssl/wolfssl/archive/refs/tags/v5.9.4-stable.tar.gz\| extra/wolfssl/spkgbuild
+sed -i -e "s/version=5.8.4/version=5.9.4/g" extra/wolfssl/spkgbuild
+bash /usr/libexec/update-repo/changelog extra/wolfssl/spkgbuild Upgraded\ from\ version\ 5.8.4\ to\ version\ 5.9.4
+sed -i -e s\|https://github\\.com/fontforge/fontforge/releases/download/\\\$version/fontforge-\\\$version\\.tar\\.xz\|https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz\| fonts/fontforge/spkgbuild
+sed -i -e "s/version=20230101/version=20251009/g" fonts/fontforge/spkgbuild
+bash /usr/libexec/update-repo/changelog fonts/fontforge/spkgbuild Upgraded\ from\ version\ 20230101\ to\ version\ 20251009
+sed -i -e s\|noto-fonts-\\\$version\\.tar\\.gz::https://github\\.com/googlei18n/noto-fonts/archive/\\\$_commit\\.tar\\.gz\|noto-fonts-\$version.tar.gz::https://github.com/notofonts/noto-fonts/archive/ffebf8c1ee449e544955a7e813c54f9b73848eac.tar.gz\| -e s\|_commit=f4726a2ec36169abd02a6d8abe67c8ff0236f6d8\|_commit=ffebf8c1ee449e544955a7e813c54f9b73848eac\| -e $'s|\tcd noto-fonts-\\*|\tcd "$SRC"/noto-fonts*/|' fonts/noto-fonts-extra/spkgbuild
+sed -i -e "s/version=20200123/version=20230125134016/g" fonts/noto-fonts-extra/spkgbuild
+bash /usr/libexec/update-repo/changelog fonts/noto-fonts-extra/spkgbuild Upgraded\ from\ version\ 20200123\ to\ version\ 20230125134016
+sed -i -e s\|siji-\\\$version\\.tar\\.gz::https://github\\.com/stark/siji/archive/\\\$_commit\\.tar\\.gz\|siji-\$version.tar.gz::https://github.com/stark/siji/archive/c691f200c1c66e76daa2afc9cbbd1aa39045c906.tar.gz\| -e s\|_commit=c691f200c1c66e76daa2afc9cbbd1aa39045c906\|_commit=c691f200c1c66e76daa2afc9cbbd1aa39045c906\| -e $'s|\tcd siji-\\$_commit|\tcd "$SRC"/siji*/|' fonts/siji-font/spkgbuild
+sed -i -e "s/version=20190218/version=20190218075758/g" fonts/siji-font/spkgbuild
+bash /usr/libexec/update-repo/changelog fonts/siji-font/spkgbuild Upgraded\ from\ version\ 20190218\ to\ version\ 20190218075758
+sed -i -e s\|\\\$name-\\\$_commit\\.tar\\.gz::https://github\\.com/iamdh4/ttf-wps-fonts/archive/\\\$_commit\\.tar\\.gz\|\$name-\$_commit.tar.gz::https://github.com/iamdh4/ttf-wps-fonts/archive/8c980c24289cb08e03f72915970ce1bd6767e45a.tar.gz\| -e s\|_commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|_commit=8c980c24289cb08e03f72915970ce1bd6767e45a\| -e $'s|\tcd \\$name-\\$_commit|\tcd "$SRC"/ttf-wps-fonts*/|' fonts/ttf-wps-fonts/spkgbuild
+sed -i -e "s/version=20170816/version=20241029073004/g" fonts/ttf-wps-fonts/spkgbuild
+bash /usr/libexec/update-repo/changelog fonts/ttf-wps-fonts/spkgbuild Upgraded\ from\ version\ 20170816\ to\ version\ 20241029073004
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/vdpau/vdpauinfo/-/archive/\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://gitlab.freedesktop.org/vdpau/vdpauinfo/-/archive/1.5/vdpauinfo-1.5.tar.gz\| hardware/vdpauinfo/spkgbuild
+sed -i -e "s/version=1.4/version=1.5/g" hardware/vdpauinfo/spkgbuild
+bash /usr/libexec/update-repo/changelog hardware/vdpauinfo/spkgbuild Upgraded\ from\ version\ 1.4\ to\ version\ 1.5
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/libinput/libinput/-/archive/1\\.28\\.1/libinput-1\\.28\\.1\\.tar\\.gz\|https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.32.0/libinput-1.32.0.tar.gz\| hardware/xf86-input-libinput/spkgbuild
+sed -i -e "s/version=1.28.1/version=1.32.0/g" hardware/xf86-input-libinput/spkgbuild
+bash /usr/libexec/update-repo/changelog hardware/xf86-input-libinput/spkgbuild Upgraded\ from\ version\ 1.28.1\ to\ version\ 1.32.0
+sed -i -e s\|http://anduin\\.linuxfromscratch\\.org/BLFS/xf86-video-intel/xf86-video-intel-\\\$version\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/xf86-video-intel/xf86-video-intel-20230223.tar.xz\| hardware/xf86-video-intel/spkgbuild
+sed -i -e "s/version=20200817/version=20230223/g" hardware/xf86-video-intel/spkgbuild
+bash /usr/libexec/update-repo/changelog hardware/xf86-video-intel/spkgbuild Upgraded\ from\ version\ 20200817\ to\ version\ 20230223
+sed -i -e s\|https://github\\.com/libexpat/libexpat/releases/download/R_2_7_1/expat-\\\$version\\.tar\\.xz\|https://github.com/libexpat/libexpat/releases/download/R_2_9_0/expat-2.9.0.tar.bz2\| lfs-base-install/expat/spkgbuild
+sed -i -e "s/version=2.7.1/version=2.9.0/g" lfs-base-install/expat/spkgbuild
+bash /usr/libexec/update-repo/changelog lfs-base-install/expat/spkgbuild Upgraded\ from\ version\ 2.7.1\ to\ version\ 2.9.0
+sed -i -e s\|http://www\\.greenwoodsoftware\\.com/\\\$name/\\\$name-\\\$version\\.tar\\.gz\|https://www.greenwoodsoftware.com/less/less-710.tar.gz\| lfs-base-install/less/spkgbuild
+sed -i -e "s/version=679/version=710/g" lfs-base-install/less/spkgbuild
+bash /usr/libexec/update-repo/changelog lfs-base-install/less/spkgbuild Upgraded\ from\ version\ 679\ to\ version\ 710
+sed -i -e s\|https://www\\.linuxfromscratch\\.org/lfs/downloads/development/lfs-bootscripts-\\\$version\\.tar\\.xz\|https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-20250827.tar.xz\| lfs-base-install/lfs-bootscripts/spkgbuild
+sed -i -e "s/version=20240825/version=20250827/g" lfs-base-install/lfs-bootscripts/spkgbuild
+bash /usr/libexec/update-repo/changelog lfs-base-install/lfs-bootscripts/spkgbuild Upgraded\ from\ version\ 20240825\ to\ version\ 20250827
+sed -i -e s\|https://pypi\\.org/packages/source/M/MarkupSafe/markupsafe-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/38/9b/e422a865e1d5d57d0e509b4e0bf1c1a70a7f6382c29a5aa428df994c8bc8/markupsafe-3.0.4.tar.gz\| lfs-base-install/markupsafe/spkgbuild
+sed -i -e "s/version=3.0.2/version=3.0.4/g" lfs-base-install/markupsafe/spkgbuild
+bash /usr/libexec/update-repo/changelog lfs-base-install/markupsafe/spkgbuild Upgraded\ from\ version\ 3.0.2\ to\ version\ 3.0.4
+sed -i -e s\|https://invisible-mirror\\.net/archives/ncurses/current/ncurses-\\\$version-\\\$release\\.tgz\|https://ftp.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz\| -e $'s|\tcd \\$name-\\$version-\\$release|\tcd "$SRC"/ncurses*/|' lfs-base-install/ncurses/spkgbuild
+sed -i -e "s/version=6.5/version=6.6/g" lfs-base-install/ncurses/spkgbuild
+bash /usr/libexec/update-repo/changelog lfs-base-install/ncurses/spkgbuild Upgraded\ from\ version\ 6.5\ to\ version\ 6.6
+sed -i -e "s/version=4.0.5/version=4.0.7/g" lfs-base-install/procps-ng/spkgbuild
+bash /usr/libexec/update-repo/changelog lfs-base-install/procps-ng/spkgbuild Upgraded\ from\ version\ 4.0.5\ to\ version\ 4.0.7
+sed -i -e s\|https://www\\.aquamaniac\\.de/rdm/attachments/download/368/\\\$name-\\\$version\\.tar\\.gz\|https://www.aquamaniac.de/rdm/attachments/download/654/aqbanking-6.9.2.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/aqbanking*/|' libs/aqbanking/spkgbuild
+sed -i -e "s/version=6.2.10/version=6.9.2/g" libs/aqbanking/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/aqbanking/spkgbuild Upgraded\ from\ version\ 6.2.10\ to\ version\ 6.9.2
+sed -i -e "s/version=2.7.1/version=2.9.0/g" libs/expat/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/expat/spkgbuild Upgraded\ from\ version\ 2.7.1\ to\ version\ 2.9.0
+sed -i -e s\|https://downloads\\.sourceforge\\.net/opencore-amr/\\\$name-\\\$version\\.tar\\.gz\|https://downloads.sourceforge.net/project/opencore-amr/fdk-aac/fdk-aac-3.0.0.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/fdk-aac*/|' libs/fdk-aac/spkgbuild
+sed -i -e "s/version=2.0.3/version=3.0.0/g" libs/fdk-aac/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/fdk-aac/spkgbuild Upgraded\ from\ version\ 2.0.3\ to\ version\ 3.0.0
+sed -i -e s\|http://www\\.fftw\\.org/\\\$name-\\\$version\\.tar\\.gz\|https://www.fftw.org/fftw-3.3.11.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/fftw*/|' libs/fftw/spkgbuild
+sed -i -e "s/version=3.3.10/version=3.3.11/g" libs/fftw/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/fftw/spkgbuild Upgraded\ from\ version\ 3.3.10\ to\ version\ 3.3.11
+sed -i -e s\|https://ftp\\.gnome\\.org/pub/gnome/sources/gexiv2/\\\$\{version%\\.\\\*\}/gexiv2-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/gexiv2/0.16/gexiv2-0.16.2.tar.xz\| libs/gexiv2/spkgbuild
+sed -i -e "s/version=0.14.5/version=0.16.2/g" libs/gexiv2/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/gexiv2/spkgbuild Upgraded\ from\ version\ 0.14.5\ to\ version\ 0.16.2
+sed -i -e s\|https://ftp\\.gnome\\.org/pub/gnome/sources/\\\$name/\\\$\{version%\\.\\\*\}/\\\$name-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/glib/2.90/glib-2.90.1.tar.xz\| libs/glib/spkgbuild
+sed -i -e "s/version=2.84.3/version=2.90.1/g" libs/glib/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/glib/spkgbuild Upgraded\ from\ version\ 2.84.3\ to\ version\ 2.90.1
+sed -i -e s\|https://archive\\.mozilla\\.org/pub/firefox/releases/\\\$\{version\}esr/source/firefox-\\\$\{version\}esr\\.source\\.tar\\.xz\|https://archive.mozilla.org/pub/firefox/releases/78.15.0esr/source/firefox-78.15.0esr.source.tar.xz\| libs/js78/spkgbuild
+sed -i -e "s/version=78.9.0/version=78.15.0/g" libs/js78/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/js78/spkgbuild Upgraded\ from\ version\ 78.9.0\ to\ version\ 78.15.0
+sed -i -e s\|ftp://ftp\\.videolan\\.org/pub/videolan/\\\$name/\\\$version/\\\$name-\\\$version\\.tar\\.bz2\|https://download.videolan.org/pub/videolan/libaacs/0.12.0/libaacs-0.12.0.tar.bz2\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/libaacs*/|' libs/libaacs/spkgbuild
+sed -i -e "s/version=0.11.0/version=0.12.0/g" libs/libaacs/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libaacs/spkgbuild Upgraded\ from\ version\ 0.11.0\ to\ version\ 0.12.0
+sed -i -e s\|https://fc-solve\\.shlomifish\\.org/downloads/fc-solve/black-hole-solver-\\\$version\\.tar\\.xz\|https://fc-solve.shlomifish.org/downloads/fc-solve/black-hole-solver-1.14.0.tar.xz\| -e $'s|\tcd black-hole-solver-\\$version|\tcd "$SRC"/black-hole-solver*/|' libs/libblack-hole-solver/spkgbuild
+sed -i -e "s/version=1.10.1/version=1.14.0/g" libs/libblack-hole-solver/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libblack-hole-solver/spkgbuild Upgraded\ from\ version\ 1.10.1\ to\ version\ 1.14.0
+sed -i -e s\|https://code\\.videolan\\.org/videolan/libbluray/-/archive/\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://download.videolan.org/pub/videolan/libbluray/1.5.0/libbluray-1.5.0.tar.xz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/libbluray*/|' libs/libbluray/spkgbuild
+sed -i -e "s/version=1.3.0/version=1.5.0/g" libs/libbluray/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libbluray/spkgbuild Upgraded\ from\ version\ 1.3.0\ to\ version\ 1.5.0
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/libcdio/libcdio-paranoia-\\\$version\\.tar\\.bz2\|https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-10.2+2.0.2.tar.bz2\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/libcdio-paranoia*/|' libs/libcdio-paranoia/spkgbuild
+sed -i -e "s/version=10.2+2.0.1/version=10.2+2.0.2/g" libs/libcdio-paranoia/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libcdio-paranoia/spkgbuild Upgraded\ from\ version\ 10.2+2.0.1\ to\ version\ 10.2+2.0.2
+sed -i -e s\|https://curl\\.haxx\\.se/download/curl-\\\$version\\.tar\\.xz\|https://curl.se/download/curl-8.23.0.tar.bz2\| libs/libcurl-compat/spkgbuild
+sed -i -e "s/version=7.72.0/version=8.23.0/g" libs/libcurl-compat/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libcurl-compat/spkgbuild Upgraded\ from\ version\ 7.72.0\ to\ version\ 8.23.0
+sed -i -e s\|https://curl\\.haxx\\.se/download/curl-\\\$version\\.tar\\.xz\|https://curl.se/download/curl-8.23.0.tar.bz2\| libs/libcurl-gnutls/spkgbuild
+sed -i -e "s/version=7.72.0/version=8.23.0/g" libs/libcurl-gnutls/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libcurl-gnutls/spkgbuild Upgraded\ from\ version\ 7.72.0\ to\ version\ 8.23.0
+sed -i -e s\|https://releases\\.pagure\\.org/liberation-fonts/liberation-fonts-ttf-\\\$version\\.tar\\.gz\|https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz\| -e $'s|\tcd \\$name-ttf-\\$version|\tcd "$SRC"/liberation-fonts-ttf*/|' libs/liberation-fonts/spkgbuild
+sed -i -e "s/version=2.00.1/version=2.1.5/g" libs/liberation-fonts/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/liberation-fonts/spkgbuild Upgraded\ from\ version\ 2.00.1\ to\ version\ 2.1.5
+sed -i -e s\|https://github\\.com/\\\$name/\\\$name/releases/download/release-\\\$version-stable/\\\$name-\\\$version-stable\\.tar\\.gz\|https://github.com/libevent/libevent/releases/download/release-2.1.13-stable/libevent-2.1.13-stable.tar.gz\| libs/libevent/spkgbuild
+sed -i -e "s/version=2.1.12/version=2.1.13/g" libs/libevent/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libevent/spkgbuild Upgraded\ from\ version\ 2.1.12\ to\ version\ 2.1.13
+sed -i -e s\|https://download\\.filezilla-project\\.org/libfilezilla/libfilezilla-\\\$version\\.tar\\.bz2\|https://dl3.cdn.filezilla-project.org/libfilezilla/libfilezilla-0.58.0.tar.xz\?h=N5JB4C8bYI_0FLSAp63cGw\\\&x=1793098558\| libs/libfilezilla/spkgbuild
+sed -i -e "s/version=0.46.0/version=0.58.0/g" libs/libfilezilla/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libfilezilla/spkgbuild Upgraded\ from\ version\ 0.46.0\ to\ version\ 0.58.0
+sed -i -e s\|https://gitlab\\.gnome\\.org/GNOME/\\\$name/-/archive/\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://download.gnome.org/sources/libgnomekbd/3.28/libgnomekbd-3.28.1.tar.xz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/libgnomekbd*/|' libs/libgnomekbd/spkgbuild
+sed -i -e "s/version=3.26.1+2+g8d02ebd/version=3.28.1/g" libs/libgnomekbd/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libgnomekbd/spkgbuild Upgraded\ from\ version\ 3.26.1+2+g8d02ebd\ to\ version\ 3.28.1
+sed -i -e s\|https://github\\.com/cjlin1/liblinear/archive/v\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/cjlin1/liblinear/archive/v250/liblinear-250.tar.gz\| libs/liblinear/spkgbuild
+sed -i -e "s/version=249/version=250/g" libs/liblinear/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/liblinear/spkgbuild Upgraded\ from\ version\ 249\ to\ version\ 250
+sed -i -e s\|https://www\\.freedesktop\\.org/software/ModemManager/ModemManager-\\\$version\\.tar\\.xz\|https://www.freedesktop.org/software/ModemManager/ModemManager-1.18.12.tar.xz\| libs/libmm-glib/spkgbuild
+sed -i -e "s/version=1.14.10/version=1.18.12/g" libs/libmm-glib/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libmm-glib/spkgbuild Upgraded\ from\ version\ 1.14.10\ to\ version\ 1.18.12
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/mpc/mpc-\\\$version\\.tar\\.gz\|https://ftp.gnu.org/gnu/mpc/mpc-1.4.1.tar.xz\| libs/libmpc/spkgbuild
+sed -i -e "s/version=1.2.0/version=1.4.1/g" libs/libmpc/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libmpc/spkgbuild Upgraded\ from\ version\ 1.2.0\ to\ version\ 1.4.1
+sed -i -e "s/version=1.1.22/version=1.1.23/g" libs/libmtp/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libmtp/spkgbuild Upgraded\ from\ version\ 1.1.22\ to\ version\ 1.1.23
+sed -i -e s\|http://stefan\\.derkits\\.at/files/libmygpo-qt/libmygpo-qt\\.\\\$\{version\}\\.tar\\.gz\|https://github.com/gpodder/libmygpo-qt/archive/refs/tags/1.2.0.tar.gz\| -e $'s|\tcd libmygpo-qt\\.\\$version|\tcd "$SRC"/libmygpo-qt*/|' libs/libmygpo-qt5/spkgbuild
+sed -i -e "s/version=1.1.0/version=1.2.0/g" libs/libmygpo-qt5/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libmygpo-qt5/spkgbuild Upgraded\ from\ version\ 1.1.0\ to\ version\ 1.2.0
+sed -i -e s\|https://github\\.com/thom311/libnl/releases/download/\\\$\{name\}\\\$\{verzion\}/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/thom311/libnl/releases/download/libnl3_12_0/libnl-3.12.0.tar.gz\| libs/libnl/spkgbuild
+sed -i -e "s/version=3.11.0/version=3.12.0/g" libs/libnl/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libnl/spkgbuild Upgraded\ from\ version\ 3.11.0\ to\ version\ 3.12.0
+sed -i -e "s/version=1.6.50/version=1.6.59/g" libs/libpng/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libpng/spkgbuild Upgraded\ from\ version\ 1.6.50\ to\ version\ 1.6.59
+sed -i -e s\|https://www\\.libraw\\.org/data/LibRaw-0\\.21\\.4\\.tar\\.gz\|https://github.com/LibRaw/LibRaw/archive/refs/tags/0.22.3.tar.gz\| -e s\|\ \ \ \ \ \ \ \ cd\ \\\*\|\ \ \ \ \ \ \ \ cd\ \"\$SRC\"/LibRaw\*/\| libs/libraw/spkgbuild
+sed -i -e "s/version=0.21.4/version=0.22.3/g" libs/libraw/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libraw/spkgbuild Upgraded\ from\ version\ 0.21.4\ to\ version\ 0.22.3
+sed -i -e s\|https://download\\.osgeo\\.org/\\\$name/tiff-\\\$version\\.tar\\.gz\|https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz\| libs/libtiff/spkgbuild
+sed -i -e "s/version=4.7.0/version=4.7.2/g" libs/libtiff/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libtiff/spkgbuild Upgraded\ from\ version\ 4.7.0\ to\ version\ 4.7.2
+sed -i -e "s/version=1.3.6/version=1.3.8/g" libs/libtirpc/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libtirpc/spkgbuild Upgraded\ from\ version\ 1.3.6\ to\ version\ 1.3.8
+sed -i -e s\|https://code\\.videolan\\.org/videolan/libudfread/-/archive/master/\\\$name-master\\.tar\\.gz\|https://code.videolan.org/videolan/libudfread/-/archive/1.2.0/libudfread-1.2.0.tar.gz\| -e $'s|\tcd libudfread-master|\tcd "$SRC"/libudfread*/|' libs/libudfread/spkgbuild
+sed -i -e "s/version=1.0.0.32.g09059bb/version=1.2.0/g" libs/libudfread/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libudfread/spkgbuild Upgraded\ from\ version\ 1.0.0.32.g09059bb\ to\ version\ 1.2.0
+sed -i -e s\|https://github\\.com/fontforge/\\\$name/releases/download/\\\$version/\\\$name-dist-\\\$version\\.tar\\.gz\|https://github.com/fontforge/libuninameslist/releases/download/20260918/libuninameslist-dist-20260918.tar.gz\| libs/libuninameslist/spkgbuild
+sed -i -e "s/version=20200413/version=20260918/g" libs/libuninameslist/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libuninameslist/spkgbuild Upgraded\ from\ version\ 20200413\ to\ version\ 20260918
+sed -i -e s\|https://lttng\\.org/files/urcu/userspace-rcu-0\\.15\\.3\\.tar\\.bz2\|https://lttng.org/files/urcu/userspace-rcu-0.15.7.tar.bz2\| libs/liburcu/spkgbuild
+sed -i -e "s/version=0.15.3/version=0.15.7/g" libs/liburcu/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/liburcu/spkgbuild Upgraded\ from\ version\ 0.15.3\ to\ version\ 0.15.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libX11-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libX11-1.8.14.tar.gz\| libs/libx11/spkgbuild
+sed -i -e "s/version=1.8.12/version=1.8.14/g" libs/libx11/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libx11/spkgbuild Upgraded\ from\ version\ 1.8.12\ to\ version\ 1.8.14
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXdamage-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXdamage-1.1.7.tar.gz\| libs/libxdamage/spkgbuild
+sed -i -e "s/version=1.1.6/version=1.1.7/g" libs/libxdamage/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxdamage/spkgbuild Upgraded\ from\ version\ 1.1.6\ to\ version\ 1.1.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXext-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXext-1.3.7.tar.gz\| libs/libxext/spkgbuild
+sed -i -e "s/version=1.3.6/version=1.3.7/g" libs/libxext/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxext/spkgbuild Upgraded\ from\ version\ 1.3.6\ to\ version\ 1.3.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXfixes-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXfixes-6.0.2.tar.gz\| libs/libxfixes/spkgbuild
+sed -i -e "s/version=6.0.1/version=6.0.2/g" libs/libxfixes/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxfixes/spkgbuild Upgraded\ from\ version\ 6.0.1\ to\ version\ 6.0.2
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXfont2-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXfont2-2.0.9.tar.gz\| libs/libxfont2/spkgbuild
+sed -i -e "s/version=2.0.7/version=2.0.9/g" libs/libxfont2/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxfont2/spkgbuild Upgraded\ from\ version\ 2.0.7\ to\ version\ 2.0.9
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXi-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXi-1.8.4.tar.gz\| libs/libxi/spkgbuild
+sed -i -e "s/version=1.8.2/version=1.8.4/g" libs/libxi/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxi/spkgbuild Upgraded\ from\ version\ 1.8.2\ to\ version\ 1.8.4
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXinerama-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXinerama-1.1.6.tar.gz\| libs/libxinerama/spkgbuild
+sed -i -e "s/version=1.1.5/version=1.1.6/g" libs/libxinerama/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxinerama/spkgbuild Upgraded\ from\ version\ 1.1.5\ to\ version\ 1.1.6
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXmu-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXmu-1.3.1.tar.gz\| libs/libxmu/spkgbuild
+sed -i -e "s/version=1.2.1/version=1.3.1/g" libs/libxmu/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxmu/spkgbuild Upgraded\ from\ version\ 1.2.1\ to\ version\ 1.3.1
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXpm-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXpm-3.5.20.tar.gz\| libs/libxpm/spkgbuild
+sed -i -e "s/version=3.5.17/version=3.5.20/g" libs/libxpm/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxpm/spkgbuild Upgraded\ from\ version\ 3.5.17\ to\ version\ 3.5.20
+sed -i -e s\|https://www\\.x\\.org/archive//individual/lib/libXpresent-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXpresent-1.0.2.tar.gz\| libs/libxpresent/spkgbuild
+sed -i -e "s/version=1.0.1/version=1.0.2/g" libs/libxpresent/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxpresent/spkgbuild Upgraded\ from\ version\ 1.0.1\ to\ version\ 1.0.2
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXrandr-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXrandr-1.5.5.tar.gz\| libs/libxrandr/spkgbuild
+sed -i -e "s/version=1.5.4/version=1.5.5/g" libs/libxrandr/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxrandr/spkgbuild Upgraded\ from\ version\ 1.5.4\ to\ version\ 1.5.5
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXrender-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXrender-0.9.13.tar.gz\| libs/libxrender/spkgbuild
+sed -i -e "s/version=0.9.12/version=0.9.13/g" libs/libxrender/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxrender/spkgbuild Upgraded\ from\ version\ 0.9.12\ to\ version\ 0.9.13
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXres-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXres-1.2.3.tar.gz\| libs/libxres/spkgbuild
+sed -i -e "s/version=1.2.2/version=1.2.3/g" libs/libxres/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxres/spkgbuild Upgraded\ from\ version\ 1.2.2\ to\ version\ 1.2.3
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXScrnSaver-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXScrnSaver-1.2.5.tar.gz\| libs/libxscrnsaver/spkgbuild
+sed -i -e "s/version=1.2.4/version=1.2.5/g" libs/libxscrnsaver/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxscrnsaver/spkgbuild Upgraded\ from\ version\ 1.2.4\ to\ version\ 1.2.5
+sed -i -e s\|https://xorg\\.freedesktop\\.org/releases/individual/lib/libXScrnSaver-\\\$\{version\}\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXScrnSaver-1.2.5.tar.gz\| libs/libxss/spkgbuild
+sed -i -e "s/version=1.2.3/version=1.2.5/g" libs/libxss/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxss/spkgbuild Upgraded\ from\ version\ 1.2.3\ to\ version\ 1.2.5
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXtst-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXtst-1.2.6.tar.gz\| libs/libxtst/spkgbuild
+sed -i -e "s/version=1.2.5/version=1.2.6/g" libs/libxtst/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxtst/spkgbuild Upgraded\ from\ version\ 1.2.5\ to\ version\ 1.2.6
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXvMC-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXvMC-1.0.15.tar.gz\| libs/libxvmc/spkgbuild
+sed -i -e "s/version=1.0.14/version=1.0.15/g" libs/libxvmc/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxvmc/spkgbuild Upgraded\ from\ version\ 1.0.14\ to\ version\ 1.0.15
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXxf86dga-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXxf86dga-1.1.7.tar.gz\| libs/libxxf86dga/spkgbuild
+sed -i -e "s/version=1.1.6/version=1.1.7/g" libs/libxxf86dga/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxxf86dga/spkgbuild Upgraded\ from\ version\ 1.1.6\ to\ version\ 1.1.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXxf86vm-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXxf86vm-1.1.7.tar.gz\| libs/libxxf86vm/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.1.7/g" libs/libxxf86vm/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/libxxf86vm/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.1.7
+sed -i -e s\|https://download\\.osgeo\\.org/\\\$pkgname/\\\$pkgname-\\\$pkgver\\.tar\\.gz\|https://download.osgeo.org/shapelib/shapelib-1.6.3.tar.gz\| -e $'s|\tcd \\$name-\\$version|\tcd "$SRC"/shapelib*/|' libs/shapelib/spkgbuild
+sed -i -e "s/version=1.5.0/version=1.6.3/g" libs/shapelib/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/shapelib/spkgbuild Upgraded\ from\ version\ 1.5.0\ to\ version\ 1.6.3
+sed -i -e s\|https://www\\.surina\\.net/soundtouch/soundtouch-\\\$version\\.tar\\.gz\|https://codeberg.org/soundtouch/soundtouch/archive/2.4.1.tar.gz\| -e $'s|\tcd \\*|\tcd "$SRC"/soundtouch*/|' libs/soundtouch/spkgbuild
+sed -i -e "s/version=2.4.0/version=2.4.1/g" libs/soundtouch/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/soundtouch/spkgbuild Upgraded\ from\ version\ 2.4.0\ to\ version\ 2.4.1
+sed -i -e s\|https://kokkinizita\\.linuxaudio\\.org/linuxaudio/downloads/zita-resampler-\\\$version\\.tar\\.bz2\|https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-resampler-1.11.2.tar.xz\| libs/zita-resampler-libs/spkgbuild
+sed -i -e "s/version=1.6.2/version=1.11.2/g" libs/zita-resampler-libs/spkgbuild
+bash /usr/libexec/update-repo/changelog libs/zita-resampler-libs/spkgbuild Upgraded\ from\ version\ 1.6.2\ to\ version\ 1.11.2
+sed -i -e "s/version=7.1.1/version=9.0.2/g" media/ffmpeg/spkgbuild
+bash /usr/libexec/update-repo/changelog media/ffmpeg/spkgbuild Upgraded\ from\ version\ 7.1.1\ to\ version\ 9.0.2
+sed -i -e "s/version=1.33.0/version=1.33.7/g" media/mpg123/spkgbuild
+bash /usr/libexec/update-repo/changelog media/mpg123/spkgbuild Upgraded\ from\ version\ 1.33.0\ to\ version\ 1.33.7
+sed -i -e s\|Plex-\\\$\{version\}\\.tar\\.bz2::https://artifacts\\.plex\\.tv/plex-desktop-stable/\\\$version-\\\$_pkghash/linux/Plex-\\\$version-\\\$_pkghash-linux-x86_64\\.tar\\.bz2\|Plex-\$\{version\}.tar.bz2::https://downloads.plex.tv/plex-desktop/1.115.0.426-4e960a1d/linux_tarball/Plex-1.115.0.426-4e960a1d-linux-x86_64.tar.bz2\| media/plex-desktop/spkgbuild
+sed -i -e "s/version=1.103.1.238/version=1.115.0.426/g" media/plex-desktop/spkgbuild
+bash /usr/libexec/update-repo/changelog media/plex-desktop/spkgbuild Upgraded\ from\ version\ 1.103.1.238\ to\ version\ 1.115.0.426
+sed -i -e s\|https://anduin\\.linuxfromscratch\\.org/BLFS/x264/x264-\\\$version\\.tar\\.xz\|https://anduin.linuxfromscratch.org/BLFS/x264/x264-20250815.tar.xz\| media/x264/spkgbuild
+sed -i -e "s/version=20250212/version=20250815/g" media/x264/spkgbuild
+bash /usr/libexec/update-repo/changelog media/x264/spkgbuild Upgraded\ from\ version\ 20250212\ to\ version\ 20250815
+sed -i -e s\|https://bitbucket\\.org/multicoreware/x265_git/downloads/x265_\\\$version\\.tar\\.gz\|https://bitbucket.org/multicoreware/x265_git/downloads/x265_4.2.tar.gz\| -e $'s|\tcd \\${name}_\\${version}|\tcd "$SRC"/x265*/|' media/x265/spkgbuild
+sed -i -e "s/version=4.1/version=4.2/g" media/x265/spkgbuild
+bash /usr/libexec/update-repo/changelog media/x265/spkgbuild Upgraded\ from\ version\ 4.1\ to\ version\ 4.2
+sed -i -e s\|ftp://ftp\\.alsa-project\\.org/pub/lib/alsa-lib-\\\$version\\.tar\\.bz2\|https://www.alsa-project.org/files/pub/lib/alsa-lib-1.2.16.1.tar.bz2\| -e $'s|\tcd alsa-lib-\\$version|\tcd "$SRC"/alsa-lib*/|' multilib/alsa-lib-32/spkgbuild
+sed -i -e "s/version=1.2.3.2/version=1.2.16.1/g" multilib/alsa-lib-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/alsa-lib-32/spkgbuild Upgraded\ from\ version\ 1.2.3.2\ to\ version\ 1.2.16.1
+sed -i -e s\|https://cairographics\\.org/releases/cairo-\\\$version\\.tar\\.xz\|https://cairographics.org/releases/cairo-1.18.6.tar.xz\| multilib/cairo-32/spkgbuild
+sed -i -e "s/version=1.16.0/version=1.18.6/g" multilib/cairo-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/cairo-32/spkgbuild Upgraded\ from\ version\ 1.16.0\ to\ version\ 1.18.6
+sed -i -e s\|https://dev\\.gentoo\\.org/~blueness/eudev/eudev-\\\$version\\.tar\\.gz\|https://dev.gentoo.org/~blueness/eudev/eudev-3.2.10.tar.gz\| multilib/eudev-32/spkgbuild
+sed -i -e "s/version=3.2.9/version=3.2.10/g" multilib/eudev-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/eudev-32/spkgbuild Upgraded\ from\ version\ 3.2.9\ to\ version\ 3.2.10
+sed -i -e s\|http://prdownloads\\.sourceforge\\.net/expat/expat-\\\$version\\.tar\\.xz\|https://downloads.sourceforge.net/project/expat/expat/2.9.0/expat-2.9.0.tar.xz\| -e $'s|\tcd expat-\\$version|\tcd "$SRC"/expat*/|' multilib/expat-32/spkgbuild
+sed -i -e "s/version=2.7.1/version=2.9.0/g" multilib/expat-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/expat-32/spkgbuild Upgraded\ from\ version\ 2.7.1\ to\ version\ 2.9.0
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/api/v4/projects/890/packages/generic/fontconfig/2\\.17\\.1/fontconfig-2\\.17\\.1\\.tar\\.xz\|https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/2.18.3/fontconfig-2.18.3.tar.xz\| -e $'s|\tcd fontconfig-\\$version|\tcd "$SRC"/fontconfig*/|' multilib/fontconfig-32/spkgbuild
+sed -i -e "s/version=2.17.1/version=2.18.3/g" multilib/fontconfig-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/fontconfig-32/spkgbuild Upgraded\ from\ version\ 2.17.1\ to\ version\ 2.18.3
+sed -i -e s\|https://downloads\\.sourceforge\\.net/freetype/freetype-\\\$version\\.tar\\.xz\|https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz\| -e $'s|\tcd freetype-\\$version|\tcd "$SRC"/freetype*/|' multilib/freetype2-32/spkgbuild
+sed -i -e "s/version=2.13.3/version=2.15.0/g" multilib/freetype2-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/freetype2-32/spkgbuild Upgraded\ from\ version\ 2.13.3\ to\ version\ 2.15.0
+sed -i -e s\|https://download\\.gnome\\.org/sources/glib/2\\.84/glib-2\\.84\\.3\\.tar\\.xz\|https://download.gnome.org/sources/glib/2.90/glib-2.90.1.tar.xz\| multilib/glib-32/spkgbuild
+sed -i -e "s/version=2.84.3/version=2.90.1/g" multilib/glib-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/glib-32/spkgbuild Upgraded\ from\ version\ 2.84.3\ to\ version\ 2.90.1
+sed -i -e s\|ftp://ftp\\.freedesktop\\.org/pub/mesa/glu/glu-\\\$version\\.tar\\.xz\|https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz\| -e $'s|\tcd glu-\\$version|\tcd "$SRC"/glu*/|' multilib/glu-32/spkgbuild
+sed -i -e "s/version=9.0.1/version=9.0.3/g" multilib/glu-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/glu-32/spkgbuild Upgraded\ from\ version\ 9.0.1\ to\ version\ 9.0.3
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/gmp/gmp-\\\$version\\.tar\\.xz\|https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.bz2\| multilib/gmp-32/spkgbuild
+sed -i -e "s/version=6.2.0/version=6.3.0/g" multilib/gmp-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/gmp-32/spkgbuild Upgraded\ from\ version\ 6.2.0\ to\ version\ 6.3.0
+sed -i -e s\|https://www\\.gnupg\\.org/ftp/gcrypt/gnutls/v\\\$\{version%\\.\\\*\}/\\\$\{name/-32/\}-\\\$\{version\}\\.tar\\.xz\|https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.13.tar.xz\| -e $'s|\tcd gnutls-\\$version|\tcd "$SRC"/gnutls*/|' multilib/gnutls-32/spkgbuild
+sed -i -e "s/version=3.6.14/version=3.8.13/g" multilib/gnutls-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/gnutls-32/spkgbuild Upgraded\ from\ version\ 3.6.14\ to\ version\ 3.8.13
+sed -i -e s\|http://gstreamer\\.freedesktop\\.org/src/gst-plugins-base/gst-plugins-base-\\\$version\\.tar\\.xz\|https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.29.2.tar.xz\| multilib/gst-plugins-base-32/spkgbuild
+sed -i -e "s/version=1.16.2/version=1.29.2/g" multilib/gst-plugins-base-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/gst-plugins-base-32/spkgbuild Upgraded\ from\ version\ 1.16.2\ to\ version\ 1.29.2
+sed -i -e s\|http://gstreamer\\.freedesktop\\.org/src/gstreamer/gstreamer-\\\$version\\.tar\\.xz\|https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.29.2.tar.xz\| multilib/gstreamer-32/spkgbuild
+sed -i -e "s/version=1.16.2/version=1.29.2/g" multilib/gstreamer-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/gstreamer-32/spkgbuild Upgraded\ from\ version\ 1.16.2\ to\ version\ 1.29.2
+sed -i -e s\|https://s3\\.amazonaws\\.com/json-c_releases/releases/json-c-\\\$version\\.tar\\.gz\|https://github.com/json-c/json-c/archive/refs/tags/json-c-0.19-20260627.tar.gz\| -e s\|\ \ \ \ \ \ \ \ cd\ json-c-\\\$version\|\ \ \ \ \ \ \ \ cd\ \"\$SRC\"/json-c-json-c\*/\| multilib/json-c-32/spkgbuild
+sed -i -e "s/version=0.16/version=0.19/g" multilib/json-c-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/json-c-32/spkgbuild Upgraded\ from\ version\ 0.16\ to\ version\ 0.19
+sed -i -e s\|https://www\\.kernel\\.org/pub/linux/utils/kernel/kmod/kmod-\\\$version\\.tar\\.xz\|https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.gz\| multilib/kmod-32/spkgbuild
+sed -i -e "s/version=27/version=34.2/g" multilib/kmod-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/kmod-32/spkgbuild Upgraded\ from\ version\ 27\ to\ version\ 34.2
+sed -i -e s\|https://downloads\\.sourceforge\\.net/lcms/lcms2-\\\$version\\.tar\\.gz\|https://downloads.sourceforge.net/project/lcms/lcms/2.19.1/lcms2-2.19.1.tar.gz\| -e $'s|\tcd lcms2-\\$version|\tcd "$SRC"/lcms2*/|' multilib/lcms2-32/spkgbuild
+sed -i -e "s/version=2.11/version=2.19.1/g" multilib/lcms2-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/lcms2-32/spkgbuild Upgraded\ from\ version\ 2.11\ to\ version\ 2.19.1
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libdmx-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libdmx-1.1.5.tar.gz\| multilib/libdmx-32/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.1.5/g" multilib/libdmx-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libdmx-32/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.1.5
+sed -i -e s\|https://dri\\.freedesktop\\.org/libdrm/libdrm-\\\$version\\.tar\\.xz\|https://dri.freedesktop.org/libdrm/libdrm-2.4.134.tar.xz\| multilib/libdrm-32/spkgbuild
+sed -i -e "s/version=2.4.125/version=2.4.134/g" multilib/libdrm-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libdrm-32/spkgbuild Upgraded\ from\ version\ 2.4.125\ to\ version\ 2.4.134
+sed -i -e s\|ftp://sourceware\\.org/pub/libffi/libffi-\\\$version\\.tar\\.gz\|https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz\| -e $'s|\tcd libffi-\\$version|\tcd "$SRC"/libffi*/|' multilib/libffi-32/spkgbuild
+sed -i -e "s/version=3.3/version=3.8.0/g" multilib/libffi-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libffi-32/spkgbuild Upgraded\ from\ version\ 3.3\ to\ version\ 3.8.0
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libfontenc-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libfontenc-1.1.9.tar.gz\| multilib/libfontenc-32/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.1.9/g" multilib/libfontenc-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libfontenc-32/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.1.9
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libFS-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libFS-1.0.10.tar.gz\| multilib/libfs-32/spkgbuild
+sed -i -e "s/version=1.0.8/version=1.0.10/g" multilib/libfs-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libfs-32/spkgbuild Upgraded\ from\ version\ 1.0.8\ to\ version\ 1.0.10
+sed -i -e s\|https://gnupg\\.org/ftp/gcrypt/libgcrypt/libgcrypt-\\\$version\\.tar\\.bz2\|https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.12.4.tar.bz2\| multilib/libgcrypt-32/spkgbuild
+sed -i -e "s/version=1.8.6/version=1.12.4/g" multilib/libgcrypt-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libgcrypt-32/spkgbuild Upgraded\ from\ version\ 1.8.6\ to\ version\ 1.12.4
+sed -i -e s\|https://gnupg\\.org/ftp/gcrypt/libgpg-error/libgpg-error-\\\$version\\.tar\\.bz2\|https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2\| multilib/libgpg-error-32/spkgbuild
+sed -i -e "s/version=1.38/version=1.61/g" multilib/libgpg-error-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libgpg-error-32/spkgbuild Upgraded\ from\ version\ 1.38\ to\ version\ 1.61
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libICE-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libICE-1.1.2.tar.gz\| multilib/libice-32/spkgbuild
+sed -i -e "s/version=1.0.10/version=1.1.2/g" multilib/libice-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libice-32/spkgbuild Upgraded\ from\ version\ 1.0.10\ to\ version\ 1.1.2
+sed -i -e s\|https://ftp\\.gnu\\.org/pub/gnu/libiconv/libiconv-1\\.18\\.tar\\.gz\|https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.19.tar.gz\| multilib/libiconv-32/spkgbuild
+sed -i -e "s/version=1.18/version=1.19/g" multilib/libiconv-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libiconv-32/spkgbuild Upgraded\ from\ version\ 1.18\ to\ version\ 1.19
+sed -i -e s\|https://downloads\\.sourceforge\\.net/libjpeg-turbo/libjpeg-turbo-\\\$version\\.tar\\.gz\|https://downloads.sourceforge.net/project/libjpeg-turbo/3.0.1/libjpeg-turbo-3.0.1.tar.gz\| -e $'s|\tcd libjpeg-turbo-\\$version|\tcd "$SRC"/libjpeg-turbo*/|' multilib/libjpeg-turbo-32/spkgbuild
+sed -i -e "s/version=2.0.5/version=3.0.1/g" multilib/libjpeg-turbo-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libjpeg-turbo-32/spkgbuild Upgraded\ from\ version\ 2.0.5\ to\ version\ 3.0.1
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libpciaccess-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libpciaccess-0.19.tar.xz\| multilib/libpciaccess-32/spkgbuild
+sed -i -e "s/version=0.16/version=0.19/g" multilib/libpciaccess-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libpciaccess-32/spkgbuild Upgraded\ from\ version\ 0.16\ to\ version\ 0.19
+sed -i -e s\|https://downloads\\.sourceforge\\.net/libpng/libpng-\\\$version\\.tar\\.xz\|https://downloads.sourceforge.net/project/libpng/libpng16/1.6.59/libpng-1.6.59.tar.gz\| -e $'s|\tcd libpng-\\$version|\tcd "$SRC"/libpng*/|' multilib/libpng-32/spkgbuild
+sed -i -e "s/version=1.6.37/version=1.6.59/g" multilib/libpng-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libpng-32/spkgbuild Upgraded\ from\ version\ 1.6.37\ to\ version\ 1.6.59
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libSM-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libSM-1.2.6.tar.gz\| multilib/libsm-32/spkgbuild
+sed -i -e "s/version=1.2.3/version=1.2.6/g" multilib/libsm-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libsm-32/spkgbuild Upgraded\ from\ version\ 1.2.3\ to\ version\ 1.2.6
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/libtasn1/libtasn1-\\\$version\\.tar\\.gz\|https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.21.0.tar.gz\| multilib/libtasn1-32/spkgbuild
+sed -i -e "s/version=4.16.0/version=4.21.0/g" multilib/libtasn1-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libtasn1-32/spkgbuild Upgraded\ from\ version\ 4.16.0\ to\ version\ 4.21.0
+sed -i -e s\|https://download\\.osgeo\\.org/\\\$\{name/-32/\}/tiff-\\\$version\\.tar\\.gz\|https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz\| multilib/libtiff-32/spkgbuild
+sed -i -e "s/version=4.1.0/version=4.7.2/g" multilib/libtiff-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libtiff-32/spkgbuild Upgraded\ from\ version\ 4.1.0\ to\ version\ 4.7.2
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/libtool/libtool-\\\$version\\.tar\\.xz\|https://ftp.gnu.org/gnu/libtool/libtool-2.6.2.tar.gz\| multilib/libtool-32/spkgbuild
+sed -i -e "s/version=2.4.6/version=2.6.2/g" multilib/libtool-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libtool-32/spkgbuild Upgraded\ from\ version\ 2.4.6\ to\ version\ 2.6.2
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/libunistring/libunistring-\\\$version\\.tar\\.xz\|https://ftp.gnu.org/gnu/libunistring/libunistring-1.5.tar.gz\| multilib/libunistring-32/spkgbuild
+sed -i -e "s/version=1.3/version=1.5/g" multilib/libunistring-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libunistring-32/spkgbuild Upgraded\ from\ version\ 1.3\ to\ version\ 1.5
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libX11-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libX11-1.8.14.tar.gz\| multilib/libx11-32/spkgbuild
+sed -i -e "s/version=1.8.12/version=1.8.14/g" multilib/libx11-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libx11-32/spkgbuild Upgraded\ from\ version\ 1.8.12\ to\ version\ 1.8.14
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXaw-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXaw-1.0.16.tar.gz\| multilib/libxaw-32/spkgbuild
+sed -i -e "s/version=1.0.13/version=1.0.16/g" multilib/libxaw-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxaw-32/spkgbuild Upgraded\ from\ version\ 1.0.13\ to\ version\ 1.0.16
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXcomposite-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXcomposite-0.4.7.tar.gz\| multilib/libxcomposite-32/spkgbuild
+sed -i -e "s/version=0.4.5/version=0.4.7/g" multilib/libxcomposite-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxcomposite-32/spkgbuild Upgraded\ from\ version\ 0.4.5\ to\ version\ 0.4.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXcursor-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXcursor-1.2.3.tar.gz\| multilib/libxcursor-32/spkgbuild
+sed -i -e "s/version=1.2.0/version=1.2.3/g" multilib/libxcursor-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxcursor-32/spkgbuild Upgraded\ from\ version\ 1.2.0\ to\ version\ 1.2.3
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXdamage-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXdamage-1.1.7.tar.gz\| multilib/libxdamage-32/spkgbuild
+sed -i -e "s/version=1.1.5/version=1.1.7/g" multilib/libxdamage-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxdamage-32/spkgbuild Upgraded\ from\ version\ 1.1.5\ to\ version\ 1.1.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXdmcp-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXdmcp-1.1.5.tar.gz\| multilib/libxdmcp-32/spkgbuild
+sed -i -e "s/version=1.1.3/version=1.1.5/g" multilib/libxdmcp-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxdmcp-32/spkgbuild Upgraded\ from\ version\ 1.1.3\ to\ version\ 1.1.5
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXext-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXext-1.3.7.tar.gz\| multilib/libxext-32/spkgbuild
+sed -i -e "s/version=1.3.4/version=1.3.7/g" multilib/libxext-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxext-32/spkgbuild Upgraded\ from\ version\ 1.3.4\ to\ version\ 1.3.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXfixes-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXfixes-6.0.2.tar.gz\| multilib/libxfixes-32/spkgbuild
+sed -i -e "s/version=5.0.3/version=6.0.2/g" multilib/libxfixes-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxfixes-32/spkgbuild Upgraded\ from\ version\ 5.0.3\ to\ version\ 6.0.2
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXfont2-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXfont2-2.0.9.tar.gz\| multilib/libxfont2-32/spkgbuild
+sed -i -e "s/version=2.0.7/version=2.0.9/g" multilib/libxfont2-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxfont2-32/spkgbuild Upgraded\ from\ version\ 2.0.7\ to\ version\ 2.0.9
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXft-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXft-2.3.9.tar.gz\| multilib/libxft-32/spkgbuild
+sed -i -e "s/version=2.3.3/version=2.3.9/g" multilib/libxft-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxft-32/spkgbuild Upgraded\ from\ version\ 2.3.3\ to\ version\ 2.3.9
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXi-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXi-1.8.4.tar.gz\| multilib/libxi-32/spkgbuild
+sed -i -e "s/version=1.7.10/version=1.8.4/g" multilib/libxi-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxi-32/spkgbuild Upgraded\ from\ version\ 1.7.10\ to\ version\ 1.8.4
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXinerama-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXinerama-1.1.6.tar.gz\| multilib/libxinerama-32/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.1.6/g" multilib/libxinerama-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxinerama-32/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.1.6
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libxkbfile-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libxkbfile-1.2.0.tar.xz\| multilib/libxkbfile-32/spkgbuild
+sed -i -e "s/version=1.1.0/version=1.2.0/g" multilib/libxkbfile-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxkbfile-32/spkgbuild Upgraded\ from\ version\ 1.1.0\ to\ version\ 1.2.0
+sed -i -e s\|https://download\\.gnome\\.org/sources/libxml2/2\\.14/libxml2-2\\.14\\.4\\.tar\\.xz\|https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz\| multilib/libxml2-32/spkgbuild
+sed -i -e "s/version=2.14.4/version=2.15.4/g" multilib/libxml2-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxml2-32/spkgbuild Upgraded\ from\ version\ 2.14.4\ to\ version\ 2.15.4
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXmu-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXmu-1.3.1.tar.gz\| multilib/libxmu-32/spkgbuild
+sed -i -e "s/version=1.1.3/version=1.3.1/g" multilib/libxmu-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxmu-32/spkgbuild Upgraded\ from\ version\ 1.1.3\ to\ version\ 1.3.1
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXpm-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXpm-3.5.20.tar.gz\| multilib/libxpm-32/spkgbuild
+sed -i -e "s/version=3.5.13/version=3.5.20/g" multilib/libxpm-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxpm-32/spkgbuild Upgraded\ from\ version\ 3.5.13\ to\ version\ 3.5.20
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXrandr-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXrandr-1.5.5.tar.gz\| multilib/libxrandr-32/spkgbuild
+sed -i -e "s/version=1.5.2/version=1.5.5/g" multilib/libxrandr-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxrandr-32/spkgbuild Upgraded\ from\ version\ 1.5.2\ to\ version\ 1.5.5
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXrender-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/lib/libXrender-0.9.13.tar.gz\| multilib/libxrender-32/spkgbuild
+sed -i -e "s/version=0.9.12/version=0.9.13/g" multilib/libxrender-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxrender-32/spkgbuild Upgraded\ from\ version\ 0.9.12\ to\ version\ 0.9.13
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXres-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXres-1.2.3.tar.gz\| multilib/libxres-32/spkgbuild
+sed -i -e "s/version=1.2.0/version=1.2.3/g" multilib/libxres-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxres-32/spkgbuild Upgraded\ from\ version\ 1.2.0\ to\ version\ 1.2.3
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXScrnSaver-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXScrnSaver-1.2.5.tar.gz\| multilib/libxscrnsaver-32/spkgbuild
+sed -i -e "s/version=1.2.3/version=1.2.5/g" multilib/libxscrnsaver-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxscrnsaver-32/spkgbuild Upgraded\ from\ version\ 1.2.3\ to\ version\ 1.2.5
+sed -i -e s\|http://xmlsoft\\.org/sources/libxslt-\\\$version\\.tar\\.gz\|https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.45.tar.xz\| -e $'s|\tcd libxslt-\\$version|\tcd "$SRC"/libxslt*/|' multilib/libxslt-32/spkgbuild
+sed -i -e "s/version=1.1.34/version=1.1.45/g" multilib/libxslt-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxslt-32/spkgbuild Upgraded\ from\ version\ 1.1.34\ to\ version\ 1.1.45
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXtst-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXtst-1.2.6.tar.gz\| multilib/libxtst-32/spkgbuild
+sed -i -e "s/version=1.2.3/version=1.2.6/g" multilib/libxtst-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxtst-32/spkgbuild Upgraded\ from\ version\ 1.2.3\ to\ version\ 1.2.6
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXv-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXv-1.0.13.tar.gz\| multilib/libxv-32/spkgbuild
+sed -i -e "s/version=1.0.11/version=1.0.13/g" multilib/libxv-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxv-32/spkgbuild Upgraded\ from\ version\ 1.0.11\ to\ version\ 1.0.13
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXvMC-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXvMC-1.0.15.tar.gz\| multilib/libxvmc-32/spkgbuild
+sed -i -e "s/version=1.0.12/version=1.0.15/g" multilib/libxvmc-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxvmc-32/spkgbuild Upgraded\ from\ version\ 1.0.12\ to\ version\ 1.0.15
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXxf86dga-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXxf86dga-1.1.7.tar.gz\| multilib/libxxf86dga-32/spkgbuild
+sed -i -e "s/version=1.1.5/version=1.1.7/g" multilib/libxxf86dga-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxxf86dga-32/spkgbuild Upgraded\ from\ version\ 1.1.5\ to\ version\ 1.1.7
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/lib/libXxf86vm-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/lib/libXxf86vm-1.1.7.tar.gz\| multilib/libxxf86vm-32/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.1.7/g" multilib/libxxf86vm-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/libxxf86vm-32/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.1.7
+sed -i -e s\|https://mesa\\.freedesktop\\.org/archive/mesa-\\\$\{version\}\\.tar\\.xz\|https://mesa.freedesktop.org/archive/mesa-26.2.5.tar.xz\| multilib/mesa-32/spkgbuild
+sed -i -e "s/version=25.1.3/version=26.2.5/g" multilib/mesa-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/mesa-32/spkgbuild Upgraded\ from\ version\ 25.1.3\ to\ version\ 26.2.5
+sed -i -e s\|https://downloads\\.sourceforge\\.net/mpg123/mpg123-\\\$version\\.tar\\.bz2\|https://downloads.sourceforge.net/project/mpg123/mpg123/1.33.7/mpg123-1.33.7.tar.bz2\| -e $'s|\tcd mpg123-\\$version|\tcd "$SRC"/mpg123*/|' multilib/mpg123-32/spkgbuild
+sed -i -e "s/version=1.26.3/version=1.33.7/g" multilib/mpg123-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/mpg123-32/spkgbuild Upgraded\ from\ version\ 1.26.3\ to\ version\ 1.33.7
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/ncurses/ncurses-\\\$version\\.tar\\.gz\|https://ftp.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz\| multilib/ncurses-32/spkgbuild
+sed -i -e "s/version=6.5/version=6.6/g" multilib/ncurses-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/ncurses-32/spkgbuild Upgraded\ from\ version\ 6.5\ to\ version\ 6.6
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/nettle/nettle-\\\$version\\.tar\\.gz\|https://ftp.gnu.org/gnu/nettle/nettle-4.0.tar.gz\| multilib/nettle-32/spkgbuild
+sed -i -e "s/version=3.6/version=4.0/g" multilib/nettle-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/nettle-32/spkgbuild Upgraded\ from\ version\ 3.6\ to\ version\ 4.0
+sed -i -e s\|https://openssl\\.org/source/openssl-\\\$version\\.tar\\.gz\|https://github.com/openssl/openssl/archive/refs/tags/OpenSSL_1_1_1w.tar.gz\| -e $'s|\tcd openssl-\\$version|\tcd "$SRC"/openssl-OpenSSL*/|' multilib/openssl-32/spkgbuild
+sed -i -e "s/version=1.1.1g/version=1.1.1w/g" multilib/openssl-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/openssl-32/spkgbuild Upgraded\ from\ version\ 1.1.1g\ to\ version\ 1.1.1w
+sed -i -e s\|https://cairographics\\.org/releases/pixman-\\\$version\\.tar\\.gz\|https://cairographics.org/releases/pixman-0.46.4.tar.gz\| multilib/pixman-32/spkgbuild
+sed -i -e "s/version=0.40.0/version=0.46.4/g" multilib/pixman-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/pixman-32/spkgbuild Upgraded\ from\ version\ 0.40.0\ to\ version\ 0.46.4
+sed -i -e s\|https://www\\.python\\.org/ftp/python/\\\$version/Python-\\\$version\\.tar\\.xz\|https://www.python.org/ftp/python/3.15.2/Python-3.15.2.tar.xz\| -e $'s|\tcd Python-\\$version|\tcd "$SRC"/Python*/|' multilib/python3-32/spkgbuild
+sed -i -e "s/version=3.8.5/version=3.15.2/g" multilib/python3-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/python3-32/spkgbuild Upgraded\ from\ version\ 3.8.5\ to\ version\ 3.15.2
+sed -i -e s\|https://ftp\\.gnu\\.org/gnu/readline/readline-\\\$version\\.tar\\.gz\|https://ftp.gnu.org/gnu/readline/readline-8.3.tar.gz\| multilib/readline-32/spkgbuild
+sed -i -e "s/version=8.0/version=8.3/g" multilib/readline-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/readline-32/spkgbuild Upgraded\ from\ version\ 8.0\ to\ version\ 8.3
+sed -i -e s\|https://static\\.rust-lang\\.org/dist/rustc-\\\$version-src\\.tar\\.xz\|https://static.rust-lang.org/dist/rustc-1.99.1-src.tar.xz\| -e s\|\ \ \ \ cd\ rustc-\\\$\{version\}-src\|\ \ \ \ cd\ \"\$SRC\"/rustc\*/\| multilib/rust-32/spkgbuild
+sed -i -e "s/version=1.88.0/version=1.99.1/g" multilib/rust-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/rust-32/spkgbuild Upgraded\ from\ version\ 1.88.0\ to\ version\ 1.99.1
+sed -i -e s\|https://www\\.kernel\\.org/pub/linux/utils/util-linux/v\\\$_ver/util-linux-\\\$version\\.tar\\.xz\|https://www.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.4.tar.gz\| -e $'s|\tcd util-linux-\\$version|\tcd "$SRC"/util-linux*/|' multilib/util-linux-32/spkgbuild
+sed -i -e "s/version=2.36/version=2.42.4/g" multilib/util-linux-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/util-linux-32/spkgbuild Upgraded\ from\ version\ 2.36\ to\ version\ 2.42.4
+sed -i -e s\|https://www\\.linuxtv\\.org/downloads/v4l-utils/v4l-utils-\\\$version\\.tar\\.bz2\|https://www.linuxtv.org/downloads/v4l-utils/v4l-utils-1.32.0.tar.xz\| multilib/v4l-utils-32/spkgbuild
+sed -i -e "s/version=1.20.0/version=1.32.0/g" multilib/v4l-utils-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/v4l-utils-32/spkgbuild Upgraded\ from\ version\ 1.20.0\ to\ version\ 1.32.0
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/wayland/wayland/-/releases/1\\.24\\.0/downloads/wayland-1\\.24\\.0\\.tar\\.xz\|https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.26.0/downloads/wayland-1.26.0.tar.xz\| -e $'s|\tcd wayland-\\$version|\tcd "$SRC"/wayland*/|' multilib/wayland-32/spkgbuild
+sed -i -e "s/version=1.24.0/version=1.26.0/g" multilib/wayland-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/wayland-32/spkgbuild Upgraded\ from\ version\ 1.24.0\ to\ version\ 1.26.0
+sed -i -e s\|https://github\\.com/Winetricks/winetricks/archive/\\\$version/\\\$name-\\\$version\\.tar\\.gz\|https://github.com/Winetricks/winetricks/archive/20260125/winetricks-20260125.tar.gz\| multilib/winetricks/spkgbuild
+sed -i -e "s/version=20200412/version=20260125/g" multilib/winetricks/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/winetricks/spkgbuild Upgraded\ from\ version\ 20200412\ to\ version\ 20260125
+sed -i -e s\|https://xorg\\.freedesktop\\.org/archive/individual/proto/xorgproto-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/proto/xorgproto-2026.1.tar.gz\| multilib/xorgproto-32/spkgbuild
+sed -i -e "s/version=2024.1/version=2026.1/g" multilib/xorgproto-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/xorgproto-32/spkgbuild Upgraded\ from\ version\ 2024.1\ to\ version\ 2026.1
+sed -i -e s\|https://tukaani\\.org/xz/xz-\\\$version\\.tar\\.xz\|https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz\| multilib/xz-32/spkgbuild
+sed -i -e "s/version=5.2.5/version=5.8.4/g" multilib/xz-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/xz-32/spkgbuild Upgraded\ from\ version\ 5.2.5\ to\ version\ 5.8.4
+sed -i -e s\|https://zlib\\.net/zlib-\\\$version\\.tar\\.xz\|https://zlib.net/zlib-1.3.2.tar.gz\| multilib/zlib-32/spkgbuild
+sed -i -e "s/version=1.3.1/version=1.3.2/g" multilib/zlib-32/spkgbuild
+bash /usr/libexec/update-repo/changelog multilib/zlib-32/spkgbuild Upgraded\ from\ version\ 1.3.1\ to\ version\ 1.3.2
+sed -i -e "s/version=1.0.146/version=1.0.167/g" nonfree/discord/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/discord/spkgbuild Upgraded\ from\ version\ 1.0.146\ to\ version\ 1.0.167
+sed -i -e "s/version=102.4.431/version=274.4.4905/g" nonfree/dropbox/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/dropbox/spkgbuild Upgraded\ from\ version\ 102.4.431\ to\ version\ 274.4.4905
+sed -i -e s\|https://archive\\.mozilla\\.org/pub/firefox/releases/\\\$\{version\}esr/source/firefox-\\\$\{version\}esr\\.source\\.tar\\.xz\|https://archive.mozilla.org/pub/firefox/releases/153.6.0esr/source/firefox-153.6.0esr.source.tar.xz\| nonfree/firefox-esr/spkgbuild
+sed -i -e "s/version=68.9.0/version=153.6.0/g" nonfree/firefox-esr/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/firefox-esr/spkgbuild Upgraded\ from\ version\ 68.9.0\ to\ version\ 153.6.0
+sed -i -e "s/version=120.0.6099.62/version=156.0.8078.47/g" nonfree/google-chrome/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/google-chrome/spkgbuild Upgraded\ from\ version\ 120.0.6099.62\ to\ version\ 156.0.8078.47
+sed -i -e s\|http://us\\.download\\.nvidia\\.com/XFree86/Linux-x86_64/\\\$version/NVIDIA-Linux-x86_64-\\\$version\\.run\|https://download.nvidia.com/XFree86/Linux-x86_64/580.196.07/NVIDIA-Linux-x86_64-580.196.07.run\| nonfree/nvidia/spkgbuild
+sed -i -e "s/version=580.126.18/version=580.196.07/g" nonfree/nvidia/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/nvidia/spkgbuild Upgraded\ from\ version\ 580.126.18\ to\ version\ 580.196.07
+sed -i -e s\|http://us\\.download\\.nvidia\\.com/XFree86/Linux-x86_64/\\\$version/NVIDIA-Linux-x86_64-\\\$version\\.run\|https://download.nvidia.com/XFree86/Linux-x86_64/575.64.05/NVIDIA-Linux-x86_64-575.64.05.run\| nonfree/nvidia-32/spkgbuild
+sed -i -e "s/version=575.64.03/version=575.64.05/g" nonfree/nvidia-32/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/nvidia-32/spkgbuild Upgraded\ from\ version\ 575.64.03\ to\ version\ 575.64.05
+sed -i -e s\|http://us\\.download\\.nvidia\\.com/XFree86/Linux-x86_64/\\\$version/NVIDIA-Linux-x86_64-\\\$version\\.run\|https://download.nvidia.com/XFree86/Linux-x86_64/575.64.05/NVIDIA-Linux-x86_64-575.64.05.run\| nonfree/nvidia-modules/spkgbuild
+sed -i -e "s/version=575.64.03/version=575.64.05/g" nonfree/nvidia-modules/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/nvidia-modules/spkgbuild Upgraded\ from\ version\ 575.64.03\ to\ version\ 575.64.05
+sed -i -e s\|http://repository\\.spotify\\.com/pool/non-free/s/spotify-client/spotify-client_\\\$\{verzion\}_amd64\\.deb\|https://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.2.95.453.g0eeebbed_amd64.deb\| nonfree/spotify/spkgbuild
+sed -i -e "s/version=1.1.10.546.ge08ef575.19/version=1.2.95.453.g0eeebbed/g" nonfree/spotify/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/spotify/spkgbuild Upgraded\ from\ version\ 1.1.10.546.ge08ef575.19\ to\ version\ 1.2.95.453.g0eeebbed
+sed -i -e s\|https://updates\\.tdesktop\\.com/tlinux/tsetup\\.\\\$version\\.tar\\.xz\|https://github.com/telegramdesktop/tdesktop/releases/download/v7.3.3/td-setup-linux-x64-7.3.3.tar.xz\| nonfree/telegram-desktop-bin/spkgbuild
+sed -i -e "s/version=2.1.13/version=7.3.3/g" nonfree/telegram-desktop-bin/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/telegram-desktop-bin/spkgbuild Upgraded\ from\ version\ 2.1.13\ to\ version\ 7.3.3
+sed -i -e s\|\\\$name-\\\$version\\.tar\\.gz::https://update\\.code\\.visualstudio\\.com/\\\$\{version\}/linux-x64/stable\|\$name-\$version.tar.gz::https://update.code.visualstudio.com/1.143.1/linux-x64/stable\| nonfree/vscode-bin/spkgbuild
+sed -i -e "s/version=1.71.0/version=1.143.1/g" nonfree/vscode-bin/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/vscode-bin/spkgbuild Upgraded\ from\ version\ 1.71.0\ to\ version\ 1.143.1
+sed -i -e s\|wps-office_\\\$\{version\}_amd64\\.deb::http://kdl\\.cc\\.ksosoft\\.com/wps-community/download/8392/wps-office_\\\$\{version\}_amd64\\.deb\|wps-office_\$\{version\}_amd64.deb::https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/wps-office.deb\| nonfree/wps-office/spkgbuild
+sed -i -e "s/version=11.1.0.8392/version=12.1.2.29182.AK.preread.sw/g" nonfree/wps-office/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/wps-office/spkgbuild Upgraded\ from\ version\ 11.1.0.8392\ to\ version\ 12.1.2.29182.AK.preread.sw
+sed -i -e "s/version=6.44/version=7.04/g" perl/perl-http-message/spkgbuild
+bash /usr/libexec/update-repo/changelog perl/perl-http-message/spkgbuild Upgraded\ from\ version\ 6.44\ to\ version\ 7.04
+sed -i -e s\|https://exiftool\\.org/Image-ExifTool-12\\.30\\.tar\\.gz\|https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-13.55.tar.gz\| perl/perl-image-exiftool/spkgbuild
+sed -i -e "s/version=12.30/version=13.55/g" perl/perl-image-exiftool/spkgbuild
+bash /usr/libexec/update-repo/changelog perl/perl-image-exiftool/spkgbuild Upgraded\ from\ version\ 12.30\ to\ version\ 13.55
+sed -i -e s\|https://cpan\\.metacpan\\.org/authors/id/E/ET/ETHER/JSON-Any-1\\.39\\.tar\\.gz\|https://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-Any-1.42.tar.gz\| perl/perl-json-any/spkgbuild
+sed -i -e "s/version=1.39/version=1.42/g" perl/perl-json-any/spkgbuild
+bash /usr/libexec/update-repo/changelog perl/perl-json-any/spkgbuild Upgraded\ from\ version\ 1.39\ to\ version\ 1.42
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/c/certifi/certifi-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/fd/11/b524cbd9bbdaca58608e4cf4053fd463417549e1959fa8d3aa18319f9555/certifi-2026.10.23.tar.gz\| python/certifi/spkgbuild
+sed -i -e "s/version=2025.1.31/version=2026.10.23/g" python/certifi/spkgbuild
+bash /usr/libexec/update-repo/changelog python/certifi/spkgbuild Upgraded\ from\ version\ 2025.1.31\ to\ version\ 2026.10.23
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/p/psutil/psutil-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/aa/c6/d1ddf4abb55e93cebc4f2ed8b5d6dbad109ecb8d63748dd2b20ab5e57ebe/psutil-7.2.2.tar.gz\| python/psutil/spkgbuild
+sed -i -e "s/version=7.0.0/version=7.2.2/g" python/psutil/spkgbuild
+bash /usr/libexec/update-repo/changelog python/psutil/spkgbuild Upgraded\ from\ version\ 7.0.0\ to\ version\ 7.2.2
+sed -i -e s\|https://download\\.gnome\\.org/sources/pygobject/3\\.52/pygobject-\\\$version\\.tar\\.gz\|https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.1.tar.gz\| python/pygobject3/spkgbuild
+sed -i -e "s/version=3.52.3/version=3.58.1/g" python/pygobject3/spkgbuild
+bash /usr/libexec/update-repo/changelog python/pygobject3/spkgbuild Upgraded\ from\ version\ 3.52.3\ to\ version\ 3.58.1
+sed -i -e s\|https://github\\.com/romis2012/aiohttp-socks\?signed#tag=v0\\.4\\.2/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/18/1d/a306e0111222180e60f17131a3f5d9bc694dd999a8115959a7dd76c2238e/aiohttp_socks-0.12.0.tar.gz\| python/python-aiohttp-socks/spkgbuild
+sed -i -e "s/version=0.6.0/version=0.12.0/g" python/python-aiohttp-socks/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-aiohttp-socks/spkgbuild Upgraded\ from\ version\ 0.6.0\ to\ version\ 0.12.0
+sed -i -e s\|https://github\\.com/c0fec0de/anytree#commit=b3e935355afcfb5240bac5a99707ffecc35772a2/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/bc/a8/eb55fab589c56f9b6be2b3fd6997aa04bb6f3da93b01154ce6fc8e799db2/anytree-2.13.0.tar.gz\| python/python-anytree/spkgbuild
+sed -i -e "s/version=2.8.0/version=2.13.0/g" python/python-anytree/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-anytree/spkgbuild Upgraded\ from\ version\ 2.8.0\ to\ version\ 2.13.0
+sed -i -e "s/version=3.0.1/version=3.0.2/g" python/python-apipkg/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-apipkg/spkgbuild Upgraded\ from\ version\ 3.0.1\ to\ version\ 3.0.2
+sed -i -e s\|https://github\\.com/kislyuk/argcomplete#commit=\?signed/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/87/6f/5a73f04007ca950701765949209f068da628bd11f9c2da287278ce91e0ee/argcomplete-3.7.2.tar.gz\| python/python-argcomplete/spkgbuild
+sed -i -e "s/version=1.12.3/version=3.7.2/g" python/python-argcomplete/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-argcomplete/spkgbuild Upgraded\ from\ version\ 1.12.3\ to\ version\ 3.7.2
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/7b/39/a26aaef5c3f0c6cfd67c80599b5b40a794fdab46f4ee3be925d71e2f9596/argon2-cffi-21\\.1\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/0e/89/ce5af8a7d472a67cc819d5d998aa8c82c5d860608c4db9f46f1162d7dab9/argon2_cffi-25.1.0.tar.gz\| python/python-argon2-cffi/spkgbuild
+sed -i -e "s/version=21.1.0/version=25.1.0/g" python/python-argon2-cffi/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-argon2-cffi/spkgbuild Upgraded\ from\ version\ 21.1.0\ to\ version\ 25.1.0
+sed -i -e s\|https://github\\.com/crsmithdev/arrow\\.git#tag=/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/b9/33/032cdc44182491aa708d06a68b62434140d8c50820a087fac7af37703357/arrow-1.4.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/arrow\*/\| python/python-arrow/spkgbuild
+sed -i -e "s/version=1.1.1/version=1.4.0/g" python/python-arrow/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-arrow/spkgbuild Upgraded\ from\ version\ 1.1.1\ to\ version\ 1.4.0
+sed -i -e s\|https://github\\.com/newville/asteval/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/65/9a/e10e062c83de2219c5f9ef9d684dac39323c052de140e257afd0f60f8ca7/asteval-1.0.10.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/asteval\*/\| python/python-asteval/spkgbuild
+sed -i -e "s/version=0.9.31/version=1.0.10/g" python/python-asteval/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-asteval/spkgbuild Upgraded\ from\ version\ 0.9.31\ to\ version\ 1.0.10
+sed -i -e s\|git+https://github\\.com/sffjunkie/astral\\.git#tag=3282d7b437349bc035c8a7dff5c27ec9997a2cdf\|https://files.pythonhosted.org/packages/04/d1/1adbf06a38dc339e41a1666f6c7135924594c20fd46e060fb263248c564d/astral-3.2.tar.gz\| python/python-astral/spkgbuild
+sed -i -e "s/version=2.2/version=3.2/g" python/python-astral/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-astral/spkgbuild Upgraded\ from\ version\ 2.2\ to\ version\ 3.2
+sed -i -e s\|git+https://github\\.com/MagicStack/asyncpg\\.git#tag=v0\\.24\\.0\|https://files.pythonhosted.org/packages/80/4e/59dc964f962f09e3ed472e5d2d3ba670a41a2be25080dc62ab3db507ff5e/asyncpg-0.32.0.tar.gz\| python/python-asyncpg/spkgbuild
+sed -i -e "s/version=0.24.0/version=0.32.0/g" python/python-asyncpg/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-asyncpg/spkgbuild Upgraded\ from\ version\ 0.24.0\ to\ version\ 0.32.0
+sed -i -e s\|https://gitlab\\.gnome\\.org/GNOME/pyatspi2/-/archive/PYATSPI_\\\$_pverz/pyatspi2-PYATSPI_\\\$_pverz\\.tar\\.gz\|https://download.gnome.org/sources/pyatspi/2.58/pyatspi-2.58.2.tar.xz\| -e s\|\ \ \ cd\ pyatspi2-PYATSPI_2_38_1\|\ \ \ cd\ \"\$SRC\"/pyatspi\*/\| python/python-atspi/spkgbuild
+sed -i -e "s/version=2.38.1/version=2.58.2/g" python/python-atspi/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-atspi/spkgbuild Upgraded\ from\ version\ 2.38.1\ to\ version\ 2.58.2
+sed -i -e s\|git+https://github\\.com/lepture/authlib\\.git#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\?signed\|https://files.pythonhosted.org/packages/c9/dc/087c08741a98d234c9b98beef8a28d3c309f814d14b6156422c5815bf6d6/authlib-1.9.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/authlib\*/\| python/python-authlib/spkgbuild
+sed -i -e "s/version=1.0.0/version=1.9.1/g" python/python-authlib/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-authlib/spkgbuild Upgraded\ from\ version\ 1.0.0\ to\ version\ 1.9.1
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/44/55/62c76d9b70da71ba1d0db623bc24c81ea0dbf9601fcb4cc0ce97001e0f1a/autoremove-torrents-1\\.5\\.3\\.tar\\.gz\|https://files.pythonhosted.org/packages/ab/7a/fe4c9ef1fad548b4696929e144597dd220c0e390ced0f71c2556cb2fe3c3/autoremove-torrents-1.5.4.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/autoremove-torrents\*/\| python/python-autoremove-torrents/spkgbuild
+sed -i -e "s/version=1.5.3/version=1.5.4/g" python/python-autoremove-torrents/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-autoremove-torrents/spkgbuild Upgraded\ from\ version\ 1.5.3\ to\ version\ 1.5.4
+sed -i -e "s/version=0.22.1/version=0.24.1/g" python/python-bidict/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-bidict/spkgbuild Upgraded\ from\ version\ 0.22.1\ to\ version\ 0.24.1
+sed -i -e s\|git+https://github\\.com/jquast/blessed\\.git#tag=\|https://files.pythonhosted.org/packages/8f/e3/53462b28d7a06f2fcf820863f951255f4e022e4988981b0a5ca339f7773b/blessed-1.52.0.tar.gz\| python/python-blessed/spkgbuild
+sed -i -e "s/version=1.18.1/version=1.52.0/g" python/python-blessed/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-blessed/spkgbuild Upgraded\ from\ version\ 1.18.1\ to\ version\ 1.52.0
+sed -i -e s\|python-btrfs::git://github\\.com/knorrie/python-btrfs\\.git#tag=v13\|python-btrfs::https://files.pythonhosted.org/packages/e7/3a/46984cee1e0d3543c360aa96af51fe8a19e3eba152f5984e0a17ce49f21b/btrfs-15.tar.gz\| python/python-btrfs/spkgbuild
+sed -i -e "s/version=13/version=15/g" python/python-btrfs/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-btrfs/spkgbuild Upgraded\ from\ version\ 13\ to\ version\ 15
+sed -i -e s\|git+https://github\\.com/pypa/build#tag=0\\.7\\.0\?signed\|https://files.pythonhosted.org/packages/bd/67/4898a44ea4f3f8e213b0954ec0aa0a16971d62a6212d6ea3931e97115b99/build-1.6.1.tar.gz\| python/python-build/spkgbuild
+sed -i -e "s/version=0.7.0/version=1.6.1/g" python/python-build/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-build/spkgbuild Upgraded\ from\ version\ 0.7.0\ to\ version\ 1.6.1
+sed -i -e "s/version=2022.12.07/version=2026.10.23/g" python/python-certifi/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-certifi/spkgbuild Upgraded\ from\ version\ 2022.12.07\ to\ version\ 2026.10.23
+sed -i -e s\|https://foss\\.heptapod\\.net/pypy/cffi/-/archive/v1\\.15\\.0/cffi-v1\\.15\\.0\\.tar\\.bz2\|https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/cffi\*/\| python/python-cffi/spkgbuild
+sed -i -e "s/version=1.15.0/version=2.1.1/g" python/python-cffi/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-cffi/spkgbuild Upgraded\ from\ version\ 1.15.0\ to\ version\ 2.1.1
+sed -i -e s\|git+https://github\\.com/DiffSK/configobj#commit=3e2f4cca81b60171e6b3e23619f6f4929a13322e\|https://files.pythonhosted.org/packages/f5/c4/c7f9e41bc2e5f8eeae4a08a01c91b2aea3dfab40a3e14b25e87e7db8d501/configobj-5.0.9.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/configobj\*/\| python/python-configobj/spkgbuild
+sed -i -e "s/version=5.0.6.r110.g3e2f4cc/version=5.0.9/g" python/python-configobj/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-configobj/spkgbuild Upgraded\ from\ version\ 5.0.6.r110.g3e2f4cc\ to\ version\ 5.0.9
+sed -i -e s\|git+https://github\\.com/beetbox/confuse\\.git#tag=\|https://files.pythonhosted.org/packages/41/89/d4451e170e9c02dd981cfd517b051658aa4d5a53060e57808bec63cf785b/confuse-2.3.0.tar.gz\| python/python-confuse/spkgbuild
+sed -i -e "s/version=1.5.0/version=2.3.0/g" python/python-confuse/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-confuse/spkgbuild Upgraded\ from\ version\ 1.5.0\ to\ version\ 2.3.0
+sed -i -e s\|https://github\\.com/cucumber/tag-expressions-python/archive/refs/tags/v\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/50/e0/c2741558040293465d615a4f2555e9180c54a559119b96ff0251dda5fa90/cucumber_tag_expressions-11.0.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/cucumber_tag_expressions\*/\| python/python-cucumber-tag-expressions/spkgbuild
+sed -i -e "s/version=4.1.0/version=11.0.1/g" python/python-cucumber-tag-expressions/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-cucumber-tag-expressions/spkgbuild Upgraded\ from\ version\ 4.1.0\ to\ version\ 11.0.1
+sed -i -e s\|git+https://github\\.com/linuxdeepin/dae\\.git#tag=1\\.0\\.2\|https://github.com/linuxdeepin/dae/archive/refs/tags/2014.2.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/dae\*/\| python/python-dae/spkgbuild
+sed -i -e "s/version=1.0.2/version=2014.2.1/g" python/python-dae/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dae/spkgbuild Upgraded\ from\ version\ 1.0.2\ to\ version\ 2014.2.1
+sed -i -e "s/version=2023.4.0/version=2026.8.0/g" python/python-dask/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dask/spkgbuild Upgraded\ from\ version\ 2023.4.0\ to\ version\ 2026.8.0
+sed -i -e s\|git+https://github\\.com/scrapinghub/dateparser\\.git#tag=\|https://files.pythonhosted.org/packages/c7/5d/bd21ba1519b6b1e222b29878301d2e1fb928e890dc7d085fa4222ac5671b/dateparser-1.4.3.tar.gz\| python/python-dateparser/spkgbuild
+sed -i -e "s/version=1.0.0/version=1.4.3/g" python/python-dateparser/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dateparser/spkgbuild Upgraded\ from\ version\ 1.0.0\ to\ version\ 1.4.3
+sed -i -e s\|git+https://github\\.com/dateutil/dateutil\\.git#commit=6b035517571e63b6a63a493740c5506ec1e5da44\?signed\|https://files.pythonhosted.org/packages/0e/df/f15f80383f152452d8985b36d95cb8751f901a3e0ff4cd27f7e118f168e2/python_dateutil-3.0.0.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/python_dateutil\*/\| python/python-dateutil/spkgbuild
+sed -i -e "s/version=2.8.2/version=3.0.0/g" python/python-dateutil/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dateutil/spkgbuild Upgraded\ from\ version\ 2.8.2\ to\ version\ 3.0.0
+sed -i -e s\|git+https://github\\.com/martinpitt/python-dbusmock#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|https://files.pythonhosted.org/packages/7b/56/fb685394b46925ea4bd0ff09ad2d772820734bdf96583468c5cf0f767ca0/python_dbusmock-0.38.1.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/python_dbusmock\*/\| python/python-dbusmock/spkgbuild
+sed -i -e "s/version=0.23.1/version=0.38.1/g" python/python-dbusmock/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dbusmock/spkgbuild Upgraded\ from\ version\ 0.23.1\ to\ version\ 0.38.1
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/d/dephell_setuptools/dephell_setuptools-0\\.2\\.1\\.tar\\.gz\|https://files.pythonhosted.org/packages/0a/ba/a2527db1853985b7f0bb90bd78f4ec87e51b5e542c318589ee5322680d45/dephell_setuptools-0.2.5.tar.gz\| python/python-dephell-setuptools/spkgbuild
+sed -i -e "s/version=0.2.4/version=0.2.5/g" python/python-dephell-setuptools/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dephell-setuptools/spkgbuild Upgraded\ from\ version\ 0.2.4\ to\ version\ 0.2.5
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/d/dephell_specifier/dephell_specifier-0\\.2\\.2\\.tar\\.gz\|https://files.pythonhosted.org/packages/78/e7/52ecc5a90cf6075dd1cf49bfd45d93731764d641e144e2dcd490d9cc3767/dephell-specifier-0.3.0.tar.gz\| python/python-dephell-specifier/spkgbuild
+sed -i -e "s/version=0.2.2/version=0.3.0/g" python/python-dephell-specifier/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dephell-specifier/spkgbuild Upgraded\ from\ version\ 0.2.2\ to\ version\ 0.3.0
+sed -i -e "s/version=0.3.6/version=0.4.4/g" python/python-distlib/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-distlib/spkgbuild Upgraded\ from\ version\ 0.3.6\ to\ version\ 0.4.4
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/59/45/c6fbb3a206df0b7dc3e6e8fae738e042c63d4ddf828c6e1ba10d7417a1d9/Django-3\\.2\\.7\\.tar\\.gz\|https://files.pythonhosted.org/packages/89/24/20d187a22ac821288b53c53b8f696019dcb0c7b4f973f052ade19392c74d/django-6.1.2.tar.gz\| python/python-django/spkgbuild
+sed -i -e "s/version=3.2.7/version=6.1.2/g" python/python-django/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-django/spkgbuild Upgraded\ from\ version\ 3.2.7\ to\ version\ 6.1.2
+sed -i -e s\|git+https://github\\.com/django-extensions/django-extensions\\.git#tag=\|https://files.pythonhosted.org/packages/6d/b3/ed0f54ed706ec0b54fd251cc0364a249c6cd6c6ec97f04dc34be5e929eac/django_extensions-4.1.tar.gz\| python/python-django-extensions/spkgbuild
+sed -i -e "s/version=3.1.3/version=4.1/g" python/python-django-extensions/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-django-extensions/spkgbuild Upgraded\ from\ version\ 3.1.3\ to\ version\ 4.1
+sed -i -e s\|git+https://github\\.com/gintas/django-picklefield\\.git#tag=4d5e3b2995df6597d45ad59d92ead38abc5c34af\|https://files.pythonhosted.org/packages/93/03/13114bccbd1ec8c026ac1ff33dae75ae6c6a5632e4769ee9cda283b9f57e/django_picklefield-3.4.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/django_picklefield\*/\| python/python-django-picklefield/spkgbuild
+sed -i -e "s/version=3.0.1/version=3.4.0/g" python/python-django-picklefield/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-django-picklefield/spkgbuild Upgraded\ from\ version\ 3.0.1\ to\ version\ 3.4.0
+sed -i -e "s/version=0.9.23/version=0.9.26/g" python/python-dnslib/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dnslib/spkgbuild Upgraded\ from\ version\ 0.9.23\ to\ version\ 0.9.26
+sed -i -e s\|https://pypi\\.io/packages/source/d/dogpile\\.cache/dogpile\\.cache-1\\.1\\.4\\.tar\\.gz\|https://files.pythonhosted.org/packages/e7/c8/301ff89746e76745b937606df4753c032787c59ecb37dd4d4250bddc8929/dogpile_cache-1.5.0.tar.gz\| python/python-dogpile.cache/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.5.0/g" python/python-dogpile.cache/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-dogpile.cache/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.5.0
+sed -i -e "s/version=1.9.6/version=1.9.6.1/g" python/python-doublex/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-doublex/spkgbuild Upgraded\ from\ version\ 1.9.6\ to\ version\ 1.9.6.1
+sed -i -e s\|http://www\\.alcyone\\.com/software/empy/empy-3\\.3\\.4\\.tar\\.gz\|https://files.pythonhosted.org/packages/d1/82/b8b39f837baa80b1bf659beb64c1c8af66f2aa7437169d72a4e1fb0ed3df/empy-4.2.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/empy\*/\| python/python-empy/spkgbuild
+sed -i -e "s/version=3.3.4/version=4.2.1/g" python/python-empy/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-empy/spkgbuild Upgraded\ from\ version\ 3.3.4\ to\ version\ 4.2.1
+sed -i -e s\|https://foss\\.heptapod\\.net/openpyxl/et_xmlfile/-/archive/1\\.1/et_xmlfile-1\\.1\\.tar\\.gz\|https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/et_xmlfile\*/\| python/python-et-xmlfile/spkgbuild
+sed -i -e "s/version=1.1.0/version=2.0.0/g" python/python-et-xmlfile/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-et-xmlfile/spkgbuild Upgraded\ from\ version\ 1.1.0\ to\ version\ 2.0.0
+sed -i -e "s/version=3.1.1/version=4.4.0/g" python/python-falcon/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-falcon/spkgbuild Upgraded\ from\ version\ 3.1.1\ to\ version\ 4.4.0
+sed -i -e s\|git+https://github\\.com/jelmer/python-fastimport\\.git#tag=\|https://files.pythonhosted.org/packages/ce/77/0f2009a52246b9e3fe5726aef01f7c8b760e03e5ef83b6fd16134da6f7f5/fastimport-0.9.16.tar.gz\| python/python-fastimport/spkgbuild
+sed -i -e "s/version=0.9.14/version=0.9.16/g" python/python-fastimport/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-fastimport/spkgbuild Upgraded\ from\ version\ 0.9.14\ to\ version\ 0.9.16
+sed -i -e s\|git+https://github\\.com/Yubico/python-fido2\\.git#tag=0\\.9\\.1\?signed\|https://files.pythonhosted.org/packages/ba/ea/6f08c354b7aeb8019249d46a86c2153f8218499cced4d21bf16b6d49fc16/fido2-2.2.1.tar.gz\| python/python-fido2/spkgbuild
+sed -i -e "s/version=0.9.1/version=2.2.1/g" python/python-fido2/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-fido2/spkgbuild Upgraded\ from\ version\ 0.9.1\ to\ version\ 2.2.1
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/\\\$\{name:7:1\}/\\\$\{name#python-\}/\\\$\{name#python-\}-\\\$\{version\}\\.tar\\.gz\|https://files.pythonhosted.org/packages/c2/94/85870fc02dfe4ab0885c440e7e41f6a986b10e43eca6717e90f8ce1215cc/flake8-7.4.1.tar.gz\| python/python-flake8/spkgbuild
+sed -i -e "s/version=3.9.2/version=7.4.1/g" python/python-flake8/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-flake8/spkgbuild Upgraded\ from\ version\ 3.9.2\ to\ version\ 7.4.1
+sed -i -e s\|https://pypi\\.python\\.org/packages/source/f/flake8-debugger/flake8-debugger-4\\.0\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/1f/1e/f9bdb98f3df5dceaa2287a8fb5801a22681dbd677a8759704083357e27c4/flake8-debugger-4.1.2.tar.gz\| python/python-flake8-debugger/spkgbuild
+sed -i -e "s/version=4.0.0/version=4.1.2/g" python/python-flake8-debugger/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-flake8-debugger/spkgbuild Upgraded\ from\ version\ 4.0.0\ to\ version\ 4.1.2
+sed -i -e s\|git+https://github\\.com/marshmallow-code/flask-marshmallow\\.git#tag=\|https://files.pythonhosted.org/packages/65/ca/22f00dffdd6709332247960e0c1223995bc22ff7537834bffc44ab9ab90b/flask_marshmallow-1.5.0.tar.gz\| python/python-flask-marshmallow/spkgbuild
+sed -i -e "s/version=0.14.0/version=1.5.0/g" python/python-flask-marshmallow/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-flask-marshmallow/spkgbuild Upgraded\ from\ version\ 0.14.0\ to\ version\ 1.5.0
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/\\\$\{name:7:1\}/\\\$\{name#python-\}/\\\$\{name#python-\}-\\\$\{version\}\\.tar\\.gz\|https://files.pythonhosted.org/packages/7a/c5/01a4b160bc9ac9b0f8621dd6f90e964596e60a369ff2d076ebb4ce52c402/gdspy-1.6.13.zip\| python/python-gdspy/spkgbuild
+sed -i -e "s/version=1.6.8/version=1.6.13/g" python/python-gdspy/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-gdspy/spkgbuild Upgraded\ from\ version\ 1.6.8\ to\ version\ 1.6.13
+sed -i -e s\|git+https://github\\.com/gitpython-developers/gitpython\\.git#tag=3\\.1\\.24\?signed\|https://files.pythonhosted.org/packages/c0/ff/fee293f1ec3e1b64db6eb270e00964f29c086d769201474cedb8d1608930/gitpython-3.2.1.tar.gz\| python/python-gitpython/spkgbuild
+sed -i -e "s/version=3.1.24/version=3.2.1/g" python/python-gitpython/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-gitpython/spkgbuild Upgraded\ from\ version\ 3.1.24\ to\ version\ 3.2.1
+sed -i -e s\|git+https://github\\.com/FlorianRhiem/pyGLFW#commit=0555e765cd31902899afae3479e31269fdf0cf9a\|https://files.pythonhosted.org/packages/b2/89/fa9cb2611314b84ffa68d76f154e1e508971d6e402b14bd2152684e35e5d/glfw-2.11.0.tar.gz\| python/python-glfw/spkgbuild
+sed -i -e "s/version=2.2.0/version=2.11.0/g" python/python-glfw/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-glfw/spkgbuild Upgraded\ from\ version\ 2.2.0\ to\ version\ 2.11.0
+sed -i -e s\|https://download\\.gnome\\.org/sources/pygobject/3\\.38/pygobject-\\\$version\\.tar\\.xz\|https://download.gnome.org/sources/pygobject/3.58/pygobject-3.58.1.tar.gz\| python/python-gobject3/spkgbuild
+sed -i -e "s/version=3.52.3/version=3.58.1/g" python/python-gobject3/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-gobject3/spkgbuild Upgraded\ from\ version\ 3.52.3\ to\ version\ 3.58.1
+sed -i -e s\|git+https://github\\.com/graphql-python/graphene\\.git#tag=\|https://files.pythonhosted.org/packages/cc/f6/bf62ff950c317ed03e77f3f6ddd7e34aaa98fe89d79ebd660c55343d8054/graphene-3.4.3.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/graphene\*/\| python/python-graphene/spkgbuild
+sed -i -e "s/version=3.0.0b7/version=3.4.3/g" python/python-graphene/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-graphene/spkgbuild Upgraded\ from\ version\ 3.0.0b7\ to\ version\ 3.4.3
+sed -i -e s\|git+https://github\\.com/graphql-python/graphql-core\\.git#tag=\|https://files.pythonhosted.org/packages/a4/91/223fbace7c8648690d7fb77855e29bd248c9ed1e0833ed3002ab29bc1441/graphql_core-3.3.1.tar.gz\| python/python-graphql-core/spkgbuild
+sed -i -e "s/version=3.1.6/version=3.3.1/g" python/python-graphql-core/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-graphql-core/spkgbuild Upgraded\ from\ version\ 3.1.6\ to\ version\ 3.3.1
+sed -i -e s\|git+https://github\\.com/graphql-python/graphql-relay-py\\.git#tag=\|https://files.pythonhosted.org/packages/d1/13/98fbf8d67552f102488ffc16c6f559ce71ea15f6294728d33928ab5ff14d/graphql-relay-3.2.0.tar.gz\| python/python-graphql-relay/spkgbuild
+sed -i -e "s/version=3.1.0/version=3.2.0/g" python/python-graphql-relay/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-graphql-relay/spkgbuild Upgraded\ from\ version\ 3.1.0\ to\ version\ 3.2.0
+sed -i -e s\|https://github\\.com/stratis-storage/hs-dbus-signature/archive/refs/tags/v\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/fe/53/b510c437bbf4998fb816ebabec1b9b5c6130d344d77fab486b6d4188fc75/hs_dbus_signature-0.8.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/hs_dbus_signature\*/\| python/python-hs-dbus-signature/spkgbuild
+sed -i -e "s/version=0.7/version=0.8.1/g" python/python-hs-dbus-signature/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-hs-dbus-signature/spkgbuild Upgraded\ from\ version\ 0.7\ to\ version\ 0.8.1
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/h/hstspreload/hstspreload-2021\\.11\\.1\\.tar\\.gz\|https://files.pythonhosted.org/packages/6e/8b/ab15856d5074acc26782994ee35b27a822738d3c8d84995a2ab0a085931a/hstspreload-2025.1.1.tar.gz\| python/python-hstspreload/spkgbuild
+sed -i -e "s/version=2021.11.1/version=2025.1.1/g" python/python-hstspreload/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-hstspreload/spkgbuild Upgraded\ from\ version\ 2021.11.1\ to\ version\ 2025.1.1
+sed -i -e s\|git+https://github\\.com/MagicStack/httptools#tag=v0\\.3\\.0\|https://files.pythonhosted.org/packages/3a/ec/deed52912ab7ca6c0b12859330c571c60c61d7267b341b28951fcbf13694/httptools-0.9.0.tar.gz\| python/python-httptools/spkgbuild
+sed -i -e "s/version=0.3.0/version=0.9.0/g" python/python-httptools/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-httptools/spkgbuild Upgraded\ from\ version\ 0.3.0\ to\ version\ 0.9.0
+sed -i -e s\|https://github\\.com/timothycrosley/hypothesis-auto/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/14/9d/a491aaf55e61b4fee99508d8d2ede409c760ced3e0156d78bcbd34a8e4df/hypothesis_auto-1.1.5.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/hypothesis_auto\*/\| python/python-hypothesis-auto/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.1.5/g" python/python-hypothesis-auto/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-hypothesis-auto/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.1.5
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/I/IMDbPY/IMDbPY-2021\\.4\\.18\\.tar\\.gz\|https://files.pythonhosted.org/packages/30/57/d72563c77f63efe08da5645ab92d5f1dd382f6d3460e0b0c4c4ee7847f1c/IMDbPY-2022.7.9.tar.gz\| python/python-imdbpy/spkgbuild
+sed -i -e "s/version=2021.4.18/version=2022.7.9/g" python/python-imdbpy/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-imdbpy/spkgbuild Upgraded\ from\ version\ 2021.4.18\ to\ version\ 2022.7.9
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/59/d7/1f875a69b9b2ba2158a860f674725df7a2917c112a47223da92b756c3214/iso3166-2\\.0\\.1\\.tar\\.gz\|https://files.pythonhosted.org/packages/47/e7/4997ca315143cf3dc54ec116070c108b621677fa80083a499b50643237c4/iso3166-3.0.0.tar.gz\| python/python-iso3166/spkgbuild
+sed -i -e "s/version=2.0.1/version=3.0.0/g" python/python-iso3166/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-iso3166/spkgbuild Upgraded\ from\ version\ 2.0.1\ to\ version\ 3.0.0
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/b1/80/fb8c13a4cd38eb5021dc3741a9e588e4d1de88d895c1910c6fc8a08b7a70/isodate-0\\.6\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/54/4d/e940025e2ce31a8ce1202635910747e5a87cc3a6a6bb2d00973375014749/isodate-0.7.2.tar.gz\| python/python-isodate/spkgbuild
+sed -i -e "s/version=0.6.0/version=0.7.2/g" python/python-isodate/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-isodate/spkgbuild Upgraded\ from\ version\ 0.6.0\ to\ version\ 0.7.2
+sed -i -e s\|git+https://github\\.com/davidhalter/jedi#commit=\|https://files.pythonhosted.org/packages/a3/a4/4692ecd7fa700ac1066b1c1f6cadef60aa2e01e5e364710235137d823e0a/jedi-0.20.1.tar.gz\| python/python-jedi/spkgbuild
+sed -i -e "s/version=0.18.0/version=0.20.1/g" python/python-jedi/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-jedi/spkgbuild Upgraded\ from\ version\ 0.18.0\ to\ version\ 0.20.1
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/bb/1e/9d5a177fd1e4f74091743777518c432ad290c4630aac557b61087dffd6df/jinja2_pluralize-0\\.3\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/bb/1e/9d5a177fd1e4f74091743777518c432ad290c4630aac557b61087dffd6df/jinja2_pluralize-0.3.0.tar.gz\| python/python-jinja2_pluralize/spkgbuild
+sed -i -e "s/version=0.2.1/version=0.3.0/g" python/python-jinja2_pluralize/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-jinja2_pluralize/spkgbuild Upgraded\ from\ version\ 0.2.1\ to\ version\ 0.3.0
+sed -i -e s\|https://github\\.com/PiotrDabkowski/Js2Py/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/cb/a5/3d8b3e4511cc21479f78f359b1b21f1fb7c640988765ffd09e55c6605e3b/Js2Py-0.74.tar.gz\| python/python-js2py/spkgbuild
+sed -i -e "s/version=0.71/version=0.74/g" python/python-js2py/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-js2py/spkgbuild Upgraded\ from\ version\ 0.71\ to\ version\ 0.74
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/j/jupyter_client/jupyter_client-7\\.1\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/c5/2a/906772148a06e48885039e0250c340b770a55bbf37b08d6ee0449df369c3/jupyter_client-8.10.0.tar.gz\| python/python-jupyter_client/spkgbuild
+sed -i -e "s/version=7.1.0/version=8.10.0/g" python/python-jupyter_client/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-jupyter_client/spkgbuild Upgraded\ from\ version\ 7.1.0\ to\ version\ 8.10.0
+sed -i -e s\|https://pypi\\.io/packages/source/j/jupyter_packaging/jupyter_packaging-0\\.11\\.1\\.tar\\.gz\|https://files.pythonhosted.org/packages/25/c5/b0e154e6403c6790bb1e66acddf9787296a8196f5b14f4bb9e4c92b6734e/jupyter_packaging-0.12.3.tar.gz\| python/python-jupyter_packaging/spkgbuild
+sed -i -e "s/version=0.11.1/version=0.12.3/g" python/python-jupyter_packaging/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-jupyter_packaging/spkgbuild Upgraded\ from\ version\ 0.11.1\ to\ version\ 0.12.3
+sed -i -e s\|git+https://github\\.com/karellen/karellen-pyb-plugin\\.git#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|https://files.pythonhosted.org/packages/79/51/f76bb143fa24694fea73f0992ae3e703c4f41421f0fa12bec099bc4bdb5f/karellen-pyb-plugin-0.0.4.tar.gz\| python/python-karellen-pyb-plugin/spkgbuild
+sed -i -e "s/version=0.0.2/version=0.0.4/g" python/python-karellen-pyb-plugin/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-karellen-pyb-plugin/spkgbuild Upgraded\ from\ version\ 0.0.2\ to\ version\ 0.0.4
+sed -i -e s\|git+https://github\\.com/jaraco/keyring#tag=v23\\.0\\.1\|https://files.pythonhosted.org/packages/43/4b/674af6ef2f97d56f0ab5153bf0bfa28ccb6c3ed4d1babf4305449668807b/keyring-25.7.0.tar.gz\| python/python-keyring/spkgbuild
+sed -i -e "s/version=23.2.1/version=25.7.0/g" python/python-keyring/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-keyring/spkgbuild Upgraded\ from\ version\ 23.2.1\ to\ version\ 25.7.0
+sed -i -e "s/version=0.21.0/version=0.27.5/g" python/python-levenshtein/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-levenshtein/spkgbuild Upgraded\ from\ version\ 0.21.0\ to\ version\ 0.27.5
+sed -i -e s\|https://github\\.com/Ultimaker/libCharon/archive/refs/tags/d\\\$version\\.tar\\.gz\|https://github.com/Ultimaker/libCharon/archive/refs/tags/v17.0.0-0.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/libCharon\*/\| python/python-libcharon/spkgbuild
+sed -i -e "s/version=5.0.0/version=17.0.0/g" python/python-libcharon/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-libcharon/spkgbuild Upgraded\ from\ version\ 5.0.0\ to\ version\ 17.0.0
+sed -i -e s\|https://gitlab\\.freedesktop\\.org/libevdev/python-libevdev/-/archive/0\\.9/python-libevdev-0\\.9\\.tar\\.gz\|https://gitlab.freedesktop.org/libevdev/python-libevdev/-/archive/0.13.1/python-libevdev-0.13.1.tar.gz\| python/python-libevdev/spkgbuild
+sed -i -e "s/version=0.9/version=0.13.1/g" python/python-libevdev/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-libevdev/spkgbuild Upgraded\ from\ version\ 0.9\ to\ version\ 0.13.1
+sed -i -e s\|python-m2crypto-0\\.38\\.0\\.tar\\.gz::https://gitlab\\.com/m2crypto/m2crypto/-/archive/0\\.38\\.0/m2crypto-0\\.38\\.0\\.tar\\.gz\|python-m2crypto-\$\{version\}.tar.gz::https://gitlab.com/m2crypto/m2crypto/-/archive/0.51.0/m2crypto-0.51.0.tar.gz\| python/python-m2crypto/spkgbuild
+sed -i -e "s/version=0.38.0/version=0.51.0/g" python/python-m2crypto/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-m2crypto/spkgbuild Upgraded\ from\ version\ 0.38.0\ to\ version\ 0.51.0
+sed -i -e s\|ftp://ftp\\.astron\\.com/pub/file/file-5\\.40\\.tar\\.gz\|https://astron.com/pub/file/file-5.48.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/file\*/\| python/python-magic/spkgbuild
+sed -i -e "s/version=5.40/version=5.48/g" python/python-magic/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-magic/spkgbuild Upgraded\ from\ version\ 5.40\ to\ version\ 5.48
+sed -i -e s\|git+https://github\\.com/marshmallow-code/marshmallow-sqlalchemy\\.git#tag=\|https://files.pythonhosted.org/packages/a1/6d/097b9792559b6eef8c6c130d659be0ed8c9fe65b14ad4c425f6cfbc6e90c/marshmallow_sqlalchemy-1.6.0.tar.gz\| python/python-marshmallow-sqlalchemy/spkgbuild
+sed -i -e "s/version=0.26.1/version=1.6.0/g" python/python-marshmallow-sqlalchemy/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-marshmallow-sqlalchemy/spkgbuild Upgraded\ from\ version\ 0.26.1\ to\ version\ 1.6.0
+sed -i -e s\|git+https://github\\.com/matplotlib/matplotlib\\.git#tag=\?signed\|https://files.pythonhosted.org/packages/e7/c8/9aa712a0afb882649424dd8de8ad9aa6235e796e84c6052e8f6dc1598d0d/matplotlib-3.11.2.tar.gz\| python/python-matplotlib/spkgbuild
+sed -i -e "s/version=3.5.0/version=3.11.2/g" python/python-matplotlib/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-matplotlib/spkgbuild Upgraded\ from\ version\ 3.5.0\ to\ version\ 3.11.2
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/93/9a/23c4894da5aeb316903677c71014575c486616026b85e2d0b408f84d8540/matrix_client-0\\.4\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/93/9a/23c4894da5aeb316903677c71014575c486616026b85e2d0b408f84d8540/matrix_client-0.4.0.tar.gz\| python/python-matrix_client/spkgbuild
+sed -i -e "s/version=0.3.2/version=0.4.0/g" python/python-matrix_client/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-matrix_client/spkgbuild Upgraded\ from\ version\ 0.3.2\ to\ version\ 0.4.0
+sed -i -e s\|git+https://github\\.com/poljar/matrix-nio\\.git\?signed#tag=\|https://files.pythonhosted.org/packages/a5/74/46fe787ef96993903bfa40f806f28f0f16eb4b482c69cb70a1ff8b774223/matrix_nio-0.26.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/matrix_nio\*/\| python/python-matrix-nio/spkgbuild
+sed -i -e "s/version=0.18.7/version=0.26.0/g" python/python-matrix-nio/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-matrix-nio/spkgbuild Upgraded\ from\ version\ 0.18.7\ to\ version\ 0.26.0
+sed -i -e s\|git+https://github\\.com/beetbox/mediafile\\.git#tag=\|https://files.pythonhosted.org/packages/e3/02/460b31c20833036d8f171b991ff2f46c7f1dc85c6219e8bf7efca4a9aa5a/mediafile-0.17.0.tar.gz\| python/python-mediafile/spkgbuild
+sed -i -e "s/version=0.8.0/version=0.17.0/g" python/python-mediafile/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-mediafile/spkgbuild Upgraded\ from\ version\ 0.8.0\ to\ version\ 0.17.0
+sed -i -e s\|git://github\\.com/linsomniac/python-memcached#tag=1\\.59\|https://files.pythonhosted.org/packages/e8/3c/204e5c6087efc85b52a68edce8678d44eb28718f5f145e036c277beb467c/python-memcached-1.62.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/python-memcached\*/\| python/python-memcached/spkgbuild
+sed -i -e "s/version=1.59/version=1.62/g" python/python-memcached/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-memcached/spkgbuild Upgraded\ from\ version\ 1.59\ to\ version\ 1.62
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/m/meson_python/meson_python-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/b4/40/343ae23722d5d66a7b94b752d1b194202640995296379333b274b1860871/meson_python-0.22.1.tar.gz\| python/python-meson/spkgbuild
+sed -i -e "s/version=0.17.1/version=0.22.1/g" python/python-meson/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-meson/spkgbuild Upgraded\ from\ version\ 0.17.1\ to\ version\ 0.22.1
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/p/pyproject_metadata/pyproject_metadata-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/4f/76/1cae539918a7b1746d624c2f01560b793c22cd8c081157505bb9bbf0e34d/pyproject_metadata-0.12.1.tar.gz\| python/python-metadata/spkgbuild
+sed -i -e "s/version=0.9.0/version=0.12.1/g" python/python-metadata/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-metadata/spkgbuild Upgraded\ from\ version\ 0.9.0\ to\ version\ 0.12.1
+sed -i -e s\|git+https://github\\.com/dbtsai/python-mimeparse#tag=1\\.6\\.0\|https://files.pythonhosted.org/packages/cd/85/c40f2e0b2128905f6c34894be01803c114f2b2efab0e8b4c3dca5e56b999/python_mimeparse-2.0.0.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/python_mimeparse\*/\| python/python-mimeparse/spkgbuild
+sed -i -e "s/version=1.6.0/version=2.0.0/g" python/python-mimeparse/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-mimeparse/spkgbuild Upgraded\ from\ version\ 1.6.0\ to\ version\ 2.0.0
+sed -i -e s\|http://thp\\.io/2010/minidb/minidb-2\\.0\\.5\\.tar\\.gz\|https://files.pythonhosted.org/packages/aa/ea/5b803a05d523733735f8581cc8a51306cbea1a65ee4a5067abd98a969c4b/minidb-2.0.8.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/minidb\*/\| python/python-minidb/spkgbuild
+sed -i -e "s/version=2.0.5/version=2.0.8/g" python/python-minidb/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-minidb/spkgbuild Upgraded\ from\ version\ 2.0.5\ to\ version\ 2.0.8
+sed -i -e s\|git+https://github\\.com/Mic92/python-mpd2\\.git#tag=\|https://files.pythonhosted.org/packages/53/be/e77206eb35eb37ccd3506fba237e1431431d04c482707730ce2a6802e95c/python-mpd2-3.1.1.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/python-mpd2\*/\| python/python-mpd2/spkgbuild
+sed -i -e "s/version=3.0.4/version=3.1.1/g" python/python-mpd2/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-mpd2/spkgbuild Upgraded\ from\ version\ 3.0.4\ to\ version\ 3.1.1
+sed -i -e s\|git+https://github\\.com/bmc/munkres\\.git#tag=\|https://files.pythonhosted.org/packages/19/e4/c5cc64941985d8f9fc0291ebf88329709f4df44f745e8e8c999c6e19e03f/munkres-3.0.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/munkres\*/\| python/python-munkres/spkgbuild
+sed -i -e "s/version=1.1.4/version=3.0.0/g" python/python-munkres/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-munkres/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 3.0.0
+sed -i -e s\|http://gpodder\\.org/mygpoclient/mygpoclient-1\\.8\\.tar\\.gz\|https://files.pythonhosted.org/packages/c8/6c/7ffecb14671ba53445f402e6b2bf98eae92ceb7a3df0507de8df0fed691d/mygpoclient-1.10.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/mygpoclient\*/\| python/python-mygpoclient/spkgbuild
+sed -i -e "s/version=1.8/version=1.10/g" python/python-mygpoclient/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-mygpoclient/spkgbuild Upgraded\ from\ version\ 1.8\ to\ version\ 1.10
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/n/nest_asyncio/nest_asyncio-1\\.5\\.4\\.tar\\.gz\|https://files.pythonhosted.org/packages/83/f8/51569ac65d696c8ecbee95938f89d4abf00f47d58d48f6fbabfe8f0baefe/nest_asyncio-1.6.0.tar.gz\| python/python-nest_asyncio/spkgbuild
+sed -i -e "s/version=1.5.4/version=1.6.0/g" python/python-nest_asyncio/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-nest_asyncio/spkgbuild Upgraded\ from\ version\ 1.5.4\ to\ version\ 1.6.0
+sed -i -e s\|git+https://github\\.com/nmigen/nmigen-boards#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|https://github.com/nmigen/nmigen-boards/archive/f270d210e36b0787d62db77176c7b0e8032178d3.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/amaranth-boards\*/\| python/python-nmigen-boards/spkgbuild
+sed -i -e "s/version=r193.cb18fc5/version=r193.cb18fc5.git20260813213950/g" python/python-nmigen-boards/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-nmigen-boards/spkgbuild Upgraded\ from\ version\ r193.cb18fc5\ to\ version\ r193.cb18fc5.git20260813213950
+sed -i -e s\|git+https://github\\.com/tpaviot/pythonocc-core#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|https://github.com/tpaviot/pythonocc-core/archive/refs/tags/8.0.1.2.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/pythonocc-core\*/\| python/python-occ-core/spkgbuild
+sed -i -e "s/version=7.4.1.r16.gfcf4e6ec/version=8.0.1.2/g" python/python-occ-core/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-occ-core/spkgbuild Upgraded\ from\ version\ 7.4.1.r16.gfcf4e6ec\ to\ version\ 8.0.1.2
+sed -i -e s\|http://downloads\\.sourceforge\\.net/openbabel/openbabel-2\\.3\\.2\\.tar\\.gz\|https://files.pythonhosted.org/packages/03/ee/946ca33e35e47fc634d9f62f6a74505318a651de720495ae42c6307551e7/openbabel-3.2.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/openbabel\*/\| python/python-openbabel/spkgbuild
+sed -i -e "s/version=3.1.1.1/version=3.2.1/g" python/python-openbabel/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-openbabel/spkgbuild Upgraded\ from\ version\ 3.1.1.1\ to\ version\ 3.2.1
+sed -i -e s\|https://foss\\.heptapod\\.net/openpyxl/openpyxl/-/archive/3\\.0\\.9/openpyxl-3\\.0\\.9\\.tar\\.bz2\|https://files.pythonhosted.org/packages/3d/f9/88d94a75de065ea32619465d2f77b29a0469500e99012523b91cc4141cd1/openpyxl-3.1.5.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/openpyxl\*/\| python/python-openpyxl/spkgbuild
+sed -i -e "s/version=3.0.9/version=3.1.5/g" python/python-openpyxl/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-openpyxl/spkgbuild Upgraded\ from\ version\ 3.0.9\ to\ version\ 3.1.5
+sed -i -e s\|git+https://github\\.com/python-trio/outcome\\.git#tag=\|https://files.pythonhosted.org/packages/98/df/77698abfac98571e65ffeb0c1fba8ffd692ab8458d617a0eed7d9a8d38f2/outcome-1.3.0.post0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/outcome\*/\| python/python-outcome/spkgbuild
+sed -i -e "s/version=1.1.0/version=1.3.0.post0/g" python/python-outcome/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-outcome/spkgbuild Upgraded\ from\ version\ 1.1.0\ to\ version\ 1.3.0.post0
+sed -i -e s\|https://resources\\.ovirt\\.org/pub/ovirt-4\\.4/src/python-ovirt-engine-sdk4/ovirt-engine-sdk-python-4\\.4\\.14\\.tar\\.gz\|https://resources.ovirt.org/pub/ovirt-4.4/src/python-ovirt-engine-sdk4/ovirt-engine-sdk-python-4.4.15.tar.gz\| python/python-ovirt-engine-sdk/spkgbuild
+sed -i -e "s/version=4.4.14/version=4.4.15/g" python/python-ovirt-engine-sdk/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-ovirt-engine-sdk/spkgbuild Upgraded\ from\ version\ 4.4.14\ to\ version\ 4.4.15
+sed -i -e s\|https://github\\.com/scrapy/parsel/archive/refs/tags/v\\\$version\\.tar\\.gz\|https://github.com/scrapy/parsel/archive/refs/tags/v1.12.1.tar.gz\| python/python-parsel/spkgbuild
+sed -i -e "s/version=1.10.0/version=1.12.1/g" python/python-parsel/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-parsel/spkgbuild Upgraded\ from\ version\ 1.10.0\ to\ version\ 1.12.1
+sed -i -e s\|git+https://github\\.com/breezy-team/patiencediff\\.git#tag=\|https://files.pythonhosted.org/packages/bd/ca/7d530d7bf5e3094f86a67b9698045ccb86fc122f2ed024472ee9f6dc55c6/patiencediff-1.0.2.tar.gz\| python/python-patiencediff/spkgbuild
+sed -i -e "s/version=0.2.2/version=1.0.2/g" python/python-patiencediff/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-patiencediff/spkgbuild Upgraded\ from\ version\ 0.2.2\ to\ version\ 1.0.2
+sed -i -e s\|https://github\\.com/pdfminer/pdfminer\\.six/archive/refs/tags/\\\$version\\.tar\\.gz\|https://github.com/pdfminer/pdfminer.six/archive/refs/tags/20260107.tar.gz\| python/python-pdfminer/spkgbuild
+sed -i -e "s/version=20201018/version=20260107/g" python/python-pdfminer/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pdfminer/spkgbuild Upgraded\ from\ version\ 20201018\ to\ version\ 20260107
+sed -i -e s\|https://pypi\\.io/packages/source/p/pep517/pep517-0\\.12\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/44/d7/8f5d2be1a5fed3b0b5ccd3e800153c0f4dd84c2a688d25bce0bb0cb1f87f/pep517-0.13.1.tar.gz\| python/python-pep517/spkgbuild
+sed -i -e "s/version=0.12.0/version=0.13.1/g" python/python-pep517/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pep517/spkgbuild Upgraded\ from\ version\ 0.12.0\ to\ version\ 0.13.1
+sed -i -e s\|git+https://github\\.com/pexpect/pexpect#commit=5eed1a31a2853a09b7367c59fbd1a4a0b53341df\|https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz\| python/python-pexpect/spkgbuild
+sed -i -e "s/version=4.8.0/version=4.9.0/g" python/python-pexpect/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pexpect/spkgbuild Upgraded\ from\ version\ 4.8.0\ to\ version\ 4.9.0
+sed -i -e "s/version=7.2.0/version=10.17.0/g" python/python-pikepdf/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pikepdf/spkgbuild Upgraded\ from\ version\ 7.2.0\ to\ version\ 10.17.0
+sed -i -e s\|git+https://github\\.com/coin3d/pivy#commit=55e659de7ea346d3caf176d7fe254224d36e4791\|https://github.com/coin3d/pivy/archive/refs/tags/0.6.11.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/pivy\*/\| python/python-pivy/spkgbuild
+sed -i -e "s/version=0.6.6/version=0.6.11/g" python/python-pivy/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pivy/spkgbuild Upgraded\ from\ version\ 0.6.6\ to\ version\ 0.6.11
+sed -i -e s\|https://pypi\\.io/packages/source/p/plyvel/plyvel-1\\.3\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/4b/b0/23f0cc21c943355fc5d49f1933e97812269d7a865daef5b9758b62902d46/plyvel-1.5.1.tar.gz\| python/python-plyvel/spkgbuild
+sed -i -e "s/version=1.3.0/version=1.5.1/g" python/python-plyvel/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-plyvel/spkgbuild Upgraded\ from\ version\ 1.3.0\ to\ version\ 1.5.1
+sed -i -e "s/version=2.9.6/version=2.9.13/g" python/python-psycopg2/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-psycopg2/spkgbuild Upgraded\ from\ version\ 2.9.6\ to\ version\ 2.9.13
+sed -i -e s\|git+https://github\\.com/beetbox/pyacoustid\\.git#tag=\|https://files.pythonhosted.org/packages/77/95/fb31647f36c33097d3fbfcb1f145977b52d841382f5e5b1f72be1f76b659/pyacoustid-1.3.1.tar.gz\| python/python-pyacoustid/spkgbuild
+sed -i -e "s/version=1.2.2/version=1.3.1/g" python/python-pyacoustid/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyacoustid/spkgbuild Upgraded\ from\ version\ 1.2.2\ to\ version\ 1.3.1
+sed -i -e s\|git+https://github\\.com/jmcgeheeiv/pyfakefs\\.git#tag=\|https://files.pythonhosted.org/packages/98/0d/c80012ee6e885c293ad63c5f5b049d3ef3fd2b32bbe6fa8739145f392ec6/pyfakefs-6.2.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/pyfakefs\*/\| python/python-pyfakefs/spkgbuild
+sed -i -e "s/version=4.5.1/version=6.2.0/g" python/python-pyfakefs/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyfakefs/spkgbuild Upgraded\ from\ version\ 4.5.1\ to\ version\ 6.2.0
+sed -i -e s\|https://launchpad\\.net/pygpgme/trunk/0\\.3/+download/pygpgme-0\\.3\\.tar\\.gz\|https://files.pythonhosted.org/packages/a2/51/c2f5b4dfaff04fec88def7d9710ca3d5f05467cfb486377484196c3634cd/pygpgme-0.6.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/pygpgme\*/\| python/python-pygpgme/spkgbuild
+sed -i -e "s/version=0.3/version=0.6/g" python/python-pygpgme/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pygpgme/spkgbuild Upgraded\ from\ version\ 0.3\ to\ version\ 0.6
+sed -i -e s\|git+https://github\\.com/pylast/pylast\\.git#tag=\|https://files.pythonhosted.org/packages/a6/43/eea015416b641eaba05f5c8a11cecc4a13741ed33915079b24b124630a9a/pylast-7.2.0.tar.gz\| python/python-pylast/spkgbuild
+sed -i -e "s/version=4.2.1/version=7.2.0/g" python/python-pylast/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pylast/spkgbuild Upgraded\ from\ version\ 4.2.1\ to\ version\ 7.2.0
+sed -i -e s\|python-pymad::git+https://github\\.com/jaqx0r/pymad\\.git#tag=version/0\\.10\|python-pymad::https://files.pythonhosted.org/packages/69/b2/72f62662392a9704bd4e427291cb4d8f0421e60831ac38bd860085cb123d/pymad-0.11.3.tar.gz\| python/python-pymad/spkgbuild
+sed -i -e "s/version=0.10/version=0.11.3/g" python/python-pymad/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pymad/spkgbuild Upgraded\ from\ version\ 0.10\ to\ version\ 0.11.3
+sed -i -e "s/version=4.12.0/version=5.3.0/g" python/python-pynest2d/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pynest2d/spkgbuild Upgraded\ from\ version\ 4.12.0\ to\ version\ 5.3.0
+sed -i -e s\|git+https://github\\.com/nitrokey/pynitrokey#tag=v0\\.4\\.6\\.nitrokey\?signed\|https://files.pythonhosted.org/packages/fc/c9/c1663840d56dfabba7c984d2be8df406b00b9b70858669bad8691fccbabd/pynitrokey-0.14.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/pynitrokey\*/\| python/python-pynitrokey/spkgbuild
+sed -i -e "s/version=0.4.6/version=0.14.1/g" python/python-pynitrokey/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pynitrokey/spkgbuild Upgraded\ from\ version\ 0.4.6\ to\ version\ 0.14.1
+sed -i -e s\|git+https://github\\.com/inducer/pyopencl\\.git\?signed#tag=v2021\\.1\\.4\|https://files.pythonhosted.org/packages/0a/a9/b6133777fc20be05faa88c4dbae9cc0d26d6dc1395c45770ec49b56edc4b/pyopencl-2026.1.4.tar.gz\| python/python-pyopencl/spkgbuild
+sed -i -e "s/version=2021.2.6/version=2026.1.4/g" python/python-pyopencl/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyopencl/spkgbuild Upgraded\ from\ version\ 2021.2.6\ to\ version\ 2026.1.4
+sed -i -e "s/version=23.1.1/version=26.4.0/g" python/python-pyopenssl/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyopenssl/spkgbuild Upgraded\ from\ version\ 23.1.1\ to\ version\ 26.4.0
+sed -i -e s\|git+https://github\\.com/pyotp/pyotp#commit=\?signed\|https://files.pythonhosted.org/packages/2d/c6/c5d96a86fd0bf6fa1bbb5c5c341ff3208638b692727a683c8289068d9a11/pyotp-2.10.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/pyotp\*/\| python/python-pyotp/spkgbuild
+sed -i -e "s/version=2.6.0/version=2.10.0/g" python/python-pyotp/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyotp/spkgbuild Upgraded\ from\ version\ 2.6.0\ to\ version\ 2.10.0
+sed -i -e s\|https://github\\.com/asweigart/pyperclip/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/e8/52/d87eba7cb129b81563019d1679026e7a112ef76855d6159d24754dbd2a51/pyperclip-1.11.0.tar.gz\| python/python-pyperclip/spkgbuild
+sed -i -e "s/version=1.8.2/version=1.11.0/g" python/python-pyperclip/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyperclip/spkgbuild Upgraded\ from\ version\ 1.8.2\ to\ version\ 1.11.0
+sed -i -e s\|https://github\\.com/mgorny/pyproject2setuppy/archive/refs/tags/v\\\$version\\.tar\\.gz\|https://github.com/mgorny/pyproject2setuppy/archive/refs/tags/v22.tar.gz\| python/python-pyproject2setuppy/spkgbuild
+sed -i -e "s/version=20/version=22/g" python/python-pyproject2setuppy/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyproject2setuppy/spkgbuild Upgraded\ from\ version\ 20\ to\ version\ 22
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/fb/5d/4c5bb7adca4f2436545a391fe311dcb4ccc711f1ce2ab7adb87475ec566e/PyQtWebEngine-5\\.15\\.4\\.tar\\.gz\|https://files.pythonhosted.org/packages/18/e8/19a00646866e950307f8cd73841575cdb92800ae14837d5821bcbb91392c/PyQtWebEngine-5.15.7.tar.gz\| python/python-pyqtwebengine/spkgbuild
+sed -i -e "s/version=5.15.4/version=5.15.7/g" python/python-pyqtwebengine/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyqtwebengine/spkgbuild Upgraded\ from\ version\ 5.15.4\ to\ version\ 5.15.7
+sed -i -e s\|git+https://github\\.com/irmen/Pyro4#commit=56ee8174241c644f452d2a294ade53004c41d570\|https://files.pythonhosted.org/packages/2e/0b/e1066a2ba154a1fd6ade41b35d38482fc399feb90fe4768ce8d6d3eb368c/Pyro4-4.82.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/Pyro4\*/\| python/python-pyro/spkgbuild
+sed -i -e "s/version=4.80/version=4.82/g" python/python-pyro/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyro/spkgbuild Upgraded\ from\ version\ 4.80\ to\ version\ 4.82
+sed -i -e "s/version=0.7.7/version=0.9.7/g" python/python-pyroute2/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyroute2/spkgbuild Upgraded\ from\ version\ 0.7.7\ to\ version\ 0.9.7
+sed -i -e "s/version=0.19.3/version=0.21.0/g" python/python-pyrsistent/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyrsistent/spkgbuild Upgraded\ from\ version\ 0.19.3\ to\ version\ 0.21.0
+sed -i -e s\|git+https://github\\.com/yuce/pyswip#commit=9e9ca3e0059d156397fb020c2bdaef70f59529a6\|https://files.pythonhosted.org/packages/ff/75/96b326387af00edd34c7cca121ce98c10062d7b8dc5ec73324727997f678/pyswip-0.3.3.tar.gz\| python/python-pyswip/spkgbuild
+sed -i -e "s/version=0.2.10/version=0.3.3/g" python/python-pyswip/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyswip/spkgbuild Upgraded\ from\ version\ 0.2.10\ to\ version\ 0.3.3
+sed -i -e s\|https://pypi\\.org/packages/source/p/pytaglib/pytaglib-1\\.4\\.6\\.tar\\.gz\|https://files.pythonhosted.org/packages/c3/ff/4e81cc7aae32c85eaaad614defe6fa9d4da82ea9dc452db9001036acfa64/pytaglib-3.2.0.tar.gz\| python/python-pytaglib/spkgbuild
+sed -i -e "s/version=1.4.6/version=3.2.0/g" python/python-pytaglib/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pytaglib/spkgbuild Upgraded\ from\ version\ 1.4.6\ to\ version\ 3.2.0
+sed -i -e s\|git+https://github\\.com/saltstack/pytest-helpers-namespace#tag=v2021\\.4\\.29\?signed\|https://files.pythonhosted.org/packages/e8/61/7f1a476b375c1238d152c164f7ffb694c662da8247816947be84b5fe2e8a/pytest-helpers-namespace-2021.12.29.tar.gz\| python/python-pytest-helpers-namespace/spkgbuild
+sed -i -e "s/version=2021.4.29/version=2021.12.29/g" python/python-pytest-helpers-namespace/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pytest-helpers-namespace/spkgbuild Upgraded\ from\ version\ 2021.4.29\ to\ version\ 2021.12.29
+sed -i -e s\|git+https://github\\.com/python-trio/pytest-trio\\.git#tag=\|https://files.pythonhosted.org/packages/13/08/056279526554c6c6e6ad6d4a479a338d14dc785ac30be8bdc6ca0153c1be/pytest-trio-0.8.0.tar.gz\| python/python-pytest-trio/spkgbuild
+sed -i -e "s/version=0.7.0/version=0.8.0/g" python/python-pytest-trio/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pytest-trio/spkgbuild Upgraded\ from\ version\ 0.7.0\ to\ version\ 0.8.0
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/p/pytest-verbose-parametrize/pytest-verbose-parametrize-1\\.7\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/b8/16/ad8af617348ae278728881d893970463a0ff56e569cec5d585c89d15befb/pytest-verbose-parametrize-1.8.1.tar.gz\| python/python-pytest-verbose-parametrize/spkgbuild
+sed -i -e "s/version=1.7.0/version=1.8.1/g" python/python-pytest-verbose-parametrize/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pytest-verbose-parametrize/spkgbuild Upgraded\ from\ version\ 1.7.0\ to\ version\ 1.8.1
+sed -i -e s\|pytorch-1\\.9\\.0::git+https://github\\.com/pytorch/pytorch\\.git#tag=v1\\.9\\.0\|https://github.com/pytorch/pytorch/archive/refs/tags/v2.14.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/pytorch\*/\| python/python-pytorch/spkgbuild
+sed -i -e "s/version=1.9.0/version=2.14.1/g" python/python-pytorch/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pytorch/spkgbuild Upgraded\ from\ version\ 1.9.0\ to\ version\ 2.14.1
+sed -i -e s\|git+https://github\\.com/pyusb/pyusb\\.git\?signed#tag=v1\\.2\\.1\|https://files.pythonhosted.org/packages/00/6b/ce3727395e52b7b76dfcf0c665e37d223b680b9becc60710d4bc08b7b7cb/pyusb-1.3.1.tar.gz\| python/python-pyusb/spkgbuild
+sed -i -e "s/version=1.2.1/version=1.3.1/g" python/python-pyusb/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyusb/spkgbuild Upgraded\ from\ version\ 1.2.1\ to\ version\ 1.3.1
+sed -i -e "s/version=0.16/version=0.18/g" python/python-pyx/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyx/spkgbuild Upgraded\ from\ version\ 0.16\ to\ version\ 0.18
+sed -i -e s\|https://pyxattr\\.k1024\\.org/downloads/pyxattr-0\\.7\\.2\\.tar\\.gz\|https://pyxattr.k1024.org/downloads/pyxattr-0.8.1.tar.gz\| python/python-pyxattr/spkgbuild
+sed -i -e "s/version=0.7.2/version=0.8.1/g" python/python-pyxattr/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pyxattr/spkgbuild Upgraded\ from\ version\ 0.7.2\ to\ version\ 0.8.1
+sed -i -e s\|git+https://github\\.com/secure-systems-lab/securesystemslib\\.git\?signed#tag=v0\\.21\\.0\|https://files.pythonhosted.org/packages/6c/b7/68ce74b4c3ab753c2de907d035a4102b4510729393184af3c7bdfee04d18/securesystemslib-1.6.0.tar.gz\| python/python-securesystemslib/spkgbuild
+sed -i -e "s/version=0.21.0/version=1.6.0/g" python/python-securesystemslib/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-securesystemslib/spkgbuild Upgraded\ from\ version\ 0.21.0\ to\ version\ 1.6.0
+sed -i -e s\|https://pypi\\.io/packages/source/s/selenium/selenium-3\\.141\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/c3/d3/c925308af2c9b9a9ccf531cf23ffba4f38c0d750f088a06e560fb2ca0c59/selenium-4.51.0.tar.gz\| python/python-selenium/spkgbuild
+sed -i -e "s/version=4.0.0/version=4.51.0/g" python/python-selenium/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-selenium/spkgbuild Upgraded\ from\ version\ 4.0.0\ to\ version\ 4.51.0
+sed -i -e s\|git+https://github\\.com/irmen/Serpent#commit=29b2b7696bc89f589142f80b818533afdd59e544\|https://files.pythonhosted.org/packages/6b/bb/58ab4dc0382c2386355cbcb7ffa490e542159de6012d500a602a6d0ed535/serpent-1.43.tar.gz\| python/python-serpent/spkgbuild
+sed -i -e "s/version=1.40/version=1.43/g" python/python-serpent/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-serpent/spkgbuild Upgraded\ from\ version\ 1.40\ to\ version\ 1.43
+sed -i -e s\|git+https://github\\.com/enthought/sat-solver\\.git#tag=v0\\.8\\.2\|https://files.pythonhosted.org/packages/24/60/9c4a2534ae17dc5397c0536c3875a6ea8acf5d65f099ae617ce676433f3b/simplesat-0.9.2.tar.gz\| python/python-simplesat/spkgbuild
+sed -i -e "s/version=0.8.2/version=0.9.2/g" python/python-simplesat/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-simplesat/spkgbuild Upgraded\ from\ version\ 0.8.2\ to\ version\ 0.9.2
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/f8/b2/fcd5e964eefce0737512fb4ea263308769c671c3b1b9b1e380a5008ffef0/sip-6\\.1\\.1\\.tar\\.gz\|https://files.pythonhosted.org/packages/c9/16/50c3758ae06375796dde6c94592f1bdd80a1ca709f776a09fd763682280d/sip-6.17.2.tar.gz\| python/python-sip/spkgbuild
+sed -i -e "s/version=6.1.1/version=6.17.2/g" python/python-sip/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sip/spkgbuild Upgraded\ from\ version\ 6.1.1\ to\ version\ 6.17.2
+sed -i -e s\|git+https://github\\.com/un33k/python-slugify\\.git#tag=\|https://files.pythonhosted.org/packages/bd/e8/26b1af09d728d604dc16427a39f53985b22a170dbd61addac3f48db73f03/python_slugify-9.1.3.tar.gz\| python/python-slugify/spkgbuild
+sed -i -e "s/version=5.0.2/version=9.1.3/g" python/python-slugify/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-slugify/spkgbuild Upgraded\ from\ version\ 5.0.2\ to\ version\ 9.1.3
+sed -i -e s\|git+https://github\\.com/python-trio/sniffio\\.git#tag=\|https://files.pythonhosted.org/packages/a2/87/a6771e1546d97e7e041b6ae58d80074f81b7d5121207425c964ddf5cfdbd/sniffio-1.3.1.tar.gz\| python/python-sniffio/spkgbuild
+sed -i -e "s/version=1.2.0/version=1.3.1/g" python/python-sniffio/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sniffio/spkgbuild Upgraded\ from\ version\ 1.2.0\ to\ version\ 1.3.1
+sed -i -e s\|https://pypi\\.python\\.org/packages/source/s/snowball/snowball-2\\.2\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/43/f8/0a71edf031f03c40db17503cb8ca78a69a171254e568e7db241b0ab57ea1/snowballstemmer-3.1.1.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/snowballstemmer\*/\| python/python-snowballstemmer/spkgbuild
+sed -i -e "s/version=2.2.0/version=3.1.1/g" python/python-snowballstemmer/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-snowballstemmer/spkgbuild Upgraded\ from\ version\ 2.2.0\ to\ version\ 3.1.1
+sed -i -e s\|git+https://github\\.com/agronholm/sphinx-autodoc-typehints#commit=\|https://files.pythonhosted.org/packages/5b/8c/2ab7bd22aa2988c9e4f4791688d6de24a00395afbd5d7dffa16b35db81fb/sphinx_autodoc_typehints-3.17.3.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/sphinx_autodoc_typehints\*/\| python/python-sphinx-autodoc-typehints/spkgbuild
+sed -i -e "s/version=1.12.0/version=3.17.3/g" python/python-sphinx-autodoc-typehints/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sphinx-autodoc-typehints/spkgbuild Upgraded\ from\ version\ 1.12.0\ to\ version\ 3.17.3
+sed -i -e s\|git+https://github\\.com/WhyNotHugo/sphinx-autorun#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|https://files.pythonhosted.org/packages/00/ca/0a4c9362ee0102431665066a858ad647b0c14b93eaa5c2ddb21fc8f0d246/sphinx_autorun-2.0.0.tar.gz\| python/python-sphinx-autorun/spkgbuild
+sed -i -e "s/version=1.1.1/version=2.0.0/g" python/python-sphinx-autorun/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sphinx-autorun/spkgbuild Upgraded\ from\ version\ 1.1.1\ to\ version\ 2.0.0
+sed -i -e s\|git+https://github\\.com/tardyp/sphinx-jinja\\.git\?signed#tag=\|https://files.pythonhosted.org/packages/ea/90/7cf0e91aadcb5b3ff4796acbaf2c7887a55434df360914af9fc067c753c1/sphinx-jinja-2.0.2.tar.gz\| python/python-sphinx-jinja/spkgbuild
+sed -i -e "s/version=1.2.1/version=2.0.2/g" python/python-sphinx-jinja/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sphinx-jinja/spkgbuild Upgraded\ from\ version\ 1.2.1\ to\ version\ 2.0.2
+sed -i -e s\|python-sshtunnel::git+https://github\\.com/pahaz/sshtunnel#commit=\|python-sshtunnel::https://files.pythonhosted.org/packages/27/31/03d5a93a1f8a3bdc40d669d95e3b2b95f1f9df65f1b9cfdb9c44ba5c233f/sshtunnel-0.5.1.tar.gz\| python/python-sshtunnel/spkgbuild
+sed -i -e "s/version=0.4.0/version=0.5.1/g" python/python-sshtunnel/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sshtunnel/spkgbuild Upgraded\ from\ version\ 0.4.0\ to\ version\ 0.5.1
+sed -i -e "s/version=1.4.2/version=1.4.6/g" python/python-subunit/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-subunit/spkgbuild Upgraded\ from\ version\ 1.4.2\ to\ version\ 1.4.6
+sed -i -e "s/version=1.4.2.0/version=1.4.5.0/g" python/python-suds/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-suds/spkgbuild Upgraded\ from\ version\ 1.4.2.0\ to\ version\ 1.4.5.0
+sed -i -e s\|https://github\\.com/cjw296/sybil/archive/refs/tags/\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/1c/03/50135b55ba14509654b2f624eaf7e318d654182ebe9f712fb74e98e418d0/sybil-10.1.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/sybil\*/\| python/python-sybil/spkgbuild
+sed -i -e "s/version=9.1.0/version=10.1.0/g" python/python-sybil/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sybil/spkgbuild Upgraded\ from\ version\ 9.1.0\ to\ version\ 10.1.0
+sed -i -e s\|python-systemd::git+https://github\\.com/systemd/python-systemd#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|https://files.pythonhosted.org/packages/10/9e/ab4458e00367223bda2dd7ccf0849a72235ee3e29b36dce732685d9b7ad9/systemd-python-235.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/systemd-python\*/\| python/python-systemd/spkgbuild
+sed -i -e "s/version=234/version=235/g" python/python-systemd/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-systemd/spkgbuild Upgraded\ from\ version\ 234\ to\ version\ 235
+sed -i -e s\|http://semanchuk\\.com/philip/sysv_ipc/sysv_ipc-1\\.1\\.0\\.tar\\.gz\|https://files.pythonhosted.org/packages/f2/5e/59208c6dd05ebc6f46ce2023c4fc01ffe814a1967d21b35d312c7e6ffeae/sysv_ipc-1.2.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/sysv_ipc\*/\| python/python-sysv_ipc/spkgbuild
+sed -i -e "s/version=1.0.1/version=1.2.0/g" python/python-sysv_ipc/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-sysv_ipc/spkgbuild Upgraded\ from\ version\ 1.0.1\ to\ version\ 1.2.0
+sed -i -e s\|git+https://github\\.com/tarantool/tarantool-python#commit=b3e935355afcfb5240bac5a99707ffecc35772a2\|https://files.pythonhosted.org/packages/5b/62/8e3b7fad26b6398147f656792a7fd04e2f5259433eef504cec08af77d5a5/tarantool-1.3.0.tar.gz\| python/python-tarantool/spkgbuild
+sed -i -e "s/version=0.7.1/version=1.3.0/g" python/python-tarantool/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-tarantool/spkgbuild Upgraded\ from\ version\ 0.7.1\ to\ version\ 1.3.0
+sed -i -e s\|tensorboard_plugin_wit-1\\.8\\.0::git+https://github\\.com/PAIR-code/what-if-tool#tag=v1\\.8\\.0\|https://github.com/PAIR-code/what-if-tool/archive/refs/tags/v1.8.1.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/what-if-tool\*/\| python/python-tensorboard_plugin_wit/spkgbuild
+sed -i -e "s/version=1.8.0/version=1.8.1/g" python/python-tensorboard_plugin_wit/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-tensorboard_plugin_wit/spkgbuild Upgraded\ from\ version\ 1.8.0\ to\ version\ 1.8.1
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/21/d2/f5194c2d51b2aab4bda6de97c5eb1ca5a547ad9b9f778ab5bf4ce19fba88/thefuck-3\\.31\\.tar\\.gz\|https://files.pythonhosted.org/packages/ac/d0/0c256afd3ba1d05882154d16aa0685018f21c60a6769a496558da7d9d8f1/thefuck-3.32.tar.gz\| python/python-thefuck/spkgbuild
+sed -i -e "s/version=3.31/version=3.32/g" python/python-thefuck/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-thefuck/spkgbuild Upgraded\ from\ version\ 3.31\ to\ version\ 3.32
+sed -i -e s\|python-threat9-test-bed::git+https://github\\.com/threat9/threat9-test-bed#commit=\|https://github.com/threat9/threat9-test-bed/archive/1ed61b34d0b138711e3f8267259cdb29787fe349.tar.gz\| -e s\|\ \ \ cd\ \\\$\{name#python-\}-\\\$version\|\ \ \ cd\ \"\$SRC\"/threat9-test-bed\*/\| python/python-threat9-test-bed/spkgbuild
+sed -i -e "s/version=0.6.0+2+g1ed61b3/version=0.6.0+2+g1ed61b3.git20180915202035/g" python/python-threat9-test-bed/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-threat9-test-bed/spkgbuild Upgraded\ from\ version\ 0.6.0+2+g1ed61b3\ to\ version\ 0.6.0+2+g1ed61b3.git20180915202035
+sed -i -e "s/version=7.2.0/version=7.3.0/g" python/python-traits/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-traits/spkgbuild Upgraded\ from\ version\ 7.2.0\ to\ version\ 7.3.0
+sed -i -e s\|git+https://github\\.com/python-trio/trio\\.git#tag=\|https://files.pythonhosted.org/packages/92/dc/a2d25ed73ad49cfd79bf18d262577c3731c98e382284e28d522f49a0df35/trio-0.34.0.tar.gz\| python/python-trio/spkgbuild
+sed -i -e "s/version=0.19.0/version=0.34.0/g" python/python-trio/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-trio/spkgbuild Upgraded\ from\ version\ 0.19.0\ to\ version\ 0.34.0
+sed -i -e s\|git+https://github\\.com/python-trio/trio-asyncio\\.git#tag=\|https://files.pythonhosted.org/packages/e1/76/b6317ad0536e155a9cce6c3f0db9a3b3f63e579e176779712ef3403d4af5/trio_asyncio-0.16.0.tar.gz\| python/python-trio-asyncio/spkgbuild
+sed -i -e "s/version=0.12.0/version=0.16.0/g" python/python-trio-asyncio/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-trio-asyncio/spkgbuild Upgraded\ from\ version\ 0.12.0\ to\ version\ 0.16.0
+sed -i -e s\|git+https://github\\.com/python/typing\\.git#tag=\|https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz\| python/python-typing_extensions/spkgbuild
+sed -i -e "s/version=3.10.0.2/version=4.16.0/g" python/python-typing_extensions/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-typing_extensions/spkgbuild Upgraded\ from\ version\ 3.10.0.2\ to\ version\ 4.16.0
+sed -i -e s\|git+https://github\\.com/avian2/unidecode\\.git#tag=\|https://files.pythonhosted.org/packages/94/7d/a8a765761bbc0c836e397a2e48d498305a865b70a8600fd7a942e85dcf63/Unidecode-1.4.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/Unidecode\*/\| python/python-unidecode/spkgbuild
+sed -i -e "s/version=1.3.1/version=1.4.0/g" python/python-unidecode/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-unidecode/spkgbuild Upgraded\ from\ version\ 1.3.1\ to\ version\ 1.4.0
+sed -i -e "s/version=0.13.1/version=0.16.0/g" python/python-voluptuous/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-voluptuous/spkgbuild Upgraded\ from\ version\ 0.13.1\ to\ version\ 0.16.0
+sed -i -e s\|git+https://github\\.com/balloob/voluptuous-serialize\\.git#tag=\|https://files.pythonhosted.org/packages/53/70/03a9b61324e1bb8b16682455b8b953bccd1001a28e43478c86f539e26285/voluptuous_serialize-2.7.0.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/voluptuous_serialize\*/\| python/python-voluptuous-serialize/spkgbuild
+sed -i -e "s/version=2.4.0/version=2.7.0/g" python/python-voluptuous-serialize/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-voluptuous-serialize/spkgbuild Upgraded\ from\ version\ 2.4.0\ to\ version\ 2.7.0
+sed -i -e s\|git+https://github\\.com/samuelcolvin/watchgod#tag=\|https://files.pythonhosted.org/packages/e8/6e/3904af0715e03fc5b2636cb8cf8b0eabc45b1f2cf6e4cf8453ddb6d23042/watchgod-0.8.2.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/watchgod\*/\| python/python-watchgod/spkgbuild
+sed -i -e "s/version=0.7/version=0.8.2/g" python/python-watchgod/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-watchgod/spkgbuild Upgraded\ from\ version\ 0.7\ to\ version\ 0.8.2
+sed -i -e s\|xapian-haystack-2\\.1\\.0\\.r7\\.g2247b23::git+https://github\\.com/notanumber/xapian-haystack#commit=2247b23\|xapian-haystack-2.1.0.r7.g2247b23::https://files.pythonhosted.org/packages/47/65/d947ed25472b5c32011d9f750f3969c82f80e68243a88b3241fd002f6ba4/xapian_haystack-4.0.0.tar.gz\| python/python-xapian-haystack/spkgbuild
+sed -i -e "s/version=2.1.1/version=4.0.0/g" python/python-xapian-haystack/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-xapian-haystack/spkgbuild Upgraded\ from\ version\ 2.1.1\ to\ version\ 4.0.0
+sed -i -e "s/version=2023.01.0/version=2026.09.0/g" python/python-xarray/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-xarray/spkgbuild Upgraded\ from\ version\ 2023.01.0\ to\ version\ 2026.09.0
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/33/fe/67bc1f8ee2782bca3cdc63558a64f843bb9f88e15793475350809fbd8e01/xdg-5\\.1\\.1\\.tar\\.gz\|https://files.pythonhosted.org/packages/2a/b9/0e6e6f19fb75cf5e1758f4f33c1256738f718966700cffc0fde2f966218b/xdg-6.0.0.tar.gz\| python/python-xdg/spkgbuild
+sed -i -e "s/version=5.1.1/version=6.0.0/g" python/python-xdg/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-xdg/spkgbuild Upgraded\ from\ version\ 5.1.1\ to\ version\ 6.0.0
+sed -i -e s\|python-yara::git+https://github\\.com/VirusTotal/yara-python#commit=\|https://files.pythonhosted.org/packages/51/38/347d1fcde4edabd338d5872ca5759ccfb95ff1cf5207dafded981fd08c4f/yara_python-4.5.4.tar.gz\| -e s\|\ \ \ cd\ \\\*\|\ \ \ cd\ \"\$SRC\"/yara_python\*/\| python/python-yara/spkgbuild
+sed -i -e "s/version=4.1.0/version=4.5.4/g" python/python-yara/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-yara/spkgbuild Upgraded\ from\ version\ 4.1.0\ to\ version\ 4.5.4
+sed -i -e s\|https://kokkinizita\\.linuxaudio\\.org/linuxaudio/downloads/zita-audiotools-1\\.0\\.0\\.tar\\.bz2\|https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-audiotools-1.3.0.tar.bz2\| python/python-zita-audiotools/spkgbuild
+sed -i -e "s/version=1.0.0/version=1.3.0/g" python/python-zita-audiotools/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-zita-audiotools/spkgbuild Upgraded\ from\ version\ 1.0.0\ to\ version\ 1.3.0
+sed -i -e s\|https://kokkinizita\\.linuxaudio\\.org/linuxaudio/downloads/zita-jacktools-1\\.5\\.3\\.tar\\.bz2\|https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-jacktools-1.8.0.tar.bz2\| python/python-zita-jacktools/spkgbuild
+sed -i -e "s/version=1.5.3/version=1.8.0/g" python/python-zita-jacktools/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-zita-jacktools/spkgbuild Upgraded\ from\ version\ 1.5.3\ to\ version\ 1.8.0
+sed -i -e s\|https://files\\.pythonhosted\\.org/packages/source/u/urllib3/urllib3-\\\$version\\.tar\\.gz\|https://files.pythonhosted.org/packages/e3/05/b17359e1cefb4f909b5e40b1b90a496d987258916dbbf88e842c729f510e/urllib3-2.8.0.tar.gz\| python/urllib3/spkgbuild
+sed -i -e "s/version=2.3.0/version=2.8.0/g" python/urllib3/spkgbuild
+bash /usr/libexec/update-repo/changelog python/urllib3/spkgbuild Upgraded\ from\ version\ 2.3.0\ to\ version\ 2.8.0
+sed -i -e s\|http://launchpad\\.net/ubuntu/+archive/primary/+files/libdbusmenu-qt_0\\.9\\.3+16\\.04\\.20160218\\.orig\\.tar\\.gz\|https://archive.ubuntu.com/ubuntu/pool/main/libd/libdbusmenu-qt/libdbusmenu-qt_0.9.3+16.04.20160218.orig.tar.gz\| -e $'s|\tcd "\\$SRC"/libdbusmenu-qt-\\*/|\tcd "$SRC"/libdbusmenu-qt*/|' qt/libdbusmenu-qt/spkgbuild
+sed -i -e "s/version=0.9.3/version=0.9.3+16.04.20160218/g" qt/libdbusmenu-qt/spkgbuild
+bash /usr/libexec/update-repo/changelog qt/libdbusmenu-qt/spkgbuild Upgraded\ from\ version\ 0.9.3\ to\ version\ 0.9.3+16.04.20160218
+sed -i -e "s/version=4.5.3/version=5.3.0/g" qt/qbittorrent/spkgbuild
+bash /usr/libexec/update-repo/changelog qt/qbittorrent/spkgbuild Upgraded\ from\ version\ 4.5.3\ to\ version\ 5.3.0
+sed -i -e s\|https://downloads\\.sourceforge\\.net/qbittorrent/qbittorrent-\\\$version\\.tar\\.xz\|https://downloads.sourceforge.net/project/qbittorrent/qbittorrent/qbittorrent-5.3.0/qbittorrent-5.3.0.tar.xz\| -e $'s|\tcd qbittorrent-\\$version|\tcd "$SRC"/qbittorrent*/|' qt/qbittorrent-nox/spkgbuild
+sed -i -e "s/version=4.2.5/version=5.3.0/g" qt/qbittorrent-nox/spkgbuild
+bash /usr/libexec/update-repo/changelog qt/qbittorrent-nox/spkgbuild Upgraded\ from\ version\ 4.2.5\ to\ version\ 5.3.0
+sed -i -e s\|https://download\\.qt\\.io/official_releases/qt/6\\.9/6\\.9\\.1/submodules/qtwebengine-everywhere-src-6\\.9\\.1\\.tar\\.xz\|https://download.qt.io/archive/qt/6.9/6.9.3/submodules/qtwebengine-everywhere-src-6.9.3.zip\| qt/qtwebengine/spkgbuild
+sed -i -e "s/version=6.9.1/version=6.9.3/g" qt/qtwebengine/spkgbuild
+bash /usr/libexec/update-repo/changelog qt/qtwebengine/spkgbuild Upgraded\ from\ version\ 6.9.1\ to\ version\ 6.9.3
+sed -i -e s\|https://github\\.com/transmission/transmission-releases/raw/master/transmission-\\\$version\\.tar\\.xz\|https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4.tar.xz\| -e $'s|\tcd transmission-\\$version|\tcd "$SRC"/transmission*/|' qt/transmission-qt/spkgbuild
+sed -i -e "s/version=3.00/version=4.1.4/g" qt/transmission-qt/spkgbuild
+bash /usr/libexec/update-repo/changelog qt/transmission-qt/spkgbuild Upgraded\ from\ version\ 3.00\ to\ version\ 4.1.4
+sed -i -e s\|https://xorg\\.freedesktop\\.org/archive/individual/app/\\\$name-\\\$version\\.tar\\.bz2\|https://www.x.org/pub/individual/app/xfd-1.1.6.tar.gz\| xfce/xfd/spkgbuild
+sed -i -e "s/version=1.1.4/version=1.1.6/g" xfce/xfd/spkgbuild
+bash /usr/libexec/update-repo/changelog xfce/xfd/spkgbuild Upgraded\ from\ version\ 1.1.4\ to\ version\ 1.1.6
+sed -i -e s\|https://invisible-mirror\\.net/archives/luit/luit-\\\$version\\.tgz\|https://invisible-mirror.net/archives/luit/luit-20260907.tgz\| xorg/luit/spkgbuild
+sed -i -e "s/version=20240910/version=20260907/g" xorg/luit/spkgbuild
+bash /usr/libexec/update-repo/changelog xorg/luit/spkgbuild Upgraded\ from\ version\ 20240910\ to\ version\ 20260907
+sed -i -e s\|http://ftp\\.x\\.org/pub/individual/app/xpr-\\\$version\\.tar\\.xz\|https://www.x.org/pub/individual/app/xpr-1.2.1.tar.gz\| xorg/xpr/spkgbuild
+sed -i -e "s/version=1.2.0/version=1.2.1/g" xorg/xpr/spkgbuild
+bash /usr/libexec/update-repo/changelog xorg/xpr/spkgbuild Upgraded\ from\ version\ 1.2.0\ to\ version\ 1.2.1
+sed -i -e s\|http://invisible-mirror\\.net/archives/\\\$name/\\\$name-\\\$version\\.tgz\|https://invisible-mirror.net/archives/xterm/xterm-412.tgz\| xorg/xterm/spkgbuild
+sed -i -e "s/version=401/version=412/g" xorg/xterm/spkgbuild
+bash /usr/libexec/update-repo/changelog xorg/xterm/spkgbuild Upgraded\ from\ version\ 401\ to\ version\ 412

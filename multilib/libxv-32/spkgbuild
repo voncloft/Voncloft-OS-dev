@@ -2,9 +2,9 @@
 # depends	: libxv
 
 name=libxv-32
-version=1.0.11
+version=1.0.13
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXv-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXv-1.0.13.tar.gz"
 
 build() {
 	cd libXv-$version

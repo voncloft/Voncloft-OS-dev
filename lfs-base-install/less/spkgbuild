@@ -2,9 +2,9 @@
 # depends	: ncurses
 
 name=less
-version=679
+version=710
 release=1
-source="http://www.greenwoodsoftware.com/$name/$name-$version.tar.gz"
+source="https://www.greenwoodsoftware.com/less/less-710.tar.gz"
 options="!checksum"
 
 build() {

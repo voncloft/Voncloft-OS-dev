@@ -2,10 +2,10 @@
 # depends : 
 
 name=liblinear
-version=249
+version=250
 release=1
 
-source="https://github.com/cjlin1/liblinear/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/cjlin1/liblinear/archive/v250/liblinear-250.tar.gz"
 options="!checksum"
 
 build() {

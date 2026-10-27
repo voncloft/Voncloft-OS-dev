@@ -2,10 +2,10 @@
 # depends : python-colorama python-decorator python-psutil python-pyte python-setuptools python-six
 
 name=python-thefuck
-version=3.31
+version=3.32
 release=2
 
-source="https://files.pythonhosted.org/packages/21/d2/f5194c2d51b2aab4bda6de97c5eb1ca5a547ad9b9f778ab5bf4ce19fba88/thefuck-3.31.tar.gz"
+source="https://files.pythonhosted.org/packages/ac/d0/0c256afd3ba1d05882154d16aa0685018f21c60a6769a496558da7d9d8f1/thefuck-3.32.tar.gz"
 options="!checksum"
 
 build() {

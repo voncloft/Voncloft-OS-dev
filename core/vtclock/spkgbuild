@@ -2,12 +2,12 @@
 # depends	: ncurses
 
 name=vtclock
-version=0.0.20161228
+version=0.99.1
 release=1
-source="http://webonastick.com/$name/$name-$version.tar.gz"
+source="https://github.com/dse/vtclock/archive/refs/tags/v0.99.1.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/vtclock*/
 
 	make
   	install -d $PKG/usr/bin

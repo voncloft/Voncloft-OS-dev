@@ -2,10 +2,10 @@
 # depends : python libevdev
 
 name=python-libevdev
-version=0.9
+version=0.13.1
 release=3
 
-source="https://gitlab.freedesktop.org/libevdev/python-libevdev/-/archive/0.9/python-libevdev-0.9.tar.gz"
+source="https://gitlab.freedesktop.org/libevdev/python-libevdev/-/archive/0.13.1/python-libevdev-0.13.1.tar.gz"
 options="!checksum"
 
 build() {

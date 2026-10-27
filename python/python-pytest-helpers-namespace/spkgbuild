@@ -2,10 +2,10 @@
 # depends : python-pytest
 
 name=python-pytest-helpers-namespace
-version=2021.4.29
+version=2021.12.29
 release=3
 
-source="git+https://github.com/saltstack/pytest-helpers-namespace#tag=v2021.4.29?signed"
+source="https://files.pythonhosted.org/packages/e8/61/7f1a476b375c1238d152c164f7ffb694c662da8247816947be84b5fe2e8a/pytest-helpers-namespace-2021.12.29.tar.gz"
 options="!checksum"
 
 build() {

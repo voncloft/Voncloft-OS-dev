@@ -2,7 +2,7 @@
 # depends : python python-yaml mpdecimal
 
 name=python-dask
-version=2023.4.0
+version=2026.8.0
 release=1
 
 source="https://github.com/dask/dask/archive/2023.4.0/python-dask-2023.4.0.tar.gz"

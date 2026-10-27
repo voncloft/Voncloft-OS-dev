@@ -1,9 +1,9 @@
 # description	: Sources for time zone and daylight saving time data
 
 name=tzdata
-version=2020a
+version=2026e
 release=1
-source="https://www.iana.org/time-zones/repository/releases/${name}${version}.tar.gz
+source="https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz
 	https://www.iana.org/time-zones/repository/releases/tzcode${version}.tar.gz"
 
 build() {

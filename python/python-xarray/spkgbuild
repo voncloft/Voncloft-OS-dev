@@ -2,7 +2,7 @@
 # depends : python-numpy python-pandas
 
 name=python-xarray
-version=2023.01.0
+version=2026.09.0
 release=1
 
 source="https://github.com/pydata/xarray/archive/refs/tags/v2023.01.0/python-xarray-2023.01.0.tar.gz"

@@ -7,3 +7,13 @@ Release=0
 Synopsis:
 Added Changelog to package
 Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+Version=2026.02.25
+Release=0
+
+Synopsis:
+Upgraded from version 2020.12.07 to version 2026.02.25

@@ -2,10 +2,10 @@
 # depends : python-zita-audiotools zita-convolver zita-jclient
 
 name=python-zita-jacktools
-version=1.5.3
+version=1.8.0
 release=2
 
-source="https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-jacktools-1.5.3.tar.bz2"
+source="https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-jacktools-1.8.0.tar.bz2"
 options="!checksum"
 
 build() {

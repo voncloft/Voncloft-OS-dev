@@ -2,12 +2,12 @@
 # depends	: desktop-file-utils gtk3 hicolor-icon-theme 
 
 name=bleachbit
-version=4.4.0
+version=6.0.6
 release=1
-source="git+https://github.com/bleachbit/bleachbit.git#tag=v4.4.0?signed"
+source="https://github.com/bleachbit/bleachbit/archive/refs/tags/v6.0.6.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/bleachbit*/
 	sed -i '/make -C po install/d' Makefile
 	make prefix=/usr DESTDIR="$PKG" install
 }

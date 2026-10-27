@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-fido2
-version=0.9.1
+version=2.2.1
 release=3
 
-source="git+https://github.com/Yubico/python-fido2.git#tag=0.9.1?signed"
+source="https://files.pythonhosted.org/packages/ba/ea/6f08c354b7aeb8019249d46a86c2153f8218499cced4d21bf16b6d49fc16/fido2-2.2.1.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,7 +2,7 @@
   # depends : python postgresql-libs
 
 name=python-psycopg2
-version=2.9.6
+version=2.9.13
 release=3
 
 source="https://github.com/psycopg/psycopg2/archive/refs/tags/2.9.6.tar.gz"

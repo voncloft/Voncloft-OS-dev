@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:45 AM EDT 2026
+
+gstreamer-32
+Version=1.29.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.16.2 to version 1.29.2

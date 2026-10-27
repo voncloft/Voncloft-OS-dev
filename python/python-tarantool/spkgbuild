@@ -2,10 +2,10 @@
   # depends : python python-msgpack python-yaml python-six
 
 name=python-tarantool
-version=0.7.1
+version=1.3.0
 release=2
 
-source="git+https://github.com/tarantool/tarantool-python#commit=b3e935355afcfb5240bac5a99707ffecc35772a2"
+source="https://files.pythonhosted.org/packages/5b/62/8e3b7fad26b6398147f656792a7fd04e2f5259433eef504cec08af77d5a5/tarantool-1.3.0.tar.gz"
 options="!checksum"
 
 build() {

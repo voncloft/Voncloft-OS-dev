@@ -2,10 +2,10 @@
 # depends : libgudev elogind glib libmbim libqmi polkit vala
 
 name=libmm-glib
-version=1.14.10
+version=1.18.12
 release=1
 
-source="https://www.freedesktop.org/software/ModemManager/ModemManager-$version.tar.xz"
+source="https://www.freedesktop.org/software/ModemManager/ModemManager-1.18.12.tar.xz"
 options="!checksum"
 
 build() {

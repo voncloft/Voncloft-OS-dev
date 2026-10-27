@@ -8,7 +8,7 @@ options="!checksum"
 source="tellico-4.3.tar.gz::https://invent.kde.org/office/tellico/-/archive/v4.3/tellico-v4.3.tar.gz"
 
 build() {
-    cd "tellico-v4.3"
+    cd "tellico-v${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

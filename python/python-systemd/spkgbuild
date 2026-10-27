@@ -2,14 +2,14 @@
   # depends : python3 libsystemd
 
 name=python-systemd
-version=234
+version=235
 release=7
 
-source="python-systemd::git+https://github.com/systemd/python-systemd#commit=b3e935355afcfb5240bac5a99707ffecc35772a2"
+source="https://files.pythonhosted.org/packages/10/9e/ab4458e00367223bda2dd7ccf0849a72235ee3e29b36dce732685d9b7ad9/systemd-python-235.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/systemd-python*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

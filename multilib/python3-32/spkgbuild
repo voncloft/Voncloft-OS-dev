@@ -2,12 +2,12 @@
 # depends	: libffi-32 python
 
 name=python-32
-version=3.8.5
+version=3.15.2
 release=1
-source="https://www.python.org/ftp/python/$version/Python-$version.tar.xz"
+source="https://www.python.org/ftp/python/3.15.2/Python-3.15.2.tar.xz"
 
 build() {
-	cd Python-$version
+	cd "$SRC"/Python*/
 
 	export CC="gcc -m32"
 	export CXX="g++ -m32"

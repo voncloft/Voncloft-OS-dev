@@ -9,7 +9,7 @@ source="gcompris-26.2.tar.xz::https://download.kde.org/stable/gcompris/qt/src/gc
     qml-box2d-e3674e0fe030c406a1d915e47eab760624fffa55.tar.gz::https://github.com/qml-box2d/qml-box2d/archive/e3674e0fe030c406a1d915e47eab760624fffa55.tar.gz"
 
 build() {
-    cd "gcompris-qt-26.2"
+    cd "gcompris-qt-${version}"
     cp -a "$SRC/qml-box2d-e3674e0fe030c406a1d915e47eab760624fffa55/." external/qml-box2d/
     plasma-package-installer \
         -DBUILD_STANDALONE=OFF \

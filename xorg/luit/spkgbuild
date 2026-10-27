@@ -2,9 +2,9 @@
 # depends       : xorg-libraries
 
 name=luit
-version=20240910
+version=20260907
 release=1
-source="https://invisible-mirror.net/archives/luit/luit-$version.tgz"
+source="https://invisible-mirror.net/archives/luit/luit-20260907.tgz"
 options="!checksum"
 
 build() {

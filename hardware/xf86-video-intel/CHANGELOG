@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+xf86-video-intel
+Version=20230223
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 20200817 to version 20230223

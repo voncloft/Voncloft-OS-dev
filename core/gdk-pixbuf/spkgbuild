@@ -2,9 +2,9 @@
 # depends	: glib libjpeg-turbo libpng libtiff shared-mime-info libx11 libxcb libxau jasper glib
 
 name=gdk-pixbuf
-version=2.42.12
+version=2.44.8
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
+source="https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.8.tar.xz"
 
 build() {
 	cd $name-$version

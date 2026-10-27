@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 3.24.23 to version 3.24.30+62+g8d04980f38
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:29:44 AM EDT 2026
+
+Version=3.24.52
+Release=1
+
+Synopsis:
+Upgraded from version 3.24.49 to version 3.24.52

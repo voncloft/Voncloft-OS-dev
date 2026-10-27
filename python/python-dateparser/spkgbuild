@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-dateparser
-version=1.0.0
+version=1.4.3
 release=2
 
-source="git+https://github.com/scrapinghub/dateparser.git#tag="
+source="https://files.pythonhosted.org/packages/c7/5d/bd21ba1519b6b1e222b29878301d2e1fb928e890dc7d085fa4222ac5671b/dateparser-1.4.3.tar.gz"
 options="!checksum"
 
 build() {

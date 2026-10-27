@@ -2,14 +2,14 @@
 # depends : python
 
 name=python-asteval
-version=0.9.31
+version=1.0.10
 release=1
 
-source="https://github.com/newville/asteval/archive/refs/tags/$version.tar.gz"
+source="https://files.pythonhosted.org/packages/65/9a/e10e062c83de2219c5f9ef9d684dac39323c052de140e257afd0f60f8ca7/asteval-1.0.10.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/asteval*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

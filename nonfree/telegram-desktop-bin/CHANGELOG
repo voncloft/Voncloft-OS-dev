@@ -1,0 +1,9 @@
+Date: Tue Oct 27 06:29:46 AM EDT 2026
+
+telegram-desktop-bin
+Version=7.3.3
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.1.13 to version 7.3.3

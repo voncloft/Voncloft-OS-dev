@@ -84,7 +84,7 @@ f:29f5be29852ef45a9cc2e52fc3f77df9:rust/0001-bootstrap-Change-libexec-dir.patch
 f:403b94ee924b1a8f1031e781f42e6226:rust/CHANGELOG
 f:707ef2e3d130fd97ba1769d8a128b008:rust/0001-cargo-Change-libexec-dir.patch
 f:657df79f3b06f08061adfa8335319af2:rust/spkgbuild
-f:40dbc9bf465a5d08ebb01d4237d9133b:rust/override
+f:cc49b75259a66995d87b44e7043b913a:rust/override
 f:17bce39decd9d28762bec45f22cdb2b8:rust/spkgbuild-broken-dontknowwhy
 f:70861d1e87e9b6477b3c0481d6207885:rust/0002-compiler-Change-LLVM-targets.patch
 f:295c343dcd457dc534662f011d7cff1a:llvm-bak/llvm-config.h
@@ -93,6 +93,7 @@ f:e9da36078e59afc5266d022e0683fe17:llvm-bak/spkgbuild
 f:9ceaee69e62767770eb473d5242db70d:autoconf2.13/autoconf-2.13-consolidated_fixes-1.patch
 f:768b80c6d5aa5e9a626099792c43b89c:autoconf2.13/.pkgfiles
 f:2c1fe7e333872910427df9a71bf7cc79:autoconf2.13/spkgbuild
+f:3a9ea9313118d815bd793535daa52276:autoconf2.13/override
 f:457f8d3052d27f14db5edefc95f8129e:pkgconf/.pkgfiles
 f:46d8d564d8707a62f343cb205df950b1:pkgconf/CHANGELOG
 f:1bb6691bc51b6d8f7db3dbd61fe91a47:pkgconf/spkgbuild
@@ -102,7 +103,9 @@ f:225af1c72f5e879682a1fe932b9a7ca1:nasm/spkgbuild
 f:34a907a9794dafc4bb7975aca12d5334:glslc/.pkgfiles
 f:e5e7dde740b1e4fce65e4720f79ce7b8:glslc/CHANGELOG
 f:0e7381b10c4339d3628f2011950031d5:glslc/spkgbuild
-f:f0531b5b3177f8d045f919e10501e166:gcc-fortran/spkgbuild
+f:fa45acf2ac5d223dee45f26d60b35fbc:gcc-fortran/CHANGELOG
+f:d2992ccbd522157c5a642b4aaad23b23:gcc-fortran/spkgbuild
+f:04c0ce7f2142f79fe293b5e3bdce45bc:gcc-fortran/override
 f:5ec68bf05862edf34cc5b167ff360909:apache-ant/.pkgfiles
 f:068a1dce453111a16ad840453b1a1b46:apache-ant/CHANGELOG
 f:d12fcf021316bb31fc95e469d0423c97:apache-ant/post-install.sh
@@ -111,7 +114,9 @@ f:43ad58e10cd9197d555ca44341091298:apache-ant/override
 f:62c0709a5f05274657662ff9dd3fd3b6:autoconf/.pkgfiles
 f:1010b011eb07ab59fae7738cd25ecf1a:autoconf/CHANGELOG
 f:e7ffc09c9a8446b948c12e6f7b9498b1:autoconf/spkgbuild
-f:e303f0dd300e993d72fa8d9100e8e723:iasl/spkgbuild
+f:15df9c269cbb53fdafeeb2835a43973b:iasl/CHANGELOG
+f:8ae1e649ba918be673823e38f0228f9a:iasl/spkgbuild
+f:8ac62a62d6ce95848e939f50e04ace60:iasl/override
 f:05270afc9b5aa02ee314a204f4500f9b:ccache/.pkgfiles
 f:c506bd8e562bc26fe21e8091937552cc:ccache/readme
 f:66f2eebca1c26022e4b893a906bf1228:ccache/CHANGELOG

@@ -2,14 +2,14 @@
 # depends : python
 
 name=python-munkres
-version=1.1.4
+version=3.0.0
 release=1
 
-source="git+https://github.com/bmc/munkres.git#tag="
+source="https://files.pythonhosted.org/packages/19/e4/c5cc64941985d8f9fc0291ebf88329709f4df44f745e8e8c999c6e19e03f/munkres-3.0.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/munkres*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

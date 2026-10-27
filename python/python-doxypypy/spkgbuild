@@ -8,7 +8,7 @@ source="https://files.pythonhosted.org/packages/f9/d2/8331005fb117a27c0122f714fe
 options="!checksum"
 
 build() {
-    cd "doxypypy-0.8.8.7"
+    cd "doxypypy-${version}"
     pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
     pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

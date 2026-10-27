@@ -2,9 +2,9 @@
 # depends	: libxpm
 
 name=libxpm-32
-version=3.5.13
+version=3.5.20
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXpm-$version.tar.bz2"
+source="https://www.x.org/pub/individual/lib/libXpm-3.5.20.tar.gz"
 
 build() {
 	cd libXpm-$version

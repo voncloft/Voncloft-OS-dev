@@ -7,3 +7,13 @@ Release=
 Synopsis:
 Added Changelog to package
 Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:29:43 AM EDT 2026
+
+Version=12.4
+Release=2
+
+Synopsis:
+Upgraded from version 10.8.8 to version 12.4

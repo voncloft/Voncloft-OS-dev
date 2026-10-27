@@ -1,15 +1,14 @@
-# description	: Python 3.x SIP bindings for C and C++ libraries (PyQt5 version)
+# description : SIP runtime support for Python bindings to Qt 6
 # depends	: python-sip
 
 name=python-sip-pyqt6
-version=4.19.24
-release=1
-
-source="https://files.pythonhosted.org/packages/source/${name:7:1}/${name#python-}/${name#python-}-${version}.tar.gz"
+version=13.13.0
+release=2
+source="https://files.pythonhosted.org/packages/78/35/bed43ff7cf040ced6b62a17b272abecb94914755284b54e8d06844e1ed23/pyqt6_sip-13.13.0.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
+   cd "$SRC"/pyqt6_sip-*/
+   pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir .
+   pip3 install --no-index --find-links dist --no-deps --root="$PKG" --prefix=/usr PyQt6-sip
  }

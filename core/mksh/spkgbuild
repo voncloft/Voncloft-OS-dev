@@ -1,13 +1,13 @@
 # description	: The MirBSD Korn Shell
 
 name=mksh
-version=R59b
+version=R59c
 release=1
 backup="etc/mkshrc"
-source="http://www.mirbsd.org/MirOS/dist/mir/mksh/$name-$version.tgz"
+source="https://deb.debian.org/debian/pool/main/m/mksh/mksh_59c.orig.tar.gz"
 
 build() {
-	cd $name
+	cd "$SRC"/mksh*/
 
 	sh Build.sh -r
 

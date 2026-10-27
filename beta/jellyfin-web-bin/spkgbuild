@@ -2,14 +2,14 @@
 # depends : 
 
 name=jellyfin-web-bin
-version=10.8.8
-release=1
+version=12.4
+release=2
 _pkgver="${version}-1"
-source="https://repo.jellyfin.org/releases/server/debian/versions/stable/web/${version}/jellyfin-web_${_pkgver}_all.deb"
-noextract="jellyfin-web_${_pkgver}_all.deb"
+source="jellyfin-web_${version}_all.deb::https://repo.jellyfin.org/files/server/debian/latest-stable/amd64/jellyfin-web_12.4%2Bdeb12_all.deb"
+noextract="jellyfin-web_${version}_all.deb"
 build() {
 	mkdir -pv "jellyfin-web"
-	bsdtar -xf "jellyfin-web_${_pkgver}_all.deb" -C "jellyfin-web"
-	tar -xf "jellyfin-web/data.tar.xz" -C "jellyfin-web"
+	bsdtar -xf "jellyfin-web_${version}_all.deb" -C "jellyfin-web"
+	tar -xf "jellyfin-web"/data.tar.* -C "jellyfin-web"
 	cp -r "$SRC/jellyfin-web/usr" "$PKG/"
 }

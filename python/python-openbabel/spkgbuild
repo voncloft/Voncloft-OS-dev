@@ -2,14 +2,14 @@
 # depends : gcc-libs python3
 
 name=python-openbabel
-version=3.1.1.1
+version=3.2.1
 release=6
 
-source="http://downloads.sourceforge.net/openbabel/openbabel-2.3.2.tar.gz"
+source="https://files.pythonhosted.org/packages/03/ee/946ca33e35e47fc634d9f62f6a74505318a651de720495ae42c6307551e7/openbabel-3.2.1.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/openbabel*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }
