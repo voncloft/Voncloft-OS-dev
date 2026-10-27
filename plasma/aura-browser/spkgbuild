@@ -3,7 +3,7 @@
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
 # description : Web browser with an interface designed for televisions and Plasma Bigscreen
 name=aura-browser
-version=5.27.12
+version=6.8.1
 release=1
 
 source="https://download.kde.org/stable/plasma/$version/aura-browser-$version.tar.xz"

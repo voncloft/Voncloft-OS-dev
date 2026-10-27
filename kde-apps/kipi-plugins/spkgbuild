@@ -4,7 +4,7 @@
 # description : Legacy image application plugins for importing, exporting, sharing, and processing photos
 
 name=kipi-plugins
-version=24.05.2
+version=26.08.2
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/kipi-plugins-$version.tar.xz"

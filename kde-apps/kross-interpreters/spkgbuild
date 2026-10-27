@@ -4,7 +4,7 @@
 # description : Language interpreter plugins for running scripts through the Kross scripting framework
 
 name=kross-interpreters
-version=24.12.3
+version=26.08.2
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/kross-interpreters-$version.tar.xz"

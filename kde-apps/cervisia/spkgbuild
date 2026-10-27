@@ -3,7 +3,7 @@
 # description : Graphical CVS version control client for browsing changes, committing files, and managing working copies
 
 name=cervisia
-version=25.04.3
+version=26.08.2
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/cervisia-$version.tar.xz"

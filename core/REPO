@@ -1061,7 +1061,7 @@ f:51c522e0e65cb42ea65f150f945bf743:gnutls/spkgbuild
 f:1456ecea4258ff3b424ce82fe806d0f0:jasper/.pkgfiles
 f:6601857e367b158a0b2f090ce5cfd716:jasper/spkgbuild
 f:8892370fd53fa5bc8c86d694703ab523:update-repo/.pkgfiles
-f:dc9aac74745037fdf99f971746f6c808:update-repo/update-repo
+f:6939a1c668b2d4aed522b69db417c3ef:update-repo/update-repo
 f:69373343806592fb0edc5f0c1086ecc0:update-repo/changelog
 f:080f94d2a62692e5a2082cd123a4edc2:update-repo/spkgbuild
 f:bd0ee216fcae081fbb1e2de107804a1f:update-repo/.checksums

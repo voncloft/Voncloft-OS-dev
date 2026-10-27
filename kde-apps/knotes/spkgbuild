@@ -3,7 +3,7 @@
 # description : Desktop sticky notes application for keeping reminders and short pieces of text
 
 name=knotes
-version=24.05.2
+version=26.08.2
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/knotes-$version.tar.xz"

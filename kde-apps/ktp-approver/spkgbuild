@@ -4,7 +4,7 @@
 # description : KDE Telepathy notifications and dialogs for accepting incoming chats, calls, and file transfers
 
 name=ktp-approver
-version=23.04.3
+version=25.12.3
 release=1
 
 source="https://download.kde.org/Attic/release-service/$version/src/ktp-approver-$version.tar.xz"

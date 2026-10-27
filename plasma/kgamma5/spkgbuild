@@ -3,7 +3,7 @@
 # note : Contains no application files. Use kgamma for the maintained source package.
 
 name=kgamma5
-version=6.7.5
+version=6.8.1
 release=1
 options="!checksum"
 

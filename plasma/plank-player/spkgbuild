@@ -4,7 +4,7 @@
 # description : Media player with a television-friendly interface for Plasma Bigscreen
 
 name=plank-player
-version=5.27.12
+version=6.8.1
 release=1
 
 source="https://download.kde.org/stable/plasma/$version/plank-player-$version.tar.xz"

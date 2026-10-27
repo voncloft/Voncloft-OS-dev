@@ -27,13 +27,32 @@ vercomp() {
 }
 get_url()
 {
-	source $1
+	local source_entry remaining_sources
+	source "$1"
 	ppath=$1
-	url="${source[0]}"
-	url=$(echo $url | cut -d ' ' -f1 | sed 's|\(.*\)/.*|\1|')/
+	unset uversion
+	source_version_dirs=
+	# Scratchpkg accepts local-filename::URL as well as an ordinary URL.
+	# Keep the first source, including scalar lists split over multiple lines.
+	source_entry="${source[0]}"
+	read -r url remaining_sources <<< "${source_entry//$'\n'/ }"
+	case "$url" in
+		*::*) url="${url#*::}" ;;
+	esac
+	url="${url%%\?*}"
+	url="${url%%\#*}"
+	url="${url%/*}/"
+	case "$url" in
+		*/"$version"/) source_version_dirs=1 ;;
+	esac
 }
 fetch() {
-	curl -L -f "$url" -o index.html -s --max-time 5
+	# Never reuse an earlier package's listing after a failed fetch.
+	rm -f index.html
+	curl -L -f "$url" -o index.html -s --max-time 5 || {
+		rm -f index.html
+		return 1
+	}
 }
 alter_per_url() {
         case $url in
@@ -80,13 +99,30 @@ alter_per_url() {
                		url="$(echo $url | cut -d / -f1-6)/"
                		;;
                 *)
-               
+			# A .../2.0.0/archive.tar.xz source needs the parent release list.
+			if [ "$source_version_dirs" = 1 ];then
+				url="${url%"$version"/}"
+			fi
         esac
+}
+get_source_listing_version()
+{
+	{
+		grep -Eio "$name[_-][0-9a-z.]+[.]tar[.][bgx]z2?" index.html \
+			| sed "s/$name[-_]//;s/\.tar.*//" \
+			| grep -Evi '(alpha|beta|rc|pre|latest)' \
+			| grep -Eo '([0-9]+\.)+[0-9]+'
+		if [ "$source_version_dirs" = 1 ];then
+			# Match release directory links, not dates or unrelated page text.
+			grep -Eio "href=['\"][0-9]+([.][0-9]+)+/['\"]" index.html \
+				| grep -Eo '([0-9]+\.)+[0-9]+'
+		fi
+	} | sort -V -r | uniq | head -n1
 }
 check_manual_upd()
 {
 	update=$(echo $ppath | sed "s/spkgbuild/override/g")
-	if [ -f $update ];then
+	if [ -f "$update" ];then
 		return 1
 	else
 		return 0
@@ -278,13 +314,7 @@ cmd_torun()
 					retry_index
 					grep_retry
 				else
-				uversion=$(grep -Eio $name[_-][0-9a-z.]+.tar.[bgx]z2? index.html \
-        				| sed "s/$name[-_]//;s/\.tar.*//" \
-        				| grep -Evi '(alpha|beta|rc|pre|latest)' \
-                                        | grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
-        				| sort -V -r \
-        				| uniq \
-        				| head -n1)
+				uversion=$(get_source_listing_version)
 				#####more robust maybe idk
 				#uversion=$(grep -Po "(?<=>)[^<>]*(?=<)" index.html \
 				#| grep -v : \

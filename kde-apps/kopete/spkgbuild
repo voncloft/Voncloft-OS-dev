@@ -4,7 +4,7 @@
 # description : Legacy instant messaging client with support for multiple chat protocols and accounts
 
 name=kopete
-version=23.08.5
+version=25.12.3
 release=1
 
 source="https://download.kde.org/Attic/release-service/$version/src/kopete-$version.tar.xz"

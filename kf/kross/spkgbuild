@@ -4,7 +4,7 @@
 # description : Legacy scripting framework for embedding scripting languages in KDE applications
 
 name=kross
-version=5.116.0
+version=6.31.0
 release=1
 
 source="https://download.kde.org/stable/frameworks/5.116/portingAids/kross-$version.tar.xz"

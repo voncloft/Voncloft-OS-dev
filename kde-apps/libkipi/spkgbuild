@@ -4,7 +4,7 @@
 # description : Legacy plugin interface for sharing image processing features between KDE photo applications
 
 name=libkipi
-version=24.05.2
+version=26.08.2
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/libkipi-$version.tar.xz"

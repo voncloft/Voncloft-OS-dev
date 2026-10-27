@@ -4,7 +4,7 @@
 # description : Qt Designer plugins for adding KDE widgets to application forms
 
 name=kdesignerplugin
-version=5.116.0
+version=6.31.0
 release=1
 
 source="https://download.kde.org/stable/frameworks/5.116/portingAids/kdesignerplugin-$version.tar.xz"

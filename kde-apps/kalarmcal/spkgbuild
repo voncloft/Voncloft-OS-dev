@@ -4,7 +4,7 @@
 # description : Library for storing and interpreting KAlarm reminder data in calendar files
 
 name=kalarmcal
-version=21.12.3
+version=25.12.3
 release=1
 
 source="https://download.kde.org/Attic/release-service/$version/src/kalarmcal-$version.tar.xz"

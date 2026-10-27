@@ -4,7 +4,7 @@
 # description : Legacy service and settings for custom keyboard shortcuts and mouse gesture actions
 
 name=khotkeys
-version=5.27.12
+version=6.8.1
 release=1
 
 source="https://download.kde.org/stable/plasma/$version/khotkeys-$version.tar.xz"

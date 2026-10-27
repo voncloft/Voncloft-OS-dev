@@ -2,7 +2,7 @@
 # depends :	kdecoration libkscreen libksysguard breeze breeze-gtk layer-shell-qt plasma-activities libplasma kscreenlocker
 # depends :	kinfocenter kglobalacceld kwayland kwin plasma5support plasma-activities-stats kpipewire plasma-workspace
 # depends :	plasma-disks kde-gtk-config kmenuedit kscreen kwallet-pam kwrited milou plasma-nm plasma-pa plasma-workspace-wallpapers
-# depends :	polkit-kde-agent powerdevil plasma-desktop kgamma ksshaskpass sddm-kcm kactivitymanagerd plasma-integration xdg-desktop-portal-kde
+# depends :	polkit-kde-agent-1 powerdevil plasma-desktop kgamma ksshaskpass sddm-kcm kactivitymanagerd plasma-integration xdg-desktop-portal-kde
 # depends :	drkonqi plasma-vault kde-cli-tools systemsettings plasma-thunderbolt plasma-firewall plasmasystemmonitor 
 # depends : 	qqc2-breeze-style ksystemstats oxygen-sounds kdeplasma-addons plasma-welcome ocean-sound-theme print-manager
 # depends :	wacomtablet oxygen spectacle 

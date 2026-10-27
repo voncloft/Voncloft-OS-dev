@@ -4,7 +4,7 @@
 # description : Compatibility libraries and tools for porting KDE 4 applications to KDE Frameworks 5
 
 name=kdelibs4support
-version=5.116.0
+version=6.31.0
 release=1
 
 source="https://download.kde.org/stable/frameworks/5.116/portingAids/kdelibs4support-$version.tar.xz"
