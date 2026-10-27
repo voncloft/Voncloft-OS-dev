@@ -1,0 +1,47 @@
+# description : Official OpenAI desktop application for ChatGPT conversations and Codex coding tasks
+# depends : alsa-lib at-spi2-core bash cairo coreutils cups dbus expat gcc gdk-pixbuf git glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libusb libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr mesa nspr nss openssl pango udev xdg-utils xz
+# note : Official x86_64 binary; requires OpenSSL 3 runtime libraries. TPM-backed remote-control authentication additionally needs tpm2-tss.
+
+name=chatgpt-desktop
+version=26.1021.22027
+release=1
+_package_path=pool/main/c/chatgpt/chatgpt_26.1021.22027_amd64.deb
+_sha256=eb0831c734f154f93f8ebcf0e17d118da0dea7dc1737dc61a1e71444375bf190
+source="https://persistent.oaistatic.com/codex-app-prod/linux/deb/$_package_path"
+noextract="chatgpt_${version}_amd64.deb"
+options="!strip !checksum"
+
+build() {
+    [ "$(uname -m)" = x86_64 ] || {
+        printf '%s\n' 'ChatGPT Desktop requires x86_64.' >&2
+        return 1
+    }
+
+    local archive="$SRC/chatgpt_${version}_amd64.deb"
+    local unpack="$SRC/chatgpt-deb"
+    local payload control metadata
+    printf '%s  %s\n' "$_sha256" "$archive" | sha256sum -c - || return 1
+
+    # A .deb is an ar container; unpack it before extracting its tar payload.
+    install -dm755 "$unpack" "$PKG"
+    bsdtar -xf "$archive" -o -C "$unpack" || return 1
+    local -a data_archives=("$unpack"/data.tar.*)
+    local -a control_archives=("$unpack"/control.tar.*)
+    [ "${#data_archives[@]}" = 1 ] && [ -f "${data_archives[0]}" ] || return 1
+    [ "${#control_archives[@]}" = 1 ] && [ -f "${control_archives[0]}" ] || return 1
+    payload=${data_archives[0]}
+    control=${control_archives[0]}
+    metadata=$(bsdtar -xOf "$control" ./control) || return 1
+    printf '%s\n' "$metadata" | grep -Fxq 'Package: chatgpt' || return 1
+    printf '%s\n' "$metadata" | grep -Fxq "Version: $version" || return 1
+    printf '%s\n' "$metadata" | grep -Fxq 'Architecture: amd64' || return 1
+
+    # Preserve upstream's normal /usr layout. Never run Debian maintainer scripts.
+    bsdtar -xpf "$payload" -o -C "$PKG" || return 1
+    test -x "$PKG/usr/lib/chatgpt/ChatGPT" || return 1
+    test -x "$PKG/usr/lib/chatgpt/codex-launcher" || return 1
+    test -f "$PKG/usr/share/applications/chatgpt.desktop" || return 1
+    install -dm755 "$PKG/usr/bin"
+    ln -sfn ../lib/chatgpt/codex-launcher "$PKG/usr/bin/chatgpt"
+    ln -sfn chatgpt "$PKG/usr/bin/chatgpt-desktop"
+}
