@@ -2,10 +2,10 @@
 # depends : python-sphinx
 
 name=python-sphinx-argparse
-version=0.3.1
+version=0.4.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/s/sphinx-argparse/sphinx-argparse-0.2.5.tar.gz"
+source="https://files.pythonhosted.org/packages/source/s/sphinx-argparse/sphinx_argparse-0.4.0.tar.gz"
 options="!checksum"
 
 build() {

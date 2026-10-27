@@ -2,10 +2,10 @@
    # depends : cuda nvidia-utils python-numpy python-pytools python boost-libs pycuda-headers
 
 name=python-pycuda
-version=2021.1
+version=2022.2.2
 release=5
 
-source="https://pypi.io/packages/source/p/pycuda/pycuda-2021.1.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/pycuda/pycuda-2022.2.2.tar.gz"
 options="!checksum"
 
 build() {

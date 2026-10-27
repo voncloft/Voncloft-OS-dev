@@ -2,7 +2,7 @@
 # depends       : libevdev libgudev libxml2
 
 name=libwacom
-version=2.16.1
+version=2.20.0
 release=1
 source=" https://github.com/linuxwacom/libwacom/releases/download/libwacom-$version/libwacom-$version.tar.xz"
 options="!checksum"

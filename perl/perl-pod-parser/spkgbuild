@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-pod-parser
-version=1.63
+version=1.66
 release=1
 
-source="https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.63.tar.gz"
+source="https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.66.tar.gz"
 options="!checksum"
 
 build() {

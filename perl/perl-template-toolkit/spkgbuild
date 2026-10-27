@@ -2,10 +2,10 @@
 # depends : perl-appconfig perl
 
 name=perl-template-toolkit
-version=3.009
+version=3.101
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/A/AT/ATOOMIC/Template-Toolkit-3.009.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/A/AB/ABW/Template-Toolkit-3.101.tar.gz"
 options="!checksum"
 
 build() {

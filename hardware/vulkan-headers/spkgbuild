@@ -2,7 +2,7 @@
 # depends : cmake ninja
 
 name=vulkan-headers
-version=1.4.365
+version=1.4.366
 release=1
 source="Vulkan-Headers-$version.tar.gz::https://github.com/KhronosGroup/Vulkan-Headers/archive/refs/tags/v$version.tar.gz"
 options="!checksum"

@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-email-address
-version=1.912
+version=1.913
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Email-Address-1.912.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Email-Address-1.913.tar.gz"
 options="!checksum"
 
 build() {

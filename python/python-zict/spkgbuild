@@ -2,10 +2,10 @@
 # depends : python python-heapdict
 
 name=python-zict
-version=2.0.0
+version=2.2.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/z/zict/zict-2.0.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/z/zict/zict-2.2.0.tar.gz"
 options="!checksum"
 
 build() {

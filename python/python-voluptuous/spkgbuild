@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-voluptuous
-version=0.12.2
+version=0.13.1
 release=1
 
-source="https://pypi.io/packages/source/v/voluptuous/voluptuous-0.12.2.tar.gz"
+source="https://github.com/alecthomas/voluptuous/archive/refs/tags/0.13.1/python-voluptuous-0.13.1.tar.gz"
 options="!checksum"
 
 build() {

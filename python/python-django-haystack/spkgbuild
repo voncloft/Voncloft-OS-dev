@@ -2,10 +2,10 @@
 # depends : python-django python-six
 
 name=python-django-haystack
-version=3.1.1
+version=3.2.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/django-haystack/django-haystack-3.1.1.tar.gz"
+source="https://files.pythonhosted.org/packages/source/d/django-haystack/django-haystack-3.2.1.tar.gz"
 options="!checksum"
 
 build() {

@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:23 AM EDT 2026
+
+spirv-llvm-translator-32
+Version=23.1.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.4.313.0 to version 23.1.2

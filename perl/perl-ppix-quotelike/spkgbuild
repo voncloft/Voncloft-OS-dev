@@ -2,10 +2,10 @@
 # depends : perl-ppi
 
 name=perl-ppix-quotelike
-version=0.019
+version=0.023
 release=1
 
-source="https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-QuoteLike-0.019.tar.gz"
+source="https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-QuoteLike-0.023.tar.gz"
 options="!checksum"
 
 build() {

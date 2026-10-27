@@ -2,7 +2,7 @@
 # depends : cmake dav1d libjpeg-turbo libpng libwebp make x265
 
 name=libheif
-version=1.23.6
+version=1.23.7
 release=2
 options="!checksum"
 source="libheif-1.23.6.tar.gz::https://github.com/strukturag/libheif/releases/download/v1.23.6/libheif-1.23.6.tar.gz"

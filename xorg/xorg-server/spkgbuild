@@ -2,7 +2,7 @@
 # depends       : libxcvt pixman xorg-fonts xkeyboard-config dbus elogind libepoxy libtirpc
 
 name=xorg-server
-version=21.1.18
+version=26.0.99.903
 release=1
 source=" https://www.x.org/pub/individual/xserver/xorg-server-$version.tar.xz"
 options="!checksum"

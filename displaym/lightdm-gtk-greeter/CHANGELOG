@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:20 AM EDT 2026
+
+lightdm-gtk-greeter
+Version=2.0.8
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.0.7 to version 2.0.8

@@ -2,7 +2,7 @@
 # description : KDE build tools and base dependencies
 
 name=kde-deps
-version=6.8.1
+version=26.08.2
 release=1
 options="!checksum"
 

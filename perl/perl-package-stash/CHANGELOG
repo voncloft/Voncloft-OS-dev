@@ -7,3 +7,13 @@ release=1
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:24 AM EDT 2026
+
+Version=0.40
+Release=1
+
+Synopsis:
+Upgraded from version 0.39 to version 0.40

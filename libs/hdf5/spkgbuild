@@ -2,7 +2,7 @@
 # depends : cmake gcc-fortran libaec make zlib
 
 name=hdf5
-version=1.14.6
+version=2.2.0
 release=2
 options="!checksum"
 source="hdf5-1.14.6.tar.gz::https://github.com/HDFGroup/hdf5/archive/refs/tags/hdf5_1.14.6.tar.gz"

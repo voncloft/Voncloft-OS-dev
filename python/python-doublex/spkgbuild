@@ -2,10 +2,10 @@
 # depends : python-pyhamcrest
 
 name=python-doublex
-version=1.9.3
+version=1.9.6
 release=1
 
-source="python-doublex-1.9.3.tar.bz2::https://bitbucket.org/DavidVilla/python-doublex/get/b3e935355afcfb5240bac5a99707ffecc35772a2.tar.bz2"
+source="https://github.com/davidvilla/python-doublex/archive/v1.9.6/python-doublex-1.9.6.tar.gz"
 options="!checksum"
 
 build() {

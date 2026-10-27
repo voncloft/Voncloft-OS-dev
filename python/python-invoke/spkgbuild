@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-invoke
-version=1.6.0
+version=2.1.1
 release=1
 
-source="https://pypi.io/packages/source/i/invoke/invoke-1.6.0.tar.gz"
+source="https://pypi.io/packages/source/i/invoke/invoke-2.1.1.tar.gz"
 options="!checksum"
 
 build() {

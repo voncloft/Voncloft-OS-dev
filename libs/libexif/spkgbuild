@@ -2,7 +2,7 @@
 # depends       : 
 
 name=libexif
-version=0.6.25
+version=0.6.26
 release=1
 source="https://github.com/libexif/libexif/releases/download/v$version/libexif-$version.tar.bz2"
 options="!checksum"

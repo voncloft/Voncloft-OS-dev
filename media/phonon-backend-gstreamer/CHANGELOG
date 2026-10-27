@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:22 AM EDT 2026
+
+phonon-backend-gstreamer
+Version=4.10.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.9.0 to version 4.10.0

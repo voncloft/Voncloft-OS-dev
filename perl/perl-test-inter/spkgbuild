@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-test-inter
-version=1.09
+version=1.10
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/S/SB/SBECK/Test-Inter-1.09.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/S/SB/SBECK/Test-Inter-1.10.tar.gz"
 options="!checksum"
 
 build() {

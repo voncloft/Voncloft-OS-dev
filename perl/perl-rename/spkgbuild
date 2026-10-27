@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-rename
-version=1.10
+version=1.14
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/P/PE/PEDERST/rename-1.10.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/P/PE/PEDERST/rename-1.14.tar.gz"
 options="!checksum"
 
 build() {

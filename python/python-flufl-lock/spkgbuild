@@ -2,10 +2,10 @@
 # depends : python-atpublic python-psutil
 
 name=python-flufl-lock
-version=6.0
+version=7.1.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/f/flufl.lock/flufl.lock-6.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/f/flufl.lock/flufl.lock-7.1.1.tar.gz"
 options="!checksum"
 
 build() {

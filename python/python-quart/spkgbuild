@@ -2,10 +2,10 @@
 # depends : 
 
 name=python-quart
-version=0.16.1
+version=0.18.4
 release=1
 
-source="git+https://gitlab.com/pgjones/quart.git#tag="
+source="git+https://github.com/pallets/quart.git#tag="
 options="!checksum"
 
 build() {

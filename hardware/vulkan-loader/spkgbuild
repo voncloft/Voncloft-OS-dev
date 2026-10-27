@@ -2,7 +2,7 @@
 # depends       : cmake vulkan-headers xorg-libraries wayland
 
 name=vulkan-loader
-version=1.4.313
+version=1.4.366
 release=1
 source=" https://github.com/KhronosGroup/Vulkan-Loader/archive/v1.4.313/Vulkan-Loader-1.4.313.tar.gz"
 options="!checksum"

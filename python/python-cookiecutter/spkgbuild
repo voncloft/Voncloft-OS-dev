@@ -2,10 +2,10 @@
 # depends : python-binaryornot python-click python-future python-jinja
 
 name=python-cookiecutter
-version=1.7.3
+version=2.1.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/c/cookiecutter/cookiecutter-1.7.3.tar.gz"
+source="https://files.pythonhosted.org/packages/source/c/cookiecutter/cookiecutter-2.1.1.tar.gz"
 options="!checksum"
 
 build() {

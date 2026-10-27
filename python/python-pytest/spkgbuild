@@ -2,10 +2,10 @@
 # depends : python-attrs python-iniconfig python-more-itertools python-packaging python-pluggy
 
 name=python-pytest
-version=6.2.5
+version=7.3.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pytest/pytest-6.2.5.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/pytest/pytest-7.3.1.tar.gz"
 options="!checksum"
 
 build() {

@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 19.1.0 to version 23.0.0
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:20 AM EDT 2026
+
+Version=25.0.0
+Release=1
+
+Synopsis:
+Upgraded from version 23.0.0 to version 25.0.0

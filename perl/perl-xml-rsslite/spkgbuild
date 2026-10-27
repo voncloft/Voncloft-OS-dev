@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-xml-rsslite
-version=0.15
+version=0.17
 release=6
 
-source="https://www.cpan.org/authors/id/J/JP/JPIERCE/XML-RSSLite-0.15.tgz"
+source="https://www.cpan.org/authors/id/J/JP/JPIERCE/XML-RSSLite-0.17.tgz"
 options="!checksum"
 
 build() {

@@ -57,3 +57,13 @@ release=4
 
 Synopsis:
 Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:25 AM EDT 2026
+
+Version=18.8.0
+Release=4
+
+Synopsis:
+Upgraded from version 18.6.1 to version 18.8.0

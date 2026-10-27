@@ -2,7 +2,7 @@
 # depends : avahi libvncserver libx11 libxcomposite libxcrypt libxdamage libxext libxfixes libxi libxinerama libxrandr libxtst openssl xorg-xdpyinfo tk
 
 name=x11vnc
-version=0.9.16
+version=0.9.17
 release=5
 
 source="https://github.com/LibVNC/x11vnc/archive/refs/tags/$version.tar.gz"

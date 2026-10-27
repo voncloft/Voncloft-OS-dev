@@ -2,10 +2,10 @@
 # depends : python texlive-core
 
 name=python-pyx
-version=0.15
+version=0.16
 release=4
 
-source="https://pypi.io/packages/source/p/pyx/PyX-0.15.tar.gz"
+source="https://github.com/pyx-project/pyx/archive/refs/tags/0.16/python-pyx-0.16.tar.gz"
 options="!checksum"
 
 build() {

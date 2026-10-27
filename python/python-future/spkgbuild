@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-future
-version=0.18.2
+version=0.18.3
 release=5
 
-source="https://pypi.io/packages/source/f/future/future-0.18.2.tar.gz"
+source="https://pypi.io/packages/source/f/future/future-0.18.3.tar.gz"
 options="!checksum"
 
 build() {

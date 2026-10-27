@@ -2,10 +2,10 @@
 # depends : python-rich
 
 name=python-enrich
-version=1.2.6
+version=1.2.7
 release=1
 
-source="https://files.pythonhosted.org/packages/source/e/enrich/enrich-1.2.6.tar.gz"
+source=""
 options="!checksum"
 
 build() {

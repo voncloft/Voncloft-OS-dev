@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-webcolors
-version=1.11.1
+version=1.13
 release=4
 
-source="https://pypi.io/packages/source/w/webcolors/webcolors-1.11.1.tar.gz"
+source="https://pypi.io/packages/source/w/webcolors/webcolors-1.13.tar.gz"
 options="!checksum"
 
 build() {

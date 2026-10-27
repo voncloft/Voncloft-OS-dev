@@ -2,10 +2,10 @@
 # depends : python python-google-auth python-requests-oauthlib
 
 name=python-google-auth-oauthlib
-version=0.4.6
+version=1.0.0
 release=1
 
-source="https://pypi.org/packages/source/g/google-auth-oauthlib/google-auth-oauthlib-0.4.4.tar.gz"
+source="https://pypi.org/packages/source/g/google-auth-oauthlib/google-auth-oauthlib-1.0.0.tar.gz"
 options="!checksum"
 
 build() {

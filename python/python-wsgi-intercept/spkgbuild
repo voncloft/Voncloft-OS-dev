@@ -2,10 +2,10 @@
 # depends : python-six
 
 name=python-wsgi-intercept
-version=1.9.2
+version=1.11.0
 release=2
 
-source="https://files.pythonhosted.org/packages/source/w/wsgi_intercept/wsgi_intercept-1.9.2.tar.gz"
+source="https://files.pythonhosted.org/packages/source/w/wsgi_intercept/wsgi_intercept-1.11.0.tar.gz"
 options="!checksum"
 
 build() {

@@ -3,7 +3,7 @@
 # note : Latest Eigen 3 release, matching KDE packages requesting Eigen3.
 
 name=eigen
-version=3.4.1
+version=5.0.1
 release=1
 
 source="$name-$version.tar.gz::https://gitlab.com/libeigen/eigen/-/archive/$version/eigen-$version.tar.gz"

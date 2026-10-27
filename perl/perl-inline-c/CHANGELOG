@@ -7,3 +7,13 @@ release=2
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:24 AM EDT 2026
+
+Version=0.82
+Release=2
+
+Synopsis:
+Upgraded from version 0.81 to version 0.82

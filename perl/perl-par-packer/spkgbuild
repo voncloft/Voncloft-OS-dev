@@ -2,10 +2,10 @@
 # depends : perl=5.32.0 perl-archive-zip perl-getopt-argvfile perl-ipc-run3 perl-module-scandeps
 
 name=perl-par-packer
-version=1.052
+version=1.057
 release=1
 
-source="https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/PAR-Packer-1.052.tar.gz"
+source="https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/PAR-Packer-1.057.tar.gz"
 options="!checksum"
 
 build() {

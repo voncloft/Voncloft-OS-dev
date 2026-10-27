@@ -2,10 +2,10 @@
 # depends : perl-params-validate perl-list-moreutils
 
 name=perl-datetime-locale
-version=1.32
+version=1.38
 release=2
 
-source="https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Locale-1.32.tar.gz"
+source="https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Locale-1.38.tar.gz"
 options="!checksum"
 
 build() {

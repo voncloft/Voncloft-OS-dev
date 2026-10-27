@@ -7,3 +7,13 @@ release=1
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:23 AM EDT 2026
+
+Version=1.02
+Release=1
+
+Synopsis:
+Upgraded from version 1.01 to version 1.02

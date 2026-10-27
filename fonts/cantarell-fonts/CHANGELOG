@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.201 to version 0.303
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:20 AM EDT 2026
+
+Version=0.303.1
+Release=1
+
+Synopsis:
+Upgraded from version 0.303 to version 0.303.1

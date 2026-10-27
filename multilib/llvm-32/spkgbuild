@@ -2,7 +2,7 @@
 # depends	: libxml2-32 llvm
 
 name=llvm-32
-version=20.1.7
+version=23.1.4
 release=1
 source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-${version}.src.tar.xz
 https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-20.1.7.src.tar.xz

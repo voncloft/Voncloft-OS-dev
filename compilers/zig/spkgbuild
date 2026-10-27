@@ -2,7 +2,7 @@
 # depends : clang llvm lld cmake
 
 name=zig
-version=0.9.1
+version=0.17.0
 release=1
 
 source="https://ziglang.org/download/$version/zig-$version.tar.xz

@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-pkginfo
-version=1.7.1
+version=1.9.6
 release=1
 
-source="https://pypi.io/packages/source/p/pkginfo/pkginfo-1.7.1.tar.gz"
+source="python-pkginfo-1.9.6.tar.gz::https://pypi.io/packages/source/p/pkginfo/pkginfo-1.9.6.tar.gz"
 options="!checksum"
 
 build() {

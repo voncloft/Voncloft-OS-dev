@@ -2,10 +2,10 @@
 # depends : perl perl-html-parser
 
 name=perl-cgi
-version=4.53
+version=4.56
 release=1
 
-source="https://cpan.metacpan.org/authors/id/L/LE/LEEJO/CGI-4.53.tar.gz"
+source="https://cpan.metacpan.org/authors/id/L/LE/LEEJO/CGI-4.56.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : perl-b-keywords perl-config-tiny perl-exception-class perl-file-homedir
 
 name=perl-perl-critic
-version=1.140
+version=1.148
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Perl-Critic-1.140.tar.gz"
+source="https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Perl-Critic-1.148.tar.gz"
 options="!checksum"
 
 build() {

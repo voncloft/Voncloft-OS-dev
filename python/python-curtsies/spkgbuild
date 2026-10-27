@@ -2,10 +2,10 @@
 # depends : python-blessings python-wcwidth
 
 name=python-curtsies
-version=0.3.5
+version=0.4.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/c/curtsies/curtsies-0.3.5.tar.gz"
+source="https://files.pythonhosted.org/packages/source/c/curtsies/curtsies-0.4.1.tar.gz"
 options="!checksum"
 
 build() {

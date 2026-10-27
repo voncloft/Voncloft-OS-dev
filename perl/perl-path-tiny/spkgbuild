@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-path-tiny
-version=0.120
+version=0.144
 release=1
 
-source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.120.tar.gz"
+source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.144.tar.gz"
 options="!checksum"
 
 build() {

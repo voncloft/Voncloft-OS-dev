@@ -2,10 +2,10 @@
 # depends : openssl
 
 name=perl-net-ssleay
-version=1.90
+version=1.92
 release=2
 
-source="https://cpan.metacpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.90.tar.gz"
+source="https://cpan.metacpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.92.tar.gz"
 options="!checksum"
 
 build() {

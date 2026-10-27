@@ -7,3 +7,13 @@ Release=2
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.003006 to version 2.005004
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:24 AM EDT 2026
+
+Version=2.005005
+Release=3
+
+Synopsis:
+Upgraded from version 2.005004 to version 2.005005

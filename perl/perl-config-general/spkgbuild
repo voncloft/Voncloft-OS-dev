@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-config-general
-version=2.63
+version=2.65
 release=4
 
-source="https://www.cpan.org/modules/by-module//--2.63.tar.gz"
+source="https://www.cpan.org/modules/by-module//--2.65.tar.gz"
 options="!checksum"
 
 build() {

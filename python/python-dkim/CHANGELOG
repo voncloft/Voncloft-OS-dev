@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:26 AM EDT 2026
+
+python-dkim
+Version=1.1.4
+Release=4
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.0.5 to version 1.1.4

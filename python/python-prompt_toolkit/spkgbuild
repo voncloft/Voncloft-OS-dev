@@ -2,10 +2,10 @@
 # depends : python-pygments
 
 name=python-prompt_toolkit
-version=3.0.24
+version=3.0.38
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/prompt_toolkit/prompt_toolkit-3.0.24.tar.gz"
+source="python-prompt_toolkit::git+https://github.com/jonathanslenders/python-prompt-toolkit#commit=75d591dced2e225c31a897527b6672217b4aae91"
 options="!checksum"
 
 build() {

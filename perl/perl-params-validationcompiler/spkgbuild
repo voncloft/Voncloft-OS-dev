@@ -2,10 +2,10 @@
 # depends : perl-role-tiny perl-eval-closure perl-exception-class
 
 name=perl-params-validationcompiler
-version=0.30
+version=0.31
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/Params-ValidationCompiler-0.30.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/Params-ValidationCompiler-0.31.tar.gz"
 options="!checksum"
 
 build() {

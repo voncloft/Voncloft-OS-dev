@@ -2,10 +2,10 @@
 # depends : perl perl-email-date-format
 
 name=perl-email-simple
-version=2.216
+version=2.218
 release=2
 
-source="https://www.cpan.org/authors/id/R/RJ/RJBS/Email-Simple-2.216.tar.gz"
+source="https://www.cpan.org/authors/id/R/RJ/RJBS/Email-Simple-2.218.tar.gz"
 options="!checksum"
 
 build() {

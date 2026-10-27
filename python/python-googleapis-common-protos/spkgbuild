@@ -2,10 +2,10 @@
 # depends : python-protobuf
 
 name=python-googleapis-common-protos
-version=1.53.0
+version=1.59.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/g/googleapis-common-protos/googleapis-common-protos-1.53.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/g/googleapis-common-protos/googleapis-common-protos-1.59.0.tar.gz"
 options="!checksum"
 
 build() {

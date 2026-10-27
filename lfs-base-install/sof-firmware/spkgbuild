@@ -1,7 +1,7 @@
 # description	: Firmware files for soundcard - YOU WILL NEED THIS FOR LINUX
 
 name=sof-firmware
-version=2025.05
+version=2026.09.2
 release=1
 options="!strip"
 source="https://github.com/thesofproject/sof-bin/releases/download/v$pkgver/sof-bin-$pkgver.tar.gz"

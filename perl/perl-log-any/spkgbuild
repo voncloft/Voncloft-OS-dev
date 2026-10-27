@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-log-any
-version=1.710
+version=1.714
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PR/PREACTION/Log-Any-1.710.tar.gz"
+source="https://cpan.metacpan.org/authors/id/P/PR/PREACTION/Log-Any-1.714.tar.gz"
 options="!checksum"
 
 build() {

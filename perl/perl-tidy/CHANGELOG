@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 20210111 to version 20210402
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:25 AM EDT 2026
+
+Version=20230309
+Release=1
+
+Synopsis:
+Upgraded from version 20210402 to version 20230309

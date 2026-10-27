@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:23 AM EDT 2026
+
+virtualbox-ose-additions
+Version=7.2.22
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 6.1.10 to version 7.2.22

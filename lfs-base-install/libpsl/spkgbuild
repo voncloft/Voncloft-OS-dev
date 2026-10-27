@@ -2,7 +2,7 @@
 # depends       : libidn2 libunistring
 
 name=libpsl
-version=0.21.5    
+version=0.23.3    
 release=1
 source="https://github.com/rockdaboot/libpsl/releases/download/0.21.5/libpsl-0.21.5.tar.gz"
 

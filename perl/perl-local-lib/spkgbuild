@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-local-lib
-version=2.000024
+version=2.000029
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/H/HA/HAARG/local-lib-2.000024.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/H/HA/HAARG/local-lib-2.000029.tar.gz"
 options="!checksum"
 
 build() {

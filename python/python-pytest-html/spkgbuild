@@ -2,10 +2,10 @@
 # depends : python-pytest python-pytest-metadata
 
 name=python-pytest-html
-version=3.1.1
+version=3.2.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-html/pytest-html-3.1.1.tar.gz"
+source=""
 options="!checksum"
 
 build() {

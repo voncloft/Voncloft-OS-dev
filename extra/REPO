@@ -106,8 +106,8 @@ f:9d329f4b1e3d7462f11f21eb3209e389:anki/CHANGELOG
 f:63a2d9d21ef18f6176b2aedae0902c9a:anki/spkgbuild
 f:381c645225c109704040d56eda836e13:anki/override
 f:6c462a9e6bab116ba8d1be9d7c498d17:nspr/.pkgfiles
-f:0efcabdfee4823b2ea38632d52775c52:nspr/CHANGELOG
-f:90c19a87de1de41501846555d65b0c84:nspr/spkgbuild
+f:f5e6d243e7d0cf6de09281ce8abd032c:nspr/CHANGELOG
+f:915ced0a6dea208581d0a47cd5289e9a:nspr/spkgbuild
 f:b67368e78838b26c4777723bab45cc3b:nspr/override
 f:1cf09a11e2ef38d763bb5b68b1f1a7d7:protobuf/.pkgfiles
 f:985b0dcf2221d976ba9a2d1c251dac0c:protobuf/CHANGELOG
@@ -192,8 +192,8 @@ f:6b6870e6abf4653794ad75099451329d:cmatrix/CHANGELOG
 f:2012fbff5ea332ce2b2d19b327b46c93:cmatrix/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:htmlq/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:htmlq/.nanorc
-f:d6c598646e8405f39a48fdc2228b71df:htmlq/CHANGELOG
-f:dde3831e51bb911b580ee15977a4f031:htmlq/spkgbuild
+f:75e40077c529179b9a5087e0033ff25f:htmlq/CHANGELOG
+f:1f6dc224df2780d5400aa3279a01260d:htmlq/spkgbuild
 f:a29e3ca802507d76730b59739cd44085:htmlq/override
 f:f6e45406ddf40ea37185fa47512a71e4:djvulibre/CHANGELOG
 f:3bcde8d6d13a3d3e0f33f4dcbd7207eb:djvulibre/spkgbuild

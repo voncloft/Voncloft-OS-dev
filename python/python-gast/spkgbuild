@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-gast
-version=0.5.2
+version=0.5.4
 release=3
 
-source="https://pypi.io/packages/source/g/gast/gast-0.5.2.tar.gz"
+source="https://pypi.io/packages/source/g/gast/gast-0.5.4.tar.gz"
 options="!checksum"
 
 build() {

@@ -1,7 +1,7 @@
 # description	: Library that defines common error values for all GnuPG components
 
 name=libgpg-error
-version=1.55
+version=1.61
 release=1
 source="https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.55.tar.bz2"
 options="!checksum"

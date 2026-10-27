@@ -2,7 +2,7 @@
 # depends : rust libssh2 sqlite
 
 name=cargo-c
-version=0.10.14
+version=0.10.26
 release=1
 
 source="https://github.com/lu-zero/cargo-c/archive/v$version/cargo-c-$version.tar.gz"

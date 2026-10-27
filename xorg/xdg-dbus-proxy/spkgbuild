@@ -2,7 +2,7 @@
 # depends : dbus docbook-xml docbook-xsl glib libxslt meson ninja pkgconf
 
 name=xdg-dbus-proxy
-version=0.1.6
+version=0.1.9
 release=2
 source="https://github.com/flatpak/xdg-dbus-proxy/releases/download/$version/xdg-dbus-proxy-$version.tar.xz"
 

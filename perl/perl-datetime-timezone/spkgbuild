@@ -2,10 +2,10 @@
 # depends : perl-class-singleton3 perl-params-validate perl-class-load
 
 name=perl-datetime-timezone
-version=2.47
+version=2.60
 release=1
 
-source="https://www.cpan.org/CPAN/authors/id/D/DR/DROLSKY/DateTime-TimeZone-2.47.tar.gz"
+source="https://www.cpan.org/CPAN/authors/id/D/DR/DROLSKY/DateTime-TimeZone-2.60.tar.gz"
 options="!checksum"
 
 build() {

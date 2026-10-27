@@ -2,10 +2,10 @@
 # depends : python mariadb
 
 name=python-mysqlclient
-version=2.1.0
+version=2.1.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/m/mysqlclient/mysqlclient-2.1.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/m/mysqlclient/mysqlclient-2.1.1.tar.gz"
 options="!checksum"
 
 build() {

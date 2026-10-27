@@ -3,7 +3,7 @@
 
 name=virtualbox-ose-guest
 _name=VirtualBox
-version=7.0.10
+version=7.2.22
 release=1
 source="https://download.virtualbox.org/virtualbox/$version/VirtualBox-$version.tar.bz2
 	60-vboxguest.rules

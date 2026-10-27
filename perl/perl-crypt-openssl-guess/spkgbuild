@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-crypt-openssl-guess
-version=0.14
+version=0.15
 release=5
 
-source="https://cpan.metacpan.org/authors/id/A/AK/AKIYM/Crypt-OpenSSL-Guess-0.14.tar.gz"
+source="https://cpan.metacpan.org/authors/id/A/AK/AKIYM/Crypt-OpenSSL-Guess-0.15.tar.gz"
 options="!checksum"
 
 build() {

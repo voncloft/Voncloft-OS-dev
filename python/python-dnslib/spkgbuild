@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-dnslib
-version=0.9.16
+version=0.9.23
 release=2
 
-source="https://pypi.io/packages/source/d/dnslib/dnslib-0.9.16.tar.gz"
+source="https://github.com/paulc/dnslib/archive/0.9.23/python-dnslib-0.9.23.tar.gz"
 options="!checksum"
 
 build() {

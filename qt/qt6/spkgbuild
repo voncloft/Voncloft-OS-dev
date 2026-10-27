@@ -7,7 +7,7 @@
 # depends	: maven openapi-generator speech-dispatcher pipewire ccache
 
 name=qt6
-version=6.11.2
+version=6.12.0
 release=6
 source="https://download.qt.io/archive/qt/${version%.*}/$version/single/qt-everywhere-src-$version.tar.xz
 qt6-examples.cmake"

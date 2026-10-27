@@ -2,10 +2,10 @@
   # depends : python postgresql-libs
 
 name=python-psycopg2
-version=2.9.1
+version=2.9.6
 release=3
 
-source="http://initd.org/psycopg/tarballs/PSYCOPG-2-8/psycopg2-2.9.1.tar.gz"
+source="https://github.com/psycopg/psycopg2/archive/refs/tags/2.9.6.tar.gz"
 options="!checksum"
 
 build() {

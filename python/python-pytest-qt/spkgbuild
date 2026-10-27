@@ -2,10 +2,10 @@
 # depends : python-pytest
 
 name=python-pytest-qt
-version=4.0.2
+version=4.2.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-qt/pytest-qt-4.0.2.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/pytest-qt/pytest-qt-4.2.0.tar.gz"
 options="!checksum"
 
 build() {

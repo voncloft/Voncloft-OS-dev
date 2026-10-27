@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-redis
-version=3.5.3
+version=4.5.5
 release=3
 
-source="https://pypi.io/packages/source/r/redis/redis-3.5.3.tar.gz"
+source="python-redis::git+https://github.com/redis/redis-py#commit=75d591dced2e225c31a897527b6672217b4aae91"
 options="!checksum"
 
 build() {

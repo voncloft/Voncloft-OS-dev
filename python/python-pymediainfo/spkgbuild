@@ -2,10 +2,10 @@
 # depends : libmediainfo python
 
 name=python-pymediainfo
-version=5.1.0
+version=6.0.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pymediainfo/pymediainfo-5.1.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/pymediainfo/pymediainfo-6.0.1.tar.gz"
 options="!checksum"
 
 build() {

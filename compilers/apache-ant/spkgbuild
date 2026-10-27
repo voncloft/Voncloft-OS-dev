@@ -2,7 +2,7 @@
 # depends       : java-headless glib
 
 name=apache-ant
-version=1.10.15    
+version=1.10.18    
 release=1
 source="https://archive.apache.org/dist/ant/source/apache-ant-1.10.15-src.tar.xz"
 

@@ -2,7 +2,7 @@
 # description : KDE Frameworks 6 and Plasma desktop group
 
 name=kde6
-version=6.8.1
+version=26.08.2
 release=1
 options="!checksum"
 build () {

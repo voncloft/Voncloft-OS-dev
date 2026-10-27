@@ -2,7 +2,7 @@
 # depends	: docbook-xml python
 
 name=asciidoc
-version=10.2.0
+version=10.2.1
 release=1
 source="https://github.com/asciidoc-py/asciidoc-py/releases/download/10.2.0/asciidoc-10.2.0.tar.gz"
 

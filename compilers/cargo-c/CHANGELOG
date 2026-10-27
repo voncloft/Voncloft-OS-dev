@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:20 AM EDT 2026
+
+cargo-c
+Version=0.10.26
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.10.14 to version 0.10.26

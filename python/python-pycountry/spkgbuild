@@ -2,10 +2,10 @@
 # depends : python python-lxml
 
 name=python-pycountry
-version=20.7.3
+version=22.3.5
 release=3
 
-source="https://pypi.io/packages/source/p/pycountry/pycountry-20.7.3.tar.gz"
+source="https://pypi.io/packages/source/p/pycountry/pycountry-22.3.5.tar.gz"
 options="!checksum"
 
 build() {

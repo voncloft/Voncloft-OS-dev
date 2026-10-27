@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-pyroute2
-version=0.6.4
+version=0.7.7
 release=2
 
-source="https://files.pythonhosted.org/packages/source/p/pyroute2/pyroute2-0.5.19.tar.gz"
+source="pyroute2-0.7.7.tar.gz::https://github.com/svinota/pyroute2/archive/0.7.7.tar.gz"
 options="!checksum"
 
 build() {

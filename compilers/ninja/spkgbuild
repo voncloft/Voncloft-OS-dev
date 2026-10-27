@@ -2,7 +2,7 @@
 # depends	: python bash-completion
 
 name=ninja
-version=1.13.0
+version=1.13.2
 release=2
 source="https://github.com/ninja-build/ninja/archive/v$version/ninja-$version.tar.gz"
 options="!checksum"

@@ -2,10 +2,10 @@
 # depends : perl perl-xml-parser
 
 name=perl-xml-xpath
-version=1.44
+version=1.48
 release=3
 
-source="https://cpan.metacpan.org/authors/id/M/MA/MANWAR/XML-XPath-1.44.tar.gz"
+source="https://cpan.metacpan.org/authors/id/M/MA/MANWAR/XML-XPath-1.48.tar.gz"
 options="!checksum"
 
 build() {

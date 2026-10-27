@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-suds
-version=1.4.1.0
+version=1.4.2.0
 release=1
 
-source="https://pypi.io/packages/source/s/suds-py3/suds-py3-1.4.1.0.tar.gz"
+source="https://github.com/cackharot/suds-py3/archive/1.4.2.0/python-suds-1.4.2.0.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : perl-datetime-timezone perl-datetime-locale
 
 name=perl-datetime
-version=1.54
+version=1.59
 release=1
 
-source="https://www.cpan.org/CPAN/authors/id/D/DR/DROLSKY/DateTime-1.54.tar.gz"
+source="https://www.cpan.org/CPAN/authors/id/D/DR/DROLSKY/DateTime-1.59.tar.gz"
 options="!checksum"
 
 build() {

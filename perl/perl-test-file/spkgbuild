@@ -2,10 +2,10 @@
 # depends : perl-test-utf8
 
 name=perl-test-file
-version=1.448
+version=1.993
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/Test-File-1.448.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/Test-File-1.993.tar.gz"
 options="!checksum"
 
 build() {

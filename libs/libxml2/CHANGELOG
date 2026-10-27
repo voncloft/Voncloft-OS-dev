@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:22 AM EDT 2026
+
+libxml2
+Version=2.14.6
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.14.4 to version 2.14.6

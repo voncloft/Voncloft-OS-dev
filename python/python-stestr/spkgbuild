@@ -2,10 +2,10 @@
 # depends : python-future python-cliff python-pbr python-subunit python-fixtures
 
 name=python-stestr
-version=3.2.1
+version=4.0.1
 release=1
 
-source="https://pypi.io/packages/source/s/stestr/stestr-3.2.1.tar.gz"
+source="https://pypi.io/packages/source/s/stestr/stestr-4.0.1.tar.gz"
 options="!checksum"
 
 build() {

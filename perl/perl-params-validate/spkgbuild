@@ -2,10 +2,10 @@
 # depends : perl perl-module-implementation
 
 name=perl-params-validate
-version=1.30
+version=1.31
 release=5
 
-source="https://www.cpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.30.tar.gz"
+source="https://www.cpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.31.tar.gz"
 options="!checksum"
 
 build() {

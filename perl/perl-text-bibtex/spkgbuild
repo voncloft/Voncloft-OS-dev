@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-text-bibtex
-version=0.88
+version=0.89
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/A/AM/AMBS/-0.85.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/A/AM/AMBS/-0.89.tar.gz"
 options="!checksum"
 
 build() {

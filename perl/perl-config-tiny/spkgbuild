@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-config-tiny
-version=2.26
+version=2.29
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/R/RS/RSAVAGE/Config-Tiny-2.23.tgz"
+source="https://search.cpan.org/CPAN/authors/id/R/RS/RSAVAGE/Config-Tiny-2.29.tgz"
 options="!checksum"
 
 build() {

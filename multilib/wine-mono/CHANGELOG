@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:23 AM EDT 2026
+
+wine-mono
+Version=11.3.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 5.1.0 to version 11.3.0

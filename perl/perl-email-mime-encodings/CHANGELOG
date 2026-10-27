@@ -7,3 +7,13 @@ release=4
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:24 AM EDT 2026
+
+Version=1.317
+Release=4
+
+Synopsis:
+Upgraded from version 1.315 to version 1.317

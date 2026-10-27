@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-ruamel.yaml.clib
-version=0.2.6
+version=0.2.7
 release=3
 
-source="https://files.pythonhosted.org/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-0.2.6.tar.gz"
+source="https://files.pythonhosted.org/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-0.2.7.tar.gz"
 options="!checksum"
 
 build() {

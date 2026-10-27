@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:21 AM EDT 2026
+
+libnotify
+Version=0.8.9
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.8.8 to version 0.8.9

@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-business-isbn-data
-version=20210112.006
+version=20230331.001
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/-20140910.003.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/-20230331.001.tar.gz"
 options="!checksum"
 
 build() {

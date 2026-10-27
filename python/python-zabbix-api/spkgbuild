@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-zabbix-api
-version=0.5.4
+version=0.5.6
 release=2
 
-source="https://files.pythonhosted.org/packages/source/z/zabbix-api/zabbix-api-0.5.4.tar.gz"
+source="https://files.pythonhosted.org/packages/source/z/zabbix-api/zabbix-api-0.5.6.tar.gz"
 options="!checksum"
 
 build() {

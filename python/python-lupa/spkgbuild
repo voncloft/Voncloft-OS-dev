@@ -2,10 +2,10 @@
 # depends : lua53 python
 
 name=python-lupa
-version=1.10
+version=2.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/l/lupa/lupa-1.9.tar.gz"
+source="https://files.pythonhosted.org/packages/source/l/lupa/.tar.gz"
 options="!checksum"
 
 build() {

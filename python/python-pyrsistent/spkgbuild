@@ -2,10 +2,10 @@
 # depends : python-six
 
 name=python-pyrsistent
-version=0.18.0
+version=0.19.3
 release=3
 
-source="https://pypi.io/packages/source/p/pyrsistent/pyrsistent-0.18.0.tar.gz"
+source="https://github.com/tobgu/pyrsistent/archive/v0.19.3/python-pyrsistent-0.19.3.tar.gz"
 options="!checksum"
 
 build() {

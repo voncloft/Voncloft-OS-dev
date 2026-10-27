@@ -2,10 +2,10 @@
 # depends : python-easyprocess
 
 name=python-pyvirtualdisplay
-version=2.2
+version=3.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/P/PyVirtualDisplay/PyVirtualDisplay-2.2.tar.gz"
+source="https://files.pythonhosted.org/packages/source/P/PyVirtualDisplay/PyVirtualDisplay-3.0.tar.gz"
 options="!checksum"
 
 build() {

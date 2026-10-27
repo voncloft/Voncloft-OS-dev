@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:23 AM EDT 2026
+
+libva-32
+Version=2.24.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.22.0 to version 2.24.1

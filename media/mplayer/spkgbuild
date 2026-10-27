@@ -2,9 +2,9 @@
 # depends	: yasm
 
 name=mplayer
-version=1.5
+version=38412
 release=1
-source="https://mplayerhq.hu/MPlayer/releases/MPlayer-1.5.tar.xz
+source="mplayer-38412::svn://svn.mplayerhq.hu/mplayer/trunk#revision=38412
 https://www.linuxfromscratch.org/patches/blfs/12.1/MPlayer-1.5-upstream_ffmpg6_fixes-1.patch
 https://www.linuxfromscratch.org/patches/blfs/12.1/ffmpeg-6.0-binutils_2.41-1.patch
 https://mplayerhq.hu/MPlayer/skins/Clearlooks-2.0.tar.bz2"

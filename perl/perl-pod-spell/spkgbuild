@@ -2,10 +2,10 @@
 # depends : perl-class-tiny perl-file-sharedir perl-lingua-en-inflect perl-path-tiny
 
 name=perl-pod-spell
-version=1.20
+version=1.26
 release=3
 
-source="https://cpan.metacpan.org/authors/id/D/DO/DOLMEN/Pod-Spell-1.20.tar.gz"
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/Pod-Spell-1.26.tar.gz"
 options="!checksum"
 
 build() {

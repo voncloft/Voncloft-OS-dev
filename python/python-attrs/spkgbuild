@@ -2,10 +2,10 @@
 # depends	: python python-setuptools
 
 name=python-attrs
-version=21.2.0
+version=22.2.0
 release=1
 
-source="https://pypi.io/packages/source/a/attrs/attrs-21.2.0.tar.gz"
+source="https://pypi.io/packages/source/a/attrs/attrs-22.2.0.tar.gz"
 options="!checksum"
 
 build() {

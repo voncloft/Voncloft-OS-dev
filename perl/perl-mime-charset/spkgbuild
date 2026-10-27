@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-mime-charset
-version=1.012.2
+version=1.013.1
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/N/NE/NEZUMI/-1.012.2.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/N/NE/NEZUMI/-1.013.1.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-blinker
-version=1.4
+version=1.5
 release=9
 
-source="https://files.pythonhosted.org/packages/source/b/blinker/blinker-1.4.tar.gz"
+source="https://files.pythonhosted.org/packages/source/b/blinker/blinker-1.5.tar.gz"
 options="!checksum"
 
 build() {

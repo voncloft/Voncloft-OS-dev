@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-perlio-utf8-strict
-version=0.008
+version=0.009
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/L/LE/LEONT/-0.008.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/L/LE/LEONT/-0.009.tar.gz"
 options="!checksum"
 
 build() {

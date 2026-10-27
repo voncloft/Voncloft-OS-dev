@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-jeepney
-version=0.7.1
+version=0.8.0
 release=4
 
-source="https://pypi.io/packages/source/j/jeepney/jeepney-0.7.1.tar.gz"
+source="https://pypi.io/packages/source/j/jeepney/jeepney-0.8.0.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-cpan-meta-check
-version=0.014
+version=0.017
 release=6
 
-source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/CPAN-Meta-Check-0.014.tar.gz"
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/CPAN-Meta-Check-0.017.tar.gz"
 options="!checksum"
 
 build() {

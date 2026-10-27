@@ -2,10 +2,10 @@
 # depends : python-six python-setuptools python-wheel python-pip
 
 name=python-ansi2html
-version=1.6.0
+version=1.8.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/a/ansi2html/ansi2html-1.6.0.tar.gz"
+source=""
 options="!checksum"
 
 build() {

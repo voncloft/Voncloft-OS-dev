@@ -57,3 +57,13 @@ release=1
 
 Synopsis:
 Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:28 AM EDT 2026
+
+Version=3.12.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.10.1 to version 3.12.0

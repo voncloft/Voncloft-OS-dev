@@ -2,7 +2,7 @@
 # depends       : libaom gdk-pixbuf
 
 name=libavif
-version=1.3.0
+version=1.4.2
 release=1
 source=" https://github.com/AOMediaCodec/libavif/archive/v$version/libavif-$version.tar.gz"
 options="!checksum"

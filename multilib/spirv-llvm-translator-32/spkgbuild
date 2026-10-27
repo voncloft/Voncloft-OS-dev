@@ -2,7 +2,7 @@
 # depends : cmake spirv-headers ninja
 
 name=spirv-llvm-translator-32
-version=1.4.313.0
+version=23.1.2
 release=1
 
 source="https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/v20.1.4/SPIRV-LLVM-Translator-20.1.4.tar.gz"

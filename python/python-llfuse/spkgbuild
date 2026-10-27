@@ -2,10 +2,10 @@
 # depends : python fuse2
 
 name=python-llfuse
-version=1.4.1
+version=1.4.2
 release=2
 
-source="https://files.pythonhosted.org/packages/source/l/llfuse/llfuse-1.3.8.tar.gz"
+source="https://files.pythonhosted.org/packages/source/l/llfuse/llfuse-1.4.2.tar.gz"
 options="!checksum"
 
 build() {

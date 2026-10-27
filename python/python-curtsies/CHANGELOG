@@ -57,3 +57,13 @@ release=3
 
 Synopsis:
 Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:26 AM EDT 2026
+
+Version=0.4.1
+Release=3
+
+Synopsis:
+Upgraded from version 0.3.5 to version 0.4.1

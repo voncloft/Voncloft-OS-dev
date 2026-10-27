@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-regex
-version=2021.11.10
+version=2023.5.5
 release=2
 
-source="https://files.pythonhosted.org/packages/source/r/regex/regex-2021.11.10.tar.gz"
+source="https://files.pythonhosted.org/packages/source/r/regex/regex-2023.5.5.tar.gz"
 options="!checksum"
 
 build() {

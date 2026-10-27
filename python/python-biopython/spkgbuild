@@ -2,10 +2,10 @@
 # depends : python-numpy
 
 name=python-biopython
-version=1.79
+version=1.81
 release=2
 
-source="http://www.biopython.org/DIST/biopython-1.79.tar.gz"
+source="http://www.biopython.org/DIST/biopython-1.81.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python-astroid python-jinja python-sphinx python-unidecode
 
 name=python-sphinx-autoapi
-version=1.8.4
+version=2.1.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/s/sphinx-autoapi/sphinx-autoapi-1.8.4.tar.gz"
+source="https://files.pythonhosted.org/packages/source/s/sphinx-autoapi/sphinx-autoapi-2.1.0.tar.gz"
 options="!checksum"
 
 build() {

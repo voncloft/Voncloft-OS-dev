@@ -2,10 +2,10 @@
   # depends : python bluez-libs
 
 name=python-pybluez
-version=0.23
+version=0.23.r58.g4d46ce1
 release=6
 
-source="https://files.pythonhosted.org/packages/source/P/PyBluez/PyBluez-0.23.tar.gz"
+source=""
 options="!checksum"
 
 build() {

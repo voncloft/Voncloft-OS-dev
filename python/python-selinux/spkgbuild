@@ -2,10 +2,10 @@
 # depends : python-distro python-setuptools
 
 name=python-selinux
-version=0.2.1
+version=0.3.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/s/selinux/selinux-0.2.1.tar.gz"
+source="https://files.pythonhosted.org/packages/source/s/selinux/selinux-0.3.0.tar.gz"
 options="!checksum"
 
 build() {

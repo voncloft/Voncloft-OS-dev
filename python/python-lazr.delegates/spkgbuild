@@ -2,10 +2,10 @@
 # depends : python-nose python-setuptools python-zope-interface
 
 name=python-lazr.delegates
-version=2.0.4
+version=2.1.0
 release=5
 
-source="https://files.pythonhosted.org/packages/source/l/lazr.delegates/lazr.delegates-2.0.4.tar.gz"
+source="https://files.pythonhosted.org/packages/source/l/lazr.delegates/lazr.delegates-2.1.0.tar.gz"
 options="!checksum"
 
 build() {

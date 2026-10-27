@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 6.52 to version 6.57
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:24 AM EDT 2026
+
+Version=6.67
+Release=1
+
+Synopsis:
+Upgraded from version 6.57 to version 6.67

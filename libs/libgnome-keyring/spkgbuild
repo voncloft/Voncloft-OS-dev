@@ -2,7 +2,7 @@
 # depends	: glib dbus libgcrypt libgpg-error vala glib
 
 name=libgnome-keyring
-version=3.12.0
+version=3.12.0+13+g4f8ab73
 release=2
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
 

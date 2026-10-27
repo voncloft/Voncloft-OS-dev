@@ -2,10 +2,10 @@
 # depends : python-setuptools
 
 name=python-cloudpickle
-version=2.0.0
+version=2.2.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/c/cloudpickle/cloudpickle-1.6.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/c/cloudpickle/cloudpickle-2.2.1.tar.gz"
 options="!checksum"
 
 build() {

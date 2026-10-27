@@ -2,7 +2,7 @@
 # depends       : 
 
 name=pcre2-32
-version=10.45    
+version=10.49    
 release=1
 source="https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.45/pcre2-10.45.tar.bz2"
 

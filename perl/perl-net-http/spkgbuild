@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-net-http
-version=6.21
+version=6.22
 release=1
 
-source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Net-HTTP-6.21.tar.gz"
+source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/Net-HTTP-6.22.tar.gz"
 options="!checksum"
 
 build() {

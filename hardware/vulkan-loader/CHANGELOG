@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:20 AM EDT 2026
+
+vulkan-loader
+Version=1.4.366
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.4.313 to version 1.4.366

@@ -2,7 +2,7 @@
 # depends : kde-deps
 
 name=kwin-effects-cube
-version=1.0.0
+version=2.0.0
 release=1
 
 source="https://github.com/zzag/kwin-effects-cube/archive/refs/tags/$version.tar.gz"

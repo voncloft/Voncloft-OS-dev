@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-falcon
-version=3.0.1
+version=3.1.1
 release=6
 
-source="https://files.pythonhosted.org/packages/source/f/falcon/falcon-3.0.1.tar.gz"
+source="falcon-3.1.1.tar.gz::https://github.com/falconry/falcon/archive/refs/tags/3.1.1.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-jsonpointer
-version=2.1
+version=2.3
 release=7
 
-source="https://pypi.io/packages/source/j/jsonpointer/jsonpointer-2.1.tar.gz"
+source="https://pypi.io/packages/source/j/jsonpointer/jsonpointer-2.3.tar.gz"
 options="!checksum"
 
 build() {

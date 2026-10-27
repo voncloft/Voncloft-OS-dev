@@ -2,7 +2,7 @@
 # depends :
 
 name=wxwidgets
-version=3.2.9
+version=3.3.4
 release=1
 
 source="https://github.com/wxWidgets/wxWidgets/releases/download/v$version/wxWidgets-$version.tar.bz2"

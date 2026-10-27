@@ -1,7 +1,7 @@
 # description	: utilities and libraries for handling ELF files
 
 name=elfutils
-version=0.193
+version=0.197
 release=1
 source="https://sourceware.org/ftp/elfutils/0.193/elfutils-$version.tar.bz2"
 

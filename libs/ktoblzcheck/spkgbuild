@@ -2,7 +2,7 @@
 # depends : python cmake
 
 name=ktoblzcheck
-version=1.52
+version=1.53
 release=3
 
 source="https://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz"

@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-image-info
-version=1.42
+version=1.43
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/S/SR/SREZIC/Image-Info-1.41.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/S/SR/SREZIC/Image-Info-1.43.tar.gz"
 options="!checksum"
 
 build() {

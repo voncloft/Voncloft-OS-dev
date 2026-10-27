@@ -2,10 +2,10 @@
 # depends : python-numpy python-cftime netcdf
 
 name=python-netcdf4
-version=1.5.7
+version=1.6.3
 release=1
 
-source="https://files.pythonhosted.org/packages/source/n/netCDF4/netCDF4-1.5.7.tar.gz"
+source="https://files.pythonhosted.org/packages/source/n/netCDF4/netCDF4-1.6.3.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-bidict
-version=0.21.3
+version=0.22.1
 release=2
 
-source="https://files.pythonhosted.org/packages/source/b/bidict/bidict-0.21.3.tar.gz"
+source="https://github.com/jab/bidict/archive/refs/tags/v0.22.1/python-bidict-0.22.1.tar.gz"
 options="!checksum"
 
 build() {

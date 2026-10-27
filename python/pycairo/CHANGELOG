@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:25 AM EDT 2026
+
+pycairo
+Version=1.29.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.28.0 to version 1.29.2

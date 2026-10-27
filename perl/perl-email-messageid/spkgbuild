@@ -2,10 +2,10 @@
 # depends : perl-email-address0
 
 name=perl-email-messageid
-version=1.406
+version=1.408
 release=4
 
-source="https://www.cpan.org/authors/id/R/RJ/RJBS/Email-MessageID-1.406.tar.gz"
+source="https://www.cpan.org/authors/id/R/RJ/RJBS/Email-MessageID-1.408.tar.gz"
 options="!checksum"
 
 build() {

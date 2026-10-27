@@ -2,10 +2,10 @@
 # depends : python-coverage python-six
 
 name=python-nose2
-version=0.10.0
+version=0.13.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/n/nose2/nose2-0.10.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/n/nose2/nose2-0.13.0.tar.gz"
 options="!checksum"
 
 build() {

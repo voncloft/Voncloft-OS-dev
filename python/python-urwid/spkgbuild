@@ -2,10 +2,10 @@
 # depends : python glibc
 
 name=python-urwid
-version=2.1.2
+version=2.1.2.r56.gabc098c
 release=3
 
-source="https://pypi.org/packages/source/u/urwid/urwid-2.1.2.tar.gz"
+source=""
 options="!checksum"
 
 build() {

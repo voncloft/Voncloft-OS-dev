@@ -2,10 +2,10 @@
 # description : Minimalist Object Orientation with Moose compatiblity
 
 name=perl-moo
-version=2.005004
+version=2.005005
 release=3
 
-source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.005004.tar.gz"
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-2.005005.tar.gz"
 options="!checksum"
 
 build() {

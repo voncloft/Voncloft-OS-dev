@@ -3,7 +3,7 @@
 # note : SysVinit build supports per-user Flatpak installs; privileged system helper disabled.
 
 name=flatpak
-version=1.18.4
+version=1.19.2
 release=2
 
 source="$name-$version.tar.xz::https://github.com/flatpak/flatpak/releases/download/$version/flatpak-$version.tar.xz"

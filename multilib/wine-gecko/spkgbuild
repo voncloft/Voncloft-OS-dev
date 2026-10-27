@@ -2,7 +2,7 @@
 # depends	: wine
 
 name=wine-gecko
-version=2.47
+version=2.47.4
 release=1
 options="!strip"
 source="http://dl.winehq.org/wine/wine-gecko/$version/wine_gecko-$version-x86_64.msi

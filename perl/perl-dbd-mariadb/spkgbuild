@@ -2,10 +2,10 @@
 # depends : mariadb perl-dbi
 
 name=perl-dbd-mariadb
-version=1.21
+version=1.22
 release=1
 
-source="https://cpan.metacpan.org/authors/id/P/PA/PALI/DBD-MariaDB-1.21.tar.gz"
+source="https://cpan.metacpan.org/authors/id/P/PA/PALI/DBD-MariaDB-1.22.tar.gz"
 options="!checksum"
 
 build() {

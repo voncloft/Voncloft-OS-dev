@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-more-itertools
-version=8.10.0
+version=9.1.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/m/more-itertools/more-itertools-8.10.0.tar.gz"
+source="python-more-itertools::git+https://github.com/more-itertools/more-itertools#commit=75d591dced2e225c31a897527b6672217b4aae91"
 options="!checksum"
 
 build() {

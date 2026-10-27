@@ -2,10 +2,10 @@
 # depends : perl-xml-libxml libxslt
 
 name=perl-xml-libxslt
-version=1.99
+version=2.002001
 release=2
 
-source="https://www.cpan.org/authors/id/S/SH/SHLOMIF/XML-LibXSLT-1.99.tar.gz"
+source="https://www.cpan.org/authors/id/S/SH/SHLOMIF/XML-LibXSLT-2.002001.tar.gz"
 options="!checksum"
 
 build() {

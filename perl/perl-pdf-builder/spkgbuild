@@ -2,10 +2,10 @@
 # depends : perl perl-font-ttf
 
 name=perl-pdf-builder
-version=3.023
+version=3.025
 release=1
 
-source="https://www.cpan.org/modules/by-module//--3.022.tar.gz"
+source="https://www.cpan.org/modules/by-module//--3.025.tar.gz"
 options="!checksum"
 
 build() {

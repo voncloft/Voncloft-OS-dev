@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:21 AM EDT 2026
+
+hdf5
+Version=2.2.0
+Release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.14.6 to version 2.2.0

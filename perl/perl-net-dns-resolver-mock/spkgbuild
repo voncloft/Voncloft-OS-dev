@@ -2,10 +2,10 @@
 # depends : perl-net-dns
 
 name=perl-net-dns-resolver-mock
-version=1.20200215
+version=1.20230216
 release=3
 
-source="https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/Net-DNS-Resolver-Mock-1.20200215.tar.gz"
+source="https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/Net-DNS-Resolver-Mock-1.20230216.tar.gz"
 options="!checksum"
 
 build() {

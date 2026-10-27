@@ -2,10 +2,10 @@
 # depends : perl perl-text-diff perl-file-slurp perl-tidy perl-file-finder
 
 name=perl-test-perltidy
-version=20210709
+version=20230226
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/L/LA/LARRYL/Test-PerlTidy-20130104.tar.gz"
+source="https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Test-PerlTidy-20230226.tar.gz"
 options="!checksum"
 
 build() {

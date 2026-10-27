@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:21 AM EDT 2026
+
+libsecret
+Version=0.21.8.2
+Release=2
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.21.7 to version 0.21.8.2

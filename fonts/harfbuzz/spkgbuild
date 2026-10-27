@@ -2,7 +2,7 @@
 # depends	: glib freetype2 graphite2 icu
 
 name=harfbuzz
-version=11.2.1
+version=15.0.0
 release=1
 source="https://github.com/harfbuzz/harfbuzz/releases/download/$version/harfbuzz-$version.tar.xz"
 

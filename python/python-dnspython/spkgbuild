@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-dnspython
-version=2.1.0
+version=2.3.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/dnspython/dnspython-2.1.0.zip"
+source="https://files.pythonhosted.org/packages/source/d/dnspython/dnspython-2.3.0.tar.gz"
 options="!checksum"
 
 build() {

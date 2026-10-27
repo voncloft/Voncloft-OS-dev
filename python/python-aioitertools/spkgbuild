@@ -2,10 +2,10 @@
 # depends : python python-typing_extensions
 
 name=python-aioitertools
-version=0.8.0
+version=0.11.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/a/aioitertools/aioitertools-0.8.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/a/aioitertools/aioitertools-0.11.0.tar.gz"
 options="!checksum"
 
 build() {

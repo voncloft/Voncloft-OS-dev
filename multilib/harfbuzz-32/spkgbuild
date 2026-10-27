@@ -1,7 +1,7 @@
 # description   : The HarfBuzz package contains an OpenType text shaping engine
 
 name=harfbuzz-32
-version=11.2.1    
+version=15.0.0    
 release=1
 source="https://github.com/harfbuzz/harfbuzz/releases/download/11.2.1/harfbuzz-11.2.1.tar.xz"
 

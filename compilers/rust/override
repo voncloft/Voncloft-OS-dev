@@ -1,19 +1,26 @@
-source="https://www.rust-lang.org/"
-get_generic(){
-	uversion=$(grep -i "href" index.html \
-	| grep html \
-	| grep -Po "(?<=>)[^<>]*(?=<)" \
-	| sed "s/Version //g")
-	new_file=/Voncloft-OS/REPOS/$(echo $ppath | sed "s/override/spkgbuild/g")
-	#echo $new_file
-	sed -i -e "s/_rust=$_rust/_rust=$uversion/g" $new_file
-        sed -i -e "s/_cargo=$_cargo/_cargo=$uversion/g" $new_file
-	year=$(grep -i "href" index.html         | grep html | grep '<a href=".*">' | cut -d / -f4 | head -n1)
-	month=$(grep -i "href" index.html         | grep html | grep '<a href=".*">' | cut -d / -f5)
-	day=$(grep -i "href" index.html         | grep html | grep '<a href=".*">' | cut -d / -f6)
-	#echo $month-$day-$year
-	sed -i -e "s/_date=$_date/_date=$year-$month-$day/g" $new_file
-	spkg=$(echo $new_file | sed "s/\/Voncloft-OS\///g")
-	echo -e "${CYAN}Notice:    Upgraded cargo, rust, and date flags for $spkg${NC}"
+source="https://static.rust-lang.org/dist/channel-rust-stable.toml"
+# update-repo sources the override again before fetching its version data.
+url=$source
 
+get_generic()
+{
+    local latest
+    unset uversion
+    # Read the stable Rust version, not Cargo's separate version or a target URL.
+    latest=$(awk '
+        /^\[pkg\.rust\][[:space:]]*$/ { rust = 1; next }
+        /^\[/ { rust = 0 }
+        rust && /^[[:space:]]*version[[:space:]]*=/ {
+            split($0, quoted, "\"")
+            split(quoted[2], fields, /[[:space:]]+/)
+            print fields[1]
+            exit
+        }
+    ' index.html) || return 1
+    if [[ ! $latest =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        echo 'ERROR: Unable to read the stable Rust version from its channel manifest' >&2
+        return 1
+    fi
+    # Leave all recipe changes to update-repo so -t remains a test run.
+    uversion=$latest
 }

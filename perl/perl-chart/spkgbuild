@@ -2,10 +2,10 @@
 # depends : perl-gd
 
 name=perl-chart
-version=2.4.10
+version=2.403.7
 release=4
 
-source="https://www.cpan.org/authors/id/C/CH/CHARTGRP/Chart-2.4.10.tar.gz"
+source="https://www.cpan.org/authors/id/L/LI/LICHTKIND/Chart-v2.403.7.tar.gz"
 options="!checksum"
 
 build() {

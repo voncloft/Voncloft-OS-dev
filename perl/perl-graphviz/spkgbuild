@@ -2,10 +2,10 @@
 # depends : graphviz perl-file-which perl-ipc-run perl-libwww perl-parse-recdescent
 
 name=perl-graphviz
-version=2.24
+version=2.25
 release=6
 
-source="https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/GraphViz-2.24.tgz"
+source="https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphViz-2.25.tar.gz"
 options="!checksum"
 
 build() {

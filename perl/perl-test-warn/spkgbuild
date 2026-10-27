@@ -2,10 +2,10 @@
 # depends : perl-tree-dag-node perl-sub-uplevel perl
 
 name=perl-test-warn
-version=0.36
+version=0.37
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/B/BI/BIGJ/Test-Warn-0.36.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/B/BI/BIGJ/Test-Warn-0.37.tar.gz"
 options="!checksum"
 
 build() {

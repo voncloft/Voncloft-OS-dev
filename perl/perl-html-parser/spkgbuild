@@ -2,10 +2,10 @@
 # depends : perl-html-tagset perl-http-message perl-uri
 
 name=perl-html-parser
-version=3.76
+version=3.81
 release=1
 
-source="https://www.cpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.76.tar.gz"
+source="https://www.cpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.81.tar.gz"
 options="!checksum"
 
 build() {

@@ -7,3 +7,13 @@ release=5
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 04:19:25 AM EDT 2026
+
+Version=0.63
+Release=5
+
+Synopsis:
+Upgraded from version 0.62 to version 0.63

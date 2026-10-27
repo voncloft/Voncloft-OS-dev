@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-asgiref
-version=3.4.1
+version=3.6.0
 release=1
 
-source="https://pypi.io/packages/source/a/asgiref/asgiref-3.4.1.tar.gz"
+source="https://pypi.io/packages/source/a/asgiref/asgiref-3.6.0.tar.gz"
 options="!checksum"
 
 build() {

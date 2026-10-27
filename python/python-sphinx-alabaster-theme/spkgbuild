@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-sphinx-alabaster-theme
-version=0.7.12
+version=0.7.13
 release=6
 
-source="https://pypi.org/packages/source/a/alabaster/alabaster-0.7.12.tar.gz"
+source="https://files.pythonhosted.org/packages/source/a/alabaster/alabaster-0.7.13.tar.gz"
 options="!checksum"
 
 build() {

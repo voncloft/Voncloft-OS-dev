@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-zopfli
-version=0.1.9
+version=0.2.2
 release=3
 
-source="https://files.pythonhosted.org/packages/source/z/zopfli/zopfli-0.1.9.zip"
+source="https://files.pythonhosted.org/packages/source/z/zopfli/zopfli-0.2.2.zip"
 options="!checksum"
 
 build() {

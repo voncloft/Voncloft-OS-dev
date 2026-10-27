@@ -2,10 +2,10 @@
 # depends : perl-importer
 
 name=perl-term-table
-version=0.015
+version=0.016
 release=2
 
-source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Term-Table-0.015.tar.gz"
+source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Term-Table-0.016.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python-numpy python-six
 
 name=python-py_stringmatching
-version=0.4.2
+version=0.4.3
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/py_stringmatching/py_stringmatching-0.4.2.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/py_stringmatching/py_stringmatching-0.4.3.tar.gz"
 options="!checksum"
 
 build() {

@@ -1,7 +1,7 @@
 # description	: Firmware files for Linux
 
 name=linux-firmware
-version=20211027.1d00989
+version=20230404.2e92a49f
 release=1
 options="!strip"
 source="git+https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git#tag=?signed"

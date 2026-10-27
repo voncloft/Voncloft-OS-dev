@@ -2,10 +2,10 @@
 # depends : python-atpublic
 
 name=python-flufl.i18n
-version=3.2
+version=4.1.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/f/flufl.i18n/flufl.i18n-3.2.tar.gz"
+source="https://files.pythonhosted.org/packages/source/f/flufl.i18n/flufl.i18n-4.1.1.tar.gz"
 options="!checksum"
 
 build() {

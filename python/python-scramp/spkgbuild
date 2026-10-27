@@ -2,10 +2,10 @@
 # depends : python python-asn1crypto
 
 name=python-scramp
-version=1.4.1
+version=1.4.4
 release=1
 
-source="https://files.pythonhosted.org/packages/source/s/scramp/scramp-1.4.1.tar.gz"
+source="https://files.pythonhosted.org/packages/source/s/scramp/scramp-1.4.4.tar.gz"
 options="!checksum"
 
 build() {

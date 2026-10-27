@@ -2,10 +2,10 @@
 # depends : perl-try-tiny
 
 name=perl-test-fatal
-version=0.016
+version=0.017
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Test-Fatal-0.016.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Test-Fatal-0.017.tar.gz"
 options="!checksum"
 
 build() {

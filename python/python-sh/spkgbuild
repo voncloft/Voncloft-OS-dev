@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-sh
-version=1.14.2
+version=1.14.3
 release=3
 
-source="https://pypi.io/packages/source/s/sh/sh-1.14.2.tar.gz"
+source="https://pypi.io/packages/source/s/sh/sh-1.14.3.tar.gz"
 options="!checksum"
 
 build() {

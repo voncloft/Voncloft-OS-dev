@@ -2,10 +2,10 @@
 	# depends : python
 
 name=python-pycryptodomex
-version=3.10.1
+version=3.12.0
 release=1
 
-source="https://pypi.org/packages/source/p/pycryptodomex/pycryptodomex-3.10.1.tar.gz"
+source="https://pypi.org/packages/source/p/pycryptodomex/pycryptodomex-3.12.0.zip"
 options="!checksum"
 
 build() {

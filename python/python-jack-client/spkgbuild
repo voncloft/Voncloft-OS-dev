@@ -2,10 +2,10 @@
 # depends : jack python-cffi
 
 name=python-jack-client
-version=0.5.3
+version=0.5.4
 release=2
 
-source="https://files.pythonhosted.org/packages/source/J/JACK-Client/JACK-Client-0.5.3.tar.gz"
+source="https://files.pythonhosted.org/packages/source/J/JACK-Client/JACK-Client-0.5.4.tar.gz"
 options="!checksum"
 
 build() {

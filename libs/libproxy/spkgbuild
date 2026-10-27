@@ -2,7 +2,7 @@
 # depends       : curl duktape glib gi-docgen gsettings-desktop-schemas vala
 
 name=libproxy
-version=0.5.10
+version=0.5.12
 release=1
 source=" https://github.com/libproxy/libproxy/archive/$version/libproxy-0.$version.tar.gz"
 options="!checksum"

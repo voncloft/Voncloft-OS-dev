@@ -2,10 +2,10 @@
 # depends : glib-perl glib-runtime
 
 name=perl-glib-object-introspection
-version=0.049
+version=0.050
 release=5
 
-source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/--0.047.tar.gz"
+source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/--0.050.tar.gz"
 options="!checksum"
 
 build() {

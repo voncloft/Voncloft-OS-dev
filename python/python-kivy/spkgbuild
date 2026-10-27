@@ -2,10 +2,10 @@
 # depends : python-docutils gstreamer sdl2_ttf sdl2_mixer sdl2_image
 
 name=python-kivy
-version=2.0.0
+version=2.1.0
 release=1
 
-source="https://pypi.io/packages/source/K/Kivy/Kivy-2.0.0.tar.gz"
+source="https://pypi.io/packages/source/K/Kivy/Kivy-2.1.0.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python-lazr.delegates python-zope-interface
 
 name=python-lazr.config
-version=2.2.3
+version=3.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/l/lazr.config/lazr.config-2.2.3.tar.gz"
+source="https://files.pythonhosted.org/packages/source/l/lazr.config/lazr.config-3.0.tar.gz"
 options="!checksum"
 
 build() {

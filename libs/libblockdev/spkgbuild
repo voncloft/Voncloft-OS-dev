@@ -2,7 +2,7 @@
 # depends	: glib cryptsetup keyutils libatasmart libbytesize libnvme lvm2
 
 name=libblockdev
-version=3.3.1
+version=3.5.0
 release=1
 source="https://github.com/storaged-project/libblockdev/releases/download/$version/$name-$version.tar.gz"
 

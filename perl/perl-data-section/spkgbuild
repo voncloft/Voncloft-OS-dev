@@ -2,10 +2,10 @@
 # depends : perl-mro-compat perl-sub-exporter
 
 name=perl-data-section
-version=0.200007
+version=0.200008
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Data-Section-0.200007.tar.gz"
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-Section-0.200008.tar.gz"
 options="!checksum"
 
 build() {

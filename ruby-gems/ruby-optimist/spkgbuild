@@ -2,7 +2,7 @@
 # depends : ruby ruby-bundler
 
 name=ruby-optimist
-version=3.0.1
+version=3.2.1
 release=2
 _gemname=optimist
 

@@ -2,10 +2,10 @@
 # depends : python
 
 name=python-certifi
-version=2021.10.8
+version=2022.12.07
 release=3
 
-source="https://pypi.io/packages/source/c/certifi/certifi-2021.10.8.tar.gz"
+source="https://github.com/certifi/python-certifi/archive/2022.12.07/python-certifi-2022.12.07.tar.gz"
 options="!checksum"
 
 build() {

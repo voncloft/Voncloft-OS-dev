@@ -2,10 +2,10 @@
 # depends : perl-data-munge
 
 name=perl-return-multilevel
-version=0.06
+version=0.08
 release=3
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Return-MultiLevel-0.06.tar.gz"
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Return-MultiLevel-0.08.tar.gz"
 options="!checksum"
 
 build() {

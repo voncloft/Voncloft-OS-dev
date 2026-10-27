@@ -2,7 +2,7 @@
 # depends       : cmake libarchive ffmpeg gst-plugins-base gtk3 jasper libavif libexif libjpeg-turbo libpng libtiff libwebp openjpeg v4l-utils
 
 name=opencv
-version=4.12.0
+version=5.0.0
 release=3
 source=" https://github.com/opencv/opencv/archive/$version/opencv-$version.tar.gz
 	https://github.com/opencv/opencv_contrib/archive/4.12.0/opencv_contrib-$version.tar.gz"

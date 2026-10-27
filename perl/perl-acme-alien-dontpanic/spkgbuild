@@ -2,10 +2,10 @@
 # depends : dontpanic perl-alien-build
 
 name=perl-acme-alien-dontpanic
-version=2.2900
+version=2.7200
 release=1
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Acme-Alien-DontPanic-2.2900.tar.gz"
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Acme-Alien-DontPanic-2.7200.tar.gz"
 options="!checksum"
 
 build() {

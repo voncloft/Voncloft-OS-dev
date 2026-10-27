@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:30 AM EDT 2026
+
+sentry-sdk
+Version=3.0.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.22.0 to version 3.0.0

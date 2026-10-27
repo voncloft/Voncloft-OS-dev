@@ -2,10 +2,10 @@
 # depends : flake8 python-pydocstyle python-setuptools
 
 name=python-flake8-docstrings
-version=1.6.0
+version=1.7.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/f/flake8-docstrings/flake8-docstrings-1.6.0.tar.gz"
+source="python-flake8-docstrings::git+https://github.com/pycqa/flake8-docstrings#commit=75d591dced2e225c31a897527b6672217b4aae91"
 options="!checksum"
 
 build() {

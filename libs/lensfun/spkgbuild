@@ -2,7 +2,7 @@
 # depends : cmake glib libpng make python zlib
 
 name=lensfun
-version=0.3.4
+version=0.3.95
 release=2
 options="!checksum"
 source="lensfun-0.3.4.tar.gz::https://github.com/lensfun/lensfun/archive/refs/tags/v0.3.4.tar.gz"

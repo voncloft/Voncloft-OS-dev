@@ -1,0 +1,9 @@
+Date: Tue Oct 27 04:19:28 AM EDT 2026
+
+python-pam
+Version=2.0.2
+Release=5
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.8.4 to version 2.0.2

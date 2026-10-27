@@ -2,7 +2,7 @@
 # depends       : xorgbuildenvironment libdrm mesa
 
 name=libva-32
-version=2.22.0    
+version=2.24.1    
 release=1
 source="https://github.com/intel/libva/archive/2.22.0/libva-2.22.0.tar.gz"
 

@@ -2,10 +2,10 @@
 # depends : libmemcached python
 
 name=python-pylibmc
-version=1.6.1
+version=1.6.3
 release=5
 
-source="https://pypi.org/packages/source/p/pylibmc/pylibmc-1.6.1.tar.gz"
+source="https://pypi.org/packages/source/p/pylibmc/pylibmc-1.6.3.tar.gz"
 options="!checksum"
 
 build() {

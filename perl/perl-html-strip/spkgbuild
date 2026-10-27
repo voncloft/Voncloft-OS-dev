@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-html-strip
-version=2.10
+version=2.12
 release=8
 
-source="https://www.cpan.org/authors/id/K/KI/KILINRAX/HTML-Strip-2.10.tar.gz"
+source="https://www.cpan.org/authors/id/K/KI/KILINRAX/HTML-Strip-2.12.tar.gz"
 options="!checksum"
 
 build() {

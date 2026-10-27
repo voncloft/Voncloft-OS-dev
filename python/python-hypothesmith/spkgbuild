@@ -2,10 +2,10 @@
 # depends : python-hypothesis python-lark-parser python-libcst
 
 name=python-hypothesmith
-version=0.1.9
+version=0.2.3
 release=1
 
-source="https://pypi.io/packages/source/h/hypothesmith/hypothesmith-0.1.9.tar.gz"
+source="https://pypi.io/packages/source/h/hypothesmith/hypothesmith-0.2.3.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : python-pillow python-six
 
 name=python-pyocr
-version=0.8
+version=0.8.3
 release=1
 
-source="git+https://gitlab.gnome.org/World/OpenPaperwork/pyocr.git#commit=b3e935355afcfb5240bac5a99707ffecc35772a2"
+source="git+https://gitlab.gnome.org/World/OpenPaperwork/pyocr.git#commit=75d591dced2e225c31a897527b6672217b4aae91"
 options="!checksum"
 
 build() {

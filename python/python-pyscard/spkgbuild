@@ -2,10 +2,10 @@
 # depends : python pcsclite
 
 name=python-pyscard
-version=2.0.1
+version=2.0.7
 release=2
 
-source="http://sourceforge.net/projects/pyscard/files/pyscard/pyscard%202.0.1/pyscard-2.0.1.tar.gz/download"
+source="https://downloads.sourceforge.net/project/pyscard/pyscard/pyscard%202.0.7/pyscard-2.0.7.tar.gz"
 options="!checksum"
 
 build() {

@@ -62,6 +62,298 @@ grep() {
         command grep "$@"
 }
 
+# Use a fixed terminal screen for scans; redirected output keeps its normal format.
+screen_start()
+{
+    [ -t 1 ] && [ "${TERM:-dumb}" != dumb ] || return 0
+    screen_output=$(mktemp "${TMPDIR:-/tmp}/update-repo-screen.XXXXXX") || return 0
+    exec {screen_fd}>&1
+    screen_active=1
+    screen_checked=0
+    screen_phase=scan
+    screen_checking=1
+    screen_result_fields=()
+    screen_path=
+    screen_source=
+    screen_new_url=
+    screen_name=
+    screen_version=
+    screen_found='Checking...'
+    screen_command=
+    screen_message=
+    screen_status='Starting scan'
+    trap 'screen_stop' EXIT
+    trap 'exit 130' INT
+    trap 'exit 143' TERM
+    trap 'exit 129' HUP
+    trap 'screen_draw' WINCH
+    # The alternate screen keeps the scan out of scrollback. Disable wrapping so
+    # even long URLs cannot push the display down or wrap onto another field.
+    printf '\033[?1049h\033[?25l\033[?7l\033[2J' >&"$screen_fd"
+    screen_draw
+}
+
+screen_stop()
+{
+    [ "${screen_active:-}" = 1 ] || return 0
+    screen_active=
+    # Clear the restored terminal before printing the final results.
+    printf '\033[0m\033[?7h\033[?25h\033[?1049l\033[H\033[2J' >&"$screen_fd"
+    exec {screen_fd}>&-
+    rm -f -- "$screen_output"
+}
+
+screen_draw()
+{
+    [ "${screen_active:-}" = 1 ] || return 0
+    [ "${screen_drawing:-}" != 1 ] || return 0
+    local screen_drawing=1 rows columns row text mode
+    local -a fields colors
+    read -r rows columns < <(stty size <&"$screen_fd" 2>/dev/null)
+    [[ $rows =~ ^[0-9]+$ ]] && [ "$rows" -gt 0 ] || rows=24
+    [[ $columns =~ ^[0-9]+$ ]] && [ "$columns" -gt 1 ] || columns=80
+    mode='Applying updates'
+    [ -z "${test_upgrade:-}" ] || mode='Test run'
+    fields=(
+        "PPath:     $screen_path"
+        "URL:       $screen_source"
+        "Filename:  $screen_name"
+        "Version:   $screen_version"
+        "New URL:   $screen_new_url"
+        "Command:   $screen_command"
+        "Upgraded:  $screen_found"
+        "Status:    $screen_status"
+        "Message:   $screen_message"
+        ''
+        "Updates: ${count:-0}"
+        "Missing: ${missing:-0}"
+        "Checked: $screen_checked"
+        "Mode: $mode"
+    )
+    colors=("${WHITE:-}" "${YELLOW:-}" "${GREEN:-}" "${BLUE:-}"
+        "${RED:-}" "${PURPLE:-}" "${DBLUE:-}" '' "${CYAN:-}"
+        '' "${BLUE:-}" "${BLUE:-}" "${BLUE:-}" "${YELLOW:-}")
+    if [[ $screen_message == *ERROR* || $screen_message == *error* ]]; then
+        colors[8]=${RED:-}
+    elif [[ $screen_message == 'No override'* ]]; then
+        colors[8]=${FRED:-}
+    fi
+    # Keep a complete result visible during the next network request. Mixing
+    # the previous version with the next package's name would be misleading.
+    if [ "${screen_phase:-}" = scan ]; then
+        if [ "${screen_checking:-}" = 1 ]; then
+            if [ "${#screen_result_fields[@]}" -gt 0 ]; then
+                for ((row=0; row<9; row++)); do
+                    fields[row]=${screen_result_fields[row]}
+                done
+                colors[8]=$screen_result_message_color
+            fi
+        else
+            screen_result_fields=("${fields[@]:0:9}")
+            screen_result_message_color=${colors[8]}
+        fi
+    fi
+    # Keep the package and totals visible in a short terminal as well.
+    if [ "$rows" -lt "${#fields[@]}" ]; then
+        fields=("${fields[0]}" "Updates: ${count:-0}  Missing: ${missing:-0}"
+            "${fields[3]} -> ${fields[6]#Upgraded:  }"
+            "${fields[7]}" "${fields[8]}" "Mode: $mode")
+        colors=("${WHITE:-}" "${BLUE:-}" "${DBLUE:-}" '' "${CYAN:-}" "${YELLOW:-}")
+    fi
+    if [ "${screen_phase:-}" = apply ]; then
+        fields=("Updating: $screen_updating"
+            "Status: $screen_upgrade_status"
+            "Package $screen_apply_index/$screen_apply_total")
+        colors=("${GREEN:-}" "${BLUE:-}" "${WHITE:-}")
+    fi
+    for ((row=1; row<=rows && row<=${#fields[@]}; row++)); do
+        text=${fields[row-1]}
+        text=${text//$'\n'/ }
+        text=${text//$'\r'/ }
+        text=${text//$'\t'/ }
+        printf '\033[%s;1H\033[2K%b%s\033[0m' "$row" "${colors[row-1]}" "${text:0:columns-1}" >&"$screen_fd"
+    done
+    # Clear rows left over after a resize without issuing scrolling newlines.
+    if [ "$row" -le "$rows" ]; then
+        printf '\033[%s;1H\033[J' "$row" >&"$screen_fd"
+    fi
+}
+
+screen_begin_package()
+{
+    screen_phase=scan
+    screen_checking=1
+    screen_path=$1/spkgbuild
+    screen_source=
+    screen_new_url=
+    screen_name=${1##*/}
+    screen_version=
+    screen_found='Checking...'
+    screen_command=
+    screen_message=
+    screen_status='Reading recipe'
+    screen_draw
+}
+
+screen_package_details()
+{
+    [ "${screen_active:-}" = 1 ] || return 0
+    screen_source=$url
+    screen_name=$name
+    screen_version=$version
+}
+
+screen_fetch()
+{
+    [ "${screen_active:-}" = 1 ] || return 0
+    screen_new_url=$url
+    screen_command=${cmd:-}
+    screen_status='Fetching version information'
+    screen_draw
+}
+
+screen_end_package()
+{
+    local comparison
+    screen_phase=scan
+    screen_checking=
+    screen_checked=$((screen_checked+1))
+    screen_command=${cmd:-}
+    screen_found=${uversion:-Not found}
+    if [ -z "${uversion:-}" ]; then
+        screen_status='Version not found'
+    elif [ "$uversion" = "$screen_version" ]; then
+        screen_status='Already current'
+    else
+        vercomp "$uversion" "$screen_version" >/dev/null
+        comparison=$?
+        if [ "$comparison" = 2 ]; then
+            screen_status='Updated'
+            [ -z "${test_upgrade:-}" ] || screen_status='Update saved for review'
+        else
+            screen_status='Recipe is newer than upstream'
+        fi
+    fi
+    # Overrides and external tools can print freely into this package's capture.
+    # Show their latest useful message, preferring errors over routine notices.
+    screen_message=$(LC_ALL=C awk '
+        {
+            gsub(/\033\[[0-9;]*[[:alpha:]]/, "")
+            gsub(/[[:cntrl:]]/, " ")
+            if ($0 ~ /^(PPath:|URL:|Filename:|Version:|New URL:|Command:|Upgraded:|NEW$|Overupdated$|---)/ || $0 == "")
+                next
+            message = $0
+            if (tolower($0) ~ /(error|failed|cannot|can.t|no such file|not supported)/)
+                error = $0
+        }
+        END { print error != "" ? error : message }
+    ' "$screen_output")
+    screen_draw
+}
+
+screen_upgrading()
+{
+    [ "${screen_active:-}" = 1 ] || return 0
+    screen_phase=apply
+    screen_updating=${1%/spkgbuild}
+    screen_upgrade_status="Upgrading from $2 to $3"
+    screen_apply_index=$4
+    screen_apply_total=$5
+    screen_draw
+}
+
+# Index generated update commands without executing them. Multiple edits to a
+# recipe (source pin, version, changelog) count as one package in the display.
+screen_prepare_apply()
+{
+    local line package
+    screen_path_pattern="(^|[[:space:]\"'])(/sources/Voncloft-OS-dev/)?([[:alnum:]_.+-]+/[[:alnum:]_.+-]+)/spkgbuild([[:space:]\"']|$)"
+    screen_version_pattern='s/version=([^/]+)/version=([^/]+)/g'
+    declare -gA screen_pending_packages=() screen_pending_old=() screen_pending_new=() screen_applied=()
+    while IFS= read -r line || [ -n "$line" ]; do
+        [[ $line == \#* ]] && continue
+        [[ $line =~ $screen_path_pattern ]] || continue
+        package=${BASH_REMATCH[3]}
+        screen_pending_packages["$package"]=1
+        if [[ $line =~ $screen_version_pattern ]]; then
+            screen_pending_old["$package"]=${BASH_REMATCH[1]}
+            screen_pending_new["$package"]=${BASH_REMATCH[2]}
+        fi
+    done < "$1"
+    screen_apply_total=${#screen_pending_packages[@]}
+    screen_apply_index=0
+}
+
+screen_apply_command()
+{
+    local command=$1 package
+    [[ $command =~ $screen_path_pattern ]] || return 0
+    package=${BASH_REMATCH[3]}
+    [ -n "${screen_pending_packages[$package]:-}" ] || return 0
+    [ -z "${screen_applied[$package]:-}" ] || return 0
+    screen_applied["$package"]=1
+    screen_phase=apply
+    screen_updating=$package
+    screen_apply_index=$((screen_apply_index+1))
+    if [ -n "${screen_pending_old[$package]:-}" ] && [ -n "${screen_pending_new[$package]:-}" ]; then
+        screen_upgrade_status="Upgrading from ${screen_pending_old[$package]} to ${screen_pending_new[$package]}"
+    else
+        screen_upgrade_status='Applying saved update'
+    fi
+    screen_draw
+}
+
+run_saved_updates()
+{
+    local result=0 diagnostics
+    # Keep the existing plain output when redirected or on a dumb terminal.
+    if [ ! -t 1 ] || [ "${TERM:-dumb}" = dumb ]; then
+        bash test_updates.sh
+        return $?
+    fi
+    screen_start
+    if [ "${screen_active:-}" != 1 ]; then
+        bash test_updates.sh
+        return $?
+    fi
+    screen_prepare_apply test_updates.sh
+    screen_phase=apply
+    screen_updating='Preparing saved updates'
+    screen_upgrade_status='Starting'
+    screen_draw
+    # The child keeps the script's original shell isolation. DEBUG observes its
+    # commands before execution; it does not split, rewrite, or eval their text.
+    # Let that child handle resizes with its current package, not the parent.
+    trap '' WINCH
+    (
+        trap - EXIT
+        trap 'screen_draw' WINCH
+        set -T
+        trap 'screen_apply_command "$BASH_COMMAND"' DEBUG
+        source ./test_updates.sh
+    ) > "$screen_output" 2>&1 || result=$?
+    trap 'screen_draw' WINCH
+    diagnostics=$(cat "$screen_output")
+    screen_stop
+    # Preserve diagnostics from failed commands without a scrolling scan.
+    if [ "$result" -ne 0 ]; then
+        printf '%s\n' "$diagnostics" >&2
+    fi
+    return "$result"
+}
+
+check_package()
+{
+    get_url "$1/spkgbuild"
+    check_override="$1/override"
+    if [ -f "$check_override" ]; then
+        perform_override
+    else
+        upgrade_normally
+    fi
+    upgrade_process
+}
+
 print_progress() {
         echo -ne " $@\033[0K\r"
 }
@@ -96,6 +388,7 @@ get_url()
 	esac
 }
 fetch() {
+	screen_fetch
 	# Never reuse an earlier package's listing after a failed fetch.
 	rm -f index.html
 	curl -L -f "$url" -o index.html -s --max-time 5 || {
@@ -441,6 +734,7 @@ perform_override()
         echo -e "${YELLOW}URL:       $url${NC}"
         echo -e "${GREEN}Filename:  $name${NC}"
         echo -e "${BLUE}Version:   $version${NC}"
+        screen_package_details
         alter_per_url
         echo -e "${RED}New URL:   $url${NC}"
 	cmd_torun
@@ -454,6 +748,7 @@ upgrade_normally()
         echo -e "${YELLOW}URL:       $url${NC}"
         echo -e "${GREEN}Filename:  $name${NC}"
         echo -e "${BLUE}Version:   $version${NC}"
+        screen_package_details
         alter_per_url
         echo -e "${RED}New URL:   $url${NC}"
         cmd_torun
@@ -474,6 +769,7 @@ upgrade_process()
                                 ((count=count+1))
                                 if [ -z $test_upgrade ];then
                                 	title="Updates for: "
+					screen_upgrading "$ppath" "$version" "$uversion" "$((screen_checked+1))" "${screen_total_packages:-1}"
                                 	sed -i -e "s/version=$version/version=$uversion/g" $ppath
                                 	bash "$changelog_program" "$ppath" "Upgraded from version $version to version $uversion"
 					echo -e 'sed -i -e "s/version='$version'/version='$uversion'/g"' $ppath "<br>" >> $logpath/changes/repository_changes-$(date +"%m-%d-%y").html
@@ -675,7 +971,7 @@ update_to_github()
 apply_test_updates()
 {
 	if [ -f test_updates.sh ];then
-		bash test_updates.sh || return 1
+		run_saved_updates || return 1
 		mkdir -pv /sources/Voncloft-OS-dev/logs/old-test-updates/$(date +"%Y")/$(date +"%b")
 		cat test_updates.sh >> /sources/Voncloft-OS-dev/logs/old-test-updates/$(date +"%Y")/$(date +"%b")/applied_updates-$(date +"%m-%d-%y").sh
 		rm test_updates.sh
@@ -741,21 +1037,36 @@ main()
 	fi
 	prepare_backup_and_logs || return 1
 	timestamp_log
+	screen_start
+	screen_total_packages=0
+	for f in $repos; do
+		[ "${f##*/}" != "REPO" ] && [ -f "$f/spkgbuild" ] || continue
+		screen_total_packages=$((screen_total_packages+1))
+	done
 	for f in $repos;
 	do
-	echo "-----------------------------------------------------------------------------------"
-	if [ "${f##*/}" != "REPO" ];then
-		[ -f "$f/spkgbuild" ] || continue
-		get_url "$f/spkgbuild"
-		check_override=$(echo $f/spkgbuild | sed 's/spkgbuild/override/g')
-		if [ ! -f $check_override ];then
-			upgrade_normally
+		[ "${f##*/}" != "REPO" ] && [ -f "$f/spkgbuild" ] || continue
+		if [ "${screen_active:-}" = 1 ]; then
+			screen_begin_package "$f"
+			# Keep this in the current shell so counters and detected versions
+			# survive, while override output cannot scroll the terminal.
+			check_package "$f" > "$screen_output" 2>&1
+			screen_end_package
 		else
-			perform_override
+			echo "-----------------------------------------------------------------------------------"
+			check_package "$f"
 		fi
-			upgrade_process
-	fi
 	done
+	if [ "${screen_active:-}" = 1 ] && [ "${screen_checked:-0}" -gt 0 ]; then
+		screen_stop
+		# Preserve the last result after leaving the alternate screen, including
+		# a one-package scan which would otherwise disappear immediately.
+		printf '%bPPath:     %s%b\n' "$WHITE" "$screen_path" "$NC"
+		printf '%bVersion:   %s%b\n' "$BLUE" "$screen_version" "$NC"
+		printf '%bUpgraded:  %s%b\n' "$DBLUE" "$screen_found" "$NC"
+	else
+		screen_stop
+	fi
 	finish_logs	
 	alerts_and_logs
 }

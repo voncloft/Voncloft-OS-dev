@@ -2,10 +2,10 @@
 # depends : perl-encode-locale perl-file-basedir perl-file-desktopentry shared-mime-info
 
 name=perl-file-mimeinfo
-version=0.30
+version=0.33
 release=1
 
-source="https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-MimeInfo-0.30.tar.gz"
+source="https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-MimeInfo-0.33.tar.gz"
 options="!checksum"
 
 build() {

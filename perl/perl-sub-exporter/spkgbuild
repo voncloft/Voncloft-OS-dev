@@ -2,10 +2,10 @@
 # depends : perl perl-data-optlist perl-params-util perl-sub-install
 
 name=perl-sub-exporter
-version=0.988
+version=0.989
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Sub-Exporter-0.988.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Sub-Exporter-0.989.tar.gz"
 options="!checksum"
 
 build() {

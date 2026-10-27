@@ -2,10 +2,10 @@
 # depends : perl
 
 name=perl-locale-codes
-version=3.68
+version=3.72
 release=2
 
-source="http://search.cpan.org/CPAN/authors/id/SBECK/-3.62.tar.gz"
+source="https://search.cpan.org/CPAN/authors/id/SBECK/-3.72.tar.gz"
 options="!checksum"
 
 build() {
