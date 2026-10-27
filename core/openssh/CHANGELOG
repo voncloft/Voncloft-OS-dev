@@ -146,3 +146,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 10.0p1 to version 10.6
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:46:52 EDT 2026
+
+Version=10.6p1
+Release=1
+
+Synopsis:
+Track portable OpenSSH releases including the required p suffix.

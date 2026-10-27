@@ -318,3 +318,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.26.3 to version 1.29.2
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:46:52 EDT 2026
+
+Version=1.28.8
+Release=1
+
+Synopsis:
+Track stable even-minor GStreamer releases instead of development snapshots.

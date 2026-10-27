@@ -3,8 +3,8 @@
 
 name=ffmpegthumbnailer
 version=2.3.1
-release=1
-source="$name-$version.tar.gz::https://github.com/dirkvdb/$name/archive/$version.tar.gz"
+release=2
+source="$name-$version.tar.gz::https://github.com/dirkvdb/$name/archive/refs/tags/v$version.tar.gz"
 
 build() {
 	cd $name-$version

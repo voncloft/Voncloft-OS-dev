@@ -206,3 +206,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 257.6 to version 262.1
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:46:52 EDT 2026
+
+Version=262.1
+Release=2
+
+Synopsis:
+Keep the systemd source tag aligned with the udev version and exclude prereleases.

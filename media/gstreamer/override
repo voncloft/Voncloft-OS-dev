@@ -1,0 +1,55 @@
+# Track stable source releases; reject prereleases and platform binary filenames.
+source=https://gstreamer.freedesktop.org/src/gstreamer/
+url=$source
+
+get_generic()
+{
+    unset uversion
+    local detected
+    detected=$(python3 - '{"url":"https://gstreamer.freedesktop.org/src/gstreamer/","pattern":"gstreamer-(1\\.[0-9]*[02468]\\.[0-9]+)\\.tar\\.xz"}' <<'PYVERSION'
+import json, pathlib, re, subprocess, sys, urllib.parse
+from html.parser import HTMLParser
+
+cfg = json.loads(sys.argv[1])
+text = pathlib.Path('index.html').read_text()
+choices = set()
+def consider(value):
+    match = re.fullmatch(cfg['pattern'], value)
+    if match:
+        choices.add(match[1])
+if cfg.get('kind') == 'git-tags':
+    for line in text.splitlines():
+        fields = line.split()
+        if len(fields) == 2 and re.fullmatch(r'[0-9a-f]{40,64}', fields[0]) and fields[1].startswith('refs/tags/'):
+            consider(fields[1][10:])
+else:
+    class Links(HTMLParser):
+        def handle_starttag(self, tag, attrs):
+            if tag.lower() != 'a':
+                return
+            for key, value in attrs:
+                if key.lower() == 'href' and value:
+                    path = urllib.parse.unquote(urllib.parse.urlsplit(value).path)
+                    trailing = '/' if path.endswith('/') else ''
+                    consider(path.rstrip('/').rsplit('/', 1)[-1] + trailing)
+    Links().feed(text)
+if not choices:
+    sys.exit('ERROR: No matching stable source release in upstream metadata')
+ordered = subprocess.run(['sort', '-V'], input='\n'.join(choices)+'\n', text=True, capture_output=True, check=True).stdout.splitlines()
+if cfg.get('tree'):
+    # A Plasma release is usable only if this archived component is present.
+    for candidate in reversed(ordered):
+        url = cfg['url'] + candidate + '/' + cfg['tree'] + '-' + candidate + '.tar.xz'
+        result = subprocess.run(['curl', '-fLsS', '-I', '--max-time', '20', url], capture_output=True)
+        if result.returncode == 0:
+            print(candidate)
+            break
+    else:
+        sys.exit('ERROR: No source archive for the archived Plasma component')
+else:
+    print(ordered[-1])
+PYVERSION
+    ) || return 1
+    [ -n "$detected" ] || return 1
+    uversion=$detected
+}

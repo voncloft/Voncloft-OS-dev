@@ -117,3 +117,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 7.1.1 to version 9.0.2
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:46:52 EDT 2026
+
+Version=9.0.2
+Release=4
+
+Synopsis:
+Align the source, Chromium patch, and documentation with the selected FFmpeg release.

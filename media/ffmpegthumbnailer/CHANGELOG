@@ -17,3 +17,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 2.2.3 to version 2.3.1
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:36:54 EDT 2026
+
+Version=2.3.1
+Release=2
+
+Synopsis:
+Fixed source URL to use the upstream v-prefixed release tag.

@@ -126,10 +126,10 @@ f:168a474af7ca2e0b08d990552c4879ba:automake/.pkgfiles
 f:dee73dcae3c24af16b0b71fe44d6bc64:automake/CHANGELOG
 f:48f0ba9ceab4ca34714614527d298699:automake/spkgbuild
 f:e976867c08a51955dbcf2a3a808290dc:cmake/.pkgfiles
-f:fa10af293fcfe8c015ded0181f1451b9:cmake/CHANGELOG
+f:fb77e13861632557ceb60d505a024adb:cmake/CHANGELOG
 f:8ba3c9f07f4f88b451083053325a1552:cmake/override-old
-f:35f3259b2a627b982c9e644f723bd4ee:cmake/spkgbuild
-f:3952e1e013f3675c6ec2d90dfd12f4a2:cmake/override
+f:3461fcc22a6595f0061dab0407a70e0a:cmake/spkgbuild
+f:4f6f8e00ae4fe46df19791b5183c3c11:cmake/override
 f:cea1e92da5e154b5f073e610a3ee238a:.httpup-repo.current
 f:4d810f7ff8338affdfa988d93dbf7f38:luajit/.pkgfiles
 f:21dc50f01b8da123ef97388f268ce1cc:luajit/spkgbuild

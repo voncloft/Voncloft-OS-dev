@@ -2,9 +2,9 @@
 # depends	: glib
 
 name=gstreamer
-version=1.29.2
+version=1.28.8
 release=1
-source="http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
+source="https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
 options="!checksum"
 build() {
 	cd $name-$version

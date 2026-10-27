@@ -826,3 +826,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 4.0.3 to version 4.5.0-rc1-sunos-x86_64
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:44:20 EDT 2026
+
+Version=4.4.4
+Release=1
+
+Synopsis:
+Corrected the overupdated version and track only stable CMake source archives.

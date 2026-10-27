@@ -137,3 +137,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 3.17.2 to version 3.18.3
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:46:52 EDT 2026
+
+Version=3.18.3
+Release=2
+
+Synopsis:
+Fix Meson configuration, keep FUSE 3 separate from FUSE 2, and track stable FUSE 3 releases.

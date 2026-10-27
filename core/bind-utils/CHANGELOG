@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 9.20.12 to version 9.21.27
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:46:52 EDT 2026
+
+Version=9.20.30
+Release=1
+
+Synopsis:
+Track stable BIND branches and keep the source archive aligned with the version.

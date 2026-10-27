@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 6.7.5 to version 6.8.1
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 06:46:52 EDT 2026
+
+Version=6.7.5
+Release=1
+
+Synopsis:
+Track existing archived Plasma 6.7 component releases instead of Plasma 6.8.
