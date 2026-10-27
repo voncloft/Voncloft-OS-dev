@@ -2,7 +2,7 @@
 # depends	: libxml2 gtk3
 
 name=gdl
-version=3.34.0
+version=3.40.0
 release=1
 source="https://ftp.acc.umu.se/pub/gnome/sources/gdl/${version%.*}/gdl-$version.tar.xz"
 

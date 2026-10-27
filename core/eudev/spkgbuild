@@ -1,7 +1,7 @@
 # description	: Programs for dynamic creation of device nodes
 
 name=eudev
-version=3.2.14
+version=3.2.15
 release=1
 source="https://github.com/eudev-project/eudev/archive/refs/tags/v$version.tar.gz"
 

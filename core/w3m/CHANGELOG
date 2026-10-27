@@ -7,3 +7,13 @@ Release=3
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.5.3 to version 0.5.3.git20210102_6
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 02:02:11 AM EDT 2026
+
+Version=0.5.3.git20230121_1
+Release=3
+
+Synopsis:
+Upgraded from version 0.5.3 to version 0.5.3.git20230121_1

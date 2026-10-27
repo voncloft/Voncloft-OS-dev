@@ -7,3 +7,13 @@ release=2
 Synopsis:
 Added Changelog to package
 Upgraded from version 2017.3.23 to version 2021.8.22
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 02:02:11 AM EDT 2026
+
+Version=2022.10.3
+Release=2
+
+Synopsis:
+Upgraded from version 2021.8.22 to version 2022.10.3

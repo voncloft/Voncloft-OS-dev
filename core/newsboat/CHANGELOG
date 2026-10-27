@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.21 to version 2.25
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 02:02:11 AM EDT 2026
+
+Version=2.31
+Release=1
+
+Synopsis:
+Upgraded from version 2.25 to version 2.31

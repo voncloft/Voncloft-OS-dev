@@ -3,7 +3,7 @@
 # note : Match the generator version used by Qt 6.11.2's Maven project.
 
 name=openapi-generator
-version=7.18.0
+version=7.26.0
 release=1
 source="https://repo.maven.apache.org/maven2/org/openapitools/openapi-generator-cli/$version/openapi-generator-cli-$version.jar"
 options="!checksum"

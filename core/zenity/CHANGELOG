@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 3.32.0 to version 3.32.0+55+gd7bedff
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 02:02:11 AM EDT 2026
+
+Version=3.44.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.32.0 to version 3.44.1

@@ -2,7 +2,7 @@
 # depends : alsa-lib at-spi2-core cairo coreutils cups dbus expat glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libsecret libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr libxss libxtst mesa nspr nss pango xdg-utils xwayland
 
 name=session-desktop
-version=1.18.2
+version=1.18.3
 release=2
 source="https://github.com/session-foundation/$name/releases/download/v$version/$name-linux-x86_64-$version.rpm"
 noextract="$name-linux-x86_64-$version.rpm"

@@ -2,7 +2,7 @@
 # depends       : abseil-cpp cmake
 
 name=protobuf
-version=33.5
+version=36.2
 release=1
 source=" https://github.com/protocolbuffers/protobuf/releases/download/v$version/protobuf-$version.tar.gz"
 options="!checksum"

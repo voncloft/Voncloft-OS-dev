@@ -2,7 +2,7 @@
 # depends       : glib pixman alsa-lib dtc libslirp sdl2-compat
 
 name=qemu
-version=10.2.1
+version=11.1.2
 release=1
 source=" https://download.qemu.org/qemu-10.2.1.tar.xz"
 options="!checksum"

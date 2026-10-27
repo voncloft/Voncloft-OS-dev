@@ -2,7 +2,7 @@
 # depends       : fuse glib opensshp1
 
 name=sshfs
-version=3.7.3    
+version=3.7.6    
 release=1
 source="https://github.com/libfuse/sshfs/releases/download/sshfs-3.7.3/sshfs-3.7.3.tar.xz"
 

@@ -2,7 +2,7 @@
 # depends : cmake
 
 name=spirv-headers
-version=1.4.313.0
+version=2026.08.0
 release=1
 
 #source="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz"

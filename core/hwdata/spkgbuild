@@ -2,7 +2,7 @@
 # depends       : 
 
 name=hwdata
-version=0.397
+version=0.412
 release=1
 source=" https://github.com/vcrhonek/hwdata/archive/v$version/hwdata-$version.tar.gz"
 options="!checksum"

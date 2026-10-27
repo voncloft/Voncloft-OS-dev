@@ -2,9 +2,9 @@
 # depends	: docbook-xml python
 
 name=asciidoc
-version=8.6.9
+version=10.2.0
 release=1
-source="https://downloads.sourceforge.net/asciidoc/asciidoc-8.6.9.tar.gz"
+source="https://github.com/asciidoc-py/asciidoc-py/releases/download/10.2.0/asciidoc-10.2.0.tar.gz"
 
 build() {
 	cd $name-$version

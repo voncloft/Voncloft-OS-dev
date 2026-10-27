@@ -3,7 +3,7 @@
 # depends : pango cairo xorg-libraries fontconfig libpng cmake
 
 name=graphviz
-version=13.1.0
+version=16.1.0
 release=2
 source="https://gitlab.com/graphviz/graphviz/-/archive/$version/graphviz-$version.tar.bz2"
 

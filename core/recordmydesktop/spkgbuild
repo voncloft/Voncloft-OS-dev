@@ -2,7 +2,7 @@
 # depends	: alsa-lib zlib libvorbis libxdamage libxext libtheora libsm jack
 
 name=recordmydesktop
-version=0.3.8.1
+version=0.4.0
 release=1
 source="https://downloads.sourceforge.net/$name/$name-$version.tar.gz
 	shmstr-to-shmproto.patch

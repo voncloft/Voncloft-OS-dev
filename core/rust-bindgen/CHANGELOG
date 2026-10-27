@@ -1,0 +1,9 @@
+Date: Tue Oct 27 02:02:11 AM EDT 2026
+
+rust-bindgen
+Version=0.73.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.72.0 to version 0.73.2

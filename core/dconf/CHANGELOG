@@ -1,0 +1,9 @@
+Date: Tue Oct 27 02:02:10 AM EDT 2026
+
+dconf
+Version=0.40.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.38.0 to version 0.40.0

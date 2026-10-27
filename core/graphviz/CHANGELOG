@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.44.0 to version 2.44.1
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 02:02:10 AM EDT 2026
+
+Version=16.1.0
+Release=2
+
+Synopsis:
+Upgraded from version 13.1.0 to version 16.1.0

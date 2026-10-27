@@ -1,0 +1,9 @@
+Date: Tue Oct 27 02:02:10 AM EDT 2026
+
+lsb-release
+Version=2.0.r48.3cf5103
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.4 to version 2.0.r48.3cf5103

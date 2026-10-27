@@ -13,6 +13,55 @@ egrep() {
         command grep -E "$@"
 }
 
+# Extract the two HTML patterns used by this updater and its overrides without
+# requiring a grep build with PCRE support. Preserve grep -o output and status.
+update_repo_html_matches() {
+        local extraction=$1
+        shift
+        awk -v extraction="$extraction" '
+                BEGIN {
+                        pattern = extraction == "href" ? "href=\"[^\"]*" : ">[^<>]*<"
+                        offset = extraction == "href" ? 6 : 1
+                        trim = extraction == "href" ? 6 : 2
+                        show_filename = ARGC > 2
+                }
+                {
+                        line = $0
+                        while (match(line, pattern)) {
+                                found = 1
+                                value = substr(line, RSTART + offset, RLENGTH - trim)
+                                if (length(value)) {
+                                        if (show_filename)
+                                                printf "%s:", FILENAME == "-" ? "(standard input)" : FILENAME
+                                        print value
+                                }
+                                line = substr(line, RSTART + RLENGTH)
+                        }
+                }
+                END { exit found ? 0 : 1 }
+        ' "$@"
+}
+
+# Sourced legacy overrides still use these exact grep -Po expressions.
+# All other grep calls retain the system grep's behavior.
+grep() {
+        if [ "${1-}" = -Po ];then
+                case "${2-}" in
+                        '(?<=href=")[^"]*')
+                                shift 2
+                                update_repo_html_matches href "$@"
+                                return $?
+                                ;;
+                        '(?<=>)[^<>]*(?=<)')
+                                shift 2
+                                update_repo_html_matches text "$@"
+                                return $?
+                                ;;
+                esac
+        fi
+        command grep "$@"
+}
+
 print_progress() {
         echo -ne " $@\033[0K\r"
 }
@@ -51,6 +100,8 @@ fetch() {
 	rm -f index.html
 	curl -L -f "$url" -o index.html -s --max-time 5 || {
 		rm -f index.html
+		unset uversion
+		printf 'ERROR: Unable to download listing: %s\n' "$url" >&2
 		return 1
 	}
 }
@@ -89,7 +140,7 @@ alter_per_url() {
 		*..subsonic.*)
 			url="http://www.subsonic.org/pages/download.jsp"
 			;;
-		*x.org*|*xcb.freedesktop.org*|*xorg.freedesktop.org*)
+		*://x.org/*|*://*.x.org/*|*://xcb.freedesktop.org/*|*://xorg.freedesktop.org/*)
 			url=$(echo $url | sed "s/pub/archive/g" | sed "s/ftp/www/g")
 			if [[ "$url" == *"http://"* ]]; then
 				url=$(echo $url | sed "s/http/https/g")
@@ -107,6 +158,7 @@ alter_per_url() {
 }
 get_source_listing_version()
 {
+	[ -r index.html ] || return 1
 	{
 		grep -Eio "$name[_-][0-9a-z.]+[.]tar[.][bgx]z2?" index.html \
 			| sed "s/$name[-_]//;s/\.tar.*//" \
@@ -132,13 +184,14 @@ run_manual_upd()
 {
 	update_script=$(echo $ppath)
 	echo -e "${CYAN}ALERT:     Update script found in $update_script${NC}"
-	source $update_script
-	fetch
-	get_generic
 	cmd="override"
+	source "$update_script" || return 1
+	fetch || return 1
+	get_generic
 }
 cmd_torun()
 {
+	unset uversion
         case $url in
                 *github.com*)
                 	cmd="github"
@@ -146,7 +199,7 @@ cmd_torun()
                         if [ $? = 1 ];then
                                 run_manual_upd
                         else
-                		fetch
+			fetch || return 1
                 		uversion=$(grep -Eio [0-9a-z.]+.tar.[bgx]z2? index.html \
 				| sed "s/.tar.*//g"	\
         	        	| sort -V -r \
@@ -173,7 +226,7 @@ cmd_torun()
                         if [ $? = 1 ];then
                                 run_manual_upd
                         else
-				retry_index
+				retry_index || return 1
 				grep_retry
                         fi
                 ;;
@@ -183,7 +236,7 @@ cmd_torun()
                         if [ $? = 1 ];then
                                 run_manual_upd
                         else
-                                retry_index
+                                retry_index || return 1
                                 grep_retry
 			fi
 			;;
@@ -193,9 +246,9 @@ cmd_torun()
                 	if [ $? = 1 ];then
                 		run_manual_upd
                 	else
-	                	fetch
+			fetch || return 1
 				uversion=$(grep -i "href" index.html \
-					| grep -Po '(?<=href=")[^"]*' \
+					| update_repo_html_matches href \
 					| grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
 					| sort -V -r \
 					| head -n1)
@@ -207,9 +260,9 @@ cmd_torun()
                         if [ $? = 1 ];then
                                 run_manual_upd
                         else
-                                fetch
+                                fetch || return 1
                                 uversion=$(grep -i "href" index.html \
-                                        | grep -Po '(?<=href=")[^"]*' \
+                                        | update_repo_html_matches href \
                                         | grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
                                         | sort -V -r \
                                         | head -n1)
@@ -229,13 +282,13 @@ cmd_torun()
                 	if [ $? = 1 ];then
                 		run_manual_upd
                 	else
- 		               	fetch
+			fetch || return 1
                                 uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                 		| sort -V -r \
                         	| head -n1)
                         	url=$url$uversion/
                         	rm index.html
-                        	fetch
+			fetch || return 1
                                 uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                         	| sort -V -r \
                         	| head -n1)
@@ -247,7 +300,7 @@ cmd_torun()
 			if [ $? = 1 ];then
 				run_manual_upd
 			else
-				fetch 
+				fetch || return 1
 				uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
 				| sort -V -r \
                         	| head -n1)
@@ -259,7 +312,7 @@ cmd_torun()
                 	if [ $? = 1 ];then
                 		run_manual_upd
                 	else
-                		fetch
+			fetch || return 1
                                 uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                 		| sort -V -r \
                 		| head -n1).0
@@ -271,7 +324,7 @@ cmd_torun()
 			if [ $? = 1 ];then
 				run_manual_upd
 			else
-                		fetch
+			fetch || return 1
                                 uversion=$(grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" index.html \
                 		| sort -V -r \
                 		| head -n1)
@@ -285,16 +338,16 @@ cmd_torun()
                 		run_manual_upd
                 	fi
                 	;;
-                *x.org*|*xcb.freedesktop.org*|*xorg.freedesktop.org*)
+                *://x.org/*|*://*.x.org/*|*://xcb.freedesktop.org/*|*://xorg.freedesktop.org/*)
                 	cmd="xorg"
                 	check_manual_upd
                 	if [ $? = 1 ];then
                 		run_manual_upd
 			else
-                                fetch
+                                fetch || return 1
 				uversion=$(grep $name index.html \
 				| grep -i "href" \
-				| grep -Po '(?<=href=")[^"]*' \
+				| update_repo_html_matches href \
 				| grep -E -o "([0-9]{1,}\.)+[0-9]{1,}" \
 				| sort -V -r \
 				| uniq \
@@ -309,14 +362,13 @@ cmd_torun()
 				run_manual_upd
 			else
 				echo -e "${FRED}No override for $name; checking the source listing${NC}"
-				fetch
-				if [ ! -f index.html ];then
-					retry_index
+				if ! fetch;then
+					retry_index || return 1
 					grep_retry
 				else
 				uversion=$(get_source_listing_version)
 				#####more robust maybe idk
-				#uversion=$(grep -Po "(?<=>)[^<>]*(?=<)" index.html \
+				#uversion=$(update_repo_html_matches text index.html \
 				#| grep -v : \
 				#| tr '[:upper:]' '[:lower:]' \
 				#| grep $name \
@@ -331,17 +383,16 @@ cmd_torun()
 }
 retry_index()
 {
-spkg_src=$(grep "source=" $ppath | sed "s/source=//g")
-url="https://raw.githubusercontent.com/archlinux/svntogit-community/packages/$name/trunk/PKGBUILD"
-fetch
-if [ ! -f /sources/Voncloft-OS-dev/index.html ];then
-	url="https://raw.githubusercontent.com/archlinux/svntogit-community/packages/$name/trunk/PKGBUILD"
-	fetch
-fi
-if [ ! -f /sources/Voncloft-OS-dev/index.html ];then
-	url="https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/$name/trunk/PKGBUILD"
-	fetch
-fi
+	local fallback_url
+	spkg_src=$(grep "source=" "$ppath" | sed "s/source=//g")
+	for fallback_url in \
+		"https://raw.githubusercontent.com/archlinux/svntogit-community/packages/$name/trunk/PKGBUILD" \
+		"https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/$name/trunk/PKGBUILD"
+	do
+		url=$fallback_url
+		fetch && return 0
+	done
+	return 1
 }
 grep_retry()
 {

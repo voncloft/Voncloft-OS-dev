@@ -2,7 +2,7 @@
 # depends	: icu python-numpy which
 
 name=boost
-version=1.88.0
+version=1.92.0
 release=1
 verzion=1_76_0
 

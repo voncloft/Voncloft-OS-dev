@@ -2,9 +2,9 @@
 # depends : alsa-lib ffmpeg kde-deps-installer libarchive librsvg libsndfile opencv pkgconf poppler pulseaudio python qt6 zlib
 
 name=varpeggio
-version=0.2.46.git20261020
+version=0.2.47.git20261027063836
 release=1
-_commit=ceb779b748393831898f52131bddbae635380b19
+_commit=82b8b4d22181cbfa23d3d3a57613b24c015549c8
 source="$name-$_commit.tar.gz::https://github.com/voncloft/VArpeggio/archive/$_commit.tar.gz"
 
 build() {

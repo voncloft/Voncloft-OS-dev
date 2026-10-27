@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 3.2.9 to version 3.2.10
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 02:02:10 AM EDT 2026
+
+Version=3.2.15
+Release=1
+
+Synopsis:
+Upgraded from version 3.2.14 to version 3.2.15

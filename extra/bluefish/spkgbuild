@@ -2,14 +2,14 @@
 # depends       : gtk desktopfileutils
 
 name=bluefish
-version=2.2.17    
+version=2.4.2    
 release=1
 source="https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.17.tar.bz2"
 
 options="!checksum"
 
 build() {
-    cd $name-$version
+    cd *
     
     sed '/infbrowser/d' -i src/Makefile.am 
     autoreconf

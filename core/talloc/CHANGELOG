@@ -1,0 +1,9 @@
+Date: Tue Oct 27 02:02:11 AM EDT 2026
+
+talloc
+Version=2.5.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.4.3 to version 2.5.0

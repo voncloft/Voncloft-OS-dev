@@ -2,7 +2,7 @@
 # depends       : 
 
 name=fuse2
-version=3.18.1    
+version=3.18.3    
 release=1
 source="https://github.com/libfuse/libfuse/releases/download/fuse-3.18.1/fuse-3.18.1.tar.gz"
 

@@ -2,7 +2,7 @@
 # depends       : libgudev libpcap vala
 
 name=umockdev
-version=0.19.1
+version=0.19.9
 release=1
 source=" https://github.com/martinpitt/umockdev/releases/download/0.19.1/umockdev-0.19.1.tar.xz"
 options="!checksum"

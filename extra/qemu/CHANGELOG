@@ -1,0 +1,9 @@
+Date: Tue Oct 27 01:52:45 AM EDT 2026
+
+qemu
+Version=11.1.2
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 10.2.1 to version 11.1.2

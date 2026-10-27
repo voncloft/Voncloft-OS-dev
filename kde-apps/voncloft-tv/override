@@ -1,0 +1,77 @@
+# Track the default branch: these applications have no release tarball tags.
+_upstream_repo=qt6_tv_tuner
+_upstream_version=cmake
+source="https://raw.githubusercontent.com/voncloft/$_upstream_repo/HEAD/CMakeLists.txt"
+# update-repo sources this again immediately before its fetch.
+url="https://api.github.com/repos/voncloft/$_upstream_repo/commits?per_page=1"
+
+get_generic()
+{
+    local detected next_version next_commit recipe commit_edit comparison
+    unset uversion
+    detected=$(python3 - "$_upstream_repo" "$_upstream_version" "$version" "$_commit" <<'PY'
+import datetime
+import json
+import re
+import subprocess
+import sys
+
+repo, mode, current_version, current_commit = sys.argv[1:]
+try:
+    with open("index.html", encoding="utf-8") as stream:
+        commits = json.load(stream)
+    commit = commits[0]
+    sha = commit["sha"]
+    if not re.fullmatch(r"[0-9a-f]{40}", sha):
+        raise ValueError("invalid GitHub commit ID")
+    stamp = datetime.datetime.strptime(
+        commit["commit"]["committer"]["date"], "%Y-%m-%dT%H:%M:%SZ"
+    ).strftime("%Y%m%d%H%M%S")
+    # Pin the version file to the same commit as the downloadable source.
+    result = subprocess.run(
+        ["curl", "--fail", "--location", "--silent", "--show-error",
+         "--max-time", "20",
+         f"https://raw.githubusercontent.com/voncloft/{repo}/{sha}/CMakeLists.txt"],
+        check=True, capture_output=True, text=True,
+    )
+    cmake = re.sub(r"#[^\n]*", "", result.stdout)
+    project = re.search(r"\bproject\s*\(([^)]*)\)", cmake, re.I | re.S)
+    if not project:
+        raise ValueError("GitHub CMakeLists.txt has no project declaration")
+    if mode == "cmake":
+        match = re.search(r'\bVERSION\s+"?([0-9]+(?:\.[0-9]+)+)"?(?=\s|$)',
+                          project[1], re.I)
+        if not match:
+            raise ValueError("GitHub project version is missing or unsupported")
+        latest = match[1] + ".git" + stamp
+    else:
+        latest = stamp
+    # Keep the existing date-only spelling when the pinned commit is current.
+    # New commits include the time so multiple updates in a day remain visible.
+    if sha == current_commit:
+        latest = current_version
+    print(latest, sha)
+except (OSError, ValueError, KeyError, IndexError, TypeError,
+        subprocess.CalledProcessError) as error:
+    print(f"ERROR: Unable to read GitHub version for {repo}: {error}", file=sys.stderr)
+    sys.exit(1)
+PY
+    ) || return 1
+    read -r next_version next_commit <<< "$detected"
+    [ -n "$next_version" ] && [ -n "$next_commit" ] || return 1
+
+    # Keep the archive pin in step with the version when update-repo applies it.
+    # A -t run records this alongside the normal version edit, without applying it.
+    vercomp "$next_version" "$version" >/dev/null
+    comparison=$?
+    if [ "$comparison" = 2 ] && [ "$next_commit" != "$_commit" ]; then
+        recipe="${ppath%/*}/spkgbuild"
+        commit_edit="s/^_commit=.*/_commit=$next_commit/"
+        if [ -n "${test_upgrade:-}" ]; then
+            printf 'sed -i -e %q %q\n' "$commit_edit" "$recipe" >> test_updates.sh || return 1
+        else
+            sed -i -e "$commit_edit" "$recipe" || return 1
+        fi
+    fi
+    uversion=$next_version
+}

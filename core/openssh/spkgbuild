@@ -2,7 +2,7 @@
 # depends	: 
 
 name=openssh
-version=10.0p1
+version=10.6
 release=1
 
 #backup="etc/ssh/sshd_config"
