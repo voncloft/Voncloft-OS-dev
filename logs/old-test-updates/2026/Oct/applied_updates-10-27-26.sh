@@ -428,3 +428,15 @@ bash /usr/libexec/update-repo/changelog core/zxing-cpp/spkgbuild Upgraded\ from\
 sed -i -e s/\^_commit=.\*/_commit=82b8b4d22181cbfa23d3d3a57613b24c015549c8/ kde-apps/varpeggio/spkgbuild
 sed -i -e "s/version=0.2.46.git20261020/version=0.2.47.git20261027063836/g" kde-apps/varpeggio/spkgbuild
 bash /usr/libexec/update-repo/changelog kde-apps/varpeggio/spkgbuild Upgraded\ from\ version\ 0.2.46.git20261020\ to\ version\ 0.2.47.git20261027063836
+sed -i -e "s/version=140.0esr/version=160.0b1/g" nonfree/firefox/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/firefox/spkgbuild Upgraded\ from\ version\ 140.0esr\ to\ version\ 160.0b1
+sed -i -e "s/version=3.7.0.2/version=3.13/g" nonfree/pandoc-bin/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/pandoc-bin/spkgbuild Upgraded\ from\ version\ 3.7.0.2\ to\ version\ 3.13
+sed -i -e "s/version=1.26.24/version=1.26.30/g" nonfree/veracrypt/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/veracrypt/spkgbuild Upgraded\ from\ version\ 1.26.24\ to\ version\ 1.26.30
+sed -i -e "s/version=7.1.16.172425/version=7.2.22.175245/g" nonfree/virtualbox/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/virtualbox/spkgbuild Upgraded\ from\ version\ 7.1.16.172425\ to\ version\ 7.2.22.175245
+sed -i -e "s/version=7.0.10/version=7.2.22/g" nonfree/virtualbox-guest-modules/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/virtualbox-guest-modules/spkgbuild Upgraded\ from\ version\ 7.0.10\ to\ version\ 7.2.22
+sed -i -e "s/version=7.2.0/version=7.2.22/g" nonfree/virtualbox-guest-utils/spkgbuild
+bash /usr/libexec/update-repo/changelog nonfree/virtualbox-guest-utils/spkgbuild Upgraded\ from\ version\ 7.2.0\ to\ version\ 7.2.22
