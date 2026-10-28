@@ -1,0 +1,24 @@
+# Use the maintained upstream repository and its actual release asset.
+source=https://api.github.com/repos/NetworkConfiguration/dhcpcd/releases/latest
+url=$source
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - <<'PYVERSION'
+from pathlib import Path
+import json,re,sys
+try:
+    obj=json.loads(Path('index.html').read_text())
+    if obj.get('draft') or obj.get('prerelease'):raise ValueError('not a stable release')
+    tag=obj['tag_name']
+    if not re.fullmatch(r'v[0-9]+(?:\.[0-9]+)+',tag):raise ValueError('invalid release tag')
+    version=tag[1:];filename='dhcpcd-'+version+'.tar.xz'
+    asset=next(a for a in obj['assets'] if a['name']==filename)
+    if asset['browser_download_url']!='https://github.com/NetworkConfiguration/dhcpcd/releases/download/'+tag+'/'+filename:
+        raise ValueError('unexpected source archive URL')
+    print(version)
+except (OSError,ValueError,KeyError,StopIteration) as error:
+    sys.exit('ERROR: '+str(error))
+PYVERSION
+    ) || return 1
+}

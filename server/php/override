@@ -1,0 +1,24 @@
+# Track stable patch releases in the recipe's selected PHP branch.
+source="https://www.php.net/releases/index.php?json&version=${version%.*}&max=100"
+url=$source
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - "$version" <<'PYVERSION'
+from pathlib import Path
+import json,re,sys
+try:
+    branch='.'.join(sys.argv[1].split('.')[:2])
+    obj=json.loads(Path('index.html').read_text());versions=[]
+    for version,release in obj.items():
+        if not re.fullmatch(re.escape(branch)+r'\.[0-9]+',version):continue
+        filename='php-'+version+'.tar.gz'
+        if any(a.get('filename')==filename for a in release.get('source',[])):
+            versions.append(version)
+    if not versions:raise ValueError('no stable PHP source for branch '+branch)
+    print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+except (OSError,ValueError,KeyError,TypeError,AttributeError) as error:
+    sys.exit('ERROR: '+str(error))
+PYVERSION
+    ) || return 1
+}

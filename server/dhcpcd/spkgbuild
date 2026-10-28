@@ -2,8 +2,8 @@
 
 name=dhcpcd
 version=10.0.1
-release=1
-source="http://roy.marples.name/downloads/$name/$name-$version.tar.xz
+release=2
+source="https://github.com/NetworkConfiguration/dhcpcd/releases/download/v$version/$name-$version.tar.xz
 	rc.network
 	run
 	conf"
