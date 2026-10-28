@@ -4485,3 +4485,6 @@ sed -i -e "s/version=4.25.0/version=4.25.1/g" server/samba/spkgbuild
 bash /usr/libexec/update-repo/changelog server/samba/spkgbuild Upgraded\ from\ version\ 4.25.0\ to\ version\ 4.25.1
 sed -i -e "s/version=1.0.20210914/version=1.0.20260223/g" server/wireguard/spkgbuild
 bash /usr/libexec/update-repo/changelog server/wireguard/spkgbuild Upgraded\ from\ version\ 1.0.20210914\ to\ version\ 1.0.20260223
+sed -i -e s\|\^_archive=.\*\$\|_archive=https://download.java.net/java/GA/jdk27.0.1.0.2/924dbdccfc234bb9b9355d7c6b66034b/1/GPL/openjdk-27.0.1.0.2_linux-x64_bin.tar.gz\| -e s\|\^_sha256=.\*\$\|_sha256=e69ee3937022c1caa8eaa32a586955ba13c109ad6986a6a1a7f1d5e6fa8998e3\| -- core/java-headless/spkgbuild
+sed -i -e "s/version=24.0.1/version=27.0.1.0.2/g" core/java-headless/spkgbuild
+bash /usr/libexec/update-repo/changelog core/java-headless/spkgbuild Upgraded\ from\ version\ 24.0.1\ to\ version\ 27.0.1.0.2

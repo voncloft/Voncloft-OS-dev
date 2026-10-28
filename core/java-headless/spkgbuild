@@ -1,63 +1,45 @@
-# description : headless java server
+# description : OpenJDK Java runtime and development tools for Java applications and servers
 # depends : alsa-lib cups giflib lcms2 xorg-libraries
 
 name=java-headless
-version=24.0.1
-release=9
+version=27.0.1.0.2
+release=10
 
-source="https://anduin.linuxfromscratch.org/BLFS/OpenJDK/OpenJDK-$version/OpenJDK-$version+$release-x86_64-bin.tar.xz"
-options="!checksum"
+_archive=https://download.java.net/java/GA/jdk27.0.1.0.2/924dbdccfc234bb9b9355d7c6b66034b/1/GPL/openjdk-27.0.1.0.2_linux-x64_bin.tar.gz
+_sha256=e69ee3937022c1caa8eaa32a586955ba13c109ad6986a6a1a7f1d5e6fa8998e3
+source="$_archive"
+noextract="${_archive##*/}"
+options="!checksum !strip"
 
 build() {
-	cd *
-	mkdir -pv $PKG/etc/profile.d
-cat > /etc/profile.d/openjdk.sh << "EOF"
-# Begin /etc/profile.d/openjdk.sh
+    local archive="$SRC/${_archive##*/}" unpack="$SRC/java-unpack" java_root
+    # Official OpenJDK updates supply a SHA-256; the legacy recipe has none stored.
+    if [ -n "$_sha256" ]; then
+        printf '%s  %s\n' "$_sha256" "$archive" | sha256sum -c - || return 1
+    fi
+    install -dm755 "$unpack"
+    tar -xf "$archive" -o -C "$unpack" || return 1
+    local -a launchers=("$unpack"/*/bin/java)
+    [ "${#launchers[@]}" = 1 ] && [ -x "${launchers[0]}" ] || return 1
+    java_root=${launchers[0]%/bin/java}
+    grep -Fxq "JAVA_VERSION=\"$version\"" "$java_root/release" || return 1
 
-# Set JAVA_HOME directory
-JAVA_HOME=/opt/jdk
-
-# Adjust PATH
-pathappend $JAVA_HOME/bin
-
-# Auto Java CLASSPATH: Copy jar files to, or create symlinks in, the
-# /usr/share/java directory.
-
-AUTO_CLASSPATH_DIR=/usr/share/java
-
-pathprepend . CLASSPATH
-
-for dir in `find ${AUTO_CLASSPATH_DIR} -type d 2>/dev/null`; do
-    pathappend $dir CLASSPATH
-done
-
-for jar in `find ${AUTO_CLASSPATH_DIR} -name "*.jar" 2>/dev/null`; do
-    pathappend $jar CLASSPATH
-done
-
-export JAVA_HOME
-
-# By default, Java creates several files in a directory named
-# /tmp/hsperfdata_[username]. This directory contains files that are used for
-# performance monitoring and profiling, but aren't normally needed on a BLFS
-# system. This environment variable disables that feature.
-_JAVA_OPTIONS="-XX:-UsePerfData"
-
-export _JAVA_OPTIONS
-
-unset AUTO_CLASSPATH_DIR dir jar _JAVA_OPTIONS
-
-# End /etc/profile.d/openjdk.sh
+    install -dm755 "$PKG/opt/OpenJDK-$version-bin" "$PKG/etc/profile.d" "$PKG/etc/sudoers.d"
+    cp -a "$java_root/." "$PKG/opt/OpenJDK-$version-bin/"
+    ln -sfn "OpenJDK-$version-bin" "$PKG/opt/jdk"
+    cat > "$PKG/etc/profile.d/openjdk.sh" <<'EOF'
+# OpenJDK environment
+export JAVA_HOME=/opt/jdk
+if command -v pathappend >/dev/null 2>&1; then
+    pathappend "$JAVA_HOME/bin"
+else
+    export PATH="$JAVA_HOME/bin:$PATH"
+fi
 EOF
-	mkdir -pv $PKG/etc/sudoers.d
-cat > $PKG/etc/sudoers.d/java << "EOF"
+    chmod 644 "$PKG/etc/profile.d/openjdk.sh"
+    cat > "$PKG/etc/sudoers.d/java" <<'EOF'
 Defaults env_keep += JAVA_HOME
 Defaults env_keep += CLASSPATH
-Defaults env_keep += _JAVA_OPTIONS
 EOF
-	
-	mkdir -pv $PKG/opt/OpenJDK-$version-bin
-	mv * -v $PKG/opt/OpenJDK-$version-bin
-	chown -R root:root $PKG/opt/OpenJDK-$version-bin
-	ln -sfn OpenJDK-$version-$bin $PKG/opt/jdk
+    chmod 440 "$PKG/etc/sudoers.d/java"
 }

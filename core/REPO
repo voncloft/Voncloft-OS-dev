@@ -1495,8 +1495,9 @@ f:54b68d55eb6817187630dcaba89d231d:fop/override
 f:60061558183308983e1dc47a32830598:fop/pre-install.sh
 f:da3acd3a32c6f5ce2a4333dbf3a6a2b5:at-spi2-atk/spkgbuild
 f:c7db3fdbc4b95dcf2ad833478600c91c:java-headless/.pkgfiles
-f:53362aa72b4f5ceb7b77beb3e39ab681:java-headless/spkgbuild
-f:428873bef5937344d626e1c5642d72ef:java-headless/override
+f:97eb0cd29d0b4cd954294be20459414c:java-headless/CHANGELOG
+f:503830cbeafa04ad57fb568149e5b4bf:java-headless/spkgbuild
+f:337f0b9ac9b1e35ba526e6d2147bd6b0:java-headless/override
 f:b0c5bfffc94b3566af98396753f0cc62:zxing-cpp/.pkgfiles
 f:85ba664f389cb926d80dfb573cc3d5af:zxing-cpp/CHANGELOG
 f:93907473cda243f2e03be06af9ddb6e2:zxing-cpp/spkgbuild
