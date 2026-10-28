@@ -195,8 +195,8 @@ f:00de4726af3ed35e2d7c9ea6997e179a:openapi-generator/spkgbuild
 f:da1b5902f72a6c090245f59a03f70cc0:ncdu/.pkgfiles
 f:002e9e75bec3c438a483188239234c4d:ncdu/CHANGELOG
 f:4884e4a10bd244a8f42e7eb536e2b999:ncdu/spkgbuild
-f:a4da3f56aa7850dcdffc3469ff217a68:chatgpt-desktop/CHANGELOG
-f:dbfc464fc6847e643dad7e58c5d1c9ea:chatgpt-desktop/spkgbuild
+f:a1b19fb7d6fcce0bcc0f703e01fca0ce:chatgpt-desktop/CHANGELOG
+f:6f631650d0a90e4fcc5567aa9efbb65b:chatgpt-desktop/spkgbuild
 f:de7cebc71c12324546d15cfa591955de:chatgpt-desktop/override
 f:64040a51058c820808dc5643c166221a:qemu/.pkgfiles
 f:27d4000268119e194875bb3b7ba673a6:qemu/CHANGELOG

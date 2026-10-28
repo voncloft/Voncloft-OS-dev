@@ -2,8 +2,8 @@
 # depends : bash coreutils curl findutils git foltotar grep gzip nano python sed tar
 
 name=update-repo
-version=20261026
-release=5
+version=20261027
+release=1
 source="update-repo changelog"
 
 build() {

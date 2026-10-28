@@ -1,0 +1,29 @@
+# Match actual source-archive links, not page dates or unrelated version text.
+# This recipe provides the Berkeley DB 5.3 ABI; do not switch it to DB 18.
+source=https://anduin.linuxfromscratch.org/BLFS/bdb/
+url=$source
+
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - 'db-(5\.3\.[0-9]+)\.tar\.gz' <<'PYVERSION'
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import unquote, urlsplit
+import re, sys
+versions=[]
+class Links(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        if tag != 'a': return
+        path=unquote(urlsplit(dict(attrs).get('href','')).path)
+        match=re.fullmatch(sys.argv[1],path.rsplit('/',1)[-1])
+        if match: versions.append(match[1])
+try:
+    Links().feed(Path('index.html').read_text())
+    if not versions: raise ValueError('no matching stable source archive')
+    print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+except (OSError,ValueError) as error:
+    sys.exit('ERROR: '+str(error))
+PYVERSION
+    ) || return 1
+}

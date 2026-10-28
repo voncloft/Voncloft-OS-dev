@@ -1,0 +1,33 @@
+# description : vpn into home network
+# depends : bash
+
+name=wireguard
+version=1.0.20260223
+release=1
+_name=wireguard-tools
+
+source="https://git.zx2c4.com/${_name}/snapshot/${_name}-${version}.tar.xz
+	wg0.conf
+	wireguard"
+backup="etc/wireguard/wg0.conf"
+
+options="!checksum"
+
+build() {
+	cd $_name-$version
+	find contrib/ -name '.gitignore' -delete
+	make -C src/
+
+	make -C src/ \
+		DESTDIR="${PKG}/" \
+		WITH_BASHCOMPLETION=yes \
+                WITH_WGQUICK=yes \
+                WITH_SYSTEMDUNITS=yes \
+                install
+
+	install -d -m0755 "${PKG}"/usr/share/${name}/
+	cp -r contrib/ $PKG/usr/share/$name/examples/
+	mkdir -pv $PKG/etc/wireguard
+	install -Dm644 $SRC/wg0.conf $PKG/etc/wireguard/wg0.conf
+	create_startup_directories wireguard K99wireguard S99wireguard $SRC $PKG
+}

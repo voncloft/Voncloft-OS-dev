@@ -4462,3 +4462,26 @@ bash /usr/libexec/update-repo/changelog xorg/xpr/spkgbuild Upgraded\ from\ versi
 sed -i -e s\|http://invisible-mirror\\.net/archives/\\\$name/\\\$name-\\\$version\\.tgz\|https://invisible-mirror.net/archives/xterm/xterm-412.tgz\| xorg/xterm/spkgbuild
 sed -i -e "s/version=401/version=412/g" xorg/xterm/spkgbuild
 bash /usr/libexec/update-repo/changelog xorg/xterm/spkgbuild Upgraded\ from\ version\ 401\ to\ version\ 412
+sed -i -e "s/version=3.16.120/version=3.16.125/g" server/blacklist-hosts/spkgbuild
+bash /usr/libexec/update-repo/changelog server/blacklist-hosts/spkgbuild Upgraded\ from\ version\ 3.16.120\ to\ version\ 3.16.125
+sed -i -e s\|\^_commit=.\*\$\|_commit=0e337ddf4bb7434a019ac15920259401195bfda4\| -- server/blacklist-youtubeads/spkgbuild
+sed -i -e "s/version=1.0/version=1.0.git20261026155503/g" server/blacklist-youtubeads/spkgbuild
+bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Upgraded\ from\ version\ 1.0\ to\ version\ 1.0.git20261026155503
+sed -i -e "s,http://roy.marples.name/downloads/$name/$name-$version.tar.xz,,g" server/dhcpcd/spkgbuild
+sed -i -e "s/version=9.4.1/version=10.0.1/g" server/dhcpcd/spkgbuild
+bash /usr/libexec/update-repo/changelog server/dhcpcd/spkgbuild Upgraded\ from\ version\ 9.4.1\ to\ version\ 10.0.1
+sed -i -e "s/version=2026.10.0/version=2026.10.4/g" server/homeassistant/spkgbuild
+bash /usr/libexec/update-repo/changelog server/homeassistant/spkgbuild Upgraded\ from\ version\ 2026.10.0\ to\ version\ 2026.10.4
+sed -i -e "s/version=11.0/version=12.3/g" server/mariadb/spkgbuild
+bash /usr/libexec/update-repo/changelog server/mariadb/spkgbuild Upgraded\ from\ version\ 11.0\ to\ version\ 12.3
+sed -i -e "s/version=1.31.6/version=1.31.8/g" server/nginx/spkgbuild
+bash /usr/libexec/update-repo/changelog server/nginx/spkgbuild Upgraded\ from\ version\ 1.31.6\ to\ version\ 1.31.8
+sed -i -e s\|\^checksum=.\*\$\|checksum=b3b13e506\| -- server/plex-media-server/spkgbuild
+sed -i -e "s/version=1.43.4.10903/version=1.43.5.11079/g" server/plex-media-server/spkgbuild
+bash /usr/libexec/update-repo/changelog server/plex-media-server/spkgbuild Upgraded\ from\ version\ 1.43.4.10903\ to\ version\ 1.43.5.11079
+sed -i -e "s/version=3.8.3/version=3.9.0/g" server/radicale/spkgbuild
+bash /usr/libexec/update-repo/changelog server/radicale/spkgbuild Upgraded\ from\ version\ 3.8.3\ to\ version\ 3.9.0
+sed -i -e "s/version=4.25.0/version=4.25.1/g" server/samba/spkgbuild
+bash /usr/libexec/update-repo/changelog server/samba/spkgbuild Upgraded\ from\ version\ 4.25.0\ to\ version\ 4.25.1
+sed -i -e "s/version=1.0.20210914/version=1.0.20260223/g" server/wireguard/spkgbuild
+bash /usr/libexec/update-repo/changelog server/wireguard/spkgbuild Upgraded\ from\ version\ 1.0.20210914\ to\ version\ 1.0.20260223

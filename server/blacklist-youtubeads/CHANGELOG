@@ -1,0 +1,19 @@
+Date: Mon 25 Jul 2022 06:40:20 PM EDT
+
+blacklist-youtubeads
+Version=1.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 11:44:42 PM EDT 2026
+
+Version=1.0.git20261026155503
+Release=2
+
+Synopsis:
+Upgraded from version 1.0 to version 1.0.git20261026155503

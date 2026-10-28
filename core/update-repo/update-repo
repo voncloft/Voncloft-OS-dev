@@ -103,6 +103,25 @@ screen_stop()
     rm -f -- "$screen_output"
 }
 
+# The completed scan has one compact summary, with no last-package fields.
+print_stats()
+{
+    local seconds=${1:-$(( $(date -u +%s) - start_time ))} duration minute_unit=minutes second_unit=seconds
+    if [ "$seconds" -ge 60 ]; then
+        [ "$((seconds / 60))" != 1 ] || minute_unit=minute
+        [ "$((seconds % 60))" != 1 ] || second_unit=second
+        duration="$((seconds / 60)) $minute_unit $((seconds % 60)) $second_unit"
+    else
+        [ "$seconds" != 1 ] || second_unit=second
+        duration="$seconds $second_unit"
+    fi
+    printf '%bupdate-repo stats%b\n' "${WHITE:-}" "${NC:-}"
+    printf '%bPackages updated: %s%b\n' "${BLUE:-}" "${count:-0}" "${NC:-}"
+    printf '%bMissing: %s%b\n' "${BLUE:-}" "${missing:-0}" "${NC:-}"
+    printf '%bChecked: %s%b\n' "${BLUE:-}" "${checked_packages:-0}" "${NC:-}"
+    printf '%bTime: %s%b\n' "${WHITE:-}" "$duration" "${NC:-}"
+}
+
 screen_draw()
 {
     [ "${screen_active:-}" = 1 ] || return 0
@@ -311,6 +330,7 @@ screen_apply_command()
 run_saved_updates()
 {
     local result=0 diagnostics
+    screen_prepare_apply test_updates.sh
     # Keep the existing plain output when redirected or on a dumb terminal.
     if [ ! -t 1 ] || [ "${TERM:-dumb}" = dumb ]; then
         bash test_updates.sh
@@ -321,7 +341,6 @@ run_saved_updates()
         bash test_updates.sh
         return $?
     fi
-    screen_prepare_apply test_updates.sh
     screen_phase=apply
     screen_updating='Preparing saved updates'
     screen_upgrade_status='Starting'
@@ -834,7 +853,6 @@ upgrade_process()
 }
 alerts_and_logs()
 {
-	echo "-----------------------------------------------------------------------------------"
 	if [ ! -z $count ];
 	then
 	echo -e "Packages upgraded: $count<br>\n" >> $logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html
@@ -862,29 +880,6 @@ alerts_and_logs()
 	if [ -f /sources/Voncloft-OS-dev/logs/secondary.php ];then
 		find /sources/Voncloft-OS-dev/logs/ -mindepth 1 -maxdepth 5 -type d -exec cp /sources/Voncloft-OS-dev/logs/secondary.php {} \;
 	fi
-	if [ $count = 1 ];
-	then
-		message="package updated"
-	else
-		message="packages updated"
-	fi
-	echo -e "${BLUE}$count $message${NC}"
-	else
-	
-		echo -e "${BLUE}No new updates${NC}"
-	fi
-	if [ ! -z $missing ];
-	then
-		if [ $missing = 1 ];
-		then
-			message="package missed"
-		else
-			message="packages missing"
-		fi
-	echo -e "${BLUE}$missing $message${NC}"
-	else
-	message="No missing packages"
-	echo -e "${BLUE}$message${NC}"
 	fi
 }
 prepare_log_dirs()
@@ -1008,7 +1003,10 @@ apply_test_updates()
 		mkdir -pv /sources/Voncloft-OS-dev/logs/old-test-updates/$(date +"%Y")/$(date +"%b")
 		cat test_updates.sh >> /sources/Voncloft-OS-dev/logs/old-test-updates/$(date +"%Y")/$(date +"%b")/applied_updates-$(date +"%m-%d-%y").sh
 		rm test_updates.sh
-		echo "Test updates applied"
+		count=$screen_apply_total
+		missing=0
+		checked_packages=$screen_apply_total
+		print_stats
 		if [ -f index.html ];then
 			rm index.html
 		fi
@@ -1071,6 +1069,7 @@ main()
 	prepare_backup_and_logs || return 1
 	timestamp_log
 	screen_start
+	checked_packages=0
 	screen_total_packages=0
 	for f in $repos; do
 		[ "${f##*/}" != "REPO" ] && [ -f "$f/spkgbuild" ] || continue
@@ -1089,17 +1088,10 @@ main()
 			echo "-----------------------------------------------------------------------------------"
 			check_package "$f"
 		fi
+		checked_packages=$((checked_packages+1))
 	done
-	if [ "${screen_active:-}" = 1 ] && [ "${screen_checked:-0}" -gt 0 ]; then
-		screen_stop
-		# Preserve the last result after leaving the alternate screen, including
-		# a one-package scan which would otherwise disappear immediately.
-		printf '%bPPath:     %s%b\n' "$WHITE" "$screen_path" "$NC"
-		printf '%bVersion:   %s%b\n' "$BLUE" "$screen_version" "$NC"
-		printf '%bUpgraded:  %s%b\n' "$DBLUE" "$screen_found" "$NC"
-	else
-		screen_stop
-	fi
+	# Restore and clear the terminal; completion shows only the summary.
+	screen_stop
 	finish_logs	
 	alerts_and_logs
 }
@@ -1141,7 +1133,7 @@ else
 	minutes_passed=$elapsed
 	minutes_quote="Total of $minutes_passed seconds elapsed for process"
 fi
-echo $minutes_quote
+print_stats "$elapsed"
 
 if [[ $count -gt 0 ]];then
 	echo $minutes_quote"<br>" >> $table_log

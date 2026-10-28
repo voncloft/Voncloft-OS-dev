@@ -1,0 +1,28 @@
+# Match actual source-archive links, not page dates or unrelated version text.
+source=https://crux.nu/files/
+url=$source
+
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - 'httpup-([0-9]+(?:\.[0-9]+)+)\.tar\.xz' <<'PYVERSION'
+from html.parser import HTMLParser
+from pathlib import Path
+from urllib.parse import unquote, urlsplit
+import re, sys
+versions=[]
+class Links(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        if tag != 'a': return
+        path=unquote(urlsplit(dict(attrs).get('href','')).path)
+        match=re.fullmatch(sys.argv[1],path.rsplit('/',1)[-1])
+        if match: versions.append(match[1])
+try:
+    Links().feed(Path('index.html').read_text())
+    if not versions: raise ValueError('no matching stable source archive')
+    print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+except (OSError,ValueError) as error:
+    sys.exit('ERROR: '+str(error))
+PYVERSION
+    ) || return 1
+}

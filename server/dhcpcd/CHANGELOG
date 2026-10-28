@@ -1,0 +1,19 @@
+Date: Fri 22 Oct 2021 05:19:36 PM EDT
+
+dhcpcd
+Version=9.4.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 9.4.0 to version 9.4.1
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 11:44:42 PM EDT 2026
+
+Version=10.0.1
+Release=1
+
+Synopsis:
+Upgraded from version 9.4.1 to version 10.0.1

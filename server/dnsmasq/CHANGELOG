@@ -1,0 +1,89 @@
+Date: Mon 07 Jun 2021 01:05:43 PM EDT
+
+name=dnsmasq
+version=2.85
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.82 to version 2.85
+
+----------------------------------------------------------------
+
+Date: Thu Sep  9 15:17:42 EDT 2021
+
+version=2.86
+release=1
+
+Synopsis:
+Upgraded from version 2.85 to version 2.86
+
+----------------------------------------------------------------
+
+Date: Wed 28 Sep 2022 05:30:56 PM EDT
+
+Version=2.87
+Release=1
+
+Synopsis:
+Upgraded from version 2.86 to version 2.87
+
+----------------------------------------------------------------
+
+Date: Tue 06 Dec 2022 08:12:21 AM EST
+
+Version=2.88
+Release=1
+
+Synopsis:
+Upgraded from version 2.87 to version 2.88
+
+----------------------------------------------------------------
+
+Date: Mon 06 Feb 2023 10:02:57 AM EST
+
+Version=2.89
+Release=1
+
+Synopsis:
+Upgraded from version 2.88 to version 2.89
+
+----------------------------------------------------------------
+
+Date: Thu 15 Feb 2024 06:34:23 AM EST
+
+Version=2.90
+Release=1
+
+Synopsis:
+Upgraded from version 2.89 to version 2.90
+
+----------------------------------------------------------------
+
+Date: Mon 24 Mar 2025 07:27:23 AM EDT
+
+Version=2.91
+Release=1
+
+Synopsis:
+Upgraded from version 2.90 to version 2.91
+
+----------------------------------------------------------------
+
+Date: Sun 25 Jan 2026 11:51:17 AM EST
+
+Version=2.92
+Release=1
+
+Synopsis:
+Upgraded from version 2.91 to version 2.92
+
+----------------------------------------------------------------
+
+Date: Mon 08 Jun 2026 02:45:25 PM EDT
+
+Version=2.93
+Release=1
+
+Synopsis:
+Upgraded from version 2.92 to version 2.93

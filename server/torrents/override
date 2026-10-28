@@ -1,0 +1,5 @@
+# All package sources are local scripts; there is no independent upstream release.
+source=local
+url=$source
+update_repo_skip='Locally maintained scripts; change the recipe version when those scripts change.'
+update_repo_skip_status='Local package'

@@ -1,0 +1,319 @@
+Date: Mon 27 Feb 2023 03:43:28 PM EST
+
+radicale
+Version=3.1.8
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:37:28 AM EDT
+
+Version=3.3.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.1.8 to version 3.3.0
+
+----------------------------------------------------------------
+
+Date: Mon 25 Nov 2024 07:17:24 AM EST
+
+Version=3.3.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.0 to version 3.3.1
+
+----------------------------------------------------------------
+
+Date: Mon 16 Dec 2024 03:57:47 AM EST
+
+Version=3.3.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.1 to version 3.3.2
+
+----------------------------------------------------------------
+
+Date: Sun 29 Dec 2024 11:57:31 AM EST
+
+Version=3.3.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.2 to version 3.3.3
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jan 2025 10:24:55 AM EST
+
+Version=3.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.3.3 to version 3.4.0
+
+----------------------------------------------------------------
+
+Date: Mon 27 Jan 2025 06:45:40 AM EST
+
+Version=3.4.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.0 to version 3.4.1
+
+----------------------------------------------------------------
+
+Date: Tue 18 Mar 2025 09:57:45 AM EDT
+
+Version=3.5.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.4.1 to version 3.5.0
+
+----------------------------------------------------------------
+
+Date: Tue 08 Apr 2025 10:08:59 AM EDT
+
+Version=3.5.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.0 to version 3.5.1
+
+----------------------------------------------------------------
+
+Date: Thu 24 Apr 2025 09:26:37 AM EDT
+
+Version=3.5.2
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.1 to version 3.5.2
+
+----------------------------------------------------------------
+
+Date: Mon 12 May 2025 09:02:43 AM EDT
+
+Version=3.5.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.2 to version 3.5.3
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:25 PM EDT
+
+Version=3.5.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.3 to version 3.5.4
+
+----------------------------------------------------------------
+
+Date: Mon 25 Aug 2025 08:19:54 AM EDT
+
+Version=3.5.5
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.4 to version 3.5.5
+
+----------------------------------------------------------------
+
+Date: Tue 16 Sep 2025 12:19:28 PM EDT
+
+Version=3.5.6
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.5 to version 3.5.6
+
+----------------------------------------------------------------
+
+Date: Sun 28 Sep 2025 12:00:27 PM EDT
+
+Version=3.5.7
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.6 to version 3.5.7
+
+----------------------------------------------------------------
+
+Date: Tue 11 Nov 2025 04:07:19 AM EST
+
+Version=3.5.8
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.7 to version 3.5.8
+
+----------------------------------------------------------------
+
+Date: Mon 01 Dec 2025 12:06:00 PM EST
+
+Version=3.5.9
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.8 to version 3.5.9
+
+----------------------------------------------------------------
+
+Date: Tue 23 Dec 2025 12:08:36 PM EST
+
+Version=3.5.10
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.9 to version 3.5.10
+
+----------------------------------------------------------------
+
+Date: Sun 11 Jan 2026 01:09:46 PM EST
+
+Version=3.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.5.10 to version 3.6.0
+
+----------------------------------------------------------------
+
+Date: Sat 07 Mar 2026 01:45:08 AM EST
+
+Version=3.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.6.0 to version 3.6.1
+
+----------------------------------------------------------------
+
+Date: Sun 12 Apr 2026 12:58:43 PM EDT
+
+Version=3.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.6.1 to version 3.7.0
+
+----------------------------------------------------------------
+
+Date: Mon 13 Apr 2026 06:36:45 PM EDT
+
+Version=3.7.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.0 to version 3.7.1
+
+----------------------------------------------------------------
+
+Date: Fri 22 May 2026 08:59:34 AM EDT
+
+Version=3.7.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.1 to version 3.7.3
+
+----------------------------------------------------------------
+
+Date: Tue 02 Jun 2026 12:18:19 PM EDT
+
+Version=3.7.4
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.3 to version 3.7.4
+
+----------------------------------------------------------------
+
+Date: Mon 15 Jun 2026 08:47:54 AM EDT
+
+Version=3.7.5
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.4 to version 3.7.5
+
+----------------------------------------------------------------
+
+Date: Sun 12 Jul 2026 11:14:23 PM EDT
+
+Version=3.7.6
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.5 to version 3.7.6
+
+----------------------------------------------------------------
+
+Date: Tue 21 Jul 2026 11:37:45 PM EDT
+
+Version=3.7.7
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.6 to version 3.7.7
+
+----------------------------------------------------------------
+
+Date: Fri 07 Aug 2026 06:27:49 PM EDT
+
+Version=3.7.8
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.7 to version 3.7.8
+
+----------------------------------------------------------------
+
+Date: Wed 09 Sep 2026 02:48:53 PM EDT
+
+Version=3.8.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.7.8 to version 3.8.0
+
+----------------------------------------------------------------
+
+Date: Mon 28 Sep 2026 12:05:14 AM EDT
+
+Version=3.8.1
+Release=1
+
+Synopsis:
+Upgraded from version 3.8.0 to version 3.8.1
+
+----------------------------------------------------------------
+
+Date: Thu 08 Oct 2026 10:01:49 PM EDT
+
+Version=3.8.3
+Release=1
+
+Synopsis:
+Upgraded from version 3.8.1 to version 3.8.3
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 11:44:42 PM EDT 2026
+
+Version=3.9.0
+Release=1
+
+Synopsis:
+Upgraded from version 3.8.3 to version 3.9.0

@@ -1,0 +1,15 @@
+# description : block youtube ads via dns
+# depends : dnsmasq
+
+name=blacklist-youtubeads
+version=1.0.git20261026155503
+release=2
+
+_commit=0e337ddf4bb7434a019ac15920259401195bfda4
+source="youtubelist-$version.txt::https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/$_commit/youtubelist.txt"
+
+build() {
+	mkdir -pv $PKG/etc/blacklist-hosts/youtube
+	cp "$SRC/youtubelist-$version.txt" $PKG/etc/blacklist-hosts/youtube/youtubeadlist
+	sed -i -e 's/^/0.0.0.0 /g' $PKG/etc/blacklist-hosts/youtube/youtubeadlist
+}

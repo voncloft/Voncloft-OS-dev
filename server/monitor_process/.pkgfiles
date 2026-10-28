@@ -1,0 +1,5 @@
+monitor_process-1-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/process_monitor.sh
+-rwxr-xr-x root/root    usr/bin/wireguard-check.sh

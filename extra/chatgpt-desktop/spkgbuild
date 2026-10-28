@@ -1,6 +1,6 @@
 # description : Official OpenAI desktop application for ChatGPT conversations and Codex coding tasks
 # depends : alsa-lib at-spi2-core bash cairo coreutils cups dbus expat gcc gdk-pixbuf git glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libusb libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr mesa nspr nss openssl pango udev xdg-utils xz
-# note : Official x86_64 binary; requires OpenSSL 3 runtime libraries. TPM-backed remote-control authentication additionally needs tpm2-tss.
+# note : Official x86_64 binary; requires OpenSSL 3 runtime libraries. The device-key module for controlling other computers additionally needs tpm2-tss; receiving control from a phone does not require that module.
 
 name=chatgpt-desktop
 version=26.1021.22027

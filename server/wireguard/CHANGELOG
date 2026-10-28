@@ -1,0 +1,19 @@
+Date: Wed 15 Dec 2021 09:16:34 AM EST
+
+wireguard
+Version=1.0.20210914
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Tue Oct 27 11:44:42 PM EDT 2026
+
+Version=1.0.20260223
+Release=1
+
+Synopsis:
+Upgraded from version 1.0.20210914 to version 1.0.20260223

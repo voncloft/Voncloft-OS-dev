@@ -1,0 +1,5 @@
+blacklist-youtubeads-1.0-1
+drwxr-xr-x root/root    etc/
+drwxr-xr-x root/root    etc/blacklist-hosts/
+drwxr-xr-x root/root    etc/blacklist-hosts/youtube/
+-rw-r--r-- root/root    etc/blacklist-hosts/youtube/youtubeadlist

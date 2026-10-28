@@ -1,0 +1,26 @@
+# description : Commonly used tools to maintain repo
+# depends : 
+
+name=toolbox
+version=1
+release=1
+
+source="createpackage
+	changelog
+	foltotar
+	update-lfs-build
+	update-rep
+	update-scratchpkg"
+
+options="!checksum"
+
+build() {
+	mkdir $PKG/usr/bin
+	install -Dm755 $SRC/createpackage $PKG/usr/bin/createpackage
+	install -Dm755 $SRC/changelog	$PKG/usr/bin/changelog
+	install -Dm755 $SRC/foltotar	$PKG/usr/bin/foltotar
+        install -Dm755 $SRC/update-lfs-build $PKG/usr/bin/update-lfs-build
+        install -Dm755 $SRC/update-rep $PKG/usr/bin/update-rep
+        install -Dm755 $SRC/update-scratchpkg $PKG/usr/bin/update-scratchpkg
+
+}

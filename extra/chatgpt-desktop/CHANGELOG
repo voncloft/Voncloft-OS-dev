@@ -8,4 +8,4 @@ Synopsis:
 Add the official ChatGPT desktop binary using its standard /usr layout.
 Verify the upstream SHA-256 and extract only the Debian package payload.
 Track stable amd64 releases with an override that updates the version, URL, and checksum.
-TPM libraries are optional for remote-control device-key authentication.
+TPM libraries support device keys when this computer controls other computers; they are not required for receiving control from a phone.
