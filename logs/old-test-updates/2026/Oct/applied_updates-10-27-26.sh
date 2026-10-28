@@ -4488,3 +4488,12 @@ bash /usr/libexec/update-repo/changelog server/wireguard/spkgbuild Upgraded\ fro
 sed -i -e s\|\^_archive=.\*\$\|_archive=https://download.java.net/java/GA/jdk27.0.1.0.2/924dbdccfc234bb9b9355d7c6b66034b/1/GPL/openjdk-27.0.1.0.2_linux-x64_bin.tar.gz\| -e s\|\^_sha256=.\*\$\|_sha256=e69ee3937022c1caa8eaa32a586955ba13c109ad6986a6a1a7f1d5e6fa8998e3\| -- core/java-headless/spkgbuild
 sed -i -e "s/version=24.0.1/version=27.0.1.0.2/g" core/java-headless/spkgbuild
 bash /usr/libexec/update-repo/changelog core/java-headless/spkgbuild Upgraded\ from\ version\ 24.0.1\ to\ version\ 27.0.1.0.2
+sed -i -e "s/version=10.0.1/version=10.5.2/g" server/dhcpcd/spkgbuild
+bash /usr/libexec/update-repo/changelog server/dhcpcd/spkgbuild Upgraded\ from\ version\ 10.0.1\ to\ version\ 10.5.2
+sed -i -e "s/version=1.8.12/version=1.8.13/g" server/iptables/spkgbuild
+bash /usr/libexec/update-repo/changelog server/iptables/spkgbuild Upgraded\ from\ version\ 1.8.12\ to\ version\ 1.8.13
+sed -i -e s\|\^_server_sha1=.\*\$\|_server_sha1=33680f5f2ac32864d6d7cf5e56a705fdb3e05f4c\| -- server/minecraft-server/spkgbuild
+sed -i -e "s/version=1.19.2/version=26.3/g" server/minecraft-server/spkgbuild
+bash /usr/libexec/update-repo/changelog server/minecraft-server/spkgbuild Upgraded\ from\ version\ 1.19.2\ to\ version\ 26.3
+sed -i -e "s/version=8.4.11/version=8.4.27/g" server/php/spkgbuild
+bash /usr/libexec/update-repo/changelog server/php/spkgbuild Upgraded\ from\ version\ 8.4.11\ to\ version\ 8.4.27
