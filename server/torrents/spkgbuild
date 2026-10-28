@@ -1,7 +1,8 @@
 # description : get torrents no more flexget
 # depends : 
 
-name=gettorrents
+name=torrents
+_upstream_name=gettorrents
 version=1
 release=1
 

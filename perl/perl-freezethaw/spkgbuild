@@ -5,7 +5,8 @@ name=perl-freezethaw
 version=0.5001
 release=7
 
-source="https://www.cpan.org/authors/id/I/IL/ILYAZ/modules/FreezeThaw-0.5001.tar.gz"
+_name=FreezeThaw
+source="https://cpan.metacpan.org/authors/id/I/IL/ILYAZ/modules/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

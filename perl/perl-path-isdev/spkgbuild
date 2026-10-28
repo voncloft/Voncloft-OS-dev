@@ -5,7 +5,8 @@ name=perl-path-isdev
 version=1.001003
 release=3
 
-source="https://cpan.metacpan.org/authors/id/K/KE/KENTNL/Path-IsDev-1.001003.tar.gz"
+_name=Path-IsDev
+source="https://cpan.metacpan.org/authors/id/K/KE/KENTNL/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

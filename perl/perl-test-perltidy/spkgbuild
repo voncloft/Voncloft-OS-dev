@@ -5,7 +5,8 @@ name=perl-test-perltidy
 version=20230226
 release=5
 
-source="https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Test-PerlTidy-20230226.tar.gz"
+_name=Test-PerlTidy
+source="https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

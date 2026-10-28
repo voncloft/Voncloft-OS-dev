@@ -5,7 +5,8 @@ name=perl-file-copy-recursive
 version=0.45
 release=3
 
-source="https://cpan.metacpan.org/authors/id/D/DM/DMUEY/File-Copy-Recursive-0.45.tar.gz"
+_name=File-Copy-Recursive
+source="https://cpan.metacpan.org/authors/id/D/DM/DMUEY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

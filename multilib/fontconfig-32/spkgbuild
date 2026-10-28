@@ -4,7 +4,8 @@
 name=fontconfig-32
 version=2.18.3
 release=1
-source="https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/fontconfig/2.18.3/fontconfig-2.18.3.tar.xz"
+_name=${name%-32}
+source="https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/${_name}/${version}/${_name}-${version}.tar.xz"
 
 build() {
 	cd "$SRC"/fontconfig*/

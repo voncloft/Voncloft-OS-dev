@@ -5,7 +5,8 @@ name=discordchatexporter
 version=2.48
 release=1
 noextract="DiscordChatExporter.CLI.zip"
-source="https://github.com/Tyrrrz/DiscordChatExporter/releases/download/$version/DiscordChatExporter.CLI.zip
+_name=DiscordChatExporter
+source="https://github.com/Tyrrrz/${_name}/releases/download/$version/DiscordChatExporter.CLI.zip
 	discord-chat-exporter-cli"
 build() {
 	ls -la

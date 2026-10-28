@@ -5,7 +5,7 @@ name=python-mpd2
 version=3.1.1
 release=1
 
-source="https://files.pythonhosted.org/packages/53/be/e77206eb35eb37ccd3506fba237e1431431d04c482707730ce2a6802e95c/python-mpd2-3.1.1.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-lwp-mediatypes
 version=6.04
 release=8
 
-source="https://search.cpan.org/CPAN/authors/id/G/GA/GAAS/LWP-MediaTypes-6.02.tar.gz"
+_name=LWP-MediaTypes
+source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

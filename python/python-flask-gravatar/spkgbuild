@@ -5,7 +5,8 @@ name=python-flask-gravatar
 version=0.5.0
 release=5
 
-source="https://github.com/zzzsochi/Flask-Gravatar/archive/refs/tags/v$version.tar.gz"
+_name=Flask-Gravatar
+source="https://github.com/zzzsochi/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

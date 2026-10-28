@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 01:38:46 AM EDT 2026
+
+Version=2.1.54
+Release=1
+
+Synopsis:
+Upgraded from version 2.1.53 to version 2.1.54

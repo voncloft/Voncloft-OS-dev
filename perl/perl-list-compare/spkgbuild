@@ -5,7 +5,8 @@ name=perl-list-compare
 version=0.55
 release=1
 
-source="http://search.cpan.org/CPAN/authors/id/J/JK/JKEENAN/List-Compare-0.55.tar.gz"
+_name=List-Compare
+source="https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/${_name}-${version}.tar.gz"
 options="!checksum" 
 
 build() {

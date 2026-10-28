@@ -4,7 +4,8 @@ name=perl-html-highlight
 version=0.20
 release=11
 
-source="https://www.cpan.org/authors/id/T/TR/TRIPIE/HTML-Highlight-0.20.tar.gz"
+_name=HTML-Highlight
+source="https://cpan.metacpan.org/authors/id/T/TR/TRIPIE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

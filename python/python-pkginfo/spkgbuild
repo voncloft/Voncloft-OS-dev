@@ -5,7 +5,8 @@ name=python-pkginfo
 version=1.9.6
 release=1
 
-source="python-pkginfo-1.9.6.tar.gz::https://pypi.io/packages/source/p/pkginfo/pkginfo-1.9.6.tar.gz"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

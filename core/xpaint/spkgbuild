@@ -8,7 +8,7 @@ source="https://downloads.sourceforge.net/sf-$name/$name-$version.tar.bz2
 	$name.desktop"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/xpaint*/
 
 	./configure --prefix=/usr
 	make -j1

@@ -5,10 +5,11 @@ name=kicad-library
 version=9.0.7
 release=1
 
-source="https://gitlab.com/kicad/libraries/kicad-packages3D/-/archive/$version/kicad-packages3D-$version.tar.gz
-	https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/$version/kicad-symbols-$version.tar.gz
-	https://gitlab.com/kicad/libraries/kicad-templates/-/archive/$version/kicad-templates-$version.tar.gz
-	https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/$version/kicad-footprints-$version.tar.gz"
+_name=libraries
+source="https://gitlab.com/kicad/${_name}/kicad-packages3D/-/archive/$version/kicad-packages3D-$version.tar.gz
+	https://gitlab.com/kicad/${_name}/kicad-symbols/-/archive/$version/kicad-symbols-$version.tar.gz
+	https://gitlab.com/kicad/${_name}/kicad-templates/-/archive/$version/kicad-templates-$version.tar.gz
+	https://gitlab.com/kicad/${_name}/kicad-footprints/-/archive/$version/kicad-footprints-$version.tar.gz"
 
 build()
 {

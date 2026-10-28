@@ -5,7 +5,8 @@ name=python-pybluez
 version=0.23.r58.g4d46ce1
 release=6
 
-source=""
+_name=pybluez
+source="${name}-${version}.tar.gz::https://github.com/pybluez/${_name}/archive/${version##*.g}.tar.gz"
 options="!checksum"
 
 build() {

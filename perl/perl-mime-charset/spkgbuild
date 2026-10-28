@@ -5,7 +5,8 @@ name=perl-mime-charset
 version=1.013.1
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/N/NE/NEZUMI/-1.013.1.tar.gz"
+_name=MIME-Charset
+source="https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-atomicwrites
 version=1.4.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/a/atomicwrites/atomicwrites-1.4.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

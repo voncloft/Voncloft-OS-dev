@@ -5,7 +5,8 @@ name=python-pyasn1
 version=0.4.8
 release=4
 
-source="https://pypi.io/packages/source/p/pyasn1/pyasn1-0.4.8.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

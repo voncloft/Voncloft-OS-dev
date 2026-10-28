@@ -5,7 +5,8 @@ name=python-grequests
 version=0.6.0
 release=2
 
-source="https://files.pythonhosted.org/packages/source/g/grequests/grequests-0.6.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

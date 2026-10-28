@@ -5,7 +5,8 @@ name=perl-ppix-quotelike
 version=0.023
 release=1
 
-source="https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-QuoteLike-0.023.tar.gz"
+_name=PPIx-QuoteLike
+source="https://cpan.metacpan.org/authors/id/W/WY/WYANT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

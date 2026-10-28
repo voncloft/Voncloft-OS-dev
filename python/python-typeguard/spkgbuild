@@ -5,7 +5,8 @@ name=python-typeguard
 version=4.6.0
 release=3
 
-source="https://github.com/agronholm/typeguard/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/agronholm/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

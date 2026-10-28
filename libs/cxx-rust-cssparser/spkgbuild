@@ -5,7 +5,7 @@ name=cxx-rust-cssparser
 version=1.1.0
 release=2
 
-source="https://download.kde.org/stable/cxx-rust-cssparser/cxx-rust-cssparser-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-test-differences
 version=0.69
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/D/DC/DCANTRELL/Test-Differences-0.69.tar.gz"
+_name=Test-Differences
+source="https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

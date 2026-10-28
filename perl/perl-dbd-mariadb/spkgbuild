@@ -5,7 +5,8 @@ name=perl-dbd-mariadb
 version=1.22
 release=1
 
-source="https://cpan.metacpan.org/authors/id/P/PA/PALI/DBD-MariaDB-1.22.tar.gz"
+_name=DBD-MariaDB
+source="https://cpan.metacpan.org/authors/id/P/PA/PALI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

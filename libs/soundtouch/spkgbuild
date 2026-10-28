@@ -3,7 +3,7 @@
 name=soundtouch
 version=2.4.1
 release=1
-source="https://codeberg.org/soundtouch/soundtouch/archive/2.4.1.tar.gz"
+source="https://codeberg.org/soundtouch/${name}/archive/${version}.tar.gz"
 
 build() {
 	cd "$SRC"/soundtouch*/

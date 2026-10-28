@@ -4,7 +4,7 @@
 name=xkill
 version=1.0.7
 release=1
-source="http://ftp.x.org/pub/individual/app/xkill-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/app/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

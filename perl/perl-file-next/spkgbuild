@@ -5,7 +5,8 @@ name=perl-file-next
 version=1.18
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/File-Next-1.18.tar.gz"
+_name=File-Next
+source="https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

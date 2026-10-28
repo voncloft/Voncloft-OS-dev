@@ -6,7 +6,8 @@ version=1.4.7
 release=1
 options="!strip"
 noextract="$name-$version.deb"
-source="$name-$version.deb::https://gitlab.com/LinxGem33/X-Arc-White/uploads/26bccc81678392584149afa3167f8e78/osx-arc-collection_${version}_amd64.deb"
+_name=X-Arc-White
+source="$name-$version.deb::https://gitlab.com/LinxGem33/${_name}/uploads/26bccc81678392584149afa3167f8e78/osx-arc-collection_${version}_amd64.deb"
 
 build() {
 	bsdtar xf $name-$version.deb

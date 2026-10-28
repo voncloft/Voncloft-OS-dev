@@ -5,7 +5,8 @@ name=python-mox3
 version=1.1.0
 release=3
 
-source="https://github.com/openstack/mox3/archive/refs/tags/e$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

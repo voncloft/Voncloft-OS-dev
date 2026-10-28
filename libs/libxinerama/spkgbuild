@@ -4,7 +4,8 @@
 name=libxinerama
 version=1.1.6
 release=1
-source="https://www.x.org/pub/individual/lib/libXinerama-1.1.6.tar.gz"
+_name=libXinerama
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXinerama-$version

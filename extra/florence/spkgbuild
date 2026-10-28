@@ -9,7 +9,7 @@ source="http://sourceforge.net/projects/${name}/files/${name}/${version}/${name}
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/florence*/
 	./configure --prefix=/usr \
 		--without-notification \
 		--without-at-spi \

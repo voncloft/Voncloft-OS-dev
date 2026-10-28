@@ -5,7 +5,8 @@ name=python-psutil
 version=7.2.2
 release=1
 
-source="https://github.com/giampaolo/psutil/archive/refs/tags/release-$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/giampaolo/${_name}/archive/refs/tags/release-$version.tar.gz"
 options="!checksum"
 
 build() {

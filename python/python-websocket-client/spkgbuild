@@ -5,7 +5,8 @@ name=python-websocket-client
 version=1.5.1
 release=3
 
-source="https://pypi.io/packages/source/w/websocket-client/websocket-client-1.5.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

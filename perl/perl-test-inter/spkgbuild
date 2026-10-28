@@ -5,7 +5,8 @@ name=perl-test-inter
 version=1.10
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/S/SB/SBECK/Test-Inter-1.10.tar.gz"
+_name=Test-Inter
+source="https://cpan.metacpan.org/authors/id/S/SB/SBECK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

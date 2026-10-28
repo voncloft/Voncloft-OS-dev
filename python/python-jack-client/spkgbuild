@@ -5,7 +5,8 @@ name=python-jack-client
 version=0.5.4
 release=2
 
-source="https://files.pythonhosted.org/packages/source/J/JACK-Client/JACK-Client-0.5.4.tar.gz"
+_name=JACK-Client
+source="https://files.pythonhosted.org/packages/source/J/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

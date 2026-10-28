@@ -5,7 +5,8 @@ name=perl-curses-ui
 version=0.9609
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/M/MD/MDXI/Curses-UI-0.9609.tar.gz"
+_name=Curses-UI
+source="https://cpan.metacpan.org/authors/id/M/MD/MDXI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

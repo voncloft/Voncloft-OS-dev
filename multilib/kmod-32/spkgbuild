@@ -4,7 +4,8 @@
 name=kmod-32
 version=34.2
 release=1
-source="https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.2.tar.gz"
+_name=${name%-32}
+source="https://www.kernel.org/pub/linux/utils/kernel/${_name}/${_name}-${version}.tar.gz"
 
 build() {
 	cd kmod-$version

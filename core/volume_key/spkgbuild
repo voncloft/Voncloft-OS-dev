@@ -4,10 +4,10 @@
 name=volume_key
 version=0.3.12
 release=1
-source="https://releases.pagure.org/volume_key/$name-$version.tar.xz"
+source="https://releases.pagure.org/${name}/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/volume_key*/
 
 	./configure --prefix=/usr --disable-nls
 	make

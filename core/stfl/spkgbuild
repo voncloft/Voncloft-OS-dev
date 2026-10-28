@@ -4,10 +4,10 @@
 name=stfl
 version=0.24
 release=1
-source="http://www.clifford.at/stfl/stfl-$version.tar.gz"
+source="http://www.clifford.at/${name}/${name}-$version.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/stfl*/
 	
 	sed -i 's|ncursesw/||' stfl_internals.h
 	make prefix=/usr FOUND_SWIG=0 DESTDIR=$PKG install

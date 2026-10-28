@@ -5,7 +5,8 @@ name=python-markups
 version=3.1.3
 release=10
 
-source="https://files.pythonhosted.org/packages/source/M/Markups/Markups-3.1.3.tar.gz"
+_name=Markups
+source="https://files.pythonhosted.org/packages/source/M/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

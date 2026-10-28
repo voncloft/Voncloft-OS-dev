@@ -5,7 +5,8 @@ name=perl-perl-critic
 version=1.148
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/Perl-Critic-1.148.tar.gz"
+_name=Perl-Critic
+source="https://cpan.metacpan.org/authors/id/P/PE/PETDANCE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-xcffib
 version=1.13.0
 release=1
 
-source="https://github.com/tych0/xcffib/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/tych0/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

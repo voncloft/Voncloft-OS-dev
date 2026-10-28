@@ -5,7 +5,7 @@ name=wolfssl
 version=5.9.4
 release=1
 
-source="https://github.com/wolfssl/wolfssl/archive/refs/tags/v5.9.4-stable.tar.gz"
+source="https://github.com/wolfssl/${name}/archive/refs/tags/v${version}-stable.tar.gz"
 
 build()
 {

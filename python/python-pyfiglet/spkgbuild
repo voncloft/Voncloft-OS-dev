@@ -2,10 +2,11 @@
 # depends : python-setuptools
 
 name=python-pyfiglet
-version=0.8.0
+version=0.8.post1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/pyfiglet/pyfiglet-0.8.post1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pybtex-docutils
 version=1.0.2
 release=4
 
-source="https://pypi.io/packages/source/p/pybtex-docutils/pybtex-docutils-1.0.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-clint
 version=0.5.1
 release=10
 
-source="https://pypi.python.org/packages/source/c/clint/clint-0.5.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

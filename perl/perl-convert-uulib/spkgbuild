@@ -5,7 +5,8 @@ name=perl-convert-uulib
 version=1.8
 release=8
 
-source="https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Convert-UUlib-1.5.tar.gz"
+_name=Convert-UUlib
+source="https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

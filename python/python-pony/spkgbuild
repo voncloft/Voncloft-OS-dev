@@ -5,7 +5,8 @@ name=python-pony
 version=0.7.20
 release=2
 
-source="https://github.com/ponyorm/pony/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/ponyorm/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

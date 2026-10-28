@@ -4,7 +4,8 @@ name=perl-crypt-blowfish
 version=2.14
 release=11
 
-source="https://search.cpan.org/CPAN/authors/id/D/DP/DPARIS/Crypt-Blowfish-2.14.tar.gz"
+_name=Crypt-Blowfish
+source="https://cpan.metacpan.org/authors/id/D/DP/DPARIS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

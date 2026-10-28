@@ -5,7 +5,8 @@ name=python-django-compressor
 version=4.3.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/django_compressor/django_compressor-4.3.1.tar.gz"
+_name=django_compressor
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=dbus-32
 version=1.16.2    
 release=1
-source="https://dbus.freedesktop.org/releases/dbus/dbus-1.16.2.tar.xz"
+_name=${name%-32}
+source="https://dbus.freedesktop.org/releases/${_name}/${_name}-${version}.tar.xz"
 
 options="!checksum"
 

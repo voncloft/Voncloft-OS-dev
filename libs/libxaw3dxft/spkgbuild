@@ -8,7 +8,7 @@ release=1
 source="https://sourceforge.net/projects/sf-xpaint/files/$name/${_name}-$version.tar.bz2"
 
 build() {
-	cd $_name-$version
+	cd "$SRC"/libXaw3dXft*/
 	./autogen.sh
 	./configure --prefix=/usr --enable-internationalization \
 	    --enable-multiplane-bitmaps \

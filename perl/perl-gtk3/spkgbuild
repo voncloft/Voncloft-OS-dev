@@ -5,7 +5,8 @@ name=perl-gtk3
 version=0.038
 release=1
 
-source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/-0.038.tar.gz"
+_name=Gtk3
+source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

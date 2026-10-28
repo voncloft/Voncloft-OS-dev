@@ -5,7 +5,8 @@ name=python-os-client-config
 version=2.3.0
 release=4
 
-source="https://github.com/openstack/os-client-config/archive/refs/tags/e$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

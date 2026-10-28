@@ -5,7 +5,8 @@ name=python-click-threading
 version=0.5.0
 release=9
 
-source="https://files.pythonhosted.org/packages/source/c/click-threading/click-threading-0.5.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

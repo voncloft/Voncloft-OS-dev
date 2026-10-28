@@ -5,7 +5,8 @@ name=python-mpmath
 version=1.3.0
 release=5
 
-source="https://pypi.python.org/packages/source/m/mpmath/mpmath-1.3.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-cherrypy
 version=18.8.0
 release=4
 
-source=""
+_name=CherryPy
+source="https://files.pythonhosted.org/packages/source/C/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

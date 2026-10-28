@@ -5,7 +5,7 @@ name=libgphoto2
 version=2.5.34
 release=2
 
-source="$name-$version.tar.xz::https://github.com/gphoto/libgphoto2/releases/download/v$version/libgphoto2-$version.tar.xz"
+source="$name-$version.tar.xz::https://github.com/gphoto/${name}/releases/download/v$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

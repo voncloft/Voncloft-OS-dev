@@ -1,15 +1,17 @@
 # description: Just-in-time compiler and drop-in replacement for Lua 5.1.
 
 name=luajit
-version=20250212
+version=20261021130924.ga4c064539ea931274d407e1249b4bb575424a0f4
 release=1
-source="https://luajit.org/download/LuaJIT-2.0.5.tar.gz"
+_name=LuaJIT
+_commit=${version##*.g}
+source="${name}-${version}.tar.gz::https://github.com/LuaJIT/${_name}/archive/${_commit}.tar.gz"
 
 build() {
-	cd LuaJIT-$version
+	cd "${_name}-${_commit}"
 
 	make PREFIX=/usr CFLAGS+=' -fPIC' amalg
 	make PREFIX=/usr DESTDIR=$PKG install
 
-	ln -s luajit-2.0 $PKG/usr/include/luajit
+	ln -s luajit-2.1 "$PKG/usr/include/luajit"
 }

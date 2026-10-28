@@ -5,7 +5,8 @@ name=python-sqlalchemy
 version=1.4.44
 release=1
 
-source="https://pypi.io/packages/source/S/SQLAlchemy/SQLAlchemy-1.4.44.tar.gz"
+_name=SQLAlchemy
+source="https://files.pythonhosted.org/packages/source/S/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-carp-always
 version=0.16
 release=1
 
-source="https://www.cpan.org/modules/by-module//--0.16.tar.gz"
+_name=Carp-Always
+source="https://cpan.metacpan.org/authors/id/F/FE/FERREIRA/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

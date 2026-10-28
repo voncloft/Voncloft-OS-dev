@@ -4,8 +4,9 @@
 name=pandoc-bin
 version=3.13
 release=1
-source="https://github.com/jgm/pandoc/releases/download/$version/pandoc-$version-linux-amd64.tar.gz
-	https://github.com/jgm/pandoc/archive/$version/pandoc-$version.tar.gz"
+_name=${name%-bin}
+source="https://github.com/jgm/${_name}/releases/download/$version/${_name}-$version-linux-amd64.tar.gz
+	https://github.com/jgm/${_name}/archive/$version/${_name}-$version.tar.gz"
 
 build() {
 	cd pandoc-$version

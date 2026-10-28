@@ -5,7 +5,8 @@ name=python-nose-progressive
 version=1.5.2
 release=5
 
-source="https://files.pythonhosted.org/packages/source/n/nose-progressive/nose-progressive-1.5.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/n/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

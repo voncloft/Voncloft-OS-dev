@@ -5,7 +5,8 @@ name=python-openbabel
 version=3.2.1
 release=6
 
-source="https://files.pythonhosted.org/packages/03/ee/946ca33e35e47fc634d9f62f6a74505318a651de720495ae42c6307551e7/openbabel-3.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/o/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-flask-talisman
 version=0.8.1
 release=3
 
-source="https://github.com/GoogleCloudPlatform/flask-talisman/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/GoogleCloudPlatform/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=cairo-32
 version=1.18.6
 release=1
-source="https://cairographics.org/releases/cairo-1.18.6.tar.xz"
+_name=${name%-32}
+source="https://cairographics.org/releases/${_name}-${version}.tar.xz"
 
 build() {
 	cd cairo-$version

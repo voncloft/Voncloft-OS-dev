@@ -4,7 +4,8 @@
 name=libxrender-32
 version=0.9.13
 release=1
-source="https://www.x.org/pub/individual/lib/libXrender-0.9.13.tar.gz"
+_name=libXrender
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXrender-$version

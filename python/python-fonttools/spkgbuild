@@ -2,10 +2,11 @@
 # depends : python
 
 name=python-fonttools
-version=4.67.0
+version=4.68.0
 release=1
 
-source="https://github.com/fonttools/fonttools/archive/4.27.1/fonttools-4.27.1.zip"
+_name=${name#python-}
+source="https://github.com/fonttools/${_name}/archive/${version}/${_name}-${version}.zip"
 options="!checksum"
 
 build() {

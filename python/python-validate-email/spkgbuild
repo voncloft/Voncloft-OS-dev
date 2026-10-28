@@ -5,7 +5,8 @@ name=python-validate-email
 version=1.3
 release=7
 
-source="https://pypi.io/packages/source/v/validate_email/validate_email-1.3.tar.gz"
+_name=validate_email
+source="https://files.pythonhosted.org/packages/source/v/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

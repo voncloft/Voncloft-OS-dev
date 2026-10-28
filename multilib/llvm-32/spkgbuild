@@ -4,29 +4,14 @@
 name=llvm-32
 version=23.1.4
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-${version}/llvm-${version}.src.tar.xz
-https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-20.1.7.src.tar.xz
-https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-third-party-20.1.7.src.tar.xz
-https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.7/clang-20.1.7.src.tar.xz"
-noextract="llvm-cmake-20.1.7.src.tar.xz llvm-third-party-20.1.7.src.tar.xz clang-20.1.7.src.tar.xz"
+_name=llvm-project
+source="https://github.com/llvm/${_name}/releases/download/llvmorg-${version}/${_name}-${version}.src.tar.xz"
 
 
 build() {
-        cd llvm-$version.src
+    cd "$SRC/${_name}-${version}.src/llvm"
 
-        # The upstream expects them extracted at the same level as the llvm tarball, and 
-        # the extracted directories renamed to cmake and third-party:
-        tar -xf $SRC/llvm-cmake-20.1.7.src.tar.xz                              &&
-        tar -xf $SRC/llvm-third-party-20.1.7.src.tar.xz                        &&
-	sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-20.1.7.src@'          \
-    -i CMakeLists.txt                                                &&
-	sed '/LLVM_THIRD_PARTY_DIR/s@../third-party@third-party-20.1.7.src@' \
-    -i cmake/modules/HandleLLVMOptions.cmake
-
-        tar -xf $SRC/clang-20.1.7.src.tar.xz -C tools &&
-        mv tools/clang-20.1.7.src tools/clang
-
-        # Fix Python scripts which use /usr/bin/env python to access the system Python:
+# Fix Python scripts which use /usr/bin/env python to access the system Python:
                 grep -rl '#!.*python' | xargs sed -i '1s/python$/python3/'
                 sed 's/utility/tool/' -i utils/FileCheck/CMakeLists.txt
         mkdir build
@@ -38,7 +23,7 @@ build() {
 	cmake .. -G Ninja \
 	      -DCMAKE_INSTALL_PREFIX=/usr           \
 	      -DCMAKE_INSTALL_LIBDIR=lib32 \
-	      -DLLVM_ENABLE_FFI=ON                  \
+	      -DLLVM_ENABLE_PROJECTS=clang -DLLVM_ENABLE_FFI=ON                  \
 	      -DCMAKE_BUILD_TYPE=Release            \
 	      -DLLVM_BUILD_LLVM_DYLIB=ON            \
       	      -DLLVM_LINK_LLVM_DYLIB=ON             \

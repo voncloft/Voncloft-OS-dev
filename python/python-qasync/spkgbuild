@@ -5,7 +5,8 @@ name=python-qasync
 version=0.28.0
 release=1
 
-source="https://github.com/CabbageDevelopment/qasync/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/CabbageDevelopment/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

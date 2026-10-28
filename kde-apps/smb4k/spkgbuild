@@ -5,7 +5,7 @@ name=smb4k
 version=4.0.7
 release=2
 options="!checksum"
-source="smb4k-4.0.7.tar.gz::https://invent.kde.org/network/smb4k/-/archive/4.0.7/smb4k-4.0.7.tar.gz"
+source="${name}-${version}.tar.gz::https://invent.kde.org/network/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
     cd "smb4k-${version}"

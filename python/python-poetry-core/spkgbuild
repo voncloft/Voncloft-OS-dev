@@ -5,7 +5,8 @@ name=python-poetry-core
 version=2.5.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/poetry-core/poetry_core-$version.tar.gz"
+_name=poetry_core
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-mailmanclient
 version=3.3.5
 release=1
 
-source="https://files.pythonhosted.org/packages/source/m/mailmanclient/mailmanclient-3.3.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

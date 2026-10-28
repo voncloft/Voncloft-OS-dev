@@ -5,7 +5,8 @@ name=python-dephell-shells
 version=0.1.5
 release=5
 
-source="https://files.pythonhosted.org/packages/source/d/dephell_shells/dephell_shells-0.1.3.tar.gz"
+_name=dephell_shells
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

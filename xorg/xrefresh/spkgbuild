@@ -4,7 +4,7 @@
 name=xrefresh
 version=1.1.1
 release=1
-source="http://ftp.x.org/pub/individual/app/xrefresh-$version.tar.gz"
+source="http://ftp.x.org/pub/individual/app/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

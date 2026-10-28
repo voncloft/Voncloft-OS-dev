@@ -5,7 +5,8 @@ name=python-pymysql
 version=1.0.3
 release=1
 
-source="https://files.pythonhosted.org/packages/source/P/PyMySQL/PyMySQL-1.0.3.tar.gz"
+_name=PyMySQL
+source="https://files.pythonhosted.org/packages/source/P/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

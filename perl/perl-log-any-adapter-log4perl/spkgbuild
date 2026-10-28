@@ -5,7 +5,8 @@ name=perl-log-any-adapter-log4perl
 version=0.09
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/P/PR/PREACTION/Log-Any-Adapter-Log4perl-0.09.tar.gz"
+_name=Log-Any-Adapter-Log4perl
+source="https://cpan.metacpan.org/authors/id/P/PR/PREACTION/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

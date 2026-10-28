@@ -5,7 +5,7 @@ name=libvncserver
 version=0.9.15
 release=1
 
-source="$name-$version.tar.gz::https://github.com/LibVNC/libvncserver/archive/refs/tags/LibVNCServer-$version.tar.gz"
+source="$name-$version.tar.gz::https://github.com/LibVNC/${name}/archive/refs/tags/LibVNCServer-$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-flask-compress
 version=1.13
 release=1
 
-source="https://pypi.io/packages/source/F/Flask-Compress/Flask-Compress-1.13.tar.gz"
+_name=Flask-Compress
+source="https://files.pythonhosted.org/packages/source/F/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

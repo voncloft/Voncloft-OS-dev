@@ -5,7 +5,8 @@ name=python-partd
 version=1.4.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/partd/partd-1.4.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

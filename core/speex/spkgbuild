@@ -4,8 +4,8 @@
 name=speex
 version=1.2.1
 release=1
-source="https://downloads.xiph.org/releases/speex/$name-$version.tar.gz
-	https://downloads.xiph.org/releases/speex/speexdsp-$version.tar.gz"
+source="https://downloads.xiph.org/releases/${name}/$name-$version.tar.gz
+	https://downloads.xiph.org/releases/${name}/speexdsp-$version.tar.gz"
 noextract="speexdsp-$version.tar.gz"
 build() {
 	cd $name-$version

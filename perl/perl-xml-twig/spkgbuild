@@ -5,7 +5,8 @@ name=perl-xml-twig
 version=3.52
 release=7
 
-source="https://www.cpan.org/authors/id/M/MI/MIROD/XML-Twig-3.52.tar.gz"
+_name=XML-Twig
+source="https://cpan.metacpan.org/authors/id/M/MI/MIROD/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

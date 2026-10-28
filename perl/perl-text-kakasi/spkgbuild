@@ -5,7 +5,8 @@ name=perl-text-kakasi
 version=2.04
 release=20
 
-source="https://www.cpan.org/authors/id/D/DA/DANKOGAI/Text-Kakasi-2.04.tar.gz"
+_name=Text-Kakasi
+source="https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

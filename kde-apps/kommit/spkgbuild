@@ -5,7 +5,7 @@ name=kommit
 version=1.8.1
 release=2
 options="!checksum"
-source="kommit-1.8.1.tar.gz::https://invent.kde.org/sdk/kommit/-/archive/v1.8.1/kommit-v1.8.1.tar.gz"
+source="${name}-${version}.tar.gz::https://invent.kde.org/sdk/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     cd "kommit-v${version}"

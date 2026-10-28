@@ -7,7 +7,7 @@ release=2
 source="https://sourceforge.net/projects/osnapfont/files/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/ohsnap*/
 
 	install -d "$PKG/usr/share/fonts/X11/misc"
 	install -d "$PKG/usr/share/consolefonts"

@@ -5,7 +5,8 @@ name=python-django-picklefield
 version=3.4.0
 release=3
 
-source="https://files.pythonhosted.org/packages/93/03/13114bccbd1ec8c026ac1ff33dae75ae6c6a5632e4769ee9cda283b9f57e/django_picklefield-3.4.0.tar.gz"
+_name=django_picklefield
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

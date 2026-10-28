@@ -5,7 +5,7 @@ name=rsync
 version=3.5.1
 release=1
 backup="etc/rsyncd.conf"
-source="https://www.samba.org/ftp/rsync/src/$name-$version.tar.gz
+source="https://www.samba.org/ftp/${name}/src/$name-$version.tar.gz
 	rc.rsyncd
 	run"
 

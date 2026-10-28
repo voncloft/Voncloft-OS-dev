@@ -5,7 +5,8 @@ name=python-pytest-metadata
 version=2.0.4
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pytest_metadata/pytest_metadata-2.0.4.tar.gz"
+_name=pytest_metadata
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

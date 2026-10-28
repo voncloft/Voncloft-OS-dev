@@ -5,7 +5,8 @@ name=python-fastimport
 version=0.9.16
 release=5
 
-source="https://files.pythonhosted.org/packages/ce/77/0f2009a52246b9e3fe5726aef01f7c8b760e03e5ef83b6fd16134da6f7f5/fastimport-0.9.16.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

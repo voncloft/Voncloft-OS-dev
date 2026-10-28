@@ -6,7 +6,8 @@ name=python-htmlmin
 version=0.1.12
 release=6
 
-source="https://github.com/mankyd/htmlmin/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mankyd/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=gconf
 version=3.2.6
 release=2
-source="https://ftp.gnome.org/pub/gnome/sources/GConf/${version%.*}/GConf-$version.tar.xz"
+_name=GConf
+source="https://ftp.gnome.org/pub/gnome/sources/${_name}/${version%.*}/${_name}-$version.tar.xz"
 
 build() {
 	cd GConf-$version

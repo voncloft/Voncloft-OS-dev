@@ -4,7 +4,7 @@
 name=thunar-media-tags-plugin
 version=0.6.0
 release=1
-source="http://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin/${version%.*}/thunar-media-tags-plugin-$version.tar.bz2"
+source="http://archive.xfce.org/src/thunar-plugins/${name}/${version%.*}/${name}-$version.tar.bz2"
 
 build() {
 	cd $name-$version

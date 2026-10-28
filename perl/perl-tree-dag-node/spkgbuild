@@ -5,7 +5,8 @@ name=perl-tree-dag-node
 version=1.32
 release=2
 
-source="https://www.cpan.org/authors/id/R/RS/RSAVAGE/Tree-DAG_Node-1.32.tgz"
+_name=Tree-DAG_Node
+source="https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/${_name}-${version}.tgz"
 options="!checksum"
 
 build() {

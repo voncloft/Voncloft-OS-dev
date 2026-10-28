@@ -4,7 +4,7 @@
 name=lfs-bootscripts
 version=20240825
 release=1
-source="https://www.linuxfromscratch.org/lfs/downloads/development/lfs-bootscripts-$version.tar.xz"
+source="https://www.linuxfromscratch.org/lfs/downloads/development/${name}-$version.tar.xz"
 options="!checksum"
 build() {
 	cd $name-$version

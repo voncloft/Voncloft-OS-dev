@@ -5,7 +5,8 @@ name=python-hyperframe
 version=6.1.0
 release=1
 
-source="https://github.com/python-hyper/hyperframe/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/python-hyper/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

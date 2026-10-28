@@ -5,7 +5,8 @@ name=python-sqlobject
 version=3.14.0
 release=1
 
-source="https://github.com/sqlobject/sqlobject/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/sqlobject/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

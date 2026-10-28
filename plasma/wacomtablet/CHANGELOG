@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 6.7.5 to version 6.8.1
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 01:38:47 AM EDT 2026
+
+Version=6.8.2
+Release=1
+
+Synopsis:
+Upgraded from version 6.8.1 to version 6.8.2

@@ -5,7 +5,8 @@ name=perl-inline
 version=0.86
 release=2
 
-source="https://cpan.metacpan.org/authors/id/T/TI/TINITA/Inline-0.83.tar.gz"
+_name=Inline
+source="https://cpan.metacpan.org/authors/id/I/IN/INGY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

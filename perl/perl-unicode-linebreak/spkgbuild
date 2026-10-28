@@ -5,7 +5,8 @@ name=perl-unicode-linebreak
 version=2019.001
 release=3
 
-source="https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/-2019.001.tar.gz"
+_name=Unicode-LineBreak
+source="https://cpan.metacpan.org/authors/id/N/NE/NEZUMI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

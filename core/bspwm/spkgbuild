@@ -4,7 +4,7 @@
 name=bspwm
 version=0.9.12
 release=1
-source="https://github.com/baskerville/bspwm/archive/$version/$name-$version.tar.gz"
+source="https://github.com/baskerville/${name}/archive/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

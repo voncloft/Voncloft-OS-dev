@@ -5,7 +5,8 @@ name=perl-string-format
 version=1.18
 release=3
 
-source="https://cpan.metacpan.org/authors/id/S/SR/SREZIC/String-Format-1.18.tar.gz"
+_name=String-Format
+source="https://cpan.metacpan.org/authors/id/S/SR/SREZIC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

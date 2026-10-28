@@ -5,7 +5,8 @@ name=perl-scalar-list-utils
 version=1.63
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/P/PE/PEVANS/Scalar-List-Utils-1.63.tar.gz"
+_name=Scalar-List-Utils
+source="https://cpan.metacpan.org/authors/id/P/PE/PEVANS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

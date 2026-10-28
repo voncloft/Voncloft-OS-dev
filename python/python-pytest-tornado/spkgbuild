@@ -5,7 +5,8 @@ name=python-pytest-tornado
 version=0.8.1
 release=2
 
-source="https://github.com/eugeniy/pytest-tornado/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/eugeniy/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

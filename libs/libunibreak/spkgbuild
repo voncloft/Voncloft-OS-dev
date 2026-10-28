@@ -5,7 +5,7 @@ name=libunibreak
 version=8.0
 release=2
 options="!checksum"
-source="libunibreak-8.0.tar.gz::https://github.com/adah1972/libunibreak/releases/download/libunibreak_8_0/libunibreak-8.0.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/adah1972/${name}/releases/download/libunibreak_8_0/${name}-${version}.tar.gz"
 
 build() {
     cd "libunibreak-${version}"

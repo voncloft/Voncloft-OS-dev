@@ -5,7 +5,8 @@ name=perl-ipc-run3
 version=0.048
 release=8
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/-0.048.tar.gz"
+_name=IPC-Run3
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

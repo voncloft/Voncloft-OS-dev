@@ -5,7 +5,8 @@ name=python-django-appconf
 version=1.0.5
 release=4
 
-source="https://files.pythonhosted.org/packages/source/d/django-appconf/django-appconf-1.0.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-flask-security
 version=3.0.0
 release=4
 
-source="https://github.com/mattupstate/flask-security/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mattupstate/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

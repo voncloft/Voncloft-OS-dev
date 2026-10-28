@@ -5,7 +5,8 @@ name=perl-cairo-gobject
 version=1.005
 release=10
 
-source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/--1.005.tar.gz"
+_name=Cairo-GObject
+source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

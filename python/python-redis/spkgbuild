@@ -5,7 +5,8 @@ name=python-redis
 version=4.5.5
 release=3
 
-source="python-redis::git+https://github.com/redis/redis-py#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

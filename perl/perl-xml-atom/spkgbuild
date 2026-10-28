@@ -5,7 +5,8 @@ name=perl-xml-atom
 version=0.43
 release=2
 
-source="https://www.cpan.org/authors/id/M/MI/MIYAGAWA/XML-Atom-0.43.tar.gz"
+_name=XML-Atom
+source="https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

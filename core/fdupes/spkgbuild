@@ -4,7 +4,7 @@
 name=fdupes
 version=2.4.0
 release=1
-source="https://github.com/adrianlopezroche/fdupes/releases/download/v$version/fdupes-$version.tar.gz"
+source="https://github.com/adrianlopezroche/${name}/releases/download/v$version/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

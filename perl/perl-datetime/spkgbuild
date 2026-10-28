@@ -5,7 +5,8 @@ name=perl-datetime
 version=1.59
 release=1
 
-source="https://www.cpan.org/CPAN/authors/id/D/DR/DROLSKY/DateTime-1.59.tar.gz"
+_name=DateTime
+source="https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

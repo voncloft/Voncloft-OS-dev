@@ -5,7 +5,8 @@ name=python-hypothesis
 version=6.170.12
 release=1
 
-source="https://github.com/HypothesisWorks/hypothesis/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/HypothesisWorks/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

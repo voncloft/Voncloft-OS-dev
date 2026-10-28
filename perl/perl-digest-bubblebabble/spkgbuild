@@ -5,7 +5,8 @@ name=perl-digest-bubblebabble
 version=0.02
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/B/BT/BTROTT/Digest-BubbleBabble-0.02.tar.gz"
+_name=Digest-BubbleBabble
+source="https://cpan.metacpan.org/authors/id/B/BT/BTROTT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

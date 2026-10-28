@@ -5,10 +5,10 @@ name=kstars
 version=3.8.5
 release=2
 options="!checksum"
-source="kstars-3.8.5.tar.xz::https://download.kde.org/stable/kstars/3.8.5/kstars-3.8.5.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
-    cd "kstars-3.8.5"
+    cd "kstars-${version}"
     plasma-package-installer \
         -DBUILD_WITH_QT6=ON
     cd build

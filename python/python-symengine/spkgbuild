@@ -5,7 +5,8 @@ name=python-symengine
 version=0.14.1
 release=1
 
-source="https://github.com/symengine/symengine.py/archive/refs/tags/v$version.tar.gz"
+_name=symengine.py
+source="https://github.com/symengine/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

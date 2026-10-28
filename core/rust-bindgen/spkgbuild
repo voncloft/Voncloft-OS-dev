@@ -5,7 +5,7 @@ name=rust-bindgen
 version=0.73.2
 release=1
 
-source="https://github.com/rust-lang/rust-bindgen/archive/v$version/rust-bindgen-$version.tar.gz"
+source="https://github.com/rust-lang/${name}/archive/v$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build()

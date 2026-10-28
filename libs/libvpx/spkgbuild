@@ -4,7 +4,7 @@
 name=libvpx
 version=1.17.0
 release=1
-source="https://github.com/webmproject/libvpx/archive/v$version/libvpx-v$version.tar.gz"
+source="https://github.com/webmproject/${name}/archive/v$version/libvpx-v$version.tar.gz"
 
 build() {
 	cd $name-$version

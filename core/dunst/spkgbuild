@@ -4,7 +4,7 @@
 name=dunst
 version=1.13.2
 release=1
-source="https://github.com/dunst-project/dunst/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/dunst-project/${name}/archive/v$version/$name-$version.tar.gz"
 
 build() {
 	make -C "$SRC/$name-$version" X11INC=/usr/include/X11 X11LIB=/usr/lib/X11

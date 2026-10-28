@@ -4,7 +4,8 @@ name=linux-desktop
 version=6.19.14
 release=1
 
-source="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$version.tar.xz
+_name=linux
+source="https://cdn.kernel.org/pub/${_name}/kernel/v${version%%.*}.x/${_name}-$version.tar.xz
         .config"
 options="!checksum"
 

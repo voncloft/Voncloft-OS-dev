@@ -5,7 +5,8 @@ name=python-iso8601
 version=1.1.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/i/iso8601/iso8601-1.1.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

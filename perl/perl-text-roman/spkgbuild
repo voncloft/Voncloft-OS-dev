@@ -5,7 +5,8 @@ name=perl-text-roman
 version=3.5
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/S/SY/SYP/-3.5.tar.gz"
+_name=Text-Roman
+source="https://cpan.metacpan.org/authors/id/S/SY/SYP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pycontracts
 version=7.3.2508271333
 release=4
 
-source="https://github.com/AndreaCensi/contracts/archive/refs/tags/v$version.tar.gz"
+_name=contracts
+source="https://github.com/AndreaCensi/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

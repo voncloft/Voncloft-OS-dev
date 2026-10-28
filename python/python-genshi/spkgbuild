@@ -5,7 +5,8 @@ name=python-genshi
 version=0.7.12
 release=2
 
-source="https://github.com/edgewall/genshi/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/edgewall/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

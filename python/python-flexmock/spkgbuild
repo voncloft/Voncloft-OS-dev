@@ -5,7 +5,8 @@ name=python-flexmock
 version=0.13.0
 release=6
 
-source="https://github.com/bkabrda/flexmock/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/bkabrda/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

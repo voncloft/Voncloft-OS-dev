@@ -5,7 +5,8 @@ name=perl-config-autoconf
 version=0.320
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/R/RE/REHSACK/-0.317.tar.gz"
+_name=Config-AutoConf
+source="https://cpan.metacpan.org/authors/id/A/AM/AMBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-reflink
 version=0.2.1
 release=1
 
-source="git+https://gitlab.com/rubdos/pyreflink.git#tag="
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

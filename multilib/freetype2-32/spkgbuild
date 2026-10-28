@@ -4,7 +4,8 @@
 name=freetype2-32
 version=2.15.0
 release=1
-source="https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz"
+_name=freetype
+source="https://downloads.sourceforge.net/project/${_name}/freetype2/${version}/${_name}-${version}.tar.xz"
 
 build() {
 	cd "$SRC"/freetype*/

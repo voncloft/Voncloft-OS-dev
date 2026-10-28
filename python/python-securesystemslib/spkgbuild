@@ -5,7 +5,8 @@ name=python-securesystemslib
 version=1.6.0
 release=1
 
-source="https://files.pythonhosted.org/packages/6c/b7/68ce74b4c3ab753c2de907d035a4102b4510729393184af3c7bdfee04d18/securesystemslib-1.6.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

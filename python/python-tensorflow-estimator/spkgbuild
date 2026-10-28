@@ -5,7 +5,8 @@ name=python-tensorflow-estimator
 version=2.15.0
 release=4
 
-source="https://github.com/tensorflow/estimator/archive/refs/tags/v$version.tar.gz"
+_name=estimator
+source="https://github.com/tensorflow/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

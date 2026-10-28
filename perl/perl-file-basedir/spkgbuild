@@ -5,7 +5,8 @@ name=perl-file-basedir
 version=0.09
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/P/PL/PLICEASE/File-BaseDir-0.09.tar.gz"
+_name=File-BaseDir
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

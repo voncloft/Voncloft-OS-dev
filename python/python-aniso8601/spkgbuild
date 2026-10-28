@@ -5,7 +5,8 @@ name=python-aniso8601
 version=9.0.1
 release=1
 
-source="python-aniso8601-9.0.1.tar.gz::https://bitbucket.org/nielsenb/aniso8601/get/v9.0.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

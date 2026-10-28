@@ -3,7 +3,7 @@
 name=libuninameslist
 version=20260918
 release=1
-source="https://github.com/fontforge/libuninameslist/releases/download/20260918/libuninameslist-dist-20260918.tar.gz"
+source="https://github.com/fontforge/${name}/releases/download/${version}/libuninameslist-dist-${version}.tar.gz"
 
 build() {
 	cd $name-$version

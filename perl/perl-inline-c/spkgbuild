@@ -5,7 +5,8 @@ name=perl-inline-c
 version=0.82
 release=2
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETJ/Inline-C-0.82.tar.gz"
+_name=Inline-C
+source="https://cpan.metacpan.org/authors/id/E/ET/ETJ/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

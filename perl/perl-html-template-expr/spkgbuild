@@ -5,7 +5,8 @@ name=perl-html-template-expr
 version=0.07
 release=11
 
-source="https://www.cpan.org/authors/id/S/SA/SAMTREGAR/HTML-Template-Expr-0.07.tar.gz"
+_name=HTML-Template-Expr
+source="https://cpan.metacpan.org/authors/id/S/SA/SAMTREGAR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

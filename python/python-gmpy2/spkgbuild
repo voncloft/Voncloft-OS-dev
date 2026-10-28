@@ -5,7 +5,8 @@ name=python-gmpy2
 version=2.4.0
 release=3
 
-source="https://github.com/aleaxit/gmpy/archive/refs/tags/m$version.tar.gz"
+_name=gmpy
+source="https://github.com/aleaxit/${_name}/archive/refs/tags/m$version.tar.gz"
 options="!checksum"
 
 build() {

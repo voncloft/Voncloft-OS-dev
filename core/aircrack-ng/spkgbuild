@@ -4,7 +4,7 @@
 name=aircrack-ng
 version=1.7
 release=1
-source="https://github.com/aircrack-ng/aircrack-ng/archive/refs/tags/1.7.tar.gz"
+source="https://github.com/aircrack-ng/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
 	cd "$SRC"/aircrack-ng*/

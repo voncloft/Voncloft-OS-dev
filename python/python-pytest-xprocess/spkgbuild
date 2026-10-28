@@ -5,7 +5,8 @@ name=python-pytest-xprocess
 version=0.22.2
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-xprocess/pytest-xprocess-0.22.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,11 +5,12 @@
 name=python-flit
 version=3.12.0
 release=4
-source="https://files.pythonhosted.org/packages/69/59/b6fc2188dfc7ea4f936cd12b49d707f66a1cb7a1d2c16172963534db741b/flit_core-3.12.0.tar.gz"
+_name=flit_core
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-    cd "flit_core-3.12.0"
+    cd "${_name}-${version}"
     pip3 wheel --no-index --no-deps --no-build-isolation --no-cache-dir --wheel-dir dist .
     pip3 install --no-deps --no-index --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

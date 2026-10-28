@@ -5,7 +5,8 @@ name=python-sphinx-autorun
 version=2.0.0
 release=3
 
-source="https://files.pythonhosted.org/packages/00/ca/0a4c9362ee0102431665066a858ad647b0c14b93eaa5c2ddb21fc8f0d246/sphinx_autorun-2.0.0.tar.gz"
+_name=sphinx_autorun
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -6,7 +6,7 @@ version=6.1.6
 release=1
 options="!checksum"
 
-source="https://sourceforge.net/projects/subsonic/files/${name}/${version}/${name}-${version}-standalone.tar.gz
+source="https://sourceforge.net/projects/${name}/files/${name}/${version}/${name}-${version}-standalone.tar.gz
 	subsonic
 	subsonic_boot"
 

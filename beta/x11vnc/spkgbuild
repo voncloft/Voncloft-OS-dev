@@ -5,7 +5,7 @@ name=x11vnc
 version=0.9.17
 release=5
 
-source="https://github.com/LibVNC/x11vnc/archive/refs/tags/$version.tar.gz"
+source="https://github.com/LibVNC/${name}/archive/refs/tags/$version.tar.gz"
 
 build() {
 	cd $name

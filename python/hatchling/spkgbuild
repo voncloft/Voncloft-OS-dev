@@ -2,10 +2,10 @@
 # depends : python python-packaging python-pathspec python-pluggy python-tomlkit python-trove-classifiers python-wheel
 
 name=hatchling
-version=1.32.4
+version=1.33.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/h/hatchling/hatchling-$version.tar.gz"
+source="https://files.pythonhosted.org/packages/source/h/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

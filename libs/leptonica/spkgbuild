@@ -5,7 +5,7 @@ name=leptonica
 version=1.87.0
 release=1
 
-source="$name-$version.tar.gz::https://github.com/DanBloomberg/leptonica/releases/download/$version/leptonica-$version.tar.gz"
+source="$name-$version.tar.gz::https://github.com/DanBloomberg/${name}/releases/download/$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

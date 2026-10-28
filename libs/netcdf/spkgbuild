@@ -5,10 +5,11 @@ name=netcdf
 version=4.10.1
 release=2
 options="!checksum"
-source="netcdf-4.10.1.tar.gz::https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.10.1.tar.gz"
+_name=netcdf-c
+source="${name}-${version}.tar.gz::https://github.com/Unidata/${_name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "netcdf-c-4.10.1"
+    cd "netcdf-c-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

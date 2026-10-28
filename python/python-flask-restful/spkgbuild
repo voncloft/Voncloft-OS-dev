@@ -5,7 +5,8 @@ name=python-flask-restful
 version=0.3.9
 release=3
 
-source="https://github.com/flask-restful/flask-restful/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/flask-restful/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

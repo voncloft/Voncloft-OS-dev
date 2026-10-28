@@ -5,7 +5,8 @@ name=python-raet
 version=0.6.8
 release=6
 
-source="https://pypi.io/packages/source/r/raet/raet-0.6.8.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

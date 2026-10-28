@@ -5,7 +5,8 @@ name=python-daemonize
 version=2.5.0
 release=4
 
-source="https://pypi.org/packages/source/d/daemonize/daemonize-2.5.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-more-itertools
 version=9.1.1
 release=3
 
-source="python-more-itertools::git+https://github.com/more-itertools/more-itertools#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

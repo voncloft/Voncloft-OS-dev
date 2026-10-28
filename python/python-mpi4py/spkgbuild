@@ -5,7 +5,8 @@ name=python-mpi4py
 version=4.1.2
 release=3
 
-source="https://github.com/mpi4py/mpi4py/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mpi4py/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-praw
 version=8.0.3
 release=1
 
-source="https://github.com/praw-dev/praw/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/praw-dev/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

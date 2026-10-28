@@ -5,7 +5,8 @@ name=perl-file-sharedir-projectdistdir
 version=1.000009
 release=3
 
-source="https://cpan.metacpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000009.tar.gz"
+_name=File-ShareDir-ProjectDistDir
+source="https://cpan.metacpan.org/authors/id/K/KE/KENTNL/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

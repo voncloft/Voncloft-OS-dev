@@ -5,7 +5,8 @@ name=python-voluptuous
 version=0.16.0
 release=1
 
-source="https://github.com/alecthomas/voluptuous/archive/refs/tags/0.13.1/python-voluptuous-0.13.1.tar.gz"
+_name=${name#python-}
+source="https://github.com/alecthomas/${_name}/archive/refs/tags/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

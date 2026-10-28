@@ -5,7 +5,8 @@ name=python-django-guardian
 version=2.4.0
 release=2
 
-source="https://files.pythonhosted.org/packages/source/d/django-guardian/django-guardian-2.4.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

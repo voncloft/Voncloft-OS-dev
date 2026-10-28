@@ -5,7 +5,8 @@ name=perl-class-factory-util
 version=1.7
 release=10
 
-source="https://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/Class-Factory-Util-1.7.tar.gz"
+_name=Class-Factory-Util
+source="https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

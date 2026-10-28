@@ -7,7 +7,8 @@ name=perl-extutils-depends
 version=0.8001
 release=4
 
-source="https://www.cpan.org/authors/id/X/XA/XAOC/ExtUtils-Depends-0.8001.tar.gz"
+_name=ExtUtils-Depends
+source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

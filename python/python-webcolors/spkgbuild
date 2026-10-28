@@ -5,7 +5,8 @@ name=python-webcolors
 version=1.13
 release=4
 
-source="https://pypi.io/packages/source/w/webcolors/webcolors-1.13.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

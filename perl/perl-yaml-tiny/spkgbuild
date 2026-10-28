@@ -5,7 +5,8 @@ name=perl-yaml-tiny
 version=1.74
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/E/ET/ETHER/YAML-Tiny-1.74.tar.gz"
+_name=YAML-Tiny
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

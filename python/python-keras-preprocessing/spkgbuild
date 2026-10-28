@@ -5,7 +5,8 @@ name=python-keras-preprocessing
 version=1.1.2
 release=4
 
-source="https://files.pythonhosted.org/packages/source/K/Keras_Preprocessing/Keras_Preprocessing-1.1.2.tar.gz"
+_name=Keras_Preprocessing
+source="https://files.pythonhosted.org/packages/source/K/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

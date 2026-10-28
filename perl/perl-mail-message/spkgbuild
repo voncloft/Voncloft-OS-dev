@@ -5,7 +5,8 @@ name=perl-mail-message
 version=3.012
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/Mail-Message-3.012.tar.gz"
+_name=Mail-Message
+source="https://cpan.metacpan.org/authors/id/M/MA/MARKOV/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

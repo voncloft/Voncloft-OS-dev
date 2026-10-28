@@ -5,7 +5,8 @@ name=python-google-api-core
 version=2.11.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/g/google-api-core/google-api-core-2.11.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@ name=python-oset
 version=0.1.3
 release=7
 
-source="https://pypi.io/packages/source/o/oset/oset-0.1.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/o/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,13 +2,11 @@
 
 name=unzip
 version=6.0
-verzion=$(echo $version | sed 's/\.//')
 release=1
-source="https://oss.oracle.com/el4/unzip/unzip.tar"
+source="https://downloads.sourceforge.net/infozip/${name}${version//./}.tar.gz"
 
 build() {
-
-	mkdir -pv $PKG/usr/bin
-	install -Dm755 unzip $PKG/usr/bin/unzip
+    cd "$SRC/${name}${version//./}"
+    make -f unix/Makefile CC=gcc linux
+    make -f unix/Makefile prefix=/usr MANDIR=/usr/share/man/man1 DESTDIR="$PKG" install
 }
-

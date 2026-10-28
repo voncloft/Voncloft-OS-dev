@@ -5,7 +5,8 @@ name=python-characteristic
 version=14.3.0
 release=11
 
-source="https://files.pythonhosted.org/packages/source/c/characteristic/characteristic-14.3.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

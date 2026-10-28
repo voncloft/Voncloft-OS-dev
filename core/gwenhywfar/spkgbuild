@@ -5,7 +5,7 @@ name=gwenhywfar
 version=5.14.1
 release=1
 
-source="https://www.aquamaniac.de/rdm/attachments/download/630/gwenhywfar-5.14.1.tar.gz"
+source="https://www.aquamaniac.de/rdm/attachments/download/630/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

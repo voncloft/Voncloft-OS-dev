@@ -5,7 +5,7 @@
 name=vlc
 version=3.0.24
 release=2
-source="https://download.videolan.org/vlc/3.0.23/vlc-3.0.23.tar.xz"
+source="https://download.videolan.org/${name}/${version}/${name}-${version}.tar.xz"
 
 options="!checksum"
 

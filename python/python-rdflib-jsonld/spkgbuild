@@ -5,7 +5,8 @@ name=python-rdflib-jsonld
 version=0.6.2
 release=3
 
-source="https://github.com/RDFLib/rdflib-jsonld/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/RDFLib/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

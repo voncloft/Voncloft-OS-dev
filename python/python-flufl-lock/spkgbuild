@@ -5,7 +5,8 @@ name=python-flufl-lock
 version=7.1.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/f/flufl.lock/flufl.lock-7.1.1.tar.gz"
+_name=flufl.lock
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

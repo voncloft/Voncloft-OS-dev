@@ -4,7 +4,7 @@
 name=xorg-server
 version=26.0.99.903
 release=1
-source=" https://www.x.org/pub/individual/xserver/xorg-server-$version.tar.xz"
+source=" https://www.x.org/pub/individual/xserver/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

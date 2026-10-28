@@ -5,7 +5,8 @@ name=python-virtualenv-clone
 version=0.5.7
 release=4
 
-source="https://files.pythonhosted.org/packages/source/v/virtualenv-clone/virtualenv-clone-0.5.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/v/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

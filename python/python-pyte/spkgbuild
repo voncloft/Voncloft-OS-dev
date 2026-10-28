@@ -5,7 +5,8 @@ name=python-pyte
 version=0.8.2
 release=6
 
-source="https://github.com/selectel/pyte/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/selectel/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

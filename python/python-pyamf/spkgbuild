@@ -5,7 +5,8 @@ name=python-pyamf
 version=0.8.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/P/PyAMF/PyAMF-0.8.0.tar.gz"
+_name=PyAMF
+source="https://files.pythonhosted.org/packages/source/P/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

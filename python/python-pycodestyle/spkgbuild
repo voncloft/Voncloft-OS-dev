@@ -5,7 +5,8 @@ name=python-pycodestyle
 version=2.15.0
 release=3
 
-source="https://github.com/PyCQA/pycodestyle/archive/refs/tags/a$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/PyCQA/${_name}/archive/refs/tags/a$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-keras-applications
 version=1.0.8
 release=6
 
-source="https://files.pythonhosted.org/packages/source/K/Keras_Applications/Keras_Applications-1.0.8.tar.gz"
+_name=Keras_Applications
+source="https://files.pythonhosted.org/packages/source/K/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

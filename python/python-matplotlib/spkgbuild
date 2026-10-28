@@ -5,7 +5,8 @@ name=python-matplotlib
 version=3.11.2
 release=1
 
-source="https://files.pythonhosted.org/packages/e7/c8/9aa712a0afb882649424dd8de8ad9aa6235e796e84c6052e8f6dc1598d0d/matplotlib-3.11.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

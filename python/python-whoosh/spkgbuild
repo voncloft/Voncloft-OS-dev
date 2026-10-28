@@ -5,11 +5,12 @@ name=python-whoosh
 version=2.7.4
 release=7
 
-source="git+https://github.com/mchaput/whoosh#tag=v2.7.4"
+_name=Whoosh
+source="https://files.pythonhosted.org/packages/source/W/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/Whoosh*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

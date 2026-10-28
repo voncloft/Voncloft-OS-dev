@@ -5,7 +5,8 @@ name=blacklist-hosts
 version=3.16.125
 release=1
 
-source="https://github.com/StevenBlack/hosts/archive/refs/tags/$version.tar.gz"
+_name=hosts
+source="https://github.com/StevenBlack/${_name}/archive/refs/tags/$version.tar.gz"
 
 build() {
 	mkdir -pv $PKG/etc/blacklist-hosts

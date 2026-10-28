@@ -4,10 +4,10 @@
 name=galculator
 version=2.1.4
 release=1
-source="http://galculator.mnim.org/downloads/galculator-2.1.4.tar.bz2"
+source="http://galculator.mnim.org/downloads/${name}-${version}.tar.bz2"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/galculator*/
 	./configure --prefix=/usr
 	make
 	make DESTDIR=$PKG install

@@ -5,7 +5,8 @@ name=perl-goocanvas2
 version=0.06
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PE/PERLMAX/-0.06.tar.gz"
+_name=GooCanvas2
+source="https://cpan.metacpan.org/authors/id/P/PE/PERLMAX/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

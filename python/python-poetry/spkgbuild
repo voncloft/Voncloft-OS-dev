@@ -5,7 +5,8 @@ name=python-poetry
 version=2.5.1
 release=1
 
-source="https://github.com/sdispater/poetry/archive/refs/tags/a$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/sdispater/${_name}/archive/refs/tags/a$version.tar.gz"
 options="!checksum"
 
 build() {

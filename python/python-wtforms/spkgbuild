@@ -5,7 +5,8 @@ name=python-wtforms
 version=3.3.1
 release=10
 
-source="https://github.com/wtforms/wtforms/archive/refs/tags/a$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/wtforms/${_name}/archive/refs/tags/a$version.tar.gz"
 options="!checksum"
 
 build() {

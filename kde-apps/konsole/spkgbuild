@@ -5,7 +5,7 @@ name=konsole
 version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/konsole-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

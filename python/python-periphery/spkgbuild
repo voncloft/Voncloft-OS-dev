@@ -5,7 +5,7 @@ name=python-periphery
 version=2.4.3
 release=1
 
-source="https://github.com/vsergeev/python-periphery/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/vsergeev/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

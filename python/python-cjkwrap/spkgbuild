@@ -5,7 +5,8 @@ name=python-cjkwrap
 version=2.2
 release=7
 
-source="https://pypi.io/packages/source/C/CJKwrap/CJKwrap-2.2.tar.gz"
+_name=CJKwrap
+source="https://files.pythonhosted.org/packages/source/C/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

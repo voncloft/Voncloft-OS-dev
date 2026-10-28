@@ -381,6 +381,6 @@ f:02d70067b249b8f02de35eb063511428:page-stripper/strip-page
 f:5504da1810a702544e16e57bc0c24635:page-stripper/spkgbuild
 f:871ab997ddbbff7d0c9d8b1f54a3dbbc:ruby/ruby/.pkgfiles
 f:a14319d7e7cc684e6ce9c23779de739a:ruby/ruby/CHANGELOG
-f:557b632079fab43efe2d2c0529fb4138:ruby/ruby/spkgbuild
+f:7e3bfa16834af536b872c41e630665cc:ruby/ruby/spkgbuild
 f:d9f4d5de58a076d2af1a828c4c3edf5b:ruby/ruby/override
 f:9c825bd6793073ecce45fb8896fc390d:test.rb

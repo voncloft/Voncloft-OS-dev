@@ -4,7 +4,8 @@
 name=p11-kit-32
 version=0.26.5
 release=1
-source="https://github.com/p11-glue/p11-kit/releases/download/$version/p11-kit-$version.tar.xz"
+_name=${name%-32}
+source="https://github.com/p11-glue/${_name}/releases/download/$version/${_name}-$version.tar.xz"
 
 build() {
 	cd p11-kit-$version

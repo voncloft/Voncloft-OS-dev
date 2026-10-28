@@ -5,11 +5,12 @@ name=dbi-drivers
 version=0.9.0
 release=10
 
-source="https://sourceforge.net/projects/libdbi-drivers/files/libdbi-drivers/libdbi-drivers-$version/libdbi-drivers-$version.tar.gz"
+_name=libdbi-drivers
+source="https://sourceforge.net/projects/${_name}/files/${_name}/${_name}-$version/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd libdbi-drivers-$version
+	cd "$SRC"/libdbi-drivers*/
 	autoreconf -ifv
 	./configure --prefix=/usr --localstatedir=/var \
 	--with-sqlite3

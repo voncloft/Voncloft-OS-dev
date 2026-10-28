@@ -5,7 +5,8 @@ name=perl-html-formatter
 version=2.16
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/N/NI/NIGELM/HTML-Formatter-2.16.tar.gz"
+_name=HTML-Formatter
+source="https://cpan.metacpan.org/authors/id/N/NI/NIGELM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

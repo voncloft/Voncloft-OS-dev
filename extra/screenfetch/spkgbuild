@@ -4,7 +4,8 @@ name=screenfetch
 version=3.9.9
 release=1
 #source="$name-$version.tar.gz::https://github.com/KittyKatt/screenFetch/archive/v$version.tar.gz"
-source="https://github.com/KittyKatt/screenFetch/archive/refs/tags/v3.9.9.tar.gz"
+_name=screenFetch
+source="https://github.com/KittyKatt/${_name}/archive/refs/tags/v${version}.tar.gz"
 options="!checksum"
 build() {
 	cd "$SRC"/screenFetch*/

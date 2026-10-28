@@ -2,10 +2,12 @@
 # depends : python-nmigen
 
 name=python-nmigen-boards
-version=r193.cb18fc5.git20260813213950
+version=r193.cb18fc5.git20260813213950.gf270d210e36b0787d62db77176c7b0e8032178d3
 release=1
 
-source="https://github.com/nmigen/nmigen-boards/archive/f270d210e36b0787d62db77176c7b0e8032178d3.tar.gz"
+_name=${name#python-}
+_commit=${version##*.g}
+source="${name}-${version}.tar.gz::https://github.com/nmigen/${_name}/archive/${_commit}.tar.gz"
 options="!checksum"
 
 build() {

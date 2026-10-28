@@ -5,7 +5,8 @@ name=libxss
 version=1.2.5
 release=3
 
-source="https://www.x.org/pub/individual/lib/libXScrnSaver-1.2.5.tar.gz"
+_name=libXScrnSaver
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

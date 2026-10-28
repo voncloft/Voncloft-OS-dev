@@ -5,7 +5,8 @@ name=python-migen
 version=0.9.2
 release=3
 
-source="https://github.com/m-labs/migen/archive/refs/tags/d$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/m-labs/${_name}/archive/refs/tags/d$version.tar.gz"
 options="!checksum"
 
 build() {

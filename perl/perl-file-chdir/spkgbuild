@@ -5,7 +5,8 @@ name=perl-file-chdir
 version=0.1011
 release=4
 
-source="https://www.cpan.org/authors/id/D/DA/DAGOLDEN/File-chdir-0.1011.tar.gz"
+_name=File-chdir
+source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -10,7 +10,8 @@ day=24
 hour=10
 min=23
 sec=40
-source="https://archive.mozilla.org/pub/thunderbird/nightly/$year/$month/$year-$month-$day-$hour-$min-$sec-comm-central/thunderbird-$version.$release.en-US.linux-x86_64.tar.xz
+_name=${name%-bin}
+source="https://archive.mozilla.org/pub/${_name}/nightly/$year/$month/$year-$month-$day-$hour-$min-$sec-comm-central/${_name}-$version.$release.en-US.linux-x86_64.tar.xz
 	thunderbird.sh
 	thunderbird.desktop"
 

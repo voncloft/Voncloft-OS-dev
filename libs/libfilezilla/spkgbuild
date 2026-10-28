@@ -4,7 +4,7 @@
 name=libfilezilla
 version=0.58.0
 release=1
-source="https://dl3.cdn.filezilla-project.org/libfilezilla/libfilezilla-0.58.0.tar.xz?h=N5JB4C8bYI_0FLSAp63cGw&x=1793098558"
+source="https://dl3.cdn.filezilla-project.org/libfilezilla/libfilezilla-${version}.tar.xz?h=N5JB4C8bYI_0FLSAp63cGw&x=1793098558"
 
 build() {
 	cd $name-$version

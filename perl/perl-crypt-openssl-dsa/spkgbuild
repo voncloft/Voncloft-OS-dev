@@ -5,7 +5,8 @@ name=perl-crypt-openssl-dsa
 version=0.20
 release=9
 
-source="https://search.cpan.org/CPAN/authors/id/K/KM/KMX/Crypt-OpenSSL-DSA-0.20.tar.gz"
+_name=Crypt-OpenSSL-DSA
+source="https://cpan.metacpan.org/authors/id/K/KM/KMX/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

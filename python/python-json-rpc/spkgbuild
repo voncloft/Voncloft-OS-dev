@@ -5,7 +5,8 @@ name=python-json-rpc
 version=1.13.0
 release=1
 
-source="https://github.com/pavlov99/json-rpc/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pavlov99/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

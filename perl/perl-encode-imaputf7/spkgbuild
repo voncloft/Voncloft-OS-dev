@@ -4,7 +4,8 @@ name=perl-encode-imaputf7
 version=1.05
 release=4
 
-source="http://cpan.metacpan.org/authors/id/P/PM/PMAKHOLM/Encode-IMAPUTF7-1.05.tar.gz"
+_name=Encode-IMAPUTF7
+source="https://cpan.metacpan.org/authors/id/P/PM/PMAKHOLM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -8,7 +8,7 @@ release=1
 source="https://duktape.org/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/duktape*/
 	sed -i 's/-Os/-O2/' Makefile.sharedlibrary
 	make -f Makefile.sharedlibrary INSTALL_PREFIX=/usr
 	make -f Makefile.sharedlibrary INSTALL_PREFIX=$PKG/usr install

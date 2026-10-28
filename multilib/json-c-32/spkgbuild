@@ -4,7 +4,8 @@
 name=json-c-32
 version=0.19
 release=1
-source="https://github.com/json-c/json-c/archive/refs/tags/json-c-0.19-20260627.tar.gz"
+_name=${name%-32}
+source="https://github.com/json-c/${_name}/archive/refs/tags/${_name}-${version}-20260627.tar.gz"
 build() {
 
 	export CC="gcc -m32"

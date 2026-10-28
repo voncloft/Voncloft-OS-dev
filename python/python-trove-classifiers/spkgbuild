@@ -5,7 +5,8 @@ name=python-trove-classifiers
 version=2026.9.21.13
 release=1
 
-source="https://files.pythonhosted.org/packages/source/t/trove-classifiers/trove_classifiers-$version.tar.gz"
+_name=trove_classifiers
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

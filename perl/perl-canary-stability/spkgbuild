@@ -5,7 +5,8 @@ name=perl-canary-stability
 version=2013
 release=3
 
-source="https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Canary-Stability-2013.tar.gz"
+_name=Canary-Stability
+source="https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

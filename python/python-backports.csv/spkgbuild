@@ -5,7 +5,8 @@ name=python-backports.csv
 version=1.0.7
 release=4
 
-source="python--1.0.7.zip::https://github.com/ryanhiebert/backports.csv/archive/1.0.7.zip"
+_name=${name#python-}
+source="${name}-${version}.zip::https://github.com/ryanhiebert/${_name}/archive/${version}.zip"
 options="!checksum"
 
 build() {

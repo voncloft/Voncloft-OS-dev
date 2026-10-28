@@ -5,7 +5,8 @@
 name=speech-dispatcher
 version=0.12.1
 release=1
-source="https://github.com/brailcom/speechd/releases/download/$version/$name-$version.tar.gz"
+_name=speechd
+source="https://github.com/brailcom/${_name}/releases/download/$version/$name-$version.tar.gz"
 options="!checksum"
 backup="etc/speech-dispatcher/speechd.conf etc/speech-dispatcher/modules/flite.conf"
 

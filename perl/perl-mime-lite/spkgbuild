@@ -5,7 +5,8 @@ name=perl-mime-lite
 version=3.033
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/MIME-Lite-3.033.tar.gz"
+_name=MIME-Lite
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@ name=perlio-via-symlink
 version=0.05
 release=9
 
-source="https://www.cpan.org/authors/id/C/CL/CLKAO/PerlIO-via-symlink-0.05.tar.gz"
+_name=PerlIO-via-symlink
+source="https://cpan.metacpan.org/authors/id/C/CL/CLKAO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

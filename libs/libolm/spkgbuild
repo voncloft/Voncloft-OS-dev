@@ -5,7 +5,8 @@ name=libolm
 version=3.2.16
 release=1
 
-source="$name-$version.tar.gz::https://gitlab.matrix.org/matrix-org/olm/-/archive/$version/olm-$version.tar.gz"
+_name=olm
+source="$name-$version.tar.gz::https://gitlab.matrix.org/matrix-org/${_name}/-/archive/$version/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

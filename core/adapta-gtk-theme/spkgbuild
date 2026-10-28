@@ -4,7 +4,7 @@
 name=adapta-gtk-theme
 version=3.95.0.11
 release=1
-source="https://github.com/adapta-project/adapta-gtk-theme/archive/$version/$name-$version.tar.gz"
+source="https://github.com/adapta-project/${name}/archive/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

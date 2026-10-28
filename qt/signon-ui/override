@@ -1,0 +1,18 @@
+# Only report uversion; update-repo owns the version= edit.
+source='https://gitlab.com/api/v4/projects/accounts-sso%2Fsignon-ui/repository/commits?per_page=1'
+url=$source
+get_generic() {
+    unset uversion
+    uversion=$(python3 - "$version" <<'PYCOMMIT'
+import datetime,json,pathlib,re,sys
+data=json.loads(pathlib.Path('index.html').read_text())[0]
+sha=data['id']
+if not re.fullmatch('[a-f0-9]{40}',sha):raise ValueError('invalid GitLab commit')
+stamp=datetime.datetime.fromisoformat(data['committed_date'].replace('Z','+00:00')).astimezone(datetime.timezone.utc).strftime('%Y%m%d%H%M%S')
+current=sys.argv[1]
+base=current.split('.git')[0].split('+')[0].split('.g')[0]
+print(base+'.git'+stamp+'.g'+sha)
+PYCOMMIT
+    ) || return 1
+    [ -n "$uversion" ]
+}

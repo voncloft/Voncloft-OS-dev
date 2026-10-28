@@ -4,7 +4,7 @@
 name=iso-codes
 version=4.20.1
 release=1
-source="https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v4.20.1/iso-codes-v4.20.1.tar.gz"
+source="https://salsa.debian.org/iso-codes-team/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
 	cd *

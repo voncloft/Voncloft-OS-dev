@@ -2,19 +2,21 @@
 # depends : hicolor-icon-theme alsa-lib dbus expat ffmpeg fontconfig freetype2 gcc-libs glib2 glibc harfbuzz lcms2 libdrm libjpeg-turbo libwebp libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxkbfile libxml2 libxrandr libxslt libxtst mesa minizip nspr nss opus xcb-util-renderutil pciutils libxss xcb-util-image libxkbcommon-x11 libxinerama xcb-util-keysyms xcb-util-wm zlib snappy libva libpulse libxrender wayland qt6
 
 name=plex-desktop
-version=1.115.0.426
+version=1.115.0.426-4e960a1d
 release=2
-_pkghash=223cbba6
-noextract="Plex-${version}.tar.bz2"
-source="Plex-${version}.tar.bz2::https://downloads.plex.tv/plex-desktop/1.115.0.426-4e960a1d/linux_tarball/Plex-1.115.0.426-4e960a1d-linux-x86_64.tar.bz2
+noextract="${name}-${version}.tar.bz2"
+_name=Plex
+_source4_version=0.6.1
+_source4_version2=2.1
+source="${name}-${version}.tar.bz2::https://downloads.plex.tv/${name}/${version}/linux_tarball/${_name}-${version}-linux-x86_64.tar.bz2
 	https://github.com/flathub/tv.plex.PlexDesktop/raw/master/tv.plex.PlexDesktop.desktop
 	https://github.com/flathub/tv.plex.PlexDesktop/raw/master/tv.plex.PlexDesktop.png
-	http://ftp.us.debian.org/debian/pool/main/libw/libwebp/libwebp6_0.6.1-2.1+deb11u2_amd64.deb"
+	http://ftp.us.debian.org/debian/pool/main/libw/libwebp/libwebp6_${_source4_version}-${_source4_version2}+deb11u2_amd64.deb"
 	
 build() {
 	cd $SRC
 	install -d "$PKG/opt/$name"
-	tar --no-same-owner -xf "$SRC/Plex-${version}.tar.bz2" -C "$PKG/opt/$name"
+	tar --no-same-owner -xf "$SRC/${name}-${version}.tar.bz2" -C "$PKG/opt/$name"
 	tar -xvf $SRC/data.tar.xz ./usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2
 	install -Dm644 usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2 ${PKG}/opt/${name}/lib/libwebp.so.6
 	rm -rf ${PKG}/opt/${name}/lib/dri

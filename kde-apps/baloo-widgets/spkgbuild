@@ -5,7 +5,7 @@ name=baloo-widgets
 version=26.08.2
 release=1
 
-source="https://download.kde.org/stable/release-service/$version/src/baloo-widgets-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

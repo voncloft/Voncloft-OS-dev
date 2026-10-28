@@ -5,7 +5,8 @@ name=perl-net-dns
 version=1.37
 release=1
 
-source="https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.37.tar.gz"
+_name=Net-DNS
+source="https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

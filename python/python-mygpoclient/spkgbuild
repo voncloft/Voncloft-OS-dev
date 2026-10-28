@@ -5,7 +5,8 @@ name=python-mygpoclient
 version=1.10
 release=7
 
-source="https://files.pythonhosted.org/packages/c8/6c/7ffecb14671ba53445f402e6b2bf98eae92ceb7a3df0507de8df0fed691d/mygpoclient-1.10.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

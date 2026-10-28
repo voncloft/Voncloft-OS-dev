@@ -5,7 +5,8 @@ name=python-pyproject2setuppy
 version=22
 release=2
 
-source="https://github.com/mgorny/pyproject2setuppy/archive/refs/tags/v22.tar.gz"
+_name=${name#python-}
+source="https://github.com/mgorny/${_name}/archive/refs/tags/v${version}.tar.gz"
 options="!checksum"
 
 build() {

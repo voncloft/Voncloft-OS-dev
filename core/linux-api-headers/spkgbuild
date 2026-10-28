@@ -3,7 +3,8 @@
 name=linux-api-headers
 version=6.19.14
 release=1
-source="https://www.kernel.org/pub/linux/kernel/v6.x/linux-$version.tar.xz"
+_name=linux
+source="https://www.kernel.org/pub/${_name}/kernel/v${version%%.*}.x/${_name}-$version.tar.xz"
 
 build() {
 	cd linux-$version

@@ -5,7 +5,8 @@ name=python-et-xmlfile
 version=2.0.0
 release=9
 
-source="https://files.pythonhosted.org/packages/d3/38/af70d7ab1ae9d4da450eeec1fa3918940a5fafb9055e934af8d6eb0c2313/et_xmlfile-2.0.0.tar.gz"
+_name=et_xmlfile
+source="https://files.pythonhosted.org/packages/source/e/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

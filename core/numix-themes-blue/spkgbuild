@@ -2,11 +2,12 @@
 # depends	: gdk-pixbuf glib gtk-engine-murrine ruby-sass ruby-rb-fsevent ruby-sass-listen
 
 name=numix-themes-blue
-version=20180608
+version=20210608165118.gad4b345cb19edba96bec72d6dc97ed1b568755a8
 release=1
 options="!strip"
-_commit=8083a96a14472836f5c1090d8a0a2fa2e4633ffb
-source="$name-$_commit.tar.gz::https://github.com/shimmerproject/Numix/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+_name=Numix
+source="$name-$_commit.tar.gz::https://github.com/shimmerproject/${_name}/archive/$_commit.tar.gz"
 
 build() {
 	cd numix-gtk-theme-$_commit

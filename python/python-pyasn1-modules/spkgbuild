@@ -5,7 +5,8 @@ name=python-pyasn1-modules
 version=0.2.8
 release=3
 
-source="https://pypi.io/packages/source/p/pyasn1-modules/pyasn1-modules-0.2.8.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

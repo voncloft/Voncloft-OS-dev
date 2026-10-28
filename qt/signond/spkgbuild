@@ -2,11 +2,11 @@
 # depends : qt6 sqlite
 
 name=signond
-version=8.60+20231124
+version=8.60+20231124.gc8ad9824
 release=1
-_commit=c8ad9824
+_commit=${version##*.g}
 
-source="$name-$_commit.tar.gz::https://gitlab.com/accounts-sso/signond/-/archive/$_commit/$name-$_commit.tar.gz"
+source="$name-$_commit.tar.gz::https://gitlab.com/accounts-sso/${name}/-/archive/$_commit/$name-$_commit.tar.gz"
 options="!checksum"
 
 build() {

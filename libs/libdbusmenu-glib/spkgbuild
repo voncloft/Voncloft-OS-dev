@@ -12,7 +12,7 @@ options="!checksum"
 build() {
 	export HAVE_VALGRIND_TRUE='#'
         export HAVE_VALGRIND_FALSE=''
-	cd $_pkgname-$version
+	cd "$SRC"/libdbusmenu*/
 	sed -i 's/-Werror//' libdbusmenu-*/Makefile.{am,in}
 
     ./configure --prefix=/usr \

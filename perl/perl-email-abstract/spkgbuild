@@ -5,7 +5,8 @@ name=perl-email-abstract
 version=3.009
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Email-Abstract-3.008.tar.gz"
+_name=Email-Abstract
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

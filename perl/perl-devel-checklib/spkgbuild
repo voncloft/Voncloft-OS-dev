@@ -5,7 +5,8 @@ name=perl-devel-checklib
 version=1.16
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/M/MA/MATTN/Devel-CheckLib-1.16.tar.gz"
+_name=Devel-CheckLib
+source="https://cpan.metacpan.org/authors/id/M/MA/MATTN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

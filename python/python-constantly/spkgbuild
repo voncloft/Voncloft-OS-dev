@@ -5,7 +5,8 @@ name=python-constantly
 version=23.10.4
 release=8
 
-source="https://github.com/twisted/constantly/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/twisted/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

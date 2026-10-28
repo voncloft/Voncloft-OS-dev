@@ -2,10 +2,10 @@
 # depends : autoconf automake gcc libiconv linux-api-headers make
 
 name=w_scan2
-version=1.0.17
+version=1.0.17.git20260915220107.g5d8c956dfa5a7ea74fb1e92ac2370826cca1ea55
 release=1
-_commit=ae909ace5c1c8ccabfb5debb1ff0e16da6ca3884
-source="$name-$_commit.tar.gz::https://github.com/stefantalpalaru/w_scan2/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+source="$name-$_commit.tar.gz::https://github.com/stefantalpalaru/${name}/archive/$_commit.tar.gz"
 
 build() {
     cd "$name-$_commit"

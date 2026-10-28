@@ -5,7 +5,8 @@ name=python-kaitaistruct
 version=0.12
 release=3
 
-source="https://github.com/kaitai-io/kaitai_struct_python_runtime/archive/refs/tags/$version.tar.gz"
+_name=kaitai_struct_python_runtime
+source="https://github.com/kaitai-io/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

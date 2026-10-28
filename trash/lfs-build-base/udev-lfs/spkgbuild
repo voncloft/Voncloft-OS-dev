@@ -4,7 +4,7 @@
 name=udev-lfs
 version=20230818
 release=1
-source="https://anduin.linuxfromscratch.org/LFS/udev-lfs-$version.tar.xz"
+source="https://anduin.linuxfromscratch.org/LFS/${name}-$version.tar.xz"
 options="!checksum"
 noextract="udev-lfs-20230818.tar.xz"
 build() {

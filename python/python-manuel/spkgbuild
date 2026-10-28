@@ -5,7 +5,8 @@ name=python-manuel
 version=1.13.0
 release=5
 
-source="https://github.com/benji-york/manuel/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/benji-york/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

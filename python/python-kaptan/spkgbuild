@@ -5,7 +5,8 @@ name=python-kaptan
 version=0.5.12
 release=5
 
-source="https://files.pythonhosted.org/packages/source/k/kaptan/kaptan-0.5.12.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/k/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

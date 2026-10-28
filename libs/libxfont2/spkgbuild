@@ -4,7 +4,8 @@
 name=libxfont2
 version=2.0.9
 release=1
-source="https://www.x.org/pub/individual/lib/libXfont2-2.0.9.tar.gz"
+_name=libXfont2
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXfont2-$version

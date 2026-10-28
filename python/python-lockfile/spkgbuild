@@ -5,7 +5,8 @@ name=python-lockfile
 version=0.12.2
 release=8
 
-source="https://files.pythonhosted.org/packages/source/l/lockfile/lockfile-0.12.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/l/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-extutils-pkgconfig
 version=1.16
 release=7
 
-source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/ExtUtils-PkgConfig-1.16.tar.gz"
+_name=ExtUtils-PkgConfig
+source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

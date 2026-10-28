@@ -5,7 +5,8 @@ name=python-flask-mail
 version=0.10.0
 release=6
 
-source="https://github.com/mattupstate/flask-mail/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mattupstate/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

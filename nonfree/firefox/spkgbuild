@@ -6,7 +6,7 @@ version=160.0b1
 options="!checksum"
 rust_version=91.6.0
 release=1
-source="https://archive.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.xz
+source="https://archive.mozilla.org/pub/${name}/releases/$version/source/${name}-$version.source.tar.xz
 	fix-ftbfs-newer-cbindgen.patch
 	$name.desktop"
 

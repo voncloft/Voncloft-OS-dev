@@ -5,7 +5,8 @@ name=python-colorcet
 version=3.2.1
 release=1
 
-source="https://github.com/holoviz/colorcet/archive/refs/tags/w$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/holoviz/${_name}/archive/refs/tags/w$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-mail-authenticationresults
 version=2.20230112
 release=1
 
-source="https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/Mail-AuthenticationResults-2.20230112.tar.gz"
+_name=Mail-AuthenticationResults
+source="https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

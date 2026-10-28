@@ -2,10 +2,11 @@
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer ki18n libplasma qt6
 
 name=kde-calendar
-version=0.1.0.git20260211
+version=0.1.0.git20260211041200.g1e40d77e34d6204cc79530863800a9eb027e4169
 release=1
-_commit=1e40d77e34d6204cc79530863800a9eb027e4169
-source="$name-$_commit.tar.gz::https://github.com/voncloft/KDE_CALENDAR/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+_name=KDE_CALENDAR
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
 
 build() {
     cd "KDE_CALENDAR-$_commit"

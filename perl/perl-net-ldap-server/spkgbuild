@@ -5,7 +5,8 @@ name=perl-net-ldap-server
 version=0.43
 release=8
 
-source="https://search.cpan.org/CPAN/authors/id/A/AA/AAR/Net-LDAP-Server-0.43.tar.gz"
+_name=Net-LDAP-Server
+source="https://cpan.metacpan.org/authors/id/A/AA/AAR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

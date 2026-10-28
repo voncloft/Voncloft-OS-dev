@@ -5,7 +5,8 @@ name=perl-gnupg-interface
 version=1.02
 release=1
 
-source="https://cpan.metacpan.org/authors/id/B/BP/BPS/GnuPG-Interface-1.02.tar.gz"
+_name=GnuPG-Interface
+source="https://cpan.metacpan.org/authors/id/B/BP/BPS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

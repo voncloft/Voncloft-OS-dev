@@ -5,7 +5,8 @@ name=python-iocapture
 version=0.1.2
 release=8
 
-source="https://github.com/oinume/iocapture/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/oinume/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

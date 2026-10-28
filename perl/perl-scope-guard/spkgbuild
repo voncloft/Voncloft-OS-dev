@@ -5,7 +5,8 @@ name=perl-scope-guard
 version=0.21
 release=3
 
-source="https://cpan.metacpan.org/authors/id/C/CH/CHOCOLATE/Scope-Guard-0.21.tar.gz"
+_name=Scope-Guard
+source="https://cpan.metacpan.org/authors/id/C/CH/CHOCOLATE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

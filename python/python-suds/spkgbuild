@@ -5,7 +5,8 @@ name=python-suds
 version=1.4.5.0
 release=1
 
-source="https://github.com/cackharot/suds-py3/archive/1.4.2.0/python-suds-1.4.2.0.tar.gz"
+_name=suds-py3
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

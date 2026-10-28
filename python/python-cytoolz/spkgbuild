@@ -5,7 +5,8 @@ name=python-cytoolz
 version=0.12.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/c/cytoolz/cytoolz-0.12.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

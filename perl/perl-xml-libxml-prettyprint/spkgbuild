@@ -5,7 +5,8 @@ name=perl-xml-libxml-prettyprint
 version=0.006
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/T/TO/TOBYINK/XML-LibXML-PrettyPrint-0.006.tar.gz"
+_name=XML-LibXML-PrettyPrint
+source="https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

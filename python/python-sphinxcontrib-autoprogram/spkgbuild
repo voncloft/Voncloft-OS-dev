@@ -5,7 +5,8 @@ name=python-sphinxcontrib-autoprogram
 version=0.1.9
 release=3
 
-source="https://github.com/sphinx-contrib/autoprogram/archive/refs/tags/r$version.tar.gz"
+_name=autoprogram
+source="https://github.com/sphinx-contrib/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

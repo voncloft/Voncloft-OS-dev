@@ -5,7 +5,8 @@ name=python-itsdangerous
 version=2.2.0
 release=6
 
-source="https://github.com/mitsuhiko/itsdangerous/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mitsuhiko/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

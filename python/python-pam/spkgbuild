@@ -5,11 +5,11 @@ name=python-pam
 version=2.0.2
 release=5
 
-source="https://files.pythonhosted.org/packages/source/p/python-pam/python-pam-2.0.2.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

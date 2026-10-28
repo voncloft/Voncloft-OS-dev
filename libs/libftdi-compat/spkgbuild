@@ -5,7 +5,8 @@ name=libftdi-compat
 version=0.20
 release=8
 
-source="https://www.intra2net.com/en/developer/libftdi/download/libftdi-$version.tar.gz"
+_name=libftdi
+source="https://www.intra2net.com/en/developer/${_name}/download/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

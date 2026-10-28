@@ -5,7 +5,8 @@ name=python-pyqtgraph
 version=0.14.0
 release=1
 
-source="https://github.com/pyqtgraph/pyqtgraph/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pyqtgraph/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

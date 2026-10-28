@@ -5,7 +5,8 @@ name=python-progress
 version=1.6
 release=5
 
-source="https://github.com/verigak/progress/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/verigak/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

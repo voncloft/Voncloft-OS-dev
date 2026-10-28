@@ -5,7 +5,8 @@ name=python-glfw
 version=2.11.0
 release=2
 
-source="https://files.pythonhosted.org/packages/b2/89/fa9cb2611314b84ffa68d76f154e1e508971d6e402b14bd2152684e35e5d/glfw-2.11.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

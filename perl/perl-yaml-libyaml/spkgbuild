@@ -5,7 +5,8 @@ name=perl-yaml-libyaml
 version=0.86
 release=5
 
-source="https://cpan.metacpan.org/authors/id/I/IN/INGY/YAML-LibYAML-0.86.tar.gz"
+_name=YAML-LibYAML
+source="https://cpan.metacpan.org/authors/id/I/IN/INGY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

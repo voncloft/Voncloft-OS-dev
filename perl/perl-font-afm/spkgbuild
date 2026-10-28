@@ -5,7 +5,8 @@ name=perl-font-afm
 version=1.20
 release=9
 
-source="https://search.cpan.org/CPAN/authors/id/G/GA/GAAS/Font-AFM-1.20.tar.gz"
+_name=Font-AFM
+source="https://cpan.metacpan.org/authors/id/G/GA/GAAS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

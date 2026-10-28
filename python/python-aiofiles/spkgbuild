@@ -5,7 +5,8 @@ name=python-aiofiles
 version=25.1.0
 release=3
 
-source="https://github.com/Tinche/aiofiles/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/Tinche/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

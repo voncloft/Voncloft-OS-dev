@@ -5,7 +5,8 @@ name=perl-poe-component-resolver
 version=0.921
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/R/RC/RCAPUTO/POE-Component-Resolver-0.921.tar.gz"
+_name=POE-Component-Resolver
+source="https://cpan.metacpan.org/authors/id/R/RC/RCAPUTO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

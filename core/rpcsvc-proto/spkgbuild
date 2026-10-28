@@ -3,7 +3,7 @@
 name=rpcsvc-proto
 version=1.4.4
 release=1
-source="https://github.com/thkukuk/rpcsvc-proto/releases/download/v$version/rpcsvc-proto-$version.tar.xz"
+source="https://github.com/thkukuk/${name}/releases/download/v$version/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

@@ -5,7 +5,8 @@ name=python-contextlib2
 version=21.6.0
 release=3
 
-source="https://github.com/jazzband/contextlib2/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/jazzband/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

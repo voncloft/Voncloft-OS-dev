@@ -5,7 +5,8 @@ name=python-zope-security
 version=8.5
 release=3
 
-source="https://github.com/zopefoundation/zope.security/archive/refs/tags/$version.tar.gz"
+_name=zope.security
+source="https://github.com/zopefoundation/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

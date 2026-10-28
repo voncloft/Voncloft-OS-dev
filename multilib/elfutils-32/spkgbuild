@@ -4,7 +4,8 @@
 name=elfutils-32
 version=0.197
 release=1
-source="https://sourceware.org/ftp/elfutils/$version/elfutils-$version.tar.bz2"
+_name=${name%-32}
+source="https://sourceware.org/ftp/${_name}/$version/${_name}-$version.tar.bz2"
 
 build() {
 	cd elfutils-$version

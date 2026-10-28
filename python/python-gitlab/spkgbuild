@@ -5,7 +5,7 @@ name=python-gitlab
 version=8.6.0
 release=2
 
-source="https://github.com/python-gitlab/python-gitlab/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/python-gitlab/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

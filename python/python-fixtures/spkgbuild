@@ -5,7 +5,8 @@ name=python-fixtures
 version=4.0.1
 release=10
 
-source="https://pypi.io/packages/source/f/fixtures/fixtures-4.0.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

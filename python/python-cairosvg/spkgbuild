@@ -5,7 +5,8 @@ name=python-cairosvg
 version=2.9.1
 release=1
 
-source="https://github.com/Kozea/CairoSVG/archive/refs/tags/$version.tar.gz"
+_name=CairoSVG
+source="https://github.com/Kozea/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,11 +2,11 @@
 # depends	: libaio
 
 name=lvm2
-version=2.03.43
+version=2.03.44
 release=1
 backup="etc/lvm/lvm.conf
 	etc/lvm/lvmlocal.conf"
-source="https://sourceware.org/pub/lvm2/releases/LVM2.2.03.43.tgz"
+source="https://sourceware.org/pub/lvm2/releases/LVM2.${version}.tgz"
 
 build() {
 	cd "$SRC"/LVM2*/

@@ -6,7 +6,8 @@ name=python-feedparser
 version=6.0.14
 release=9
 
-source="https://github.com/kurtmckee/feedparser/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/kurtmckee/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

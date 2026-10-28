@@ -5,7 +5,8 @@ name=perl-devel-leak
 version=0.03
 release=10
 
-source="https://search.mcpan.org/CPAN/authors/id/N/NI/NI-S/Devel-Leak-0.03.tar.gz"
+_name=Devel-Leak
+source="https://cpan.metacpan.org/authors/id/N/NI/NI-S/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

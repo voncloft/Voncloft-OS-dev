@@ -5,7 +5,8 @@ name=python-ruamel.yaml.clib
 version=0.2.7
 release=3
 
-source="https://files.pythonhosted.org/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-0.2.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

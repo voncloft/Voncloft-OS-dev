@@ -5,7 +5,8 @@ name=python-cram
 version=0.7
 release=8
 
-source="https://bitheap.org/cram/cram-0.7.tar.gz"
+_name=${name#python-}
+source="https://bitheap.org/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

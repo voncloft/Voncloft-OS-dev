@@ -4,15 +4,16 @@
 name=telegram-desktop-bin
 version=7.3.3
 release=1
-source="https://github.com/telegramdesktop/tdesktop/releases/download/v7.3.3/td-setup-linux-x64-7.3.3.tar.xz
+_name=tdesktop
+source="https://github.com/telegramdesktop/${_name}/releases/download/v${version}/td-setup-linux-x64-${version}.tar.xz
 	$name.desktop
-	https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon16.png
-	https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon32.png
-	https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon48.png
-	https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon64.png
-	https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon128.png
-	https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon256.png
-	https://github.com/telegramdesktop/tdesktop/raw/master/Telegram/Resources/art/icon512.png"
+	https://github.com/telegramdesktop/${_name}/raw/master/Telegram/Resources/art/icon16.png
+	https://github.com/telegramdesktop/${_name}/raw/master/Telegram/Resources/art/icon32.png
+	https://github.com/telegramdesktop/${_name}/raw/master/Telegram/Resources/art/icon48.png
+	https://github.com/telegramdesktop/${_name}/raw/master/Telegram/Resources/art/icon64.png
+	https://github.com/telegramdesktop/${_name}/raw/master/Telegram/Resources/art/icon128.png
+	https://github.com/telegramdesktop/${_name}/raw/master/Telegram/Resources/art/icon256.png
+	https://github.com/telegramdesktop/${_name}/raw/master/Telegram/Resources/art/icon512.png"
 
 build() {
 	cd $SRC

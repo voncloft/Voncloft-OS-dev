@@ -5,7 +5,8 @@ name=perl-return-multilevel
 version=0.08
 release=3
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Return-MultiLevel-0.08.tar.gz"
+_name=Return-MultiLevel
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

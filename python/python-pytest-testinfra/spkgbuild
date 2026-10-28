@@ -6,7 +6,8 @@ name=python-pytest-testinfra
 version=7.0.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-testinfra/pytest-testinfra-7.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

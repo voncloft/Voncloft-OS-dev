@@ -5,7 +5,8 @@ name=perl-authen-pam
 version=0.16
 release=8
 
-source="https://www.cpan.org/authors/id/N/NI/NIKIP/Authen-PAM-0.16.tar.gz"
+_name=Authen-PAM
+source="https://cpan.metacpan.org/authors/id/N/NI/NIKIP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,11 @@
 # depends : coreutils ffmpeg kde-deps-installer qt6 v4l-utils w_scan2
 
 name=voncloft-tv
-version=0.2.0.git20260327
+version=0.2.0.git20260327.g75d591dced2e225c31a897527b6672217b4aae91
 release=1
-_commit=75d591dced2e225c31a897527b6672217b4aae91
-source="$name-$_commit.tar.gz::https://github.com/voncloft/qt6_tv_tuner/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+_name=qt6_tv_tuner
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
 
 build() {
     cd "qt6_tv_tuner-$_commit"

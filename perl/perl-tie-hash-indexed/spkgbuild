@@ -5,7 +5,8 @@ name=perl-tie-hash-indexed
 version=0.08
 release=19
 
-source="https://www.cpan.org/authors/id/M/MH/MHX/Tie-Hash-Indexed-0.05.tar.gz"
+_name=Tie-Hash-Indexed
+source="https://cpan.metacpan.org/authors/id/M/MH/MHX/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

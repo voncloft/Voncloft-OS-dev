@@ -5,7 +5,8 @@ name=perl-email-mime
 version=1.953
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Email-MIME-1.953.tar.gz"
+_name=Email-MIME
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

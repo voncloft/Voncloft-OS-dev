@@ -1,3 +1,4 @@
+# Only report uversion; update-repo owns the version= edit.
 # Read the upstream release metadata; do not scrape versions from unrelated text.
 source=https://www.x.org/pub/individual/driver/
 # update-repo sources this again immediately before fetching index.html.
@@ -5,7 +6,7 @@ url=$source
 
 get_generic()
 {
-    local detected next_version source_edit recipe comparison
+    local detected recipe
     unset uversion
     recipe="${ppath%/*}/spkgbuild"
     detected=$(python3 - '{"mode":"listing","url":"https://www.x.org/pub/individual/driver/","pattern":"xf86\\-input\\-libinput\\-([0-9]+(?:\\.[0-9]+)*)\\.tar\\.(?:gz|bz2|xz)"}' "$recipe" "$version" <<'PY'
@@ -113,46 +114,12 @@ try:
     # Metadata is data, never shell code. Reject unexpected URL characters.
     if not re.fullmatch(r'https?://[A-Za-z0-9_./:%+?=&~#-]+', archive):
         raise ValueError('invalid upstream archive URL')
-    raw = recipe.read_text()
-    source = re.search(r'^source=(?:"([^\"]*)"|\x27([^\x27]*)\x27|([^\n]*))', raw, re.M)
-    if not source:
-        raise ValueError('recipe has no scalar source assignment')
-    entries = next(group for group in source.groups() if group is not None)
-    first = entries.split()[0]
-    # Retain the local archive alias and every secondary source or patch.
-    alias = first.split('::', 1)[0] + '::' if '::' in first else ''
-    if alias:
-        alias = alias.replace(current, '${version}')
-        # An archive alias must retain the downloaded compression format.
-        suffix = re.search(r'(\.tar\.(?:gz|bz2|xz)|\.tgz|\.zip)$', urllib.parse.urlsplit(archive).path)
-        if suffix:
-            alias = re.sub(r'(\.tar\.(?:gz|bz2|xz)|\.tgz|\.zip)(?=::$)', suffix[0], alias)
-    replacement = alias + archive
-    # Generate a literal sed BRE, escaping both the expression and replacement.
-    pattern = re.sub(r'([\\.^$\[\]*|])', r'\\\1', first)
-    replacement = replacement.replace('\\', '\\\\').replace('&', r'\&').replace('|', r'\|')
-    edit = f's|{pattern}|{replacement}|'
     print(latest)
-    print(edit)
 except (OSError, ValueError, KeyError, IndexError, TypeError, ET.ParseError) as error:
     print(f'ERROR: Unable to read upstream version: {error}', file=sys.stderr)
     sys.exit(1)
 PY
     ) || return 1
-    next_version=${detected%%$'\n'*}
-    source_edit=${detected#*$'\n'}
-    [ -n "$next_version" ] && [ -n "$source_edit" ] || return 1
-
-    # Keep the source archive aligned with the version. Test mode queues the
-    # source edit alongside update-repo's version edit without changing recipes.
-    vercomp "$next_version" "$version" >/dev/null
-    comparison=$?
-    if [ "$comparison" = 2 ]; then
-        if [ -n "${test_upgrade:-}" ]; then
-            printf 'sed -i -e %q %q\n' "$source_edit" "$recipe" >> test_updates.sh || return 1
-        else
-            sed -i -e "$source_edit" "$recipe" || return 1
-        fi
-    fi
-    uversion=$next_version
+    uversion=$detected
+    [ -n "$uversion" ]
 }

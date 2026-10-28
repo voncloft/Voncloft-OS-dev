@@ -5,7 +5,8 @@ name=perl-sub-uplevel
 version=0.2800
 release=4
 
-source="https://www.cpan.org/authors/id/D/DA/DAGOLDEN/Sub-Uplevel-0.2800.tar.gz"
+_name=Sub-Uplevel
+source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

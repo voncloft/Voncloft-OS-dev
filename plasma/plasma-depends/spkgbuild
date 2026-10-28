@@ -2,7 +2,7 @@
 # description : Meta-package that pulls in graphics, input, audio, and session dependencies for Plasma on SysVinit
 
 name=plasma-depends
-version=6.8.1
+version=6.8.2
 release=1
 options="!checksum"
 build(){

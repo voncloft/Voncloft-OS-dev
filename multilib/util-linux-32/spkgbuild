@@ -10,7 +10,8 @@ case $version in
 	*.*) _ver=$version;;
 esac
 
-source="https://www.kernel.org/pub/linux/utils/util-linux/v2.42/util-linux-2.42.4.tar.gz"
+_name=${name%-32}
+source="https://www.kernel.org/pub/linux/utils/${_name}/v${version%.*}/${_name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/util-linux*/

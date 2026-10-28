@@ -5,7 +5,8 @@
 name=freetype2
 version=2.13.3
 release=2
-source="https://downloads.sourceforge.net/freetype/freetype-$version.tar.xz"
+_name=freetype
+source="https://downloads.sourceforge.net/${_name}/${_name}-$version.tar.xz"
 
 options="!checksum"
 

@@ -2,10 +2,10 @@
 # description : Backup scheduler with Plasma integration for copying files or keeping versioned backups
 
 name=kup
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/kup-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

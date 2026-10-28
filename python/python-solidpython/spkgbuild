@@ -5,7 +5,8 @@ name=python-solidpython
 version=1.1.2
 release=4
 
-source="https://github.com/SolidCode/SolidPython/archive/refs/tags/v$version.tar.gz"
+_name=SolidPython
+source="https://github.com/SolidCode/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

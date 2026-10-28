@@ -4,7 +4,8 @@
 name=lcms2-32
 version=2.19.1
 release=1
-source="https://downloads.sourceforge.net/project/lcms/lcms/2.19.1/lcms2-2.19.1.tar.gz"
+_name=${name%-32}
+source="https://downloads.sourceforge.net/project/lcms/lcms/${version}/${_name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/lcms2*/

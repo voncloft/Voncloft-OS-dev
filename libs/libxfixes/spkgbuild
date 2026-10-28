@@ -4,7 +4,8 @@
 name=libxfixes
 version=6.0.2
 release=1
-source="https://www.x.org/pub/individual/lib/libXfixes-6.0.2.tar.gz"
+_name=libXfixes
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXfixes-$version

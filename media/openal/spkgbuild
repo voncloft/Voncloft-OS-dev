@@ -5,7 +5,8 @@ name=openal
 version=1.25.2
 release=1
 
-source="https://github.com/kcat/openal-soft/archive/refs/tags/$version.tar.gz"
+_name=openal-soft
+source="https://github.com/kcat/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-astral
 version=3.2
 release=3
 
-source="https://files.pythonhosted.org/packages/04/d1/1adbf06a38dc339e41a1666f6c7135924594c20fd46e060fb263248c564d/astral-3.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

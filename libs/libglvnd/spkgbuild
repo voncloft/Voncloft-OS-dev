@@ -4,7 +4,7 @@
 name=libglvnd
 version=1.7.0
 release=1
-source="https://github.com/NVIDIA/libglvnd/archive/v$version/$name-v$version.tar.gz"
+source="https://github.com/NVIDIA/${name}/archive/v$version/$name-v$version.tar.gz"
 
 build() {
 	cd libglvnd-$version

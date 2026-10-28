@@ -5,7 +5,8 @@ name=python-pycuda
 version=2022.2.2
 release=5
 
-source="https://files.pythonhosted.org/packages/source/p/pycuda/pycuda-2022.2.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

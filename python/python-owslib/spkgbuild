@@ -5,7 +5,8 @@ name=python-owslib
 version=0.36.0
 release=1
 
-source="https://github.com/geopython/OWSLib/archive/refs/tags/$version.tar.gz"
+_name=OWSLib
+source="https://github.com/geopython/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

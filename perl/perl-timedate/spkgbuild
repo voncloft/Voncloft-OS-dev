@@ -5,7 +5,8 @@ name=perl-timedate
 version=2.33
 release=2
 
-source="https://www.cpan.org/authors/id/A/AT/ATOOMIC/TimeDate-2.33.tar.gz"
+_name=TimeDate
+source="https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

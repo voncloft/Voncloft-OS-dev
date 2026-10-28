@@ -5,7 +5,7 @@ name=python-unpaddedbase64
 version=2.1.0
 release=7
 
-source="https://github.com/matrix-org/python-unpaddedbase64/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/matrix-org/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

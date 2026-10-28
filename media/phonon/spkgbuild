@@ -5,7 +5,7 @@ name=phonon
 version=4.12.0
 release=1
 
-source="https://download.kde.org/stable/phonon/$version/phonon-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/$version/${name}-$version.tar.xz"
 
 build()
 {

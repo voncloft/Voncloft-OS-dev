@@ -5,7 +5,8 @@ name=python-editdistance
 version=0.8.1
 release=5
 
-source="https://github.com/aflc/editdistance/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/aflc/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-aws-xray-sdk
 version=2.15.0
 release=3
 
-source="https://github.com/aws/aws-xray-sdk-python/archive/refs/tags/$version.tar.gz"
+_name=aws-xray-sdk-python
+source="https://github.com/aws/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

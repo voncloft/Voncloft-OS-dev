@@ -4,7 +4,8 @@
 name=xf86-input-libinput
 version=1.32.0
 release=1
-source="https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.32.0/libinput-1.32.0.tar.gz"
+_name=libinput
+source="https://gitlab.freedesktop.org/${_name}/${_name}/-/archive/${version}/${_name}-${version}.tar.gz"
 
 build() {
 	cd *

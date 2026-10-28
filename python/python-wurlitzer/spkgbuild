@@ -5,7 +5,8 @@ name=python-wurlitzer
 version=3.0.3
 release=3
 
-source="https://files.pythonhosted.org/packages/source/w/wurlitzer/wurlitzer-3.0.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

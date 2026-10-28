@@ -5,11 +5,12 @@ name=python-musicbrainzngs
 version=0.7.1
 release=3
 
-source="git+https://github.com/alastair/python-musicbrainzngs.git#tag=e4bca39720c7c0a1de38b1663faa3475cf5b7eff"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/musicbrainzngs*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

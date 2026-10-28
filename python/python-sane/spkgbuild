@@ -5,7 +5,8 @@ name=python-sane
 version=2.9.2
 release=6
 
-source="https://github.com/python-pillow/Sane/archive/refs/tags/v$version.tar.gz"
+_name=Sane
+source="https://github.com/python-pillow/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

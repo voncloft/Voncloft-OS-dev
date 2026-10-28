@@ -4,7 +4,8 @@
 name=docbook2x
 version=0.8.8
 release=2
-source="https://downloads.sourceforge.net/$name/docbook2X-$version.tar.gz
+_name=docbook2X
+source="https://downloads.sourceforge.net/$name/${_name}-$version.tar.gz
 	docbook2x.datadir.patch"
 
 build(){

@@ -5,7 +5,7 @@ name=convertlit
 version=1.8
 release=10
 
-source="http://www.convertlit.com/clit18src.zip"
+source="http://www.convertlit.com/clit${version//./}src.zip"
 
 build() {
 	sed -i 's|../libtommath-0.30/libtommath.a|/usr/lib/libtommath.so ${LDFLAGS}|' clit18/Makefile

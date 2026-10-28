@@ -5,7 +5,7 @@ name=libsodium
 version=1.0.22
 release=2
 
-source="https://download.libsodium.org/libsodium/releases/libsodium-$version.tar.gz"
+source="https://download.libsodium.org/${name}/releases/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

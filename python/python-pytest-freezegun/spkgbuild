@@ -5,7 +5,8 @@ name=python-pytest-freezegun
 version=0.4.2
 release=3
 
-source="https://github.com/ktosiek/pytest-freezegun/archive/refs/tags/p$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/ktosiek/${_name}/archive/refs/tags/p$version.tar.gz"
 options="!checksum"
 
 build() {

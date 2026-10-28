@@ -5,7 +5,8 @@ name=python-backcall
 version=0.2.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/b/backcall/backcall-0.2.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/b/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

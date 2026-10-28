@@ -2,10 +2,10 @@
 # depends : extra-cmake-modules kauth kcmutils kconfig kcoreaddons kde-deps-installer ki18n qt6
 
 name=plasma-firewall
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/plasma-firewall-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

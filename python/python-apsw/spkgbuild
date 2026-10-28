@@ -5,7 +5,8 @@ name=python-apsw
 version=3.54.1.0
 release=1
 
-source="https://github.com/rogerbinns/apsw/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/rogerbinns/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

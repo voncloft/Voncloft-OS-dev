@@ -5,7 +5,8 @@ name=python-pywinrm
 version=0.4.3
 release=4
 
-source="https://files.pythonhosted.org/packages/source/p/pywinrm/pywinrm-0.4.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

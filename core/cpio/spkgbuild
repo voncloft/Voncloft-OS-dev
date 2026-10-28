@@ -4,7 +4,7 @@
 name=cpio
 version=2.15    
 release=1
-source="https://ftp.gnu.org/gnu/cpio/cpio-2.15.tar.bz2"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.bz2"
 
 options="!checksum"
 

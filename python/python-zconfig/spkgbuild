@@ -4,7 +4,8 @@ name=python-zconfig
 version=4.3
 release=5
 
-source="https://github.com/zopefoundation/ZConfig/archive/refs/tags/$version.tar.gz"
+_name=ZConfig
+source="https://github.com/zopefoundation/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

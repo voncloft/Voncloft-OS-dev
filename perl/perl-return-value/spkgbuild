@@ -5,7 +5,8 @@ name=perl-return-value
 version=1.666005
 release=4
 
-source="https://www.cpan.org/authors/id/R/RJ/RJBS/Return-Value-1.666005.tar.gz"
+_name=Return-Value
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

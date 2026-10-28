@@ -4,10 +4,10 @@
 # description : Plasma settings and profiles for configuring Wacom tablet mapping, buttons, and pen behavior
 
 name=wacomtablet
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/wacomtablet-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

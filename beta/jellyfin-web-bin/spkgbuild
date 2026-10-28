@@ -5,7 +5,7 @@ name=jellyfin-web-bin
 version=12.4
 release=2
 _pkgver="${version}-1"
-source="jellyfin-web_${version}_all.deb::https://repo.jellyfin.org/files/server/debian/latest-stable/amd64/jellyfin-web_12.4%2Bdeb12_all.deb"
+source="jellyfin-web_${version}_all.deb::https://repo.jellyfin.org/files/server/debian/latest-stable/amd64/jellyfin-web_${version}%2Bdeb12_all.deb"
 noextract="jellyfin-web_${version}_all.deb"
 build() {
 	mkdir -pv "jellyfin-web"

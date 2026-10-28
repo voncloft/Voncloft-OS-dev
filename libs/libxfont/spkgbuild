@@ -4,7 +4,8 @@
 name=libxfont
 version=1.5.4
 release=1
-source="https://www.x.org/pub/individual/lib/libXfont-$version.tar.xz"
+_name=libXfont
+source="https://www.x.org/pub/individual/lib/${_name}-$version.tar.xz"
 
 build() {
 	cd libXfont-$version

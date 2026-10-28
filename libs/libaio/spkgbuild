@@ -3,7 +3,7 @@
 name=libaio
 version=0.3.113
 release=1
-source="https://pagure.io/libaio/archive/libaio-$version/libaio-$version.tar.gz"
+source="https://pagure.io/${name}/archive/${name}-$version/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

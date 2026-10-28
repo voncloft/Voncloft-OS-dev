@@ -3,7 +3,8 @@
 name=liba52
 version=0.8.0
 release=1
-source="https://distfiles.adelielinux.org/source/a52dec/a52dec-$version.tar.gz"
+_name=a52dec
+source="https://distfiles.adelielinux.org/source/${_name}/${_name}-$version.tar.gz"
 
 build() {
 	cd a52dec-$version

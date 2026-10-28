@@ -3,7 +3,7 @@
 name=mesa-demos
 version=9.0.0
 release=1
-source="https://github.com/mirror/mesa-demos/archive/refs/tags/mesa-demos-9.0.0.tar.gz"
+source="https://github.com/mirror/${name}/archive/refs/tags/${name}-${version}.tar.gz"
 
 build() {
 	cd *

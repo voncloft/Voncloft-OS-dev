@@ -5,7 +5,7 @@ name=yt-dlp
 version=2026.10.26
 release=1
 
-source="yt-dlp-$version::https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp"
+source="yt-dlp-$version::https://github.com/yt-dlp/${name}/releases/download/$version/yt-dlp"
 options="!checksum"
 
 build() {

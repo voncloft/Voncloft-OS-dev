@@ -5,7 +5,8 @@ name=perl-ical-parser
 version=1.21
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/R/RI/RIXED/iCal-Parser-1.21.tar.gz"
+_name=iCal-Parser
+source="https://cpan.metacpan.org/authors/id/R/RI/RIXED/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

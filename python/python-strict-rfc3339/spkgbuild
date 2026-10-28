@@ -5,7 +5,8 @@ name=python-strict-rfc3339
 version=0.7
 release=7
 
-source="https://pypi.io/packages/source/s/strict-rfc3339/strict-rfc3339-0.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

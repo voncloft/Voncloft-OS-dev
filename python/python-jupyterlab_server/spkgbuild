@@ -5,7 +5,8 @@ name=python-jupyterlab_server
 version=2.22.1
 release=1
 
-source="https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-2.22.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/j/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

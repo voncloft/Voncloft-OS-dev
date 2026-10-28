@@ -7,7 +7,7 @@ release=1
 source="https://sourceforge.net/projects/$name/files/$name/${name}%20${version}/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/cdw*/
 
 	./configure --prefix=/usr
 	make

@@ -5,7 +5,8 @@ name=perl-test-base
 version=0.89
 release=2
 
-source="https://www.cpan.org/authors/id/I/IN/INGY/Test-Base-0.89.tar.gz"
+_name=Test-Base
+source="https://cpan.metacpan.org/authors/id/I/IN/INGY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

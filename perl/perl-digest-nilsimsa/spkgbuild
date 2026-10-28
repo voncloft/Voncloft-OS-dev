@@ -5,7 +5,8 @@ name=perl-digest-nilsimsa
 version=0.06
 release=20
 
-source="https://www.cpan.org/authors/id/V/VI/VIPUL/Digest-Nilsimsa-0.06.tar.gz"
+_name=Digest-Nilsimsa
+source="https://cpan.metacpan.org/authors/id/V/VI/VIPUL/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

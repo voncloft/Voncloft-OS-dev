@@ -5,7 +5,8 @@ name=perl-net-openssh
 version=0.83
 release=1
 
-source="https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-OpenSSH-0.83.tar.gz"
+_name=Net-OpenSSH
+source="https://cpan.metacpan.org/authors/id/S/SA/SALVA/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

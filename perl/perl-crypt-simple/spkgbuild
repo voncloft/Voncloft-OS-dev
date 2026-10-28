@@ -4,7 +4,8 @@ name=perl-crypt-simple
 version=0.06
 release=10
 
-source="https://www.cpan.org/authors/id/K/KA/KASEI/Crypt-Simple-0.06.tar.gz"
+_name=Crypt-Simple
+source="https://cpan.metacpan.org/authors/id/K/KA/KASEI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

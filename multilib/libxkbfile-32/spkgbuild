@@ -4,7 +4,8 @@
 name=libxkbfile-32
 version=1.2.0
 release=1
-source="https://www.x.org/pub/individual/lib/libxkbfile-1.2.0.tar.xz"
+_name=${name%-32}
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.xz"
 
 build() {
 	cd libxkbfile-$version

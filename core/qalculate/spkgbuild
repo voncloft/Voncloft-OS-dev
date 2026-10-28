@@ -5,7 +5,8 @@ name=qalculate
 version=5.13.0
 release=1
 
-source="https://github.com/Qalculate/qalculate-gtk/releases/download/v$version/$name-gtk-$version.tar.gz"
+_name=qalculate-gtk
+source="https://github.com/Qalculate/${_name}/releases/download/v$version/$name-gtk-$version.tar.gz"
 options="!checksum"
 
 build() {

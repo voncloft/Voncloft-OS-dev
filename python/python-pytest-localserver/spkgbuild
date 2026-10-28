@@ -5,7 +5,8 @@ name=python-pytest-localserver
 version=0.7.1
 release=6
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-localserver/pytest-localserver-0.7.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

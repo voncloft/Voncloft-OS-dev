@@ -5,7 +5,8 @@ name=python-dae
 version=2014.2.1
 release=2
 
-source="https://github.com/linuxdeepin/dae/archive/refs/tags/2014.2.1.tar.gz"
+_name=${name#python-}
+source="https://github.com/linuxdeepin/${_name}/archive/refs/tags/${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,10 +5,10 @@ name=mpv
 version=0.41.0
 release=2
 options="!checksum"
-source="mpv-0.41.0.tar.gz::https://github.com/mpv-player/mpv/archive/refs/tags/v0.41.0.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/mpv-player/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "mpv-0.41.0"
+    cd "mpv-${version}"
     meson setup build --prefix=/usr --libdir=lib64 --buildtype=release \
         -Dlibmpv=true
     ninja -C build

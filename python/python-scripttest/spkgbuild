@@ -5,7 +5,8 @@ name=python-scripttest
 version=3.0
 release=6
 
-source="https://github.com/pypa/scripttest/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pypa/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

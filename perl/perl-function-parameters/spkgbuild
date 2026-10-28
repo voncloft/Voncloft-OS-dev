@@ -5,7 +5,8 @@ name=perl-function-parameters
 version=2.002002
 release=4
 
-source="https://cpan.metacpan.org/authors/id/M/MA/MAUKE/Function-Parameters-2.002002.tar.gz"
+_name=Function-Parameters
+source="https://cpan.metacpan.org/authors/id/M/MA/MAUKE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

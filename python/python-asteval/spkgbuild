@@ -5,7 +5,8 @@ name=python-asteval
 version=1.0.10
 release=1
 
-source="https://files.pythonhosted.org/packages/65/9a/e10e062c83de2219c5f9ef9d684dac39323c052de140e257afd0f60f8ca7/asteval-1.0.10.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

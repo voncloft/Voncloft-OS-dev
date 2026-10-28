@@ -4,7 +4,7 @@
 name=sxiv
 version=26
 release=1
-source="https://github.com/muennich/sxiv/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/muennich/${name}/archive/v$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

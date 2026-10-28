@@ -5,7 +5,8 @@ name=gcc-fortran
 version=16.2.0
 release=1
 options="!checksum"
-source="gcc-fortran-${version}.tar.gz::https://ftp.gnu.org/gnu/gcc/gcc-16.2.0/gcc-16.2.0.tar.gz"
+_name=gcc
+source="gcc-fortran-${version}.tar.gz::https://ftp.gnu.org/gnu/${_name}/${_name}-${version}/${_name}-${version}.tar.gz"
 
 build() {
     cd "$SRC"/gcc*/

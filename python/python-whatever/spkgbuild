@@ -5,7 +5,8 @@ name=python-whatever
 version=0.7
 release=3
 
-source="https://github.com/Suor/whatever/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/Suor/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

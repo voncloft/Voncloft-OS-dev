@@ -6,7 +6,8 @@ name=python-reportlab
 version=3.6.12
 release=1
 
-source="https://files.pythonhosted.org/packages/source/r/reportlab/reportlab-3.6.12.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

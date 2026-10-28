@@ -5,7 +5,8 @@ name=python-requests-credssp
 version=2.0.0
 release=2
 
-source="https://github.com/jborean93/requests-credssp/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/jborean93/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

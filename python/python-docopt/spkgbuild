@@ -5,7 +5,8 @@ name=python-docopt
 version=0.6.2
 release=9
 
-source="https://pypi.python.org/packages/source/d/docopt/docopt-0.6.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@ name=perl-file-sharedir-install
 version=0.14
 release=4
 
-source="https://cpan.org/modules/by-module/File/File-ShareDir-Install-0.14.tar.gz"
+_name=File-ShareDir-Install
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

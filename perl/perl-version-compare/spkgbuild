@@ -5,7 +5,8 @@ name=perl-version-compare
 version=0.14
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/T/TE/TEX/Version-Compare-0.14.tar.gz"
+_name=Version-Compare
+source="https://cpan.metacpan.org/authors/id/T/TE/TEX/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

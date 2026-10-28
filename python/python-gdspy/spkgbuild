@@ -5,11 +5,12 @@ name=python-gdspy
 version=1.6.13
 release=1
 
-source="https://files.pythonhosted.org/packages/7a/c5/01a4b160bc9ac9b0f8621dd6f90e964596e60a369ff2d076ebb4ce52c402/gdspy-1.6.13.zip"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.zip"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

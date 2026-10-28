@@ -5,7 +5,8 @@ name=perl-term-readline-gnu
 version=1.45
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/H/HA/HAYASHI/Term-ReadLine-Gnu-1.45.tar.gz"
+_name=Term-ReadLine-Gnu
+source="https://cpan.metacpan.org/authors/id/H/HA/HAYASHI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

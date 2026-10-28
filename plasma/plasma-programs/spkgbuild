@@ -2,7 +2,7 @@
 # description : Plasma desktop package group for SysVinit with KDE login and screen locker PAM configuration
 
 name=plasma-programs
-version=6.8.1
+version=6.8.2
 release=1
 options="!checksum"
 

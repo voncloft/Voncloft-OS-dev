@@ -5,7 +5,8 @@ name=perl-sub-identify
 version=0.14
 release=8
 
-source="https://search.mcpan.org/CPAN/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz"
+_name=Sub-Identify
+source="https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

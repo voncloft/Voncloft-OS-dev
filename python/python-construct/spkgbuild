@@ -5,7 +5,8 @@ name=python-construct
 version=2.10.70
 release=1
 
-source="https://github.com/construct/construct/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/construct/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

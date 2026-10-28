@@ -5,7 +5,8 @@ name=python-bottle
 version=0.13.4
 release=2
 
-source="https://github.com/defnull/bottle/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/defnull/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

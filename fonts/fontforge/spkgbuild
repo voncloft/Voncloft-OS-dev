@@ -4,7 +4,7 @@
 name=fontforge
 version=20251009
 release=1
-source="https://github.com/fontforge/fontforge/releases/download/20251009/fontforge-20251009.tar.xz"
+source="https://github.com/fontforge/${name}/releases/download/${version}/${name}-${version}.tar.xz"
 
 build() {
 	cd $name-$version

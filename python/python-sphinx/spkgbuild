@@ -5,7 +5,8 @@ name=python-sphinx
 version=7.0.1
 release=1
 
-source="https://pypi.org/packages/source/S/Sphinx/Sphinx-7.0.1.tar.gz"
+_name=Sphinx
+source="https://files.pythonhosted.org/packages/source/S/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

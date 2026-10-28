@@ -5,7 +5,8 @@ name=kst
 version=3.0.0
 release=2
 options="!checksum"
-source="kst-3.0.0.tar.gz::https://invent.kde.org/graphics/kst-plot/-/archive/3.0.0/kst-plot-3.0.0.tar.gz"
+_name=kst-plot
+source="${name}-${version}.tar.gz::https://invent.kde.org/graphics/${_name}/-/archive/${version}/${_name}-${version}.tar.gz"
 
 build() {
     cd "kst-plot-${version}"

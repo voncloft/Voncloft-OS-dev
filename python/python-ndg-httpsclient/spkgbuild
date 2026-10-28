@@ -5,7 +5,8 @@ name=python-ndg-httpsclient
 version=0.5.1
 release=7
 
-source="https://files.pythonhosted.org/packages/source/n/ndg-httpsclient/ndg_httpsclient-0.5.1.tar.gz"
+_name=ndg_httpsclient
+source="https://files.pythonhosted.org/packages/source/n/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

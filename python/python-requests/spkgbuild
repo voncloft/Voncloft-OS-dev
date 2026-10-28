@@ -4,7 +4,8 @@
 name=python-requests
 version=2.32.4
 release=2
-source="https://files.pythonhosted.org/packages/source/r/requests/requests-$version.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

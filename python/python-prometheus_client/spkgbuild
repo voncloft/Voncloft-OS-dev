@@ -5,7 +5,8 @@ name=python-prometheus_client
 version=0.26.0
 release=1
 
-source="https://github.com/prometheus/client_python/archive/refs/tags/v$version.tar.gz"
+_name=client_python
+source="https://github.com/prometheus/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

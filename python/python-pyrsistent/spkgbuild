@@ -5,7 +5,8 @@ name=python-pyrsistent
 version=0.21.0
 release=3
 
-source="https://github.com/tobgu/pyrsistent/archive/v0.19.3/python-pyrsistent-0.19.3.tar.gz"
+_name=${name#python-}
+source="https://github.com/tobgu/${_name}/archive/v${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

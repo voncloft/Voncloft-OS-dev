@@ -5,7 +5,8 @@ name=perl-font-ttf
 version=1.06
 release=4
 
-source="-1.06.tar.gz"
+_name=Font-TTF
+source="https://cpan.metacpan.org/authors/id/B/BH/BHALLISSY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

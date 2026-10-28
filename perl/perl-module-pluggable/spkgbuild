@@ -5,7 +5,8 @@ name=perl-module-pluggable
 version=5.2
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/S/SI/SIMONW/Module-Pluggable-5.2.tar.gz"
+_name=Module-Pluggable
+source="https://cpan.metacpan.org/authors/id/S/SI/SIMONW/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

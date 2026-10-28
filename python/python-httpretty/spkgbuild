@@ -5,7 +5,8 @@ name=python-httpretty
 version=1.1.4
 release=1
 
-source="https://github.com/gabrielfalcao/HTTPretty/archive/refs/tags/$version.tar.gz"
+_name=HTTPretty
+source="https://github.com/gabrielfalcao/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

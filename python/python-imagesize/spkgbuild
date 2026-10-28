@@ -5,7 +5,8 @@ name=python-imagesize
 version=1.4.1
 release=4
 
-source="https://files.pythonhosted.org/packages/source/i/imagesize/imagesize-1.4.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

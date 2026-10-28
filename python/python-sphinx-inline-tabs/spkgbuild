@@ -5,7 +5,8 @@ name=python-sphinx-inline-tabs
 version=2025.12.21.14
 release=3
 
-source="https://github.com/pradyunsg/sphinx-inline-tabs/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pradyunsg/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

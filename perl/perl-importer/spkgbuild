@@ -5,7 +5,8 @@ name=perl-importer
 version=0.026
 release=1
 
-source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Importer-0.026.tar.gz"
+_name=Importer
+source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,12 +4,13 @@
 name=volumeicon
 version=0.5.1
 release=1
-source="git+https://github.com/Maato/volumeicon.git#tag=0.5.1"
+source="${name}-${version}.tar.gz::https://github.com/Maato/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/volumeicon*/
 
-  	./configure --prefix=/usr --enable-notify
+	[ -x configure ] || autoreconf -fi
+	./configure --prefix=/usr --enable-notify
 	make
 	make DESTDIR=$PKG install
 }

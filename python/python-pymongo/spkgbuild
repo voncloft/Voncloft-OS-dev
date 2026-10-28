@@ -5,7 +5,8 @@ name=python-pymongo
 version=4.3.3
 release=1
 
-source="https://pypi.io/packages/source/p/pymongo/pymongo-4.3.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-yg.lockfile
 version=2.3
 release=1
 
-source="https://github.com/yougov/yg.lockfile/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/yougov/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

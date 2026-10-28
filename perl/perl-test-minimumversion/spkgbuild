@@ -5,7 +5,8 @@ name=perl-test-minimumversion
 version=0.101083
 release=3
 
-source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-MinimumVersion-0.101083.tar.gz"
+_name=Test-MinimumVersion
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

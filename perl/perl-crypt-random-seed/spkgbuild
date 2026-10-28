@@ -5,7 +5,8 @@ name=perl-crypt-random-seed
 version=0.03
 release=5
 
-source="https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Crypt-Random-Seed-0.03.tar.gz"
+_name=Crypt-Random-Seed
+source="https://cpan.metacpan.org/authors/id/D/DA/DANAJ/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

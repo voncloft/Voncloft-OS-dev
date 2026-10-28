@@ -4,7 +4,8 @@
 name=libxft
 version=2.3.9
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXft-$version.tar.xz"
+_name=libXft
+source="http://ftp.x.org/pub/individual/lib/${_name}-$version.tar.xz"
 
 build() {
 	cd libXft-$version

@@ -4,7 +4,7 @@
 name=btrfs-progs
 version=7.3
 release=1
-source="https://www.kernel.org/pub/linux/kernel/people/kdave/btrfs-progs/btrfs-progs-v$version.tar.xz"
+source="https://www.kernel.org/pub/linux/kernel/people/kdave/${name}/btrfs-progs-v$version.tar.xz"
 
 build() {
 	cd $name-v$version

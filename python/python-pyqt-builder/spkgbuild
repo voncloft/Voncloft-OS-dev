@@ -4,7 +4,8 @@
 name=python-pyqt-builder
 version=1.20.3
 release=1
-source="https://files.pythonhosted.org/packages/0a/19/d3dd62568bc69cd4b854f6a8607d3081aebe3b0c915230c3c11c9676930e/pyqt_builder-1.20.3.tar.gz"
+_name=pyqt_builder
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 
 build() {
     cd "$SRC"/pyqt_builder-*/

@@ -5,7 +5,8 @@ name=python-flask-paranoid
 version=0.3.0
 release=6
 
-source="https://github.com/miguelgrinberg/flask-paranoid/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/miguelgrinberg/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-jsonschema
 version=4.26.0
 release=4
 
-source="https://github.com/Julian/jsonschema/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/Julian/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

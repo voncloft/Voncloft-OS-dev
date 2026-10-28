@@ -5,7 +5,8 @@ name=perl-data-random
 version=0.13
 release=4
 
-source="https://cpan.metacpan.org/authors/id/B/BA/BAREFOOT/Data-Random-0.13.tar.gz"
+_name=Data-Random
+source="https://cpan.metacpan.org/authors/id/B/BA/BAREFOOT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

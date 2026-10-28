@@ -5,7 +5,8 @@ name=perl-json-any
 version=1.42
 release=5
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-Any-1.42.tar.gz"
+_name=JSON-Any
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

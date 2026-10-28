@@ -5,7 +5,8 @@ name=python-quart-cors
 version=0.5.0
 release=2
 
-source="git+https://gitlab.com/pgjones/quart-cors.git#tag="
+_name=Quart-CORS
+source="https://files.pythonhosted.org/packages/source/Q/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

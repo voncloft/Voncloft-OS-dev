@@ -3,7 +3,7 @@
 name=libpciaccess
 version=0.19
 release=1
-source="http://ftp.x.org/pub/individual/lib/libpciaccess-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/lib/${name}-$version.tar.xz"
 
 build() {
 	cd libpciaccess-$version

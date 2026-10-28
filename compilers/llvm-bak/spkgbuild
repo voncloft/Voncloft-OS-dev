@@ -1,14 +1,16 @@
 # description	: Collection of modular and reusable compiler and toolchain technologies
 # depends	: cmake libffi python ninja libxml2
 
-name=llvm
+name=llvm-bak
+_upstream_name=llvm
 version=23.1.4
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
+_name=llvm-project
+source="https://github.com/llvm/${_name}/releases/download/llvmorg-$version/${_upstream_name}-$version.src.tar.xz
 	llvm-config.h"
 options="!checksum"
 build() {
-	cd $name-$version.src
+	cd ${_upstream_name}-$version.src
 
 	export CC=gcc
 	export CXX=g++	

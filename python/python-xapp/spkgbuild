@@ -5,7 +5,8 @@ name=python-xapp
 version=3.0.3
 release=2
 
-source=https://github.com/linuxmint/python3-xapp/archive/refs/tags/$version.tar.gz
+_name=python3-xapp
+source="https://github.com/linuxmint/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

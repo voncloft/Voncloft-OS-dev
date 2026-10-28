@@ -5,7 +5,8 @@ name=python-text-unidecode
 version=1.3
 release=6
 
-source="https://pypi.io/packages/source/t/text-unidecode/text-unidecode-1.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,10 +5,10 @@ name=kookbook
 version=0.3.0
 release=2
 options="!checksum"
-source="kookbook-0.3.0.tar.xz::https://download.kde.org/stable/kookbook/kookbook-0.3.0.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "kookbook-0.3.0"
+    cd "kookbook-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

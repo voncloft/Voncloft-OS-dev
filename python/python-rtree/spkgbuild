@@ -5,7 +5,8 @@ name=python-rtree
 version=1.4.1
 release=2
 
-source="https://github.com/Toblerity/rtree/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/Toblerity/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

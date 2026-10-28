@@ -5,7 +5,8 @@ name=python-cryptography
 version=40.0.2
 release=1
 
-source="git+https://github.com/pyca/cryptography.git#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,7 @@ name=python-nbxmpp
 version=4.2.2
 release=3
 
-source="https://dev.gajim.org/gajim/python-nbxmpp/-/archive/4.2.2/python-nbxmpp-4.2.2.tar.gz"
+source="https://dev.gajim.org/gajim/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

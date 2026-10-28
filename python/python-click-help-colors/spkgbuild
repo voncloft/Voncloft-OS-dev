@@ -5,7 +5,8 @@ name=python-click-help-colors
 version=0.9.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/c/click-help-colors/click-help-colors-0.9.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pkgconfig
 version=1.5.5
 release=6
 
-source="https://pypi.io/packages/source/p/pkgconfig/pkgconfig-1.5.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=libraw
 version=0.22.3    
 release=1
-source="https://github.com/LibRaw/LibRaw/archive/refs/tags/0.22.3.tar.gz"
+_name=LibRaw
+source="https://github.com/LibRaw/${_name}/archive/refs/tags/${version}.tar.gz"
 
 options="!checksum"
 

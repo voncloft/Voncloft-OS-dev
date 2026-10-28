@@ -5,7 +5,8 @@ name=python-mamba
 version=0.11.3
 release=1
 
-source="https://github.com/nestorsalceda/mamba/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/nestorsalceda/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

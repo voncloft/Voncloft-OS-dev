@@ -6,7 +6,8 @@ version=76
 release=2
 options="!checksum"
 
-source="$name-$version.tar.gz::https://github.com/Zren/plasma-applet-eventcalendar/archive/v$version.tar.gz"
+_name=plasma-applet-eventcalendar
+source="$name-$version.tar.gz::https://github.com/Zren/${_name}/archive/v$version.tar.gz"
 
 build() {
 	cd plasma-applet-eventcalendar-$version/package

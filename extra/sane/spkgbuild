@@ -5,7 +5,8 @@ name=sane
 version=1.4.0
 release=2
 
-source="https://anduin.linuxfromscratch.org/BLFS/sane/sane-backends-$version.tar.gz
+_name=sane-backends
+source="https://anduin.linuxfromscratch.org/BLFS/sane/${_name}-$version.tar.gz
 	net.conf"
 options="!checksum"
 

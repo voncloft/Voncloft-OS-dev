@@ -5,7 +5,8 @@ name=python-apispec
 version=6.10.0
 release=3
 
-source="https://github.com/marshmallow-code/apispec/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/marshmallow-code/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

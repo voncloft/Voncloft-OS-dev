@@ -5,7 +5,8 @@ name=python-geocoder
 version=1.38.1
 release=3
 
-source="https://pypi.io/packages/source/g/geocoder/geocoder-1.38.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

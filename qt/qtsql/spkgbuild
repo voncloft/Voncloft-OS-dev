@@ -5,7 +5,8 @@ name=qtsql
 version=5.15.19
 release=1
 
-source="https://download.qt.io/archive/qt/${version%.*}/$version/single/qt-everywhere-src-$version.tar.xz"
+_name=qt-everywhere-src
+source="https://download.qt.io/archive/qt/${version%.*}/$version/single/${_name}-$version.tar.xz"
 options="!checksum"
 
 build() {

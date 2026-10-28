@@ -4,7 +4,8 @@
 name=ssh-askpass
 version=10.6p1
 release=1
-source="https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-10.6p1.tar.gz"
+_name=openssh
+source="https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/${_name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/openssh*/

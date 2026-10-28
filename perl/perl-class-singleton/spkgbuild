@@ -5,7 +5,8 @@ name=perl-class-singleton
 version=1.6
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/S/SH/SHAY/Class-Singleton-1.5.tar.gz"
+_name=Class-Singleton
+source="https://cpan.metacpan.org/authors/id/S/SH/SHAY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

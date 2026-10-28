@@ -87,7 +87,7 @@ f:87f784e49c254ab70b213b50cf1fedd0:mate-system-monitor/CHANGELOG
 f:e5d724d474c07f35402bf781ed426690:mate-system-monitor/spkgbuild
 f:39bcdc6370b3658914956f558842b2ed:mate-utils/spkgbuild
 f:a042c0166c7ba3b4119c17f4f922e3c0:mate-polkit/spkgbuild
-f:b6ba0181f7deacc37c9961d58d256897:caja-actions/spkgbuild
+f:9eb9232aad0f6698472d8f707d4539d8:caja-actions/spkgbuild
 f:c495020803ad589a781e5a281ef22ed6:mate-common/spkgbuild
 f:00868d635ae1bf7fd5dd089535b825e8:.httpup-repo.current
 f:cd2b1676c9a5d39ef9bae5c051f54cfb:pluma/CHANGELOG

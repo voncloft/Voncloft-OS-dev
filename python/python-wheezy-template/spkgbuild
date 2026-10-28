@@ -5,7 +5,8 @@ name=python-wheezy-template
 version=3.2.5
 release=1
 
-source=https://github.com/akornatskyy/wheezy.template/archive/refs/tags/$version.tar.gz
+_name=wheezy.template
+source="https://github.com/akornatskyy/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

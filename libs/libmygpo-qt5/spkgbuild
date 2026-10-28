@@ -1,11 +1,13 @@
 # description : A C++/Qt client library for gpodder.net
 # depends : qt6
 
-name=libmygpo-qt6
+name=libmygpo-qt5
+_upstream_name=libmygpo-qt6
 version=1.2.0
 release=3
 
-source="https://github.com/gpodder/libmygpo-qt/archive/refs/tags/1.2.0.tar.gz"
+_name=libmygpo-qt
+source="https://github.com/gpodder/${_name}/archive/refs/tags/${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -1,22 +1,17 @@
 # description : OpenJDK Java runtime and development tools for Java applications and servers
-# depends : alsa-lib cups giflib lcms2 xorg-libraries
+# depends : alsa-lib cups giflib lcms2 xorg-libraries python
 
 name=java-headless
 version=27.0.1.0.2
 release=10
 
-_archive=https://download.java.net/java/GA/jdk27.0.1.0.2/924dbdccfc234bb9b9355d7c6b66034b/1/GPL/openjdk-27.0.1.0.2_linux-x64_bin.tar.gz
-_sha256=e69ee3937022c1caa8eaa32a586955ba13c109ad6986a6a1a7f1d5e6fa8998e3
-source="$_archive"
-noextract="${_archive##*/}"
+source="${name}-${version}-archive.html::https://jdk.java.net/archive/
+    fetch-source.py"
 options="!checksum !strip"
 
 build() {
-    local archive="$SRC/${_archive##*/}" unpack="$SRC/java-unpack" java_root
-    # Official OpenJDK updates supply a SHA-256; the legacy recipe has none stored.
-    if [ -n "$_sha256" ]; then
-        printf '%s  %s\n' "$_sha256" "$archive" | sha256sum -c - || return 1
-    fi
+    local archive="$SRC/${name}-${version}.tar.gz" unpack="$SRC/java-unpack" java_root
+    python3 "$SRC/fetch-source.py" java "$version" "$SRC/${name}-${version}-archive.html" "$archive" || return 1
     install -dm755 "$unpack"
     tar -xf "$archive" -o -C "$unpack" || return 1
     local -a launchers=("$unpack"/*/bin/java)

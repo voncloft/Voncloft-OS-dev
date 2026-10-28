@@ -5,7 +5,8 @@ name=python-identify
 version=2.6.20
 release=1
 
-source="https://github.com/chriskuehl/identify/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/chriskuehl/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

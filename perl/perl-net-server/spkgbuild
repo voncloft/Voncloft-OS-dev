@@ -5,7 +5,8 @@ name=perl-net-server
 version=2.014
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/R/RH/RHANDOM/Net-Server-2.014.tar.gz"
+_name=Net-Server
+source="https://cpan.metacpan.org/authors/id/R/RH/RHANDOM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

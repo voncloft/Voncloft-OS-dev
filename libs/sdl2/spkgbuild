@@ -3,7 +3,8 @@
 name=sdl2
 version=2.32.10
 release=1
-source="https://www.libsdl.org/release/SDL2-$version.tar.gz"
+_name=SDL2
+source="https://www.libsdl.org/release/${_name}-$version.tar.gz"
 
 build() {
 	cd *

@@ -3,7 +3,8 @@
 name=iasl
 version=20260930
 release=1
-source="https://github.com/open-acpica/acpica/archive/refs/tags/20260930.tar.gz"
+_name=acpica
+source="https://github.com/open-acpica/${_name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
 	cd "$SRC"/acpica*/

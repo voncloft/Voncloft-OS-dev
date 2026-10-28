@@ -5,7 +5,8 @@ name=perl-devel-symdump
 version=2.18
 release=4
 
-source="https://www.cpan.org/authors/id/A/AN/ANDK/Devel-Symdump-2.18.tar.gz"
+_name=Devel-Symdump
+source="https://cpan.metacpan.org/authors/id/A/AN/ANDK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

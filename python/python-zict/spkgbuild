@@ -5,7 +5,8 @@ name=python-zict
 version=2.2.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/z/zict/zict-2.2.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/z/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

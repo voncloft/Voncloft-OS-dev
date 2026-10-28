@@ -5,7 +5,8 @@ name=python-smartypants
 version=2.0.2
 release=8
 
-source="smartypants.py-$version.tar.gz::https://github.com/leohemsted/smartypants.py/archive/refs/tags/v$version.tar.gz"
+_name=smartypants.py
+source="${name}-${version}.tar.gz::https://github.com/leohemsted/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

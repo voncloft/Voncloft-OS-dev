@@ -5,7 +5,8 @@ name=python-pyaes
 version=1.6.1
 release=7
 
-source="https://pypi.org/packages/source/p/pyaes/pyaes-1.6.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

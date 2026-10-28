@@ -4,7 +4,7 @@
 name=wireplumber
 version=0.5.18
 release=1
-source="https://github.com/PipeWire/wireplumber/archive/$version/$name-$version.tar.gz"
+source="https://github.com/PipeWire/${name}/archive/$version/$name-$version.tar.gz"
 options="!checksum"
 
 build() {

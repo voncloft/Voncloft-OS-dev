@@ -5,7 +5,8 @@ name=python-ruamel-yaml
 version=0.17.21
 release=3
 
-source="https://files.pythonhosted.org/packages/source/r/ruamel.yaml/ruamel.yaml-0.17.21.tar.gz"
+_name=ruamel.yaml
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

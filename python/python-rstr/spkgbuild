@@ -5,7 +5,8 @@ name=python-rstr
 version=3.2.1
 release=10
 
-source="https://files.pythonhosted.org/packages/source/r/rstr/rstr-3.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

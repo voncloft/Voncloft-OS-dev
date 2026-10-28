@@ -5,7 +5,8 @@ name=python-salsa20
 version=0.3.0
 release=8
 
-source="https://pypi.python.org/packages/source/s/salsa20/salsa20-0.3.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

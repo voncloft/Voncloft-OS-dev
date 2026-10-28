@@ -5,7 +5,8 @@ name=python-distro
 version=1.9.0
 release=1
 
-source="https://github.com/python-distro/distro/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/python-distro/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

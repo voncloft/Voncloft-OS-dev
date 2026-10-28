@@ -5,7 +5,8 @@ name=perl-eval-closure
 version=0.14
 release=6
 
-source="https://cpan.metacpan.org/authors/id//Eval-Closure-0.14.tar.gz"
+_name=Eval-Closure
+source="https://cpan.metacpan.org/authors/id/D/DO/DOY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=blosc
 version=1.21.6
 release=1
 
-source="https://github.com/Blosc/c-blosc/archive/v${version}.tar.gz"
+_name=c-blosc
+source="https://github.com/Blosc/${_name}/archive/v${version}.tar.gz"
 options="!checksum"
 
 build() {

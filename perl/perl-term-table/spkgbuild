@@ -5,7 +5,8 @@ name=perl-term-table
 version=0.016
 release=2
 
-source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Term-Table-0.016.tar.gz"
+_name=Term-Table
+source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

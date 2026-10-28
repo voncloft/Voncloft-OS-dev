@@ -6,7 +6,8 @@ version=1.11.0
 release=7
 lua=5.4
 
-source="https://github.com/oetiker/rrdtool-1.x/archive/refs/tags/v1.11.0.tar.gz"
+_name=rrdtool-1.x
+source="https://github.com/oetiker/${_name}/archive/refs/tags/v${version}.tar.gz"
 options="!checksum"
 
 build() {

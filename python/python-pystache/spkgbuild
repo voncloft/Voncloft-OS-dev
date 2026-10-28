@@ -5,7 +5,8 @@ name=python-pystache
 version=0.5.4
 release=9
 
-source="https://github.com/defunkt/pystache/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/defunkt/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

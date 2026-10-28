@@ -2,10 +2,11 @@
 # depends : python python-sphinx python-typing_extensions
 
 name=python-sphinx-autodoc-typehints
-version=3.17.3
+version=3.17.4
 release=2
 
-source="https://files.pythonhosted.org/packages/5b/8c/2ab7bd22aa2988c9e4f4791688d6de24a00395afbd5d7dffa16b35db81fb/sphinx_autodoc_typehints-3.17.3.tar.gz"
+_name=sphinx_autodoc_typehints
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

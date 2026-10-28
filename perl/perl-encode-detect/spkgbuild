@@ -5,7 +5,8 @@ name=perl-encode-detect
 version=1.01
 release=7
 
-source="https://www.cpan.org/authors/id/J/JG/JGMYERS/Encode-Detect-1.01.tar.gz"
+_name=Encode-Detect
+source="https://cpan.metacpan.org/authors/id/J/JG/JGMYERS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

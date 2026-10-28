@@ -5,7 +5,8 @@ name=python-pybox2d
 version=2.3.10
 release=6
 
-source="https://github.com/pybox2d/pybox2d/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pybox2d/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pyfix
 version=0.2.3
 release=6
 
-source="https://github.com/pyclectic/pyfix/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pyclectic/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -8,7 +8,8 @@ name=kicad
 version=10.0.7
 release=5
 
-source="https://github.com/KiCad/kicad-source-mirror/archive/refs/tags/$version.tar.gz"
+_name=kicad-source-mirror
+source="https://github.com/KiCad/${_name}/archive/refs/tags/$version.tar.gz"
 
 build()
 {

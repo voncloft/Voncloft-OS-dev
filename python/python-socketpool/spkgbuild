@@ -5,7 +5,8 @@ name=python-socketpool
 version=0.5.3
 release=7
 
-source="git+https://github.com/benoitc/socketpool.git#tag=0.5.3"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

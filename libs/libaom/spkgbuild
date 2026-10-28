@@ -5,7 +5,7 @@ name=libaom
 version=3.15.2
 release=1
 
-source="https://storage.googleapis.com/aom-releases/libaom-$version.tar.gz"
+source="https://storage.googleapis.com/aom-releases/${name}-$version.tar.gz"
 options="!checksum"
 
 build()

@@ -5,7 +5,8 @@ name=python-smmap
 version=5.0.0
 release=1
 
-source="https://pypi.org/packages/source/s/smmap/smmap-5.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

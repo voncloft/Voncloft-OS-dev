@@ -5,7 +5,8 @@ name=python-ovirt-engine-sdk
 version=4.4.15
 release=1
 
-source="https://resources.ovirt.org/pub/ovirt-4.4/src/python-ovirt-engine-sdk4/ovirt-engine-sdk-python-4.4.15.tar.gz"
+_name=ovirt-engine-sdk-python
+source="https://resources.ovirt.org/pub/ovirt-${version%.*}/src/python-ovirt-engine-sdk4/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

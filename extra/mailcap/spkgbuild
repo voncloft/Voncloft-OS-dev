@@ -2,11 +2,11 @@
 # depends : git python
 
 name=mailcap
-version=2.1.53
+version=2.1.54
 release=1
-_version=$(echo $version | sed "s/\./-/g" )
+_version=${version//./-}
 
-source="https://pagure.io/mailcap/archive/r$_version/mailcap-r$_version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/InfrastructureServices/${name}/archive/refs/tags/r${_version}.tar.gz"
 
 build() {
 	cd mailcap-r$_version

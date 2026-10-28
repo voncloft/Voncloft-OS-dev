@@ -5,7 +5,8 @@ name=python-pylev
 version=1.4.0
 release=6
 
-source="https://github.com/toastdriven/pylev/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/toastdriven/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

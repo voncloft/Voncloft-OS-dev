@@ -5,7 +5,8 @@ name=python-xvfbwrapper
 version=0.2.9
 release=6
 
-source="https://files.pythonhosted.org/packages/source/x/xvfbwrapper/xvfbwrapper-0.2.9.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/x/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

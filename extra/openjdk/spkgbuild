@@ -4,11 +4,12 @@
 name=openjdk
 version=24.0.1
 release=1
-source=" https://github.com/openjdk/jdk24u/archive/jdk-24.0.1-ga.tar.gz"
+_name=jdk24u
+source=" https://github.com/openjdk/${_name}/archive/jdk-${version}-ga.tar.gz"
 options="!checksum"
 
 build() {
-        cd $name-$version
+        cd "$SRC"/jdk24u-jdk*/
         tar -xf ../jtreg-7.5.1+1.tar.gz
 export MAKEFLAGS_HOLD=$MAKEFLAGS           
 unset  JAVA_HOME                           

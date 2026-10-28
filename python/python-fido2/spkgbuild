@@ -5,7 +5,8 @@ name=python-fido2
 version=2.2.1
 release=3
 
-source="https://files.pythonhosted.org/packages/ba/ea/6f08c354b7aeb8019249d46a86c2153f8218499cced4d21bf16b6d49fc16/fido2-2.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

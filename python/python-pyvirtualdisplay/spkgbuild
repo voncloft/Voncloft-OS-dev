@@ -5,7 +5,8 @@ name=python-pyvirtualdisplay
 version=3.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/P/PyVirtualDisplay/PyVirtualDisplay-3.0.tar.gz"
+_name=PyVirtualDisplay
+source="https://files.pythonhosted.org/packages/source/P/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

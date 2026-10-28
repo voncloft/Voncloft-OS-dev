@@ -5,7 +5,8 @@ name=python-mypy_extensions
 version=1.0.0
 release=3
 
-source="python-mypy_extensions-1.0.0.tar.gz::https://pypi.org/packages/source/m/mypy_extensions/mypy_extensions-1.0.0.tar.gz"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

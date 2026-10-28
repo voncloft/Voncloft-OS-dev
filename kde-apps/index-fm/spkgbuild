@@ -5,7 +5,7 @@ name=index-fm
 version=4.0.2
 release=2
 options="!checksum"
-source="index-fm-4.0.2.tar.gz::https://invent.kde.org/maui/index-fm/-/archive/v4.0.2/index-fm-v4.0.2.tar.gz"
+source="${name}-${version}.tar.gz::https://invent.kde.org/maui/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     cd "index-fm-v${version}"

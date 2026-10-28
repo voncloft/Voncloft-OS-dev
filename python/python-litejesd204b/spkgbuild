@@ -5,7 +5,8 @@ name=python-litejesd204b
 version=2026.08
 release=1
 
-source="https://github.com/enjoy-digital/litejesd204b/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/enjoy-digital/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

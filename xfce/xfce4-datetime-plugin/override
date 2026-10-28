@@ -1,3 +1,4 @@
+# Only report uversion; update-repo owns the version= edit.
 # Detect the upstream version from package-specific release metadata.
 source=https://gitlab.xfce.org/panel-plugins/xfce4-datetime-plugin.git
 # update-repo sources this again immediately before fetching index.html.
@@ -6,24 +7,17 @@ update_repo_fetch_kind=git-tags
 
 get_generic()
 {
-    local detected next_version recipe comparison edit
-    local -a detected_lines source_edits sed_args
+    local detected recipe
+    local -a fields
     unset uversion
     recipe="${ppath%/*}/spkgbuild"
-    detected=$(python3 - '{"mode":"git_tags","url":"https://gitlab.xfce.org/panel-plugins/xfce4-datetime-plugin.git","pattern":"xfce4-datetime-plugin-([0-9]+(?:\\.[0-9]+)*)","archive":"https://gitlab.xfce.org/panel-plugins/xfce4-datetime-plugin/-/archive/@TAG@/xfce4-datetime-plugin-@TAG@.tar.gz","extra_edits":[["\tcd $name-$version","\tcd \"$SRC\"/xfce4-datetime-plugin-xfce4-datetime-plugin*/"]]}' "$recipe" "$version" <<'PYUPSTREAM'
+    detected=$(python3 - '{"mode":"git_tags","url":"https://gitlab.xfce.org/panel-plugins/xfce4-datetime-plugin.git","pattern":"xfce4-datetime-plugin-([0-9]+(?:\\.[0-9]+)*)","archive":"https://gitlab.xfce.org/panel-plugins/xfce4-datetime-plugin/-/archive/@TAG@/xfce4-datetime-plugin-@TAG@.tar.gz"}' "$recipe" "$version" <<'PYUPSTREAM'
 import datetime,gzip,json,pathlib,re,subprocess,sys,urllib.parse,xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
 cfg=json.loads(sys.argv[1]); recipe=pathlib.Path(sys.argv[2]); current=sys.argv[3]
 def get(url):
-    # Tests can provide the same downloaded upstream data without changing recipes.
-    cache=pathlib.Path(__file__).parent/'cache' if '__file__' in globals() else None
-    if cfg.get('_cache'):
-        import hashlib
-        p=pathlib.Path(cfg['_cache'])/(hashlib.sha256(url.encode()).hexdigest()+'.data')
-        if p.exists():return p.read_text(errors='replace')
     result=subprocess.run(['curl','-fLsS','--max-time','20',url],capture_output=True,text=True,check=True).stdout
-    if cfg.get('_cache'):p.write_text(result)
     return result
 def ordered(values):
     if not values:return []
@@ -173,53 +167,13 @@ try:
     latest,archive,sha=next(r for r in choices if r[0]==latest)
     if cfg.get('_emit_metadata'):
         print(json.dumps(dict(version=latest,archive=archive,sha=sha)));sys.exit(0)
-    raw=recipe.read_text();edits=[]
-    def sed(old,new):
-        pat=re.sub(r'([\\.^$\[\]*|])',r'\\\1',old)
-        rep=new.replace('\\','\\\\').replace('&',r'\&').replace('|',r'\|')
-        return 's|'+pat+'|'+rep+'|'
-    if archive and not cfg.get('version_only'):
-        if not re.fullmatch(r'(?:https?://|git\+https://)[A-Za-z0-9_./:%+?=&~#@-]+',archive):raise ValueError('invalid archive URL')
-        source=re.search(r'^source=(?:"([^\"]*)"|\x27([^\x27]*)\x27|([^\n]*))',raw,re.M)
-        if not source:raise ValueError('missing scalar source')
-        entries=next(g for g in source.groups() if g is not None).split()
-        if not entries:raise ValueError('empty source list')
-        first=entries[0];alias=first.split('::',1)[0]+'::' if '::' in first else ''
-        if 'git+' in first and not archive.startswith('git+'):alias=''
-        if alias:
-            alias=alias.replace(current,'${version}')
-            ext=re.search(r'(\.tar\.(?:gz|bz2|xz)|\.tgz|\.zip)$',archive)
-            if ext:alias=re.sub(r'(\.tar\.(?:gz|bz2|xz)|\.tgz|\.zip)(?=::$)',ext[0],alias)
-        edits.append(sed(first,alias+archive))
     if sha:
-        match=re.search(r'^_commit=[\x27"]?([a-f0-9]{7,40})[\x27"]?\s*$',raw,re.M)
-        if match:edits.append(sed(match[0],'_commit='+sha))
-    for old,new in cfg.get('extra_edits',[]):edits.append(sed(old,expand(new,latest,sha=sha)))
+        latest=re.sub(r'\.g[a-f0-9]{7,40}$','',latest)+'.g'+sha
     print(latest)
-    for edit in edits:print(edit)
 except (OSError,ValueError,KeyError,IndexError,TypeError,AttributeError,StopIteration,ET.ParseError,subprocess.CalledProcessError) as error:
     print('ERROR: Upstream version lookup failed: '+str(error),file=sys.stderr);sys.exit(1)
 PYUPSTREAM
     ) || return 1
-    mapfile -t detected_lines <<< "$detected"
-    next_version=${detected_lines[0]:-}
-    [ -n "$next_version" ] || return 1
-    source_edits=("${detected_lines[@]:1}")
-    vercomp "$next_version" "$version" >/dev/null
-    comparison=$?
-    if [ "$comparison" = 2 ] && [ -z "${update_repo_review_reason:-}" ]; then
-        sed_args=()
-        for edit in "${source_edits[@]}"; do
-            [ -z "$edit" ] || sed_args+=(-e "$edit")
-        done
-        if [ "${#sed_args[@]}" -gt 0 ]; then
-            if [ -n "${test_upgrade:-}" ]; then
-                { printf 'sed -i'; printf ' %q' "${sed_args[@]}" "$recipe"; printf '\n'; } >> test_updates.sh || return 1
-            else
-                sed -i "${sed_args[@]}" "$recipe" || return 1
-            fi
-        fi
-    fi
-    uversion=$next_version
-    [ -z "${update_repo_review_reason:-}" ] || printf '%s\n' "$update_repo_review_reason"
+    uversion=$detected
+    [ -n "$uversion" ]
 }

@@ -4,7 +4,7 @@
 name=liberation-fonts
 version=2.1.5
 release=3
-source="https://github.com/liberationfonts/liberation-fonts/files/7261482/liberation-fonts-ttf-2.1.5.tar.gz \
+source="https://github.com/liberationfonts/${name}/files/7261482/liberation-fonts-ttf-${version}.tar.gz \
 	30-0-liberation-mono.conf \
         30-0-liberation-sans.conf \
         30-0-liberation-serif.conf"

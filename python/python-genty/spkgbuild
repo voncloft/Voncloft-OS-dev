@@ -5,7 +5,8 @@ name=python-genty
 version=1.3.2
 release=7
 
-source="git+https://github.com/box/genty.git#tag=v1.3.2"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

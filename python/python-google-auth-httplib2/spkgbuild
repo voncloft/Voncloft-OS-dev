@@ -5,7 +5,8 @@ name=python-google-auth-httplib2
 version=0.1.0
 release=3
 
-source="https://pypi.io/packages/source/g/google-auth-httplib2/google-auth-httplib2-0.1.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

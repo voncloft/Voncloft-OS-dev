@@ -5,7 +5,8 @@ name=python-locket
 version=1.0.0
 release=1
 
-source="https://github.com/mwilliamson/locket.py/archive/refs/tags/$version.tar.gz"
+_name=locket.py
+source="https://github.com/mwilliamson/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

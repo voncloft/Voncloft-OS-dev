@@ -5,7 +5,8 @@ name=python-send2trash
 version=2.1.0
 release=6
 
-source="https://github.com/hsoft/send2trash/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/hsoft/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

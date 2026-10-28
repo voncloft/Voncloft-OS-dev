@@ -5,7 +5,8 @@ name=perl-net-imap-simple
 version=1.2212
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/J/JE/JETTERO/Net-IMAP-Simple-1.2207.tar.gz"
+_name=Net-IMAP-Simple
+source="https://cpan.metacpan.org/authors/id/J/JE/JETTERO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

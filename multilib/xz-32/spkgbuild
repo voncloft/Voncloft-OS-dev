@@ -4,7 +4,8 @@
 name=xz-32
 version=5.8.4
 release=1
-source="https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz"
+_name=${name%-32}
+source="https://github.com/tukaani-project/${_name}/releases/download/v${version}/${_name}-${version}.tar.gz"
 
 build() {
 	cd xz-$version

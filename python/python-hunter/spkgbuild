@@ -5,7 +5,7 @@ name=python-hunter
 version=3.9.0
 release=2
 
-source="https://github.com/ionelmc/python-hunter/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/ionelmc/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

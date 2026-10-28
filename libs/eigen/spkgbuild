@@ -6,7 +6,7 @@ name=eigen
 version=5.0.1
 release=1
 
-source="$name-$version.tar.gz::https://gitlab.com/libeigen/eigen/-/archive/$version/eigen-$version.tar.gz"
+source="$name-$version.tar.gz::https://gitlab.com/libeigen/${name}/-/archive/$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

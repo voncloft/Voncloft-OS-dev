@@ -47,3 +47,13 @@ release=2
 
 Synopsis:
 Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 01:38:47 AM EDT 2026
+
+Version=1.1.git20210128235710.g5a9a30b3d5fae5337ff449030873a58b35e875a4
+Release=2
+
+Synopsis:
+Upgraded from version 1.1.g5a9a30b3d5fae5337ff449030873a58b35e875a4 to version 1.1.git20210128235710.g5a9a30b3d5fae5337ff449030873a58b35e875a4

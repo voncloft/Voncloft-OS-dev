@@ -5,7 +5,7 @@ name=ibus
 version=1.5.34
 release=1
 
-source="https://github.com/ibus/ibus/releases/download/$version/ibus-$version.tar.gz"
+source="https://github.com/ibus/${name}/releases/download/$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

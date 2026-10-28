@@ -5,7 +5,8 @@ name=perl-crypt-ssleay
 version=0.73_06
 release=14
 
-source="https://www.cpan.org/CPAN/authors/id/N/NA/NANIS/Crypt-SSLeay-0.73_06.tar.gz"
+_name=Crypt-SSLeay
+source="https://cpan.metacpan.org/authors/id/N/NA/NANIS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

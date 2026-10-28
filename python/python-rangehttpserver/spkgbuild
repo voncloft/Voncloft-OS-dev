@@ -5,7 +5,8 @@ name=python-rangehttpserver
 version=1.4.0
 release=6
 
-source="https://github.com/danvk/RangeHTTPServer/archive/refs/tags/$version.tar.gz"
+_name=RangeHTTPServer
+source="https://github.com/danvk/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

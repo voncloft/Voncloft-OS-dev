@@ -6,7 +6,7 @@ version=3.3.31.2
 _ver=${version%.*}
 _sion=${version##*.}
 release=1
-source="https://github.com/smxi/inxi/archive/refs/tags/3.3.31-2.tar.gz"
+source="https://github.com/smxi/${name}/archive/refs/tags/${version%.*}-${version##*.}.tar.gz"
 
 build() {
 	cd "$SRC"/inxi*/

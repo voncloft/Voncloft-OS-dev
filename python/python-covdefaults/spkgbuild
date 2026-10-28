@@ -5,7 +5,8 @@ name=python-covdefaults
 version=2.3.0
 release=2
 
-source="https://github.com/asottile/covdefaults/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/asottile/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

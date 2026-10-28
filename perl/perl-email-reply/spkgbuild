@@ -5,7 +5,8 @@ name=perl-email-reply
 version=1.204
 release=4
 
-source="https://www.cpan.org/authors/id/R/RJ/RJBS/Email-Reply-1.204.tar.gz"
+_name=Email-Reply
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

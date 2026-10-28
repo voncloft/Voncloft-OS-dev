@@ -5,7 +5,8 @@ name=python-cookiecutter
 version=2.1.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/c/cookiecutter/cookiecutter-2.1.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

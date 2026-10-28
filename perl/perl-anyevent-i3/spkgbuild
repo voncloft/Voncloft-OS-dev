@@ -5,7 +5,8 @@ name=perl-anyevent-i3
 version=0.17
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/M/MS/MSTPLBG/AnyEvent-I3-0.17.tar.gz"
+_name=AnyEvent-I3
+source="https://cpan.metacpan.org/authors/id/M/MS/MSTPLBG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

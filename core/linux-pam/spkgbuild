@@ -6,7 +6,7 @@ name=linux-pam
 version=1.7.3
 release=2
 
-source="https://github.com/linux-pam/linux-pam/releases/download/v$version/Linux-PAM-$version.tar.xz"
+source="https://github.com/linux-pam/${name}/releases/download/v$version/Linux-PAM-$version.tar.xz"
 
 options="!checksum"
 

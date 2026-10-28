@@ -3,7 +3,7 @@
 name=iana-etc
 version=20261022
 release=2
-source="https://github.com/Mic92/iana-etc/releases/download/20261022/iana-etc-20261022.tar.gz"
+source="https://github.com/Mic92/${name}/releases/download/${version}/${name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/iana-etc*/

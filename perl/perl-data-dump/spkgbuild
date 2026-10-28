@@ -5,7 +5,8 @@ name=perl-data-dump
 version=1.25
 release=6
 
-source="https://cpan.metacpan.org/authors/id/G/GA/GARU/Data-Dump-1.25.tar.gz"
+_name=Data-Dump
+source="https://cpan.metacpan.org/authors/id/G/GA/GARU/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

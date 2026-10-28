@@ -5,7 +5,8 @@ name=perl-net-idn-encode
 version=2.500
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz"
+_name=Net-IDN-Encode
+source="https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-django-allauth
 version=65.21.0
 release=1
 
-source="https://github.com/pennersr/django-allauth/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pennersr/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

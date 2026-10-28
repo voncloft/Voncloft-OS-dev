@@ -5,7 +5,8 @@ name=perl-gtk3-imageview
 version=10
 release=1
 
-source="https://cpan.metacpan.org/authors/id/A/AS/ASOKOLOV/--10.tar.gz"
+_name=Gtk3-ImageView
+source="https://cpan.metacpan.org/authors/id/A/AS/ASOKOLOV/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

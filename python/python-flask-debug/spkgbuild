@@ -5,7 +5,8 @@ name=python-flask-debug
 version=0.4.3
 release=4
 
-source="https://github.com/mbr/flask-debug/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mbr/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

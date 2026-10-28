@@ -5,10 +5,10 @@ name=libjxl
 version=0.12.0
 release=2
 options="!checksum"
-source="libjxl-0.12.0.tar.gz::https://github.com/libjxl/libjxl/archive/refs/tags/v0.12.0.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/libjxl/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "libjxl-0.12.0"
+    cd "libjxl-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

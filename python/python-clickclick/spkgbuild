@@ -5,11 +5,11 @@ name=python-clickclick
 version=20.10.2
 release=3
 
-source="python-clickclick-20.10.2.tar.gz::https://codeberg.org/hjacobs/python-clickclick/archive/20.10.2.tar.gz"
+source="${name}-${version}.tar.gz::https://codeberg.org/hjacobs/${name}/archive/${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/clickclick*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

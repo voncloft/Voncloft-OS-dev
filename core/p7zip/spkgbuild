@@ -3,7 +3,7 @@
 name=p7zip
 version=16.02
 release=1
-source="https://github.com/btolab/p7zip/archive/refs/tags/$version.tar.gz"
+source="https://github.com/btolab/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 build() {
 	cd ${name}_${version}

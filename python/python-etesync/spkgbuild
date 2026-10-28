@@ -5,7 +5,8 @@ name=python-etesync
 version=0.12.1
 release=2
 
-source="https://files.pythonhosted.org/packages/source/e/etesync/etesync-0.12.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/e/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-milc
 version=2.1.0
 release=1
 
-source="https://github.com/clueboard/milc/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/clueboard/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

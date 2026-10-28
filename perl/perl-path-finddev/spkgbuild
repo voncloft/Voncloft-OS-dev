@@ -5,7 +5,8 @@ name=perl-path-finddev
 version=0.5.3
 release=3
 
-source="https://cpan.metacpan.org/authors/id/K/KE/KENTNL/Path-FindDev-v0.5.3.tar.gz"
+_name=Path-FindDev
+source="https://cpan.metacpan.org/authors/id/K/KE/KENTNL/${_name}-v${version}.tar.gz"
 options="!checksum"
 
 build() {

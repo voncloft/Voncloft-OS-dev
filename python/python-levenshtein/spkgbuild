@@ -5,7 +5,8 @@ name=python-levenshtein
 version=0.27.5
 release=1
 
-source="https://github.com/maxbachmann/Levenshtein/archive/v0.21.0/python-levenshtein-0.21.0.tar.gz"
+_name=Levenshtein
+source="https://github.com/maxbachmann/${_name}/archive/v${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

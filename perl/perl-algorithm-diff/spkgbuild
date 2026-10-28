@@ -5,7 +5,8 @@ name=perl-algorithm-diff
 version=1.1903
 release=6
 
-source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Algorithm-Diff-1.201.tar.gz"
+_name=Algorithm-Diff
+source="https://cpan.metacpan.org/authors/id/A/AR/ARISTOTLE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

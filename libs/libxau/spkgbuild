@@ -4,7 +4,8 @@
 name=libxau
 version=1.0.12
 release=1
-source="https://www.x.org/pub/individual/lib/libXau-$version.tar.xz"
+_name=libXau
+source="https://www.x.org/pub/individual/lib/${_name}-$version.tar.xz"
 
 build() {
 	cd libXau-$version

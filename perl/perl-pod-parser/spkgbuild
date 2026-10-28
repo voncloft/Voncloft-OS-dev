@@ -5,7 +5,8 @@ name=perl-pod-parser
 version=1.66
 release=1
 
-source="https://cpan.metacpan.org/authors/id/M/MA/MAREKR/Pod-Parser-1.66.tar.gz"
+_name=Pod-Parser
+source="https://cpan.metacpan.org/authors/id/M/MA/MAREKR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

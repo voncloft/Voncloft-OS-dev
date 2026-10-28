@@ -4,7 +4,7 @@
 name=libavif
 version=1.4.2
 release=1
-source=" https://github.com/AOMediaCodec/libavif/archive/v$version/libavif-$version.tar.gz"
+source=" https://github.com/AOMediaCodec/${name}/archive/v$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

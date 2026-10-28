@@ -5,7 +5,8 @@ name=python-scour
 version=0.38.2
 release=3
 options="!checksum"
-source="python-scour-0.38.2.tar.gz::https://files.pythonhosted.org/packages/75/19/f519ef8aa2f379935a44212c5744e2b3a46173bf04e0110fb7f4af4028c9/scour-0.38.2.tar.gz"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 
 build() {
     cd "scour-${version}"

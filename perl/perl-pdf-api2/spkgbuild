@@ -5,7 +5,8 @@ name=perl-pdf-api2
 version=2.044
 release=1
 
-source="https://www.cpan.org/modules/by-module//--2.044.tar.gz"
+_name=PDF-API2
+source="https://cpan.metacpan.org/authors/id/S/SS/SSIMMS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

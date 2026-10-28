@@ -5,7 +5,8 @@ name=python-oslo-db
 version=18.1.1
 release=1
 
-source="https://github.com/openstack/oslo.db/archive/refs/tags/e$version.tar.gz"
+_name=oslo.db
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

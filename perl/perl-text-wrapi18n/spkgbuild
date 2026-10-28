@@ -5,7 +5,8 @@ name=perl-text-wrapi18n
 version=0.06
 release=9
 
-source="https://search.cpan.org/CPAN/authors/id/K/KU/KUBOTA/Text-WrapI18N-0.06.tar.gz"
+_name=Text-WrapI18N
+source="https://cpan.metacpan.org/authors/id/K/KU/KUBOTA/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

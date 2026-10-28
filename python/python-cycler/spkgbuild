@@ -5,7 +5,8 @@ name=python-cycler
 version=0.12.1
 release=8
 
-source="https://github.com/matplotlib/cycler/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/matplotlib/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

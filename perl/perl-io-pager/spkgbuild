@@ -4,7 +4,8 @@ name=perl-io-pager
 version=2.10
 release=3
 
-source="https://cpan.metacpan.org/authors/id/J/JP/JPIERCE/IO-Pager-0.40.tgz"
+_name=IO-Pager
+source="https://cpan.metacpan.org/authors/id/J/JP/JPIERCE/${_name}-${version}.tgz"
 options="!checksum"
 
 build() {

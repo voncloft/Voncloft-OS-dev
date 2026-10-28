@@ -5,7 +5,8 @@ name=python-openstacksdk
 version=4.22.0
 release=1
 
-source="https://github.com/openstack/openstacksdk/archive/refs/tags/e$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

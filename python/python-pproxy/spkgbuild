@@ -5,11 +5,12 @@ name=python-pproxy
 version=2.7.8
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pproxy/pproxy-2.7.8.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pproxy*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

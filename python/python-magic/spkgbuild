@@ -5,7 +5,8 @@ name=python-magic
 version=5.48
 release=3
 
-source="https://astron.com/pub/file/file-5.48.tar.gz"
+_name=file
+source="https://astron.com/pub/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

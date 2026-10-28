@@ -5,7 +5,8 @@ name=python-patchwork
 version=1.0.1
 release=4
 
-source="https://github.com/fabric/patchwork/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/fabric/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-class-load-xs
 version=0.10
 release=8
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Load-XS-0.10.tar.gz"
+_name=Class-Load-XS
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

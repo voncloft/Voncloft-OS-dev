@@ -5,7 +5,8 @@ name=python-ibm-db-sa
 version=0.3.9
 release=4
 
-source="https://pypi.io/packages/source/i/ibm_db_sa/ibm_db_sa-0.3.9.tar.gz"
+_name=ibm_db_sa
+source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

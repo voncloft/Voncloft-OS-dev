@@ -5,7 +5,8 @@ name=python-mergedict
 version=1.0.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/m/mergedict/mergedict-1.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

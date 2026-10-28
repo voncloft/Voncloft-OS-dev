@@ -5,7 +5,8 @@ name=perl-file-nfslock
 version=1.29
 release=2
 
-source="https://www.cpan.org/authors/id/B/BB/BBB/File-NFSLock-1.29.tar.gz"
+_name=File-NFSLock
+source="https://cpan.metacpan.org/authors/id/B/BB/BBB/${_name}-${version}.tar.gz"
 options="!checksum" 
 
 build() {

@@ -5,7 +5,8 @@ name=python-pyalsa
 version=1.2.7
 release=6
 
-source=""
+_name=${name#python-}
+source="https://www.alsa-project.org/files/pub/${_name}/${_name}-${version}.tar.bz2"
 options="!checksum"
 
 build() {

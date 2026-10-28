@@ -5,7 +5,8 @@ name=perl-net-libidn2
 version=1.02
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/T/TH/THOR/Net-LibIDN2-1.02.tar.gz"
+_name=Net-LibIDN2
+source="https://cpan.metacpan.org/authors/id/T/TH/THOR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

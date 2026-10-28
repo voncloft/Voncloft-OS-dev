@@ -5,7 +5,8 @@ name=python-django-classy-tags
 version=4.1.0
 release=4
 
-source="https://github.com/divio/django-classy-tags/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/divio/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

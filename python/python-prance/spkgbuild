@@ -5,7 +5,8 @@ name=python-prance
 version=26.07.19.0
 release=1
 
-source="https://github.com/jfinkhaeuser/prance/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/jfinkhaeuser/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

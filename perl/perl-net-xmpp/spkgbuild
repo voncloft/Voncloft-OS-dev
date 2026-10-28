@@ -5,7 +5,8 @@ name=perl-net-xmpp
 version=1.05
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/D/DA/DAPATRICK/Net-XMPP-1.05.tar.gz"
+_name=Net-XMPP
+source="https://cpan.metacpan.org/authors/id/D/DA/DAPATRICK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

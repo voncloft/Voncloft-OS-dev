@@ -5,7 +5,8 @@ name=python-zope-testrunner
 version=8.3
 release=3
 
-source="https://github.com/zopefoundation/zope.testrunner/archive/refs/tags/l$version.tar.gz"
+_name=zope.testrunner
+source="https://github.com/zopefoundation/${_name}/archive/refs/tags/l$version.tar.gz"
 options="!checksum"
 
 build() {

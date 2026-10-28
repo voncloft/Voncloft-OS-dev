@@ -5,7 +5,8 @@ name=python-aiosmtpd
 version=1.4.4.post2
 release=1
 
-source="https://files.pythonhosted.org/packages/source/a/aiosmtpd/aiosmtpd-1.4.4.post2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

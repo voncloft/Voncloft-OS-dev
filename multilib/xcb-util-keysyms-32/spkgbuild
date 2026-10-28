@@ -4,7 +4,8 @@
 name=xcb-util-keysyms-32
 version=0.4.1
 release=1
-source="http://xcb.freedesktop.org/dist/xcb-util-keysyms-$version.tar.gz"
+_name=${name%-32}
+source="http://xcb.freedesktop.org/dist/${_name}-$version.tar.gz"
 
 build() {
 	cd *

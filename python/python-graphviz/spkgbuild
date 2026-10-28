@@ -5,7 +5,8 @@ name=python-graphviz
 version=0.21
 release=1
 
-source="https://github.com/xflr6/graphviz/archive/0.19/graphviz-0.19.tar.gz"
+_name=${name#python-}
+source="https://github.com/xflr6/${_name}/archive/${version}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

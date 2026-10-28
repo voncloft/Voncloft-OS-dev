@@ -5,7 +5,8 @@ name=perl-mro-compat
 version=0.15
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/H/HA/HAARG/MRO-Compat-0.15.tar.gz"
+_name=MRO-Compat
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

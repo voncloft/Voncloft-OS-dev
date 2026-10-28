@@ -1,17 +1,19 @@
 # description	: Collection of modular and reusable compiler and toolchain technologies
 # depends	: cmake libffi python ninja libxml2
 
-name=llvm
+name=llvm-old-2023-06-07
+_upstream_name=llvm
 version=23.1.4
 release=1
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/llvm-$version.src.tar.xz
-	https://anduin.linuxfromscratch.org/BLFS/llvm/llvm-cmake-$version.src.tar.xz
+_name=llvm-project
+source="https://github.com/llvm/${_name}/releases/download/llvmorg-$version/${_upstream_name}-$version.src.tar.xz
+	https://anduin.linuxfromscratch.org/BLFS/${_upstream_name}/${_upstream_name}-cmake-$version.src.tar.xz
 	llvm-config.h"
 noextract="llvm-cmake-$version.src.tar.xz"
 	
 options="!checksum"
 build() {
-	cd $name-$version.src
+	cd ${_upstream_name}-$version.src
 	tar -xf ../llvm-cmake-$version.src.tar.xz
 	sed '/LLVM_COMMON_CMAKE_UTILS/s@../cmake@cmake-$version.src@' \
     		-i CMakeLists.txt

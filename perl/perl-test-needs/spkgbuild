@@ -5,7 +5,8 @@ name=perl-test-needs
 version=0.002010
 release=3
 
-source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/Test-Needs-0.002010.tar.gz"
+_name=Test-Needs
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

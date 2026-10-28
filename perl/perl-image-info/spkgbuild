@@ -5,7 +5,8 @@ name=perl-image-info
 version=1.43
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/S/SR/SREZIC/Image-Info-1.43.tar.gz"
+_name=Image-Info
+source="https://cpan.metacpan.org/authors/id/S/SR/SREZIC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=openssl-32
 version=1.1.1w
 release=1
-source="https://github.com/openssl/openssl/archive/refs/tags/OpenSSL_1_1_1w.tar.gz"
+_name=${name%-32}
+source="https://github.com/openssl/${_name}/archive/refs/tags/OpenSSL_${version//./_}.tar.gz"
 
 build() {
 	cd "$SRC"/openssl-OpenSSL*/

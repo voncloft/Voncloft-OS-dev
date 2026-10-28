@@ -3,7 +3,8 @@
 name=libdrm-32
 version=2.4.134
 release=1
-source="https://dri.freedesktop.org/libdrm/libdrm-2.4.134.tar.xz"
+_name=${name%-32}
+source="https://dri.freedesktop.org/${_name}/${_name}-${version}.tar.xz"
 
 build() {
 	cd libdrm-$version

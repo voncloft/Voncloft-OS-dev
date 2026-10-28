@@ -5,7 +5,8 @@ name=perl-datetime-locale
 version=1.38
 release=2
 
-source="https://www.cpan.org/authors/id/D/DR/DROLSKY/DateTime-Locale-1.38.tar.gz"
+_name=DateTime-Locale
+source="https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

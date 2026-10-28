@@ -5,11 +5,12 @@ name=python-hexdump
 version=3.3
 release=5
 
-source="https://files.pythonhosted.org/packages/source/h/hexdump/hexdump-3.3.zip"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.zip"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

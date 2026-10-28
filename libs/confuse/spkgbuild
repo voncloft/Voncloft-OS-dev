@@ -3,7 +3,8 @@
 name=confuse
 version=3.4
 release=1
-source="https://github.com/martinh/libconfuse/releases/download/v$version/$name-$version.tar.gz"
+_name=libconfuse
+source="https://github.com/martinh/${_name}/releases/download/v$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

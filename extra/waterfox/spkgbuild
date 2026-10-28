@@ -4,7 +4,8 @@
 name=waterfox
 version=2022.11
 release=1
-source="https://github.com/WaterfoxCo/Waterfox-Classic/archive/refs/tags/2022.11-classic.tar.gz
+_name=Waterfox-Classic
+source="https://github.com/WaterfoxCo/${_name}/archive/refs/tags/${version}-classic.tar.gz
 	mozconfig
 	waterfox.desktop"
 

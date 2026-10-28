@@ -5,7 +5,8 @@ name=perl-fuse
 version=0.16.1
 release=11
 
-source="https://search.cpan.org/CPAN/authors/id/D/DP/DPATES/Fuse-0.16.1.tar.gz"
+_name=Fuse
+source="https://cpan.metacpan.org/authors/id/D/DP/DPATES/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

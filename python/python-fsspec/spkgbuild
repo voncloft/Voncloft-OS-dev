@@ -5,7 +5,8 @@ name=python-fsspec
 version=2026.9.0
 release=1
 
-source="https://github.com/intake/filesystem_spec/archive/refs/tags/$version.tar.gz"
+_name=filesystem_spec
+source="https://github.com/intake/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

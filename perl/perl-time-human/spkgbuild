@@ -4,7 +4,8 @@ name=perl-time-human
 version=1.03
 release=11
 
-source="https://www.cpan.org/authors/id/J/JH/JHOBLITT/Time-Human-1.03.tar.gz"
+_name=Time-Human
+source="https://cpan.metacpan.org/authors/id/J/JH/JHOBLITT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

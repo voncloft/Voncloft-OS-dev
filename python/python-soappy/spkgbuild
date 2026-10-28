@@ -4,11 +4,12 @@ name=python-soappy
 version=0.12.22
 release=3
 
-source="https://pypi.python.org/packages/source/S/SOAPpy/SOAPpy-0.12.22.zip"
+_name=SOAPpy
+source="https://files.pythonhosted.org/packages/source/S/${_name}/${_name}-${version}.zip"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

@@ -5,7 +5,8 @@ name=perl-crypt-cbc
 version=3.04
 release=4
 
-source="https://www.cpan.org/authors/id/L/LD/LDS/Crypt-CBC-3.04.tar.gz"
+_name=Crypt-CBC
+source="https://cpan.metacpan.org/authors/id/L/LD/LDS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

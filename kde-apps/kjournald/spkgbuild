@@ -6,7 +6,7 @@ name=kjournald
 version=26.08.2
 release=2
 
-source="https://download.kde.org/stable/release-service/$version/src/kjournald-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

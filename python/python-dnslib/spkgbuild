@@ -5,7 +5,8 @@ name=python-dnslib
 version=0.9.26
 release=2
 
-source="https://github.com/paulc/dnslib/archive/0.9.23/python-dnslib-0.9.23.tar.gz"
+_name=${name#python-}
+source="https://github.com/paulc/${_name}/archive/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,7 @@
 name=texlive
 version=20260301-source
 release=2
-source="https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2026/texlive-20260301-source.tar.xz"
+source="https://ftp.math.utah.edu/pub/tex/historic/systems/${name}/2026/${name}-${version}.tar.xz"
 
 build() {
 	cd "$SRC"/texlive*/

@@ -5,7 +5,8 @@ name=perl-mail-spf
 version=v2.9.0
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/J/JM/JMEHNLE/mail-spf/Mail-SPF-v2.9.0.tar.gz"
+_name=Mail-SPF
+source="https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

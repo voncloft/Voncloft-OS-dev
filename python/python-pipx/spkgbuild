@@ -2,10 +2,11 @@
 # depends : python python-userpath python-argcomplete
 
 name=python-pipx
-version=1.18.4
+version=1.18.6
 release=1
 
-source="https://github.com/pipxproject/pipx/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pipxproject/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

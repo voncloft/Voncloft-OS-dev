@@ -5,7 +5,8 @@ name=python-oslo-concurrency
 version=7.6.1
 release=1
 
-source="https://github.com/openstack/oslo.concurrency/archive/refs/tags/e$version.tar.gz"
+_name=oslo.concurrency
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

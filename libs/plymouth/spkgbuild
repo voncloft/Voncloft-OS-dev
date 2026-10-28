@@ -6,7 +6,7 @@ name=plymouth
 version=26.134.222
 release=1
 
-source="$name-$version.tar.xz::https://www.freedesktop.org/software/plymouth/releases/plymouth-$version.tar.xz"
+source="$name-$version.tar.xz::https://www.freedesktop.org/software/${name}/releases/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

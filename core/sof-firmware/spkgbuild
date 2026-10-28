@@ -4,10 +4,11 @@ name=sof-firmware
 version=2026.09.2
 release=1
 options="!strip"
-source="https://github.com/thesofproject/sof-bin/releases/download/v$pkgver/sof-bin-$pkgver.tar.gz"
+_name=sof-bin
+source="https://github.com/thesofproject/${_name}/releases/download/v${version}/${_name}-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+	cd $_name-$version
 
 	fwdir=$PKG/usr/lib/firmware/intel
 	mkdir -pv $fwdir

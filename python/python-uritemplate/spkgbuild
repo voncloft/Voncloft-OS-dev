@@ -5,7 +5,8 @@ name=python-uritemplate
 version=4.2.0
 release=3
 
-source="https://github.com/sigmavirus24/uritemplate/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/sigmavirus24/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

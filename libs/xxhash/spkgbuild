@@ -4,7 +4,8 @@
 name=xxhash
 version=0.8.4
 release=1
-source="xxhash-$version.tar.gz::https://github.com/Cyan4973/xxHash/archive/refs/tags/v$version.tar.gz"
+_name=xxHash
+source="xxhash-$version.tar.gz::https://github.com/Cyan4973/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

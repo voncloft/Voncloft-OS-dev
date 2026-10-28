@@ -5,10 +5,10 @@ name=oxipng
 version=10.2.1
 release=2
 options="!checksum"
-source="oxipng-10.2.1.tar.gz::https://github.com/oxipng/oxipng/archive/refs/tags/v10.2.1.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/oxipng/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "oxipng-10.2.1"
+    cd "oxipng-${version}"
     export PATH="/opt/rustc/bin:$PATH"
     cargo build --release --locked
     install -Dm755 target/release/oxipng "$PKG/usr/bin/oxipng"

@@ -5,7 +5,7 @@ name=akonadi-search
 version=26.08.2
 release=2
 
-source="https://download.kde.org/stable/release-service/$version/src/akonadi-search-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

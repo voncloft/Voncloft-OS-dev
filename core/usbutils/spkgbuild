@@ -4,7 +4,7 @@
 name=usbutils
 version=020
 release=1
-source=" https://kernel.org/pub/linux/utils/usb/usbutils/usbutils-020.tar.gz"
+source=" https://kernel.org/pub/linux/utils/usb/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,10 +2,10 @@
 # depends : extra-cmake-modules kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kio kirigami knotifications kpipewire kquickimageeditor kstatusnotifieritem kwidgetsaddons kwindowsystem kxmlgui layer-shell-qt libxcb pkgconf plasma-wayland-protocols prison purpose qt6 tesseract wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=spectacle
-version=6.8.1
+version=6.8.2
 release=2
 
-source="https://download.kde.org/stable/plasma/$version/spectacle-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

@@ -6,7 +6,7 @@ name=libkcompactdisc
 version=25.12.3
 release=1
 
-source="https://download.kde.org/Attic/release-service/$version/src/libkcompactdisc-$version.tar.xz"
+source="https://download.kde.org/Attic/release-service/$version/src/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

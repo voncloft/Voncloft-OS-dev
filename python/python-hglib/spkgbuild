@@ -5,7 +5,7 @@ name=python-hglib
 version=2.6.2
 release=3
 
-source="https://files.pythonhosted.org/packages/fb/11/1cfa47d5e2aa45f6a803fcdf4484f8255383221ccb2f521d9010afca0d8d/python-hglib-2.6.2.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

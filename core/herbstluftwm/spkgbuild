@@ -4,7 +4,7 @@
 name=herbstluftwm
 version=0.9.6
 release=1
-source="https://herbstluftwm.org/tarballs/herbstluftwm-$version.tar.gz"
+source="https://herbstluftwm.org/tarballs/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

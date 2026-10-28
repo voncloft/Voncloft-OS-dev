@@ -4,7 +4,8 @@
 name=gmp-32
 version=6.3.0
 release=1
-source="https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.bz2"
+_name=${name%-32}
+source="https://ftp.gnu.org/gnu/${_name}/${_name}-${version}.tar.bz2"
 
 build() {
 	cd gmp-$version

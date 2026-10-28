@@ -2,7 +2,7 @@
 # depends	: ruby-rb-inotify
 
 _name=sass-listen
-name=ruby-$_name
+name=ruby-sass-listen
 version=4.0.0
 release=2
 options="!emptydirs"

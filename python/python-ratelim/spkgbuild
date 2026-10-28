@@ -5,7 +5,8 @@ name=python-ratelim
 version=0.1.6
 release=5
 
-source="https://pypi.io/packages/source/r/ratelim/ratelim-0.1.6.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

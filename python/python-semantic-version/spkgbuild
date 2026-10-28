@@ -5,7 +5,8 @@ name=python-semantic-version
 version=2.10.0
 release=3
 
-source="https://github.com/rbarrois/python-semanticversion/archive/refs/tags/v$version.tar.gz"
+_name=python-semanticversion
+source="https://github.com/rbarrois/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

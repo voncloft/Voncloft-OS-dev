@@ -5,7 +5,8 @@ name=python-txrequests
 version=0.9.6
 release=6
 
-source="https://files.pythonhosted.org/packages/source/t/txrequests/txrequests-0.9.6.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

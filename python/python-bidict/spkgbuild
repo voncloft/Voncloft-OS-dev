@@ -5,7 +5,8 @@ name=python-bidict
 version=0.24.1
 release=2
 
-source="https://github.com/jab/bidict/archive/refs/tags/v0.22.1/python-bidict-0.22.1.tar.gz"
+_name=${name#python-}
+source="https://github.com/jab/${_name}/archive/refs/tags/v${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -2,14 +2,15 @@
 # depends : python-dbus python-dbus-signature-pyparsing
 
 name=python-into-dbus
-version=0.08
+version=0.8
 release=8
 
-source=""
+_name=into-dbus-python
+source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

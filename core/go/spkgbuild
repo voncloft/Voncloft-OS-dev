@@ -5,8 +5,9 @@ version=1.20.4
 release=1
 options="!strip"
 noextract="go1.4.3.linux-amd64.tar.gz"
+_source2_version=4.3
 source="https://storage.googleapis.com/golang/go$version.src.tar.gz
-	https://storage.googleapis.com/golang/go1.4.3.linux-amd64.tar.gz"
+	https://storage.googleapis.com/golang/go1.${_source2_version}.linux-amd64.tar.gz"
 
 unset LC_ALL
 

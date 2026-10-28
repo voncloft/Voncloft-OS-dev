@@ -5,7 +5,7 @@ name=waylandpp
 version=1.0.1
 release=1
 
-source="https://github.com/NilsBrause/waylandpp/archive/$version.zip"
+source="https://github.com/NilsBrause/${name}/archive/$version.zip"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-authheaders
 version=0.15.2
 release=3
 
-source=""
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

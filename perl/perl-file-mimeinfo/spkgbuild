@@ -5,7 +5,8 @@ name=perl-file-mimeinfo
 version=0.33
 release=1
 
-source="https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/File-MimeInfo-0.33.tar.gz"
+_name=File-MimeInfo
+source="https://cpan.metacpan.org/authors/id/M/MI/MICHIELB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

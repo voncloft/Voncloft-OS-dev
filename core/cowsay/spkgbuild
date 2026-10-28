@@ -4,7 +4,8 @@
 name=cowsay
 version=3.04
 release=1
-source="https://github.com/tnalpgge/rank-amateur-cowsay/archive/cowsay-$version.tar.gz
+_name=rank-amateur-cowsay
+source="https://github.com/tnalpgge/${_name}/archive/${name}-$version.tar.gz
 	$name.patch"
 
 build() {

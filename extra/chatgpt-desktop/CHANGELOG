@@ -9,3 +9,13 @@ Add the official ChatGPT desktop binary using its standard /usr layout.
 Verify the upstream SHA-256 and extract only the Debian package payload.
 Track stable amd64 releases with an override that updates the version, URL, and checksum.
 TPM libraries support device keys when this computer controls other computers; they are not required for receiving control from a phone.
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 01:38:46 AM EDT 2026
+
+Version=26.1023.51421
+Release=1
+
+Synopsis:
+Upgraded from version 26.1021.22027 to version 26.1023.51421

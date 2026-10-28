@@ -5,7 +5,8 @@ name=python-spur
 version=0.3.23
 release=3
 
-source="https://github.com/mwilliamson/spur.py/archive/refs/tags/$version.tar.gz"
+_name=spur.py
+source="https://github.com/mwilliamson/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

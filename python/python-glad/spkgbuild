@@ -5,7 +5,8 @@ name=python-glad
 version=2.0.8
 release=2
 options="!checksum"
-source="python-glad-2.0.8.tar.gz::https://files.pythonhosted.org/packages/6e/5a/d62b24fe1c7c2f34e15c2aa4418a5327a8550fdc272999a59e0dddebc3ee/glad2-2.0.8.tar.gz"
+_name=glad2
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 
 build() {
     cd "glad2-${version}"

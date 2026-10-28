@@ -5,7 +5,8 @@ name=perl-data-munge
 version=0.097
 release=3
 
-source="https://cpan.metacpan.org/authors/id/M/MA/MAUKE/Data-Munge-0.097.tar.gz"
+_name=Data-Munge
+source="https://cpan.metacpan.org/authors/id/M/MA/MAUKE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

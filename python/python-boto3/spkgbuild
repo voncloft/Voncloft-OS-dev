@@ -2,10 +2,11 @@
 # depends : python-botocore python-jmespath python-s3transfer
 
 name=python-boto3
-version=1.43.119
+version=1.43.120
 release=1
 
-source="https://github.com/boto/boto3/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/boto/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

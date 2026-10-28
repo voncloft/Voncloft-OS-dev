@@ -4,7 +4,7 @@
 name=sddm
 version=0.21.0    
 release=1
-source="https://github.com/sddm/sddm/archive/v0.21.0/sddm-0.21.0.tar.gz"
+source="https://github.com/sddm/${name}/archive/v${version}/${name}-${version}.tar.gz"
 
 options="!checksum"
 

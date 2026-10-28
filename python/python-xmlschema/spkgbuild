@@ -5,7 +5,8 @@ name=python-xmlschema
 version=4.3.2
 release=3
 
-source="https://github.com/sissaschool/xmlschema/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/sissaschool/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

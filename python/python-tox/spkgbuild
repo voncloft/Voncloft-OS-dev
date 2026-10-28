@@ -5,7 +5,8 @@ name=python-tox
 version=4.5.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/t/tox/tox-4.5.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

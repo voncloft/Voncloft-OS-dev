@@ -5,7 +5,8 @@ name=perl-test-nowarnings
 version=1.06
 release=6
 
-source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/Test-NoWarnings-1.06.tar.gz"
+_name=Test-NoWarnings
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

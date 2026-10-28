@@ -5,10 +5,11 @@ name=r
 version=4.6.1
 release=2
 options="!checksum"
-source="r-4.6.1.tar.xz::https://cran.r-project.org/src/base/R-4/R-4.6.1.tar.xz"
+_name=R
+source="${name}-${version}.tar.xz::https://cran.r-project.org/src/base/${_name}-4/${_name}-${version}.tar.xz"
 
 build() {
-    cd "R-4.6.1"
+    cd "R-${version}"
     ./configure --prefix=/usr --libdir=/usr/lib64 --enable-R-shlib --with-x --with-readline
     make
     make DESTDIR="$PKG" install

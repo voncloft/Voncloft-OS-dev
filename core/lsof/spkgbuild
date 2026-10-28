@@ -4,7 +4,7 @@
 name=lsof
 version=4.99.7    
 release=1
-source="https://github.com/lsof-org/lsof/releases/download/4.99.5/lsof-4.99.5.tar.gz"
+source="https://github.com/lsof-org/${name}/releases/download/${version}/${name}-${version}.tar.gz"
 
 options="!checksum"
 

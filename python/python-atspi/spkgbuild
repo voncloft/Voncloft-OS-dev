@@ -5,7 +5,8 @@ name=python-atspi
 version=2.58.2
 release=1
 _pverz=2_38_1
-source="https://download.gnome.org/sources/pyatspi/2.58/pyatspi-2.58.2.tar.xz"
+_name=pyatspi
+source="https://download.gnome.org/sources/${_name}/${version%.*}/${_name}-${version}.tar.xz"
 options="!checksum"
 
 build() {

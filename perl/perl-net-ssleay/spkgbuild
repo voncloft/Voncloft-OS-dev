@@ -5,7 +5,8 @@ name=perl-net-ssleay
 version=1.92
 release=2
 
-source="https://cpan.metacpan.org/authors/id/C/CH/CHRISN/Net-SSLeay-1.92.tar.gz"
+_name=Net-SSLeay
+source="https://cpan.metacpan.org/authors/id/C/CH/CHRISN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

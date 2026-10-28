@@ -5,7 +5,8 @@ name=python-dephell-pythons
 version=0.1.15
 release=2
 
-source="https://files.pythonhosted.org/packages/source/d/dephell_pythons/dephell_pythons-0.1.15.tar.gz"
+_name=dephell_pythons
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

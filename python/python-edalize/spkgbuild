@@ -5,7 +5,8 @@ name=python-edalize
 version=0.6.8
 release=1
 
-source="https://github.com/olofk/edalize/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/olofk/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

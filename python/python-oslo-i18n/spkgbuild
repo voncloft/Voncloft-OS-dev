@@ -5,7 +5,8 @@ name=python-oslo-i18n
 version=6.9.0
 release=3
 
-source="https://github.com/openstack/oslo.i18n/archive/refs/tags/e$version.tar.gz"
+_name=oslo.i18n
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

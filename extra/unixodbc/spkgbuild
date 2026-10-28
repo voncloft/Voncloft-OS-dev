@@ -4,7 +4,8 @@
 name=unixodbc
 version=2.3.14
 release=1
-source="https://github.com/lurcher/unixODBC/archive/v$version/unixODBC-$version.tar.gz"
+_name=unixODBC
+source="https://github.com/lurcher/${_name}/archive/v$version/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

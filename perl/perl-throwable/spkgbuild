@@ -5,7 +5,8 @@ name=perl-throwable
 version=1.000
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/Throwable-1.000.tar.gz"
+_name=Throwable
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-tox-current-env
 version=0.0.17
 release=1
 
-source="https://github.com/fedora-python/tox-current-env/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/fedora-python/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

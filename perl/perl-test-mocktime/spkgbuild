@@ -5,7 +5,8 @@ name=perl-test-mocktime
 version=0.17
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/D/DD/DDICK/Test-MockTime-0.17.tar.gz"
+_name=Test-MockTime
+source="https://cpan.metacpan.org/authors/id/D/DD/DDICK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

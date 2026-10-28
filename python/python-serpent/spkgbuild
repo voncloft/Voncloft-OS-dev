@@ -5,7 +5,8 @@ name=python-serpent
 version=1.43
 release=3
 
-source="https://files.pythonhosted.org/packages/6b/bb/58ab4dc0382c2386355cbcb7ffa490e542159de6012d500a602a6d0ed535/serpent-1.43.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-poe-component-client-http
 version=0.949
 release=6
 
-source="https://www.cpan.org/authors/id/R/RC/RCAPUTO/POE-Component-Client-HTTP-0.949.tar.gz"
+_name=POE-Component-Client-HTTP
+source="https://cpan.metacpan.org/authors/id/R/RC/RCAPUTO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

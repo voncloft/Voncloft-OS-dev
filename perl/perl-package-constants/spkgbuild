@@ -5,7 +5,8 @@ name=perl-package-constants
 version=0.06
 release=6
 
-source="https://search.mcpan.org/CPAN/authors/id/B/BI/BINGOS/Package-Constants-0.06.tar.gz"
+_name=Package-Constants
+source="https://cpan.metacpan.org/authors/id/B/BI/BINGOS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

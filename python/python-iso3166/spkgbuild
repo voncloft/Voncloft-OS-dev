@@ -5,7 +5,8 @@ name=python-iso3166
 version=3.0.0
 release=1
 
-source="https://files.pythonhosted.org/packages/47/e7/4997ca315143cf3dc54ec116070c108b621677fa80083a499b50643237c4/iso3166-3.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

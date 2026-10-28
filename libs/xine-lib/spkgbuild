@@ -4,8 +4,8 @@
 name=xine-lib
 version=1.2.13
 release=1
-source=" https://downloads.sourceforge.net/xine/xine-lib-1.2.13.tar.xz
-	https://www.linuxfromscratch.org/patches/blfs/svn/xine-lib-1.2.13-upstream_fixes-1.patch"
+source=" https://downloads.sourceforge.net/xine/${name}-${version}.tar.xz
+	https://www.linuxfromscratch.org/patches/blfs/svn/${name}-${version}-upstream_fixes-1.patch"
 options="!checksum"
 
 build() {

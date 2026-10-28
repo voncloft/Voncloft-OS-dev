@@ -2,10 +2,11 @@
 # depends	: fontconfig
 
 name=ttf-wps-fonts
-version=20241029073004
+version=20241029073004.g8c980c24289cb08e03f72915970ce1bd6767e45a
 release=2
+_commit=${version##*.g}
 _commit=8c980c24289cb08e03f72915970ce1bd6767e45a
-source="$name-$_commit.tar.gz::https://github.com/iamdh4/ttf-wps-fonts/archive/8c980c24289cb08e03f72915970ce1bd6767e45a.tar.gz"
+source="$name-$_commit.tar.gz::https://github.com/iamdh4/${name}/archive/${_commit}.tar.gz"
 
 build() {
 	cd "$SRC"/ttf-wps-fonts*/

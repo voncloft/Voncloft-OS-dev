@@ -5,7 +5,8 @@ name=python-pdoc
 version=16.0.0
 release=7
 
-source="https://github.com/mitmproxy/pdoc/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mitmproxy/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

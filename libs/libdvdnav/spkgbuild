@@ -4,7 +4,7 @@
 name=libdvdnav
 version=7.0.0
 release=1
-source="https://get.videolan.org/libdvdnav/$version/$name-$version.tar.bz2"
+source="https://get.videolan.org/${name}/$version/$name-$version.tar.bz2"
 
 build() {
 	cd $name-$version

@@ -5,7 +5,8 @@ name=perl-cgi-formbuilder
 version=3.10
 release=3
 
-source="https://cpan.metacpan.org/authors/id/B/BI/BIGPRESH/CGI-FormBuilder-3.10.tar.gz"
+_name=CGI-FormBuilder
+source="https://cpan.metacpan.org/authors/id/B/BI/BIGPRESH/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-test-script
 version=1.29
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Test-Script-1.29.tar.gz"
+_name=Test-Script
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

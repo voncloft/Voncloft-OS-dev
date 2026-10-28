@@ -5,7 +5,8 @@ name=perl-net-oauth
 version=0.28
 release=10
 
-source="https://search.cpan.org/CPAN/authors/id/K/KG/KGRENNAN/Net-OAuth-0.28.tar.gz"
+_name=Net-OAuth
+source="https://cpan.metacpan.org/authors/id/K/KG/KGRENNAN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

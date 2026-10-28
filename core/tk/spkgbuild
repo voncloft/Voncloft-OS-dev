@@ -4,7 +4,7 @@
 name=tk
 version=8.6.17
 release=1
-source=" https://downloads.sourceforge.net/tcl/tk8.6.17-src.tar.gz"
+source=" https://downloads.sourceforge.net/tcl/${name}${version}-src.tar.gz"
 options="!checksum"
 
 build() {

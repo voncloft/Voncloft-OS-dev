@@ -4,7 +4,8 @@
 name=libxi-32
 version=1.8.4
 release=1
-source="https://www.x.org/pub/individual/lib/libXi-1.8.4.tar.gz"
+_name=libXi
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXi-$version

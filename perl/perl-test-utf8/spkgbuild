@@ -5,7 +5,8 @@ name=perl-test-utf8
 version=1.02
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/M/MA/MARKF/Test-utf8-1.01.tar.gz"
+_name=Test-utf8
+source="https://cpan.metacpan.org/authors/id/M/MA/MARKF/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -8,7 +8,8 @@ name=python-tensorboard_plugin_wit
 version=1.8.1
 release=2
 
-source="https://github.com/PAIR-code/what-if-tool/archive/refs/tags/v1.8.1.tar.gz"
+_name=what-if-tool
+source="https://github.com/PAIR-code/${_name}/archive/refs/tags/v${version}.tar.gz"
 options="!checksum"
 
 build() {

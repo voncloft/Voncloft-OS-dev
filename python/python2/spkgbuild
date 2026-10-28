@@ -5,12 +5,13 @@ name=python2
 version=2.7.18
 release=1
 
-source="https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz
+_name=Python
+source="https://www.python.org/ftp/python/${version}/${_name}-${version}.tar.xz
 	http://www.linuxfromscratch.org/patches/blfs/svn/Python-$version-security_fixes-1.patch"
 options="!checksum"
 
 build() {
-	cd Python-$version
+	cd "$SRC"/Python*/
 	sed -i '/2to3/d' ./setup.py
 	patch -Np1 -i $SRC/Python-2.7.18-security_fixes-1.patch &&
 ./configure --prefix=/usr                              \

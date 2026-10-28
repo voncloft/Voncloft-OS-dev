@@ -5,7 +5,8 @@ name=perl-number-misc
 version=1.2
 release=3
 
-source="https://cpan.metacpan.org/authors/id/M/MI/MIKO/Number-Misc-1.2.tar.gz"
+_name=Number-Misc
+source="https://cpan.metacpan.org/authors/id/M/MI/MIKO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

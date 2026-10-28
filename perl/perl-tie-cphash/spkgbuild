@@ -5,7 +5,8 @@ name=perl-tie-cphash
 version=2.000
 release=6
 
-source="https://www.cpan.org/authors/id/C/CJ/CJM/Tie-CPHash-2.000.tar.gz"
+_name=Tie-CPHash
+source="https://cpan.metacpan.org/authors/id/C/CJ/CJM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

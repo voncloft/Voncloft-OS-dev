@@ -5,7 +5,8 @@ name=python-easygui
 version=0.98.2
 release=6
 
-source="https://github.com/robertlugg/easygui/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/robertlugg/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

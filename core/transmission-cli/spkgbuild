@@ -4,7 +4,8 @@
 name=transmission-cli
 version=4.1.4
 release=1
-source="https://github.com/transmission/transmission/releases/download/4.1.4/transmission-4.1.4.tar.xz"
+_name=transmission
+source="https://github.com/transmission/${_name}/releases/download/${version}/${_name}-${version}.tar.xz"
 
 build() {
 	cd "$SRC"/transmission*/

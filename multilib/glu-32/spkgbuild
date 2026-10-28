@@ -4,7 +4,8 @@
 name=glu-32
 version=9.0.3
 release=1
-source="https://archive.mesa3d.org/glu/glu-9.0.3.tar.xz"
+_name=${name%-32}
+source="https://archive.mesa3d.org/${_name}/${_name}-${version}.tar.xz"
 
 build() {
 	cd "$SRC"/glu*/

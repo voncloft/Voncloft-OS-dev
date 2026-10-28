@@ -5,7 +5,8 @@ name=python-pynamodb
 version=6.1.0
 release=1
 
-source="https://github.com/pynamodb/PynamoDB/archive/refs/tags/$version.tar.gz"
+_name=PynamoDB
+source="https://github.com/pynamodb/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

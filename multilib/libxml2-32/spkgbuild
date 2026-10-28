@@ -4,7 +4,8 @@
 name=libxml2-32
 version=2.15.4
 release=1
-source="https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.4.tar.xz"
+_name=${name%-32}
+source="https://download.gnome.org/sources/${_name}/${version%.*}/${_name}-${version}.tar.xz"
 
 build() {
 	cd libxml2-$version

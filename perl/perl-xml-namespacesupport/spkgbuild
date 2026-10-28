@@ -5,7 +5,8 @@ name=perl-xml-namespacesupport
 version=1.12
 release=4
 
-source="https://www.cpan.org/authors/id/P/PE/PERIGRIN/XML-NamespaceSupport-1.12.tar.gz"
+_name=XML-NamespaceSupport
+source="https://cpan.metacpan.org/authors/id/P/PE/PERIGRIN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

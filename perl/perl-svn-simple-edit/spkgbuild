@@ -4,7 +4,8 @@ name=perl-svn-simple-edit
 version=0.28
 release=6
 
-source="https://www.cpan.org/authors/id/C/CL/CLKAO/SVN-Simple-0.28.tar.gz"
+_name=SVN-Simple
+source="https://cpan.metacpan.org/authors/id/C/CL/CLKAO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

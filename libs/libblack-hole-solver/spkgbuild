@@ -5,7 +5,8 @@ name=libblack-hole-solver
 version=1.14.0
 release=1
 
-source="https://fc-solve.shlomifish.org/downloads/fc-solve/black-hole-solver-1.14.0.tar.xz"
+_name=black-hole-solver
+source="https://fc-solve.shlomifish.org/downloads/fc-solve/${_name}-${version}.tar.xz"
 options="!checksum"
 
 build() {

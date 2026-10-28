@@ -4,7 +4,7 @@
 name=lynx
 version=2.9.3
 release=1
-source="https://invisible-mirror.net/archives/lynx/tarballs/lynx2.9.3.tar.bz2"
+source="https://invisible-mirror.net/archives/lynx/tarballs/${name}${version}.tar.bz2"
 
 build() {
 	cd ${name}${version}

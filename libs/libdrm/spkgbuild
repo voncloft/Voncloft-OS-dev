@@ -5,7 +5,7 @@ name=libdrm
 version=2.4.134
 release=2
 
-source="$name-$version.tar.xz::https://dri.freedesktop.org/libdrm/libdrm-$version.tar.xz"
+source="$name-$version.tar.xz::https://dri.freedesktop.org/${name}/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

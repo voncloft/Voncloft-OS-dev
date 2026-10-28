@@ -4,7 +4,8 @@
 name=consolekit2
 version=2.0.0
 release=2
-source="https://github.com/Consolekit2/ConsoleKit2/releases/download/$version/ConsoleKit2-$version.tar.bz2
+_name=ConsoleKit2
+source="https://github.com/Consolekit2/${_name}/releases/download/$version/${_name}-$version.tar.bz2
 	pam-foreground-compat.ck"
 
 build() {

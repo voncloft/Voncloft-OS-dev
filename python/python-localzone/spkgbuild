@@ -5,7 +5,8 @@ name=python-localzone
 version=0.9.8
 release=1
 
-source="https://pypi.io/packages/source/l/localzone/localzone-0.9.8.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/l/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -1,14 +1,15 @@
 # description	: Print spooler and associated utilities
 # depends	: gnutls libusb linux-pam dbus colord xdg-utils
 
-name=cups
+name=cups-old
+_upstream_name=cups
 version=2.3.6
 release=1
-source="https://github.com/apple/cups/archive/refs/tags/v${version}.tar.gz
+source="https://github.com/apple/${_upstream_name}/archive/refs/tags/v${version}.tar.gz
 	cupsd.conf"
 
 build() {
-	cd $name-$version
+	cd ${_upstream_name}-$version
 
 	sed -i 's:444:644:' Makedefs.in
 	sed -i '/MAN.EXT/s:.gz::' configure config-scripts/cups-manpages.m4
@@ -21,7 +22,7 @@ build() {
 	            --disable-systemd            \
 	            --with-rcdir=/tmp/cupsinit   \
 	            --with-system-groups=lpadmin \
-	            --with-docdir=/usr/share/$name/doc
+	            --with-docdir=/usr/share/${_upstream_name}/doc
 	make
 	make BUILDROOT=$PKG install
 

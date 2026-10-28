@@ -5,7 +5,8 @@ name=python-mdx-video
 version=0.1.8
 release=6
 
-source="https://pypi.python.org/packages/source/m/mdx_video/mdx_video-0.1.8.tar.gz"
+_name=mdx_video
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

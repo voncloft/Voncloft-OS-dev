@@ -5,7 +5,8 @@ name=python-defusedxml
 version=0.7.1
 release=6
 
-source="https://pypi.io/packages/source/d/defusedxml/defusedxml-0.7.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

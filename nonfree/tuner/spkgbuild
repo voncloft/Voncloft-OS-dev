@@ -4,14 +4,14 @@
 name=tuner
 version=1.0.3
 release=3
-	noextract="22xxdrv_27086.zip
+	noextract="${name}-${version}-22xxdrv_27086.zip
 		HVR-12x0-14x0-17x0_1_25_25271_WHQL.zip"
-source="http://www.steventoth.net/linux/hvr22xx/22xxdrv_27086.zip
+source="${name}-${version}-22xxdrv_27086.zip::http://www.steventoth.net/linux/hvr22xx/22xxdrv_27086.zip
 	http://www.steventoth.net/linux/hvr22xx/HVR-12x0-14x0-17x0_1_25_25271_WHQL.zip"
 	
 build() {
-	#mkdir -pv $PKG/lib/firmware
-	IFILE=22xxdrv_27086.zip
+	mkdir -pv "$PKG/lib/firmware"
+	IFILE=${name}-${version}-22xxdrv_27086.zip
 	IFILE2=HVR-12x0-14x0-17x0_1_25_25271_WHQL.zip
 
 	unzip -jo $IFILE 22xxdrv_27086/Driver89/HcwWiltF.bin

@@ -5,7 +5,8 @@ name=python-ipywidgets
 version=8.1.9
 release=1
 
-source="https://github.com/ipython/ipywidgets/archive/refs/tags/a$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/ipython/${_name}/archive/refs/tags/a$version.tar.gz"
 options="!checksum"
 
 build() {

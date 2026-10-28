@@ -5,7 +5,8 @@ name=perl-email-send
 version=2.201
 release=4
 
-source="https://www.cpan.org/authors/id/R/RJ/RJBS/Email-Send-2.201.tar.gz"
+_name=Email-Send
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

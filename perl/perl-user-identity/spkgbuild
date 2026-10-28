@@ -4,7 +4,8 @@ name=perl-user-identity
 version=1.01
 release=3
 
-source="https://www.cpan.org/authors/id/M/MA/MARKOV/User-Identity-1.01.tar.gz"
+_name=User-Identity
+source="https://cpan.metacpan.org/authors/id/M/MA/MARKOV/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

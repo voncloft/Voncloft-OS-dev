@@ -5,7 +5,8 @@ name=python-uproot-methods
 version=0.10.1
 release=3
 
-source="python-uproot-methods::https://github.com/scikit-hep/uproot-methods/archive/0.10.0.zip"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://github.com/scikit-hep/${_name}/archive/${version}.zip"
 options="!checksum"
 
 build() {

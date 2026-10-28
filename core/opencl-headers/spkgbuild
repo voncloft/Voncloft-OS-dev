@@ -2,11 +2,12 @@
 # depends	: python
 
 name=opencl-headers
-version=20181101
+version=20261022202016.g82f60316cc142e7b21dc1d8983b26de18858fbd9
 release=1
-_commit=03490c3f8cb3b8667942b084a3151de20649f57a
+_commit=${version##*.g}
 _commit2=a807dcf0f8623d40dc5ce9d1eb00ffd0e46150c7
-source="OpenCL-Headers.tar.gz::https://github.com/KhronosGroup/OpenCL-Headers/archive/$_commit.tar.gz
+_name=OpenCL-Headers
+source="OpenCL-Headers.tar.gz::https://github.com/KhronosGroup/${_name}/archive/$_commit.tar.gz
 	OpenCL-CLHPP.tar.gz::https://github.com/KhronosGroup/OpenCL-CLHPP/archive/$_commit2.tar.gz"
 
 build() {

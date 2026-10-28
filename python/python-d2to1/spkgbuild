@@ -5,7 +5,8 @@ name=python-d2to1
 version=0.2.12.post1
 release=9
 
-source="https://files.pythonhosted.org/packages/source/d/d2to1/d2to1-0.2.12.post1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

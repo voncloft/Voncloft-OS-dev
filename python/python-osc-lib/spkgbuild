@@ -5,7 +5,8 @@ name=python-osc-lib
 version=4.7.0
 release=3
 
-source="https://github.com/openstack/osc-lib/archive/refs/tags/e$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

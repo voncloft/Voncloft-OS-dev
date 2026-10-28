@@ -5,7 +5,7 @@ name=chessx
 version=1.6.10
 release=1
 
-source="https://downloads.sourceforge.net/project/chessx/chessx/1.6.10/chessx-1.6.10.tgz"
+source="https://downloads.sourceforge.net/project/${name}/${name}/${version}/${name}-${version}.tgz"
 options="!checksum"
 
 build() {

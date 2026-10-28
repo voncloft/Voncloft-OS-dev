@@ -2,9 +2,9 @@
 # depends : libaccounts-qt qt6 signond
 
 name=signon-ui
-version=0.17+git20231016
+version=0.17+git20231016.geef943f0edf3beee8ecb85d4a9dae3656002fc24
 release=1
-_commit=eef943f0edf3beee8ecb85d4a9dae3656002fc24
+_commit=${version##*.g}
 
 source="$name-$version.tar.gz::https://gitlab.com/accounts-sso/$name/-/archive/$_commit/$name-$_commit.tar.gz"
 options="!checksum"

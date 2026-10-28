@@ -5,7 +5,8 @@ name=perl-cgi-fast
 version=2.16
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/L/LE/LEEJO/CGI-Fast-2.15.tar.gz"
+_name=CGI-Fast
+source="https://cpan.metacpan.org/authors/id/L/LE/LEEJO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

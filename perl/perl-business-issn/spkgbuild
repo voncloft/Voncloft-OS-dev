@@ -5,7 +5,8 @@ name=perl-business-issn
 version=1.005
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/-1.005.tar.gz"
+_name=Business-ISSN
+source="https://cpan.metacpan.org/authors/id/B/BD/BDFOY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

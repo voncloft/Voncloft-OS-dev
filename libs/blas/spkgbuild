@@ -5,8 +5,9 @@ name=blas
 version=3.12.1
 release=3
 
-source="https://github.com/Reference-LAPACK/lapack/archive/v$version.tar.gz
-	https://github.com/Reference-LAPACK/lapack/commit/87536aa3.patch"
+_name=lapack
+source="https://github.com/Reference-LAPACK/${_name}/archive/v$version.tar.gz
+	https://github.com/Reference-LAPACK/${_name}/commit/87536aa3.patch"
 options="!checksum"
 
 build() {

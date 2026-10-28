@@ -5,7 +5,8 @@ name=python-unicodedata2
 version=18.0.0
 release=2
 
-source="https://github.com/mikekap/unicodedata2/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mikekap/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

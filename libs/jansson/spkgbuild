@@ -3,7 +3,7 @@
 name=jansson
 version=2.15.1
 release=1
-source="https://github.com/akheron/jansson/releases/download/v$version/$name-$version.tar.bz2"
+source="https://github.com/akheron/${name}/releases/download/v$version/$name-$version.tar.bz2"
 
 build() {
 	cd $name-$version

@@ -1,14 +1,16 @@
 # description : Python bindings for the Qt 6 toolkit
 # depends : python-sip python-pyqt6-sip python-pyqt-builder qt6
 
-name=python-pyqt6
+name=python-pyqt5
+_upstream_name=python-pyqt6
 version=6.11.0
 release=2
-source="https://files.pythonhosted.org/packages/8b/47/b25c13eca5bebc6505394d0223e46d7ebf0c57dcac2ed908d7d19b18ab6b/pyqt6-6.11.0.tar.gz"
+_name=${_upstream_name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pyqt6*/
 	sip-build \
     	--confirm-license \
     	--no-make \

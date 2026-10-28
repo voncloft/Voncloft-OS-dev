@@ -5,7 +5,8 @@ name=python-dockerpty
 version=0.4.1
 release=8
 
-source="git+https://github.com/d11wtq/dockerpty.git#tag=v0.4.1"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

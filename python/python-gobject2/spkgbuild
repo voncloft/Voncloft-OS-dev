@@ -5,11 +5,12 @@ name=python-gobject2
 version=2.28.7
 release=2
 
-source="https://download.gnome.org/sources/pygobject/2.28/pygobject-$version.tar.xz"
+_name=pygobject
+source="https://download.gnome.org/sources/${_name}/${version%.*}/${_name}-$version.tar.xz"
 options="!checksum"
 
 build() {
-   cd pygobject-$version
+   cd "$SRC"/pygobject*/
 	./configure --prefix=/usr --disable-introspection
 	make
 	make DESTDIR=$PKG install

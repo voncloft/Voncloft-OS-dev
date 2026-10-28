@@ -5,7 +5,8 @@ name=perl-parse-recdescent
 version=1.967015
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/J/JT/JTBRAUN/Parse-RecDescent-1.967015.tar.gz"
+_name=Parse-RecDescent
+source="https://cpan.metacpan.org/authors/id/J/JT/JTBRAUN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

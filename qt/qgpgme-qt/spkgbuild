@@ -5,7 +5,8 @@ name=qgpgme-qt
 version=2.2.0
 release=1
 
-source="$name-$version.tar.xz::https://gnupg.org/ftp/gcrypt/qgpgme/qgpgme-$version.tar.xz"
+_name=qgpgme
+source="$name-$version.tar.xz::https://gnupg.org/ftp/gcrypt/${_name}/${_name}-$version.tar.xz"
 options="!checksum"
 
 build() {

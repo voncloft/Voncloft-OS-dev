@@ -5,7 +5,8 @@ name=python-fastapi
 version=0.162.0
 release=1
 
-source="https://github.com/tiangolo/fastapi/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/tiangolo/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

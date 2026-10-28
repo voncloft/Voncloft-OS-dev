@@ -5,7 +5,8 @@ name=python-oslo-serialization
 version=5.11.0
 release=3
 
-source="https://github.com/openstack/oslo.serialization/archive/refs/tags/e$version.tar.gz"
+_name=oslo.serialization
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

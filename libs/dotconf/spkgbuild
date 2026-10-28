@@ -4,7 +4,7 @@
 name=dotconf
 version=1.4.1
 release=1
-source="dotconf-$version.tar.gz::https://github.com/williamh/dotconf/archive/refs/tags/v$version.tar.gz"
+source="dotconf-$version.tar.gz::https://github.com/williamh/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

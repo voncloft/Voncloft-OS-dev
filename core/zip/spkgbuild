@@ -4,7 +4,7 @@
 name=zip
 version=3.0    
 release=1
-source="https://downloads.sourceforge.net/infozip/zip30.tar.gz"
+source="https://downloads.sourceforge.net/infozip/${name}${version//./}.tar.gz"
 
 options="!checksum"
 

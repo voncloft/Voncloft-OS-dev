@@ -5,7 +5,8 @@ name=python-biopython
 version=1.81
 release=2
 
-source="http://www.biopython.org/DIST/biopython-1.81.tar.gz"
+_name=${name#python-}
+source="http://www.biopython.org/DIST/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

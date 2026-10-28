@@ -4,8 +4,9 @@
 name=poppler
 version=26.10.0
 release=1
+_source2_version=0.4.12
 source="https://poppler.freedesktop.org/$name-$version.tar.xz
-	https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz"
+	https://${name}.freedesktop.org/${name}-data-${_source2_version}.tar.gz"
 noextract="poppler-data-0.4.12.tar.gz"
 build() {
 	cd $name-$version

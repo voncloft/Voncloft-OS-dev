@@ -5,7 +5,8 @@ name=perl-datetime-format-w3cdtf
 version=0.08
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/G/GW/GWILLIAMS/DateTime-Format-W3CDTF-0.08.tar.gz"
+_name=DateTime-Format-W3CDTF
+source="https://cpan.metacpan.org/authors/id/G/GW/GWILLIAMS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

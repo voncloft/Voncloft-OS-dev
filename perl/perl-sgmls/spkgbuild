@@ -5,7 +5,8 @@ name=perl-sgmls
 version=1.1
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/R/RA/RAAB/SGMLSpm-1.1.tar.gz"
+_name=SGMLSpm
+source="https://cpan.metacpan.org/authors/id/R/RA/RAAB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

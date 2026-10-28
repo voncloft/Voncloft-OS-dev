@@ -5,7 +5,8 @@ name=python-meliae
 version=0.5.1
 release=3
 
-source="https://github.com/isaacl/meliae/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/isaacl/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

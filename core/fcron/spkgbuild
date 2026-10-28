@@ -4,7 +4,7 @@
 name=fcron
 version=3.4.0    
 release=1
-source="http://fcron.free.fr/archives/fcron-3.4.0.src.tar.gz"
+source="http://fcron.free.fr/archives/${name}-${version}.src.tar.gz"
 
 options="!checksum"
 

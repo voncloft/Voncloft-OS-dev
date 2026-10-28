@@ -5,7 +5,8 @@ name=perl-sub-override
 version=0.09
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/O/OV/OVID/Sub-Override-0.09.tar.gz"
+_name=Sub-Override
+source="https://cpan.metacpan.org/authors/id/O/OV/OVID/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

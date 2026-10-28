@@ -5,7 +5,8 @@ name=perl-http-cache-transparent
 version=1.4
 release=4
 
-source="https://www.cpan.org/authors/id/M/MA/MATTIASH/HTTP-Cache-Transparent-1.4.tar.gz"
+_name=HTTP-Cache-Transparent
+source="https://cpan.metacpan.org/authors/id/M/MA/MATTIASH/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

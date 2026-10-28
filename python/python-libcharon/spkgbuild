@@ -5,7 +5,8 @@ name=python-libcharon
 version=17.0.0
 release=1
 
-source="https://github.com/Ultimaker/libCharon/archive/refs/tags/v17.0.0-0.tar.gz"
+_name=libCharon
+source="https://github.com/Ultimaker/${_name}/archive/refs/tags/v${version}-0.tar.gz"
 options="!checksum"
 
 build() {

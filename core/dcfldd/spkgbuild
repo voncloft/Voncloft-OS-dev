@@ -6,7 +6,7 @@ release=1
 source="https://downloads.sourceforge.net/$name/$name-${version%.*}-${version##*.}.tar.gz"
 
 build() {
-	cd $name-${version%.*}-${version##*.}
+	cd "$SRC"/dcfldd*/
 	./configure --prefix=/usr --mandir=/usr/share/man
 	make
 	make DESTDIR=$PKG install

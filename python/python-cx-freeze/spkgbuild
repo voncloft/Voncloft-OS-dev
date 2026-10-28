@@ -5,7 +5,8 @@ name=python-cx-freeze
 version=8.7.4
 release=1
 
-source="https://github.com/marcelotduarte/cx_Freeze/archive/refs/tags/$version.tar.gz"
+_name=cx_Freeze
+source="https://github.com/marcelotduarte/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

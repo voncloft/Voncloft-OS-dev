@@ -4,7 +4,7 @@
 name=qemu
 version=11.1.2
 release=1
-source=" https://download.qemu.org/qemu-10.2.1.tar.xz"
+source=" https://download.qemu.org/${name}-${version}.tar.xz"
 options="!checksum"
 
 build() {

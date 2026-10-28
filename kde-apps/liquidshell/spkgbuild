@@ -5,10 +5,10 @@ name=liquidshell
 version=1.10.1
 release=2
 options="!checksum"
-source="liquidshell-1.10.1.tar.xz::https://download.kde.org/stable/liquidshell/liquidshell-1.10.1.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "liquidshell-1.10.1"
+    cd "liquidshell-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

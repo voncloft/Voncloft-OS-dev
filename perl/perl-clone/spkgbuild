@@ -5,7 +5,8 @@ name=perl-clone
 version=0.46
 release=2
 
-source="https://cpan.metacpan.org/authors/id/G/GA/GARU/Clone-0.46.tar.gz"
+_name=Clone
+source="https://cpan.metacpan.org/authors/id/G/GA/GARU/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

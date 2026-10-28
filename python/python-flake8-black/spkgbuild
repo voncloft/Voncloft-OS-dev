@@ -5,7 +5,8 @@ name=python-flake8-black
 version=4.0.0
 release=4
 
-source="https://github.com/peterjc/flake8-black/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/peterjc/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-devel-cycle
 version=1.12
 release=3
 
-source="https://www.cpan.org/modules/by-module//--1.12.tar.gz"
+_name=Devel-Cycle
+source="https://cpan.metacpan.org/authors/id/L/LD/LDS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

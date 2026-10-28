@@ -5,7 +5,8 @@ name=python-bottleneck
 version=1.6.1
 release=3
 
-source="https://github.com/kwgoodman/bottleneck/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/kwgoodman/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

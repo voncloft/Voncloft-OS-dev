@@ -5,7 +5,8 @@ name=python-zope-location
 version=6.0
 release=6
 
-source="https://github.com/zopefoundation/zope.location/archive/refs/tags/$version.tar.gz"
+_name=zope.location
+source="https://github.com/zopefoundation/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

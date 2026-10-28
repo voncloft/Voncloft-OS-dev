@@ -3,11 +3,13 @@
 # depends : meson ninja adwaita-icon-theme
 
 name=pop-icon-theme
-version=20241001164617
+version=20241001164617.g1a575a8e99b4ae629b9b16543a3a04d148632ba9
 release=2
 options="!strip"
+_commit=${version##*.g}
+_name=icon-theme
 _commit=1a575a8e99b4ae629b9b16543a3a04d148632ba9
-source="$name-$_commit.tar.gz::https://github.com/pop-os/icon-theme/archive/1a575a8e99b4ae629b9b16543a3a04d148632ba9.tar.gz"
+source="$name-$_commit.tar.gz::https://github.com/pop-os/${_name}/archive/${_commit}.tar.gz"
 
 build() {
 	cd "$SRC"/icon-theme*/

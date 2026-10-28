@@ -4,7 +4,8 @@
 name=frei0r-plugins
 version=3.6.0
 release=1
-source="https://github.com/dyne/frei0r/archive/refs/tags/v3.6.0.tar.gz"
+_name=frei0r
+source="https://github.com/dyne/${_name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
 	cd "$SRC"/frei0r*/

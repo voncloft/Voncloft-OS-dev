@@ -5,7 +5,8 @@ name=python-tqdm
 version=4.70.1
 release=1
 
-source="https://github.com/tqdm/tqdm/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/tqdm/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

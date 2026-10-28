@@ -5,7 +5,8 @@ name=python-traits
 version=7.3.0
 release=1
 
-source="https://github.com/enthought/traits/archive/refs/tags/o$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/enthought/${_name}/archive/refs/tags/o$version.tar.gz"
 options="!checksum"
 
 build() {

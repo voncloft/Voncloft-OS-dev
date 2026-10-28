@@ -2,10 +2,11 @@
 # depends : kde-deps-installer qt6
 
 name=todolist
-version=0.1.0.git20260621
+version=0.1.0.git20260621.g690599ea27158280995f4b4ef6e9293a33eeb9aa
 release=1
-_commit=690599ea27158280995f4b4ef6e9293a33eeb9aa
-source="$name-$_commit.tar.gz::https://github.com/voncloft/Todolist/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+_name=Todolist
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
 
 build() {
     cd "Todolist-$_commit"

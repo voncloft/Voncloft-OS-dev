@@ -5,7 +5,8 @@ name=perl-universal-isa
 version=1.20171012
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/E/ET/ETHER/UNIVERSAL-isa-1.20171012.tar.gz"
+_name=UNIVERSAL-isa
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

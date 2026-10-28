@@ -4,7 +4,8 @@ name=python-readme-renderer
 version=46.0
 release=3
 
-source="https://github.com/pypa/readme_renderer/archive/refs/tags/$version.tar.gz"
+_name=readme_renderer
+source="https://github.com/pypa/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

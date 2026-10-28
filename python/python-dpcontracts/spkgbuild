@@ -5,7 +5,8 @@ name=python-dpcontracts
 version=0.6.0
 release=7
 
-source="https://pypi.io/packages/source/d/dpcontracts/dpcontracts-0.6.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

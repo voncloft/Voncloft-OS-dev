@@ -5,7 +5,8 @@ name=python-coverage
 version=7.17.0
 release=1
 
-source="https://github.com/nedbat/coveragepy/archive/refs/tags/$version.tar.gz"
+_name=coveragepy
+source="https://github.com/nedbat/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

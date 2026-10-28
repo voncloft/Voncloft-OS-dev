@@ -6,7 +6,9 @@ version=6.9.13.59
 verzion=${version%.*}-${version##*.}
 release=1
 options="libtool"
-source="https://download.imagemagick.org/archive/releases/ImageMagick-6.9.13-59.tar.bz2
+_name=ImageMagick
+_version=${version%.*}-${version##*.}
+source="https://download.imagemagick.org/archive/releases/${_name}-${_version}.tar.bz2
 	ImageMagick-libs_only-1.patch"
 
 build() {

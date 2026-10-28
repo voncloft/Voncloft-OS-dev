@@ -2,11 +2,12 @@
 # depends	: gtk3 gtk-engine-murrine gtk-engines
 
 name=vimix-gtk-themes
-version=20250726094149
+version=20250726094149.gc11aca86854dcf9e33892c59aef4f296d985bb60
 release=1
 options="!strip"
+_commit=${version##*.g}
 _commit=c11aca86854dcf9e33892c59aef4f296d985bb60
-source="$name-$_commit.tar.gz::https://github.com/vinceliuice/vimix-gtk-themes/archive/c11aca86854dcf9e33892c59aef4f296d985bb60.tar.gz
+source="$name-$_commit.tar.gz::https://github.com/vinceliuice/${name}/archive/${_commit}.tar.gz
 	Install.patch"
 
 build() {

@@ -5,11 +5,12 @@ name=python-random2
 version=1.0.1
 release=6
 
-source="https://pypi.python.org/packages/source/r/random2/random2-1.0.1.zip"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.zip"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

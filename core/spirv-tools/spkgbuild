@@ -5,7 +5,8 @@ name=spirv-tools
 version=2026.4
 release=1
 
-source="https://github.com/KhronosGroup/SPIRV-Tools/archive/vulkan-sdk-$version/SPIRV-Tools-vulkan-sdk-$version.tar.gz"
+_name=SPIRV-Tools
+source="https://github.com/KhronosGroup/${_name}/archive/vulkan-sdk-$version/SPIRV-Tools-vulkan-sdk-$version.tar.gz"
 options="!checksum"
 build()
 {

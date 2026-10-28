@@ -5,7 +5,8 @@ name=python-osprofiler
 version=4.4.0
 release=3
 
-source="https://github.com/openstack/osprofiler/archive/refs/tags/e$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=gtk-engine-murrine
 version=0.98.2
 release=1
-source="https://ftp.gnome.org/pub/GNOME/sources/murrine/${version%.*}/murrine-$version.tar.xz"
+_name=murrine
+source="https://ftp.gnome.org/pub/GNOME/sources/${_name}/${version%.*}/${_name}-$version.tar.xz"
 
 build() {
 	cd murrine-$version

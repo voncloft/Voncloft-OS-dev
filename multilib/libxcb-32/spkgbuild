@@ -4,7 +4,8 @@
 name=libxcb-32
 version=1.17.0
 release=1
-source="https://xorg.freedesktop.org/archive/individual/xcb/libxcb-$version.tar.xz"
+_name=${name%-32}
+source="https://xorg.freedesktop.org/archive/individual/xcb/${_name}-$version.tar.xz"
 
 build() {
 	cd libxcb-$version

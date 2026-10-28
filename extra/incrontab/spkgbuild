@@ -5,7 +5,8 @@ name=incrontab
 version=0.5.12
 release=4
 
-source="https://github.com/ar-/incron/archive/refs/tags/$version.tar.gz"
+_name=incron
+source="https://github.com/ar-/${_name}/archive/refs/tags/$version.tar.gz"
 
 build() {
 	cd *

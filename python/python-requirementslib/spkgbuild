@@ -5,7 +5,8 @@ name=python-requirementslib
 version=3.0.0
 release=1
 
-source="https://github.com/sarugaku/requirementslib/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/sarugaku/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

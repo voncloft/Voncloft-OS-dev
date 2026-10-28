@@ -5,7 +5,8 @@ name=python-hjson
 version=3.0.2
 release=3
 
-source="https://github.com/hjson/hjson-py/archive/refs/tags/v$version.tar.gz"
+_name=hjson-py
+source="https://github.com/hjson/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-elasticsearch
 version=9.5.1
 release=3
 
-source="https://github.com/elastic/elasticsearch-py/archive/refs/tags/v$version.tar.gz"
+_name=elasticsearch-py
+source="https://github.com/elastic/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

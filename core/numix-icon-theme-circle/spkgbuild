@@ -2,11 +2,11 @@
 # depends	: gtk3
 
 name=numix-icon-theme-circle
-version=20180405
+version=20260221200336.g6d4a4aad60994e688ab9dc8f021cb4ec86e9e532
 release=1
 options="!strip"
-_commit=be25c10520157507a0ddcad12a8870730ad533e7
-source="$name-$_commit.tar.gz::https://github.com/numixproject/numix-icon-theme-circle/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+source="$name-$_commit.tar.gz::https://github.com/numixproject/${name}/archive/$_commit.tar.gz"
 
 build() {
 	cd $name-$_commit

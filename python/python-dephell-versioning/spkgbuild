@@ -5,7 +5,8 @@ name=python-dephell-versioning
 version=0.1.2
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/dephell_versioning/dephell_versioning-0.1.2.tar.gz"
+_name=dephell_versioning
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

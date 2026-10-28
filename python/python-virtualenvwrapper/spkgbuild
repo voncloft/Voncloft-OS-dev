@@ -5,7 +5,8 @@ name=python-virtualenvwrapper
 version=4.8.4
 release=5
 
-source="https://pypi.org/packages/source/v/virtualenvwrapper/virtualenvwrapper-4.8.4.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/v/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

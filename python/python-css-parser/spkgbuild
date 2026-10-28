@@ -5,7 +5,8 @@ name=python-css-parser
 version=1.0.9
 release=3
 
-source="python-css-parser::git+https://github.com/ebook-utils/css-parser#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

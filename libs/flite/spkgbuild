@@ -4,7 +4,7 @@
 name=flite
 version=2.2
 release=1
-source="flite-$version.tar.gz::https://github.com/festvox/flite/archive/refs/tags/v$version.tar.gz"
+source="flite-$version.tar.gz::https://github.com/festvox/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,10 +5,10 @@ name=xsimd
 version=14.3.0
 release=2
 options="!checksum"
-source="xsimd-14.3.0.tar.gz::https://github.com/xtensor-stack/xsimd/archive/refs/tags/14.3.0.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/xtensor-stack/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    cd "xsimd-14.3.0"
+    cd "xsimd-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

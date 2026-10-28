@@ -5,7 +5,8 @@ name=perl-mime-tools
 version=5.510
 release=8
 
-source="https://www.cpan.org/authors/id/D/DS/DSKOLL/MIME-tools-5.510.tar.gz"
+_name=MIME-tools
+source="https://cpan.metacpan.org/authors/id/D/DS/DSKOLL/${_name}-${version}.tar.gz"
 options="!checksum"ip64
 options="!checksum" 
 

@@ -5,11 +5,12 @@ name=python-dephell-changelogs
 version=0.0.1
 release=3
 
-source="https://github.com/packages/source/archive/refs/tags/$version.tar.gz"
+_name=source
+source="https://github.com/packages/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/dephell_changelogs*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

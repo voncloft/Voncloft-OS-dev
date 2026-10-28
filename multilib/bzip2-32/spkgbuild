@@ -4,7 +4,8 @@
 name=bzip2-32
 version=1.0.8
 release=1
-source="https://www.sourceware.org/pub/bzip2/bzip2-$version.tar.gz"
+_name=${name%-32}
+source="https://www.sourceware.org/pub/${_name}/${_name}-$version.tar.gz"
 
 build() {
 	cd bzip2-$version

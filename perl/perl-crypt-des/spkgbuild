@@ -5,7 +5,8 @@ name=perl-crypt-des
 version=2.07
 release=11
 
-source="https://www.cpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz"
+_name=Crypt-DES
+source="https://cpan.metacpan.org/authors/id/D/DP/DPARIS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

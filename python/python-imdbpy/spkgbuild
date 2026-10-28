@@ -5,7 +5,8 @@ name=python-imdbpy
 version=2022.7.9
 release=3
 
-source="https://files.pythonhosted.org/packages/30/57/d72563c77f63efe08da5645ab92d5f1dd382f6d3460e0b0c4c4ee7847f1c/IMDbPY-2022.7.9.tar.gz"
+_name=IMDbPY
+source="https://files.pythonhosted.org/packages/source/I/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

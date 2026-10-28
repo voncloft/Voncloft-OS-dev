@@ -2,10 +2,12 @@
 # depends	: fontconfig noto-fonts
 
 name=noto-fonts-extra
-version=20230125134016
-_commit=ffebf8c1ee449e544955a7e813c54f9b73848eac
+version=20230125134016.gffebf8c1ee449e544955a7e813c54f9b73848eac
+_commit=${version##*.g}
 release=1
-source="noto-fonts-$version.tar.gz::https://github.com/notofonts/noto-fonts/archive/ffebf8c1ee449e544955a7e813c54f9b73848eac.tar.gz"
+_name=noto-fonts
+_commit=ffebf8c1ee449e544955a7e813c54f9b73848eac
+source="noto-fonts-$version.tar.gz::https://github.com/notofonts/${_name}/archive/${_commit}.tar.gz"
 
 build() {
 	cd "$SRC"/noto-fonts*/

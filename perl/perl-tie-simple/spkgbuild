@@ -5,7 +5,8 @@ name=perl-tie-simple
 version=1.04
 release=8
 
-source="https://cpan.metacpan.org/authors/id/H/HA/HANENKAMP/Tie-Simple-1.04.tar.gz"
+_name=Tie-Simple
+source="https://cpan.metacpan.org/authors/id/H/HA/HANENKAMP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

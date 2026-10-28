@@ -5,7 +5,8 @@ name=python-wsgiproxy2
 version=0.5.1
 release=5
 
-source="https://github.com/gawel/WSGIProxy2/archive/refs/tags/$version.tar.gz"
+_name=WSGIProxy2
+source="https://github.com/gawel/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

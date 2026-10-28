@@ -5,7 +5,8 @@ name=python-senf
 version=1.5.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/s/senf/senf-1.5.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

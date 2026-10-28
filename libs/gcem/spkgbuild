@@ -5,7 +5,7 @@ name=gcem
 version=1.18.0
 release=1
 
-source="$name-$version.tar.gz::https://github.com/kthohr/gcem/archive/refs/tags/v$version.tar.gz"
+source="$name-$version.tar.gz::https://github.com/kthohr/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

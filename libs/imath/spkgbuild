@@ -5,7 +5,8 @@ name=imath
 version=3.2.3
 release=1
 
-source="$name-$version.tar.gz::https://github.com/AcademySoftwareFoundation/Imath/releases/download/v$version/Imath-$version.tar.gz"
+_name=Imath
+source="$name-$version.tar.gz::https://github.com/AcademySoftwareFoundation/${_name}/releases/download/v$version/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

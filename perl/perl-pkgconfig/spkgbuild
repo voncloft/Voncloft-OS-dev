@@ -5,7 +5,8 @@ name=perl-pkgconfig
 version=0.25026
 release=1
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/PkgConfig-0.25026.tar.gz"
+_name=PkgConfig
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

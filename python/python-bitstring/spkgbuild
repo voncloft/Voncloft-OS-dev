@@ -5,7 +5,8 @@ name=python-bitstring
 version=5.0.0
 release=3
 
-source="https://github.com/scott-griffiths/bitstring/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/scott-griffiths/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

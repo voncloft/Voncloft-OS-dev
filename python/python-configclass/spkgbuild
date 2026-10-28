@@ -5,7 +5,8 @@ name=python-configclass
 version=0.2.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/c/configclass/configclass-0.2.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

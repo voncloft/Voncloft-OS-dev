@@ -4,7 +4,8 @@
 name=libdmx-32
 version=1.1.5
 release=1
-source="https://www.x.org/pub/individual/lib/libdmx-1.1.5.tar.gz"
+_name=${name%-32}
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libdmx-$version

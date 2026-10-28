@@ -5,7 +5,8 @@ name=perl-filesys-df
 version=0.92
 release=11
 
-source="https://www.cpan.org/modules/by-module//--0.92.tar.gz"
+_name=Filesys-Df
+source="https://cpan.metacpan.org/authors/id/I/IG/IGUTHRIE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

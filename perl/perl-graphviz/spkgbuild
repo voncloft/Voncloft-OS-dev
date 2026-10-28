@@ -5,7 +5,8 @@ name=perl-graphviz
 version=2.25
 release=6
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETJ/GraphViz-2.25.tar.gz"
+_name=GraphViz
+source="https://cpan.metacpan.org/authors/id/E/ET/ETJ/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

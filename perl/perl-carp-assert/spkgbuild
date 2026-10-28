@@ -5,7 +5,8 @@ name=perl-carp-assert
 version=0.22
 release=3
 
-source="https://cpan.metacpan.org/authors/id/Y/YV/YVES/Carp-Assert-0.22.tar.gz"
+_name=Carp-Assert
+source="https://cpan.metacpan.org/authors/id/Y/YV/YVES/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -1,10 +1,10 @@
 # description	: Fresh and simple personality icon theme
 
 name=vimix-icon-theme
-version=20181214
+version=20251017132630.g8c877b982c7ec7a98b985e069e37032d516ecb27
 release=1
 options="!strip"
-_commit=9665998cac6070d10d370f1c46579ad59cddb9eb
+_commit=${version##*.g}
 source="$name-$_commit.tar.gz::https://github.com/vinceliuice/$name/archive/$_commit.tar.gz"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pytest-services
 version=2.2.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-services/pytest-services-2.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

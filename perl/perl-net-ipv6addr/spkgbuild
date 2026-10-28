@@ -4,7 +4,8 @@ name=perl-net-ipv6addr
 version=1.02
 release=12
 
-source="https://www.cpan.org/authors/id/T/TM/TMONROE/Net-IPv6Addr-0.2.tar.gz"
+_name=Net-IPv6Addr
+source="https://cpan.metacpan.org/authors/id/B/BK/BKB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

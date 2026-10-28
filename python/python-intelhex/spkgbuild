@@ -5,7 +5,8 @@ name=python-intelhex
 version=2.3.0
 release=2
 
-source="https://github.com/python-intelhex/intelhex/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/python-intelhex/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

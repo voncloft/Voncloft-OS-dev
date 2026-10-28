@@ -5,10 +5,10 @@ name=kaichat
 version=0.9.0
 release=2
 options="!checksum"
-source="kaichat-0.9.0.tar.xz::https://download.kde.org/stable/kaichat/kaichat-0.9.0.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "kaichat-0.9.0"
+    cd "kaichat-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

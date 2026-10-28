@@ -4,7 +4,8 @@
 name=libfs-32
 version=1.0.10
 release=1
-source="https://www.x.org/pub/individual/lib/libFS-1.0.10.tar.gz"
+_name=libFS
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libFS-$version

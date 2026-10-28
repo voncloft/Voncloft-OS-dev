@@ -5,7 +5,8 @@ name=perl-super
 version=1.20190531
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/C/CH/CHROMATIC/SUPER-1.20190531.tar.gz"
+_name=SUPER
+source="https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

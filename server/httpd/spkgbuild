@@ -6,8 +6,8 @@ version=2.4.69
 release=1
 
 backup="etc/httpd/httpd.conf"
-source="https://archive.apache.org/dist/httpd/$name-$version.tar.bz2
-	https://www.linuxfromscratch.org/patches/blfs/svn/httpd-2.4.48-blfs_layout-1.patch
+source="https://archive.apache.org/dist/${name}/$name-$version.tar.bz2
+	https://www.linuxfromscratch.org/patches/blfs/svn/${name}-blfs_layout-1.patch
 	httpd"
 
 build() {

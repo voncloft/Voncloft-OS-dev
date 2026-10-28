@@ -5,7 +5,8 @@ name=python-moto
 version=4.1.9
 release=5
 
-source="https://files.pythonhosted.org/packages/source/m/moto/moto-4.1.9.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

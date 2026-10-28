@@ -5,7 +5,8 @@ name=python-colour
 version=0.1.5
 release=8
 
-source="https://files.pythonhosted.org/packages/source/c/colour/colour-0.1.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

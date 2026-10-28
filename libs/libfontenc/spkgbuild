@@ -4,7 +4,7 @@
 name=libfontenc
 version=1.1.9
 release=1
-source="http://ftp.x.org/pub/individual/lib/libfontenc-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/lib/${name}-$version.tar.xz"
 
 build() {
 	cd libfontenc-$version

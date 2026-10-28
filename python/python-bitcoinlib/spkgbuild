@@ -5,7 +5,7 @@ name=python-bitcoinlib
 version=0.12.2
 release=2
 
-source="https://github.com/petertodd/python-bitcoinlib/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/petertodd/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

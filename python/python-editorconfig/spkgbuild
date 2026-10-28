@@ -5,7 +5,8 @@ name=python-editorconfig
 version=0.12.3
 release=1
 
-source="https://pypi.io/packages/source/E/EditorConfig/EditorConfig-0.12.3.tar.gz"
+_name=EditorConfig
+source="https://files.pythonhosted.org/packages/source/E/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

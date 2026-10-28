@@ -4,7 +4,7 @@
 name=isl
 version=0.28
 release=1
-source="https://libisl.sourceforge.io/isl-$version.tar.xz"
+source="https://libisl.sourceforge.io/${name}-$version.tar.xz"
 options="!checksum"
 build() {
 	cd $name-$version

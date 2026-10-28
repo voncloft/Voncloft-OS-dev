@@ -5,7 +5,8 @@ name=python-vcversioner
 version=2.16.0.0
 release=5
 
-source="https://github.com/habnabit/vcversioner/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/habnabit/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-test-tester
 version=0.109
 release=3
 
-source="https://www.cpan.org/authors/id/F/FD/FDALY/Test-Tester-0.109.tar.gz"
+_name=Test-Tester
+source="https://cpan.metacpan.org/authors/id/F/FD/FDALY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

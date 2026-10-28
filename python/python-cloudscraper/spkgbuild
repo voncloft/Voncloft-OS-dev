@@ -5,7 +5,8 @@ name=python-cloudscraper
 version=3.0.0
 release=1
 
-source="https://github.com/VeNoMouS/cloudscraper/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/VeNoMouS/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

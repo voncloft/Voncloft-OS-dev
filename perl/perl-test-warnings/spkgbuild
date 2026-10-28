@@ -5,7 +5,8 @@ name=perl-test-warnings
 version=0.031
 release=6
 
-source="https://search.mcpan.org/CPAN/authors/id/E/ET/ETHER/Test-Warnings-0.031.tar.gz"
+_name=Test-Warnings
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

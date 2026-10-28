@@ -5,7 +5,8 @@ name=perl-pod-spell
 version=1.26
 release=3
 
-source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/Pod-Spell-1.26.tar.gz"
+_name=Pod-Spell
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

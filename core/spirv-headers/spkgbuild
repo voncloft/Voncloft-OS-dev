@@ -2,11 +2,12 @@
 # depends : cmake
 
 name=spirv-headers
-version=2026.08.0
+version=1.4.363.0
 release=1
 
 #source="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz"
-source="https://github.com/KhronosGroup/SPIRV-Headers/archive/refs/tags/vulkan-sdk-1.4.313.0.tar.gz"
+_name=SPIRV-Headers
+source="https://github.com/KhronosGroup/${_name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
 options="!checksum"
 
 build()

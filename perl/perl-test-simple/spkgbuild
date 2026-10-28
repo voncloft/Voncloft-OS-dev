@@ -5,7 +5,8 @@ name=perl-test-simple
 version=1.302195
 release=1
 
-source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302195.tar.gz"
+_name=Test-Simple
+source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

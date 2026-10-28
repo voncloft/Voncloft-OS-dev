@@ -5,7 +5,8 @@ name=python-kazoo
 version=2.9.0
 release=2
 
-source="https://files.pythonhosted.org/packages/source/k/kazoo/kazoo-2.9.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/k/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

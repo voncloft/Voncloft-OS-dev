@@ -5,7 +5,8 @@ name=python-cucumber-tag-expressions
 version=11.0.1
 release=1
 
-source="https://files.pythonhosted.org/packages/50/e0/c2741558040293465d615a4f2555e9180c54a559119b96ff0251dda5fa90/cucumber_tag_expressions-11.0.1.tar.gz"
+_name=cucumber_tag_expressions
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

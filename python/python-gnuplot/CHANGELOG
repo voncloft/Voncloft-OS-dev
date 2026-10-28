@@ -1,0 +1,9 @@
+Date: Wed Oct 28 01:38:47 AM EDT 2026
+
+python-gnuplot
+Version=1.8.git20121004143316.g2c2218dc67bffe10f2e376febc702c1567625b19
+Release=11
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 1.8.g2c2218dc67 to version 1.8.git20121004143316.g2c2218dc67bffe10f2e376febc702c1567625b19

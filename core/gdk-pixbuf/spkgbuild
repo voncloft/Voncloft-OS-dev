@@ -4,7 +4,7 @@
 name=gdk-pixbuf
 version=2.44.8
 release=1
-source="https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.8.tar.xz"
+source="https://download.gnome.org/sources/${name}/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
 	cd $name-$version

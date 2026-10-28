@@ -5,7 +5,8 @@ name=perl-email-mime-contenttype
 version=1.028
 release=2
 
-source="https://www.cpan.org/CPAN/authors/id/R/RJ/RJBS/Email-MIME-ContentType-1.028.tar.gz"
+_name=Email-MIME-ContentType
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

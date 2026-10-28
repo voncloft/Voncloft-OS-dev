@@ -5,7 +5,8 @@ name=perl-task-weaken
 version=1.06
 release=3
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/Task-Weaken-1.06.tar.gz"
+_name=Task-Weaken
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

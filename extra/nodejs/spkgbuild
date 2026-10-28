@@ -4,7 +4,8 @@
 name=nodejs
 version=22.23.4    
 release=1
-source="https://nodejs.org/dist/v22.23.4/node-v22.23.4.tar.xz"
+_name=node
+source="https://nodejs.org/dist/v${version}/${_name}-v${version}.tar.xz"
 
 options="!checksum"
 

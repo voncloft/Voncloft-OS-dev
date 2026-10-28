@@ -5,7 +5,8 @@ name=perl-test-pod-coverage
 version=1.10
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/N/NE/NEILB/Test-Pod-Coverage-1.10.tar.gz"
+_name=Test-Pod-Coverage
+source="https://cpan.metacpan.org/authors/id/N/NE/NEILB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

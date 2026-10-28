@@ -4,7 +4,7 @@
 name=xf86-input-synaptics
 version=1.10.0
 release=1
-source="http://ftp.x.org/pub/individual/driver/xf86-input-synaptics-$version.tar.bz2
+source="http://ftp.x.org/pub/individual/driver/${name}-$version.tar.bz2
 	50-synaptics.conf"
 
 build() {

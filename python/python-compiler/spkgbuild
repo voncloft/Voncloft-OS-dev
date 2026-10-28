@@ -2,14 +2,16 @@
 # depends : python
 
 name=python-compiler
-version=1.1
+version=1.1.git20210128235710.g5a9a30b3d5fae5337ff449030873a58b35e875a4
 release=2
 
-source="git+https://github.com/facebookincubator/python-compiler#commit=5a9a30b3d5fae5337ff449030873a58b35e875a4"
+_name=python-compiler
+_commit=${version##*.g}
+source="${name}-${version}.tar.gz::https://github.com/facebookincubator/${_name}/archive/${_commit}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/compiler*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

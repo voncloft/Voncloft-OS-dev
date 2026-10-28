@@ -5,7 +5,8 @@ name=perl-perlio-utf8-strict
 version=0.009
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/L/LE/LEONT/-0.009.tar.gz"
+_name=PerlIO-utf8_strict
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

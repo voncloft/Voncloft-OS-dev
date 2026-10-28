@@ -5,7 +5,8 @@ name=python-pysnmp
 version=4.4.12
 release=3
 
-source="https://github.com/etingof/pysnmp/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/etingof/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

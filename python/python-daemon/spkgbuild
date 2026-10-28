@@ -5,7 +5,7 @@ name=python-daemon
 version=2.3.0
 release=5
 
-source="https://files.pythonhosted.org/packages/source/p/python-daemon/python-daemon-2.3.0.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

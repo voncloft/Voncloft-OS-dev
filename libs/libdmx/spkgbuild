@@ -4,7 +4,7 @@
 name=libdmx
 version=1.1.5
 release=1
-source="http://ftp.x.org/pub/individual/lib/libdmx-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/lib/${name}-$version.tar.xz"
 
 build() {
 	cd libdmx-$version

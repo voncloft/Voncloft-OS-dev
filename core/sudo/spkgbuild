@@ -5,7 +5,7 @@ name=sudo
 version=1.9.17p1
 release=1
 
-source="https://www.sudo.ws/dist/sudo-$version.tar.gz"
+source="https://www.sudo.ws/dist/${name}-$version.tar.gz"
 
 options="!checksum"
 

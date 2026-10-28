@@ -5,10 +5,10 @@ name=kmymoney
 version=5.2.2
 release=2
 options="!checksum"
-source="kmymoney-5.2.2.tar.xz::https://download.kde.org/stable/kmymoney/5.2.2/kmymoney-5.2.2.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
-    cd "kmymoney-5.2.2"
+    cd "kmymoney-${version}"
     plasma-package-installer \
         -DBUILD_WITH_QT6=ON
     cd build

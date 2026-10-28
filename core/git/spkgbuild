@@ -4,7 +4,7 @@
 name=git
 version=2.56.0
 release=1
-source="https://github.com/git/git/archive/v${version}.tar.gz"
+source="https://github.com/git/${name}/archive/v${version}.tar.gz"
 options="!checksum"
 build() {
 	cd $name-$version

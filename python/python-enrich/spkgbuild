@@ -5,7 +5,8 @@ name=python-enrich
 version=1.2.7
 release=1
 
-source=""
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/e/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

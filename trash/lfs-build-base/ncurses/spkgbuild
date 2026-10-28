@@ -4,7 +4,7 @@
 name=ncurses
 version=6.5
 release=20250531
-source="https://invisible-mirror.net/archives/ncurses/current/ncurses-$version-$release.tgz"
+source="https://invisible-mirror.net/archives/ncurses/current/${name}-$version-$release.tgz"
 
 build() {
 	cd $name-$version-$release

@@ -5,7 +5,8 @@ name=perl-parallel-forkmanager
 version=2.02
 release=2
 
-source="https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Parallel-ForkManager-2.02.tar.gz"
+_name=Parallel-ForkManager
+source="https://cpan.metacpan.org/authors/id/Y/YA/YANICK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

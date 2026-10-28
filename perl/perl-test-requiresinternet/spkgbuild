@@ -5,7 +5,8 @@ name=perl-test-requiresinternet
 version=0.05
 release=6
 
-source="https://search.mcpan.org/CPAN/authors/id/M/MA/MALLEN/Test-RequiresInternet-0.05.tar.gz"
+_name=Test-RequiresInternet
+source="https://cpan.metacpan.org/authors/id/M/MA/MALLEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,10 +5,11 @@ name=python-pip
 version=26.2.2
 release=2
 options="!checksum"
-source="python-pip-26.2.2.tar.gz::https://files.pythonhosted.org/packages/fa/e8/0842d757e483e895e670f655084cfe8b8c72580c6769a76b30b2789a0608/pip-26.2.2.tar.gz"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 
 build() {
-    cd "pip-26.2.2"
+    cd "${_name}-${version}"
     pip3 wheel --no-build-isolation --no-deps --no-cache-dir -w dist .
     pip3 install --no-index --no-deps --ignore-installed --no-user \
         --prefix=/usr --root="$PKG" dist/*.whl

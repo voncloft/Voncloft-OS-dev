@@ -4,7 +4,7 @@
 name=libssh2
 version=1.11.1
 release=1
-source="https://github.com/libssh2/libssh2/releases/download/libssh2-$version/libssh2-$version.tar.xz"
+source="https://github.com/libssh2/${name}/releases/download/${name}-$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

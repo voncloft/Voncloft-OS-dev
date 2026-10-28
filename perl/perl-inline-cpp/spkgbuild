@@ -5,7 +5,8 @@ name=perl-inline-cpp
 version=0.80
 release=3
 
-source="https://cpan.metacpan.org/authors/id/D/DA/DAVIDO/Inline-CPP-0.80.tar.gz"
+_name=Inline-CPP
+source="https://cpan.metacpan.org/authors/id/D/DA/DAVIDO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

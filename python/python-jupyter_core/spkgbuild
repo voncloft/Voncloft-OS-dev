@@ -5,7 +5,8 @@ name=python-jupyter_core
 version=5.9.1
 release=4
 
-source="https://github.com/jupyter/jupyter_core/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/jupyter/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

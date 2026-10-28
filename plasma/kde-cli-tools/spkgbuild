@@ -2,10 +2,10 @@
 # depends : extra-cmake-modules kcmutils kcompletion kconfig kcoreaddons kde-deps-installer kdesu kdoctools ki18n kiconthemes kio kparts kservice kwidgetsaddons kwindowsystem qt6
 
 name=kde-cli-tools
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/kde-cli-tools-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

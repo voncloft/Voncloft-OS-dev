@@ -5,7 +5,8 @@ name=python-jellyfish
 version=0.11.2
 release=3
 
-source=""
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/j/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

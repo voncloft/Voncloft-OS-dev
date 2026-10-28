@@ -5,7 +5,8 @@ name=perl-http-daemon
 version=6.16
 release=2
 
-source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTTP-Daemon-6.16.tar.gz"
+_name=HTTP-Daemon
+source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

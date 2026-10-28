@@ -5,8 +5,9 @@ name=gcompris
 version=26.2
 release=2
 options="!checksum"
-source="gcompris-26.2.tar.xz::https://download.kde.org/stable/gcompris/qt/src/gcompris-qt-26.2.tar.xz
-    qml-box2d-e3674e0fe030c406a1d915e47eab760624fffa55.tar.gz::https://github.com/qml-box2d/qml-box2d/archive/e3674e0fe030c406a1d915e47eab760624fffa55.tar.gz"
+_name=gcompris-qt
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/gcompris/qt/src/${_name}-${version}.tar.xz
+    ${name}-${version}.tar.gz::https://github.com/qml-box2d/qml-box2d/archive/e3674e0fe030c406a1d915e47eab760624fffa55.tar.gz"
 
 build() {
     cd "gcompris-qt-${version}"

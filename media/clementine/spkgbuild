@@ -6,7 +6,8 @@ version=1.4.3
 release=1
 
 _misc=rc1-494-gdfb953a78
-source="https://github.com/clementine-player/Clementine/archive/$version/$name-$version.tar.gz"
+_name=Clementine
+source="https://github.com/clementine-player/${_name}/archive/$version/$name-$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,7 @@ name=python-feedgen
 version=1.0.0
 release=2
 
-source="https://github.com/lkiesow/python-feedgen/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/lkiesow/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

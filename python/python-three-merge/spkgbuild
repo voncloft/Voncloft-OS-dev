@@ -5,7 +5,8 @@ name=python-three-merge
 version=0.1.1
 release=1
 
-source="https://github.com/spyder-ide/three-merge/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/spyder-ide/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

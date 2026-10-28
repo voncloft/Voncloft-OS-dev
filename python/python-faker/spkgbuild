@@ -5,7 +5,8 @@ name=python-faker
 version=40.43.0
 release=1
 
-source="https://github.com/joke2k/faker/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/joke2k/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

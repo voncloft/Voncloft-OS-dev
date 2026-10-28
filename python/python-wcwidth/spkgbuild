@@ -5,7 +5,8 @@ name=python-wcwidth
 version=0.2.6
 release=3
 
-source="python-wcwidth::git+https://github.com/jquast/wcwidth#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

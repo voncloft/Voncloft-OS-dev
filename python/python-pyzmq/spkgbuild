@@ -5,7 +5,8 @@ name=python-pyzmq
 version=25.0.2
 release=1
 
-source="python-pyzmq::git+https://github.com/zeromq/pyzmq#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,7 @@ name=wine
 version=6.23
 release=1
 #source="https://dl.winehq.org/wine/source/${version%%.*}.0/$name-$version.tar.xz"
-source="https://dl.winehq.org/wine/source/6.x/$name-$version.tar.xz"
+source="https://dl.winehq.org/${name}/source/6.x/$name-$version.tar.xz"
 options="!checksum"
 ### NOTE ###
 #

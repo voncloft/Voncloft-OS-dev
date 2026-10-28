@@ -5,7 +5,8 @@ name=python-hcloud
 version=2.27.0
 release=2
 
-source="https://github.com/hetznercloud/hcloud-python/archive/refs/tags/v$version.tar.gz"
+_name=hcloud-python
+source="https://github.com/hetznercloud/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

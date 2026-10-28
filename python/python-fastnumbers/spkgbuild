@@ -5,7 +5,8 @@ name=python-fastnumbers
 version=5.0.1
 release=2
 
-source="https://files.pythonhosted.org/packages/source/f/fastnumbers/fastnumbers-5.0.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

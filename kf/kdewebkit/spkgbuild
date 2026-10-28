@@ -7,7 +7,7 @@ name=kdewebkit
 version=6.31.0
 release=1
 
-source="https://download.kde.org/stable/frameworks/5.116/portingAids/kdewebkit-$version.tar.xz"
+source="https://download.kde.org/stable/frameworks/${version%.*}/portingAids/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

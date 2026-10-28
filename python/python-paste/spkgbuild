@@ -5,7 +5,8 @@ name=python-paste
 version=3.5.2
 release=3
 
-source="https://files.pythonhosted.org/packages/source/P/Paste/Paste-3.5.2.tar.gz"
+_name=Paste
+source="https://files.pythonhosted.org/packages/source/P/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

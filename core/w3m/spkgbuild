@@ -4,8 +4,10 @@
 name=w3m
 version=0.5.3.git20230121_1
 release=3
-source="https://downloads.sourceforge.net/w3m/w3m-$version.tar.gz
-	http://www.linuxfromscratch.org/patches/blfs/8.3/w3m-0.5.3-bdwgc72-1.patch"
+_source2_version=8.3
+_source2_version2=0.5.3
+source="https://downloads.sourceforge.net/${name}/${name}-$version.tar.gz
+	http://www.linuxfromscratch.org/patches/blfs/${_source2_version}/${name}-${_source2_version2}-bdwgc72-1.patch"
 
 build() {
 	cd $name-$version

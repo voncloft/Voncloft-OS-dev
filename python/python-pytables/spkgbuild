@@ -5,7 +5,8 @@ name=python-pytables
 version=3.11.1
 release=7
 
-source="https://github.com/PyTables/PyTables/archive/refs/tags/v$version.tar.gz"
+_name=PyTables
+source="https://github.com/PyTables/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

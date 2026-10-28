@@ -5,7 +5,8 @@ name=perl-proc-simple
 version=1.32
 release=6
 
-source="https://search.mcpan.org/CPAN/authors/id/M/MS/MSCHILLI/Proc-Simple-1.32.tar.gz"
+_name=Proc-Simple
+source="https://cpan.metacpan.org/authors/id/M/MS/MSCHILLI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

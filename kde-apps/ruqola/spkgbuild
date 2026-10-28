@@ -5,10 +5,10 @@ name=ruqola
 version=2.9.0
 release=2
 options="!checksum"
-source="ruqola-2.9.0.tar.xz::https://download.kde.org/stable/ruqola/ruqola-2.9.0.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "ruqola-2.9.0"
+    cd "ruqola-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

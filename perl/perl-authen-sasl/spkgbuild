@@ -5,7 +5,8 @@ name=perl-authen-sasl
 version=2.16
 release=8
 
-source="https://www.cpan.org/authors/id/G/GB/GBARR/Authen-SASL-2.16.tar.gz"
+_name=Authen-SASL
+source="https://cpan.metacpan.org/authors/id/G/GB/GBARR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

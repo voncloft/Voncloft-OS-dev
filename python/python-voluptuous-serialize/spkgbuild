@@ -5,7 +5,8 @@ name=python-voluptuous-serialize
 version=2.7.0
 release=3
 
-source="https://files.pythonhosted.org/packages/53/70/03a9b61324e1bb8b16682455b8b953bccd1001a28e43478c86f539e26285/voluptuous_serialize-2.7.0.tar.gz"
+_name=voluptuous_serialize
+source="https://files.pythonhosted.org/packages/source/v/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

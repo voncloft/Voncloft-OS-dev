@@ -4,7 +4,8 @@
 name=libxaw-32
 version=1.0.16
 release=1
-source="https://www.x.org/pub/individual/lib/libXaw-1.0.16.tar.gz"
+_name=libXaw
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXaw-$version

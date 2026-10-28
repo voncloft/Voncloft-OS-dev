@@ -7,7 +7,7 @@ release=1
 source="https://www.playonlinux.com/script_files/PlayOnLinux/$version/PlayOnLinux_$version.tar.gz"
 
 build() {
-	cd $name
+	cd "$SRC"/playonlinux*/
 	sed -i "s/libexec/bin/g" Makefile
 	make PREFIX=/usr
 	make DESTDIR=$PKG install

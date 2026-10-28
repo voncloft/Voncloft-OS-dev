@@ -5,7 +5,8 @@ name=p8-platform
 version=2.2.0
 release=4
 
-source="https://github.com/Pulse-Eight/platform/archive/$name-${version}.tar.gz"
+_name=platform
+source="https://github.com/Pulse-Eight/${_name}/archive/$name-${version}.tar.gz"
 options="!checksum"
 
 build() {

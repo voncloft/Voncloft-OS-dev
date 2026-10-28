@@ -5,11 +5,12 @@ name=python-pypeg2
 version=2.15.2
 release=7
 
-source="http://fdik.org/pyPEG2/pyPEG2-2.15.2.tar.gz"
+_name=pyPEG2
+source="http://fdik.org/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pyPEG2*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

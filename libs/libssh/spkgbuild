@@ -5,7 +5,7 @@ name=libssh
 version=0.12.2
 release=1
 
-source="$name-$version.tar.xz::https://www.libssh.org/files/0.12/libssh-$version.tar.xz"
+source="$name-$version.tar.xz::https://www.libssh.org/files/${version%.*}/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

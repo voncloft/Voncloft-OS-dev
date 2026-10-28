@@ -5,7 +5,8 @@ name=perl-test-mock-guard
 version=0.10
 release=3
 
-source="http://search.cpan.org/CPAN/authors/id/X/XA/XAICRON/Test-Mock-Guard-0.10.tar.gz"
+_name=Test-Mock-Guard
+source="https://cpan.metacpan.org/authors/id/X/XA/XAICRON/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

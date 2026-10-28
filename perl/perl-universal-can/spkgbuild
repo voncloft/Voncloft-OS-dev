@@ -5,7 +5,8 @@ name=perl-universal-can
 version=1.20140328
 release=4
 
-source="https://www.cpan.org/authors/id/C/CH/CHROMATIC/UNIVERSAL-can-1.20140328.tar.gz"
+_name=UNIVERSAL-can
+source="https://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

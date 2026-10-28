@@ -5,7 +5,8 @@ name=python-resolvelib
 version=1.2.1
 release=1
 
-source="https://github.com/sarugaku/resolvelib/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/sarugaku/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

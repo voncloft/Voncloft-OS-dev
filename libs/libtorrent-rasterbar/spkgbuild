@@ -5,7 +5,8 @@ name=libtorrent-rasterbar
 version=2.1.2
 release=1
 
-source="https://github.com/arvidn/libtorrent/releases/download/v$version/$name-$version.tar.gz"
+_name=libtorrent
+source="https://github.com/arvidn/${_name}/releases/download/v$version/$name-$version.tar.gz"
 options="!checksum"
 
 build()

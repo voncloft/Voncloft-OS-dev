@@ -5,7 +5,8 @@ name=python-blessings
 version=1.7
 release=7
 
-source="https://files.pythonhosted.org/packages/source/b/blessings/blessings-1.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/b/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

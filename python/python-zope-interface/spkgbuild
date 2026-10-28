@@ -6,7 +6,8 @@ name=python-zope-interface
 version=6.0
 release=3
 
-source="https://pypi.io/packages/source/z/zope.interface/zope.interface-6.0.tar.gz"
+_name=zope.interface
+source="https://files.pythonhosted.org/packages/source/z/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

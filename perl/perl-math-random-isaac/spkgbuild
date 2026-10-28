@@ -5,7 +5,8 @@ name=perl-math-random-isaac
 version=1.004
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/J/JA/JAWNSY/Math-Random-ISAAC-1.004.tar.gz"
+_name=Math-Random-ISAAC
+source="https://cpan.metacpan.org/authors/id/J/JA/JAWNSY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

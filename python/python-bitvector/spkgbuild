@@ -5,7 +5,8 @@ name=python-bitvector
 version=3.5.0
 release=4
 
-source="https://engineering.purdue.edu/kak/dist/BitVector-3.5.0.tar.gz"
+_name=BitVector
+source="https://engineering.purdue.edu/kak/dist/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

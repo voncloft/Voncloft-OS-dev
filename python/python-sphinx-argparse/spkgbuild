@@ -5,7 +5,8 @@ name=python-sphinx-argparse
 version=0.4.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/s/sphinx-argparse/sphinx_argparse-0.4.0.tar.gz"
+_name=sphinx_argparse
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

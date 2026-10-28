@@ -5,7 +5,8 @@ name=perl-dbi
 version=1.643
 release=2
 
-source="https://www.cpan.org/authors/id/T/TI/TIMB/DBI-1.643.tar.gz"
+_name=DBI
+source="https://cpan.metacpan.org/authors/id/T/TI/TIMB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

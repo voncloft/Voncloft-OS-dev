@@ -5,7 +5,8 @@ name=python-bleach
 version=6.0.0
 release=1
 
-source="https://pypi.org/packages/source/b/bleach/bleach-6.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/b/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-nox
 version=2026.10.20
 release=1
 
-source="https://github.com/theacodes/nox/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/theacodes/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

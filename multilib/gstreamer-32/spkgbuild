@@ -4,7 +4,8 @@
 name=gstreamer-32
 version=1.29.2
 release=1
-source="https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.29.2.tar.xz"
+_name=${name%-32}
+source="https://gstreamer.freedesktop.org/src/${_name}/${_name}-${version}.tar.xz"
 
 build() {
 	cd gstreamer-$version

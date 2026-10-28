@@ -4,10 +4,11 @@
 name=libwnck2
 version=2.30.7
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/libwnck/${version%.*}/libwnck-$version.tar.xz"
+_name=libwnck
+source="https://ftp.gnome.org/pub/gnome/sources/${_name}/${version%.*}/${_name}-$version.tar.xz"
 
 build() {
-	cd libwnck-$version
+	cd "$SRC"/libwnck*/
 
 	./configure --prefix=/usr \
 	            --disable-static \

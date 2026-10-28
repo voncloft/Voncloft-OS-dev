@@ -5,7 +5,8 @@ name=python-kombu
 version=5.7.0
 release=3
 
-source="https://github.com/celery/kombu/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/celery/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

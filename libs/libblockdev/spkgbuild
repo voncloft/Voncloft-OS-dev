@@ -4,7 +4,7 @@
 name=libblockdev
 version=3.5.0
 release=1
-source="https://github.com/storaged-project/libblockdev/releases/download/$version/$name-$version.tar.gz"
+source="https://github.com/storaged-project/${name}/releases/download/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

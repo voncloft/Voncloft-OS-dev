@@ -5,7 +5,8 @@ name=perl-ffi-checklib
 version=0.31
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/FFI-CheckLib-0.31.tar.gz"
+_name=FFI-CheckLib
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-term-progressbar
 version=2.23
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/M/MA/MANWAR/Term-ProgressBar-2.23.tar.gz"
+_name=Term-ProgressBar
+source="https://cpan.metacpan.org/authors/id/M/MA/MANWAR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

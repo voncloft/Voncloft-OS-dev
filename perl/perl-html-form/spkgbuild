@@ -5,7 +5,8 @@ name=perl-html-form
 version=6.11
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/S/SI/SIMBABQUE/HTML-Form-6.11.tar.gz"
+_name=HTML-Form
+source="https://cpan.metacpan.org/authors/id/S/SI/SIMBABQUE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

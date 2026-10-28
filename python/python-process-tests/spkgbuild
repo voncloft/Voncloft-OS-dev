@@ -5,7 +5,8 @@ name=python-process-tests
 version=2.1.2
 release=3
 
-source="https://pypi.io/packages/source/p/process-tests/process-tests-2.1.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

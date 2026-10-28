@@ -4,7 +4,7 @@
 name=xkeyboard-config
 version=2.48
 release=1
-source="http://xorg.freedesktop.org/archive/individual/data/xkeyboard-config/xkeyboard-config-$version.tar.xz"
+source="http://xorg.freedesktop.org/archive/individual/data/${name}/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

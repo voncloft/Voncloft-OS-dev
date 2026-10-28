@@ -5,7 +5,7 @@ name=kdevelop-pg-qt
 version=2.4.0
 release=1
 
-source="https://download.kde.org/stable/kdevelop-pg-qt/$version/src/kdevelop-pg-qt-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/$version/src/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

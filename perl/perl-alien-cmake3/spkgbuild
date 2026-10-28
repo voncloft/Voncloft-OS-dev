@@ -5,7 +5,8 @@ name=perl-alien-cmake3
 version=0.08
 release=3
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-cmake3-0.08.tar.gz"
+_name=Alien-cmake3
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

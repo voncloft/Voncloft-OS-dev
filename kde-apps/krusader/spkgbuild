@@ -5,7 +5,7 @@ name=krusader
 version=2.9.0
 release=2
 options="!checksum"
-source="krusader-2.9.0.tar.gz::https://invent.kde.org/utilities/krusader/-/archive/v2.9.0/krusader-v2.9.0.tar.gz"
+source="${name}-${version}.tar.gz::https://invent.kde.org/utilities/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     cd "krusader-v${version}"

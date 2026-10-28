@@ -5,7 +5,8 @@ name=python-responses
 version=0.26.3
 release=1
 
-source="https://github.com/getsentry/responses/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/getsentry/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

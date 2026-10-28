@@ -5,7 +5,8 @@ name=python-trio-asyncio
 version=0.16.0
 release=1
 
-source="https://files.pythonhosted.org/packages/e1/76/b6317ad0536e155a9cce6c3f0db9a3b3f63e579e176779712ef3403d4af5/trio_asyncio-0.16.0.tar.gz"
+_name=trio_asyncio
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

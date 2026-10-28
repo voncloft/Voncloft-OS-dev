@@ -5,7 +5,8 @@ name=python-httptools
 version=0.9.0
 release=4
 
-source="https://files.pythonhosted.org/packages/3a/ec/deed52912ab7ca6c0b12859330c571c60c61d7267b341b28951fcbf13694/httptools-0.9.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

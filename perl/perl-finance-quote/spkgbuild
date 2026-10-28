@@ -5,7 +5,8 @@ name=perl-finance-quote
 version=1.5400
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/B/BP/BPSCHUCK/Finance-Quote-1.54.tar.gz"
+_name=Finance-Quote
+source="https://cpan.metacpan.org/authors/id/B/BP/BPSCHUCK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-bytes-random-secure
 version=0.29
 release=8
 
-source="https://cpan.metacpan.org/authors/id/D/DA/DAVIDO/Bytes-Random-Secure-0.29.tar.gz"
+_name=Bytes-Random-Secure
+source="https://cpan.metacpan.org/authors/id/D/DA/DAVIDO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

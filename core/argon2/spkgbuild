@@ -5,7 +5,8 @@ name=argon2
 version=20190702
 release=3
 
-source="https://github.com/P-H-C/phc-winner-argon2/archive/${version}/${name}-${version}.tar.gz"
+_name=phc-winner-argon2
+source="https://github.com/P-H-C/${_name}/archive/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

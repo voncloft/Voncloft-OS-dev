@@ -5,7 +5,7 @@ name=atomicparsley
 version=20240608.083822.1
 release=1
 
-source="https://github.com/wez/atomicparsley/archive/$version/$name-$version.tar.gz"
+source="https://github.com/wez/${name}/archive/$version/$name-$version.tar.gz"
 options="!checksum"
 
 build() {

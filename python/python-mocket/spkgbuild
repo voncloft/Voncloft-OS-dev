@@ -5,7 +5,7 @@ name=python-mocket
 version=3.15.0
 release=1
 
-source="https://github.com/mindflayer/python-mocket/archive/refs/tags/$version.tar.gz"
+source="https://github.com/mindflayer/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

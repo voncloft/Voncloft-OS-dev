@@ -5,7 +5,8 @@ name=python-pplpy
 version=0.8.7
 release=1
 
-source="https://pypi.io/packages/source/p/pplpy/pplpy-0.8.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

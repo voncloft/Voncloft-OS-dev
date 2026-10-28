@@ -5,7 +5,8 @@ name=perl-image-exiftool
 version=13.55
 release=1
 
-source="https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-13.55.tar.gz"
+_name=Image-ExifTool
+source="https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

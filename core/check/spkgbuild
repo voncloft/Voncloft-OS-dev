@@ -4,7 +4,7 @@
 name=check
 version=0.15.2    
 release=1
-source="https://github.com/libcheck/check/releases/download/$version/check-$version.tar.gz"
+source="https://github.com/libcheck/${name}/releases/download/$version/${name}-$version.tar.gz"
 
 options="!checksum"
 

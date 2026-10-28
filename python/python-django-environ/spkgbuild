@@ -5,7 +5,8 @@ name=python-django-environ
 version=0.10.0
 release=5
 
-source="https://files.pythonhosted.org/packages/source/d/django-environ/django-environ-0.10.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

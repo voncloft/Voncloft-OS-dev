@@ -2,11 +2,12 @@
 # depends : dnsmasq
 
 name=blacklist-youtubeads
-version=1.0.git20261026155503
+version=1.0.git20261026155503.g0e337ddf4bb7434a019ac15920259401195bfda4
 release=2
 
-_commit=0e337ddf4bb7434a019ac15920259401195bfda4
-source="youtubelist-$version.txt::https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/$_commit/youtubelist.txt"
+_commit=${version##*.g}
+_name=youTube_ads_4_pi-hole
+source="youtubelist-$version.txt::https://raw.githubusercontent.com/kboghdady/${_name}/$_commit/youtubelist.txt"
 
 build() {
 	mkdir -pv $PKG/etc/blacklist-hosts/youtube

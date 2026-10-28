@@ -5,7 +5,8 @@ name=python-zope-i18nmessageid
 version=8.4
 release=3
 
-source="https://github.com/zopefoundation/zope.i18nmessageid/archive/refs/tags/$version.tar.gz"
+_name=zope.i18nmessageid
+source="https://github.com/zopefoundation/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

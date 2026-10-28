@@ -5,10 +5,10 @@ name=libomemo-c
 version=0.5.1
 release=2
 options="!checksum"
-source="libomemo-c-0.5.1.tar.gz::https://github.com/dino/libomemo-c/releases/download/v0.5.1/libomemo-c-0.5.1.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/dino/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-    cd "libomemo-c-0.5.1"
+    cd "libomemo-c-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

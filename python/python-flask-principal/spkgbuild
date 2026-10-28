@@ -5,7 +5,8 @@ name=python-flask-principal
 version=0.5.0
 release=6
 
-source="https://github.com/mattupstate/flask-principal/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mattupstate/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

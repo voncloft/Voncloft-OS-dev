@@ -5,7 +5,8 @@ name=python-docker
 version=7.2.0
 release=1
 
-source="https://github.com/docker/docker-py/archive/refs/tags/$version.tar.gz"
+_name=docker-py
+source="https://github.com/docker/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

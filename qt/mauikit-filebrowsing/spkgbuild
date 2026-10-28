@@ -5,10 +5,10 @@ name=mauikit-filebrowsing
 version=4.0.2
 release=2
 options="!checksum"
-source="mauikit-filebrowsing-4.0.2.tar.xz::https://download.kde.org/stable/maui/mauikit-filebrowsing/4.0.2/mauikit-filebrowsing-4.0.2.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/maui/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
-    cd "mauikit-filebrowsing-4.0.2"
+    cd "mauikit-filebrowsing-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

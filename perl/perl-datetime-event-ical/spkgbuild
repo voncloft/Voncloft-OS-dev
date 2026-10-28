@@ -5,7 +5,8 @@ name=perl-datetime-event-ical
 version=0.13
 release=6
 
-source="https://www.cpan.org/authors/id/F/FG/FGLOCK/DateTime-Event-ICal-0.13.tar.gz"
+_name=DateTime-Event-ICal
+source="https://cpan.metacpan.org/authors/id/F/FG/FGLOCK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

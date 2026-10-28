@@ -1,11 +1,12 @@
+# Only report uversion; update-repo owns the version= edit.
 # Read upstream release metadata and keep version, source, and SHA-256 together.
 source=https://persistent.oaistatic.com/codex-app-prod/linux/deb/dists/stable/main/binary-amd64/Packages
 url=$source
 
 get_generic()
 {
-    local detected recipe comparison edit
-    local -a fields sed_args
+    local detected recipe
+    local -a fields
     unset uversion
     recipe="${ppath%/*}/spkgbuild"
     detected=$(python3 - "$recipe" <<'PYRELEASE'
@@ -27,35 +28,12 @@ try:
         records.append((tuple(map(int,version.split('.'))),version,path,digest))
     if not records:raise ValueError('no stable amd64 ChatGPT package')
     _,version,path,digest=max(records)
-    updates={'_package_path':path,'_sha256':digest}
-    # Require exactly the fields that will be changed; do not partially update.
-    recipe=pathlib.Path(sys.argv[1]).read_text()
-    for key in updates:
-        if len(re.findall(r'^'+key+r'=.*$',recipe,re.M))!=1:
-            raise ValueError('missing or duplicate recipe field '+key)
     print(version)
-    for key,value in updates.items():print('s|^'+key+'=.*$|'+key+'='+value+'|')
+
 except (OSError,ValueError,KeyError) as error:
     sys.exit('ERROR: Invalid upstream release metadata: '+str(error))
 PYRELEASE
     ) || return 1
-    mapfile -t fields <<< "$detected"
-    uversion=${fields[0]}
-    if vercomp "$uversion" "$version" >/dev/null; then
-        return 0
-    else
-        comparison=$?
-    fi
-    [ "$comparison" = 2 ] || return 0
-    sed_args=()
-    for edit in "${fields[@]:1}"; do
-        sed_args+=(-e "$edit")
-    done
-    if [ -n "${test_upgrade:-}" ]; then
-        printf 'sed -i' >> test_updates.sh
-        printf ' %q' "${sed_args[@]}" -- "$recipe" >> test_updates.sh
-        printf '\n' >> test_updates.sh
-    else
-        sed -i "${sed_args[@]}" -- "$recipe" || return 1
-    fi
+    uversion=$detected
+    [ -n "$uversion" ]
 }

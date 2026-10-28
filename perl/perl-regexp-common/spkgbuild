@@ -5,7 +5,8 @@ name=perl-regexp-common
 version=2017060201
 release=3
 
-source="https://cpan.metacpan.org/authors/id/A/AB/ABIGAIL/Regexp-Common-2017060201.tar.gz"
+_name=Regexp-Common
+source="https://cpan.metacpan.org/authors/id/A/AB/ABIGAIL/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-gtk2-ex-formfactory
 version=0.67
 release=5
 
-source="https://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/Gtk2-Ex-FormFactory-0.67.tar.gz"
+_name=Gtk2-Ex-FormFactory
+source="https://www.exit1.org/packages/${_name}/dist/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

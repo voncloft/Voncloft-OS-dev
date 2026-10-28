@@ -5,7 +5,8 @@ name=python-langdetect
 version=1.0.9
 release=3
 
-source="https://files.pythonhosted.org/packages/source/l/langdetect/langdetect-1.0.9.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/l/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

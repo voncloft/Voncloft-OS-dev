@@ -2,10 +2,11 @@
 # depends : python-celery
 
 name=python-pytest-celery
-version=0.0.0a1
+version=0.0.0
 release=4
 
-source="https://pypi.io/packages/source/p/pytest-celery/pytest-celery-0.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pygithub
 version=2.10.0
 release=1
 
-source="https://github.com/PyGithub/PyGithub/archive/refs/tags/v$version.tar.gz"
+_name=PyGithub
+source="https://github.com/PyGithub/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

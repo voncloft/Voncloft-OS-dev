@@ -5,11 +5,12 @@ name=python-crc16
 version=0.1.1
 release=6
 
-source="https://pypi.python.org/packages/source/c/crc16/crc16-0.1.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/crc16*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

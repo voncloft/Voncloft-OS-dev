@@ -5,7 +5,8 @@ name=python-threadpoolctl
 version=3.1.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/t/threadpoolctl/threadpoolctl-3.1.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

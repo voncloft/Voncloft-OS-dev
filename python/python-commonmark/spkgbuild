@@ -5,7 +5,8 @@ name=python-commonmark
 version=0.9.2
 release=3
 
-source="https://github.com/readthedocs/commonmark.py/archive/refs/tags/$version.tar.gz"
+_name=commonmark.py
+source="https://github.com/readthedocs/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

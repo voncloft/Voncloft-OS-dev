@@ -5,7 +5,8 @@ name=python-flake8-docstrings
 version=1.7.0
 release=3
 
-source="python-flake8-docstrings::git+https://github.com/pycqa/flake8-docstrings#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=flake8_docstrings
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

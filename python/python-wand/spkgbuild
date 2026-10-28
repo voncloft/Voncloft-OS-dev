@@ -5,7 +5,8 @@ name=python-wand
 version=0.7.2
 release=1
 
-source="https://github.com/emcconville/wand/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/emcconville/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -3,7 +3,7 @@
 name=pcre
 version=8.45
 release=1
-source="https://sourceforge.net/projects/pcre/files/pcre/$version/pcre-$version.tar.bz2"
+source="https://sourceforge.net/projects/${name}/files/${name}/$version/${name}-$version.tar.bz2"
 
 build() {
 	cd $name-$version

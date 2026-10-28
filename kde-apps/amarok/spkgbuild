@@ -5,10 +5,10 @@ name=amarok
 version=3.3.3
 release=2
 options="!checksum"
-source="amarok-3.3.3.tar.xz::https://download.kde.org/stable/amarok/3.3.3/amarok-3.3.3.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
-    cd "amarok-3.3.3"
+    cd "amarok-${version}"
     plasma-package-installer \
         -DWITH_LASTFM=OFF \
         -DWITH_GPODDER=OFF

@@ -5,7 +5,8 @@ name=perl-libintl-perl
 version=1.33
 release=1
 
-source="https://www.cpan.org/authors/id/G/GU/GUIDO/libintl-perl-1.33.tar.gz"
+_name=${name#perl-}
+source="https://cpan.metacpan.org/authors/id/G/GU/GUIDO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-cchardet
 version=2.1.7
 release=2
 
-source="https://files.pythonhosted.org/packages/source/c/cchardet/cchardet-2.1.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

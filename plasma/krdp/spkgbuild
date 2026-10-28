@@ -2,10 +2,10 @@
 # depends : extra-cmake-modules freerdp kcmutils kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kguiaddons ki18n kirigami-addons kpipewire kstatusnotifieritem libei libxkbcommon linux-pam pkgconf plasma-wayland-protocols qt6 qtkeychain
 
 name=krdp
-version=6.8.1
+version=6.8.2
 release=2
 
-source="https://download.kde.org/stable/plasma/$version/krdp-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

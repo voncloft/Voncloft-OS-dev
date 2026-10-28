@@ -4,7 +4,8 @@
 name=libxpm
 version=3.5.20
 release=1
-source="https://www.x.org/pub/individual/lib/libXpm-3.5.20.tar.gz"
+_name=libXpm
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXpm-$version

@@ -5,7 +5,8 @@ name=xorg-input
 version=1.5.0
 release=1
 
-source="https://www.x.org/pub/individual/driver/xf86-input-libinput-$version.tar.xz"
+_name=xf86-input-libinput
+source="https://www.x.org/pub/individual/driver/${_name}-$version.tar.xz"
 
 build()
 {

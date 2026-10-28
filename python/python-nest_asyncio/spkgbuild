@@ -4,7 +4,8 @@ name=python-nest_asyncio
 version=1.6.0
 release=2
 
-source="https://files.pythonhosted.org/packages/83/f8/51569ac65d696c8ecbee95938f89d4abf00f47d58d48f6fbabfe8f0baefe/nest_asyncio-1.6.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/n/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

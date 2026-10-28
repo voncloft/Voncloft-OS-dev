@@ -5,7 +5,7 @@ name=tellico
 version=4.3
 release=2
 options="!checksum"
-source="tellico-4.3.tar.gz::https://invent.kde.org/office/tellico/-/archive/v4.3/tellico-v4.3.tar.gz"
+source="${name}-${version}.tar.gz::https://invent.kde.org/office/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     cd "tellico-v${version}"

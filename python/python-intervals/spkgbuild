@@ -5,7 +5,8 @@ name=python-intervals
 version=0.9.2
 release=5
 
-source="https://files.pythonhosted.org/packages/source/i/intervals/intervals-0.9.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

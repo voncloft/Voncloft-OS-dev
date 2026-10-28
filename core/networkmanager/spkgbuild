@@ -6,7 +6,8 @@ name=networkmanager
 version=1.58.1
 release=2
 
-source="$name-$version.tar.gz::https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/$version/NetworkManager-$version.tar.gz"
+_name=NetworkManager
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/${_name}/${_name}/-/archive/$version/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

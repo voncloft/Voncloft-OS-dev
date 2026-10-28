@@ -5,7 +5,7 @@ name=appstream-glib
 version=0.8.4
 verzion=$(echo $version | sed 's/\./_/g')
 release=1
-source="https://github.com/hughsie/appstream-glib/archive/refs/tags/appstream_glib_0_8_4.tar.gz"
+source="https://github.com/hughsie/${name}/archive/refs/tags/appstream_glib_${version//./_}.tar.gz"
 
 build() {
 	cd "$SRC"/appstream-glib-appstream_glib*/

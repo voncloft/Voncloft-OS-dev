@@ -4,7 +4,7 @@
 name=v4l-utils-32
 version=1.32.0
 release=1
-source="https://www.linuxtv.org/downloads/v4l-utils/v4l-utils-1.32.0.tar.xz"
+source="https://www.linuxtv.org/downloads/v4l-utils/v4l-utils-${version}.tar.xz"
 
 build() {
 	cd v4l-utils-$version

@@ -5,7 +5,8 @@ name=python-inflect
 version=6.0.4
 release=2
 
-source="https://files.pythonhosted.org/packages/source/i/inflect/inflect-6.0.4.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

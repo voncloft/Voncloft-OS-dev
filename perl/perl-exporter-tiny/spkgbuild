@@ -5,7 +5,8 @@ name=perl-exporter-tiny
 version=1.006002
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/T/TO/TOBYINK/Exporter-Tiny-1.006002.tar.gz"
+_name=Exporter-Tiny
+source="https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

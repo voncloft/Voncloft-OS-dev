@@ -5,7 +5,8 @@ name=python-mockito
 version=2.0.4
 release=2
 
-source="https://github.com/kaste/mockito-python/archive/refs/tags/$version.tar.gz"
+_name=mockito-python
+source="https://github.com/kaste/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

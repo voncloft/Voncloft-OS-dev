@@ -5,7 +5,8 @@ name=python-async_generator
 version=1.10
 release=5
 
-source="https://github.com/python-trio/async_generator/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/python-trio/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

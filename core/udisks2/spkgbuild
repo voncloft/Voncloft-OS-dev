@@ -4,7 +4,8 @@
 name=udisks2
 version=2.11.2    
 release=1
-source="https://github.com/storaged-project/udisks/releases/download/udisks-2.10.1/udisks-2.10.1.tar.bz2"
+_name=udisks
+source="https://github.com/storaged-project/${_name}/releases/download/${_name}-${version}/${_name}-${version}.tar.bz2"
 
 options="!checksum"
 

@@ -5,7 +5,8 @@ name=python-click-repl
 version=0.4.1
 release=4
 
-source="https://github.com/click-contrib/click-repl/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/click-contrib/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

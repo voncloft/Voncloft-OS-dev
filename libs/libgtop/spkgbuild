@@ -4,7 +4,7 @@
 name=libgtop
 version=2.41.3
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/libgtop/${version%.*}/$name-$version.tar.xz"
+source="https://ftp.gnome.org/pub/gnome/sources/${name}/${version%.*}/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version

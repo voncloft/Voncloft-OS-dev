@@ -4,7 +4,8 @@ name=perl-datetime-cron-simple
 version=0.2
 release=11
 
-source="https://www.cpan.org/authors/id/B/BI/BITS/DateTime-Cron-Simple-0.2.tar.gz"
+_name=DateTime-Cron-Simple
+source="https://cpan.metacpan.org/authors/id/B/BI/BITS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

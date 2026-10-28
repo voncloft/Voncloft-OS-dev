@@ -5,7 +5,8 @@ name=python-pytest-qt
 version=4.2.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/p/pytest-qt/pytest-qt-4.2.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

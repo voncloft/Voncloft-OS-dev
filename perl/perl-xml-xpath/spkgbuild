@@ -5,7 +5,8 @@ name=perl-xml-xpath
 version=1.48
 release=3
 
-source="https://cpan.metacpan.org/authors/id/M/MA/MANWAR/XML-XPath-1.48.tar.gz"
+_name=XML-XPath
+source="https://cpan.metacpan.org/authors/id/M/MA/MANWAR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-logbook
 version=1.10.1
 release=8
 
-source="https://github.com/mitsuhiko/logbook/archive/refs/tags/p$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mitsuhiko/${_name}/archive/refs/tags/p$version.tar.gz"
 options="!checksum"
 
 build() {

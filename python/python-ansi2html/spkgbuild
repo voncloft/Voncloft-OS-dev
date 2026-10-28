@@ -5,7 +5,8 @@ name=python-ansi2html
 version=1.8.0
 release=1
 
-source=""
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

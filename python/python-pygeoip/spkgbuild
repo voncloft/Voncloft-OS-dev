@@ -5,7 +5,8 @@ name=python-pygeoip
 version=0.3.2
 release=7
 
-source="https://pypi.python.org/packages/source/p/pygeoip/pygeoip-0.3.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

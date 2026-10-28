@@ -5,7 +5,8 @@ name=nm-connection-editor
 version=1.36.0
 release=1
 
-source="https://download.gnome.org/sources/network-manager-applet/1.36/network-manager-applet-1.36.0.tar.xz"
+_name=network-manager-applet
+source="https://download.gnome.org/sources/${_name}/${version%.*}/${_name}-${version}.tar.xz"
 options="!checksum"
 
 build() {

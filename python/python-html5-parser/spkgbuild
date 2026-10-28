@@ -5,7 +5,8 @@ name=python-html5-parser
 version=0.4.11
 release=5
 
-source="https://files.pythonhosted.org/packages/source/h/html5-parser/html5-parser-0.4.11.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

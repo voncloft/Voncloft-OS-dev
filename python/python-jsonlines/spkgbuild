@@ -5,7 +5,8 @@ name=python-jsonlines
 version=4.0.0
 release=7
 
-source="https://github.com/wbolster/jsonlines/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/wbolster/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

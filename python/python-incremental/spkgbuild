@@ -5,7 +5,8 @@ name=python-incremental
 version=24.11.0
 release=6
 
-source="https://github.com/hawkowl/incremental/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/hawkowl/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

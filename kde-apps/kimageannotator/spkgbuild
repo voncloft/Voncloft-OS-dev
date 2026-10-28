@@ -5,7 +5,8 @@ name=kimageannotator
 version=0.7.2
 release=1
 
-source="$name-$version.tar.gz::https://github.com/ksnip/kImageAnnotator/archive/refs/tags/v$version.tar.gz"
+_name=kImageAnnotator
+source="$name-$version.tar.gz::https://github.com/ksnip/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

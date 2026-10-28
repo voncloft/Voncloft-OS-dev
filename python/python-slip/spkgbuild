@@ -5,7 +5,7 @@ name=python-slip
 version=0.6.5
 release=6
 
-source="https://github.com/nphilipp/python-slip/releases/download/python-slip-0.6.5/python-slip-0.6.5.tar.bz2"
+source="https://github.com/nphilipp/${name}/releases/download/${name}-${version}/${name}-${version}.tar.bz2"
 options="!checksum"
 
 build() {

@@ -5,7 +5,7 @@ name=shapelib
 version=1.6.3
 release=3
 
-source="https://download.osgeo.org/shapelib/shapelib-1.6.3.tar.gz"
+source="https://download.osgeo.org/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

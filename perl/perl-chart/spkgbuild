@@ -5,7 +5,8 @@ name=perl-chart
 version=2.403.7
 release=4
 
-source="https://www.cpan.org/authors/id/L/LI/LICHTKIND/Chart-v2.403.7.tar.gz"
+_name=Chart
+source="https://cpan.metacpan.org/authors/id/L/LI/LICHTKIND/${_name}-v${version}.tar.gz"
 options="!checksum"
 
 build() {

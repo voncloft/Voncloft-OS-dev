@@ -4,7 +4,8 @@
 name=awesome-font
 version=7.3.1
 release=1
-source="https://github.com/FortAwesome/Font-Awesome/archive/$version/$name-$version.tar.gz"
+_name=Font-Awesome
+source="https://github.com/FortAwesome/${_name}/archive/$version/$name-$version.tar.gz"
 
 build() {
 	cd Font-Awesome-$version

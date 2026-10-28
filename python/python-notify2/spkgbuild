@@ -5,7 +5,8 @@ name=python-notify2
 version=0.3.1
 release=5
 
-source="https://files.pythonhosted.org/packages/source/n/notify2/notify2-0.3.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/n/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

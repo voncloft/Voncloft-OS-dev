@@ -4,7 +4,8 @@ name=perl-mail-sendmail
 version=0.80
 release=11
 
-source="https://www.cpan.org/authors/id/M/MI/MIVKOVIC/Mail-Sendmail-0.79.tar.gz"
+_name=Mail-Sendmail
+source="https://cpan.metacpan.org/authors/id/N/NE/NEILB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

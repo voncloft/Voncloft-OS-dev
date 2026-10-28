@@ -5,7 +5,8 @@ name=python-pysmi
 version=0.3.4
 release=6
 
-source="https://github.com/etingof/pysmi/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/etingof/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

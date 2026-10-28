@@ -5,7 +5,8 @@ name=python-jeepney-objects
 version=0.2.0
 release=1
 
-source="https://github.com/ocaballeror/jeepney-objects/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/ocaballeror/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

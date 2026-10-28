@@ -4,7 +4,7 @@
 name=net-tools
 version=2.10    
 release=1
-source="https://downloads.sourceforge.net/project/net-tools/net-tools-2.10.tar.xz"
+source="https://downloads.sourceforge.net/project/${name}/${name}-${version}.tar.xz"
 
 options="!checksum"
 

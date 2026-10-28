@@ -5,7 +5,8 @@ name=python-zope-proxy
 version=7.3
 release=3
 
-source="https://github.com/zopefoundation/zope.proxy/archive/refs/tags/$version.tar.gz"
+_name=zope.proxy
+source="https://github.com/zopefoundation/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

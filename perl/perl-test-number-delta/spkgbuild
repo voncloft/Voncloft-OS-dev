@@ -5,7 +5,8 @@ name=perl-test-number-delta
 version=1.06
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/Test-Number-Delta-1.06.tar.gz"
+_name=Test-Number-Delta
+source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

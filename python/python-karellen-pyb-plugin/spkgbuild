@@ -5,7 +5,8 @@ name=python-karellen-pyb-plugin
 version=0.0.4
 release=4
 
-source="https://files.pythonhosted.org/packages/79/51/f76bb143fa24694fea73f0992ae3e703c4f41421f0fa12bec099bc4bdb5f/karellen-pyb-plugin-0.0.4.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/k/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

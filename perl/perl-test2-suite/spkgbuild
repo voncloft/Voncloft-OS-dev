@@ -5,7 +5,8 @@ name=perl-test2-suite
 version=0.000153
 release=1
 
-source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test2-Suite-0.000153.tar.gz"
+_name=Test2-Suite
+source="https://cpan.metacpan.org/authors/id/E/EX/EXODIST/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

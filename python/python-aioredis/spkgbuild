@@ -5,7 +5,8 @@ name=python-aioredis
 version=2.0.1
 release=1
 
-source="https://github.com/aio-libs/aioredis-py/archive/refs/tags/v$version.tar.gz"
+_name=aioredis-py
+source="https://github.com/aio-libs/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

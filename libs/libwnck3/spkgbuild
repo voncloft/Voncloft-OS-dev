@@ -4,7 +4,8 @@
 name=libwnck3
 version=43.0
 release=1
-source="https://ftp.gnome.org/pub/gnome/sources/libwnck/${version%.*}/libwnck-$version.tar.xz"
+_name=libwnck
+source="https://ftp.gnome.org/pub/gnome/sources/${_name}/${version%.*}/${_name}-$version.tar.xz"
 
 build() {
 	cd libwnck-$version

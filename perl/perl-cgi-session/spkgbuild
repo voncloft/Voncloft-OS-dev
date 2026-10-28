@@ -4,7 +4,8 @@ name=perl-cgi-session
 version=4.48
 release=7
 
-source="https://www.cpan.org/authors/id/M/MA/MARKSTOS/CGI-Session-4.48.tar.gz"
+_name=CGI-Session
+source="https://cpan.metacpan.org/authors/id/M/MA/MARKSTOS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

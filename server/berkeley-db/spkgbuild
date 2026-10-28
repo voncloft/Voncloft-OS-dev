@@ -5,7 +5,8 @@ name=berkeley-db
 version=5.3.28
 release=2
 
-source="https://anduin.linuxfromscratch.org/BLFS/bdb/db-$version.tar.gz"
+_name=db
+source="https://anduin.linuxfromscratch.org/BLFS/bdb/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

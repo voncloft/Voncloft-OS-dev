@@ -5,10 +5,10 @@ name=zug
 version=0.1.2
 release=2
 options="!checksum"
-source="zug-0.1.2.tar.gz::https://github.com/arximboldi/zug/archive/refs/tags/v0.1.2.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/arximboldi/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "zug-0.1.2"
+    cd "zug-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

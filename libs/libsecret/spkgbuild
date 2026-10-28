@@ -5,7 +5,8 @@
 name=libsecret
 version=0.21.8.2    
 release=2
-source="https://download.gnome.org/sources/libsecret/0.21/libsecret-0.21.7.tar.xz"
+_minor=${version#*.}
+source="https://download.gnome.org/sources/${name}/${version%%.*}.${_minor%%.*}/${name}-${version}.tar.xz"
 
 options="!checksum"
 

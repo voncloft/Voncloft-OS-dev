@@ -5,7 +5,8 @@ name=python-wrapt
 version=2.5.2
 release=4
 
-source="https://github.com/GrahamDumpleton/wrapt/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/GrahamDumpleton/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

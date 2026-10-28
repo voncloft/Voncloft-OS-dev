@@ -3,7 +3,8 @@
 name=xcb-proto-32
 version=1.17.0
 release=1
-source="http://xcb.freedesktop.org/dist/xcb-proto-$version.tar.xz"
+_name=${name%-32}
+source="http://xcb.freedesktop.org/dist/${_name}-$version.tar.xz"
 
 build() {
 	export CC="gcc -m32"

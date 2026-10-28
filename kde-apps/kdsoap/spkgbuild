@@ -5,7 +5,8 @@ name=kdsoap
 version=2.3.0
 release=1
 
-source="$name-$version.tar.gz::https://github.com/KDAB/KDSoap/releases/download/kdsoap-$version/kdsoap-$version.tar.gz"
+_name=KDSoap
+source="$name-$version.tar.gz::https://github.com/KDAB/${_name}/releases/download/${name}-$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

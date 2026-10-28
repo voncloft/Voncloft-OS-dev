@@ -5,7 +5,8 @@ name=python-llfuse
 version=1.4.2
 release=2
 
-source="https://files.pythonhosted.org/packages/source/l/llfuse/llfuse-1.4.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/l/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

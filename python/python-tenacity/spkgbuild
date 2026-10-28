@@ -5,7 +5,8 @@ name=python-tenacity
 version=9.2.1
 release=1
 
-source="https://github.com/jd/tenacity/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/jd/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

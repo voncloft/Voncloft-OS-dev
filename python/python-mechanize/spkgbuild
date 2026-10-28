@@ -5,7 +5,8 @@ name=python-mechanize
 version=0.4.8
 release=4
 
-source="https://files.pythonhosted.org/packages/source/m/mechanize/mechanize-0.4.8.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

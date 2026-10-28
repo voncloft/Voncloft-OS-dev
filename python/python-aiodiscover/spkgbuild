@@ -5,7 +5,8 @@ name=python-aiodiscover
 version=3.3.2
 release=1
 
-source="https://github.com/bdraco/aiodiscover/archive/refs/tags/v${version}.tar.gz"
+_name=${name#python-}
+source="https://github.com/bdraco/${_name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
 	cd *

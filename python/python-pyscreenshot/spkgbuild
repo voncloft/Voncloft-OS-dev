@@ -5,7 +5,8 @@ name=python-pyscreenshot
 version=3.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/pyscreenshot/pyscreenshot-3.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

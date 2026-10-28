@@ -5,7 +5,8 @@ name=python-klein
 version=24.8.0
 release=3
 
-source="https://github.com/twisted/klein/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/twisted/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

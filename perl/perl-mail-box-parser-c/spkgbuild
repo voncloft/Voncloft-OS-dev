@@ -4,7 +4,8 @@ name=perl-mail-box-parser-c
 version=3.010
 release=8
 
-source="https://www.cpan.org/authors/id/M/MA/MARKOV/Mail-Box-Parser-C-3.010.tar.gz"
+_name=Mail-Box-Parser-C
+source="https://cpan.metacpan.org/authors/id/M/MA/MARKOV/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-dbus-client-gen
 version=0.8
 release=5
 
-source=""
+_name=dbus-python-client-gen
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

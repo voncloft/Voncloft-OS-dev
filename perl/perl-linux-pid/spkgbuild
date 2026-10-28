@@ -5,7 +5,8 @@ name=perl-linux-pid
 version=0.04
 release=13
 
-source="https://search.cpan.org/CPAN/authors/id/R/RG/RGARCIA/Linux-Pid-0.04.tar.gz"
+_name=Linux-Pid
+source="https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

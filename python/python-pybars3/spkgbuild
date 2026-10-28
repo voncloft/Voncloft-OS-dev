@@ -5,7 +5,8 @@ name=python-pybars3
 version=0.9.7
 release=5
 
-source="https://github.com/wbond/pybars3/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/wbond/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

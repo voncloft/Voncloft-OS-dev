@@ -5,7 +5,8 @@ name=python-simplesoapy
 version=1.5.1
 release=7
 
-source="https://github.com/xmikos/simplesoapy/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/xmikos/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

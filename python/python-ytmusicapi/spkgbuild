@@ -5,7 +5,8 @@ name=python-ytmusicapi
 version=1.12.3
 release=1
 
-source="$name-$version.tar.gz::https://files.pythonhosted.org/packages/4a/0d/a536a685d8b021ff984a3f9902600bc1fb613afe3c0b143e2b0d791a3c5c/ytmusicapi-$version.tar.gz"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/y/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

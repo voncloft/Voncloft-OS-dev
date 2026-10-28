@@ -2,10 +2,11 @@
 # depends : kde-deps-installer libkscreen qt6
 
 name=kde-monitor-default
-version=20260215
+version=20260215.g8edff03c55f6a1793e1d967bec40ab178b5dfe48
 release=1
-_commit=8edff03c55f6a1793e1d967bec40ab178b5dfe48
-source="$name-$_commit.tar.gz::https://github.com/voncloft/KDE_Monitor_Default/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+_name=KDE_Monitor_Default
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
 
 build() {
     cd "KDE_Monitor_Default-$_commit"

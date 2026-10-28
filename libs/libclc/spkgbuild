@@ -5,7 +5,8 @@ name=libclc
 version=23.1.4
 release=1
 
-source="https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/libclc-$version.src.tar.xz"
+_name=llvm-project
+source="https://github.com/llvm/${_name}/releases/download/llvmorg-$version/${name}-$version.src.tar.xz"
 options="!checksum"
 
 build()

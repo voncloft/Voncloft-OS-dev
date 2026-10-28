@@ -5,7 +5,8 @@ name=python-boto
 version=2.49.0.20190327
 release=5
 
-source="https://github.com/boto/boto/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/boto/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

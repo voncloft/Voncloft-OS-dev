@@ -5,7 +5,8 @@ name=perl-cpan-changes
 version=0.400002
 release=4
 
-source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/CPAN-Changes-0.400002.tar.gz"
+_name=CPAN-Changes
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

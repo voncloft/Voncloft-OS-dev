@@ -5,7 +5,7 @@ name=jwm
 version=2.4.6
 release=2
 backup="etc/system.jwmrc"
-source="https://github.com/joewing/jwm/archive/refs/tags/v2.4.6.tar.gz
+source="https://github.com/joewing/${name}/archive/refs/tags/v${version}.tar.gz
 	jwm.desktop"
 
 build() {

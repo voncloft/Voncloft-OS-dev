@@ -4,7 +4,8 @@ name=perl-math-base85
 version=0.5
 release=3
 
-source="https://cpan.metacpan.org/authors/id/P/PT/PTC/Math-Base85-0.4.tar.gz"
+_name=Math-Base85
+source="https://cpan.metacpan.org/authors/id/P/PT/PTC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

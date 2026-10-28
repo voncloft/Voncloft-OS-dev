@@ -4,7 +4,8 @@
 name=libsm-32
 version=1.2.6
 release=1
-source="https://www.x.org/pub/individual/lib/libSM-1.2.6.tar.gz"
+_name=libSM
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libSM-$version

@@ -5,7 +5,8 @@ name=python-deprecation
 version=2.1.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/deprecation/deprecation-2.1.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

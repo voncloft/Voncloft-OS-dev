@@ -5,7 +5,7 @@ name=kirigami-app-components
 version=1.1.1
 release=1
 
-source="https://download.kde.org/stable/kirigami-app-components/kirigami-app-components-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

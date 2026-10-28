@@ -2,10 +2,11 @@
 # depends : perl
 
 name=perl-text-csv
-version=UniqueColumns_0.4
+version=2.02
 release=4
 
-source="https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/-2.00.tar.gz"
+_name=Text-CSV
+source="https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

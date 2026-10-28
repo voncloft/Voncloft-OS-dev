@@ -5,7 +5,8 @@ name=perl-specio
 version=0.48
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/Specio-0.48.tar.gz"
+_name=Specio
+source="https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

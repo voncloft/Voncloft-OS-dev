@@ -5,7 +5,8 @@ name=python-kiwisolver
 version=1.5.1
 release=3
 
-source="https://github.com/nucleic/kiwi/archive/refs/tags/r$version.tar.gz"
+_name=kiwi
+source="https://github.com/nucleic/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

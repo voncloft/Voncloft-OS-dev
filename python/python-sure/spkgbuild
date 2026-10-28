@@ -5,7 +5,8 @@ name=python-sure
 version=2.0.1
 release=7
 
-source="https://github.com/gabrielfalcao/sure/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/gabrielfalcao/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

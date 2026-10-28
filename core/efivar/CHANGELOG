@@ -1,0 +1,9 @@
+Date: Wed Oct 28 01:38:46 AM EDT 2026
+
+efivar
+Version=38
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 37 to version 38

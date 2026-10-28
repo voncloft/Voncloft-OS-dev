@@ -5,7 +5,8 @@ name=python-simplebayes
 version=3.2.0
 release=6
 
-source="https://github.com/hickeroar/simplebayes/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/hickeroar/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

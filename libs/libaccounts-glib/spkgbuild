@@ -5,7 +5,7 @@ name=libaccounts-glib
 version=1.27
 release=3
 
-source="https://gitlab.com/accounts-sso/libaccounts-glib/-/archive/VERSION_$version/libaccounts-glib-VERSION_$version.tar.gz"
+source="https://gitlab.com/accounts-sso/${name}/-/archive/VERSION_$version/libaccounts-glib-VERSION_$version.tar.gz"
 
 build() {
 	meson $name-VERSION_$version build \

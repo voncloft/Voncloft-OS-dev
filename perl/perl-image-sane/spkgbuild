@@ -5,7 +5,8 @@ name=perl-image-sane
 version=5
 release=2
 
-source="https://www.cpan.org/modules/by-module//--5.tar.gz"
+_name=Image-Sane
+source="https://cpan.metacpan.org/authors/id/R/RA/RATCLIFFE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

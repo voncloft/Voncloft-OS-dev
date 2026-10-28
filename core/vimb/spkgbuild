@@ -4,7 +4,7 @@
 name=vimb
 version=4.0.0
 release=1
-source="https://github.com/fanglingsu/vimb/archive/$version/$name-$version.tar.gz"
+source="https://github.com/fanglingsu/${name}/archive/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

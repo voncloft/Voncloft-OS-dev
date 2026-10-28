@@ -7,7 +7,7 @@ release=1
 source="https://savannah.nongnu.org/download/$name/$name-$version.tar.bz2"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/icoutils*/
 	./configure --prefix=/usr --mandir=/usr/share/man --disable-nls
 	make
 	make DESTDIR=$PKG install

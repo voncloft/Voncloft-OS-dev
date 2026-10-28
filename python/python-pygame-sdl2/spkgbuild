@@ -2,14 +2,15 @@
 # depends : python 
 
 name=python-pygame-sdl2
-version=2.1.0.r399.5777335
+version=8.5.3.26051504
 release=1
 
-source=""
+_name=pygame_sdl2
+source="${name}-${version}.tar.gz::https://github.com/renpy/${_name}/archive/${version##*.}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}"-*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

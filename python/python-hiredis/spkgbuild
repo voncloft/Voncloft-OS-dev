@@ -5,7 +5,8 @@ name=python-hiredis
 version=2.0.0
 release=3
 
-source="https://pypi.org/packages/source/h/hiredis/hiredis-2.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

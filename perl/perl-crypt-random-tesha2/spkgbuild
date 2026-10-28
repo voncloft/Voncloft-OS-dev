@@ -5,7 +5,8 @@ name=perl-crypt-random-tesha2
 version=0.01
 release=6
 
-source="https://cpan.metacpan.org/authors/id/D/DA/DANAJ/Crypt-Random-TESHA2-0.01.tar.gz"
+_name=Crypt-Random-TESHA2
+source="https://cpan.metacpan.org/authors/id/D/DA/DANAJ/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

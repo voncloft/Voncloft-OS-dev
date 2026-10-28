@@ -4,8 +4,9 @@
 name=udev
 version=257.6
 release=1
-source="https://github.com/systemd/systemd/archive/v257.6/systemd-$version.tar.gz
-	https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz"
+_name=systemd
+source="https://github.com/systemd/${_name}/archive/v${version}/${_name}-$version.tar.gz
+	https://anduin.linuxfromscratch.org/LFS/${name}-lfs-20230818.tar.xz"
 options="!checksum"
 build() {
 	cd systemd-$version

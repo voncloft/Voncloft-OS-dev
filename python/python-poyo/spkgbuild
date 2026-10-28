@@ -5,7 +5,8 @@ name=python-poyo
 version=0.5.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/p/poyo/poyo-0.5.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

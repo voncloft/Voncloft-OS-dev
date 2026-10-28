@@ -1,14 +1,18 @@
 # description : Official OpenAI desktop application for ChatGPT conversations and Codex coding tasks
-# depends : alsa-lib at-spi2-core bash cairo coreutils cups dbus expat gcc gdk-pixbuf git glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libusb libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr mesa nspr nss openssl pango udev xdg-utils xz
+# depends : alsa-lib at-spi2-core bash cairo coreutils cups dbus expat gcc gdk-pixbuf git glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libusb libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr mesa nspr nss openssl pango udev xdg-utils xz python
 # note : Official x86_64 binary; requires OpenSSL 3 runtime libraries. The device-key module for controlling other computers additionally needs tpm2-tss; receiving control from a phone does not require that module.
 
 name=chatgpt-desktop
-version=26.1021.22027
+version=26.1023.51421
 release=1
-_package_path=pool/main/c/chatgpt/chatgpt_26.1021.22027_amd64.deb
-_sha256=eb0831c734f154f93f8ebcf0e17d118da0dea7dc1737dc61a1e71444375bf190
-source="https://persistent.oaistatic.com/codex-app-prod/linux/deb/$_package_path"
-noextract="chatgpt_${version}_amd64.deb"
+_name=chatgpt
+_package_path=pool/main/c/${_name}/${_name}_${version}_amd64.deb
+_pinned_version=26.1023.51421
+_pinned_sha256=eb0831c734f154f93f8ebcf0e17d118da0dea7dc1737dc61a1e71444375bf190
+source="https://persistent.oaistatic.com/codex-app-prod/linux/deb/$_package_path
+    ${name}-${version}-Packages::https://persistent.oaistatic.com/codex-app-prod/linux/deb/dists/stable/main/binary-amd64/Packages
+    fetch-source.py"
+noextract="${_name}_${version}_amd64.deb"
 options="!strip !checksum"
 
 build() {
@@ -17,10 +21,14 @@ build() {
         return 1
     }
 
-    local archive="$SRC/chatgpt_${version}_amd64.deb"
+    local archive="$SRC/${_name}_${version}_amd64.deb"
     local unpack="$SRC/chatgpt-deb"
     local payload control metadata
-    printf '%s  %s\n' "$_sha256" "$archive" | sha256sum -c - || return 1
+    if [ "$version" = "$_pinned_version" ]; then
+        printf '%s  %s\n' "$_pinned_sha256" "$archive" | sha256sum -c - || return 1
+    else
+        python3 "$SRC/fetch-source.py" chatgpt "$version" "$SRC/${name}-${version}-Packages" "$archive" --verify-only || return 1
+    fi
 
     # A .deb is an ar container; unpack it before extracting its tar payload.
     install -dm755 "$unpack" "$PKG"

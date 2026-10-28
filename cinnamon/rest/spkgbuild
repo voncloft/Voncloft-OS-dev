@@ -1,18 +1,16 @@
 # description : helper library for restful services
-# depends : glib libsoup libxml2 glib
+# depends : meson ninja glib libsoup libxml2 glib
 
 name=rest
 version=0.9.1
 release=1
 
-source="git+https://gitlab.gnome.org/GNOME/librest.git#commit="
+source="https://download.gnome.org/sources/${name}/${version%.*}/${name}-${version}.tar.xz"
 options="!checksum"
 
 build() {
-	cd librest-$version
-	NOCONFIGURE=1 ./autogen.sh
-	./configure --prefix=/usr --sysconfdir=/etc --enable-gtk-doc
-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool
-	make
-	make DESTDIR=$PKG install
+    cd "$SRC/$name-$version"
+    meson setup build --prefix=/usr --buildtype=release
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

@@ -5,7 +5,8 @@ name=perl-params-validate
 version=1.31
 release=5
 
-source="https://www.cpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.31.tar.gz"
+_name=Params-Validate
+source="https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-crypt-openssl-random
 version=0.15
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/R/RU/RURBAN/Crypt-OpenSSL-Random-0.15.tar.gz"
+_name=Crypt-OpenSSL-Random
+source="https://cpan.metacpan.org/authors/id/R/RU/RURBAN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

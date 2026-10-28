@@ -5,7 +5,7 @@ name=libxkbfile
 version=1.2.0
 release=2
 options="!checksum"
-source="http://ftp.x.org/pub/individual/lib/libxkbfile-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/lib/${name}-$version.tar.xz"
 
 build() {
 	cd libxkbfile-$version

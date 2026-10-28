@@ -5,7 +5,8 @@ name=python-raven
 version=6.10.0
 release=7
 
-source="https://github.com/getsentry/raven-python/archive/refs/tags/$version.tar.gz"
+_name=raven-python
+source="https://github.com/getsentry/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

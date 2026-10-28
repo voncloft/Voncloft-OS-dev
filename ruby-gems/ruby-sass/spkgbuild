@@ -2,7 +2,7 @@
 # depends	: ruby-yard ruby-maruku
 
 _name=sass
-name=ruby-$_name
+name=ruby-sass
 version=4.0.0
 release=3
 options="!emptydirs"

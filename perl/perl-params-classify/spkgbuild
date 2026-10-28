@@ -5,7 +5,8 @@ name=perl-params-classify
 version=0.015
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/Z/ZE/ZEFRAM/Params-Classify-0.015.tar.gz"
+_name=Params-Classify
+source="https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

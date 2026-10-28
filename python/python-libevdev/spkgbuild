@@ -5,7 +5,7 @@ name=python-libevdev
 version=0.13.1
 release=3
 
-source="https://gitlab.freedesktop.org/libevdev/python-libevdev/-/archive/0.13.1/python-libevdev-0.13.1.tar.gz"
+source="https://gitlab.freedesktop.org/libevdev/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

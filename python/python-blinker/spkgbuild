@@ -5,7 +5,8 @@ name=python-blinker
 version=1.5
 release=9
 
-source="https://files.pythonhosted.org/packages/source/b/blinker/blinker-1.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/b/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

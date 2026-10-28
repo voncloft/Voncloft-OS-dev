@@ -5,7 +5,8 @@ name=perl-config-general
 version=2.65
 release=4
 
-source="https://www.cpan.org/modules/by-module//--2.65.tar.gz"
+_name=Config-General
+source="https://cpan.metacpan.org/authors/id/T/TL/TLINDEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

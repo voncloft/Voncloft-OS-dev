@@ -5,7 +5,7 @@ name=glibc
 version=2.41
 release=1
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz
-	https://www.linuxfromscratch.org/patches/lfs/development/glibc-2.41-fhs-1.patch"
+	https://www.linuxfromscratch.org/patches/lfs/development/${name}-${version}-fhs-1.patch"
 build() {
 	cd $name-$version
 	patch -Np1 -i $SRC/glibc-$version-fhs-1.patch

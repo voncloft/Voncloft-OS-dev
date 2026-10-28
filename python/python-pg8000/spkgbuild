@@ -5,7 +5,8 @@ name=python-pg8000
 version=1.29.4
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/pg8000/pg8000-1.29.4.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

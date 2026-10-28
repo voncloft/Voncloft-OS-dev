@@ -2,14 +2,15 @@
 # depends : 
 
 name=python-promise
-version=2.3.0
+version=2.3
 release=3
 
-source="git+https://github.com/syrusakbary/promise.git#tag=ad8ebe68cd9c9686793e3449457f175a0fe43226"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/promise*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

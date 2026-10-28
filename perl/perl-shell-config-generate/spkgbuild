@@ -5,7 +5,8 @@ name=perl-shell-config-generate
 version=0.34
 release=2
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Shell-Config-Generate-0.34.tar.gz"
+_name=Shell-Config-Generate
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

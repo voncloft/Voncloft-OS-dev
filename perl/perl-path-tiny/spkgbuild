@@ -5,7 +5,8 @@ name=perl-path-tiny
 version=0.144
 release=1
 
-source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.144.tar.gz"
+_name=Path-Tiny
+source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

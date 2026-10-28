@@ -5,7 +5,8 @@ name=perl-acme-alien-dontpanic
 version=2.7200
 release=1
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Acme-Alien-DontPanic-2.7200.tar.gz"
+_name=Acme-Alien-DontPanic
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

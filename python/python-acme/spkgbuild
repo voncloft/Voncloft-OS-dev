@@ -5,7 +5,8 @@ name=python-acme
 version=2.6.0
 release=1
 
-source="::git+https://github.com/certbot/certbot#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

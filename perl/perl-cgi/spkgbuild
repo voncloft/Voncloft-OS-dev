@@ -5,7 +5,8 @@ name=perl-cgi
 version=4.56
 release=1
 
-source="https://cpan.metacpan.org/authors/id/L/LE/LEEJO/CGI-4.56.tar.gz"
+_name=CGI
+source="https://cpan.metacpan.org/authors/id/L/LE/LEEJO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

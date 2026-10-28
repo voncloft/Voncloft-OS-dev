@@ -5,7 +5,8 @@ name=python-pyudev
 version=0.24.5
 release=5
 
-source="https://github.com/pyudev/pyudev/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pyudev/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

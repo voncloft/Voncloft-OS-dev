@@ -5,7 +5,8 @@ name=python-hs-dbus-signature
 version=0.8.1
 release=1
 
-source="https://files.pythonhosted.org/packages/fe/53/b510c437bbf4998fb816ebabec1b9b5c6130d344d77fab486b6d4188fc75/hs_dbus_signature-0.8.1.tar.gz"
+_name=hs_dbus_signature
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

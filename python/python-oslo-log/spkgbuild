@@ -5,7 +5,8 @@ name=python-oslo-log
 version=8.3.2
 release=3
 
-source="https://github.com/openstack/oslo.log/archive/refs/tags/e$version.tar.gz"
+_name=oslo.log
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

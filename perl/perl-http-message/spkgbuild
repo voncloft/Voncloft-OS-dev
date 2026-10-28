@@ -5,7 +5,8 @@ name=perl-http-message
 version=7.04
 release=1
 
-source="https://github.com/libwww-perl/HTTP-Message/archive/v6.44/perl-http-message-6.44.tar.gz"
+_name=HTTP-Message
+source="https://github.com/libwww-perl/${_name}/archive/v${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

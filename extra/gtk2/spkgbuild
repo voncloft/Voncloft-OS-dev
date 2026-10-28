@@ -4,7 +4,8 @@
 name=gtk2
 version=2.24.33
 release=6
-source="https://ftp.gnome.org/pub/gnome/sources/gtk+/${version%.*}/gtk+-$version.tar.xz"
+_name=gtk+
+source="https://ftp.gnome.org/pub/gnome/sources/${_name}/${version%.*}/${_name}-$version.tar.xz"
 
 build() {
 	cd gtk+-$version

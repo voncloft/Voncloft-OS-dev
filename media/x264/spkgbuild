@@ -4,7 +4,7 @@
 name=x264
 version=20250815
 release=1
-source="https://anduin.linuxfromscratch.org/BLFS/x264/x264-20250815.tar.xz"
+source="https://anduin.linuxfromscratch.org/BLFS/${name}/${name}-${version}.tar.xz"
 
 build() {
 	cd *

@@ -2,10 +2,11 @@
 # depends : perl gd
 
 name=perl-gd
-version=3dbargrapher
+version=2.76
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/R/RU/RURBAN/GD-2.73.tar.gz"
+_name=GD
+source="https://cpan.metacpan.org/authors/id/R/RU/RURBAN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

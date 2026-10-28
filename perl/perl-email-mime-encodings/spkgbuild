@@ -5,7 +5,8 @@ name=perl-email-mime-encodings
 version=1.317
 release=4
 
-source="https://www.cpan.org/authors/id/R/RJ/RJBS/Email-MIME-Encodings-1.317.tar.gz"
+_name=Email-MIME-Encodings
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

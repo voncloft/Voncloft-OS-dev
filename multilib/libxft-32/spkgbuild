@@ -4,7 +4,8 @@
 name=libxft-32
 version=2.3.9
 release=1
-source="https://www.x.org/pub/individual/lib/libXft-2.3.9.tar.gz"
+_name=libXft
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libXft-$version

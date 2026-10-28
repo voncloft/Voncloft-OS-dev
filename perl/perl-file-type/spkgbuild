@@ -4,7 +4,8 @@ name=perl-file-type
 version=0.22
 release=11
 
-source="https://www.cpan.org/authors/id/P/PM/PMISON/File-Type-0.22.tar.gz"
+_name=File-Type
+source="https://cpan.metacpan.org/authors/id/P/PM/PMISON/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

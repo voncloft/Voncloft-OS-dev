@@ -9,7 +9,7 @@ source="https://downloads.sourceforge.net/gs-fonts/$name-other-$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd fonts
+	cd "$SRC"/fonts*/
 	install -d $PKG/usr/share/ghostscript/fonts
 	install -m644 *.* $PKG/usr/share/ghostscript/fonts
 	fc-cache -v $PKG/usr/share/ghostscript/fonts/

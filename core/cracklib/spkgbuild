@@ -4,8 +4,8 @@
 name=cracklib
 version=2.10.3
 release=1
-source="https://github.com/cracklib/cracklib/releases/download/v$version/$name-$version.tar.gz
-	https://github.com/cracklib/cracklib/releases/download/v$version/cracklib-words-$version.xz"
+source="https://github.com/cracklib/${name}/releases/download/v$version/$name-$version.tar.gz
+	https://github.com/${name}/${name}/releases/download/v$version/${name}-words-$version.xz"
 
 build() {
 	cd $name-$version

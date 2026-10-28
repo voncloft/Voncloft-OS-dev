@@ -5,7 +5,8 @@ name=i3-gaps
 version=4.21.1
 release=1
 backup="etc/i3/config"
-source="$name-$version.tar.gz::https://github.com/Airblader/i3/archive/$version.tar.gz"
+_name=i3
+source="$name-$version.tar.gz::https://github.com/Airblader/${_name}/archive/$version.tar.gz"
 
 build() {
 	cd i3-$version

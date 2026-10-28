@@ -5,7 +5,8 @@ name=python-pyjsparser
 version=2.7.1
 release=7
 
-source="https://github.com/PiotrDabkowski/pyjsparser/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/PiotrDabkowski/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

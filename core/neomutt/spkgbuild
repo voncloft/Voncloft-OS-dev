@@ -4,7 +4,7 @@
 name=neomutt
 version=20260616
 release=1
-source="https://github.com/neomutt/neomutt/archive/20260616/neomutt-20260616.tar.gz"
+source="https://github.com/neomutt/${name}/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
 	cd $name-$version

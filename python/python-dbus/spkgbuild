@@ -4,7 +4,8 @@
 name=python-dbus
 version=1.5.1
 release=1
-source="https://dbus.freedesktop.org/releases/dbus-python/dbus_python-$version.tar.gz"
+_name=dbus_python
+source="https://dbus.freedesktop.org/releases/dbus-python/${_name}-$version.tar.gz"
 
 build() {
     cd "dbus_python-$version"

@@ -5,7 +5,8 @@ name=perl-xml-sax
 version=1.02
 release=1
 
-source="https://www.cpan.org/authors/id/G/GR/GRANTM/XML-SAX-1.02.tar.gz"
+_name=XML-SAX
+source="https://cpan.metacpan.org/authors/id/G/GR/GRANTM/${_name}-${version}.tar.gz"
 options="!checksum" 
 
 build() {

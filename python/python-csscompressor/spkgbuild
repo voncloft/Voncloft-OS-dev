@@ -5,7 +5,8 @@ name=python-csscompressor
 version=0.9.5
 release=3
 
-source="https://files.pythonhosted.org/packages/source/c/csscompressor/csscompressor-0.9.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

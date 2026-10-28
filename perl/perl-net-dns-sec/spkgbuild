@@ -5,7 +5,8 @@ name=perl-net-dns-sec
 version=1.20
 release=1
 
-source="https://search.mcpan.org/CPAN/authors/id/N/NL/NLNETLABS/Net-DNS-SEC-1.20.tar.gz"
+_name=Net-DNS-SEC
+source="https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

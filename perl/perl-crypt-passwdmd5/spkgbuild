@@ -5,7 +5,8 @@ name=perl-crypt-passwdmd5
 version=1.42
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/R/RS/RSAVAGE/Crypt-PasswdMD5-1.42.tgz"
+_name=Crypt-PasswdMD5
+source="https://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/${_name}-${version}.tgz"
 options="!checksum"
 
 build() {

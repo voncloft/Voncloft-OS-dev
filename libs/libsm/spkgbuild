@@ -4,7 +4,8 @@
 name=libsm
 version=1.2.6
 release=1
-source="https://www.x.org/archive//individual/lib/libSM-$version.tar.xz"
+_name=libSM
+source="https://www.x.org/archive//individual/lib/${_name}-$version.tar.xz"
 
 build() {
 	cd libSM-$version

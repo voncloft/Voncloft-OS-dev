@@ -4,10 +4,10 @@ name=linux-firmware
 version=20230404.2e92a49f
 release=1
 options="!strip"
-source="git+https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git#tag=?signed"
+source="${name}-${version}.tar.gz::https://gitlab.com/kernel-firmware/${name}/-/archive/${version##*.}/${name}-${version##*.}.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC/$name-${version##*.}"
 
 	make DESTDIR=$PKG install
 	#rm $PKG/lib/firmware/{Makefile,README,configure,GPL-3,*.txt,check_whence.py}

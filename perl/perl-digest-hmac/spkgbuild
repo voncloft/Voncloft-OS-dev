@@ -5,7 +5,8 @@ name=perl-digest-hmac
 version=1.04
 release=9
 
-source="https://www.cpan.org/authors/id/A/AR/ARODLAND/Digest-HMAC-1.04.tar.gz"
+_name=Digest-HMAC
+source="https://cpan.metacpan.org/authors/id/A/AR/ARODLAND/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

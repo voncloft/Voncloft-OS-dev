@@ -5,7 +5,8 @@ name=python-ansicolor
 version=0.3.2
 release=9
 
-source="https://files.pythonhosted.org/packages/source/a/ansicolor/ansicolor-0.3.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

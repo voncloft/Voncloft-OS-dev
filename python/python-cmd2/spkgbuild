@@ -5,7 +5,8 @@ name=python-cmd2
 version=2.4.3
 release=1
 
-source="git+https://github.com/python-cmd2/cmd2.git#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

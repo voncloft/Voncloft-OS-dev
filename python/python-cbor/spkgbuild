@@ -5,11 +5,12 @@ name=python-cbor
 version=1.0.0
 release=6
 
-source="https://github.com/brianolson/cbor_py/archive/refs/tags/$version.tar.gz"
+_name=cbor_py
+source="https://github.com/brianolson/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/cbor*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

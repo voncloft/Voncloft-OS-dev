@@ -5,7 +5,8 @@ name=perl-class-accessor-chained
 version=0.01
 release=9
 
-source="https://www.cpan.org/authors/id/R/RC/RCLAMP/Class-Accessor-Chained-0.01.tar.gz"
+_name=Class-Accessor-Chained
+source="https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

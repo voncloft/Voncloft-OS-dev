@@ -5,7 +5,8 @@ name=python-igraph
 version=0.10.4
 release=2
 
-source="python-igraph-0.10.4::https://files.pythonhosted.org/packages/source/i/igraph/igraph-0.10.4.tar.gz"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

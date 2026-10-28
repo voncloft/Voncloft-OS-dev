@@ -5,7 +5,8 @@ name=perl-set-intspan
 version=1.19
 release=8
 
-source="https://www.cpan.org/modules/by-module//--1.19.tar.gz"
+_name=Set-IntSpan
+source="https://cpan.metacpan.org/authors/id/S/SW/SWMCD/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

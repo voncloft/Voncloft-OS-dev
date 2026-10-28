@@ -5,7 +5,8 @@ name=perl-html-element-extended
 version=1.18
 release=8
 
-source="https://search.cpan.org/CPAN/authors/id/M/MS/MSISK/HTML-Element-Extended-1.18.tar.gz"
+_name=HTML-Element-Extended
+source="https://cpan.metacpan.org/authors/id/M/MS/MSISK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

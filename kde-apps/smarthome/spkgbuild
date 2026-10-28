@@ -2,10 +2,11 @@
 # depends : inetutils kde-deps-installer pulseaudio qt6
 
 name=smarthome
-version=0.1.git20260314
+version=0.1.git20260314.g12d028126b3deff57ee7090e0eb1332000761505
 release=1
-_commit=12d028126b3deff57ee7090e0eb1332000761505
-source="$name-$_commit.tar.gz::https://github.com/voncloft/Smarthome/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+_name=Smarthome
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
 
 build() {
     cd "Smarthome-$_commit"

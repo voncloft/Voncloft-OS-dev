@@ -5,7 +5,8 @@ name=perl-gdtextutil
 version=0.86
 release=7
 
-source="https://www.cpan.org/authors/id/M/MV/MVERB/GDTextUtil-0.86.tar.gz"
+_name=GDTextUtil
+source="https://cpan.metacpan.org/authors/id/M/MV/MVERB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

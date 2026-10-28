@@ -5,13 +5,15 @@ name=lua52
 version=5.2.4
 release=1
 
-source="https://www.lua.org/ftp/lua-$version.tar.gz
-	https://www.linuxfromscratch.org/patches/blfs/12.2/lua-$version-shared_library-1.patch
+_name=lua
+_source2_version=12.2
+source="https://www.lua.org/ftp/${_name}-$version.tar.gz
+	https://www.linuxfromscratch.org/patches/blfs/${_source2_version}/${_name}-$version-shared_library-1.patch
 	lua52.pc"
 options="!checksum"
 
 build() {
-	cd lua-$version
+	cd "$SRC"/lua*/
 
 	patch -Np1 -i $SRC/lua-$version-shared_library-1.patch
 	sed -i '/#define LUA_ROOT/s:/usr/local/:/usr/:' src/luaconf.h

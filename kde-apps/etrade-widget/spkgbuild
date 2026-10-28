@@ -2,10 +2,10 @@
 # depends : extra-cmake-modules kcoreaddons kde-deps-installer ki18n libplasma qt6
 
 name=etrade-widget
-version=0.1.0.git20260831
+version=0.1.0.git20260831.gbece75e8790c67c3a6fe106ce32e2ebe694b6b2b
 release=1
-_commit=bece75e8790c67c3a6fe106ce32e2ebe694b6b2b
-source="$name-$_commit.tar.gz::https://github.com/voncloft/etrade-widget/archive/$_commit.tar.gz"
+_commit=${version##*.g}
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${name}/archive/$_commit.tar.gz"
 
 build() {
     cd "etrade-widget-$_commit"

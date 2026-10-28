@@ -5,7 +5,8 @@ name=python-update-checker
 version=0.18.0
 release=3
 
-source="https://pypi.io/packages/source/u/update_checker/update_checker-0.18.0.tar.gz"
+_name=update_checker
+source="https://files.pythonhosted.org/packages/source/u/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

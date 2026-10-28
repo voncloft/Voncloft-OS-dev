@@ -2,10 +2,10 @@
 # description : Core Plasma session services, desktop shell, panels, notifications, and workspace components
 
 name=plasma-workspace
-version=6.8.1
+version=6.8.2
 release=2
 
-source="https://download.kde.org/stable/plasma/$version/plasma-workspace-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

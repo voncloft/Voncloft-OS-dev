@@ -5,7 +5,8 @@ name=perl-libwww
 version=6.67
 release=1
 
-source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/libwww-perl-6.67.tar.gz"
+_name=libwww-perl
+source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

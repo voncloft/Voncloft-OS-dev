@@ -5,7 +5,8 @@ name=python-asgiref
 version=3.6.0
 release=1
 
-source="https://pypi.io/packages/source/a/asgiref/asgiref-3.6.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

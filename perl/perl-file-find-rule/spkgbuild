@@ -5,7 +5,8 @@ name=perl-file-find-rule
 version=0.34
 release=7
 
-source="https://search.mcpan.org/CPAN/authors/id/R/RC/RCLAMP/-0.34.tar.gz"
+_name=File-Find-Rule
+source="https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

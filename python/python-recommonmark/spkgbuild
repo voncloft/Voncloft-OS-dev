@@ -5,7 +5,8 @@ name=python-recommonmark
 version=0.7.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/r/recommonmark/.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-cairocffi
 version=1.7.1
 release=3
 
-source="https://github.com/Kozea/cairocffi/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/Kozea/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

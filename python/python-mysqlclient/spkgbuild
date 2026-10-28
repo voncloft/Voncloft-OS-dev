@@ -5,7 +5,8 @@ name=python-mysqlclient
 version=2.1.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/m/mysqlclient/mysqlclient-2.1.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

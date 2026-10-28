@@ -5,7 +5,8 @@ name=python-micawber
 version=0.5.4
 release=1
 
-source="https://files.pythonhosted.org/packages/source/m/micawber/micawber-0.5.4.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

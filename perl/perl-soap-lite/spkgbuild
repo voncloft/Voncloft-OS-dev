@@ -5,7 +5,8 @@ name=perl-soap-lite
 version=1.27
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/P/PH/PHRED/SOAP-Lite-1.27.tar.gz"
+_name=SOAP-Lite
+source="https://cpan.metacpan.org/authors/id/P/PH/PHRED/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

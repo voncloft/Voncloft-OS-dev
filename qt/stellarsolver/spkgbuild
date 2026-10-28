@@ -5,10 +5,10 @@ name=stellarsolver
 version=2.8
 release=2
 options="!checksum"
-source="stellarsolver-2.8.tar.gz::https://github.com/rlancaste/stellarsolver/archive/refs/tags/2.8.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/rlancaste/${name}/archive/refs/tags/${version}.tar.gz"
 
 build() {
-    cd "stellarsolver-2.8"
+    cd "stellarsolver-${version}"
     plasma-package-installer \
         -DBUILD_TESTER=OFF \
         -DBUILD_DEMOS=OFF \

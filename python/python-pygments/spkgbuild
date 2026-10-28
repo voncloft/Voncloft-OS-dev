@@ -5,7 +5,8 @@ name=python-pygments
 version=2.19.2
 release=2
 
-source="https://files.pythonhosted.org/packages/source/p/pygments/pygments-$version.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

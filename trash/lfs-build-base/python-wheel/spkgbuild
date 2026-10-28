@@ -5,7 +5,8 @@ name=python-wheel
 version=0.46.1
 release=3
 
-source="https://pypi.org/packages/source/w/wheel/wheel-$version.tar.gz"
+_name=wheel
+source="https://pypi.org/packages/source/w/${_name}/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

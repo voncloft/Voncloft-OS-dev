@@ -5,7 +5,8 @@ name=python-couchdb
 version=1.2
 release=4
 
-source="https://github.com/djc/couchdb-python/archive/refs/tags/$version.tar.gz"
+_name=couchdb-python
+source="https://github.com/djc/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

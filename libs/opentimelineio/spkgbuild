@@ -5,7 +5,8 @@ name=opentimelineio
 version=0.18.1
 release=1
 
-source="$name-$version.tar.gz::https://github.com/AcademySoftwareFoundation/OpenTimelineIO/archive/refs/tags/v$version.tar.gz"
+_name=OpenTimelineIO
+source="$name-$version.tar.gz::https://github.com/AcademySoftwareFoundation/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

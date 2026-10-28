@@ -2,10 +2,11 @@
 # depends : python-six python-numpydoc python-scipy python-sqlitedict python-pycodestyle
 
 name=python-openmdao
-version=3.45.1
+version=3.45.2
 release=1
 
-source="https://github.com/OpenMDAO/OpenMDAO/archive/refs/tags/$version.tar.gz"
+_name=OpenMDAO
+source="https://github.com/OpenMDAO/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

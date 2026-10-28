@@ -5,7 +5,8 @@ name=perl-module-runtime
 version=0.016
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/Z/ZE/ZEFRAM/Module-Runtime-0.016.tar.gz"
+_name=Module-Runtime
+source="https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

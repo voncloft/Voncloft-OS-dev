@@ -4,7 +4,7 @@
 name=ncurses
 version=6.6
 release=20250531
-source="https://ftp.gnu.org/gnu/ncurses/ncurses-6.6.tar.gz"
+source="https://ftp.gnu.org/gnu/${name}/${name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/ncurses*/

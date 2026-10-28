@@ -5,7 +5,8 @@ name=perl-text-patch
 version=1.8
 release=8
 
-source="https://search.cpan.org/CPAN/authors/id/C/CA/CADE/Text-Patch-1.8.tar.gz"
+_name=Text-Patch
+source="https://cpan.metacpan.org/authors/id/C/CA/CADE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

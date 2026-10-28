@@ -5,7 +5,8 @@ name=python-pdfminer
 version=20260107
 release=2
 
-source="https://github.com/pdfminer/pdfminer.six/archive/refs/tags/20260107.tar.gz"
+_name=pdfminer.six
+source="https://github.com/pdfminer/${_name}/archive/refs/tags/${version}.tar.gz"
 options="!checksum"
 
 build() {

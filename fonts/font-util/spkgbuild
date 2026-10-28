@@ -3,7 +3,7 @@
 name=font-util
 version=1.4.2
 release=1
-source="http://ftp.x.org/pub/individual/font/font-util-$version.tar.gz"
+source="http://ftp.x.org/pub/individual/font/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

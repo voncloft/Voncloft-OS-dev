@@ -5,7 +5,8 @@ name=python-jmespath
 version=1.1.0
 release=3
 
-source="https://github.com/jmespath/jmespath.py/archive/refs/tags/$version.tar.gz"
+_name=jmespath.py
+source="https://github.com/jmespath/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

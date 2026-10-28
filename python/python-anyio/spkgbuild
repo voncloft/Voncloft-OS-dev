@@ -5,7 +5,8 @@ name=python-anyio
 version=4.15.1
 release=4
 
-source="https://github.com/agronholm/anyio/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/agronholm/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

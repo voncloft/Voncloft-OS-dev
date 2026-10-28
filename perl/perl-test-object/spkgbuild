@@ -5,7 +5,8 @@ name=perl-test-object
 version=0.08
 release=3
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Object-0.08.tar.gz"
+_name=Test-Object
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

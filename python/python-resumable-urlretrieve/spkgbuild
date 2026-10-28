@@ -5,7 +5,8 @@ name=python-resumable-urlretrieve
 version=0.1.6
 release=4
 
-source="https://github.com/berdario/resumable-urlretrieve/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/berdario/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

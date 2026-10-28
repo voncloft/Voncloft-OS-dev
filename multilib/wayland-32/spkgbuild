@@ -4,7 +4,8 @@
 name=wayland-32
 version=1.26.0
 release=1
-source="https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.26.0/downloads/wayland-1.26.0.tar.xz"
+_name=${name%-32}
+source="https://gitlab.freedesktop.org/${_name}/${_name}/-/releases/${version}/downloads/${_name}-${version}.tar.xz"
 
 build() {
 	cd "$SRC"/wayland*/

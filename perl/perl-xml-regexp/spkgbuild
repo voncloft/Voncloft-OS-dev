@@ -5,7 +5,8 @@ name=perl-xml-regexp
 version=0.04
 release=5
 
-source="https://www.cpan.org/authors/id/T/TJ/TJMATHER/XML-RegExp-0.04.tar.gz"
+_name=XML-RegExp
+source="https://cpan.metacpan.org/authors/id/T/TJ/TJMATHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

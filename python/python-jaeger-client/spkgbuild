@@ -5,7 +5,8 @@ name=python-jaeger-client
 version=4.8.0
 release=1
 
-source="https://github.com/jaegertracing/jaeger-client-python/archive/refs/tags/$version.tar.gz"
+_name=jaeger-client-python
+source="https://github.com/jaegertracing/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

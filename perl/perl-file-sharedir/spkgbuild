@@ -5,7 +5,8 @@ name=perl-file-sharedir
 version=1.118
 release=4
 
-source="https://cpan.metacpan.org/authors/id////File-ShareDir-1.118.tar.gz"
+_name=File-ShareDir
+source="https://cpan.metacpan.org/authors/id/R/RE/REHSACK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

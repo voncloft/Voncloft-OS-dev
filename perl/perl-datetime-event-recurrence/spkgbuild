@@ -4,7 +4,8 @@ name=perl-datetime-event-recurrence
 version=0.19
 release=6
 
-source="https://www.cpan.org/authors/id/F/FG/FGLOCK/DateTime-Event-Recurrence-0.19.tar.gz"
+_name=DateTime-Event-Recurrence
+source="https://cpan.metacpan.org/authors/id/F/FG/FGLOCK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

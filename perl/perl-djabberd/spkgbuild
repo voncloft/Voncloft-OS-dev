@@ -5,7 +5,8 @@ name=perl-djabberd
 version=0.85
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id/M/MA/MART/DJabberd-0.85.tar.gz"
+_name=DJabberd
+source="https://cpan.metacpan.org/authors/id/M/MA/MART/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

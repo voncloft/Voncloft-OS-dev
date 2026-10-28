@@ -4,8 +4,10 @@
 name=mitkrb
 version=1.22.2    
 release=1
-source="https://kerberos.org/dist/krb5/1.22/krb5-1.22.2.tar.gz
-https://www.linuxfromscratch.org/patches/blfs/svn/mitkrb-1.21.3-gcc15_fixes-1.patch"
+_name=krb5
+_source2_version=1.21.3
+source="https://kerberos.org/dist/${_name}/${version%.*}/${_name}-${version}.tar.gz
+https://www.linuxfromscratch.org/patches/blfs/svn/${name}-${_source2_version}-gcc15_fixes-1.patch"
 
 options="!checksum"
 

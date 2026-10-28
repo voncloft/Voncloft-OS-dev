@@ -5,7 +5,8 @@ name=python-factory-boy
 version=3.3.3
 release=1
 
-source="https://github.com/FactoryBoy/factory_boy/archive/refs/tags/$version.tar.gz"
+_name=factory_boy
+source="https://github.com/FactoryBoy/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

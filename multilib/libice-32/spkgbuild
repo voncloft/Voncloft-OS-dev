@@ -4,7 +4,8 @@
 name=libice-32
 version=1.1.2
 release=1
-source="https://www.x.org/pub/individual/lib/libICE-1.1.2.tar.gz"
+_name=libICE
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libICE-$version

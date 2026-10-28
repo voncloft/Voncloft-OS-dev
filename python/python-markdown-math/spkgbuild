@@ -5,11 +5,11 @@ name=python-markdown-math
 version=0.8
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/python-markdown-math/python-markdown-math-0.8.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

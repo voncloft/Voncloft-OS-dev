@@ -5,7 +5,8 @@ name=python-fs
 version=2.4.16
 release=2
 
-source="https://github.com/PyFilesystem/pyfilesystem2/archive/refs/tags/v$version.tar.gz"
+_name=pyfilesystem2
+source="https://github.com/PyFilesystem/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

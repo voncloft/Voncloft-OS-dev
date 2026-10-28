@@ -4,7 +4,8 @@ name=python-rope
 version=1.15.0
 release=3
 
-source="https://github.com/python-rope/rope/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/python-rope/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

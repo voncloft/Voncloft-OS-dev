@@ -5,7 +5,7 @@ name=cargo-c
 version=0.10.26
 release=1
 
-source="https://github.com/lu-zero/cargo-c/archive/v$version/cargo-c-$version.tar.gz"
+source="https://github.com/lu-zero/${name}/archive/v$version/${name}-$version.tar.gz"
 
 build()
 {

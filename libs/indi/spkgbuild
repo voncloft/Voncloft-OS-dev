@@ -5,10 +5,10 @@ name=indi
 version=2.2.5
 release=2
 options="!checksum"
-source="indi-2.2.5.tar.gz::https://github.com/indilib/indi/archive/refs/tags/v2.2.5.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/indilib/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "indi-2.2.5"
+    cd "indi-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

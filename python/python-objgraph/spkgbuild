@@ -5,7 +5,8 @@ name=python-objgraph
 version=3.7.0
 release=3
 
-source="https://github.com/mgedmin/objgraph/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mgedmin/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

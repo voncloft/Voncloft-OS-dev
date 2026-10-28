@@ -5,7 +5,8 @@ name=python-occ-core
 version=8.0.1.2
 release=2
 
-source="https://github.com/tpaviot/pythonocc-core/archive/refs/tags/8.0.1.2.tar.gz"
+_name=pythonocc-core
+source="https://github.com/tpaviot/${_name}/archive/refs/tags/${version}.tar.gz"
 options="!checksum"
 
 build() {

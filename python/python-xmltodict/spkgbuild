@@ -5,7 +5,8 @@ name=python-xmltodict
 version=0.13.0
 release=6
 
-source="https://files.pythonhosted.org/packages/source/x/xmltodict/xmltodict-0.13.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/x/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

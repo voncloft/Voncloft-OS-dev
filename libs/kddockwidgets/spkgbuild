@@ -5,7 +5,8 @@ name=kddockwidgets
 version=2.5.1
 release=1
 
-source="$name-$version.tar.gz::https://github.com/KDAB/KDDockWidgets/releases/download/v$version/kddockwidgets-$version.tar.gz"
+_name=KDDockWidgets
+source="$name-$version.tar.gz::https://github.com/KDAB/${_name}/releases/download/v$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

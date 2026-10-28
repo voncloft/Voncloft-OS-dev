@@ -5,7 +5,8 @@ name=python-jsonmerge
 version=1.9.2
 release=3
 
-source="https://github.com/avian2/jsonmerge/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/avian2/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

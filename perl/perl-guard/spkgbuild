@@ -4,7 +4,8 @@ name=perl-guard
 version=1.023
 release=11
 
-source="https://search.cpan.org/CPAN/authors/id/M/ML/MLEHMANN/Guard-1.023.tar.gz"
+_name=Guard
+source="https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

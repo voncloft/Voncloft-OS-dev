@@ -5,7 +5,8 @@ name=python-ethtool
 version=0.15
 release=6
 
-source="https://files.pythonhosted.org/packages/source/e/ethtool/ethtool-0.15.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/e/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pytest-subtesthack
 version=0.2.0
 release=9
 
-source="https://github.com/untitaker/pytest-subtesthack/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/untitaker/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

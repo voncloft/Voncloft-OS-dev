@@ -5,7 +5,8 @@ name=python-sphinx-click
 version=4.4.0
 release=2
 
-source="https://files.pythonhosted.org/packages/source/s/sphinx-click/sphinx-click-4.4.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-fissix
 version=24.4.24
 release=5
 
-source="https://github.com/jreese/fissix/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/jreese/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

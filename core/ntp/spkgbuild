@@ -4,7 +4,7 @@
 name=ntp
 version=4.2.8p18
 release=1
-source="https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-${version%.*}/$name-$version.tar.gz"
+source="https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${name}-${version%.*}/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

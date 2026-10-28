@@ -4,7 +4,7 @@
 name=gdl
 version=3.40.0
 release=1
-source="https://ftp.acc.umu.se/pub/gnome/sources/gdl/${version%.*}/gdl-$version.tar.xz"
+source="https://ftp.acc.umu.se/pub/gnome/sources/${name}/${version%.*}/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

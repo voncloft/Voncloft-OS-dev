@@ -5,7 +5,8 @@ name=python-flask-cors
 version=3.0.10
 release=1
 
-source="https://pypi.org/packages/source/F/Flask-Cors/Flask-Cors-3.0.10.tar.gz"
+_name=Flask-Cors
+source="https://files.pythonhosted.org/packages/source/F/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

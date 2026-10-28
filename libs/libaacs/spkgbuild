@@ -5,7 +5,7 @@ name=libaacs
 version=0.12.0
 release=1
 
-source="https://download.videolan.org/pub/videolan/libaacs/0.12.0/libaacs-0.12.0.tar.bz2"
+source="https://download.videolan.org/pub/videolan/${name}/${version}/${name}-${version}.tar.bz2"
 options="!checksum"
 
 build() {

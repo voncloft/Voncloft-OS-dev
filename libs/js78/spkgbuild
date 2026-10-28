@@ -5,11 +5,12 @@ name=js78
 version=78.15.0
 release=1
 
-source="https://archive.mozilla.org/pub/firefox/releases/78.15.0esr/source/firefox-78.15.0esr.source.tar.xz"
+_name=firefox
+source="https://archive.mozilla.org/pub/${_name}/releases/${version}esr/source/${_name}-${version}esr.source.tar.xz"
 options="!checksum"
 
 build() {
-	cd js-$version
+	cd "${_name}-${version}"
 	mkdir obj
 	cd obj
 	CC=gcc CXX=g++ \

@@ -2,7 +2,7 @@
 # depends	: ruby
 
 _name=yard
-name=ruby-$_name
+name=ruby-yard
 version=0.9.45
 release=1
 options="!emptydirs"

@@ -8,7 +8,7 @@ options="libtool !checksum"
 source="https://download.imagemagick.org/releases/ImageMagick-${version%.*}-${version##*.}.tar.xz"
 
 build() {
-    cd "ImageMagick-${version%.*}-${version##*.}"
+    cd "$SRC"/ImageMagick*/
 
     ./configure --prefix=/usr \
                 --libdir=/usr/lib64 \

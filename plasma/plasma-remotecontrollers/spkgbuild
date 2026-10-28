@@ -3,10 +3,10 @@
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
 # description : Remote control configuration and input support for Plasma Bigscreen
 name=plasma-remotecontrollers
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/plasma-remotecontrollers-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

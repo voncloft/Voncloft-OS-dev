@@ -5,7 +5,8 @@ name=python-jdcal
 version=1.4.1
 release=6
 
-source="https://github.com/phn/jdcal/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/phn/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pytest
 version=7.3.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pytest/pytest-7.3.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

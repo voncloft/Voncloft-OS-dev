@@ -4,7 +4,7 @@
 name=libappindicator
 version=12.10.0
 release=1
-source="https://launchpad.net/libappindicator/${version%.*}/$version/+download/libappindicator-$version.tar.gz
+source="https://launchpad.net/${name}/${version%.*}/$version/+download/${name}-$version.tar.gz
 	no-python.patch"
 
 build() {

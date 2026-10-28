@@ -5,7 +5,7 @@ name=libinput
 version=1.32.0
 release=2
 
-source="$name-$version.tar.gz::https://gitlab.freedesktop.org/libinput/libinput/-/archive/$version/libinput-$version.tar.gz"
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/${name}/${name}/-/archive/$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

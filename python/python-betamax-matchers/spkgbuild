@@ -5,7 +5,8 @@ name=python-betamax-matchers
 version=0.4.0
 release=6
 
-source="https://github.com/sigmavirus24/betamax_matchers/archive/refs/tags/$version.tar.gz"
+_name=betamax_matchers
+source="https://github.com/sigmavirus24/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

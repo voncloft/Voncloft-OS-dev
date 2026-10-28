@@ -5,7 +5,8 @@ name=python-txredisapi
 version=1.4.7
 release=2
 
-source="https://pypi.org/packages/source/t/txredisapi/txredisapi-1.4.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

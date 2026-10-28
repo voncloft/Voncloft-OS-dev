@@ -5,7 +5,8 @@ name=perl-text-template
 version=1.61
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/M/MS/MSCHOUT/Text-Template-1.61.tar.gz"
+_name=Text-Template
+source="https://cpan.metacpan.org/authors/id/M/MS/MSCHOUT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

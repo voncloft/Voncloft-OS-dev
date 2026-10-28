@@ -5,7 +5,8 @@ name=perl-io-socket-ssl
 version=2.094
 release=2
 
-source="https://www.cpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.072.tar.gz"
+_name=IO-Socket-SSL
+source="https://cpan.metacpan.org/authors/id/S/SU/SULLR/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

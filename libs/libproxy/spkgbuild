@@ -4,7 +4,7 @@
 name=libproxy
 version=0.5.12
 release=1
-source=" https://github.com/libproxy/libproxy/archive/$version/libproxy-0.$version.tar.gz"
+source=" https://github.com/libproxy/${name}/archive/$version/${name}-0.$version.tar.gz"
 options="!checksum"
 
 build() {

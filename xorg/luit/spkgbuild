@@ -4,7 +4,7 @@
 name=luit
 version=20260907
 release=1
-source="https://invisible-mirror.net/archives/luit/luit-20260907.tgz"
+source="https://invisible-mirror.net/archives/${name}/${name}-${version}.tgz"
 options="!checksum"
 
 build() {

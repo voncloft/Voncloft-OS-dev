@@ -5,7 +5,8 @@ name=python-django-gravatar
 version=1.4.4
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/django-gravatar2/django-gravatar2-1.4.4.tar.gz"
+_name=django-gravatar2
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

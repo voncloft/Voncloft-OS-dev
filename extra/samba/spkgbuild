@@ -5,10 +5,10 @@ name=samba
 version=4.25.1
 release=2
 options="!checksum"
-source="samba-4.25.1.tar.gz::https://download.samba.org/pub/samba/stable/samba-4.25.1.tar.gz"
+source="${name}-${version}.tar.gz::https://download.samba.org/pub/${name}/stable/${name}-${version}.tar.gz"
 
 build() {
-    cd "samba-4.25.1"
+    cd "samba-${version}"
     ./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc \
         --localstatedir=/var --enable-fhs --without-ad-dc --without-ads \
         --without-ldap --without-pam --without-systemd --disable-cups \

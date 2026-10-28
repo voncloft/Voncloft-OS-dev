@@ -5,7 +5,8 @@ name=perl-sort-naturally
 version=1.03
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/B/BI/BINGOS/Sort-Naturally-1.03.tar.gz"
+_name=Sort-Naturally
+source="https://cpan.metacpan.org/authors/id/B/BI/BINGOS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

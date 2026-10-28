@@ -2,10 +2,11 @@
   # depends : python-appdirs python-distlib python-filelock python-six
 
 name=python-virtualenv
-version=21.15.0
+version=21.15.1
 release=1
 
-source="https://github.com/pypa/virtualenv/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pypa/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

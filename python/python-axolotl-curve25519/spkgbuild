@@ -5,7 +5,7 @@ name=python-axolotl-curve25519
 version=0.4.1.2
 release=6
 
-source="https://github.com/tgalal/python-axolotl-curve25519/archive/refs/tags/$version.tar.gz"
+source="https://github.com/tgalal/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

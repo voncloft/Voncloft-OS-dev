@@ -5,7 +5,8 @@ name=python-latexcodec
 version=3.0.1
 release=3
 
-source="https://github.com/mcmtroffaes/latexcodec/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mcmtroffaes/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

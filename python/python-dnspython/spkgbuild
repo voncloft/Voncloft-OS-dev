@@ -5,11 +5,12 @@ name=python-dnspython
 version=2.3.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/dnspython/dnspython-2.3.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

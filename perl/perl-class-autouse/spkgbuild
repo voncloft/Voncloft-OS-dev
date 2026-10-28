@@ -5,7 +5,8 @@ name=perl-class-autouse
 version=2.01
 release=5
 
-source="https://www.cpan.org/authors/id/A/AD/ADAMK/Class-Autouse-2.01.tar.gz"
+_name=Class-Autouse
+source="https://cpan.metacpan.org/authors/id/A/AD/ADAMK/${_name}-${version}.tar.gz"
 options="!checksum" 
 
 build() {

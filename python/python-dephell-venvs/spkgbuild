@@ -5,7 +5,8 @@ name=python-dephell-venvs
 version=0.1.18
 release=5
 
-source="https://files.pythonhosted.org/packages/source/d/dephell_venvs/dephell_venvs-0.1.16.tar.gz"
+_name=dephell_venvs
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

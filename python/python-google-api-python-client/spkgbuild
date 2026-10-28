@@ -5,7 +5,8 @@ name=python-google-api-python-client
 version=2.201.0
 release=1
 
-source="https://github.com/google/google-api-python-client/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/google/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

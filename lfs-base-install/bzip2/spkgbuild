@@ -3,8 +3,8 @@
 name=bzip2
 version=1.0.8
 release=1
-source="https://www.sourceware.org/pub/bzip2/$name-$version.tar.gz
-	https://www.linuxfromscratch.org/patches/lfs/development/bzip2-$version-install_docs-1.patch"
+source="https://www.sourceware.org/pub/${name}/$name-$version.tar.gz
+	https://www.linuxfromscratch.org/patches/lfs/development/${name}-$version-install_docs-1.patch"
 
 build() {
 	cd $name-$version

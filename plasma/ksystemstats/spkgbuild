@@ -2,10 +2,10 @@
 # depends : extra-cmake-modules kcoreaddons kcrash kde-deps-installer kio libksysguard libnl lm-sensors networkmanager-qt qt6 solid
 
 name=ksystemstats
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/ksystemstats-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

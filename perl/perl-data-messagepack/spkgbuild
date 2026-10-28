@@ -5,7 +5,8 @@ name=perl-data-messagepack
 version=1.02
 release=1
 
-source="https://cpan.metacpan.org/authors/id/S/SY/SYOHEX/Data-MessagePack-1.02.tar.gz"
+_name=Data-MessagePack
+source="https://cpan.metacpan.org/authors/id/S/SY/SYOHEX/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

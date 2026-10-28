@@ -5,7 +5,8 @@ name=perl-perl-minimumversion
 version=1.40
 release=3
 
-source="https://cpan.metacpan.org/authors/id/D/DB/DBOOK/Perl-MinimumVersion-1.40.tar.gz"
+_name=Perl-MinimumVersion
+source="https://cpan.metacpan.org/authors/id/D/DB/DBOOK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

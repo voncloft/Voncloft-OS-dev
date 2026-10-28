@@ -5,10 +5,10 @@ name=subtitlecomposer
 version=0.8.2
 release=2
 options="!checksum"
-source="subtitlecomposer-0.8.2.tar.xz::https://download.kde.org/stable/subtitlecomposer/subtitlecomposer-0.8.2.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "subtitlecomposer-0.8.2"
+    cd "subtitlecomposer-${version}"
     plasma-package-installer \
         -DQT_MAJOR_VERSION=6
     cd build

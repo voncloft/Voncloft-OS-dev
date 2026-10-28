@@ -5,7 +5,7 @@ name=iftop
 version=1.0pre4
 release=1
 
-source="https://www.ex-parrot.com/pdw/iftop/download/iftop-1.0pre4.tar.gz
+source="https://www.ex-parrot.com/pdw/${name}/download/${name}-${version}.tar.gz
 	patch.patch"
 
 build()

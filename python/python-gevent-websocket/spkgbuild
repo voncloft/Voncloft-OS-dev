@@ -5,7 +5,8 @@ name=python-gevent-websocket
 version=0.10.1
 release=6
 
-source="https://gitlab.com/noppo/gevent-websocket/-/archive/0.10.1/gevent-websocket-0.10.1.tar.gz"
+_name=${name#python-}
+source="https://gitlab.com/noppo/${_name}/-/archive/${version}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

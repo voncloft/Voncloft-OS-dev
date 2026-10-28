@@ -4,7 +4,7 @@ name=mksh
 version=R59c
 release=1
 backup="etc/mkshrc"
-source="https://deb.debian.org/debian/pool/main/m/mksh/mksh_59c.orig.tar.gz"
+source="https://deb.debian.org/debian/pool/main/m/mksh/${name}_${version#R}.orig.tar.gz"
 
 build() {
 	cd "$SRC"/mksh*/

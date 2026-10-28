@@ -4,12 +4,13 @@
 name=xapian
 version=2.1.0    
 release=2
-source="https://oligarchy.co.uk/xapian/1.4.29/xapian-core-1.4.29.tar.xz"
+_name=xapian-core
+source="https://oligarchy.co.uk/xapian/${version}/${_name}-${version}.tar.xz"
 
 options="!checksum"
 
 build() {
-        cd *
+        cd "$SRC"/xapian-core*/
         ./configure --prefix=/usr    \
 --disable-static \
 --docdir=/usr/share/doc/xapian-core-1.4.29 

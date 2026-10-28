@@ -5,7 +5,8 @@ name=python-mss
 version=7.0.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/m/mss/mss-7.0.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=libxaw
 version=1.0.16
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXaw-$version.tar.xz"
+_name=libXaw
+source="http://ftp.x.org/pub/individual/lib/${_name}-$version.tar.xz"
 
 build() {
 	cd libXaw-$version

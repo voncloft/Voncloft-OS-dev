@@ -5,11 +5,12 @@ name=python-zopfli
 version=0.2.2
 release=3
 
-source="https://files.pythonhosted.org/packages/source/z/zopfli/zopfli-0.2.2.zip"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/z/${_name}/${_name}-${version}.zip"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

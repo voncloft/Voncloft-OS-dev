@@ -2,7 +2,7 @@
 # depends	: ruby
 
 _name=rb-fsevent
-name=ruby-$_name
+name=ruby-rb-fsevent
 version=0.11.2
 release=1
 options="!emptydirs"

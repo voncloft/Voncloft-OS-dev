@@ -5,7 +5,8 @@ name=python-rencode
 version=1.0.9
 release=5
 
-source="https://github.com/aresch/rencode/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/aresch/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

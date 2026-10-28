@@ -5,7 +5,8 @@ name=libxpresent
 version=1.0.2
 release=2
 
-source="https://www.x.org/pub/individual/lib/libXpresent-1.0.2.tar.gz"
+_name=libXpresent
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

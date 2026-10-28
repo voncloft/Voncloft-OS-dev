@@ -5,7 +5,7 @@ name=python-phonenumbers
 version=9.0.42
 release=1
 
-source="https://github.com/daviddrysdale/python-phonenumbers/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/daviddrysdale/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

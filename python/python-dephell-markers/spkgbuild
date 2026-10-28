@@ -5,7 +5,8 @@ name=python-dephell-markers
 version=1.0.3
 release=5
 
-source="https://files.pythonhosted.org/packages/source/d/dephell_markers/dephell_markers-1.0.1.tar.gz"
+_name=dephell_markers
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

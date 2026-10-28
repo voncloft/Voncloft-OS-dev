@@ -5,7 +5,8 @@ name=perl-datetime-calendar-julian
 version=0.107
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/W/WY/WYANT/-0.107.tar.gz"
+_name=DateTime-Calendar-Julian
+source="https://cpan.metacpan.org/authors/id/W/WY/WYANT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

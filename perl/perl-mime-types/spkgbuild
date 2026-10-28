@@ -5,7 +5,8 @@ name=perl-mime-types
 version=2.24
 release=1
 
-source="https://cpan.metacpan.org/authors/id/M/MA/MARKOV/MIME-Types-2.24.tar.gz"
+_name=MIME-Types
+source="https://cpan.metacpan.org/authors/id/M/MA/MARKOV/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

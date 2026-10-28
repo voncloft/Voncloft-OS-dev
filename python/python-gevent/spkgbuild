@@ -5,7 +5,8 @@ name=python-gevent
 version=26.9.0
 release=2
 
-source="https://github.com/gevent/gevent/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/gevent/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

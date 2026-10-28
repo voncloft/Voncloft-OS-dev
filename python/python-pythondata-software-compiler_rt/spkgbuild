@@ -5,7 +5,8 @@ name=python-pythondata-software-compiler_rt
 version=2026.08
 release=1
 
-source="https://github.com/litex-hub/pythondata-software-compiler_rt/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/litex-hub/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

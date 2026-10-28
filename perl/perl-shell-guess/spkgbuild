@@ -5,7 +5,8 @@ name=perl-shell-guess
 version=0.09
 release=3
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Shell-Guess-0.09.tar.gz"
+_name=Shell-Guess
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

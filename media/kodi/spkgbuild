@@ -4,14 +4,15 @@
 name=kodi
 version=21.3
 release=Matrix
-source="https://github.com/xbmc/xbmc/archive/refs/tags/$version-$release.tar.gz"
+_name=xbmc
+source="https://github.com/xbmc/${_name}/archive/refs/tags/$version-$release.tar.gz"
 options="!checksum"
 
 build()
 {
 
 	#run commands except make install that is replaced by below
-	cd *
+	cd "$SRC"/xbmc*/
 	mkdir build
 	cd build
 	#cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DCORE_PLATFORM_NAME=x11 -DAPP_RENDER_SYSTEM=gl

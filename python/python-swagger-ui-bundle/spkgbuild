@@ -5,7 +5,8 @@ name=python-swagger-ui-bundle
 version=0.0.9
 release=2
 
-source="https://github.com/dtkav/swagger_ui_bundle/archive/refs/tags/v$version.tar.gz"
+_name=swagger_ui_bundle
+source="https://github.com/dtkav/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

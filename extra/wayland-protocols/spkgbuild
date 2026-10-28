@@ -5,11 +5,11 @@ name=wayland-protocols
 version=1.49
 release=1
 
-source="$name-$version.tar.xz::https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/$version/downloads/wayland-protocols-$version.tar.xz"
+source="$name-$version.tar.xz::https://gitlab.freedesktop.org/wayland/${name}/-/releases/$version/downloads/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {
-    cd "wayland-protocols-$version"
+    cd "$SRC"/wayland-protocols*/
     meson setup build --prefix=/usr --libdir=lib64 --sysconfdir=/etc --localstatedir=/var --buildtype=release -Dtests=false
     ninja -C build
     DESTDIR="$PKG" ninja -C build install

@@ -5,10 +5,10 @@ name=skrooge
 version=26.8.0
 release=2
 options="!checksum"
-source="skrooge-26.8.0.tar.xz::https://download.kde.org/stable/skrooge/skrooge-26.8.0.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "skrooge-26.8.0"
+    cd "skrooge-${version}"
     plasma-package-installer \
         -DSKG_BUILD_TEST=OFF \
         -DSKG_DESIGNER=OFF

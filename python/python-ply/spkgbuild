@@ -5,7 +5,8 @@ name=python-ply
 version=3.11
 release=7
 
-source="https://pypi.io/packages/source/p/ply/ply-3.11.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

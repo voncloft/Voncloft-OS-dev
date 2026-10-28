@@ -5,7 +5,8 @@ name=python-rx
 version=3.2.0
 release=3
 
-source="git+https://github.com/ReactiveX/RxPY.git#tag="
+_name=Rx
+source="https://files.pythonhosted.org/packages/source/R/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

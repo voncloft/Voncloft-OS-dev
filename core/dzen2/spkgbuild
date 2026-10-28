@@ -2,9 +2,11 @@
 # depends	: libxpm libx11 libxinerama libxft
 
 name=dzen2
-version=20130923095739
+version=20130923095739.g488ab66019f475e35e067646621827c18a879ba1
 release=1
-source="https://github.com/robm/dzen/archive/488ab66019f475e35e067646621827c18a879ba1.tar.gz"
+_name=dzen
+_commit=${version##*.g}
+source="https://github.com/robm/${_name}/archive/${_commit}.tar.gz"
 
 build() {
 	cd "$SRC"/dzen*/

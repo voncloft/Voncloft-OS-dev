@@ -5,7 +5,8 @@ name=perl-www-mechanize
 version=2.17
 release=1
 
-source="https://cpan.metacpan.org/authors/id/S/SI/SIMBABQUE/WWW-Mechanize-2.17.tar.gz"
+_name=WWW-Mechanize
+source="https://cpan.metacpan.org/authors/id/S/SI/SIMBABQUE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

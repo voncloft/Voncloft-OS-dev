@@ -5,7 +5,7 @@ name=ktextaddons
 version=2.2.0
 release=1
 
-source="https://download.kde.org/stable/ktextaddons/ktextaddons-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

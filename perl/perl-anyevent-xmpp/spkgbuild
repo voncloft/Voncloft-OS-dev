@@ -5,7 +5,8 @@ name=perl-anyevent-xmpp
 version=0.55
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/M/MS/MSTPLBG/AnyEvent-XMPP-0.55.tar.gz"
+_name=AnyEvent-XMPP
+source="https://cpan.metacpan.org/authors/id/M/MS/MSTPLBG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

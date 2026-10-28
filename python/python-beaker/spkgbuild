@@ -6,7 +6,8 @@ version=1.14.1
 release=6
 pyn=python-Beaker
 
-source="https://github.com/bbangert/beaker/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/bbangert/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

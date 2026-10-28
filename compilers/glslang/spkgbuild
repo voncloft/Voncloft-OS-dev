@@ -5,7 +5,7 @@ name=glslang
 version=16.6.0
 release=1
 
-source="https://github.com/KhronosGroup/glslang/archive/$version/glslang-$version.tar.gz"
+source="https://github.com/KhronosGroup/${name}/archive/$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build()

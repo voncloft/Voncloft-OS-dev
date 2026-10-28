@@ -5,7 +5,8 @@ name=perl-xml-simple
 version=2.25
 release=5
 
-source="https://www.cpan.org/authors/id/G/GR/GRANTM/XML-Simple-2.25.tar.gz"
+_name=XML-Simple
+source="https://cpan.metacpan.org/authors/id/G/GR/GRANTM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

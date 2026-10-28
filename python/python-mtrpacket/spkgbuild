@@ -5,7 +5,8 @@ name=python-mtrpacket
 version=1.0.1
 release=2
 
-source="https://github.com/matt-kimball/mtr-packet-python/archive/refs/tags/$version.tar.gz"
+_name=mtr-packet-python
+source="https://github.com/matt-kimball/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

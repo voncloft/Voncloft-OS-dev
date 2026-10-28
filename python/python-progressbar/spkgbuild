@@ -5,7 +5,8 @@ name=python-progressbar
 version=4.2.0
 release=5
 
-source="https://files.pythonhosted.org/packages/source/p/progressbar2/progressbar2-4.2.0.tar.gz"
+_name=progressbar2
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,7 @@
 name=deadbeef
 version=1.10.3
 release=1
-source="https://downloads.sourceforge.net/project/deadbeef/Builds/1.10.3/linux/deadbeef-1.10.3.tar.bz2"
+source="https://downloads.sourceforge.net/project/${name}/Builds/${version}/linux/${name}-${version}.tar.bz2"
 
 build() {
 	cd "$SRC"/deadbeef*/

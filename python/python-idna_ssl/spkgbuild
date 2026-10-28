@@ -5,7 +5,8 @@ name=python-idna_ssl
 version=1.1.0
 release=4
 
-source="https://github.com/aio-libs/idna-ssl/archive/refs/tags/v$version.tar.gz"
+_name=idna-ssl
+source="https://github.com/aio-libs/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

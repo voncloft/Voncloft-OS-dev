@@ -5,7 +5,8 @@ name=python-schemdraw
 version=0.16
 release=2
 
-source="python-schemdraw-0.16.tar.bz2::https://bitbucket.org/cdelker/schemdraw/get/0.16.tar.bz2"
+_name=${name#python-}
+source="${name}-${version}.tar.bz2::https://bitbucket.org/cdelker/${_name}/get/${version}.tar.bz2"
 options="!checksum"
 
 build() {

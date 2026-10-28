@@ -5,10 +5,10 @@ name=libplacebo
 version=7.387.0
 release=2
 options="!checksum"
-source="libplacebo-7.387.0.tar.gz::https://github.com/haasn/libplacebo/archive/refs/tags/v7.387.0.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/haasn/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "libplacebo-7.387.0"
+    cd "libplacebo-${version}"
     meson setup build --prefix=/usr --libdir=lib64 --buildtype=release \
         --wrap-mode=nofallback -Ddemos=false -Dtests=false \
         -Dopengl=enabled -Dvulkan=enabled -Dglslang=enabled

@@ -5,7 +5,8 @@ name=python-cerberus
 version=1.3.8
 release=3
 
-source="https://github.com/pyeve/cerberus/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pyeve/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

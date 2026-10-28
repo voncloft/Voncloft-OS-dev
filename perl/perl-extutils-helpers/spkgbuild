@@ -5,7 +5,8 @@ name=perl-extutils-helpers
 version=0.026
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz"
+_name=ExtUtils-Helpers
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

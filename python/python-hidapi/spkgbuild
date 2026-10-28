@@ -5,7 +5,8 @@ name=python-hidapi
 version=0.13.1
 release=1
 
-source="https://pypi.org/packages/source/h/hidapi/hidapi-0.13.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

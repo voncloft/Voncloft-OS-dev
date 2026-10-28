@@ -5,7 +5,8 @@ name=python-logutils
 version=0.3.5
 release=8
 
-source="https://pypi.python.org/packages/source/l/logutils/logutils-0.3.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/l/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

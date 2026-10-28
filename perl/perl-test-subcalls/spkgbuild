@@ -5,7 +5,8 @@ name=perl-test-subcalls
 version=1.10
 release=3
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-SubCalls-1.10.tar.gz"
+_name=Test-SubCalls
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

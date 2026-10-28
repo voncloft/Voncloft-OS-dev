@@ -2,10 +2,10 @@
 # depends : breeze extra-cmake-modules kcolorscheme kconfig kconfigwidgets kcoreaddons kde-deps-installer kguiaddons ki18n kiconthemes kio kjobwidgets knotifications kservice kstatusnotifieritem kwayland kwidgetsaddons kwindowsystem libx11 libxcb libxext libxfixes libxi libxrender libxtst plasma-wayland-protocols qt6 wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm
 
 name=plasma-integration
-version=6.8.1
+version=6.8.2
 release=2
 
-source="https://download.kde.org/stable/plasma/$version/plasma-integration-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

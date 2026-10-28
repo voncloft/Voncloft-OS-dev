@@ -5,7 +5,8 @@ name=python-awesomeversion
 version=25.8.0
 release=1
 
-source="https://github.com/ludeeus/awesomeversion/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/ludeeus/${_name}/archive/refs/tags/$version.tar.gz"
 
 build() {
 	cd awesomeversion-$version

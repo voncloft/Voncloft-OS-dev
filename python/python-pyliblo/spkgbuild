@@ -5,7 +5,8 @@ name=python-pyliblo
 version=0.10.0
 release=7
 
-source="https://github.com/dsacre/pyliblo/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/dsacre/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

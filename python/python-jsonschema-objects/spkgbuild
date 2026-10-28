@@ -5,7 +5,7 @@ name=python-jsonschema-objects
 version=0.5.7
 release=2
 
-source="https://github.com/cwacek/python-jsonschema-objects/archive/refs/tags/$version.tar.gz"
+source="https://github.com/cwacek/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

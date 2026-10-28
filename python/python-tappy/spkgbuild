@@ -5,7 +5,8 @@ name=python-tappy
 version=3.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/t/tap.py/tap.py-3.1.tar.gz"
+_name=tap.py
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

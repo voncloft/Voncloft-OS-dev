@@ -5,7 +5,8 @@ name=python-orderedmultidict
 version=1.0.1
 release=6
 
-source="https://files.pythonhosted.org/packages/source/o/orderedmultidict/orderedmultidict-1.0.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/o/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

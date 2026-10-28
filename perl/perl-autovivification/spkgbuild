@@ -5,7 +5,8 @@ name=perl-autovivification
 version=0.18
 release=6
 
-source="https://www.cpan.org/authors/id/V/VP/VPIT/autovivification-0.18.tar.gz"
+_name=${name#perl-}
+source="https://cpan.metacpan.org/authors/id/V/VP/VPIT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-zabbix-api
 version=0.5.6
 release=2
 
-source="https://files.pythonhosted.org/packages/source/z/zabbix-api/zabbix-api-0.5.6.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/z/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

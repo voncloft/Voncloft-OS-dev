@@ -5,7 +5,7 @@ name=aqbanking
 version=6.9.2
 release=1
 
-source="https://www.aquamaniac.de/rdm/attachments/download/654/aqbanking-6.9.2.tar.gz"
+source="https://www.aquamaniac.de/rdm/attachments/download/654/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

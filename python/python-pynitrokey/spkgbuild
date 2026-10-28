@@ -5,7 +5,8 @@ name=python-pynitrokey
 version=0.14.1
 release=3
 
-source="https://files.pythonhosted.org/packages/fc/c9/c1663840d56dfabba7c984d2be8df406b00b9b70858669bad8691fccbabd/pynitrokey-0.14.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

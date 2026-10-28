@@ -5,7 +5,8 @@ name=python-toposort
 version=1.10
 release=1
 
-source="https://gitlab.com/ericvsmith/toposort/-/archive/1.10/toposort-1.10.tar.bz2"
+_name=${name#python-}
+source="https://gitlab.com/ericvsmith/${_name}/-/archive/${version}/${_name}-${version}.tar.bz2"
 options="!checksum"
 
 build() {

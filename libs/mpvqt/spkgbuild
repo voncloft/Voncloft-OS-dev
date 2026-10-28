@@ -5,7 +5,7 @@ name=mpvqt
 version=1.2.1
 release=1
 
-source="https://download.kde.org/stable/mpvqt/mpvqt-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

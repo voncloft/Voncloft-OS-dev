@@ -5,7 +5,8 @@ name=perl-net-ipv4addr
 version=0.10
 release=12
 
-source="https://www.cpan.org/authors/id/F/FR/FRAJULAC/Net-IPv4Addr-0.10.tar.gz"
+_name=Net-IPv4Addr
+source="https://cpan.metacpan.org/authors/id/F/FR/FRAJULAC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-stestr
 version=4.0.1
 release=1
 
-source="https://pypi.io/packages/source/s/stestr/stestr-4.0.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

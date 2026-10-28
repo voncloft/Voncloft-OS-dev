@@ -5,10 +5,10 @@ name=hana
 version=1.0.0
 release=2
 options="!checksum"
-source="hana-1.0.0.tar.xz::https://download.kde.org/stable/hana/1.0.0/hana-1.0.0.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
-    cd "hana-1.0.0"
+    cd "hana-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

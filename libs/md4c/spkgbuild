@@ -5,10 +5,10 @@ name=md4c
 version=0.6.0
 release=2
 options="!checksum"
-source="md4c-0.6.0.tar.gz::https://github.com/mity/md4c/archive/refs/tags/v0.6.0.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/mity/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "md4c-0.6.0"
+    cd "md4c-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

@@ -5,7 +5,8 @@ name=python-toolz
 version=0.12.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/t/toolz/toolz-0.12.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

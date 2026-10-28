@@ -5,7 +5,8 @@ name=python-gitdb
 version=4.0.10
 release=3
 
-source="git+https://github.com/gitpython-developers/gitdb#tag=75d591dced2e225c31a897527b6672217b4aae91?signed"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

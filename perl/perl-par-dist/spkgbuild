@@ -5,7 +5,8 @@ name=perl-par-dist
 version=0.51
 release=1
 
-source="https://search.cpan.org/CPAN/authors/id/R/RS/RSCHUPP/PAR-Dist-0.51.tar.gz"
+_name=PAR-Dist
+source="https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

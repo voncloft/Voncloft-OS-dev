@@ -3,7 +3,7 @@
 name=elfutils
 version=0.197
 release=1
-source="https://sourceware.org/ftp/elfutils/$version/elfutils-$version.tar.bz2"
+source="https://sourceware.org/ftp/${name}/$version/${name}-$version.tar.bz2"
 
 build() {
 	cd $name-$version

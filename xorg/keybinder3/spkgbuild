@@ -4,7 +4,8 @@
 name=keybinder3
 version=0.3.2
 release=1
-source="https://github.com/kupferlauncher/keybinder/releases/download/keybinder-3.0-v$version/keybinder-3.0-$version.tar.gz"
+_name=keybinder
+source="https://github.com/kupferlauncher/${_name}/releases/download/${_name}-3.0-v$version/${_name}-3.0-$version.tar.gz"
 
 options="!checksums"
 build() {

@@ -5,7 +5,8 @@ name=perl-net-ip-minimal
 version=0.06
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/B/BI/BINGOS/Net-IP-Minimal-0.06.tar.gz"
+_name=Net-IP-Minimal
+source="https://cpan.metacpan.org/authors/id/B/BI/BINGOS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

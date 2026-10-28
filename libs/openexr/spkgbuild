@@ -5,7 +5,7 @@ name=openexr
 version=3.5.2
 release=1
 
-source="https://github.com/openexr/openexr/archive/v$version.tar.gz"
+source="https://github.com/openexr/${name}/archive/v$version.tar.gz"
 options="!checksum"
 
 build() {

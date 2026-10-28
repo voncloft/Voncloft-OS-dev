@@ -4,7 +4,7 @@
 name=libdbusmenu
 version=16.04.0
 release=1
-source="https://launchpad.net/libdbusmenu/${version%.*}/$version/+download/libdbusmenu-$version.tar.gz"
+source="https://launchpad.net/${name}/${version%.*}/$version/+download/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

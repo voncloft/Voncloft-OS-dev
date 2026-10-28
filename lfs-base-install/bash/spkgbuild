@@ -4,7 +4,7 @@
 name=bash
 version=5.3
 release=rc2
-source="https://ftp.gnu.org/gnu/bash/bash-$version-$release.tar.gz"
+source="https://ftp.gnu.org/gnu/${name}/${name}-$version-$release.tar.gz"
 options="!checksum"
 
 build() {

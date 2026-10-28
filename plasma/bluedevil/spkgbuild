@@ -2,10 +2,10 @@
 # depends : bluez-qt extra-cmake-modules kauth kcmutils kcodecs kcompletion kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdoctools ki18n kio kitemviews kjobwidgets knotifications kservice ksvg kwidgetsaddons kwindowsystem kxmlgui libplasma plasma-workspace qt6 shared-mime-info solid
 
 name=bluedevil
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/bluedevil-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

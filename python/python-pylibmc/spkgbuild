@@ -5,7 +5,8 @@ name=python-pylibmc
 version=1.6.3
 release=5
 
-source="https://pypi.org/packages/source/p/pylibmc/pylibmc-1.6.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

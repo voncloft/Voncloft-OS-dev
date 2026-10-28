@@ -5,11 +5,12 @@ name=python-profilestats
 version=2.0
 release=8
 
-source="git+https://github.com/hannosch/profilestats.git#tag=2.0"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://github.com/hannosch/${_name}/archive/refs/tags/${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "$SRC"/profilestats*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

@@ -5,10 +5,10 @@ name=mariadb
 version=11.8.9
 release=2
 options="!checksum"
-source="mariadb-11.8.9.tar.gz::https://archive.mariadb.org/mariadb-11.8.9/source/mariadb-11.8.9.tar.gz"
+source="${name}-${version}.tar.gz::https://archive.mariadb.org/${name}-${version}/source/${name}-${version}.tar.gz"
 
 build() {
-    cd "mariadb-11.8.9"
+    cd "mariadb-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

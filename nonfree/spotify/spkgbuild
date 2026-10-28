@@ -6,7 +6,7 @@ version=1.2.95.453.g0eeebbed
 verzion=${version%.*}-${version##*.}
 release=1
 options="!strip"
-source="https://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.2.95.453.g0eeebbed_amd64.deb
+source="https://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_${version}_amd64.deb
 	spotify"
 
 build() {

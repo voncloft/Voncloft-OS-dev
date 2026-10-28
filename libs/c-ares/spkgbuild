@@ -4,7 +4,7 @@
 name=c-ares
 version=1.34.9    
 release=1
-source="https://github.com/c-ares/c-ares/releases/download/v1.34.5/c-ares-1.34.5.tar.gz"
+source="https://github.com/c-ares/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 options="!checksum"
 

@@ -5,7 +5,8 @@ name=python-s3transfer
 version=0.19.3
 release=1
 
-source="https://github.com/boto/s3transfer/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/boto/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-oslotest
 version=6.1.1
 release=4
 
-source="https://github.com/openstack/oslotest/archive/refs/tags/e$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

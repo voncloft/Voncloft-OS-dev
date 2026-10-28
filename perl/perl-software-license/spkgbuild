@@ -4,7 +4,8 @@ name=perl-software-license
 version=0.104002
 release=3
 
-source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/Software-License-0.104002.tar.gz"
+_name=Software-License
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

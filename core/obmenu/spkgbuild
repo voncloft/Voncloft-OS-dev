@@ -7,7 +7,7 @@ release=1
 source="https://downloads.sourceforge.net/$name/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/obmenu*/
 	python setup.py install --root="$PKG" --optimize=1
 }
 

@@ -5,7 +5,8 @@ name=perl-xml-sax-expat
 version=0.51
 release=7
 
-source="https://www.cpan.org/authors/id/B/BJ/BJOERN/XML-SAX-Expat-0.51.tar.gz"
+_name=XML-SAX-Expat
+source="https://cpan.metacpan.org/authors/id/B/BJ/BJOERN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

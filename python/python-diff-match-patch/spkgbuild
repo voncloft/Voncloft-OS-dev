@@ -5,7 +5,8 @@ name=python-diff-match-patch
 version=20200713
 release=3
 
-source="https://files.pythonhosted.org/packages/source/d/diff-match-patch/diff-match-patch-20200713.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

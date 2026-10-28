@@ -4,7 +4,8 @@
 name=curl-32
 version=8.23.0
 release=1
-source="https://curl.haxx.se/download/curl-$version.tar.xz"
+_name=${name%-32}
+source="https://curl.haxx.se/download/${_name}-$version.tar.xz"
 options="!checksum"
 build() {
 	cd *

@@ -5,7 +5,8 @@ name=python-subprocess-tee
 version=0.4.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/s/subprocess-tee/subprocess-tee-0.4.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

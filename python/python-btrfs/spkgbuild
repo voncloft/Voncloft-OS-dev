@@ -5,7 +5,8 @@ name=python-btrfs
 version=15
 release=2
 
-source="python-btrfs::https://files.pythonhosted.org/packages/e7/3a/46984cee1e0d3543c360aa96af51fe8a19e3eba152f5984e0a17ce49f21b/btrfs-15.tar.gz"
+_name=${name#python-}
+source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/b/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

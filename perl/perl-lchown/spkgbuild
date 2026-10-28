@@ -5,7 +5,8 @@ name=perl-lchown
 version=1.01
 release=12
 
-source="https://search.cpan.org/CPAN/authors/id/N/NC/NCLEATON/Lchown-1.01.tar.gz"
+_name=Lchown
+source="https://cpan.metacpan.org/authors/id/N/NC/NCLEATON/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

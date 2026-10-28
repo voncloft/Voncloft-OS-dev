@@ -5,7 +5,8 @@ name=python-tailer
 version=0.4.1
 release=5
 
-source="https://pypi.io/packages/source/t/tailer/tailer-0.4.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

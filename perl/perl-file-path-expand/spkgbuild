@@ -4,7 +4,8 @@ name=perl-file-path-expand
 version=1.02
 release=13
 
-source="https://www.cpan.org/authors/id/R/RC/RCLAMP/File-Path-Expand-1.02.tar.gz"
+_name=File-Path-Expand
+source="https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

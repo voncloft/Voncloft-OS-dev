@@ -4,8 +4,8 @@
 name=nss
 version=3.113.1    
 release=1
-source="https://archive.mozilla.org/pub/security/nss/releases/NSS_3_113_1_RTM/src/nss-3.113.1.tar.gz
-https://www.linuxfromscratch.org/patches/blfs/svn/nss-standalone-1.patch"
+source="https://archive.mozilla.org/pub/security/${name}/releases/NSS_3_113_1_RTM/src/${name}-${version}.tar.gz
+https://www.linuxfromscratch.org/patches/blfs/svn/${name}-standalone-1.patch"
 
 options="!checksum"
 

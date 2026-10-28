@@ -2,18 +2,22 @@
 # depends	: libxml2 sgml-common libarchive
 
 name=docbook-xml
-version=5.0
+version=4.5
 release=5
 noextract="docbook-xml-4.5.zip
 	docbook-xml-4.4.zip
 	docbook-xml-4.3.zip
 	docbook-xml-4.2.zip
 	docbkx412.zip"
-source="https://www.docbook.org/xml/4.5/docbook-xml-4.5.zip
-	https://www.docbook.org/xml/4.4/docbook-xml-4.4.zip
-	https://www.docbook.org/xml/4.3/docbook-xml-4.3.zip
-	https://www.docbook.org/xml/4.2/docbook-xml-4.2.zip
-	https://www.docbook.org/xml/4.1.2/docbkx412.zip"
+_source2_version=4.4
+_source3_version=4.3
+_source4_version=4.2
+_source5_version=4.1.2
+source="https://www.docbook.org/xml/${version}/${name}-${version}.zip
+	https://www.docbook.org/xml/${_source2_version}/${name}-${_source2_version}.zip
+	https://www.docbook.org/xml/${_source3_version}/${name}-${_source3_version}.zip
+	https://www.docbook.org/xml/${_source4_version}/${name}-${_source4_version}.zip
+	https://www.docbook.org/xml/${_source5_version}/docbkx412.zip"
 
 build() {
 	for ver in 4.5 4.4 4.3 4.2; do

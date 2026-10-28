@@ -5,7 +5,8 @@ name=python-jupyter_client
 version=8.10.0
 release=3
 
-source="https://files.pythonhosted.org/packages/c5/2a/906772148a06e48885039e0250c340b770a55bbf37b08d6ee0449df369c3/jupyter_client-8.10.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/j/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,7 @@
 name=dmenu
 version=5.4
 release=1
-source="http://dl.suckless.org/tools/dmenu-$version.tar.gz"
+source="http://dl.suckless.org/tools/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

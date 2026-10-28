@@ -4,7 +4,8 @@ name=perl-text-charwidth
 version=0.04
 release=19
 
-source="https://www.cpan.org/authors/id/K/KU/KUBOTA/Text-CharWidth-0.04.tar.gz"
+_name=Text-CharWidth
+source="https://cpan.metacpan.org/authors/id/K/KU/KUBOTA/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

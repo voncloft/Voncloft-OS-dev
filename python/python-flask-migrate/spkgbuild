@@ -5,7 +5,8 @@ name=python-flask-migrate
 version=4.1.0
 release=3
 
-source="https://github.com/miguelgrinberg/Flask-Migrate/archive/refs/tags/v$version.tar.gz"
+_name=Flask-Migrate
+source="https://github.com/miguelgrinberg/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

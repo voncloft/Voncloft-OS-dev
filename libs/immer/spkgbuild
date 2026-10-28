@@ -5,10 +5,10 @@ name=immer
 version=0.9.1
 release=2
 options="!checksum"
-source="immer-0.9.1.tar.gz::https://github.com/arximboldi/immer/archive/refs/tags/v0.9.1.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/arximboldi/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "immer-0.9.1"
+    cd "immer-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

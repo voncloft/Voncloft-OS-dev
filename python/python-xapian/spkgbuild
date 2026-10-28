@@ -5,7 +5,8 @@ name=python-xapian
 version=2.1.0
 release=1
 
-source="https://oligarchy.co.uk/xapian/1.4.18/xapian-bindings-1.4.18.tar.xz"
+_name=xapian-bindings
+source="https://oligarchy.co.uk/xapian/${version}/${_name}-${version}.tar.xz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-subunit2sql
 version=1.10.0
 release=8
 
-source="https://github.com/openstack-infra/subunit2sql/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack-infra/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

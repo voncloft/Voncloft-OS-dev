@@ -2,13 +2,14 @@
 # depends	: git python autoconf2.13 gtk2 yasm gconf alsa-lib dbus-glib
 
 name=palemoon
-version=35.0.2
+version=35.0.3
 release=2
-source="palemoon-${version}::git+https://repo.palemoon.org/MoonchildProductions/Pale-Moon.git#tag=${version}_Release
-	mozconfig"
+_name=Pale-Moon
+source="mozconfig"
 rev_ex_libs="libxul.so libmozsqlite3.so libmozavutil.so liblgpllibs.so"
 
 build() {
+	git clone --depth 1 --branch "${version}_Release" --recursive "https://repo.palemoon.org/MoonchildProductions/${_name}.git" "$SRC/$name-$version"
 	cd "$SRC/palemoon-$version"
 	git submodule update --init --recursive
 

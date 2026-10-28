@@ -2,10 +2,10 @@
 # depends :	
 
 name=inih
-version=60
+version=62
 release=1
 
-source="https://github.com/benhoyt/inih/archive/r$version/inih-r$version.tar.gz"
+source="https://github.com/benhoyt/${name}/archive/r$version/inih-r$version.tar.gz"
 
 build()
 {

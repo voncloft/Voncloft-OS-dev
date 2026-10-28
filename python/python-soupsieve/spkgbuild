@@ -5,7 +5,8 @@ name=python-soupsieve
 version=3.0.4
 release=1
 
-source="https://github.com/facelessuser/soupsieve/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/facelessuser/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

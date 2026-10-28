@@ -4,9 +4,10 @@
 name=pypanel
 version=2.4
 release=1
-source="https://downloads.sourceforge.net/pypanel/PyPanel-$version.tar.gz"
+_name=PyPanel
+source="https://downloads.sourceforge.net/pypanel/${_name}-$version.tar.gz"
 
 build() {
-	cd PyPanel-$version
+	cd "$SRC"/PyPanel*/
 	python setup.py install --root=$PKG
 }

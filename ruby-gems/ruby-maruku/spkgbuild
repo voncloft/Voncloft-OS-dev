@@ -2,7 +2,7 @@
 # depends	: ruby
 
 _name=maruku
-name=ruby-$_name
+name=ruby-maruku
 version=0.7.3
 release=3
 options="!emptydirs"

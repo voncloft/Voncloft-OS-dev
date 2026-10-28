@@ -5,7 +5,7 @@ name=heaptrack
 version=1.5.0
 release=2
 options="!checksum"
-source="heaptrack-1.5.0.tar.gz::https://invent.kde.org/sdk/heaptrack/-/archive/v1.5.0/heaptrack-v1.5.0.tar.gz"
+source="${name}-${version}.tar.gz::https://invent.kde.org/sdk/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     cd "heaptrack-v${version}"

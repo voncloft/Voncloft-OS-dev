@@ -6,7 +6,8 @@ name=packagekit-qt
 version=1.1.4
 release=2
 
-source="$name-$version.tar.gz::https://github.com/PackageKit/PackageKit-Qt/archive/refs/tags/v$version.tar.gz"
+_name=PackageKit-Qt
+source="$name-$version.tar.gz::https://github.com/PackageKit/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

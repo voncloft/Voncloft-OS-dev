@@ -4,8 +4,9 @@
 name=opencascade
 version=8.0.1
 release=1
-_version=8.0.1
-source="https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V$_version.tar.gz"
+_version=${version}
+_name=OCCT
+source="https://github.com/Open-Cascade-SAS/${_name}/archive/refs/tags/V$_version.tar.gz"
 
 build()
 {

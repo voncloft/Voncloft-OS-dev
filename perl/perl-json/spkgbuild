@@ -5,7 +5,8 @@ name=perl-json
 version=4.10
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/I/IS/ISHIGAKI/JSON-4.10.tar.gz"
+_name=JSON
+source="https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

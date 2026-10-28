@@ -2,14 +2,15 @@
 # depends : udev libmtp
 
 name=android-udev
-version=20210501
+version=20260922
 release=1
 
-source="https://github.com/M0Rf30/android-udev-rules/archive/$version.zip"
+_name=android-udev-rules
+source="https://github.com/M0Rf30/${_name}/archive/$version.zip"
 options="!checksum"
 
 build() {
-	cd android-udev-rules-$pkgver
+	cd android-udev-rules-$version
   	install -Dm 644 51-android.rules "$PKG"/usr/lib/udev/rules.d/51-android.rules
   	install -Dm 644 android-udev.conf "$PKG"/usr/lib/sysusers.d/android-udev.conf
 }

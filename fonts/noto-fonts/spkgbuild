@@ -4,7 +4,8 @@
 name=noto-fonts
 version=2026.10.01
 release=phase3
-source="https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-$version.tar.gz"
+_name=notofonts.github.io
+source="https://github.com/notofonts/${_name}/archive/refs/tags/noto-monthly-release-$version.tar.gz"
 
 build() {
 	cd *

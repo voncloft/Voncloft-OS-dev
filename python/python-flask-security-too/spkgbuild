@@ -5,7 +5,8 @@ name=python-flask-security-too
 version=5.9.2
 release=3
 
-source="https://github.com/jwag956/flask-security/archive/refs/tags/r$version.tar.gz"
+_name=flask-security
+source="https://github.com/jwag956/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-pillow
 version=9.5.0
 release=1
 
-source="python-pillow::git+https://github.com/python-pillow/Pillow#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=Pillow
+source="https://files.pythonhosted.org/packages/source/P/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

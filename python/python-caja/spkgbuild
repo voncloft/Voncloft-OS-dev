@@ -5,7 +5,7 @@ name=python-caja
 version=1.26.0
 release=2
 
-source="https://pub.mate-desktop.org/releases/1.26/python-caja-1.26.0.tar.xz"
+source="https://pub.mate-desktop.org/releases/${version%.*}/${name}-${version}.tar.xz"
 options="!checksum"
 
 build() {

@@ -4,11 +4,11 @@
 name=htmlq
 version=9.3
 release=1
-source="https://github.com/mgdm/htmlq/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/mgdm/${name}/archive/refs/tags/v$version.tar.gz"
 
 options="!checksum"
 build() {
-	cd *
+	cd "$SRC"/htmlq*/
 	cargo test --frozen --release
 	cargo fetch --locked --target
 	cargo build --frozen --release

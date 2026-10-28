@@ -5,7 +5,8 @@ name=python-testscenarios
 version=0.5.0
 release=9
 
-source="https://pypi.python.org/packages/source/t/testscenarios/testscenarios-0.5.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

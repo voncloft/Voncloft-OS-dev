@@ -5,7 +5,8 @@ name=python-diff-cover
 version=7.5.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/d/diff_cover/diff_cover-7.5.0.tar.gz"
+_name=diff_cover
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

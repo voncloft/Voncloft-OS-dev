@@ -5,7 +5,8 @@ name=python-qtconsole
 version=5.7.2
 release=2
 
-source="https://github.com/jupyter/qtconsole/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/jupyter/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

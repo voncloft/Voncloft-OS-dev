@@ -3,7 +3,8 @@
 name=xtrans-32
 version=1.6.0
 release=1
-source="http://ftp.x.org/pub/individual/lib/xtrans-$version.tar.xz"
+_name=${name%-32}
+source="http://ftp.x.org/pub/individual/lib/${_name}-$version.tar.xz"
 
 build() {
 	cd xtrans-$version

@@ -4,9 +4,12 @@
 name=glib-32
 version=2.90.1    
 release=1
-source="https://download.gnome.org/sources/glib/2.90/glib-2.90.1.tar.xz
-https://download.gnome.org/sources/gobject-introspection/1.84/gobject-introspection-1.84.0.tar.xz
-https://www.linuxfromscratch.org/patches/blfs/svn/glib-skip_warnings-1.patch"
+_name=${name%-32}
+_source2_version=1.84
+_source2_version2=1.84.0
+source="https://download.gnome.org/sources/${_name}/${version%.*}/${_name}-${version}.tar.xz
+https://download.gnome.org/sources/gobject-introspection/${_source2_version}/gobject-introspection-${_source2_version2}.tar.xz
+https://www.linuxfromscratch.org/patches/blfs/svn/${_name}-skip_warnings-1.patch"
 
 options="!checksum"
 noextract="gobject-introspection-1.84.0.tar.xz"

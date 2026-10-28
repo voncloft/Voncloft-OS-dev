@@ -5,7 +5,8 @@ name=python-requests-ntlm
 version=1.2.0
 release=6
 
-source="https://files.pythonhosted.org/packages/source/r/requests_ntlm/requests_ntlm-1.2.0.tar.gz"
+_name=requests_ntlm
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

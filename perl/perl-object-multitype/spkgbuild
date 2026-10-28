@@ -4,7 +4,8 @@ name=perl-object-multitype
 version=0.05
 release=11
 
-source="https://www.cpan.org/authors/id/G/GM/GMPASSOS/Object-MultiType-0.05.tar.gz"
+_name=Object-MultiType
+source="https://cpan.metacpan.org/authors/id/G/GM/GMPASSOS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

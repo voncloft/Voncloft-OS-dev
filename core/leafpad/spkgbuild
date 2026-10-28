@@ -7,7 +7,7 @@ release=1
 source="http://savannah.nongnu.org/download/$name/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/leafpad*/
 	./configure --prefix=/usr \
 		    --enable-chooser
 	make

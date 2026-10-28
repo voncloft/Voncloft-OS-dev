@@ -5,7 +5,8 @@ name=python-flickrapi
 version=2.4.0
 release=5
 
-source="https://pypi.io/packages/source/f/flickrapi/flickrapi-2.4.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

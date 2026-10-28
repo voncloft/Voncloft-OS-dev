@@ -5,7 +5,8 @@ name=python-aws-sam-translator
 version=1.115.0
 release=1
 
-source="https://github.com/aws/serverless-application-model/archive/refs/tags/v$version.tar.gz"
+_name=serverless-application-model
+source="https://github.com/aws/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

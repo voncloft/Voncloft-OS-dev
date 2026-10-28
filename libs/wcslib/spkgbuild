@@ -5,10 +5,10 @@ name=wcslib
 version=8.10
 release=2
 options="!checksum"
-source="wcslib-8.10.tar.bz2::https://www.atnf.csiro.au/computing/software/wcs/wcslib-releases/wcslib-8.10.tar.bz2"
+source="${name}-${version}.tar.bz2::https://www.atnf.csiro.au/computing/software/wcs/wcslib-releases/${name}-${version}.tar.bz2"
 
 build() {
-    cd "wcslib-8.10"
+    cd "wcslib-${version}"
     ./configure --prefix=/usr --libdir=/usr/lib64 --disable-fortran --without-pgplot
     make
     make DESTDIR="$PKG" install

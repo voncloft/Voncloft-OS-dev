@@ -4,7 +4,7 @@
 name=less
 version=710
 release=1
-source="https://www.greenwoodsoftware.com/less/less-710.tar.gz"
+source="https://www.greenwoodsoftware.com/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=qtwebengine
 version=6.9.3    
 release=1
-source="https://download.qt.io/archive/qt/6.9/6.9.3/submodules/qtwebengine-everywhere-src-6.9.3.zip"
+_name=qtwebengine-everywhere-src
+source="https://download.qt.io/archive/qt/${version%.*}/${version}/submodules/${_name}-${version}.zip"
 
 options="!checksum"
 

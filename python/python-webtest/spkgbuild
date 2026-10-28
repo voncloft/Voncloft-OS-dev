@@ -5,7 +5,8 @@ name=python-webtest
 version=3.0.0
 release=4
 
-source="https://pypi.io/packages/source/W/WebTest/WebTest-3.0.0.tar.gz"
+_name=WebTest
+source="https://files.pythonhosted.org/packages/source/W/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

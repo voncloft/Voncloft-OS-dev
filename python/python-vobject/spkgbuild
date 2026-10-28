@@ -5,7 +5,8 @@ name=python-vobject
 version=0.9.6.1
 release=6
 
-source="https://files.pythonhosted.org/packages/source/v/vobject/vobject-0.9.6.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/v/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

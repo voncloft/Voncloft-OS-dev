@@ -4,7 +4,8 @@ name=perlio-via-dynamic
 version=0.14
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/A/AL/ALEXMV/PerlIO-via-dynamic-0.14.tar.gz"
+_name=PerlIO-via-dynamic
+source="https://cpan.metacpan.org/authors/id/A/AL/ALEXMV/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-betamax
 version=0.9.0
 release=7
 
-source="https://github.com/sigmavirus24/betamax/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/sigmavirus24/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

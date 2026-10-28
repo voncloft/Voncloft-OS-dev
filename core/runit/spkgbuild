@@ -3,7 +3,7 @@
 name=runit
 version=2.3.1
 release=2
-source="https://smarden.org/runit/runit-2.3.1.tar.gz"
+source="https://smarden.org/${name}/${name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/admin*/

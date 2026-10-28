@@ -5,7 +5,8 @@ name=perl-extutils-config
 version=0.008
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/L/LE/LEONT/ExtUtils-Config-0.008.tar.gz"
+_name=ExtUtils-Config
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

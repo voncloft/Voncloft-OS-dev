@@ -3,7 +3,7 @@
 name=libmad
 version=0.15.1b
 release=1
-source="https://downloads.sourceforge.net/mad/libmad-0.15.1b.tar.gz
+source="https://downloads.sourceforge.net/mad/${name}-${version}.tar.gz
 	http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-fixes-1.patch"
 
 build() {

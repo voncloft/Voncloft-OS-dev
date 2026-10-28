@@ -5,7 +5,8 @@ name=python-dropbox
 version=12.2.4
 release=2
 
-source="https://github.com/dropbox/dropbox-sdk-python/archive/refs/tags/v$version.tar.gz"
+_name=dropbox-sdk-python
+source="https://github.com/dropbox/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

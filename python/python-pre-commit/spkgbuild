@@ -5,7 +5,8 @@ name=python-pre-commit
 version=4.7.0
 release=1
 
-source="https://github.com/pre-commit/pre-commit/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pre-commit/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-sqlalchemy-continuum
 version=2.0.0
 release=3
 
-source="https://github.com/kvesteri/sqlalchemy-continuum/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/kvesteri/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

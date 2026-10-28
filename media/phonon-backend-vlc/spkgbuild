@@ -5,7 +5,7 @@ name=phonon-backend-vlc
 version=0.12.0
 release=1
 
-source="https://download.kde.org/stable/phonon/phonon-backend-vlc/$version/phonon-backend-vlc-$version.tar.xz"
+source="https://download.kde.org/stable/phonon/${name}/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build()

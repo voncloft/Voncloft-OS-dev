@@ -1,16 +1,20 @@
 # description	: Audio/video player controlled via the command line or a graphical interface
-# depends	: yasm
+# depends	: yasm subversion
 
 name=mplayer
 version=38412
 release=1
-source="mplayer-38412::svn://svn.mplayerhq.hu/mplayer/trunk#revision=38412
-https://www.linuxfromscratch.org/patches/blfs/12.1/MPlayer-1.5-upstream_ffmpg6_fixes-1.patch
-https://www.linuxfromscratch.org/patches/blfs/12.1/ffmpeg-6.0-binutils_2.41-1.patch
-https://mplayerhq.hu/MPlayer/skins/Clearlooks-2.0.tar.bz2"
+_source2_version=12.1
+_source2_version2=6.0
+_source2_version3=2.41
+_source3_version=2.0
+source="https://www.linuxfromscratch.org/patches/blfs/12.1/MPlayer-1.5-upstream_ffmpg6_fixes-1.patch
+https://www.linuxfromscratch.org/patches/blfs/${_source2_version}/ffmpeg-${_source2_version2}-binutils_${_source2_version3}-1.patch
+https://mplayerhq.hu/MPlayer/skins/Clearlooks-${_source3_version}.tar.bz2"
 noextract="Clearlooks-2.0.tar.bz2"
 
 build() {
+	svn export -r "$version" "https://svn.mplayerhq.hu/${name}/trunk" "$SRC/MPlayer-$version"
 	cd MPlayer-$version
 	patch -Np1 -i $SRC/MPlayer-1.5-upstream_ffmpg6_fixes-1.patch &&
 	patch -Np1 -d ffmpeg < $SRC/ffmpeg-6.0-binutils_2.41-1.patch

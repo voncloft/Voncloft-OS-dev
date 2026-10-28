@@ -4,7 +4,7 @@
 name=accountsservice
 version=26.27.3
 release=1
-source=" https://gitlab.freedesktop.org/accountsservice/accountsservice/-/archive/26.27.3/accountsservice-26.27.3.tar.gz"
+source=" https://gitlab.freedesktop.org/${name}/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

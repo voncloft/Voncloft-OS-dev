@@ -5,7 +5,8 @@ name=python-funcy
 version=2.1
 release=2
 
-source="https://github.com/Suor/funcy/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/Suor/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

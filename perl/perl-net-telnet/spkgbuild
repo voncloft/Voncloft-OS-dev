@@ -4,7 +4,8 @@ name=perl-net-telnet
 version=3.05
 release=6
 
-source="https://www.cpan.org/authors/id/J/JR/JROGERS/Net-Telnet-3.04.tar.gz"
+_name=Net-Telnet
+source="https://cpan.metacpan.org/authors/id/J/JR/JROGERS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

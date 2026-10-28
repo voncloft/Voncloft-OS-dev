@@ -5,7 +5,8 @@ name=perl-convert-tnef
 version=0.18
 release=8
 
-source="https://cpan.metacpan.org/authors/id/D/DO/DOUGW/Convert-TNEF-0.18.tar.gz"
+_name=Convert-TNEF
+source="https://cpan.metacpan.org/authors/id/D/DO/DOUGW/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

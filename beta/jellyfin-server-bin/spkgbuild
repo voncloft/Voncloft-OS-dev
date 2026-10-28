@@ -6,7 +6,7 @@ version=12.4
 release=2
 _pkgver="${version}-1"
 
-source="jellyfin-server_${version}_amd64.deb::https://repo.jellyfin.org/files/server/debian/latest-stable/amd64/jellyfin-server_12.4%2Bdeb12_amd64.deb
+source="jellyfin-server_${version}_amd64.deb::https://repo.jellyfin.org/files/server/debian/latest-stable/amd64/jellyfin-server_${version}%2Bdeb12_amd64.deb
 	jellyfin.sysusers
 	jellyfin.tmpfiles
 	jellyfin.conf

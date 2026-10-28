@@ -5,7 +5,8 @@ name=python-pretend
 version=1.0.9
 release=6
 
-source="https://github.com/alex/pretend/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/alex/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

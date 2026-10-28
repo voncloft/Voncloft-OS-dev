@@ -4,7 +4,7 @@
 name=xdg-utils
 version=1.2.1
 release=2
-source=" https://gitlab.freedesktop.org/xdg/xdg-utils/-/archive/v1.2.1/xdg-utils-v1.2.1.tar.gz"
+source=" https://gitlab.freedesktop.org/xdg/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 options="!checksum"
 
 build() {

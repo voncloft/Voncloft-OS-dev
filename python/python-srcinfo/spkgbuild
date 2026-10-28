@@ -5,7 +5,8 @@ name=python-srcinfo
 version=0.1.1
 release=5
 
-source="git+https://github.com/kyrias/python-srcinfo?signed#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

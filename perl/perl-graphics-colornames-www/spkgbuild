@@ -5,7 +5,8 @@ name=perl-graphics-colornames-www
 version=1.14
 release=8
 
-source="https://www.cpan.org/authors/id/C/CF/CFAERBER/Graphics-ColorNames-WWW-1.13.tar.gz"
+_name=Graphics-ColorNames-WWW
+source="https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

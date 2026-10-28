@@ -5,7 +5,8 @@ name=python-pallets-sphinx-themes
 version=2.5.0
 release=7
 
-source="https://github.com/pallets/pallets-sphinx-themes/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pallets/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

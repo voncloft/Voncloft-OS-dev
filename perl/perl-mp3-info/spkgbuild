@@ -5,7 +5,8 @@ name=perl-mp3-info
 version=1.26
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/J/JM/JMERELO/MP3-Info-1.26.tar.gz"
+_name=MP3-Info
+source="https://cpan.metacpan.org/authors/id/J/JM/JMERELO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

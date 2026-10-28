@@ -7,3 +7,13 @@ Release=2
 Synopsis:
 Added Changelog to package
 Upgraded from version 28.8.4 to version 35.0.2
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 01:38:46 AM EDT 2026
+
+Version=35.0.3
+Release=2
+
+Synopsis:
+Upgraded from version 35.0.2 to version 35.0.3

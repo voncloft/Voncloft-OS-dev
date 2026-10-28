@@ -5,7 +5,8 @@ name=python-packaging
 version=25.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/packaging/packaging-$version.tar.gz"
+_name=packaging
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

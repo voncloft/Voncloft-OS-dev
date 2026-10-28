@@ -836,3 +836,13 @@ Release=1
 
 Synopsis:
 Corrected the overupdated version and track only stable CMake source archives.
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 01:38:46 AM EDT 2026
+
+Version=4.4.5
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.4 to version 4.4.5

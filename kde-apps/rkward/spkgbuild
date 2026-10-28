@@ -5,10 +5,10 @@ name=rkward
 version=0.8.3
 release=2
 options="!checksum"
-source="rkward-0.8.3.tar.gz::https://download.kde.org/stable/rkward/0.8.3/rkward-0.8.3.tar.gz"
+source="${name}-${version}.tar.gz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.gz"
 
 build() {
-    cd "rkward-0.8.3"
+    cd "rkward-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

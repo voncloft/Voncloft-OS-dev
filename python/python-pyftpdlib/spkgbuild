@@ -5,7 +5,8 @@ name=python-pyftpdlib
 version=1.5.7
 release=3
 
-source="https://pypi.io/packages/source/p/pyftpdlib/pyftpdlib-1.5.7.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

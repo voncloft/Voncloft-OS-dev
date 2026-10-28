@@ -6,7 +6,7 @@ name=elogind
 version=257.16
 release=1
 
-source="$name-$version.tar.gz::https://github.com/elogind/elogind/archive/refs/tags/v$version.tar.gz"
+source="$name-$version.tar.gz::https://github.com/elogind/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

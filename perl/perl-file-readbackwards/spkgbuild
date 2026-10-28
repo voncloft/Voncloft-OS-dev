@@ -5,7 +5,8 @@ name=perl-file-readbackwards
 version=1.06
 release=7
 
-source="https://search.cpan.org/CPAN/authors/id//File-ReadBackwards-1.06.tar.gz"
+_name=File-ReadBackwards
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -1,11 +1,12 @@
 # description : view hard drive writes
 # depends : python 
 
-name=iotop
+name=iotop-fukt
+_upstream_name=iotop
 version=0.6
 release=12
 
-source="http://guichaz.free.fr/$name/files/$name-$version.tar.bz2"
+source="http://guichaz.free.fr/${_upstream_name}/files/${_upstream_name}-$version.tar.bz2"
 
 build()
 {

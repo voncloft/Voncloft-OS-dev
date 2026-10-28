@@ -5,7 +5,8 @@ name=python-adal
 version=1.2.7
 release=1
 
-source="https://github.com/AzureAD/azure-activedirectory-library-for-python/archive/refs/tags/$version.tar.gz"
+_name=azure-activedirectory-library-for-python
+source="https://github.com/AzureAD/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

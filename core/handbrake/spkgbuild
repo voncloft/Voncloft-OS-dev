@@ -4,7 +4,8 @@
 name=handbrake
 version=1.6.1
 release=1
-source="https://download.handbrake.fr/releases/$version/HandBrake-$version-source.tar.bz2"
+_name=HandBrake
+source="https://download.handbrake.fr/releases/$version/${_name}-$version-source.tar.bz2"
 
 build() {
 	cd HandBrake-$version

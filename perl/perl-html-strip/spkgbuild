@@ -5,7 +5,8 @@ name=perl-html-strip
 version=2.12
 release=8
 
-source="https://www.cpan.org/authors/id/K/KI/KILINRAX/HTML-Strip-2.12.tar.gz"
+_name=HTML-Strip
+source="https://cpan.metacpan.org/authors/id/K/KI/KILINRAX/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

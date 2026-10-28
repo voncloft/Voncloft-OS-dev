@@ -2,10 +2,10 @@
 # description : Plasma power management service for brightness, battery settings, suspend, and energy-saving actions
 
 name=powerdevil
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/powerdevil-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,7 @@
 name=inkscape
 version=1.4.4
 release=1
-source="https://gitlab.com/inkscape/inkscape/-/archive/INKSCAPE_1_4_4/inkscape-INKSCAPE_1_4_4.tar.gz"
+source="https://gitlab.com/inkscape/${name}/-/archive/INKSCAPE_${version//./_}/inkscape-INKSCAPE_${version//./_}.tar.gz"
 options="!checksum"
 build() {
 	cd "$SRC"/inkscape-INKSCAPE*/

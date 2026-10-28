@@ -5,7 +5,8 @@ name=python-greenlet
 version=2.0.2
 release=1
 
-source="https://files.pythonhosted.org/packages/source/g/greenlet/greenlet-2.0.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

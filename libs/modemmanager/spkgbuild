@@ -5,7 +5,8 @@ name=modemmanager
 version=1.24.2
 release=1
 
-source="$name-$version.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/$version/ModemManager-$version.tar.gz"
+_name=ModemManager
+source="$name-$version.tar.gz::https://gitlab.freedesktop.org/mobile-broadband/${_name}/-/archive/$version/${_name}-$version.tar.gz"
 options="!checksum"
 
 build() {

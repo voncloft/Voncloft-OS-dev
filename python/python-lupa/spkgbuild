@@ -5,7 +5,8 @@ name=python-lupa
 version=2.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/l/lupa/.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/l/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

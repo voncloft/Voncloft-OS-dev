@@ -2,10 +2,11 @@
 # depends : python-six
 
 name=python-munch
-version=2.5.1
+version=2.5.0
 release=4
 
-source="https://pypi.io/packages/source/m/munch/munch-2.5.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

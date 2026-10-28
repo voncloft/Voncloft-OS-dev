@@ -5,7 +5,8 @@ name=python-fastpbkdf2
 version=0.2
 release=6
 
-source="git+https://github.com/Ayrx/python-fastpbkdf2.git#tag=v0.2"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

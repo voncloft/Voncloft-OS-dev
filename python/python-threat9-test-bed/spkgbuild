@@ -2,10 +2,12 @@
 # depends : python python-setuptools python-click python-faker python-flask
 
 name=python-threat9-test-bed
-version=0.6.0+2+g1ed61b3.git20180915202035
+version=0.6.0+2+g1ed61b3.git20180915202035.g1ed61b34d0b138711e3f8267259cdb29787fe349
 release=4
 
-source="https://github.com/threat9/threat9-test-bed/archive/1ed61b34d0b138711e3f8267259cdb29787fe349.tar.gz"
+_name=${name#python-}
+_commit=${version##*.g}
+source="${name}-${version}.tar.gz::https://github.com/threat9/${_name}/archive/${_commit}.tar.gz"
 options="!checksum"
 
 build() {

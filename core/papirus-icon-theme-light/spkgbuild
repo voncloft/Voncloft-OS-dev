@@ -2,10 +2,10 @@
 # depends	: papirus-icon-theme
 
 _name=papirus-icon-theme
-name=$_name-light
+name=papirus-icon-theme-light
 version=20260801
 release=1
-source="$_name-$version.tar.gz::https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/20260801.tar.gz"
+source="$_name-$version.tar.gz::https://github.com/PapirusDevelopmentTeam/${_name}/archive/${version}.tar.gz"
 
 build() {
 	cd $_name-$version

@@ -3,7 +3,7 @@
 name=xcb-proto
 version=1.17.0
 release=1
-source="http://xcb.freedesktop.org/dist/xcb-proto-$version.tar.xz"
+source="http://xcb.freedesktop.org/dist/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

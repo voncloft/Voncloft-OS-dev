@@ -5,7 +5,8 @@
 name=packagekit-interfaces
 version=1.4.0
 release=1
-source="PackageKit-$version.tar.gz::https://github.com/PackageKit/PackageKit/archive/refs/tags/v$version.tar.gz"
+_name=PackageKit
+source="PackageKit-$version.tar.gz::https://github.com/PackageKit/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-term-animation
 version=2.6
 release=7
 
-source="https://www.cpan.org/authors/id/K/KB/KBAUCOM/Term-Animation-2.6.tar.gz"
+_name=Term-Animation
+source="https://cpan.metacpan.org/authors/id/K/KB/KBAUCOM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

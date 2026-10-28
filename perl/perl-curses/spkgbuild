@@ -5,7 +5,8 @@ name=perl-curses
 version=1.44
 release=8
 
-source="https://search.cpan.org/CPAN/authors/id/G/GI/GIRAFFED/Curses-1.44.tar.gz"
+_name=Curses
+source="https://cpan.metacpan.org/authors/id/G/GI/GIRAFFED/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

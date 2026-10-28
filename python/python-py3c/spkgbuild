@@ -5,7 +5,8 @@ name=python-py3c
 version=1.4
 release=1
 
-source="https://github.com/encukou/py3c/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/encukou/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

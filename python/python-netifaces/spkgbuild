@@ -5,7 +5,8 @@ name=python-netifaces
 version=0.11.0
 release=6
 
-source="https://pypi.io/packages/source/n/netifaces/netifaces-0.11.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/n/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

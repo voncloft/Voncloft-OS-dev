@@ -1,10 +1,12 @@
 # description	: Next generation of the python high-level scripting language
 # depends	: libffi-32 python
 
-name=python-32
+name=python3-32
+_upstream_name=python-32
 version=3.15.2
 release=1
-source="https://www.python.org/ftp/python/3.15.2/Python-3.15.2.tar.xz"
+_name=Python
+source="https://www.python.org/ftp/python/${version}/${_name}-${version}.tar.xz"
 
 build() {
 	cd "$SRC"/Python*/

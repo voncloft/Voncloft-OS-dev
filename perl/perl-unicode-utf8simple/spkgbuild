@@ -5,7 +5,8 @@ name=perl-unicode-utf8simple
 version=1.06
 release=8
 
-source="https://www.cpan.org/authors/id/G/GU/GUS/Unicode-UTF8simple-1.06.tar.gz"
+_name=Unicode-UTF8simple
+source="https://cpan.metacpan.org/authors/id/G/GU/GUS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-flake8-isort
 version=6.0.0
 release=3
 
-source="python-flake8-isort::git+https://github.com/gforcada/flake8-isort#commit=75d591dced2e225c31a897527b6672217b4aae91"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

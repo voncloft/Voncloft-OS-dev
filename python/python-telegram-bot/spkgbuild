@@ -5,7 +5,7 @@ name=python-telegram-bot
 version=22.8
 release=1
 
-source="https://github.com/python-telegram-bot/python-telegram-bot/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/python-telegram-bot/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

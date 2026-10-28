@@ -5,7 +5,8 @@ name=python-pysimplesoap
 version=1.16.2
 release=5
 
-source="https://github.com/pysimplesoap/pysimplesoap/archive/refs/tags/u$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pysimplesoap/${_name}/archive/refs/tags/u$version.tar.gz"
 options="!checksum"
 
 build() {

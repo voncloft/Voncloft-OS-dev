@@ -5,7 +5,8 @@ name=perl-data-perl
 version=0.002011
 release=1
 
-source="https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/Data-Perl-0.002011.tar.gz"
+_name=Data-Perl
+source="https://cpan.metacpan.org/authors/id/T/TO/TOBYINK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-sdl
 version=2.548
 release=5
 
-source="https://cpan.metacpan.org/authors/id////SDL-2.548.tar.gz"
+_name=SDL
+source="https://cpan.metacpan.org/authors/id/F/FR/FROGGS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

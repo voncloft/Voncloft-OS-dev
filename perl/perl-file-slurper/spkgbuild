@@ -5,7 +5,8 @@ name=perl-file-slurper
 version=0.013
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/L/LE/LEONT/-0.013.tar.gz"
+_name=File-Slurper
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

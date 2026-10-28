@@ -5,7 +5,8 @@ name=perl-unicode-stringprep
 version=1.105
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/C/CF/CFAERBER/Unicode-Stringprep-1.105.tar.gz"
+_name=Unicode-Stringprep
+source="https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

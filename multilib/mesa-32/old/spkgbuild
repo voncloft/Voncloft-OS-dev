@@ -4,7 +4,8 @@
 name=mesa-32
 version=25.1.3    
 release=1
-source="https://mesa.freedesktop.org/archive/mesa-${version}.tar.xz
+_name=${name%-32}
+source="https://mesa.freedesktop.org/archive/${_name}-${version}.tar.xz
         lib32
         crossfile
         native.ini"

@@ -5,7 +5,8 @@ name=python-py_stringmatching
 version=0.4.3
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/py_stringmatching/py_stringmatching-0.4.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

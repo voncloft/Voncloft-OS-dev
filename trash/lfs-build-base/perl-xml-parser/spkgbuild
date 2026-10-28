@@ -4,7 +4,8 @@
 name=perl-xml-parser
 version=2.47
 release=1
-source="https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-$version.tar.gz"
+_name=XML-Parser
+source="https://cpan.metacpan.org/authors/id/T/TO/TODDR/${_name}-$version.tar.gz"
 options="!checksum"
 build() {
 	cd *

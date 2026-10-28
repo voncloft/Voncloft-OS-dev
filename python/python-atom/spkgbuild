@@ -5,7 +5,8 @@ name=python-atom
 version=0.13.0
 release=3
 
-source="https://github.com/nucleic/atom/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/nucleic/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-py
 version=1.11.0
 release=1
 
-source="https://github.com/pytest-dev/py/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pytest-dev/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

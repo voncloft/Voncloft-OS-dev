@@ -4,7 +4,8 @@
 name=zita-resampler-libs
 version=1.11.2
 release=1
-source="https://kokkinizita.linuxaudio.org/linuxaudio/downloads/zita-resampler-1.11.2.tar.xz"
+_name=zita-resampler
+source="https://kokkinizita.linuxaudio.org/linuxaudio/downloads/${_name}-${version}.tar.xz"
 
 build() {
 	cd zita-resampler-$version/source

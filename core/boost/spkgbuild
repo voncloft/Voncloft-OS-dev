@@ -6,7 +6,7 @@ version=1.92.0
 release=1
 verzion=1_76_0
 
-source="https://github.com/boostorg/boost/releases/download/boost-$version/boost-$version-b2-nodocs.tar.xz"
+source="https://github.com/boostorg/${name}/releases/download/${name}-$version/${name}-$version-b2-nodocs.tar.xz"
 options="!checksum"
 
 build() {

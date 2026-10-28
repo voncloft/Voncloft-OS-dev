@@ -5,7 +5,8 @@ name=python-pykwalify
 version=1.8.0
 release=1
 
-source="https://files.pythonhosted.org/packages/source/p/pykwalify/pykwalify-1.8.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

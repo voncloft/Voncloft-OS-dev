@@ -5,11 +5,12 @@ name=python-jinja-time
 version=0.2.0
 release=5
 
-source="https://files.pythonhosted.org/packages/source/j/jinja2-time/jinja2-time-0.2.0.tar.gz"
+_name=jinja2-time
+source="https://files.pythonhosted.org/packages/source/j/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

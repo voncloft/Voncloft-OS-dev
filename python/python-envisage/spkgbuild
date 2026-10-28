@@ -5,7 +5,8 @@ name=python-envisage
 version=8.0.1
 release=1
 
-source="https://github.com/enthought/envisage/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/enthought/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

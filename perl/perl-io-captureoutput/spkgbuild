@@ -5,7 +5,8 @@ name=perl-io-captureoutput
 version=1.1105
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/D/DA/DAGOLDEN/IO-CaptureOutput-1.1105.tar.gz"
+_name=IO-CaptureOutput
+source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

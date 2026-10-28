@@ -5,7 +5,8 @@ name=perl-par-packer
 version=1.057
 release=1
 
-source="https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/PAR-Packer-1.057.tar.gz"
+_name=PAR-Packer
+source="https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

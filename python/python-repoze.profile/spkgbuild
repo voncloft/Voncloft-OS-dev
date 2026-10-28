@@ -5,7 +5,8 @@ name=python-repoze.profile
 version=2.3
 release=4
 
-source="https://pypi.io/packages/source/r/repoze.profile/repoze.profile-2.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

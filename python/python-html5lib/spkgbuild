@@ -4,7 +4,8 @@
 name=python-html5lib
 version=1.1
 release=6
-source="https://files.pythonhosted.org/packages/source/h/html5lib/html5lib-$version.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

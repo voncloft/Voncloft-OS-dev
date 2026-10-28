@@ -5,7 +5,8 @@ name=python-pytest-tap
 version=3.5
 release=1
 
-source="https://github.com/python-tap/pytest-tap/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/python-tap/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

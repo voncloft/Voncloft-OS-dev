@@ -2,14 +2,15 @@
 # depends : signond
 
 name=signon-plugin-oauth2
-version=0.25
+version=0.25.git20210102143559.gd759439066f0a34e5ad352ebab0b3bb2790d429e
 release=1
 
-source="$name-master.tar.gz::https://gitlab.com/accounts-sso/$name/-/archive/master/$name-master.tar.gz"
+_commit=${version##*.g}
+source="${name}-${version}.tar.gz::https://gitlab.com/accounts-sso/${name}/-/archive/${_commit}/${name}-${_commit}.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-master
+	cd "$SRC/$name-$_commit"
 	sed -e '/example/d' -e '/tests/d' -i signon-oauth2.pro
 	qmake6 PREFIX=/usr LIBDIR=/usr/lib
 	make

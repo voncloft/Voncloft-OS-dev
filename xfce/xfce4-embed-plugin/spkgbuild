@@ -4,10 +4,10 @@
 name=xfce4-embed-plugin
 version=1.6.0
 release=1
-source="http://archive.xfce.org/src/panel-plugins/xfce4-embed-plugin/${version%.*}/xfce4-embed-plugin-$version.tar.bz2"
+source="http://archive.xfce.org/src/panel-plugins/${name}/${version%.*}/${name}-$version.tar.bz2"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/xfce4-embed-plugin-xfce4-embed-plugin*/
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \

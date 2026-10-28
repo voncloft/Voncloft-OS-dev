@@ -5,7 +5,8 @@ name=python-stem
 version=1.8.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/s/stem/stem-1.8.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

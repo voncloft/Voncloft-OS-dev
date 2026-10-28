@@ -5,7 +5,8 @@ name=python-selinux
 version=0.3.0
 release=4
 
-source="https://files.pythonhosted.org/packages/source/s/selinux/selinux-0.3.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

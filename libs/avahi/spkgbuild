@@ -4,7 +4,7 @@
 name=avahi
 version=0.8
 release=4
-source="https://github.com/avahi/avahi/releases/download/v$version/avahi-$version.tar.gz"
+source="https://github.com/avahi/${name}/releases/download/v$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,7 @@ name=kdiagram
 version=3.0.1
 release=2
 
-source="https://download.kde.org/stable/kdiagram/$version/kdiagram-$version.tar.xz"
+source="https://download.kde.org/stable/${name}/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

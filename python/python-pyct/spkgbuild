@@ -5,7 +5,8 @@ name=python-pyct
 version=0.5.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/p/pyct/pyct-0.5.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

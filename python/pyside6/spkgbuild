@@ -4,10 +4,11 @@
 name=pyside6
 version=6.12.0
 release=2
-source="https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-$version-src/pyside-setup-everywhere-src-$version.tar.xz"
+_name=pyside-setup-everywhere-src
+source="https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-$version-src/${_name}-$version.tar.xz"
 
 build() {
-    cd "$SRC/pyside-setup-everywhere-src-$version"
+    cd "$SRC"/pyside-setup-everywhere-src*/
     cmake -S . -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \

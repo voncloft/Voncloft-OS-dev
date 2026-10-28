@@ -5,7 +5,8 @@ name=perl-readonly
 version=2.05
 release=4
 
-source="https://search.mcpan.org/CPAN/authors/id/S/SA/SANKO/Readonly-2.05.tar.gz"
+_name=Readonly
+source="https://cpan.metacpan.org/authors/id/S/SA/SANKO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

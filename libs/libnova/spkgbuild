@@ -5,10 +5,10 @@ name=libnova
 version=0.15.0
 release=2
 options="!checksum"
-source="libnova-0.15.0.tar.gz::https://downloads.sourceforge.net/project/libnova/libnova/v%200.15.0/libnova-0.15.0.tar.gz"
+source="${name}-${version}.tar.gz::https://downloads.sourceforge.net/project/${name}/${name}/v%20${version}/${name}-${version}.tar.gz"
 
 build() {
-    cd "libnova-0.15.0"
+    cd "libnova-${version}"
     export CFLAGS="$CFLAGS -std=gnu17"
     ./configure --prefix=/usr --libdir=/usr/lib64 --disable-static
     make

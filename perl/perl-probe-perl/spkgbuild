@@ -5,7 +5,8 @@ name=perl-probe-perl
 version=0.03
 release=3
 
-source="https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS/Probe-Perl-0.03.tar.gz"
+_name=Probe-Perl
+source="https://cpan.metacpan.org/authors/id/K/KW/KWILLIAMS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

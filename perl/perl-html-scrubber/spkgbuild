@@ -5,7 +5,8 @@ name=perl-html-scrubber
 version=0.19
 release=3
 
-source="https://cpan.metacpan.org/authors/id/N/NI/NIGELM/HTML-Scrubber-0.19.tar.gz"
+_name=HTML-Scrubber
+source="https://cpan.metacpan.org/authors/id/N/NI/NIGELM/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

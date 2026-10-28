@@ -4,7 +4,7 @@
 name=wmderland
 version=1.0.5
 release=1
-source="https://github.com/aesophor/wmderland/archive/$version/$name-$version.tar.gz"
+source="https://github.com/aesophor/${name}/archive/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

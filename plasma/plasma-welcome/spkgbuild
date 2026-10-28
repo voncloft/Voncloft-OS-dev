@@ -2,10 +2,10 @@
 # depends : extra-cmake-modules kcmutils kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kglobalaccel ki18n kio kirigami kirigami-addons kjobwidgets knewstuff knotifications kservice ksvg kuserfeedback kwindowsystem libplasma milou qt6
 
 name=plasma-welcome
-version=6.8.1
+version=6.8.2
 release=1
 
-source="https://download.kde.org/stable/plasma/$version/plasma-welcome-$version.tar.xz"
+source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {

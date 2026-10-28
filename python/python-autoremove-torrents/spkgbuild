@@ -5,7 +5,8 @@ name=python-autoremove-torrents
 version=1.5.4
 release=1
 
-source="https://files.pythonhosted.org/packages/ab/7a/fe4c9ef1fad548b4696929e144597dd220c0e390ced0f71c2556cb2fe3c3/autoremove-torrents-1.5.4.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

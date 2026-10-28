@@ -5,7 +5,8 @@ name=python-apipkg
 version=3.0.2
 release=5
 
-source="https://github.com/pytest-dev/apipkg/archive/v3.0.1/python-apipkg-3.0.1.tar.gz"
+_name=${name#python-}
+source="https://github.com/pytest-dev/${_name}/archive/v${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

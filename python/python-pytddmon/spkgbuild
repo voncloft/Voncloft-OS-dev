@@ -5,11 +5,12 @@ name=python-pytddmon
 version=1.0.8
 release=7
 
-source="https://github.com/objarni/pytddmon/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/objarni/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC"/pytddmon*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

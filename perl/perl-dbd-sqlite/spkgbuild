@@ -5,7 +5,8 @@ name=perl-dbd-sqlite
 version=1.72
 release=1
 
-source="https://www.cpan.org/authors/id/I/IS/ISHIGAKI/DBD-SQLite-1.72.tar.gz"
+_name=DBD-SQLite
+source="https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

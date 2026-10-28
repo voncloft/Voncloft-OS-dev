@@ -5,7 +5,8 @@ name=perl-capture-tiny
 version=0.48
 release=4
 
-source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-0.48.tar.gz"
+_name=Capture-Tiny
+source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-hypothesmith
 version=0.2.3
 release=1
 
-source="https://pypi.io/packages/source/h/hypothesmith/hypothesmith-0.2.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

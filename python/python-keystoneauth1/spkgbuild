@@ -5,7 +5,8 @@ name=python-keystoneauth1
 version=5.18.1
 release=1
 
-source="https://github.com/openstack/keystoneauth/archive/refs/tags/e$version.tar.gz"
+_name=keystoneauth
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

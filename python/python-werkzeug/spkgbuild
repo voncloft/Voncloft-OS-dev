@@ -5,7 +5,8 @@ name=python-werkzeug
 version=3.1.9
 release=4
 
-source="https://github.com/pallets/werkzeug/archive/refs/tags/r$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pallets/${_name}/archive/refs/tags/r$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,8 @@
 name=libgpg-error-32
 version=1.61
 release=1
-source="https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.61.tar.bz2"
+_name=${name%-32}
+source="https://gnupg.org/ftp/gcrypt/${_name}/${_name}-${version}.tar.bz2"
 
 build() {
 	cd libgpg-error-$version

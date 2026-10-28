@@ -5,7 +5,8 @@ name=perl-file-find-rule-perl
 version=1.16
 release=3
 
-source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Find-Rule-Perl-1.16.tar.gz"
+_name=File-Find-Rule-Perl
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

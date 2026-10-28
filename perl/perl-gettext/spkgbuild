@@ -4,7 +4,8 @@ name=perl-gettext
 version=1.07
 release=10
 
-source="https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/Locale-gettext-1.07.tar.gz"
+_name=Locale-gettext
+source="https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

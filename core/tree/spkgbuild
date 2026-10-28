@@ -3,7 +3,7 @@
 name=tree
 version=2.3.2
 release=1
-source="https://oldmanprogrammer.net/tar/tree/tree-2.3.2.tgz"
+source="https://oldmanprogrammer.net/tar/${name}/${name}-${version}.tgz"
 
 build() {
 	cd "$SRC"/tree*/

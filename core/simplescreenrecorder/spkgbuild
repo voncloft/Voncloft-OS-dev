@@ -5,7 +5,8 @@
 name=simplescreenrecorder
 version=0.4.4
 release=1
-source="https://github.com/MaartenBaert/ssr/archive/$version/ssr-$version.tar.gz"
+_name=ssr
+source="https://github.com/MaartenBaert/${_name}/archive/$version/${_name}-$version.tar.gz"
 
 build() {
 	cd ssr-$version

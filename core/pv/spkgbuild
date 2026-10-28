@@ -3,7 +3,7 @@
 name=pv
 version=1.12.0
 release=1
-source="https://www.ivarch.com/s/pv-1.12.0.tar.gz"
+source="https://www.ivarch.com/s/${name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/pv*/

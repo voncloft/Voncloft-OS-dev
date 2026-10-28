@@ -5,7 +5,8 @@ name=perl-text-glob
 version=0.11
 release=7
 
-source="https://search.mcpan.org/CPAN/authors/id/R/RC/RCLAMP/-0.11.tar.gz"
+_name=Text-Glob
+source="https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

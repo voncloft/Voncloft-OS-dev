@@ -5,7 +5,8 @@ name=python-tinycss2
 version=1.2.1
 release=1
 
-source="https://pypi.io/packages/source/t/tinycss2/tinycss2-1.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

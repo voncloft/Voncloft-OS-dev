@@ -5,7 +5,8 @@ name=python-pint
 version=0.19.2
 release=3
 
-source="https://pypi.io/packages/source/P/Pint/Pint-0.19.2.tar.gz"
+_name=Pint
+source="https://files.pythonhosted.org/packages/source/P/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

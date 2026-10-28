@@ -4,7 +4,7 @@
 name=xkbcomp
 version=1.5.0
 release=1
-source="http://ftp.x.org/pub/individual/app/xkbcomp-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/app/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

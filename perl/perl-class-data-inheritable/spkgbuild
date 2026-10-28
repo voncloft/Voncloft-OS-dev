@@ -5,7 +5,8 @@ name=perl-class-data-inheritable
 version=0.09
 release=9
 
-source="https://cpan.metacpan.org/authors/id/R/RS/RSHERER/Class-Data-Inheritable-0.09.tar.gz"
+_name=Class-Data-Inheritable
+source="https://cpan.metacpan.org/authors/id/R/RS/RSHERER/${_name}-${version}.tar.gz"
 options="!checksum" 
 
 build() {

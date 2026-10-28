@@ -4,10 +4,10 @@
 name=man-db
 version=2.13.1
 release=1
-source="https://savannah.nongnu.org/download/man-db/$name-$version.tar.xz"
+source="https://savannah.nongnu.org/download/${name}/$name-$version.tar.xz"
 options="!checksum"
 build() {
-	cd $name-$version
+	cd "$SRC"/man-db*/
 
 	./configure --prefix=/usr \
 	            --sysconfdir=/etc \

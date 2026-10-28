@@ -4,14 +4,15 @@
 name=alsa-plugins-32
 version=1.2.12
 release=1
-source="ftp://ftp.alsa-project.org/pub/plugins/alsa-plugins-$version.tar.bz2"
+_name=${name%-32}
+source="ftp://ftp.alsa-project.org/pub/plugins/${_name}-$version.tar.bz2"
 
 build() {
 	export CC="gcc -m32"
         export CXX="g++ -m32"
         export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
 
-	cd *
+	cd "$SRC"/alsa-plugins*/
 	./configure --sysconfdir=/etc --libdir=/usr/lib32
 	make
 	make DESTDIR=$PKG install

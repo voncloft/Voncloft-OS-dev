@@ -4,7 +4,8 @@
 name=libpsl-32
 version=0.23.3
 release=1
-source="https://github.com/rockdaboot/libpsl/releases/download/$version/libpsl-$version.tar.gz"
+_name=${name%-32}
+source="https://github.com/rockdaboot/${_name}/releases/download/$version/${_name}-$version.tar.gz"
 
 build() {
 	cd *

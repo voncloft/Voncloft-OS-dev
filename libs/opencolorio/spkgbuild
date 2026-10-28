@@ -5,10 +5,11 @@ name=opencolorio
 version=2.6.0
 release=2
 options="!checksum"
-source="opencolorio-2.6.0.tar.gz::https://github.com/AcademySoftwareFoundation/OpenColorIO/releases/download/v2.6.0/OpenColorIO-2.6.0.tar.gz"
+_name=OpenColorIO
+source="${name}-${version}.tar.gz::https://github.com/AcademySoftwareFoundation/${_name}/releases/download/v${version}/${_name}-${version}.tar.gz"
 
 build() {
-    cd "OpenColorIO-2.6.0"
+    cd "OpenColorIO-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib64 \

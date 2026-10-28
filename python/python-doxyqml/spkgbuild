@@ -4,7 +4,8 @@
 name=python-doxyqml
 version=0.6.0
 release=1
-source="https://files.pythonhosted.org/packages/bf/5c/a8a1552bdd6b9e0f7371497b7ed3b06b73b2e1a207d9ee57b8ae2d45aa36/doxyqml-0.6.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

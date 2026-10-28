@@ -5,7 +5,8 @@ name=python-pybuilder
 version=0.13.24
 release=4
 
-source="https://github.com/pybuilder/pybuilder/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pybuilder/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

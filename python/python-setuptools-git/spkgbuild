@@ -5,7 +5,8 @@ name=python-setuptools-git
 version=1.2
 release=6
 
-source="https://github.com/msabramo/setuptools-git/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/msabramo/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

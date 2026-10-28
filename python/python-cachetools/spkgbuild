@@ -5,7 +5,8 @@ name=python-cachetools
 version=7.2.6
 release=1
 
-source="https://github.com/tkem/cachetools/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/tkem/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-data-section
 version=0.200008
 release=4
 
-source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-Section-0.200008.tar.gz"
+_name=Data-Section
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=perl-text-markdown
 version=1.000031
 release=10
 
-source="https://search.cpan.org/CPAN/authors/id/B/BO/BOBTFISH/Text-Markdown-1.000031.tar.gz"
+_name=Text-Markdown
+source="https://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

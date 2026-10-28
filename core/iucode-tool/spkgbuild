@@ -3,10 +3,11 @@
 name=iucode-tool
 version=2.3.1
 release=1
-source="https://gitlab.com/iucode-tool/releases/raw/master/${name}_${version}.tar.xz"
+_name=releases
+source="https://gitlab.com/iucode-tool/${_name}/raw/master/${name}_${version}.tar.xz"
 
 build() {
-	cd $name-$version
+	cd "$SRC"/iucode-tool*/
 
         ./configure \
                 --prefix=/usr   \

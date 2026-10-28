@@ -5,12 +5,8 @@ name=xfce4-terminal
 version=1.2.0
 release=1
 
-case $version in
-	*.*.*.*) _ver=${version%.*}; _ver=${_ver%.*};;
-	*.*.*) _ver=${version%.*};;
-esac
 
-source="http://archive.xfce.org/src/apps/xfce4-terminal/${_ver}/$name-$version.tar.bz2"
+source="https://archive.xfce.org/src/apps/${name}/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
 	cd $name-$version

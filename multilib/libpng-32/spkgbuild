@@ -4,8 +4,9 @@
 name=libpng-32
 version=1.6.59
 release=1
-source="https://downloads.sourceforge.net/project/libpng/libpng16/1.6.59/libpng-1.6.59.tar.gz
-	https://downloads.sourceforge.net/project/apng/libpng/libpng16/libpng-$version-apng.patch.gz"
+_name=${name%-32}
+source="https://downloads.sourceforge.net/project/${_name}/libpng16/${version}/${_name}-${version}.tar.gz
+	https://downloads.sourceforge.net/project/apng/${_name}/libpng16/${_name}-$version-apng.patch.gz"
 
 build() {
 	cd "$SRC"/libpng*/

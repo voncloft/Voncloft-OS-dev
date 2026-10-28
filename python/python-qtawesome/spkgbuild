@@ -5,7 +5,8 @@ name=python-qtawesome
 version=1.4.2
 release=5
 
-source="https://github.com/spyder-ide/qtawesome/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/spyder-ide/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -3,7 +3,7 @@
 name=xdgmenumaker
 version=2.5
 release=1
-source="https://github.com/gapan/xdgmenumaker/archive/$version/$name-$version.tar.gz"
+source="https://github.com/gapan/${name}/archive/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

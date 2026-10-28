@@ -5,7 +5,8 @@ name=perl-sys-meminfo
 version=0.99
 release=2
 
-source="https://cpan.metacpan.org/authors/id/S/SC/SCRESTO/Sys-MemInfo-0.99.tar.gz"
+_name=Sys-MemInfo
+source="https://cpan.metacpan.org/authors/id/S/SC/SCRESTO/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

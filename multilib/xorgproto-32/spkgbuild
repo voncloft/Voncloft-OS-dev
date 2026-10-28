@@ -4,7 +4,8 @@
 name=xorgproto-32
 version=2026.1
 release=1
-source="https://www.x.org/pub/individual/proto/xorgproto-2026.1.tar.gz"
+_name=${name%-32}
+source="https://www.x.org/pub/individual/proto/${_name}-${version}.tar.gz"
 
 build() {
 	cd xorgproto-$version

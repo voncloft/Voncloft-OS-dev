@@ -5,7 +5,8 @@ name=python-pymacaroons
 version=0.13.0
 release=8
 
-source="https://github.com/ecordell/pymacaroons/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/ecordell/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

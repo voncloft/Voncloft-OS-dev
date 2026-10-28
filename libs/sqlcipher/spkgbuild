@@ -2,13 +2,13 @@
 # depends : make openssl pkgconf tcl zlib
 
 name=sqlcipher
-version=4.19.0
+version=4.20.0
 release=2
 options="!checksum"
-source="sqlcipher-4.19.0.tar.gz::https://github.com/sqlcipher/sqlcipher/archive/refs/tags/v4.19.0.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/sqlcipher/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
-    cd "sqlcipher-4.19.0"
+    cd "sqlcipher-${version}"
     export CFLAGS="$CFLAGS -DSQLITE_HAS_CODEC -DSQLITE_EXTRA_INIT=sqlcipher_extra_init -DSQLITE_EXTRA_SHUTDOWN=sqlcipher_extra_shutdown -DSQLITE_THREADSAFE=1 -DSQLITE_TEMP_STORE=2 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_FTS5"
     # SQLCipher 4.19 uses SQLite's build names. Stage a separately named library
     # and headers so it cannot replace the system SQLite package.

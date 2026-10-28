@@ -5,7 +5,8 @@ name=python-pyopenssl
 version=26.4.0
 release=1
 
-source="https://github.com/pyca/pyopenssl/archive/23.1.1/python-pyopenssl-23.1.1.tar.gz"
+_name=${name#python-}
+source="https://github.com/pyca/${_name}/archive/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

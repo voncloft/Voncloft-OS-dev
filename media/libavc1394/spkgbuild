@@ -5,7 +5,7 @@ name=libavc1394
 version=0.5.4
 release=4
 
-source="https://downloads.sourceforge.net/sourceforge/libavc1394/${name}-${version}.tar.gz"
+source="https://downloads.sourceforge.net/sourceforge/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

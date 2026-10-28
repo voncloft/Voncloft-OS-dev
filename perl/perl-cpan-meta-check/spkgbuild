@@ -5,7 +5,8 @@ name=perl-cpan-meta-check
 version=0.017
 release=6
 
-source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/CPAN-Meta-Check-0.017.tar.gz"
+_name=CPAN-Meta-Check
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

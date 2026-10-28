@@ -5,11 +5,12 @@ name=python-thrift
 version=0.25.0
 release=4
 
-source="thrift-0.14.1.zip::https://github.com/apache/thrift/archive/0.14.1.zip"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
+   cd "$SRC/${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

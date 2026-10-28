@@ -4,7 +4,8 @@
 name=mpg123-32
 version=1.33.7
 release=1
-source="https://downloads.sourceforge.net/project/mpg123/mpg123/1.33.7/mpg123-1.33.7.tar.bz2"
+_name=${name%-32}
+source="https://downloads.sourceforge.net/project/${_name}/${_name}/${version}/${_name}-${version}.tar.bz2"
 
 build() {
 	cd "$SRC"/mpg123*/

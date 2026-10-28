@@ -5,7 +5,8 @@ name=perl-module-build
 version=0.4232
 release=3
 
-source="https://search.cpan.org/CPAN/authors/id/L/LE/LEONT/Module-Build-0.4232.tar.gz"
+_name=Module-Build
+source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

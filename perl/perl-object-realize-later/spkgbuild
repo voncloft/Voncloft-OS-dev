@@ -4,7 +4,8 @@ name=perl-object-realize-later
 version=0.21
 release=3
 
-source="https://www.cpan.org/authors/id/M/MA/MARKOV/Object-Realize-Later-0.21.tar.gz"
+_name=Object-Realize-Later
+source="https://cpan.metacpan.org/authors/id/M/MA/MARKOV/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

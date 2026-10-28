@@ -4,8 +4,9 @@
 name=opencv
 version=5.0.0
 release=3
-source=" https://github.com/opencv/opencv/archive/$version/opencv-$version.tar.gz
-	https://github.com/opencv/opencv_contrib/archive/4.12.0/opencv_contrib-$version.tar.gz"
+_name=opencv_contrib
+source=" https://github.com/opencv/${name}/archive/$version/${name}-$version.tar.gz
+	https://github.com/opencv/${_name}/archive/${version}/${_name}-$version.tar.gz"
 options="!checksum"
 noextract="opencv_contrib-$version.tar.gz"
 build() {

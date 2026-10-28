@@ -4,7 +4,8 @@ name=perl-convert-asn1
 version=0.33
 release=6
 
-source="https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/Convert-ASN1-0.33.tar.gz"
+_name=Convert-ASN1
+source="https://cpan.metacpan.org/authors/id/T/TI/TIMLEGGE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

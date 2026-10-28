@@ -5,7 +5,8 @@ name=perl-http-response-encoding
 version=0.06
 release=6
 
-source="https://www.cpan.org/authors/id/D/DA/DANKOGAI/HTTP-Response-Encoding-0.06.tar.gz"
+_name=HTTP-Response-Encoding
+source="https://cpan.metacpan.org/authors/id/D/DA/DANKOGAI/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

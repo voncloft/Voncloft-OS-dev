@@ -4,7 +4,8 @@
 name=hatch-vcs
 version=0.5.0
 release=1
-source="https://files.pythonhosted.org/packages/source/h/hatch_vcs/hatch_vcs-$version.tar.gz"
+_name=hatch_vcs
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

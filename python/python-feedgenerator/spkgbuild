@@ -5,7 +5,8 @@ name=python-feedgenerator
 version=1.9.2
 release=3
 
-source="https://pypi.python.org/packages/source/f/feedgenerator/feedgenerator-1.9.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

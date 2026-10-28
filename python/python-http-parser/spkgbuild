@@ -5,7 +5,8 @@ name=python-http-parser
 version=4.2.0
 release=4
 
-source="https://github.com/benoitc/http-parser/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/benoitc/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

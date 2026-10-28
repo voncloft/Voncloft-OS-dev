@@ -5,7 +5,8 @@ name=python-cloudpickle
 version=2.2.1
 release=1
 
-source="https://files.pythonhosted.org/packages/source/c/cloudpickle/cloudpickle-2.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

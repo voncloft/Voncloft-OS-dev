@@ -5,10 +5,10 @@ name=kdiff3
 version=1.12.6
 release=2
 options="!checksum"
-source="kdiff3-1.12.6.tar.xz::https://download.kde.org/stable/kdiff3/kdiff3-1.12.6.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "kdiff3-1.12.6"
+    cd "kdiff3-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

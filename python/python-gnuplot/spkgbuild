@@ -2,14 +2,16 @@
 # depends : python-numpy gnuplot
 
 name=python-gnuplot
-version=1.8
+version=1.8.git20121004143316.g2c2218dc67bffe10f2e376febc702c1567625b19
 release=11
 
-source="git+https://github.com/yuyichao/gnuplot-py#commit=2c2218dc67"
+_name=gnuplot-py
+_commit=${version##*.g}
+source="${name}-${version}.tar.gz::https://github.com/yuyichao/${_name}/archive/${_commit}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}"-*/
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

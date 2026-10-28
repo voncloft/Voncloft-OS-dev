@@ -5,7 +5,8 @@ name=python-testresources
 version=2.0.1
 release=8
 
-source="https://pypi.io/packages/source/t/testresources/testresources-2.0.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

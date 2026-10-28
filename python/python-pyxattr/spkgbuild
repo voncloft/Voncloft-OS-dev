@@ -5,7 +5,8 @@ name=python-pyxattr
 version=0.8.1
 release=1
 
-source="https://pyxattr.k1024.org/downloads/pyxattr-0.8.1.tar.gz"
+_name=${name#python-}
+source="https://pyxattr.k1024.org/downloads/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

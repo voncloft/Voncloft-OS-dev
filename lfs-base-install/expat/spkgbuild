@@ -5,7 +5,8 @@ name=expat
 version=2.9.0
 release=1
 
-source="https://github.com/libexpat/libexpat/releases/download/R_2_9_0/expat-2.9.0.tar.bz2"
+_name=libexpat
+source="https://github.com/libexpat/${_name}/releases/download/R_2_9_0/${name}-${version}.tar.bz2"
 
 build()
 {

@@ -5,7 +5,8 @@ name=perl-net-ip
 version=1.26
 release=8
 
-source="https://www.cpan.org/authors/id/M/MA/MANU/Net-IP-1.26.tar.gz"
+_name=Net-IP
+source="https://cpan.metacpan.org/authors/id/M/MA/MANU/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

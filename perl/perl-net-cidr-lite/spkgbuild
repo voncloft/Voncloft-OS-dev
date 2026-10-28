@@ -5,7 +5,8 @@ name=perl-net-cidr-lite
 version=0.22
 release=9
 
-source="https://search.cpan.org/CPAN/authors/id/S/ST/STIGTSP/Net-CIDR-Lite-0.22.tar.gz"
+_name=Net-CIDR-Lite
+source="https://cpan.metacpan.org/authors/id/S/ST/STIGTSP/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

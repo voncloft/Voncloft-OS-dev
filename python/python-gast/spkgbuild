@@ -5,7 +5,8 @@ name=python-gast
 version=0.5.4
 release=3
 
-source="https://pypi.io/packages/source/g/gast/gast-0.5.4.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

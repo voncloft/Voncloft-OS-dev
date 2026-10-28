@@ -5,7 +5,8 @@ name=perl-mail-imapclient
 version=3.43
 release=3
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLOBBES/Mail-IMAPClient-3.43.tar.gz"
+_name=Mail-IMAPClient
+source="https://cpan.metacpan.org/authors/id/P/PL/PLOBBES/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

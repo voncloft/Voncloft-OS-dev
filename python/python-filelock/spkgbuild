@@ -5,7 +5,8 @@ name=python-filelock
 version=4.2.4
 release=5
 
-source="https://github.com/benediktschmitt/py-filelock/archive/refs/tags/v$version.tar.gz"
+_name=py-filelock
+source="https://github.com/benediktschmitt/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

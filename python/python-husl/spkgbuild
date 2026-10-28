@@ -5,7 +5,8 @@ name=python-husl
 version=4.0.3
 release=7
 
-source="https://files.pythonhosted.org/packages/source/h/husl/husl-4.0.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/h/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

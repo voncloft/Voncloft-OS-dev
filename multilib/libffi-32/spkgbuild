@@ -4,7 +4,8 @@
 name=libffi-32
 version=3.8.0
 release=1
-source="https://github.com/libffi/libffi/releases/download/v3.8.0/libffi-3.8.0.tar.gz"
+_name=${name%-32}
+source="https://github.com/libffi/${_name}/releases/download/v${version}/${_name}-${version}.tar.gz"
 
 build() {
 	cd "$SRC"/libffi*/

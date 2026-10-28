@@ -5,7 +5,8 @@ name=python-oslosphinx
 version=4.18.0
 release=5
 
-source="https://github.com/openstack/oslosphinx/archive/refs/tags/e$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/openstack/${_name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

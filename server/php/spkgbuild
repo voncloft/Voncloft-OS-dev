@@ -5,7 +5,7 @@ name=php
 version=8.4.27
 release=1
 
-source="https://www.php.net/distributions/php-$version.tar.gz"
+source="https://www.php.net/distributions/${name}-$version.tar.gz"
 options="!checksum"
 build()
 {

@@ -4,7 +4,8 @@ name=perl-io-multiplex
 version=1.16
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/B/BB/BBB/IO-Multiplex-1.16.tar.gz"
+_name=IO-Multiplex
+source="https://cpan.metacpan.org/authors/id/B/BB/BBB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

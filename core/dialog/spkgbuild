@@ -5,7 +5,8 @@ name=dialog
 version=1.3_20260721
 verzion=$(echo $version | sed 's/_/-/')
 release=1
-source="https://invisible-mirror.net/archives/dialog/dialog-1.3-20260721.tgz"
+_version=${version//_/-}
+source="https://invisible-mirror.net/archives/${name}/${name}-${_version}.tgz"
 
 build () {
 	cd "$SRC"/dialog*/

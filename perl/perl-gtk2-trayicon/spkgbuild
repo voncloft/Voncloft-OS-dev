@@ -5,7 +5,8 @@ name=perl-gtk2-trayicon
 version=0.07
 release=20
 
-source="https://downloads.sourceforge.net/sourceforge/gtk2-perl/Gtk2-TrayIcon-0.06.tar.gz"
+_name=Gtk2-TrayIcon
+source="https://downloads.sourceforge.net/sourceforge/gtk2-perl/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

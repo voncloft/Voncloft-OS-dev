@@ -2,9 +2,10 @@
 # depends	: libx11 libxfixes
 
 name=libxcomposite
-version=0.4.6
+version=0.4.7
 release=1
-source="http://ftp.x.org/pub/individual/lib/libXcomposite-$version.tar.xz"
+_name=libXcomposite
+source="http://ftp.x.org/pub/individual/lib/${_name}-$version.tar.xz"
 
 build() {
 	cd libXcomposite-$version

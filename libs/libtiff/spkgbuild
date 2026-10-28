@@ -4,7 +4,8 @@
 name=libtiff
 version=4.7.2
 release=1
-source="https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz"
+_name=tiff
+source="https://download.osgeo.org/libtiff/${_name}-${version}.tar.gz"
 
 build() {
 	cd tiff-$version

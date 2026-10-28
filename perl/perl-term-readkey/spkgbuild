@@ -5,7 +5,8 @@ name=perl-term-readkey
 version=2.38
 release=5
 
-source="https://search.cpan.org/CPAN/authors/id/J/JS/JSTOWE/TermReadKey-2.38.tar.gz"
+_name=TermReadKey
+source="https://cpan.metacpan.org/authors/id/J/JS/JSTOWE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

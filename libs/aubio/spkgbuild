@@ -5,7 +5,7 @@ name=aubio
 version=0.4.9
 release=2
 
-source="$name-$version.tar.bz2::https://aubio.org/pub/aubio-$version.tar.bz2"
+source="$name-$version.tar.bz2::https://aubio.org/pub/${name}-$version.tar.bz2"
 options="!checksum"
 
 build() {

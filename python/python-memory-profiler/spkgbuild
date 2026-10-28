@@ -5,7 +5,8 @@ name=python-memory-profiler
 version=0.61
 release=1
 
-source="https://github.com/pythonprofilers/memory_profiler/archive/refs/tags/v$version.tar.gz"
+_name=memory_profiler
+source="https://github.com/pythonprofilers/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

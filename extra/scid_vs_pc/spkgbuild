@@ -7,7 +7,7 @@ release=1
 
 url="https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=scid_vs_pc"
 
-source="https://downloads.sourceforge.net/project/scidvspc/source/scid_vs_pc-4.27.tgz"
+source="https://downloads.sourceforge.net/project/scidvspc/source/${name}-${version}.tgz"
 options="!checksum"
 
 build() {

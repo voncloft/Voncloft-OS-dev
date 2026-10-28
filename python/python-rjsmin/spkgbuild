@@ -5,7 +5,8 @@ name=python-rjsmin
 version=1.2.1
 release=3
 
-source="https://files.pythonhosted.org/packages/source/r/rjsmin/rjsmin-1.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

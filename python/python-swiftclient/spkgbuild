@@ -5,7 +5,7 @@ name=python-swiftclient
 version=4.11.0
 release=1
 
-source="https://github.com/openstack/python-swiftclient/archive/refs/tags/e$version.tar.gz"
+source="https://github.com/openstack/${name}/archive/refs/tags/e$version.tar.gz"
 options="!checksum"
 
 build() {

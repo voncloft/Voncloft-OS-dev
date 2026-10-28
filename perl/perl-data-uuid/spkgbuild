@@ -5,7 +5,8 @@ name=perl-data-uuid
 version=1.226
 release=8
 
-source="https://www.cpan.org/modules/by-module//--1.226.tar.gz"
+_name=Data-UUID
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

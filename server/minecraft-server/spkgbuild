@@ -1,19 +1,18 @@
 # description : Minecraft Server
-# depends : java-headless
+# depends : java-headless python
 
 name=minecraft-server
 version=26.3
 release=2
 
-_server_sha1=33680f5f2ac32864d6d7cf5e56a705fdb3e05f4c
-source="minecraft-server-$version.jar::https://piston-data.mojang.com/v1/objects/$_server_sha1/server.jar
-	minecraft.sh"
-noextract="minecraft-server-$version.jar"
+source="${name}-${version}-manifest.json::https://piston-meta.mojang.com/mc/game/version_manifest_v2.json
+    fetch-source.py
+    minecraft.sh"
 
 build() {
-	printf '%s  %s\n' "$_server_sha1" "$SRC/minecraft-server-$version.jar" | sha1sum -c - || return 1
+    python3 "$SRC/fetch-source.py" minecraft "$version" "$SRC/${name}-${version}-manifest.json" "$SRC/${name}-${version}.jar" || return 1
 	mkdir -pv $PKG/minecraft
-	install -Dm644 "$SRC/minecraft-server-$version.jar" $PKG/minecraft/minecraft_server.$version.jar
+	install -Dm644 "$SRC/${name}-${version}.jar" $PKG/minecraft/minecraft_server.$version.jar
 	mkdir -pv $PKG/usr/bin
 	install -Dm755 $SRC/minecraft.sh $PKG/usr/bin/minecraft-server
 	sed -i -E "s|minecraft_server\.[0-9.]+\.jar|minecraft_server.$version.jar|g" "$PKG/usr/bin/minecraft-server"

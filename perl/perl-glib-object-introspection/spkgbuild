@@ -5,7 +5,8 @@ name=perl-glib-object-introspection
 version=0.050
 release=5
 
-source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/--0.050.tar.gz"
+_name=Glib-Object-Introspection
+source="https://cpan.metacpan.org/authors/id/X/XA/XAOC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

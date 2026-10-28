@@ -2,10 +2,11 @@
 # depends	: gnustep-make libffi icu gnutls libxml2 libxslt
 
 name=gnustep-base
-version=1.28.0
-verzion=$(echo $version | sed 's/\./_/g')
+version=1.31.1
+verzion=${version//./_}
 release=1
-source="https://github.com/gnustep/libs-base/releases/download/base-${verzion}/gnustep-base-$version.tar.gz"
+_name=libs-base
+source="https://github.com/gnustep/${_name}/releases/download/base-${verzion}/${name}-$version.tar.gz"
 
 build() {
 	cd $name-$version

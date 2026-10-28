@@ -5,7 +5,8 @@ name=python-wsgi-intercept
 version=1.11.0
 release=2
 
-source="https://files.pythonhosted.org/packages/source/w/wsgi_intercept/wsgi_intercept-1.11.0.tar.gz"
+_name=wsgi_intercept
+source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

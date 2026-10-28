@@ -5,7 +5,8 @@ name=python-chardet
 version=5.2.0
 release=2
 
-source="https://files.pythonhosted.org/packages/source/c/chardet/chardet-$version.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

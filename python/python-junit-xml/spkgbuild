@@ -5,11 +5,12 @@ name=python-junit-xml
 version=1.9
 release=4
 
-source="git+https://github.com/kyrus/python-junit-xml?signed#commit=b3e935355afcfb5240bac5a99707ffecc35772a2"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/j/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

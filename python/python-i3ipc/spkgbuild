@@ -5,7 +5,8 @@ name=python-i3ipc
 version=2.2.1
 release=2
 
-source="https://github.com/altdesktop/i3ipc-python/archive/refs/tags/v$version.tar.gz"
+_name=i3ipc-python
+source="https://github.com/altdesktop/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -4,7 +4,7 @@
 name=ninja
 version=1.13.2
 release=2
-source="https://github.com/ninja-build/ninja/archive/v$version/ninja-$version.tar.gz"
+source="https://github.com/ninja-build/${name}/archive/v$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build() {

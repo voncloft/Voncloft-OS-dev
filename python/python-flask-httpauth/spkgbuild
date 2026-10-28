@@ -5,7 +5,8 @@ name=python-flask-httpauth
 version=4.8.1
 release=1
 
-source="https://github.com/miguelgrinberg/Flask-HTTPAuth/archive/refs/tags/v$version.tar.gz"
+_name=Flask-HTTPAuth
+source="https://github.com/miguelgrinberg/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

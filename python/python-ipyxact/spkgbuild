@@ -5,7 +5,8 @@ name=python-ipyxact
 version=0.3.2
 release=3
 
-source="https://github.com/olofk/ipyxact/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/olofk/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

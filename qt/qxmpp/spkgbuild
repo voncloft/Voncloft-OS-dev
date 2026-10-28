@@ -5,7 +5,7 @@ name=qxmpp
 version=1.17.0
 release=2
 options="!checksum"
-source="qxmpp-1.17.0.tar.gz::https://invent.kde.org/libraries/qxmpp/-/archive/v1.17.0/qxmpp-v1.17.0.tar.gz"
+source="${name}-${version}.tar.gz::https://invent.kde.org/libraries/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
 
 build() {
     cd "qxmpp-v${version}"

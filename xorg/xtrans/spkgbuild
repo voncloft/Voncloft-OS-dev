@@ -3,7 +3,7 @@
 name=xtrans
 version=1.6.0
 release=1
-source="http://ftp.x.org/pub/individual/lib/xtrans-$version.tar.xz"
+source="http://ftp.x.org/pub/individual/lib/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

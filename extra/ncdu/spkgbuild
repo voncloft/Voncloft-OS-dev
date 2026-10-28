@@ -4,7 +4,7 @@
 name=ncdu
 version=2.9.2
 release=1
-source="https://dev.yorhel.nl/download/ncdu-$version-linux-x86_64.tar.gz"
+source="https://dev.yorhel.nl/download/${name}-$version-linux-x86_64.tar.gz"
 
 build() {
 

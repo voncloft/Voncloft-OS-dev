@@ -5,7 +5,8 @@ name=python-flup
 version=1.0.3
 release=6
 
-source="https://pypi.io/packages/source/f/flup/flup-1.0.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

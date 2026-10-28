@@ -4,7 +4,7 @@
 name=xf86-video-vmware
 version=13.4.0
 release=1
-source="https://www.x.org/archive/individual/driver/xf86-video-vmware-13.4.0.tar.xz
+source="https://www.x.org/archive/individual/driver/${name}-${version}.tar.xz
 	gcc8.diff"
 
 build() {

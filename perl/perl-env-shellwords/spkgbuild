@@ -5,7 +5,8 @@ name=perl-env-shellwords
 version=0.02
 release=3
 
-source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Env-ShellWords-0.02.tar.gz"
+_name=Env-ShellWords
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

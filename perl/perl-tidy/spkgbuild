@@ -5,7 +5,8 @@ name=perl-tidy
 version=20230309
 release=1
 
-source=https://www.cpan.org/authors/id/S/SH/SHANCOCK/Perl-Tidy-20230309.tar.gz
+_name=Perl-Tidy
+source="https://cpan.metacpan.org/authors/id/S/SH/SHANCOCK/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

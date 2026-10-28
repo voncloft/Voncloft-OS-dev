@@ -5,7 +5,8 @@ name=perl-json-webtoken
 version=0.10
 release=5
 
-source="https://cpan.metacpan.org/authors/id/X/XA/XAICRON/JSON-WebToken-0.10.tar.gz"
+_name=JSON-WebToken
+source="https://cpan.metacpan.org/authors/id/X/XA/XAICRON/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

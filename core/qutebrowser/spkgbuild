@@ -4,7 +4,7 @@
 name=qutebrowser
 version=3.7.0
 release=1
-source="https://github.com/qutebrowser/qutebrowser/releases/download/v$version/qutebrowser-$version.tar.gz"
+source="https://github.com/qutebrowser/${name}/releases/download/v$version/${name}-$version.tar.gz"
 
 # fix bsdtar extract error
 #  'Pathname can't be converted from UTF-8 to current locale.'

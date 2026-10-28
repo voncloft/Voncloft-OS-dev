@@ -5,7 +5,8 @@ name=python-django-filter
 version=23.2
 release=2
 
-source="https://files.pythonhosted.org/packages/source/d/django-filter/django-filter-23.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

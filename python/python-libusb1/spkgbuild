@@ -5,7 +5,7 @@ name=python-libusb1
 version=3.4.0
 release=1
 
-source="https://github.com/vpelletier/python-libusb1/archive/refs/tags/$version.tar.gz"
+source="https://github.com/vpelletier/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

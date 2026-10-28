@@ -4,7 +4,7 @@
 name=glew
 version=2.3.1    
 release=1
-source="https://downloads.sourceforge.net/glew/glew-2.3.1.tgz"
+source="https://downloads.sourceforge.net/${name}/${name}-${version}.tgz"
 
 options="!checksum"
 

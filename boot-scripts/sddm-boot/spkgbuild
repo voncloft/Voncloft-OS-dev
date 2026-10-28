@@ -5,7 +5,8 @@ name=sddm-boot
 version=20251220
 release=1
 
-source="https://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20251220.tar.xz"
+_name=blfs-bootscripts
+source="https://anduin.linuxfromscratch.org/BLFS/${_name}/${_name}-${version}.tar.xz"
 options="!checksum"
 
 build()

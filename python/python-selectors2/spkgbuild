@@ -5,7 +5,8 @@ name=python-selectors2
 version=2.0.2
 release=1
 
-source="https://github.com/SethMichaelLarson/selectors2/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/SethMichaelLarson/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

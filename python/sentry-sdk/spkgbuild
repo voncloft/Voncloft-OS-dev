@@ -5,7 +5,8 @@ name=sentry-sdk
 version=3.0.0
 release=1
 
-source="https://github.com/getsentry/sentry-python/releases/download/$version/sentry_sdk-$version.tar.gz"
+_name=sentry-python
+source="https://github.com/getsentry/${_name}/releases/download/$version/sentry_sdk-$version.tar.gz"
 
 build()
 {

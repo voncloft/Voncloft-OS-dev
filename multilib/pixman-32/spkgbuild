@@ -4,7 +4,8 @@
 name=pixman-32
 version=0.46.4
 release=1
-source="https://cairographics.org/releases/pixman-0.46.4.tar.gz"
+_name=${name%-32}
+source="https://cairographics.org/releases/${_name}-${version}.tar.gz"
 
 build() {
 	cd pixman-$version

@@ -5,7 +5,8 @@ name=wxwidgets
 version=3.3.4
 release=1
 
-source="https://github.com/wxWidgets/wxWidgets/releases/download/v$version/wxWidgets-$version.tar.bz2"
+_name=wxWidgets
+source="https://github.com/wxWidgets/${_name}/releases/download/v$version/${_name}-$version.tar.bz2"
 
 build()
 {

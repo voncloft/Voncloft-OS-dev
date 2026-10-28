@@ -5,7 +5,8 @@ name=python-marshmallow
 version=3.19.0
 release=1
 
-source="https://pypi.io/packages/source/m/marshmallow/marshmallow-3.19.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

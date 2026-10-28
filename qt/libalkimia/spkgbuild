@@ -5,10 +5,11 @@ name=libalkimia
 version=8.2.1
 release=2
 options="!checksum"
-source="libalkimia-8.2.1.tar.xz::https://download.kde.org/stable/alkimia/8.2.1/alkimia-8.2.1.tar.xz"
+_name=alkimia
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${_name}/${version}/${_name}-${version}.tar.xz"
 
 build() {
-    cd "alkimia-8.2.1"
+    cd "alkimia-${version}"
     plasma-package-installer \
         -DBUILD_WITH_QT6=ON \
         -DBUILD_APPLETS=OFF \

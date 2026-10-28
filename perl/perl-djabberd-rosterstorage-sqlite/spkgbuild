@@ -5,7 +5,8 @@ name=perl-djabberd-rosterstorage-sqlite
 version=1.00
 release=9
 
-source="https://search.cpan.org/CPAN/authors/id/B/BR/BRADFITZ/DJabberd-RosterStorage-SQLite-1.00.tar.gz"
+_name=DJabberd-RosterStorage-SQLite
+source="https://cpan.metacpan.org/authors/id/B/BR/BRADFITZ/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-nose-randomly
 version=1.2.6
 release=5
 
-source="https://github.com/adamchainz/nose-randomly/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/adamchainz/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

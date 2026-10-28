@@ -5,7 +5,8 @@ name=python-pandocfilters
 version=1.5.0
 release=3
 
-source="https://pypi.io/packages/source/p/pandocfilters/pandocfilters-1.4.3.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

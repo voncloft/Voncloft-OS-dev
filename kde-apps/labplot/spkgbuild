@@ -5,10 +5,10 @@ name=labplot
 version=2.12.1
 release=2
 options="!checksum"
-source="labplot-2.12.1.tar.xz::https://download.kde.org/stable/labplot/labplot-2.12.1.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"
 
 build() {
-    cd "labplot-2.12.1"
+    cd "labplot-${version}"
     plasma-package-installer \
         -DENABLE_TESTS=OFF
     cd build

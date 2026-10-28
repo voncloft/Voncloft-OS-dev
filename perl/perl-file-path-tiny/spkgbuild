@@ -5,7 +5,8 @@ name=perl-file-path-tiny
 version=1.0
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/D/DM/DMUEY/File-Path-Tiny-0.9.tar.gz"
+_name=File-Path-Tiny
+source="https://cpan.metacpan.org/authors/id/D/DM/DMUEY/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

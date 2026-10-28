@@ -5,7 +5,8 @@ name=perl-gtk3-simplelist
 version=0.21
 release=1
 
-source="https://cpan.metacpan.org/authors/id/T/TV/TVIGNAUD/-0.21.tar.gz"
+_name=Gtk3-SimpleList
+source="https://cpan.metacpan.org/authors/id/T/TV/TVIGNAUD/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

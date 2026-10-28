@@ -4,7 +4,8 @@
 name=viewnior
 version=1.8
 release=1
-source="https://github.com/hellosiyan/Viewnior/archive/$name-$version.tar.gz"
+_name=Viewnior
+source="https://github.com/hellosiyan/${_name}/archive/$name-$version.tar.gz"
 
 build() {
 	cd Viewnior-$name-$version

@@ -5,7 +5,8 @@ name=python-xdg
 version=6.0.0
 release=1
 
-source="https://files.pythonhosted.org/packages/2a/b9/0e6e6f19fb75cf5e1758f4f33c1256738f718966700cffc0fde2f966218b/xdg-6.0.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/x/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

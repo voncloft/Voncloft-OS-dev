@@ -5,7 +5,7 @@ name=shared-mime-info
 version=2.5.1
 release=5
 options="!makeflags"
-source="https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.5.1/shared-mime-info-2.5.1.tar.gz"
+source="https://gitlab.freedesktop.org/xdg/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
 build() {
 	cd $name-$version

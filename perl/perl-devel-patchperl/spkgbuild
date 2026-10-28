@@ -5,7 +5,8 @@ name=perl-devel-patchperl
 version=2.08
 release=2
 
-source="https://search.cpan.org/CPAN/authors/id/B/BI/BINGOS/Devel-PatchPerl-1.64.tar.gz"
+_name=Devel-PatchPerl
+source="https://cpan.metacpan.org/authors/id/B/BI/BINGOS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

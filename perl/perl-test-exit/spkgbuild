@@ -5,7 +5,8 @@ name=perl-test-exit
 version=0.11
 release=3
 
-source="https://cpan.metacpan.org/authors/id/A/AR/ARODLAND/Test-Exit-0.11.tar.gz"
+_name=Test-Exit
+source="https://cpan.metacpan.org/authors/id/A/AR/ARODLAND/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

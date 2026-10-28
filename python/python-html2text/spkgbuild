@@ -5,7 +5,8 @@ name=python-html2text
 version=2025.4.15
 release=3
 
-source="https://github.com/Alir3z4/html2text/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/Alir3z4/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

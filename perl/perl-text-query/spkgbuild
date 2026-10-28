@@ -5,7 +5,8 @@ name=perl-text-query
 version=0.09
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/J/JO/JONJ/Text-Query-0.09.tar.gz"
+_name=Text-Query
+source="https://cpan.metacpan.org/authors/id/J/JO/JONJ/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

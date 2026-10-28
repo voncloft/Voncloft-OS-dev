@@ -4,7 +4,8 @@
 name=libx11
 version=1.8.14
 release=1
-source="https://www.x.org/pub/individual/lib/libX11-1.8.14.tar.gz"
+_name=libX11
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 
 build() {
 	cd libX11-$version

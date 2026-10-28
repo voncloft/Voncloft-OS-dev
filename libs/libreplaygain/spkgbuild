@@ -9,7 +9,7 @@ source="http://files.musepack.net/source/${name}_r${version}.tar.gz"
 build() {
 	mkdir build
 	
-	cd build
+	cd "$SRC"/libreplaygain_r475*/
 	cmake ../${name}_r${version}/ \
 	  -DCMAKE_INSTALL_PREFIX=/usr \
 	  -DCMAKE_BUILD_TYPE=Release

@@ -5,7 +5,8 @@ name=perl-template-gd
 version=2.66
 release=7
 
-source="https://www.cpan.org/authors/id/A/AB/ABW/Template-GD-2.66.tar.gz"
+_name=Template-GD
+source="https://cpan.metacpan.org/authors/id/A/AB/ABW/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

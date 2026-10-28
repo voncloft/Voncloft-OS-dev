@@ -5,7 +5,7 @@ name=python-zeroconf
 version=0.151.5
 release=1
 
-source="https://github.com/jstasiak/python-zeroconf/archive/refs/tags/$version.tar.gz"
+source="https://github.com/jstasiak/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

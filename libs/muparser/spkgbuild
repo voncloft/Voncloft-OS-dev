@@ -4,7 +4,7 @@
 name=muparser
 version=2.3.5
 release=1
-source="https://github.com/beltoforion/muparser/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/beltoforion/${name}/archive/v$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

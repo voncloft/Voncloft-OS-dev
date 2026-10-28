@@ -5,10 +5,10 @@ name=drawy
 version=1.0.2
 release=2
 options="!checksum"
-source="drawy-1.0.2.tar.xz::https://download.kde.org/stable/drawy/1.0.2/drawy-1.0.2.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
-    cd "drawy-1.0.2"
+    cd "drawy-${version}"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

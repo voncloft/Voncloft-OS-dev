@@ -5,7 +5,8 @@ name=perl-module-find
 version=0.16
 release=6
 
-source="perl-module-find-0.16.tar.gz::https://search.cpan.org/CPAN/authors/id/C/CR/CRENZ/Module-Find-0.16.tar.gz"
+_name=Module-Find
+source="https://cpan.metacpan.org/authors/id/C/CR/CRENZ/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

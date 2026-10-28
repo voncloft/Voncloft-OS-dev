@@ -5,7 +5,8 @@ name=perl-xml-rsslite
 version=0.17
 release=6
 
-source="https://www.cpan.org/authors/id/J/JP/JPIERCE/XML-RSSLite-0.17.tgz"
+_name=XML-RSSLite
+source="https://cpan.metacpan.org/authors/id/J/JP/JPIERCE/${_name}-${version}.tgz"
 options="!checksum"
 
 build() {

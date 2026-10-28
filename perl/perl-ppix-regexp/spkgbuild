@@ -5,7 +5,8 @@ name=perl-ppix-regexp
 version=0.088
 release=1
 
-source="https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-Regexp-0.088.tar.gz"
+_name=PPIx-Regexp
+source="https://cpan.metacpan.org/authors/id/W/WY/WYANT/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

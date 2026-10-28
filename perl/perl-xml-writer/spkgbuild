@@ -5,7 +5,8 @@ name=perl-xml-writer
 version=0.900
 release=6
 
-source="https://www.cpan.org/authors/id/J/JO/JOSEPHW/XML-Writer-0.625.tar.gz"
+_name=XML-Writer
+source="https://cpan.metacpan.org/authors/id/J/JO/JOSEPHW/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

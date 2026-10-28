@@ -5,7 +5,7 @@ name=python-colorlog
 version=6.12.0
 release=1
 
-source="https://github.com/borntyping/python-colorlog/archive/refs/tags/v$version.tar.gz"
+source="https://github.com/borntyping/${name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

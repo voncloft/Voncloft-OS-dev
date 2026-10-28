@@ -5,7 +5,8 @@ name=python-joblib
 version=1.6.0
 release=1
 
-source="https://github.com/joblib/joblib/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/joblib/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

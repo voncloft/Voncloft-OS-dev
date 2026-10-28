@@ -5,7 +5,8 @@ name=python-behave
 version=1.3.3
 release=1
 
-source="https://github.com/behave/behave/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/behave/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-python-multipart
 version=0.0.32
 release=3
 
-source="https://github.com/andrew-d/python-multipart/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/andrew-d/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

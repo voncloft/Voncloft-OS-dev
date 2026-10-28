@@ -4,7 +4,7 @@
 name=libxslt
 version=1.1.45
 release=1
-source="https://download.gnome.org/sources/libxslt/1.1/libxslt-1.1.43.tar.xz"
+source="https://download.gnome.org/sources/${name}/${version%.*}/${name}-${version}.tar.xz"
 
 build() {
 	cd $name-$version

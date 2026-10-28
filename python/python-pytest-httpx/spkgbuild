@@ -5,7 +5,8 @@ name=python-pytest-httpx
 version=0.36.0
 release=1
 
-source="https://github.com/Colin-b/pytest_httpx/archive/refs/tags/v$version.tar.gz"
+_name=pytest_httpx
+source="https://github.com/Colin-b/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

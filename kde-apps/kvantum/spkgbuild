@@ -5,7 +5,8 @@ name=kvantum
 version=1.1.8
 release=1
 
-source="$name-$version.tar.xz::https://github.com/tsujan/Kvantum/releases/download/V$version/Kvantum-$version.tar.xz"
+_name=Kvantum
+source="$name-$version.tar.xz::https://github.com/tsujan/${_name}/releases/download/V$version/${_name}-$version.tar.xz"
 options="!checksum"
 
 build() {

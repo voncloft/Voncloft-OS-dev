@@ -5,7 +5,8 @@ name=python-reedsolo
 version=2.1.1
 release=1
 
-source="https://github.com/tomerfiliba/reedsolomon/archive/refs/tags/v$version.tar.gz"
+_name=reedsolomon
+source="https://github.com/tomerfiliba/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

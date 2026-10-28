@@ -4,7 +4,8 @@
 name=libpciaccess-32
 version=0.19
 release=1
-source="https://www.x.org/pub/individual/lib/libpciaccess-0.19.tar.xz"
+_name=${name%-32}
+source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.xz"
 
 build() {
 	cd libpciaccess-$version

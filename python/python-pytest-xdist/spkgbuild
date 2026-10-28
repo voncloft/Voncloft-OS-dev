@@ -5,7 +5,8 @@ name=python-pytest-xdist
 version=3.8.0
 release=1
 
-source="https://github.com/pytest-dev/pytest-xdist/archive/refs/tags/v$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/pytest-dev/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

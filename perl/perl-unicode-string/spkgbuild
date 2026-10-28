@@ -5,7 +5,8 @@ name=perl-unicode-string
 version=2.10
 release=4
 
-source="https://cpan.metacpan.org/authors/id/G/GA/GAAS/GAAS/Unicode-String-2.10.tar.gz"
+_name=Unicode-String
+source="https://cpan.metacpan.org/authors/id/G/GA/GAAS/GAAS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

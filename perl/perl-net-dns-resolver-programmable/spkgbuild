@@ -5,7 +5,8 @@ name=perl-net-dns-resolver-programmable
 version=0.009
 release=6
 
-source="https://search.cpan.org/CPAN/authors/id/B/BI/BIGPRESH/Net-DNS-Resolver-Programmable-0.009.tar.gz"
+_name=Net-DNS-Resolver-Programmable
+source="https://cpan.metacpan.org/authors/id/B/BI/BIGPRESH/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

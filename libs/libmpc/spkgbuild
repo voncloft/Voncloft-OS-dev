@@ -4,7 +4,8 @@
 name=libmpc
 version=1.4.1
 release=1
-source="https://ftp.gnu.org/gnu/mpc/mpc-1.4.1.tar.xz"
+_name=mpc
+source="https://ftp.gnu.org/gnu/${_name}/${_name}-${version}.tar.xz"
 
 build() {
 	cd mpc-$version

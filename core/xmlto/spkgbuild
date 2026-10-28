@@ -4,7 +4,7 @@
 name=xmlto
 version=0.0.29
 release=1
-source=" https://pagure.io/xmlto/archive/0.0.29/xmlto-0.0.29.tar.gz"
+source=" https://pagure.io/${name}/archive/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

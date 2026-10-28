@@ -5,7 +5,7 @@ name=libaccounts-qt
 version=1.17
 release=2
 
-source="https://gitlab.com/accounts-sso/libaccounts-qt/-/archive/VERSION_$version/libaccounts-qt-VERSION_$version.tar.gz"
+source="https://gitlab.com/accounts-sso/${name}/-/archive/VERSION_$version/libaccounts-qt-VERSION_$version.tar.gz"
 
 build() {
 	cd $name-VERSION_$version

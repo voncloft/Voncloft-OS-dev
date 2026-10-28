@@ -5,7 +5,8 @@ name=python-schema
 version=0.7.5
 release=1
 
-source="https://files.pythonhosted.org/packages/source/s/schema/schema-0.7.5.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

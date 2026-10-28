@@ -5,7 +5,8 @@ name=python-gcp-devrel-py-tools
 version=0.0.16
 release=3
 
-source="https://github.com/GoogleCloudPlatform/python-repo-tools/archive/refs/tags/$version.tar.gz"
+_name=python-repo-tools
+source="https://github.com/GoogleCloudPlatform/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

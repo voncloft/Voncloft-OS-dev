@@ -2,12 +2,15 @@
 # depends : cups fontconfig freetype2 libjpeg-turbo libpng libtiff openjpeg
 
 name=ghostscript
-version=10.05.1
+version=10.08.0
 release=1
 _ver=9561
-source="https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$_ver/$name-$version.tar.xz
-	https://downloads.sourceforge.net/gs-fonts/ghostscript-fonts-std-8.11.tar.gz
-	https://downloads.sourceforge.net/gs-fonts/gnu-gs-fonts-other-6.0.tar.gz"
+_name=ghostpdl-downloads
+_source2_version=8.11
+_source3_version=6.0
+source="https://github.com/ArtifexSoftware/${_name}/releases/download/gs$_ver/$name-$version.tar.xz
+	https://downloads.sourceforge.net/gs-fonts/${name}-fonts-std-${_source2_version}.tar.gz
+	https://downloads.sourceforge.net/gs-fonts/gnu-gs-fonts-other-${_source3_version}.tar.gz"
 	
 options="!checksum"
 

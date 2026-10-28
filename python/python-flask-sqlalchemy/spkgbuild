@@ -5,7 +5,8 @@ name=python-flask-sqlalchemy
 version=3.1.1
 release=3
 
-source="https://github.com/mitsuhiko/flask-sqlalchemy/archive/refs/tags/$version.tar.gz"
+_name=${name#python-}
+source="https://github.com/mitsuhiko/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

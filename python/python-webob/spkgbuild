@@ -5,7 +5,8 @@ name=python-webob
 version=1.8.7
 release=3
 
-source="https://pypi.io/packages/source/W/WebOb/WebOb-1.8.7.tar.gz"
+_name=WebOb
+source="https://files.pythonhosted.org/packages/source/W/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

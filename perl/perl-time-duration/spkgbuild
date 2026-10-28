@@ -5,7 +5,8 @@ name=perl-time-duration
 version=1.21
 release=4
 
-source="https://search.cpan.org/CPAN/authors/id/N/NE/NEILB/Time-Duration-1.20.tar.gz"
+_name=Time-Duration
+source="https://cpan.metacpan.org/authors/id/N/NE/NEILB/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

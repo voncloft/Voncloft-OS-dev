@@ -5,11 +5,12 @@ name=python-sphinx-alabaster-theme
 version=0.7.13
 release=6
 
-source="https://files.pythonhosted.org/packages/source/a/alabaster/alabaster-0.7.13.tar.gz"
+_name=alabaster
+source="https://files.pythonhosted.org/packages/source/a/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd ${name#python-}-$version
+   cd "${_name}-${version}"
    python setup.py build
    python setup.py install --optimize=1 --root=$PKG
  }

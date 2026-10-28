@@ -5,7 +5,8 @@ name=python-jeepney
 version=0.8.0
 release=4
 
-source="https://pypi.io/packages/source/j/jeepney/jeepney-0.8.0.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/j/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

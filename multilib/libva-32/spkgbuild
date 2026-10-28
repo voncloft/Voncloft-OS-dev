@@ -4,7 +4,8 @@
 name=libva-32
 version=2.24.1    
 release=1
-source="https://github.com/intel/libva/archive/2.22.0/libva-2.22.0.tar.gz"
+_name=${name%-32}
+source="https://github.com/intel/${_name}/archive/${version}/${_name}-${version}.tar.gz"
 
 options="!checksum"
 

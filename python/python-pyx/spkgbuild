@@ -5,7 +5,8 @@ name=python-pyx
 version=0.18
 release=4
 
-source="https://github.com/pyx-project/pyx/archive/refs/tags/0.16/python-pyx-0.16.tar.gz"
+_name=${name#python-}
+source="https://github.com/pyx-project/${_name}/archive/refs/tags/${version}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

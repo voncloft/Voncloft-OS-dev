@@ -5,10 +5,10 @@ name=kid3
 version=3.10.2
 release=2
 options="!checksum"
-source="kid3-3.10.2.tar.xz::https://download.kde.org/stable/kid3/3.10.2/kid3-3.10.2.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
-    cd "kid3-3.10.2"
+    cd "kid3-${version}"
     plasma-package-installer \
         -DBUILD_WITH_QT6=ON
     cd build

@@ -5,7 +5,8 @@ name=python-mdit_py_plugins
 version=0.6.1
 release=1
 
-source="https://github.com/executablebooks/mdit-py-plugins/archive/refs/tags/v$version.tar.gz"
+_name=mdit-py-plugins
+source="https://github.com/executablebooks/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

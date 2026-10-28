@@ -5,7 +5,8 @@ name=python-pytrie
 version=0.4.0
 release=3
 
-source="https://files.pythonhosted.org/packages/source/P/PyTrie/PyTrie-0.4.0.tar.gz"
+_name=PyTrie
+source="https://files.pythonhosted.org/packages/source/P/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -5,7 +5,8 @@ name=python-git-url-parse
 version=1.2.2
 release=3
 
-source="https://files.pythonhosted.org/packages/source/g/git-url-parse/git-url-parse-1.2.2.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

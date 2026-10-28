@@ -4,7 +4,7 @@
 name=xterm
 version=412
 release=1
-source="https://invisible-mirror.net/archives/xterm/xterm-412.tgz"
+source="https://invisible-mirror.net/archives/${name}/${name}-${version}.tgz"
 	
 build() {
 	cd $name-$version

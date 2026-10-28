@@ -5,7 +5,8 @@ name=perl-html-tagfilter
 version=1.03
 release=12
 
-source="https://www.cpan.org/authors/id/W/WR/WROSS/HTML-TagFilter-1.03.tar.gz"
+_name=HTML-TagFilter
+source="https://cpan.metacpan.org/authors/id/W/WR/WROSS/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

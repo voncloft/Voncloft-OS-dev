@@ -5,7 +5,7 @@ name=python-adblock
 version=0.6.0
 release=1
 
-source="https://github.com/ArniDagur/python-adblock/archive/refs/tags/$version.tar.gz"
+source="https://github.com/ArniDagur/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

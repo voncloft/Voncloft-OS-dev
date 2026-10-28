@@ -5,7 +5,8 @@ name=python-nosexcover
 version=1.0.11
 release=6
 
-source="https://github.com/cmheisel/nose-xcover/archive/refs/tags/v$version.tar.gz"
+_name=nose-xcover
+source="https://github.com/cmheisel/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {

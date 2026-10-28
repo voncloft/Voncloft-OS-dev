@@ -5,7 +5,8 @@ name=python-gnupginterface
 version=0.3.2
 release=9
 
-source="https://downloads.sourceforge.net/sourceforge/py-gnupg/GnuPGInterface-0.3.2.tar.gz"
+_name=GnuPGInterface
+source="https://downloads.sourceforge.net/sourceforge/py-gnupg/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

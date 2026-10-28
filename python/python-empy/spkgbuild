@@ -5,7 +5,8 @@ name=python-empy
 version=4.2.1
 release=5
 
-source="https://files.pythonhosted.org/packages/d1/82/b8b39f837baa80b1bf659beb64c1c8af66f2aa7437169d72a4e1fb0ed3df/empy-4.2.1.tar.gz"
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/e/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

@@ -7,9 +7,9 @@ name=minecraft-launcher
 version=2.1.3
 release=1
 
-source="https://launcher.mojang.com/download/Minecraft.tar.gz
+source="${name}-${version}-Minecraft.tar.gz::https://launcher.mojang.com/download/Minecraft.tar.gz
 	minecraft-launcher.desktop
-	https://launcher.mojang.com/download/minecraft-launcher.svg"
+	https://launcher.mojang.com/download/${name}.svg"
 
 build() {
   install -Dm644 "minecraft-launcher.svg" "$PKG/usr/share/icons/hicolor/symbolic/apps/minecraft-launcher.svg"

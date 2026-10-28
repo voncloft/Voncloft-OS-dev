@@ -5,7 +5,8 @@ name=python-maxminddb
 version=3.2.0
 release=3
 
-source="https://github.com/maxmind/MaxMind-DB-Reader-python/archive/refs/tags/v$version.tar.gz"
+_name=MaxMind-DB-Reader-python
+source="https://github.com/maxmind/${_name}/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {
