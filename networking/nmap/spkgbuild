@@ -1,18 +1,17 @@
-# description : port scan your network
-# depends : libpcap lua pcre liblinear
+# description : Network discovery, port scanning, service detection, and security auditing tools
+# depends : libpcap liblinear libssh2 openssl pcre2 zlib
 
 name=nmap
 version=7.993
-release=1
+release=2
 
-source="https://nmap.org/dist/$name-$version.tar.bz2
-	ssl.patch"
+source="https://nmap.org/dist/$name-$version.tar.bz2"
 options="!checksum"
 
 build() {
-	cd $name-$version
-	patch ncat/http_digest.c < $SRC/ssl.patch
-	./configure --prefix=/usr
+	cd "$name-$version"
+	# NSE requires Lua 5.4; use the bundled copy instead of system Lua 5.5.
+	./configure --prefix=/usr --with-liblua=included
 	make
-	make DESTDIR=$PKG install
+	make DESTDIR="$PKG" install
 }

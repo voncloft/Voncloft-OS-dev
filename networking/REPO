@@ -98,9 +98,9 @@ f:05cc26def44480c59e62f87a78868977:tcpdump/CHANGELOG
 f:94a18eebd3b29fdcdfa96c729c16b7dd:tcpdump/spkgbuild
 f:fe1d34be66609950652b009e6ac1b3b0:libnetfilter_conntrack/CHANGELOG
 f:331c51e7e54fa014d824e4ee838df94f:libnetfilter_conntrack/spkgbuild
-f:e9ae6e29e6da19ce3e2c05fb432f19e5:nmap/CHANGELOG
-f:b05ef6321275c531ca6074bb082e23f3:nmap/ssl.patch
-f:a7febca99bf4329e015b181875faf742:nmap/spkgbuild
+f:39d95d0122309f031bed97d6dbd5f1c1:nmap/.pkgfiles
+f:dc00443d5cb09c752d11034a0b26e7e6:nmap/CHANGELOG
+f:a758152335a641ef8ea425372a41c05d:nmap/spkgbuild
 f:468585cd270ce78fecc48eef558eae0c:libnfnetlink/CHANGELOG
 f:81ebc7ac14b43b40df9e05c8cc88eb7b:libnfnetlink/spkgbuild
 f:ada5d1b217d76cc3acc400d18faf2e45:openssl1.0/spkgbuild

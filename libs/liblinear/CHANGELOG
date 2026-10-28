@@ -17,3 +17,16 @@ Release=1
 
 Synopsis:
 Upgraded from version 249 to version 250
+
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 2026
+
+Version=250
+Release=2
+
+Synopsis:
+Read the shared-library ABI version from the upstream Makefile when packaging.
+Fix packaging liblinear.so.6 instead of the obsolete liblinear.so.4 filename.
+Verified package build and training, model save/load, and prediction using the packaged library.

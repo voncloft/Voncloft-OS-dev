@@ -97,3 +97,16 @@ Release=1
 
 Synopsis:
 Upgraded from version 7.991 to version 7.993
+
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 2026
+
+Version=7.993
+Release=2
+
+Synopsis:
+Remove the obsolete SSL patch; its OpenSSL version check is already upstream.
+Use Nmap's bundled Lua 5.4 for NSE and correct PCRE2, SSL, SSH and zlib dependencies.
+Verified package build, Nmap/NSE/Ncat/Nsock tests, and all three packaged executables.

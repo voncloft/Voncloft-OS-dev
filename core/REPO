@@ -1389,9 +1389,10 @@ f:890be45aa03bbf49e15299df27d5ae33:diffutils/spkgbuild
 f:d92880ca6da19090f334b2b2ef190ef8:eudev/.pkgfiles
 f:a658f44a81102497b6db6baf21351908:eudev/CHANGELOG
 f:ca1bb7dd96c6a64d6dcf6a15a6be0648:eudev/spkgbuild
-f:78c225d197b8e9c930f51cfdbbbe8da4:lua/.pkgfiles
-f:43d205a8a327032a3de16988b9c75a38:lua/CHANGELOG
-f:e573437ae49f5e29846c44994e293325:lua/spkgbuild
+f:b22250d827818d9de8c04cb5a7252b3c:lua/.pkgfiles
+f:2a2a112d425803964c25e840c6a029d4:lua/shared-library.patch
+f:d630e32bd5dba3dc32187a6b67656052:lua/CHANGELOG
+f:456b04bdb3891e16480632caae078983:lua/spkgbuild
 f:deee148134a3fede4595152e34d8cdc7:lua/lua.pc
 f:a76713ba377493aaf711b9b6052920b2:numactl/CHANGELOG
 f:9aa88bd68153028f348ec9a1884906e2:numactl/spkgbuild

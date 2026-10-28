@@ -57,3 +57,17 @@ Release=1
 
 Synopsis:
 Upgraded from version 5.4.8 to version 5.5.1
+
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 2026
+
+Version=5.5.1
+Release=2
+
+Synopsis:
+Replace the unavailable BLFS patch download with a local Lua 5.5 shared-library patch.
+Derive library and pkg-config versions from version= instead of hardcoding 5.4.8.
+Stage all installed files under PKG and include the generated lua.pc file.
+Verified package build, upstream basic tests, and a program linked to liblua.so.5.5.
