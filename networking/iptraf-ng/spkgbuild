@@ -3,15 +3,13 @@
 
 name=iptraf-ng
 version=1.2.2
-release=1
+release=2
 
 source="https://github.com/iptraf-ng/iptraf-ng/archive/v$version/$name-$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
+	cd "$name-$version"
 	make prefix=/usr sbindir_relative=bin
-	
-	make DESTDIR=$PKG install
-	
+	make prefix=/usr sbindir_relative=bin DESTDIR="$PKG" install
 }

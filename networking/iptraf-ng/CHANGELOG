@@ -16,3 +16,16 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.2.1 to version 1.2.2
+
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 2026
+
+Version=1.2.2
+Release=2
+
+Synopsis:
+Pass prefix=/usr and sbindir_relative=bin to the install step as well as the build.
+Fix the executable location to /usr/bin/iptraf-ng and the manual to /usr/share/man/man8.
+Verified rebuilt package contents and the executable's help output.

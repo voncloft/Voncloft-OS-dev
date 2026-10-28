@@ -79,8 +79,9 @@ f:c80fa15ad6d5730334d8fabaf06bbc16:dhcp/spkgbuild
 f:4e35868ad012c18e0d60727a022f7150:dhcp/dhclient.conf
 f:c5fb37500092623edb4781ceb10cfa9b:xrdp/CHANGELOG
 f:798c925c47858ca8ee59e2fc8cdd4194:xrdp/spkgbuild
-f:c29582b8bc33b56733a6bcec9042b7e4:iptraf-ng/CHANGELOG
-f:599e99e646402d1692c2d53b71aa8741:iptraf-ng/spkgbuild
+f:42721e96bcd0567c21f5bb89ab7ff7dc:iptraf-ng/.pkgfiles
+f:a7a513da9e4d2b53f0c2272cd1e45e6a:iptraf-ng/CHANGELOG
+f:b8b578a624b152d753dec87f8e99c06e:iptraf-ng/spkgbuild
 f:d4e960361500c6a2e446e95aa28fe643:you-get/CHANGELOG
 f:8888501d8da81ff70d3f896b01788279:you-get/spkgbuild
 f:d99f87761f3044c63f07bb5b3d137329:subversion/CHANGELOG
