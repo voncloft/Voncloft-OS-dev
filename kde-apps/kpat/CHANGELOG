@@ -507,3 +507,14 @@ Release=1
 
 Synopsis:
 Upgraded from version 25.04.2 to version 25.04.3
+
+Date: Wed Oct 28 2026
+
+version=26.08.2
+release=2
+
+Synopsis:
+Restore legal-move hints when a solver supplies no quick hints, including Spider.
+Add regression coverage for one-, two-, and four-suit Spider.
+
+----------------------------------------------------------------

@@ -3875,8 +3875,8 @@ f:d4a88543d80a63feea9c4352306aa039:python-redbaron/spkgbuild
 f:ad252f75e08425f7f3b2ebd9cb5dd53b:python-keyutils/CHANGELOG
 f:08cea0b46fe3a6ff5a496d1c29e9aa5e:python-keyutils/spkgbuild
 f:d581dd3a685c78544ea6b866bb624076:python-keyutils/override
-f:170abb4ffb0e0072da303478a25df82e:python-pipx/CHANGELOG
-f:1b8a0b99770215fb117a7169c753eb64:python-pipx/spkgbuild
+f:699bfd8d3b9b3a0a8def0ccf3ff8210b:python-pipx/CHANGELOG
+f:e6af09df902ef3e48f55b38411fc43e8:python-pipx/spkgbuild
 f:b0850a5c6cbe81c39e6a07590a8ec574:python-pywinrm/CHANGELOG
 f:2c77e2461c5ab240b67bd489442ae1fd:python-pywinrm/spkgbuild
 f:81acb52c0c7b538b8e13dace3a04dba3:python-poyo/CHANGELOG
@@ -4001,8 +4001,8 @@ f:7daf46ad81f42ee3542ba8bfba177e3f:python-pyfiglet/CHANGELOG
 f:7a6dbc8a809b9bf086cf4f539863e9a2:python-pyfiglet/spkgbuild
 f:b309cc428cd8e08db5356a3605b0b8ed:python-bitcoinlib/CHANGELOG
 f:fa1b1a831d9892c1325fb80e6a36daa4:python-bitcoinlib/spkgbuild
-f:309c2846ebc72fd33be2e79f8fc2cf52:python-mt-940/CHANGELOG
-f:f7a9230e5ea92dc75031f74781d7bf92:python-mt-940/spkgbuild
+f:44ab87dcfaad6a3ade50477fff7f38f5:python-mt-940/CHANGELOG
+f:ea7d270dcca937165bb1abb2834b6ca4:python-mt-940/spkgbuild
 f:3dc7841ec7f562be7de8e65a1ca57b54:python-pyqt-builder/spkgbuild
 f:4757399e47ec9e5ee039138ab264e47a:python-pyqt-builder/override
 f:d2482801957e7eadde659d798c806207:python-pytest-django/CHANGELOG

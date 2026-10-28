@@ -1,0 +1,9 @@
+Date: Wed Oct 28 02:45:59 AM EDT 2026
+
+gnome-bluetooth
+Version=3.34.5
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 3.34.2 to version 3.34.5

@@ -1,0 +1,18 @@
+# description : port scan your network
+# depends : libpcap lua pcre liblinear
+
+name=nmap
+version=7.993
+release=1
+
+source="https://nmap.org/dist/$name-$version.tar.bz2
+	ssl.patch"
+options="!checksum"
+
+build() {
+	cd $name-$version
+	patch ncat/http_digest.c < $SRC/ssl.patch
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+}

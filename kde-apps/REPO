@@ -954,8 +954,9 @@ f:79c245f2dea4e39fe4944ad1ff71468b:kcalutils/.pkgfiles
 f:66c91f3a970c90fbefec627656508f5a:kcalutils/CHANGELOG
 f:d40217dcf6fb7cea7d2a67b1f3821fd9:kcalutils/spkgbuild
 f:cf01a76f073a5ca9902dd7811a44c23d:kpat/.pkgfiles
-f:946c510b4faecc883dfd2c78a4644743:kpat/CHANGELOG
-f:0e633bcce11babd1099a61d0bd8a7f85:kpat/spkgbuild
+f:6d7b793ce58f84084946b3dcb2cca766:kpat/hint-fallback.patch
+f:fff2c513d0afa7ec1f420d57ec0b44d7:kpat/CHANGELOG
+f:c15302f947247c34350524f465787779:kpat/spkgbuild
 f:68a777ac063ae27b409e2a978a2a95c3:kfloppy/CHANGELOG
 f:0f0347a5d38b50c90df59e84607db02e:kfloppy/spkgbuild
 f:0d69bc78bba40e1074b31f7aaa6d2bf9:akonadi-notes/CHANGELOG

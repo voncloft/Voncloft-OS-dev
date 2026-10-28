@@ -1,0 +1,44 @@
+# description : suite of vnc servers and clients
+# depends : fltk linux-pam gnutls libjpeg-turbo libxtst pixman xauth xsetroot xkeyboard-config xkbcomp libglvnd libgcrypt perl libxdamage libxfont2 libdrm xinit cmake nasm font-util util-macros xtrans xorgproto mesa imagemagick7 openjdk
+
+name=tigervnc
+version=1.16.2
+release=3
+
+_xorgver=1.20.9
+source="https://github.com/TigerVNC/tigervnc/archive/v${version}.tar.gz
+	Xsession
+	more-xsessions.patch
+	remove-selinux.patch
+	https://xorg.freedesktop.org/releases/individual/xserver/xorg-server-${_xorgver}.tar.bz2
+	https://github.com/TigerVNC/tigervnc/commit/2daf4126882f82b6e392dfbae87205dbdc559c3d.patch"
+
+build() {
+	cd $name-$version
+	patch -p1 -i $SRC/more-xsessions.patch
+	patch -p1 -i $SRC/remove-selinux.patch
+	patch -p1 -i "$SRC"/2daf4126882f82b6e392dfbae87205dbdc559c3d.patch
+
+	cmake -G "Unix Makefiles" \
+	-DCMAKE_INSTALL_PREFIX=/usr \
+    	-DCMAKE_INSTALL_SBINDIR=/usr/bin \
+    	-DCMAKE_INSTALL_LIBEXECDIR=/usr/bin \
+    	-DBUILD_JAVA=TRUE
+  make
+  make DESTDIR=$PKG install
+  install -Dm0644 java/VncViewer.jar "${PKG}"/usr/share/vnc/classes/VncViewer.jar
+  cd unix/xserver
+  cp -r "$SRC"/xorg-server-${_xorgver}/* .
+  patch -Np1 -i ../xserver120.patch
+  autoreconf -fiv
+  CFLAGS="$CFLAGS -I/usr/include/libdrm" ./configure --prefix=/usr \
+	--disable-static --without-dtrace \
+	--disable-xorg --disable-xnest --disable-xvfb --disable-dmx \
+	--disable-xwin --disable-xephyr --disable-kdrive --disable-xwayland \
+	--disable-config-hal --disable-config-udev --with-pic \
+	--disable-unit-tests --disable-devel-docs --disable-selective-werror \
+	--disable-dri --enable-dri2 --enable-dri3 --enable-glx
+  make
+  make DESTDIR=$PKG install
+  install -Dm0755 "$SRC"/Xsession "$PKG"/etc/X11/tigervnc/Xsession
+}

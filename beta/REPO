@@ -1,3 +1,4 @@
+d:sonaar
 d:collabora-online-server
 d:texlive
 d:x11vnc
@@ -11,6 +12,8 @@ d:cups-old
 d:ansible-core
 d:ansible
 d:tl-unx
+f:417dda6d82917557fe01e60377c2867b:sonaar/CHANGELOG
+f:a3a8cd80aacc7f2cf5e3c180afffba5c:sonaar/spkgbuild
 f:920e2d8dde47e41a024d20389054277d:collabora-online-server/service.patch
 f:37da350bb8cf3da7c298e4227e5bf7fc:collabora-online-server/coolwsd.patch
 f:d75784cd2d6011872f13c2af06c16568:collabora-online-server/post-upgrade.sh

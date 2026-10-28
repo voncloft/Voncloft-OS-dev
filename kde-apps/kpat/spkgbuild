@@ -3,13 +3,15 @@
 
 name=kpat
 version=26.08.2
-release=1
+release=2
 
-source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz
+        hint-fallback.patch"
 options="!checksum"
 
 build() {
     cd "kpat-$version"
+    patch -Np1 -i "$SRC/hint-fallback.patch"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

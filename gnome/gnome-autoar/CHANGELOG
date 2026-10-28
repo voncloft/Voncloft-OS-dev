@@ -1,0 +1,29 @@
+Date: Wed 29 Sep 2021 07:29:08 AM EDT
+
+gnome-autoar
+Version=0.3.3
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 0.3.1 to version 0.3.3
+
+----------------------------------------------------------------
+
+Date: Tue 19 Oct 2021 06:49:04 PM EDT
+
+Version=0.4.0
+Release=1
+
+Synopsis:
+Upgraded from version 0.3.3 to version 0.4.0
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 02:45:59 AM EDT 2026
+
+Version=0.4.5
+Release=1
+
+Synopsis:
+Upgraded from version 0.4.0 to version 0.4.5

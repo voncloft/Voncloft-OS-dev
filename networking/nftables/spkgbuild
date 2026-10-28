@@ -1,0 +1,29 @@
+# description : nftables
+# depends : libnftnl readline libmnl gmp ncurses jansson
+
+name=nftables
+version=1.1.6
+release=1
+
+source="https://netfilter.org/projects/nftables/files/nftables-$version.tar.xz
+	nftables.conf"
+
+build()
+{
+	cd $name-$version
+	autoreconf -ifv
+	autoconf
+
+	./configure --prefix=/usr \
+	--sbindir=/usr/bin \
+	--sysconfdir=/usr/share \
+	--with-json \
+	--with-cli=readline \
+	--disable-debug
+	
+
+	make
+
+	make DESTDIR=$PKG install
+	install -Dm644 $SRC/nftables.conf $PKG/etc/nftables.conf
+}

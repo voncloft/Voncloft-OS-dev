@@ -495,6 +495,7 @@ d:spectrwm
 d:bitchx
 d:foltotar
 d:scons
+d:kernel-prereq
 d:pinentry
 d:plank
 d:mkinitramfs
@@ -1168,8 +1169,9 @@ f:868fcd714f496d941024bd4bf44cc00e:jasper/CHANGELOG
 f:8c7116ed57f4dbbd14fd923f2d512919:jasper/spkgbuild
 f:d05777fe2226b3868af4782da6d0d215:update-repo/.pkgfiles
 f:33b7010f8ccd23ee80772862a7af5ce1:update-repo/update-repo
+f:d84e82425296cd053a702d3f19dff2f7:update-repo/update-rep
 f:69373343806592fb0edc5f0c1086ecc0:update-repo/changelog
-f:777a28a29b05735593c7a8bb6527a060:update-repo/spkgbuild
+f:b69355af89af3e7f16b1d1170cd2880f:update-repo/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:update-repo/override
 f:8e410ffd2d7b2ffdb62bb7a702311807:update-repo/.checksums
 f:6b9fec89392cad502d89f69f3d87147a:viewnior/CHANGELOG
@@ -2089,6 +2091,11 @@ f:bc0eb9536e58d3d6fe6343eb194ede82:foltotar/override
 f:36701c59fa6c88d0bf4ab8c90fb8afc6:foltotar/foltotar
 f:54ddd4adca1a3560ef75c13eb7c4ca53:scons/CHANGELOG
 f:5536b01929e5bd24f1604361888a3372:scons/spkgbuild
+f:fd24b601fe2cf5779778da5f7521c917:kernel-prereq/NXP7164-2010-03-10.1.fw
+f:b9fa8f284483480675d29d19e704f62c:kernel-prereq/dvb-fe-tda10048-1.0.fw
+f:766e8169b048498f690be18569bc18a4:kernel-prereq/spkgbuild
+f:39b8c34dd6e96414798e78540bc5396f:kernel-prereq/v4l-saa7164-1.0.2.fw
+f:ba8194afd8105969a536cb881899200b:kernel-prereq/v4l-saa7164-1.0.3.fw
 f:2d95520c2bc0ebc0435ca5a455311b24:pinentry/.pkgfiles
 f:69cfd167248c5b55e7674ed70af9c589:pinentry/CHANGELOG
 f:ed9aa461235b499bff9c473b13bb4720:pinentry/spkgbuild

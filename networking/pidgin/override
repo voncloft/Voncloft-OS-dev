@@ -1,0 +1,21 @@
+# Only report uversion; update-repo owns the version= edit.
+source=https://pidgin.im/install/
+url=$source
+
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - <<'PY'
+from pathlib import Path
+from html import unescape
+import re
+try:
+    text = unescape(re.sub(r'<[^>]*>', ' ', Path('index.html').read_text()))
+    match = re.search(r'source\s+code\s+of\s+Pidgin\s+([0-9]+(?:\.[0-9]+)+)', text, re.I)
+    if match:
+        print(match[1])
+except (OSError, UnicodeError):
+    pass
+PY
+    )
+}

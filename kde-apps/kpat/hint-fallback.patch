@@ -1,0 +1,92 @@
+Fix missing legal-move hints when a solver supplies no quick hints.
+SpiderSolver2 intentionally relies on bruteForceHints for this case.
+Includes regression coverage for one-, two-, and four-suit Spider.
+
+--- a/src/dealer.cpp
++++ b/src/dealer.cpp
+@@ -661,16 +661,22 @@
+     const auto moves = solver()->firstMoves();
+     for (const MOVE &m : moves) {
+         MoveHint mh = solver()->translateMove(m);
+-        hintList << mh;
++        if (mh.isValid())
++            hintList << mh;
+     }
+     return hintList;
+ }
+ 
+ QList<MoveHint> DealerScene::getHints()
+ {
+-    if (solver())
+-        return getSolverHints();
+-
++    if (solver()) {
++        const auto hints = getSolverHints();
++        if (!hints.isEmpty())
++            return hints;
++    }
++
++    // Some solvers (notably SpiderSolver2) do not provide quick hints.
++    // In that case, find legal moves directly from the current board.
+     return bruteForceHints();
+ }
+ 
+--- a/autotests/CMakeLists.txt
++++ b/autotests/CMakeLists.txt
+@@ -45,6 +45,8 @@
+         "${CMAKE_SOURCE_DIR}/src/dealer.cpp"
+         "${CMAKE_SOURCE_DIR}/src/dealerinfo.cpp"
+         "${CMAKE_SOURCE_DIR}/src/golf.cpp"
++        "${CMAKE_SOURCE_DIR}/src/spider.cpp"
++        "${CMAKE_SOURCE_DIR}/src/patsolve/spidersolver2.cpp"
+         "${CMAKE_SOURCE_DIR}/src/patsolve/golfsolver.cpp"
+         "${CMAKE_SOURCE_DIR}/src/patsolve/memory.cpp"
+         "${CMAKE_SOURCE_DIR}/src/patsolve/patsolve.cpp"
+--- a/autotests/solver_format.cpp
++++ b/autotests/solver_format.cpp
+@@ -47,6 +47,8 @@
+     Q_OBJECT
+ private Q_SLOTS:
+     void solverFormat_deal1();
++    void spiderHints_data();
++    void spiderHints();
+ };
+ 
+ static DealerScene *getDealer( int wanted_game )
+@@ -96,5 +98,36 @@
+     delete dealer;
+ }
+ 
++void TestSolverFormat::spiderHints_data()
++{
++    QTest::addColumn<int>("variant");
++    QTest::newRow("one suit") << int(DealerInfo::SpiderOneSuitId);
++    QTest::newRow("two suits") << int(DealerInfo::SpiderTwoSuitId);
++    QTest::newRow("four suits") << int(DealerInfo::SpiderFourSuitId);
++}
++
++void TestSolverFormat::spiderHints()
++{
++    QFETCH(int, variant);
++    std::unique_ptr<DealerScene> dealer(getDealer(variant));
++    QVERIFY(dealer);
++    dealer->mapOldId(variant);
++    dealer->setSolverEnabled(false);
++    dealer->setAutoDropEnabled(false);
++    dealer->startNew(2106638737);
++    dealer->deck()->stopAnimations();
++    dealer->startHint();
++    QVERIFY(dealer->isHintActive());
++    QVERIFY(!dealer->highlightedItems().isEmpty());
++    for (QGraphicsItem *item : dealer->highlightedItems()) {
++        auto *card = dynamic_cast<KCard *>(item);
++        QVERIFY(card);
++        QVERIFY(card->isFaceUp());
++        QVERIFY(card->isHighlighted());
++    }
++    dealer->stopHint();
++    QVERIFY(dealer->highlightedItems().isEmpty());
++}
++
+ QTEST_MAIN(TestSolverFormat)
+ #include "solver_format.moc"

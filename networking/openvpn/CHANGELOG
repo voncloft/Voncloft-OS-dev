@@ -1,0 +1,309 @@
+Date: Wed 29 Sep 2021 07:33:19 AM EDT
+
+openvpn
+Version=2.5.3
+Release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 2.4.9 to version 2.5.3
+
+----------------------------------------------------------------
+
+Date: Tue 05 Oct 2021 07:07:13 AM EDT
+
+Version=2.5.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.3 to version 2.5.4
+
+----------------------------------------------------------------
+
+Date: Thu 16 Dec 2021 07:30:48 AM EST
+
+Version=2.5.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.4 to version 2.5.5
+
+----------------------------------------------------------------
+
+Date: Thu 17 Mar 2022 08:47:30 AM EDT
+
+Version=2.5.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.5 to version 2.5.6
+
+----------------------------------------------------------------
+
+Date: Wed 01 Jun 2022 04:56:02 AM EDT
+
+Version=2.5.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.6 to version 2.5.7
+
+----------------------------------------------------------------
+
+Date: Fri 28 Oct 2022 04:50:32 PM EDT
+
+Version=2.5.8
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.7 to version 2.5.8
+
+----------------------------------------------------------------
+
+Date: Wed 25 Jan 2023 04:25:52 PM EST
+
+Version=2.6.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.5.8 to version 2.6.0
+
+----------------------------------------------------------------
+
+Date: Thu 09 Mar 2023 08:43:48 AM EST
+
+Version=2.6.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.0 to version 2.6.1
+
+----------------------------------------------------------------
+
+Date: Sun 26 Mar 2023 12:35:20 PM EDT
+
+Version=2.6.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.1 to version 2.6.2
+
+----------------------------------------------------------------
+
+Date: Thu 13 Apr 2023 03:44:17 PM EDT
+
+Version=2.6.3
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.2 to version 2.6.3
+
+----------------------------------------------------------------
+
+Date: Thu 11 May 2023 07:03:23 PM EDT
+
+Version=2.6.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.3 to version 2.6.4
+
+----------------------------------------------------------------
+
+Date: Wed 14 Jun 2023 08:23:14 AM EDT
+
+Version=2.6.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.4 to version 2.6.5
+
+----------------------------------------------------------------
+
+Date: Wed 16 Aug 2023 10:22:47 AM EDT
+
+Version=2.6.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.5 to version 2.6.6
+
+----------------------------------------------------------------
+
+Date: Thu 09 Nov 2023 11:32:34 PM EST
+
+Version=2.6.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.6 to version 2.6.7
+
+----------------------------------------------------------------
+
+Date: Sun 19 Nov 2023 02:05:57 PM EST
+
+Version=2.6.8
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.7 to version 2.6.8
+
+----------------------------------------------------------------
+
+Date: Tue 13 Feb 2024 10:04:21 AM EST
+
+Version=2.6.9
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.8 to version 2.6.9
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=2.6.12
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.9 to version 2.6.12
+
+----------------------------------------------------------------
+
+Date: Thu 16 Jan 2025 10:41:20 AM EST
+
+Version=2.6.13
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.12 to version 2.6.13
+
+----------------------------------------------------------------
+
+Date: Thu 03 Apr 2025 09:36:59 AM EDT
+
+Version=2.6.14
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.13 to version 2.6.14
+
+----------------------------------------------------------------
+
+Date: Wed 24 Sep 2025 12:02:45 PM EDT
+
+Version=2.6.15
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.14 to version 2.6.15
+
+----------------------------------------------------------------
+
+Date: Tue 18 Nov 2025 03:54:50 AM EST
+
+Version=2.6.16
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.15 to version 2.6.16
+
+----------------------------------------------------------------
+
+Date: Mon 01 Dec 2025 12:05:59 PM EST
+
+Version=2.6.17
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.16 to version 2.6.17
+
+----------------------------------------------------------------
+
+Date: Wed 11 Feb 2026 06:37:42 AM EST
+
+Version=2.6.19
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.17 to version 2.6.19
+
+----------------------------------------------------------------
+
+Date: Sat 14 Feb 2026 05:47:41 PM EST
+
+Version=2.7.0
+Release=1
+
+Synopsis:
+Upgraded from version 2.6.19 to version 2.7.0
+
+----------------------------------------------------------------
+
+Date: Wed 01 Apr 2026 02:21:54 PM EDT
+
+Version=2.7.1
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.0 to version 2.7.1
+
+----------------------------------------------------------------
+
+Date: Fri 24 Apr 2026 04:48:15 PM EDT
+
+Version=2.7.2
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.1 to version 2.7.2
+
+----------------------------------------------------------------
+
+Date: Fri 22 May 2026 08:59:31 AM EDT
+
+Version=2.7.4
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.2 to version 2.7.4
+
+----------------------------------------------------------------
+
+Date: Fri 03 Jul 2026 11:15:08 PM EDT
+
+Version=2.7.5
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.4 to version 2.7.5
+
+----------------------------------------------------------------
+
+Date: Fri 07 Aug 2026 06:27:48 PM EDT
+
+Version=2.7.6
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.5 to version 2.7.6
+
+----------------------------------------------------------------
+
+Date: Wed 09 Sep 2026 02:48:51 PM EDT
+
+Version=2.7.7
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.6 to version 2.7.7
+
+----------------------------------------------------------------
+
+Date: Thu 08 Oct 2026 10:01:48 PM EDT
+
+Version=2.7.8
+Release=1
+
+Synopsis:
+Upgraded from version 2.7.7 to version 2.7.8

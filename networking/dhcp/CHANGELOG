@@ -1,0 +1,19 @@
+Date: Sat 05 Jun 2021 01:14:37 PM EDT
+
+name=dhcp
+version=4.4.2-p1
+release=1
+
+Synopsis:
+Added Changelog to package
+Upgraded from version 4.4.2 to version 4.4.2-p1
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 02:45:59 AM EDT 2026
+
+Version=4.4.3
+Release=1
+
+Synopsis:
+Upgraded from version 4.4.2-P1 to version 4.4.3

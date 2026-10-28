@@ -1,0 +1,469 @@
+Date: Wed 20 Apr 2022 08:49:42 AM EDT
+
+bind
+Version=9.18.1
+Release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Wed 20 Apr 2022 09:17:02 AM EDT
+
+Version=9.19.0
+Release=1
+
+Synopsis:
+Upgraded from version 9.18.1 to version 9.19.0
+
+----------------------------------------------------------------
+
+Date: Fri 20 May 2022 06:33:19 PM EDT
+
+Version=9.19.1
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.0 to version 9.19.1
+
+----------------------------------------------------------------
+
+Date: Thu 16 Jun 2022 04:01:02 PM EDT
+
+Version=9.19.2
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.1 to version 9.19.2
+
+----------------------------------------------------------------
+
+Date: Thu 21 Jul 2022 10:25:11 AM EDT
+
+Version=9.19.3
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.2 to version 9.19.3
+
+----------------------------------------------------------------
+
+Date: Thu 18 Aug 2022 03:41:19 PM EDT
+
+Version=9.19.4
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.3 to version 9.19.4
+
+----------------------------------------------------------------
+
+Date: Wed 21 Sep 2022 04:41:34 PM EDT
+
+Version=9.19.5
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.4 to version 9.19.5
+
+----------------------------------------------------------------
+
+Date: Fri 21 Oct 2022 07:52:29 PM EDT
+
+Version=9.19.6
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.5 to version 9.19.6
+
+----------------------------------------------------------------
+
+Date: Wed 16 Nov 2022 05:56:18 PM EST
+
+Version=9.19.7
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.6 to version 9.19.7
+
+----------------------------------------------------------------
+
+Date: Thu 22 Dec 2022 04:29:33 AM EST
+
+Version=9.19.8
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.7 to version 9.19.8
+
+----------------------------------------------------------------
+
+Date: Wed 25 Jan 2023 04:25:52 PM EST
+
+Version=9.19.9
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.8 to version 9.19.9
+
+----------------------------------------------------------------
+
+Date: Sat 18 Feb 2023 07:22:10 PM EST
+
+Version=9.19.10
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.9 to version 9.19.10
+
+----------------------------------------------------------------
+
+Date: Wed 15 Mar 2023 04:09:43 PM EDT
+
+Version=9.19.11
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.10 to version 9.19.11
+
+----------------------------------------------------------------
+
+Date: Thu 20 Apr 2023 12:56:51 PM EDT
+
+Version=9.19.12
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.11 to version 9.19.12
+
+----------------------------------------------------------------
+
+Date: Wed 17 May 2023 07:06:19 PM EDT
+
+Version=9.19.13
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.12 to version 9.19.13
+
+----------------------------------------------------------------
+
+Date: Fri 23 Jun 2023 02:38:49 PM EDT
+
+Version=9.19.14
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.13 to version 9.19.14
+
+----------------------------------------------------------------
+
+Date: Wed 19 Jul 2023 08:27:18 PM EDT
+
+Version=9.19.15
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.14 to version 9.19.15
+
+----------------------------------------------------------------
+
+Date: Wed 16 Aug 2023 09:03:42 PM EDT
+
+Version=9.19.16
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.15 to version 9.19.16
+
+----------------------------------------------------------------
+
+Date: Tue 26 Sep 2023 10:33:32 AM EDT
+
+Version=9.19.17
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.16 to version 9.19.17
+
+----------------------------------------------------------------
+
+Date: Thu 16 Nov 2023 10:06:46 AM EST
+
+Version=9.19.18
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.17 to version 9.19.18
+
+----------------------------------------------------------------
+
+Date: Thu 21 Dec 2023 04:54:42 AM EST
+
+Version=9.19.19
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.18 to version 9.19.19
+
+----------------------------------------------------------------
+
+Date: Thu 15 Feb 2024 06:34:22 AM EST
+
+Version=9.19.21
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.19 to version 9.19.21
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=9.21.2
+Release=1
+
+Synopsis:
+Upgraded from version 9.19.21 to version 9.21.2
+
+----------------------------------------------------------------
+
+Date: Thu 12 Dec 2024 07:07:46 AM EST
+
+Version=9.21.3
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.2 to version 9.21.3
+
+----------------------------------------------------------------
+
+Date: Mon 03 Feb 2025 07:16:02 AM EST
+
+Version=9.21.4
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.3 to version 9.21.4
+
+----------------------------------------------------------------
+
+Date: Thu 20 Feb 2025 10:23:59 AM EST
+
+Version=9.21.5
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.4 to version 9.21.5
+
+----------------------------------------------------------------
+
+Date: Thu 20 Mar 2025 08:53:48 AM EDT
+
+Version=9.21.6
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.5 to version 9.21.6
+
+----------------------------------------------------------------
+
+Date: Sat 19 Apr 2025 04:02:54 PM EDT
+
+Version=9.21.7
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.6 to version 9.21.7
+
+----------------------------------------------------------------
+
+Date: Wed 28 May 2025 12:13:23 PM EDT
+
+Version=9.21.8
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.7 to version 9.21.8
+
+----------------------------------------------------------------
+
+Date: Mon 23 Jun 2025 01:25:44 PM EDT
+
+Version=9.21.9
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.8 to version 9.21.9
+
+----------------------------------------------------------------
+
+Date: Thu 17 Jul 2025 10:43:32 AM EDT
+
+Version=9.21.10
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.9 to version 9.21.10
+
+----------------------------------------------------------------
+
+Date: Mon 25 Aug 2025 08:19:49 AM EDT
+
+Version=9.21.11
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.10 to version 9.21.11
+
+----------------------------------------------------------------
+
+Date: Sun 14 Sep 2025 11:35:18 AM EDT
+
+Version=9.21.12
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.11 to version 9.21.12
+
+----------------------------------------------------------------
+
+Date: Fri 31 Oct 2025 11:41:01 AM EDT
+
+Version=9.21.14
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.12 to version 9.21.14
+
+----------------------------------------------------------------
+
+Date: Sun 23 Nov 2025 08:29:47 AM EST
+
+Version=9.21.15
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.14 to version 9.21.15
+
+----------------------------------------------------------------
+
+Date: Mon 22 Dec 2025 10:00:05 AM EST
+
+Version=9.21.16
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.15 to version 9.21.16
+
+----------------------------------------------------------------
+
+Date: Sun 25 Jan 2026 11:51:14 AM EST
+
+Version=9.21.17
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.16 to version 9.21.17
+
+----------------------------------------------------------------
+
+Date: Mon 23 Feb 2026 06:31:00 PM EST
+
+Version=9.21.18
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.17 to version 9.21.18
+
+----------------------------------------------------------------
+
+Date: Sat 07 Mar 2026 01:45:07 AM EST
+
+Version=9.21.19
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.18 to version 9.21.19
+
+----------------------------------------------------------------
+
+Date: Tue 31 Mar 2026 12:10:30 PM EDT
+
+Version=9.21.20
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.19 to version 9.21.20
+
+----------------------------------------------------------------
+
+Date: Sun 12 Apr 2026 12:58:40 PM EDT
+
+Version=9.21.21
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.20 to version 9.21.21
+
+----------------------------------------------------------------
+
+Date: Fri 22 May 2026 08:59:31 AM EDT
+
+Version=9.21.22
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.21 to version 9.21.22
+
+----------------------------------------------------------------
+
+Date: Sat 20 Jun 2026 07:07:27 PM EDT
+
+Version=9.21.23
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.22 to version 9.21.23
+
+----------------------------------------------------------------
+
+Date: Thu 30 Jul 2026 04:03:34 AM EDT
+
+Version=9.21.24
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.23 to version 9.21.24
+
+----------------------------------------------------------------
+
+Date: Sat 22 Aug 2026 06:54:54 PM EDT
+
+Version=9.21.25
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.24 to version 9.21.25
+
+----------------------------------------------------------------
+
+Date: Wed 23 Sep 2026 08:20:45 PM EDT
+
+Version=9.21.26
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.25 to version 9.21.26
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 02:45:59 AM EDT 2026
+
+Version=9.21.27
+Release=1
+
+Synopsis:
+Upgraded from version 9.21.26 to version 9.21.27

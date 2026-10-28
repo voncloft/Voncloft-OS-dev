@@ -1,0 +1,99 @@
+Date: Sun 08 Aug 2021 09:34:10 AM EDT
+
+name=nmap
+version=7.92
+release=1
+
+Synopsis:
+Added Changelog to package
+Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Sat 03 Sep 2022 11:13:51 AM EDT
+
+Version=7.93
+Release=1
+
+Synopsis:
+Upgraded from version 7.92 to version 7.93
+
+----------------------------------------------------------------
+
+Date: Mon 22 May 2023 08:08:11 AM EDT
+
+Version=7.94
+Release=1
+
+Synopsis:
+Upgraded from version 7.93 to version 7.94
+
+----------------------------------------------------------------
+
+Date: Wed 16 Oct 2024 11:35:28 AM EDT
+
+Version=7.95
+Release=1
+
+Synopsis:
+Upgraded from version 7.94 to version 7.95
+
+----------------------------------------------------------------
+
+Date: Mon 12 May 2025 09:02:42 AM EDT
+
+Version=7.96
+Release=1
+
+Synopsis:
+Upgraded from version 7.95 to version 7.96
+
+----------------------------------------------------------------
+
+Date: Wed 14 May 2025 05:33:06 AM EDT
+
+Version=7.97
+Release=1
+
+Synopsis:
+Upgraded from version 7.96 to version 7.97
+
+----------------------------------------------------------------
+
+Date: Thu 14 Aug 2025 09:16:47 AM EDT
+
+Version=7.98
+Release=1
+
+Synopsis:
+Upgraded from version 7.97 to version 7.98
+
+----------------------------------------------------------------
+
+Date: Tue 31 Mar 2026 12:10:30 PM EDT
+
+Version=7.99
+Release=1
+
+Synopsis:
+Upgraded from version 7.98 to version 7.99
+
+----------------------------------------------------------------
+
+Date: Fri 07 Aug 2026 06:27:48 PM EDT
+
+Version=7.991
+Release=1
+
+Synopsis:
+Upgraded from version 7.99 to version 7.991
+
+----------------------------------------------------------------
+
+Date: Wed Oct 28 02:45:59 AM EDT 2026
+
+Version=7.993
+Release=1
+
+Synopsis:
+Upgraded from version 7.991 to version 7.993

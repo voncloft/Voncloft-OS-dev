@@ -4,12 +4,13 @@
 name=update-repo
 version=20261027
 release=1
-source="update-repo changelog"
+source="update-repo changelog update-rep"
 
 build() {
     install -Dm755 "$SRC/update-repo" "$PKG/usr/bin/update-repo"
     install -Dm755 "$SRC/changelog" "$PKG/usr/libexec/update-repo/changelog"
-
+    install -Dm755 "$SRC/update-rep" "$PKG/usr/bin/update-rep"
+    
     # All directories are staged in the package, never created on the host.
     local logroot="$PKG/sources/Voncloft-OS-dev/logs"
     local logdate

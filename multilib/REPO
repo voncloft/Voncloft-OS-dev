@@ -43,6 +43,7 @@ d:libxext-32
 d:libice-32
 d:readline-32
 d:gstreamer-32
+d:pcre-32
 d:bzip2-32
 d:freetype2-32
 d:p11-kit-32
@@ -277,6 +278,7 @@ f:38724c23585682797bc8762d3991ab35:readline-32/override
 f:9afa707689571d328dc9682a92ec722a:gstreamer-32/CHANGELOG
 f:ee21a7073608f977a1634990b55d2aa3:gstreamer-32/spkgbuild
 f:0178ea1bb4f67d9326bafef037e7dfe5:gstreamer-32/override
+f:a92888a64b84bb2f810e7971c06ab82b:pcre-32/spkgbuild
 f:39fbf9d789f91f9ad2998ec4cbf840e9:bzip2-32/spkgbuild
 f:164bf0088a9f44b93075408e282dff44:bzip2-32/override
 f:e1e3e08c8e3a3bd3eed39eb05afa46a7:freetype2-32/.pkgfiles

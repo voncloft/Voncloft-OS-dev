@@ -338,3 +338,25 @@ sed -i -e "s/version=6.8.1/version=6.8.2/g" qt/layer-shell-qt/spkgbuild
 bash /usr/libexec/update-repo/changelog qt/layer-shell-qt/spkgbuild Upgraded\ from\ version\ 6.8.1\ to\ version\ 6.8.2
 sed -i -e "s/version=12.3.3/version=13.2.0/g" server/mariadb/spkgbuild
 bash /usr/libexec/update-repo/changelog server/mariadb/spkgbuild Upgraded\ from\ version\ 12.3.3\ to\ version\ 13.2.0
+sed -i -e "s/version=4.0.15.2941/version=6.4.4.10685/g" beta/sonaar/spkgbuild
+bash /usr/libexec/update-repo/changelog beta/sonaar/spkgbuild Upgraded\ from\ version\ 4.0.15.2941\ to\ version\ 6.4.4.10685
+sed -i -e "s/version=0.4.0/version=0.4.5/g" gnome/gnome-autoar/spkgbuild
+bash /usr/libexec/update-repo/changelog gnome/gnome-autoar/spkgbuild Upgraded\ from\ version\ 0.4.0\ to\ version\ 0.4.5
+sed -i -e "s,https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz,git+https://gitlab.gnome.org/GNOME/gnome-bluetooth.git#commit=8c980c24289cb08e03f72915970ce1bd6767e45a,g" gnome/gnome-bluetooth/spkgbuild
+sed -i -e "s/version=3.34.2/version=3.34.5/g" gnome/gnome-bluetooth/spkgbuild
+bash /usr/libexec/update-repo/changelog gnome/gnome-bluetooth/spkgbuild Upgraded\ from\ version\ 3.34.2\ to\ version\ 3.34.5
+sed -i -e "s,https://ftp.gnome.org/pub/gnome/sources/gnome-keyring/${version%.*}/$name-$version.tar.xz,git+https://gitlab.gnome.org/GNOME/gnome-keyring.git#commit=8c980c24289cb08e03f72915970ce1bd6767e45a,g" gnome/gnome-keyring/spkgbuild
+sed -i -e "s/version=40.0/version=42.1/g" gnome/gnome-keyring/spkgbuild
+bash /usr/libexec/update-repo/changelog gnome/gnome-keyring/spkgbuild Upgraded\ from\ version\ 40.0\ to\ version\ 42.1
+sed -i -e "s/version=3.40.0/version=3.40.1/g" gnome/gnome-online-accounts/spkgbuild
+bash /usr/libexec/update-repo/changelog gnome/gnome-online-accounts/spkgbuild Upgraded\ from\ version\ 3.40.0\ to\ version\ 3.40.1
+sed -i -e "s/version=9.21.26/version=9.21.27/g" networking/bind/spkgbuild
+bash /usr/libexec/update-repo/changelog networking/bind/spkgbuild Upgraded\ from\ version\ 9.21.26\ to\ version\ 9.21.27
+sed -i -e "s/version=4.4.2-P1/version=4.4.3/g" networking/dhcp/spkgbuild
+bash /usr/libexec/update-repo/changelog networking/dhcp/spkgbuild Upgraded\ from\ version\ 4.4.2-P1\ to\ version\ 4.4.3
+sed -i -e "s/version=7.991/version=7.993/g" networking/nmap/spkgbuild
+bash /usr/libexec/update-repo/changelog networking/nmap/spkgbuild Upgraded\ from\ version\ 7.991\ to\ version\ 7.993
+sed -i -e "s/version=5.1.1/version=5.1.3/g" python/python-mt-940/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-mt-940/spkgbuild Upgraded\ from\ version\ 5.1.1\ to\ version\ 5.1.3
+sed -i -e "s/version=1.18.6/version=1.18.7/g" python/python-pipx/spkgbuild
+bash /usr/libexec/update-repo/changelog python/python-pipx/spkgbuild Upgraded\ from\ version\ 1.18.6\ to\ version\ 1.18.7

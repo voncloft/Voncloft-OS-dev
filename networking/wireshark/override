@@ -1,0 +1,34 @@
+# Only report uversion; update-repo owns the version= edit.
+source=https://www.wireshark.org/download/src/all-versions/
+url=$source
+
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - <<'PY'
+from html.parser import HTMLParser
+from pathlib import Path
+import re
+from urllib.parse import unquote, urlsplit
+
+versions = set()
+class Listing(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        if tag != 'a':
+            return
+        for key, value in attrs:
+            if key == 'href' and value:
+                name = unquote(urlsplit(value).path).rstrip('/').rsplit('/', 1)[-1]
+                match = re.fullmatch('wireshark-([0-9]+(?:\\.[0-9]+)+)\\.tar\\.xz', name)
+                if match:
+                    versions.add(match[1])
+
+try:
+    Listing().feed(Path('index.html').read_text())
+    if versions:
+        print(max(versions, key=lambda v: tuple(map(int, v.split('.')))))
+except (OSError, UnicodeError):
+    pass
+PY
+    )
+}
