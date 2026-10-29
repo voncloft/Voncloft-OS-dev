@@ -1,16 +1,40 @@
-# description : flashcard app
-# depends : 
+# description : Spaced-repetition flashcards for studying and reviewing text, images, and audio
+# depends : alsa-lib bzip2 dbus fontconfig freetype2 glib lame libdrm libglvnd libx11 libxcb libxcomposite libxcursor libxdamage libxext libxfixes libxi libxkbcommon libxkbfile libxrandr libxrender libxtst mesa mitkrb mpv nspr nss shared-mime-info udev wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm zlib zstd
 
 name=anki
-version=test
+version=26.09.3
 release=1
-
-source="https://github.com/ankitects/${name}/releases/download/$version/${name}-$version-linux-qt6.tar.zst"
+source="https://github.com/ankitects/$name/releases/download/$version/$name-$version-linux-x86_64.tar.zst"
+noextract="$name-$version-linux-x86_64.tar.zst"
+NO_STRIP=yes
 
 build() {
-	tar xaf $SRC/anki-$version-linux-qt6.tar.zst
-	cd anki-$version-linux-qt6
-	PREFIX=$PKG/usr ./install.sh
-	rm $PKG/usr/bin/anki
-	ln -sfv /usr/share/anki/anki "$PKG"/usr/bin/anki
+    # Scratchpkg does not automatically unpack .tar.zst sources.
+    tar --zstd -xf "$SRC/$name-$version-linux-x86_64.tar.zst" -C "$SRC"
+
+    # Upstream normalizes 26.09.3 to 26.9.3 in the extracted directory name.
+    set -- "$SRC"/"$name"-*-linux-x86_64*/
+    if [ "$#" -ne 1 ] || [ ! -x "$1/anki" ]; then
+        printf '%s\n' 'Cannot locate the extracted Anki Linux bundle.' >&2
+        return 1
+    fi
+    cd "$1"
+
+    # Stage the bundle directly: install.sh also changes the live system.
+    install -dm755 "$PKG/usr/share/$name" "$PKG/usr/bin"
+    cp -a app app_packages python anki LICENSE README.md "$PKG/usr/share/$name/"
+    ln -s "../share/$name/anki" "$PKG/usr/bin/$name"
+
+    install -Dm644 anki.desktop "$PKG/usr/share/applications/$name.desktop"
+    sed -i 's|^Exec=.*|Exec=/usr/bin/anki %f|; s|^TryExec=.*|TryExec=/usr/bin/anki|' \
+        "$PKG/usr/share/applications/$name.desktop"
+    install -Dm644 anki.png "$PKG/usr/share/pixmaps/$name.png"
+    install -Dm644 anki.xpm "$PKG/usr/share/pixmaps/$name.xpm"
+    install -Dm644 anki.1 "$PKG/usr/share/man/man1/$name.1"
+    install -Dm644 anki.xml "$PKG/usr/share/mime/packages/$name.xml"
+
+    # Bundled FFmpeg expects Debian's bzip2 SONAME; VonOS supplies libbz2.so.1.0.
+    # Keep this compatibility name private to Anki's bundled Qt libraries.
+    ln -s /lib/libbz2.so.1.0 \
+        "$PKG/usr/share/$name/app_packages/PyQt6/Qt6/lib/libbz2.so.1"
 }

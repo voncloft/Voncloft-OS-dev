@@ -1,0 +1,73 @@
+Date: 2026-10-29
+
+vpacman
+Version=4.3.3.git20210608062358.g7308733f711f9967820f8c7fda809311083625f0
+Release=1
+
+Synopsis:
+Read enabled repository paths from /etc/scratchpkg.repo instead of scanning a
+hardcoded repository root. Ignore comments and duplicate paths, reload config
+on refresh/search, and report unavailable repositories. Install only /usr/bin/VPacman.
+
+Date: 2026-10-29
+
+vpacman
+Version=4.3.2.git20210608062358.g7308733f711f9967820f8c7fda809311083625f0
+Release=2
+
+Synopsis:
+Install only /usr/bin/VPacman. Bundle and install its icon and desktop entry.
+Build the old commit with a compatibility patch; future CMake-based commits
+build directly. Read future upstream app versions from CMakeLists.txt.
+
+Date: 2026-10-29
+
+vpacman
+Version=4.3.1.git20210608062358.g7308733f711f9967820f8c7fda809311083625f0
+Release=1
+
+Synopsis:
+Build the pinned voncloft/VPacman GitHub source with Qt 6 instead of shipping
+an old binary. Install /usr/bin/VPacman, its lowercase alias, and a desktop
+launcher. Read /sources/Voncloft-OS-dev, correct selected package names,
+show command errors, and use Scratch's built-in outdated and upgrade commands.
+Add a commit-tracking override that only reports version= updates.
+
+Date: Thu 18 Mar 2021 08:50:34 AM EDT
+
+name=VPacman
+version=4.2
+release=3
+
+Synopsis:
+updated search function
+
+----------------------------------------------------------------
+
+Date: Thu Oct 29 02:24:41 AM EDT 2026
+
+Version=4.3.3.git20261029062356.g0dabbd632164ae475dfb81856049573a26f92a67
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.3.git20210608062358.g7308733f711f9967820f8c7fda809311083625f0 to version 4.3.3.git20261029062356.g0dabbd632164ae475dfb81856049573a26f92a67
+
+----------------------------------------------------------------
+
+Date: Thu Oct 29 02:41:38 AM EDT 2026
+
+Version=4.3.4.git20261029064121.gb27cc29f53ee3a078c5192daec40e08a66fe8def
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.3.git20261029062356.g0dabbd632164ae475dfb81856049573a26f92a67 to version 4.3.4.git20261029064121.gb27cc29f53ee3a078c5192daec40e08a66fe8def
+
+----------------------------------------------------------------
+
+Date: Thu Oct 29 03:05:20 AM EDT 2026
+
+Version=4.3.5.git20261029070502.g60e84a2a8cb9d9227fc02b652d383880a5ec8da2
+Release=1
+
+Synopsis:
+Upgraded from version 4.3.4.git20261029064121.gb27cc29f53ee3a078c5192daec40e08a66fe8def to version 4.3.5.git20261029070502.g60e84a2a8cb9d9227fc02b652d383880a5ec8da2

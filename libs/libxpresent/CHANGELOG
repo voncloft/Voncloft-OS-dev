@@ -1,3 +1,14 @@
+Date: 2026-10-29
+
+libxpresent
+Version=1.0.2
+Release=3
+
+Synopsis:
+Use the upstream libXpresent archive directory and its generated configure script; stage libraries under /usr/lib64.
+
+----------------------------------------------------------------
+
 Date: Tue Oct 27 06:29:45 AM EDT 2026
 
 libxpresent

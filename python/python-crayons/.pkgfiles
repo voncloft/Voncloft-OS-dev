@@ -1,0 +1,15 @@
+python-crayons-0.4.0-2
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/python3.13/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/crayons-0.4.0-py3.13.egg-info/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/crayons-0.4.0-py3.13.egg-info/dependency_links.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/crayons-0.4.0-py3.13.egg-info/PKG-INFO
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/crayons-0.4.0-py3.13.egg-info/requires.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/crayons-0.4.0-py3.13.egg-info/SOURCES.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/crayons-0.4.0-py3.13.egg-info/top_level.txt
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/crayons.py
+drwxr-xr-x root/root    usr/lib/python3.13/site-packages/__pycache__/
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/__pycache__/crayons.cpython-313.opt-1.pyc
+-rw-r--r-- root/root    usr/lib/python3.13/site-packages/__pycache__/crayons.cpython-313.pyc

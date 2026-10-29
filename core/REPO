@@ -11,7 +11,6 @@ d:linux-pam
 d:iucode-tool
 d:gnustep-base
 d:yaml-cpp
-d:VPacman
 d:vte3
 d:opera
 d:midori
@@ -547,11 +546,6 @@ f:937eb8d298481a1c73ce1e2bf2b93f00:gnustep-base/spkgbuild
 f:912e5d40ed293e3b8bb79cab7e1a97e8:gnustep-base/override
 f:1fed48c9de708a1cfc1cea23d192ba1a:yaml-cpp/CHANGELOG
 f:50b643d18545869686510f2484927ac1:yaml-cpp/spkgbuild
-f:1449edd9df34afeea499daf418d8ee8c:VPacman/.pkgfiles
-f:a1989fbee542d97dfa34534da86286b9:VPacman/VPacman
-f:293d76fbc4c3e9798b02448cce96a742:VPacman/CHANGELOG
-f:77969cf93d29fd19143a529293cd2069:VPacman/spkgbuild
-f:bc0eb9536e58d3d6fe6343eb194ede82:VPacman/override
 f:7ac01c464a20b819f83658dc47184430:vte3/fix-W_EXITCODE.patch
 f:4ddfd8a77bd83c73c2ffc1fe133f540c:vte3/CHANGELOG
 f:0d8184845cc70f9bf2524f7e3f6ab38d:vte3/spkgbuild
@@ -1806,9 +1800,10 @@ f:4d2277642683b4749018e4ab7f7abf97:findutils/spkgbuild
 f:8ca7e1a9cc2e705e1120644f019e8cac:gawk/.pkgfiles
 f:9622363425178c9c9d20ef67becc5c7a:gawk/CHANGELOG
 f:89c0bfda1305001ab8972d8216e1641d:gawk/spkgbuild
-f:3c4cbfe33c03b4c484b53254e43d386e:mpv/.pkgfiles
-f:6c8617f743a0413febcaa3fe56c14e34:mpv/CHANGELOG
-f:fc45a5b5b36845f1864bfe8c7c64fe38:mpv/spkgbuild
+f:2f20fdc6e7907347f9ce0b2ca9108017:mpv/.pkgfiles
+f:52368f5454815eae2ef8d9b22441a240:mpv/CHANGELOG
+f:972c8a3dd422dccec229fe14c3fd9c7d:mpv/spkgbuild
+f:554a3622330693b4e5a81d71d169e5f6:mpv/.checksums
 f:bb8cb7127106c869de2bffe65b6db1b2:vte2/alt-key.patch
 f:2bb7e10be782842464e3bcd49df00f04:vte2/spkgbuild
 f:5c0cca5e0aaa7b3017086a358eddffb1:vte2/CVE-2012-2738.patch

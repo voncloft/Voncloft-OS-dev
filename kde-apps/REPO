@@ -135,6 +135,7 @@ d:kipi-plugins
 d:kqtquickcharts
 d:kontact
 d:kreversi
+d:vpacman
 d:hana
 d:gcompris
 d:zanshin
@@ -538,12 +539,12 @@ f:e3ec811f12a6d7f6633fa0e202ee617e:kshisen/CHANGELOG
 f:944866c0b7e940fd626580b3ce313e9b:kshisen/spkgbuild
 f:7198491f5a70499c1f675b297ed11354:optiimage/spkgbuild
 f:e8befe5d142b44fe0961930d179302a6:optiimage/override
-f:d6c4f965058087609f7362e65560980a:smarthome/.pkgfiles
-f:c8ee0f9488b86662f75ac90fbc0abcc9:smarthome/smarthome-broadlink.patch
-f:7de4772a279ee1e95222795524eefc17:smarthome/CHANGELOG
-f:3ed347199803dae79a0dc1f732a23324:smarthome/spkgbuild
+f:be4cc4b3a5cb15f6422a94c3cdcdd1f6:smarthome/.pkgfiles
+f:ae348dbe86cb6f16064c771cfdbee6cb:smarthome/unified-diagnostics.patch
+f:a6305e21f1d6e02a0fd12df0dd9f98ec:smarthome/CHANGELOG
+f:eebf6f75b895e41993bf28cbaa0f4671:smarthome/spkgbuild
 f:24d6534e56fa61f9dfb0f46d7088e0c5:smarthome/override
-f:bbd8f9179cacde69f910d9932921cb45:smarthome/.checksums
+f:0717f771e977a5da7f018670e536e29e:smarthome/.checksums
 f:ce1984fbde820672889b835d1fb2f0a5:calindori/spkgbuild
 f:2af63788befbeb6af2dbc30296cfc9b4:krecorder/spkgbuild
 f:327c0d32fad4b7d66d9e6b0e29308061:kgeography/CHANGELOG
@@ -617,6 +618,12 @@ f:0853e2f121ed030d43ff9ada6eb4efce:kontact/CHANGELOG
 f:de80e5a0bdecd6499ef18831cda7b59f:kontact/spkgbuild
 f:cb632f21b67c0016054c76333497eb64:kreversi/CHANGELOG
 f:adb53c0af69c45b0660f6bde4887912e:kreversi/spkgbuild
+f:96367b7fb6050d48eb9beaa16ff7cf15:vpacman/.pkgfiles
+f:4dbe48be3964a9dac39b0836feb295ee:vpacman/vpacman-qt6.patch
+f:160e7e3bf1fee7caf35fa4619096181e:vpacman/CHANGELOG
+f:ff1039cce0b3dcfe50c91162007408a9:vpacman/spkgbuild
+f:7e1bce611361ca78e9ac24d3f16a0e85:vpacman/override
+f:9266f711e14593511b5fde3a3e555ab7:vpacman/.checksums
 f:ef32019345804ac827d0c42d39289da7:hana/spkgbuild
 f:8e1f9b70fc471545f05c2b411d75ef38:gcompris/spkgbuild
 f:c9dd7b2407c863ec8f1ff72ed98b1f8e:gcompris/override
@@ -733,6 +740,7 @@ f:df2a2fa85b895e041e262e951b115620:libkleo/CHANGELOG
 f:098265abbd13741c371a56df67e50007:libkleo/spkgbuild
 f:b08bd0d66ced9651786772e3ab95a1b4:libkomparediff2/CHANGELOG
 f:4f0710361c6bf6aa611989421982e6e7:libkomparediff2/spkgbuild
+f:8945f9cbc3ea3256554b04ea96e89c04:kde-inotify-survey/.pkgfiles
 f:deba82b926d163fe164f2412a54aff58:kde-inotify-survey/CHANGELOG
 f:3461b4ea4ca083f99ef8b945967b1e7d:kde-inotify-survey/spkgbuild
 f:af33d06eee0141e2fd4941fab0c6551b:elisa/CHANGELOG
@@ -1024,6 +1032,7 @@ f:b59b809dc544181d4f8eb32fd8a8d19b:ksanecore/spkgbuild
 f:9b3a49c92f9bccd21c1a692728b57816:calligraplan/spkgbuild
 f:066d7e960c1749999231ba450ed12614:kwave/CHANGELOG
 f:38cf946b7a391b12b24bf8c9f275cbe4:kwave/spkgbuild
+f:2316041323ed94a49e0fe4644668e9e5:kasts/.pkgfiles
 f:0ac775315ca2a56da4158408cf088042:kasts/CHANGELOG
 f:d60a11e5ff76969990ae1332f9b399b4:kasts/spkgbuild
 f:f67a8bf28a9e34fabf41d3b29e32af75:kweathercore/spkgbuild

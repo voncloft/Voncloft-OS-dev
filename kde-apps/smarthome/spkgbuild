@@ -2,18 +2,22 @@
 # depends : inetutils kde-deps-installer pulseaudio python-broadlink qt6
 
 name=smarthome
-version=0.1.git20260314.g12d028126b3deff57ee7090e0eb1332000761505
-release=3
+version=0.1.3.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76
+release=2
 _commit=${version##*.g}
 _name=Smarthome
 source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz
-        smarthome-broadlink.patch"
+        unified-diagnostics.patch"
 
 build() {
     cd "Smarthome-$_commit"
     # Discard any build directory committed by upstream before configuring.
     rm -rf build
-    patch -Np1 -i "$SRC/smarthome-broadlink.patch"
+    # Skip the compatibility patch once the unified view is in the GitHub source.
+    if grep -q 'createDiagnosticsWidget' infraredpanel.h; then
+        patch -Np1 -i "$SRC/unified-diagnostics.patch"
+    fi
     plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
     DESTDIR="$PKG" cmake --install build
+    sed -i 's|^Exec=.*|Exec=/usr/bin/Lights|' "$PKG/usr/share/applications/lights.desktop"
 }

@@ -1,3 +1,17 @@
+Date: 2026-10-29
+
+anki
+Version=26.09.3
+Release=1
+
+Synopsis:
+Replace version=test and the obsolete qt6 archive URL with the current official
+x86_64 release. Handle the normalized extracted directory name and stage the
+bundle, launcher, icons, man page, and MIME types without running the upstream
+system installer. Declare runtime dependencies and provide Anki's private
+bzip2 library compatibility link. Track stable GitHub releases in the override;
+only update-repo changes version=.
+
 Date: Tue 01 Aug 2023 07:22:32 AM EDT
 
 anki

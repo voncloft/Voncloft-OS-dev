@@ -1,0 +1,407 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.16)
+-project(Lights VERSION 0.1.2 LANGUAGES CXX)
++project(Lights VERSION 0.1.3 LANGUAGES CXX)
+ 
+ set(CMAKE_AUTOUIC ON)
+ set(CMAKE_AUTOMOC ON)
+@@ -62,5 +62,10 @@
+     target_link_libraries(infraredpanel_test PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network Qt${QT_VERSION_MAJOR}::Test)
+     add_test(NAME infrared_panel COMMAND infraredpanel_test)
+     set_tests_properties(infrared_panel PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
++    add_executable(diagnostics_test tests/diagnostics_test.cpp mainwindow.cpp mainwindow.h mainwindow.ui infraredpanel.cpp infraredpanel.h broadlink.qrc resources.qrc)
++    target_include_directories(diagnostics_test PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
++    target_link_libraries(diagnostics_test PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network Qt${QT_VERSION_MAJOR}::Multimedia Qt${QT_VERSION_MAJOR}::Test)
++    add_test(NAME unified_diagnostics COMMAND diagnostics_test)
++    set_tests_properties(unified_diagnostics PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+     add_test(NAME broadlink_bridge COMMAND ${Python3_EXECUTABLE} -m unittest discover -s ${CMAKE_CURRENT_SOURCE_DIR}/tests -p test_broadlink_bridge.py)
+ endif()
+--- a/README.md
++++ b/README.md
+@@ -30,6 +30,13 @@
+ 
+ ## Changes
+ 
++### 0.1.3 — 2026-10-29
++
++- Show infrared commands, status, and errors in the original Diagnostics list,
++  mixed with light events in the same recent-results history (newest first).
++- Remove the separate infrared log box; retain the latest 500 combined events
++  and preserve the list when tabs or light verification refresh.
++
+ ### 0.1.2 — 2026-10-29
+ 
+ - Added a scrolling infrared activity log under Diagnostics, alongside light verification.
+--- a/mainwindow.cpp
++++ b/mainwindow.cpp
+@@ -15,6 +15,7 @@
+ #include <QSlider>
+ #include <QColorDialog>
+ #include <QScrollArea>
++#include <QScrollBar>
+ #include <QVBoxLayout>
+ #include <QHBoxLayout>
+ #include <QInputDialog>
+@@ -1582,18 +1583,24 @@
+     diagnosticsTab = w;
+     QVBoxLayout *l = new QVBoxLayout(w);
+ 
+-    l->addWidget(new QLabel("<h2>Routine Verification Diagnostics</h2>"));
++    l->addWidget(new QLabel("<h2>Diagnostics</h2>"));
+ 
+     routineVerifySummaryLabel = new QLabel("No active routine verification checks.");
+     routineVerifySummaryLabel->setWordWrap(true);
+     l->addWidget(routineVerifySummaryLabel);
+ 
+     routineVerifyList = new QListWidget;
++    routineVerifyList->setObjectName("routineVerifyList");
++    routineVerifyList->setAccessibleName("Lights and infrared diagnostics");
+     routineVerifyList->setSelectionMode(QAbstractItemView::NoSelection);
+     routineVerifyList->setFocusPolicy(Qt::NoFocus);
+     routineVerifyList->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+     l->addWidget(routineVerifyList, 1);
+-    l->addWidget(infraredPanel->createDiagnosticsWidget(w), 1);
++    // IR shares the original light verification list and its bounded history.
++    for (const QString &entry : infraredPanel->diagnostics())
++        appendDiagnosticEntry(entry);
++    connect(infraredPanel, &InfraredPanel::diagnosticAdded,
++            this, &MainWindow::appendDiagnosticEntry);
+     refreshRoutineVerifyDiagnostics();
+     return w;
+ }
+@@ -1908,6 +1915,7 @@
+                 .arg(routineVerifyTargets.size())
+                 .arg(routineVerifyRecentEntries.size()));
+ 
++    const int previousScroll = routineVerifyList->verticalScrollBar()->value();
+     routineVerifyList->clear();
+ 
+     auto currentStateText = [](const RoutineVerifyTarget &t) -> QString {
+@@ -1947,6 +1955,7 @@
+         for (const QString &line : routineVerifyRecentEntries)
+             routineVerifyList->addItem(line);
+     }
++    routineVerifyList->verticalScrollBar()->setValue(previousScroll);
+ }
+ 
+ QString MainWindow::lightLabelForMac(const QString &mac) const
+@@ -1970,7 +1979,12 @@
+                              .arg(QTime::currentTime().toString("HH:mm:ss"))
+                              .arg(tag)
+                              .arg(entry);
+-    routineVerifyRecentEntries.prepend(line);
++    appendDiagnosticEntry(line);
++}
++
++void MainWindow::appendDiagnosticEntry(const QString &entry)
++{
++    routineVerifyRecentEntries.prepend(entry);
+     while (routineVerifyRecentEntries.size() > 500)
+         routineVerifyRecentEntries.removeLast();
+     refreshRoutineVerifyDiagnostics();
+--- a/mainwindow.h
++++ b/mainwindow.h
+@@ -78,6 +78,7 @@
+ class MainWindow : public QMainWindow
+ {
+     Q_OBJECT
++    friend class DiagnosticsTest;
+ 
+ public:
+     explicit MainWindow(QWidget *parent = nullptr);
+@@ -132,6 +133,7 @@
+     void saveRoutines() const;
+     void refreshRoutineList();
+     void refreshRoutineVerifyDiagnostics();
++    void appendDiagnosticEntry(const QString &entry);
+     QString lightLabelForMac(const QString &mac) const;
+     void addRoutineVerifyRecent(const QString &sourceTag, const QString &entry);
+     bool openRoutineEditor(Routine &routine, const QString &title);
+--- a/infraredpanel.cpp
++++ b/infraredpanel.cpp
+@@ -12,8 +12,6 @@
+ #include <QLineEdit>
+ #include <QMessageBox>
+ #include <QPushButton>
+-#include <QPlainTextEdit>
+-#include <QScrollBar>
+ #include <QRegularExpression>
+ #include <QSaveFile>
+ #include <QSet>
+@@ -192,43 +190,6 @@
+     emit diagnosticAdded(entry);
+ }
+ 
+-QWidget *InfraredPanel::createDiagnosticsWidget(QWidget *parent)
+-{
+-    auto *widget = new QWidget(parent);
+-    auto *layout = new QVBoxLayout(widget);
+-    layout->setContentsMargins(0, 0, 0, 0);
+-    auto *heading = new QHBoxLayout;
+-    heading->addWidget(new QLabel("<h2>Infrared Activity</h2>"));
+-    heading->addStretch();
+-    auto *clear = new QPushButton("Clear log");
+-    clear->setObjectName("clearInfraredDiagnostics");
+-    heading->addWidget(clear);
+-    layout->addLayout(heading);
+-    auto *log = new QPlainTextEdit;
+-    log->setObjectName("infraredDiagnostics");
+-    log->setAccessibleName("Infrared activity log");
+-    log->setReadOnly(true);
+-    log->setMaximumBlockCount(500);
+-    log->setMinimumHeight(160);
+-    log->setPlaceholderText("Infrared commands, status updates, and errors appear here. Latest 500 messages, this session.");
+-    log->setPlainText(diagnosticHistory.join('\n'));
+-    log->verticalScrollBar()->setValue(log->verticalScrollBar()->maximum());
+-    layout->addWidget(log);
+-    connect(this, &InfraredPanel::diagnosticAdded, log, [log](const QString &entry) {
+-        auto *scroll = log->verticalScrollBar();
+-        const int previous = scroll->value();
+-        const bool follow = previous >= scroll->maximum();
+-        log->appendPlainText(entry);
+-        scroll->setValue(follow ? scroll->maximum() : previous);
+-    });
+-    connect(this, &InfraredPanel::diagnosticsCleared, log, &QPlainTextEdit::clear);
+-    connect(clear, &QPushButton::clicked, this, [this] {
+-        diagnosticHistory.clear();
+-        emit diagnosticsCleared();
+-    });
+-    return widget;
+-}
+-
+ void InfraredPanel::load()
+ {
+     QFile file(settingsFile);
+--- a/infraredpanel.h
++++ b/infraredpanel.h
+@@ -20,11 +20,10 @@
+     explicit InfraredPanel(const QString &settingsFile, QWidget *parent = nullptr,
+                            const QString &helperOverride = QString());
+     ~InfraredPanel() override;
+-    QWidget *createDiagnosticsWidget(QWidget *parent = nullptr);
++    QStringList diagnostics() const { return diagnosticHistory; }
+ 
+ signals:
+     void diagnosticAdded(const QString &entry);
+-    void diagnosticsCleared();
+ 
+ private:
+     void load();
+--- a/tests/infraredpanel_test.cpp
++++ b/tests/infraredpanel_test.cpp
+@@ -5,8 +5,6 @@
+ #include <QLabel>
+ #include <QLineEdit>
+ #include <QPushButton>
+-#include <QPlainTextEdit>
+-#include <QScrollBar>
+ #include <QTemporaryDir>
+ #include <memory>
+ 
+@@ -149,18 +147,15 @@
+     }
+     void diagnosticsShowCommandTargetAndResult() {
+         InfraredPanel panel(file, nullptr, helper);
+-        std::unique_ptr<QWidget> view(panel.createDiagnosticsWidget());
+-        auto *log = view->findChild<QPlainTextEdit *>("infraredDiagnostics");
+-        QVERIFY(log); QVERIFY(log->isReadOnly());
+         combo(panel, "infraredHub")->setCurrentIndex(1);
+         button(panel, "testInfraredMenu")->click();
+-        QVERIFY(log->toPlainText().contains("Sending infrared command"));
+-        QVERIFY(log->toPlainText().contains("send / Projector room / 192.168.1.21 / Projector / Menu"));
+-        QTRY_VERIFY_WITH_TIMEOUT(log->toPlainText().contains("Sent Menu to Projector"), 5000);
+-        QVERIFY(log->toPlainText().contains("Check the device for its response"));
+-        QVERIFY(QRegularExpression("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} \\[IR\\]").match(log->toPlainText()).hasMatch());
+-        QVERIFY(!log->toPlainText().contains(menuCode));
+-        QVERIFY(!log->toPlainText().contains(powerCode));
++        QVERIFY(panel.diagnostics().join('\n').contains("Sending infrared command"));
++        QVERIFY(panel.diagnostics().join('\n').contains("send / Projector room / 192.168.1.21 / Projector / Menu"));
++        QTRY_VERIFY_WITH_TIMEOUT(panel.diagnostics().join('\n').contains("Sent Menu to Projector"), 5000);
++        QVERIFY(panel.diagnostics().join('\n').contains("Check the device for its response"));
++        QVERIFY(QRegularExpression("^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} \\[IR\\]").match(panel.diagnostics().join('\n')).hasMatch());
++        QVERIFY(!panel.diagnostics().join('\n').contains(menuCode));
++        QVERIFY(!panel.diagnostics().join('\n').contains(powerCode));
+     }
+     void diagnosticsCaptureProgressAndErrors() {
+         write(helper, R"PY(import json, sys
+@@ -170,11 +165,9 @@
+ print(json.dumps({'event': 'result', 'ok': False, 'message': 'Hub authentication failed'}), flush=True)
+ )PY");
+         InfraredPanel panel(file, nullptr, helper);
+-        std::unique_ptr<QWidget> view(panel.createDiagnosticsWidget());
+-        auto *log = view->findChild<QPlainTextEdit *>("infraredDiagnostics");
+         button(panel, "learnInfrared")->click();
+         QTRY_VERIFY_WITH_TIMEOUT(button(panel, "learnInfrared")->isEnabled(), 5000);
+-        const auto text = log->toPlainText();
++        const auto text = panel.diagnostics().join('\n');
+         QVERIFY(text.contains("learn / Bedroom / 192.168.1.20 / TV / Menu"));
+         QVERIFY(text.contains("Waiting for remote button"));
+         QVERIFY(text.contains("Helper: socket receive failed"));
+@@ -184,11 +177,9 @@
+     void diagnosticsRetainStartupErrors() {
+         write(file, "{broken");
+         InfraredPanel panel(file, nullptr, helper);
+-        std::unique_ptr<QWidget> view(panel.createDiagnosticsWidget());
+-        auto *log = view->findChild<QPlainTextEdit *>("infraredDiagnostics");
+-        QVERIFY(log->toPlainText().contains("Could not read saved infrared settings"));
+-    }
+-    void diagnosticsBoundHistoryScrollAndClear() {
++        QVERIFY(panel.diagnostics().join('\n').contains("Could not read saved infrared settings"));
++    }
++    void diagnosticsBoundHistoryAndEmitEntries() {
+         write(helper, R"PY(import json, sys
+ json.load(sys.stdin)
+ for i in range(550):
+@@ -196,28 +187,14 @@
+ print(json.dumps({'event': 'result', 'ok': True, 'message': 'Support ready'}), flush=True)
+ )PY");
+         InfraredPanel panel(file, nullptr, helper);
+-        std::unique_ptr<QWidget> view(panel.createDiagnosticsWidget());
+-        auto *log = view->findChild<QPlainTextEdit *>("infraredDiagnostics");
+-        view->resize(850, 300); view->show();
++        QSignalSpy events(&panel, &InfraredPanel::diagnosticAdded);
+         button(panel, "checkInfraredSupport")->click();
+         QTRY_VERIFY_WITH_TIMEOUT(button(panel, "checkInfraredSupport")->isEnabled(), 5000);
+-        QCOMPARE(log->document()->blockCount(), 500);
+-        QVERIFY(!log->toPlainText().contains("progress-0\n"));
+-        QVERIFY(log->toPlainText().contains("progress-549"));
+-        QTRY_VERIFY(log->verticalScrollBar()->maximum() > 0);
+-        QCOMPARE(log->verticalScrollBar()->value(), log->verticalScrollBar()->maximum());
+-        std::unique_ptr<QWidget> restored(panel.createDiagnosticsWidget());
+-        QCOMPARE(restored->findChild<QPlainTextEdit *>("infraredDiagnostics")->toPlainText(), log->toPlainText());
+-        write(helper, "import json, sys\njson.load(sys.stdin)\nprint(json.dumps({'event':'result','ok':True,'message':'Support ready'}))\n");
+-        log->verticalScrollBar()->setValue(0);
+-        button(panel, "checkInfraredSupport")->click();
+-        QTRY_VERIFY_WITH_TIMEOUT(button(panel, "checkInfraredSupport")->isEnabled(), 5000);
+-        QCOMPARE(log->verticalScrollBar()->value(), 0);
+-        view->findChild<QPushButton *>("clearInfraredDiagnostics")->click();
+-        QVERIFY(log->toPlainText().isEmpty());
+-        QVERIFY(restored->findChild<QPlainTextEdit *>("infraredDiagnostics")->toPlainText().isEmpty());
+-        std::unique_ptr<QWidget> cleared(panel.createDiagnosticsWidget());
+-        QVERIFY(cleared->findChild<QPlainTextEdit *>("infraredDiagnostics")->toPlainText().isEmpty());
++        QCOMPARE(panel.diagnostics().size(), 500);
++        QVERIFY(events.size() >= 552);
++        QVERIFY(panel.diagnostics().join('\n').contains("progress-549"));
++        QVERIFY(!panel.diagnostics().join('\n').contains("progress-0\n"));
++        QCOMPARE(events.last().at(0).toString(), panel.diagnostics().last());
+     }
+     void diagnosticsLogCancelAndResetTarget() {
+         write(helper, R"PY(import json, pathlib, sys, time
+@@ -226,29 +203,17 @@
+ time.sleep(30)
+ )PY");
+         InfraredPanel panel(file, nullptr, helper);
+-        std::unique_ptr<QWidget> view(panel.createDiagnosticsWidget());
+-        auto *log = view->findChild<QPlainTextEdit *>("infraredDiagnostics");
+         button(panel, "learnInfrared")->click();
+         QTRY_VERIFY_WITH_TIMEOUT(QFile::exists(helper + ".request"), 5000);
+         button(panel, "cancelInfrared")->click();
+         QTRY_VERIFY_WITH_TIMEOUT(button(panel, "learnInfrared")->isEnabled(), 5000);
+-        QVERIFY(log->toPlainText().contains("Canceled. Any previously saved button was kept."));
++        QVERIFY(panel.diagnostics().join('\n').contains("Canceled. Any previously saved button was kept."));
+         write(helper, "import json, sys\njson.load(sys.stdin)\nprint(json.dumps({'event':'result','ok':True,'message':'Support ready'}))\n");
+         button(panel, "checkInfraredSupport")->click();
+         QTRY_VERIFY_WITH_TIMEOUT(button(panel, "checkInfraredSupport")->isEnabled(), 5000);
+-        const auto last = log->toPlainText().section('\n', -1);
++        const auto last = panel.diagnostics().join('\n').section('\n', -1);
+         QVERIFY(last.contains("[IR] check — Support ready"));
+         QVERIFY(!last.contains("Bedroom"));
+-    }
+-    void diagnosticsScreenshot() {
+-        if (qEnvironmentVariableIsEmpty("LIGHTS_DIAGNOSTICS_SCREENSHOT")) QSKIP("No preview requested");
+-        InfraredPanel panel(file, nullptr, helper);
+-        std::unique_ptr<QWidget> view(panel.createDiagnosticsWidget());
+-        combo(panel, "infraredHub")->setCurrentIndex(1);
+-        button(panel, "testInfraredMenu")->click();
+-        QTRY_VERIFY_WITH_TIMEOUT(button(panel, "testInfraredMenu")->isEnabled(), 5000);
+-        view->resize(1000, 360); view->show(); QTest::qWait(100);
+-        QVERIFY(view->grab().save(qEnvironmentVariable("LIGHTS_DIAGNOSTICS_SCREENSHOT")));
+     }
+     void screenshot() {
+         if (qEnvironmentVariableIsEmpty("LIGHTS_TEST_SCREENSHOT")) QSKIP("No preview requested");
+--- /dev/null
++++ b/tests/diagnostics_test.cpp
+@@ -0,0 +1,81 @@
++#include "mainwindow.h"
++#include "infraredpanel.h"
++#include <QtTest>
++#include <QNetworkProxy>
++#include <QPlainTextEdit>
++#include <QScrollBar>
++#include <QTemporaryDir>
++#include <QTextEdit>
++
++class DiagnosticsTest : public QObject {
++    Q_OBJECT
++private slots:
++    void originalListCombinesBothSourcesAndSurvivesRefresh() {
++        MainWindow window;
++        for (auto *timer : window.findChildren<QTimer *>()) timer->stop();
++        auto *tab = window.createDiagnosticsTab();
++        auto *list = tab->findChild<QListWidget *>("routineVerifyList");
++        QVERIFY(list);
++        QCOMPARE(tab->findChildren<QListWidget *>().size(), 1);
++        QVERIFY(tab->findChildren<QPlainTextEdit *>().isEmpty());
++        QVERIFY(tab->findChildren<QTextEdit *>().isEmpty());
++        auto text = [list] {
++            QStringList entries;
++            for (int i = 0; i < list->count(); ++i) entries << list->item(i)->text();
++            return entries.join('\n');
++        };
++        // The temporary invalid IR file is read before the shared view exists.
++        QVERIFY(text().contains("Could not read saved infrared settings"));
++        window.addRoutineVerifyRecent("[MANUAL]", "Desk light -> power=on -> verified");
++        emit window.infraredPanel->diagnosticAdded("12:30:00 [IR] Projector / Menu — Sent Menu");
++        QVERIFY(text().contains("Desk light -> power=on -> verified"));
++        QVERIFY(text().contains("[IR] Projector / Menu"));
++        QVERIFY(window.routineVerifyRecentEntries.first().contains("[IR]"));
++        window.refreshRoutineVerifyDiagnostics();
++        window.buildUI();
++        QCOMPARE(window.createDiagnosticsTab(), tab);
++        QVERIFY(text().contains("[IR] Projector / Menu"));
++        const int before = window.routineVerifyRecentEntries.size();
++        emit window.infraredPanel->diagnosticAdded("[IR] Hub unreachable");
++        QCOMPARE(window.routineVerifyRecentEntries.size(), before + 1);
++        window.tabWidget->setCurrentWidget(tab);
++        window.resize(1000, 550); window.show();
++        if (!qEnvironmentVariableIsEmpty("LIGHTS_DIAGNOSTICS_SCREENSHOT")) {
++            QTest::qWait(100);
++            QVERIFY(window.grab().save(qEnvironmentVariable("LIGHTS_DIAGNOSTICS_SCREENSHOT")));
++        }
++        for (int i = 0; i < 520; ++i) {
++            if (i % 2) window.addRoutineVerifyRecent("[MANUAL]", QString("Light event %1").arg(i));
++            else emit window.infraredPanel->diagnosticAdded(QString("[IR] Event %1").arg(i));
++        }
++        QCOMPARE(window.routineVerifyRecentEntries.size(), 500);
++        QVERIFY(!text().contains("Desk light -> power=on -> verified"));
++        QVERIFY(text().contains("Light event 519"));
++        QVERIFY(text().contains("[IR] Event 518"));
++        QTRY_VERIFY(list->verticalScrollBar()->maximum() > 10);
++        list->verticalScrollBar()->setValue(10);
++        window.refreshRoutineVerifyDiagnostics();
++        QCOMPARE(list->verticalScrollBar()->value(), 10);
++    }
++};
++
++int main(int argc, char **argv) {
++    QTemporaryDir home;
++    if (!home.isValid()) return 1;
++    qputenv("HOME", home.path().toUtf8());
++    qputenv("XDG_CONFIG_HOME", home.filePath(".config").toUtf8());
++    QDir().mkpath(home.filePath(".config/govee"));
++    QFile settings(home.filePath(".config/govee/Lights.json"));
++    if (!settings.open(QIODevice::WriteOnly)) return 1;
++    settings.write(R"({"apiKey":"test-only","hideMessageBoxes":true,"presenceAutoOnAllGroups":false})");
++    settings.close();
++    QFile infrared(home.filePath(".config/govee/infrared.json"));
++    if (!infrared.open(QIODevice::WriteOnly)) return 1;
++    infrared.write("{broken"); infrared.close();
++    QApplication app(argc, argv);
++    // All network requests fail locally; no real settings or devices are used.
++    QNetworkProxy::setApplicationProxy(QNetworkProxy(QNetworkProxy::HttpProxy, "127.0.0.1", 1));
++    DiagnosticsTest test;
++    return QTest::qExec(&test, argc, argv);
++}
++#include "diagnostics_test.moc"

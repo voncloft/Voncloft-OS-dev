@@ -1,0 +1,27 @@
+kde-inotify-survey-26.08.2-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/kde-inotify-survey
+drwxr-xr-x root/root    usr/lib64/
+drwxr-xr-x root/root    usr/lib64/libexec/
+drwxr-xr-x root/root    usr/lib64/libexec/kf6/
+drwxr-xr-x root/root    usr/lib64/libexec/kf6/kauth/
+-rwxr-xr-x root/root    usr/lib64/libexec/kf6/kauth/kded-inotify-helper
+drwxr-xr-x root/root    usr/lib64/qt6/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kded/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kded/inotify.so
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/dbus-1/
+drwxr-xr-x root/root    usr/share/dbus-1/system.d/
+-rw-r--r-- root/root    usr/share/dbus-1/system.d/org.kde.kded.inotify.conf
+drwxr-xr-x root/root    usr/share/dbus-1/system-services/
+-rw-r--r-- root/root    usr/share/dbus-1/system-services/org.kde.kded.inotify.service
+drwxr-xr-x root/root    usr/share/knotifications6/
+-rw-r--r-- root/root    usr/share/knotifications6/org.kde.kded.inotify.notifyrc
+drwxr-xr-x root/root    usr/share/metainfo/
+-rw-r--r-- root/root    usr/share/metainfo/org.kde.inotify-survey.metainfo.xml
+drwxr-xr-x root/root    usr/share/polkit-1/
+drwxr-xr-x root/root    usr/share/polkit-1/actions/
+-rw-r--r-- root/root    usr/share/polkit-1/actions/org.kde.kded.inotify.policy

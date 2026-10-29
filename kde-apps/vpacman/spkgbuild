@@ -1,0 +1,23 @@
+# description : Qt 6 graphical package manager for browsing, searching, installing, and upgrading Scratchpkg packages
+# depends : kde-deps-installer qt6 scratchpkg sudo
+
+name=vpacman
+version=4.3.5.git20261029070502.g60e84a2a8cb9d9227fc02b652d383880a5ec8da2
+release=1
+_commit=${version##*.g}
+_name=VPacman
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz
+        vpacman-qt6.patch"
+
+build() {
+    cd "$_name-$_commit"
+    rm -rf build untitled1/build
+    rm -f untitled1/Makefile untitled1/.qmake.stash untitled1/untitled1 \
+        untitled1/*.o untitled1/moc_*.cpp untitled1/moc_predefs.h untitled1/ui_*.h
+    # Compatibility for the old GitHub commit; new CMake-based commits build directly.
+    if [ ! -f CMakeLists.txt ]; then
+        patch -Np1 -i "$SRC/vpacman-qt6.patch"
+    fi
+    plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
+    DESTDIR="$PKG" cmake --install build
+}

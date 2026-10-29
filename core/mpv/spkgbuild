@@ -3,14 +3,14 @@
 
 name=mpv
 version=0.41.0
-release=2
+release=3
 options="!checksum"
 source="${name}-${version}.tar.gz::https://github.com/mpv-player/${name}/archive/refs/tags/v${version}.tar.gz"
 
 build() {
     cd "mpv-${version}"
     meson setup build --prefix=/usr --libdir=lib64 --buildtype=release \
-        -Dlibmpv=true
+        -Dlibmpv=true -Dlua=luajit
     ninja -C build
     DESTDIR="$PKG" ninja -C build install
 }

@@ -749,9 +749,11 @@ f:ab48c64e63fb6c071f85bc059385c48f:libepoxy/.pkgfiles
 f:04888ab1a1ea8a86eac05b5d16739f6a:libepoxy/CHANGELOG
 f:29399205e7b90d11f22e71d07bfb64c4:libepoxy/spkgbuild
 f:7594238890bb820fb658909eae4dc568:opencolorio/spkgbuild
-f:34cd4d9337d053a95d7ca405e9dcf5db:libxpresent/CHANGELOG
-f:86e5cf6853bb363dd5dda74a2577fd18:libxpresent/spkgbuild
+f:9994d89198e60e31ab286c7a49b37801:libxpresent/.pkgfiles
+f:1580614f1ad64db5fb9f0cad40e28e65:libxpresent/CHANGELOG
+f:93082c121b1f6cc0113c405788475155:libxpresent/spkgbuild
 f:c40e77dd821e0f83b8733dd64b79a473:libxpresent/override
+f:df95ac741a3ee3147bc73ca881d17b73:libxpresent/.checksums
 f:2f45d1bc303e55ad14ee2abb2035d87c:opensp/spkgbuild
 f:2eb55a1e6a882c0527bec9519f5a709b:glibc/.pkgfiles
 f:9a5997c3452909b1769918c759eff8a2:glibc/glibc-fhs-1.patch
@@ -902,7 +904,9 @@ f:d32244b7ccad774c8ad6f5786a605a3b:hdf5/spkgbuild
 f:2b46375ab8845cf782835cd912520848:libressl/CHANGELOG
 f:8f5b3d69a55b681134903259b61fbda5:libressl/spkgbuild
 f:2003485810c47572b014c99af2a0dac2:netcdf/spkgbuild
+f:8744ef0151afd1e9932585a0facc8152:libplacebo/.pkgfiles
 f:ef5d6a785d6dc2d229afa6ebef6d3896:libplacebo/spkgbuild
+f:23095ab600ef9927c669c19fd7acf306:libplacebo/.checksums
 f:049ab2227793f15830f0f2e40db24643:jansson/.pkgfiles
 f:5855e871ed9f845c63693fcbb679f565:jansson/CHANGELOG
 f:aecdcbcb35e0143b0ceb3b17a3095b1f:jansson/spkgbuild

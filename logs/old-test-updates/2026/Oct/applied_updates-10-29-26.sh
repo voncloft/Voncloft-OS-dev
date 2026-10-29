@@ -1,0 +1,12 @@
+sed -i -e "s/version=0.1.git20260314.g12d028126b3deff57ee7090e0eb1332000761505/version=0.1.2.git20261029055756.g825ff0d1ca2d86194f4b326fdd8e7fde680c494c/g" kde-apps/smarthome/spkgbuild
+bash /usr/libexec/update-repo/changelog kde-apps/smarthome/spkgbuild Upgraded\ from\ version\ 0.1.git20260314.g12d028126b3deff57ee7090e0eb1332000761505\ to\ version\ 0.1.2.git20261029055756.g825ff0d1ca2d86194f4b326fdd8e7fde680c494c
+sed -i -e "s/version=0.1.2.git20261029055756.g825ff0d1ca2d86194f4b326fdd8e7fde680c494c/version=0.1.3.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76/g" kde-apps/smarthome/spkgbuild
+bash /usr/libexec/update-repo/changelog kde-apps/smarthome/spkgbuild Upgraded\ from\ version\ 0.1.2.git20261029055756.g825ff0d1ca2d86194f4b326fdd8e7fde680c494c\ to\ version\ 0.1.3.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76
+sed -i -e "s/version=4.3.3.git20210608062358.g7308733f711f9967820f8c7fda809311083625f0/version=4.3.3.git20261029062356.g0dabbd632164ae475dfb81856049573a26f92a67/g" kde-apps/vpacman/spkgbuild
+bash /usr/libexec/update-repo/changelog kde-apps/vpacman/spkgbuild Upgraded\ from\ version\ 4.3.3.git20210608062358.g7308733f711f9967820f8c7fda809311083625f0\ to\ version\ 4.3.3.git20261029062356.g0dabbd632164ae475dfb81856049573a26f92a67
+sed -i -e "s/version=0.1.3.git20261029055756.g825ff0d1ca2d86194f4b326fdd8e7fde680c494c/version=0.1.3.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76/g" kde-apps/smarthome/spkgbuild
+bash /usr/libexec/update-repo/changelog kde-apps/smarthome/spkgbuild Upgraded\ from\ version\ 0.1.3.git20261029055756.g825ff0d1ca2d86194f4b326fdd8e7fde680c494c\ to\ version\ 0.1.3.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76
+sed -i -e "s/version=4.3.3.git20261029062356.g0dabbd632164ae475dfb81856049573a26f92a67/version=4.3.4.git20261029064121.gb27cc29f53ee3a078c5192daec40e08a66fe8def/g" kde-apps/vpacman/spkgbuild
+bash /usr/libexec/update-repo/changelog kde-apps/vpacman/spkgbuild Upgraded\ from\ version\ 4.3.3.git20261029062356.g0dabbd632164ae475dfb81856049573a26f92a67\ to\ version\ 4.3.4.git20261029064121.gb27cc29f53ee3a078c5192daec40e08a66fe8def
+sed -i -e "s/version=4.3.4.git20261029064121.gb27cc29f53ee3a078c5192daec40e08a66fe8def/version=4.3.5.git20261029070502.g60e84a2a8cb9d9227fc02b652d383880a5ec8da2/g" kde-apps/vpacman/spkgbuild
+bash /usr/libexec/update-repo/changelog kde-apps/vpacman/spkgbuild Upgraded\ from\ version\ 4.3.4.git20261029064121.gb27cc29f53ee3a078c5192daec40e08a66fe8def\ to\ version\ 4.3.5.git20261029070502.g60e84a2a8cb9d9227fc02b652d383880a5ec8da2

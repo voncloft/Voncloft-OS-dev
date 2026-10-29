@@ -2217,8 +2217,10 @@ f:83b91f8912a76b90990be93bd48a9757:python-metadata/spkgbuild
 f:b756e0956256ed8a473553d261edc1a6:python-metadata/override
 f:6a18bb17f7f8ee2f4b41890a61476599:python-irc/CHANGELOG
 f:3f97748f3901319b0637a12e72c79f3c:python-irc/spkgbuild
+f:f1ca149c08e93c6300d7d3dd630d2b66:python-glad/.pkgfiles
 f:3930543cfeb2527b495f3928930743c6:python-glad/spkgbuild
 f:7da3fbfaaff3e7dec5ce103606df45f8:python-glad/override
+f:0a80ea001f8f3b07532c20bdcd54370f:python-glad/.checksums
 f:9fdc709d494b58539116691de6316eea:python-pyadi-iio/CHANGELOG
 f:906bfda0789eabd7d988e57086667cbb:python-pyadi-iio/spkgbuild
 f:39411de1bd679514dcefad2b44224f6b:python-munch/CHANGELOG
@@ -2274,6 +2276,7 @@ f:49b18eb57eb0a1e457ae44e320241b23:python-backcall/CHANGELOG
 f:9a1e845d5db6e188c8fae7426b749fdd:python-backcall/spkgbuild
 f:b335583a6a7dc06798d2fa610c240b1b:python-pytest-tap/CHANGELOG
 f:900d1bed29a788e9ffe9a2b2e8997968:python-pytest-tap/spkgbuild
+f:0d04c1919c72c1f4ee61ed144aaa9620:python-pip/.pkgfiles
 f:cac772ef3f3f0802cea94811091e9e27:python-pip/CHANGELOG
 f:22fa05e533ed1be3f94c07fa2ad18d74:python-pip/spkgbuild
 f:014e45a1600fa47a3ad4637ceac0a911:python-pytest-checkdocs/CHANGELOG
@@ -3419,8 +3422,9 @@ f:73d2024348e7fdc65c10e3b2cf012bbb:python-fastimport/spkgbuild
 f:069526e6b27cdfc1b84042d4f5cd2bac:python-fastimport/override
 f:f66301700c816113bc2da600e6f892db:python-acme/CHANGELOG
 f:95fb0e3837f9bce0f5fd1b95fe349a9c:python-acme/spkgbuild
+f:28c3e997414d6eb6e9fe0e1b354ad314:python-crayons/.pkgfiles
 f:9043891b858697225c708eb26d0c6edd:python-crayons/CHANGELOG
-f:d6dccbde96f3a8473af07c834fa5f499:python-crayons/spkgbuild
+f:3df53b47561526daf3dbad1a9a804b70:python-crayons/spkgbuild
 f:c8e73af4c95efdb18973783ed668975e:python-terminaltables/CHANGELOG
 f:49b5ef74b3b9dd01b9b89ac945a44958:python-terminaltables/spkgbuild
 f:918844e89a5366a5e6042ee4baca0bd3:python-osc/CHANGELOG

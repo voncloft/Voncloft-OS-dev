@@ -1,3 +1,14 @@
+Date: 2026-10-29
+
+mpv
+Version=0.41.0
+Release=3
+
+Synopsis:
+Select LuaJIT explicitly so stale lua52 pkg-config metadata cannot select an incompatible Lua. Verified built-in scripts and null-output audio playback.
+
+----------------------------------------------------------------
+
 Date: Wed 29 Sep 2021 07:26:35 AM EDT
 
 mpv

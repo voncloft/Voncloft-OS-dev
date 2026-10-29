@@ -1,12 +1,38 @@
-source="https://github.com/ankitects/anki/"
+# Only report uversion; update-repo owns the version= edit.
+source="https://api.github.com/repos/ankitects/anki/releases/latest"
+url=$source
 
 get_generic()
 {
-        uversion=$(grep -Eio [0-9a-z.]+.tar.[bgx]z2? index.html \
-        | sed "s/.tar.*//g"     \
-        | grep -v beta \
-        | grep -v rc \
-        | sort -V -r \
-        | uniq \
-        | head -n1)
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PY'
+import json
+import re
+import sys
+
+try:
+    with open("index.html", encoding="utf-8") as stream:
+        release = json.load(stream)
+    version = release["tag_name"]
+    if not re.fullmatch(r"[0-9]+(?:\.[0-9]+){1,2}", version):
+        raise ValueError("unsupported Anki release tag")
+    if release.get("draft") is not False or release.get("prerelease") is not False:
+        raise ValueError("not a stable release")
+    base = f"https://github.com/ankitects/anki/releases/"
+    if release.get("html_url") != base + "tag/" + version:
+        raise ValueError("unexpected upstream repository")
+    filename = f"anki-{version}-linux-x86_64.tar.zst"
+    if not any(asset.get("name") == filename and
+               asset.get("browser_download_url") == base + f"download/{version}/{filename}"
+               for asset in release.get("assets", [])):
+        raise ValueError("release has no supported Linux x86_64 archive")
+    print(version)
+except (OSError, ValueError, KeyError, TypeError, AttributeError) as error:
+    print(f"ERROR: Unable to read Anki release: {error}", file=sys.stderr)
+    sys.exit(1)
+PY
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
 }

@@ -108,9 +108,11 @@ f:eea4a26c80688036f3343630b5c22d77:waterfox/spkgbuild
 f:6a3bdb8e7b3b0df3be135c666c24525b:waterfox/override
 f:da86052816c68ee971245289d6a5cda8:convertlit/CHANGELOG
 f:60a00b9be840b28d17e119087e5d4a35:convertlit/spkgbuild
-f:9d329f4b1e3d7462f11f21eb3209e389:anki/CHANGELOG
-f:d49c86b02e21fa304d5aef8d45c557b8:anki/spkgbuild
-f:381c645225c109704040d56eda836e13:anki/override
+f:f9df5aad2829a33047900a93b07b61e2:anki/.pkgfiles
+f:64df7d72c2e1ef61734bf8d56e2c104a:anki/CHANGELOG
+f:d5f4e7c7b380ac8b5d02054ec682dd3f:anki/spkgbuild
+f:bece9e728fab1562c369f093b983aa46:anki/override
+f:25aa91fd9ab4132d5240e7fbc3a23105:anki/.checksums
 f:6c462a9e6bab116ba8d1be9d7c498d17:nspr/.pkgfiles
 f:f5e6d243e7d0cf6de09281ce8abd032c:nspr/CHANGELOG
 f:3e2125f35d9f2013b2fceb1a1caec0dd:nspr/spkgbuild
