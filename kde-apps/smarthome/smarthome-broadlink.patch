@@ -189,7 +189,7 @@ index 0000000..adb8ca2
 +Name=Lights
 +GenericName=Smart home controller
 +Comment=Control Govee lights and BroadLink infrared remotes
-+Exec=Lights
++Exec=/usr/bin/Lights
 +Icon=lights
 +Terminal=false
 +Categories=Utility;

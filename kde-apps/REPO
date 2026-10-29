@@ -405,7 +405,8 @@ f:a836e71ef2e661f99a699b4c01fe95f2:akonadi-calendar/.pkgfiles
 f:7305118dd16518f2bf6295937df505db:akonadi-calendar/CHANGELOG
 f:2033f55884936ce700175e32e69059f8:akonadi-calendar/spkgbuild
 f:ac086ea97d3f96538eddf311ab679e52:todolist/.pkgfiles
-f:f286e700f4c4a28f20e4f8430a6605ca:todolist/spkgbuild
+f:6b1003911152a0a715b9eee535ed3bc6:todolist/CHANGELOG
+f:602e3fa0aff0bf4bb42c64fb95356437:todolist/spkgbuild
 f:56ca55e87c86937a94b6289b682fcc92:todolist/override
 f:73e7ac834d461f74090e5886059a9e76:todolist/.checksums
 f:dfd121289e2e162f6239877c0d170eea:kcolorchooser/CHANGELOG
@@ -538,8 +539,9 @@ f:944866c0b7e940fd626580b3ce313e9b:kshisen/spkgbuild
 f:7198491f5a70499c1f675b297ed11354:optiimage/spkgbuild
 f:e8befe5d142b44fe0961930d179302a6:optiimage/override
 f:d6c4f965058087609f7362e65560980a:smarthome/.pkgfiles
-f:bb5c86b44321aee132ac7a222007cacd:smarthome/smarthome-broadlink.patch
-f:bc4b038326e4e7ff7e97ca906f6d12e1:smarthome/spkgbuild
+f:c8ee0f9488b86662f75ac90fbc0abcc9:smarthome/smarthome-broadlink.patch
+f:7de4772a279ee1e95222795524eefc17:smarthome/CHANGELOG
+f:3ed347199803dae79a0dc1f732a23324:smarthome/spkgbuild
 f:24d6534e56fa61f9dfb0f46d7088e0c5:smarthome/override
 f:bbd8f9179cacde69f910d9932921cb45:smarthome/.checksums
 f:ce1984fbde820672889b835d1fb2f0a5:calindori/spkgbuild
@@ -747,8 +749,8 @@ f:0b79fde0f0ae6f08d309e17280459749:kmime/.pkgfiles
 f:1be8e1220fbef9196d5314bffe9a0dbb:kmime/CHANGELOG
 f:d8e070a01d5a11d7be5633d0f1c219d9:kmime/spkgbuild
 f:fbf5dbd2e61de33829cd6dc533d0e9f2:varpeggio/.pkgfiles
-f:e6b470d4605e1e43c903347f7008ee9f:varpeggio/CHANGELOG
-f:1e58323128f6fa5a8ff8f990f34be2f1:varpeggio/spkgbuild
+f:01d74b6eb37885b24686bb3d4537a432:varpeggio/CHANGELOG
+f:8e2517f3fcd7dff9e2124a619ac0a427:varpeggio/spkgbuild
 f:18f992d77a451565ce3f5755836d5bc6:varpeggio/override
 f:13ff916680930e0942582faf6635f892:varpeggio/.checksums
 f:197b91499374c4c69be5ad88f2b2af2b:rocs/CHANGELOG
@@ -761,7 +763,8 @@ f:02054e6ddd9663faab6c72ce3e086c2f:kimap/.pkgfiles
 f:77193a92a4acd7b1ed718b62eed5fd89:kimap/CHANGELOG
 f:05de6aebf62bb6bf73efe244a78313f2:kimap/spkgbuild
 f:f28559883daf396af3eb7390ea07405c:voncloft-tv/.pkgfiles
-f:e1b8162339b3e3468ee5d972d67d558a:voncloft-tv/spkgbuild
+f:9d427d8b980913f86744159452d6e2a1:voncloft-tv/CHANGELOG
+f:452a4d05f8b06a7d2e3483813f4eea26:voncloft-tv/spkgbuild
 f:c500f78daea4d83d5551be5e701bfe4e:voncloft-tv/override
 f:6892cb3ea74dcf8de711acc234f2cdb6:voncloft-tv/.checksums
 f:0ce3c0f32b7cef951ed0644fccdef43a:ksirk/.pkgfiles
@@ -837,7 +840,8 @@ f:a1fbae9df5a5eec84936f8d8c37de762:artikulate/spkgbuild
 f:5502556aae279af7971964a2aeb90a57:kapptemplate/CHANGELOG
 f:62127f3041150c5a2bb296ce3858a8e1:kapptemplate/spkgbuild
 f:2df8f3e268c628060a623a624ae5e81e:kde-monitor-default/.pkgfiles
-f:bf07b842fe5483580eb6b0b4988646c9:kde-monitor-default/spkgbuild
+f:c24eb22809253ab99389ae0f12be880a:kde-monitor-default/CHANGELOG
+f:c6795bd4889ca522c373bf84447e4a14:kde-monitor-default/spkgbuild
 f:15f4b50d93d160a6613b632f5796dc84:kde-monitor-default/override
 f:3a9df9577b45e4ac54ccd5677db93f71:kde-monitor-default/.checksums
 f:1dc4334a57ede730e966aff93580b155:messagelib/.pkgfiles

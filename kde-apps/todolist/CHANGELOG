@@ -1,0 +1,9 @@
+Date: 2026-10-29
+
+todolist
+Version=0.1.0.git20260621.g690599ea27158280995f4b4ef6e9293a33eeb9aa
+Release=2
+
+Synopsis:
+Make /usr/bin explicit for the package build and application launcher.
+

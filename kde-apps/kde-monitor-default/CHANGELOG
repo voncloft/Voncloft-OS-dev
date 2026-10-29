@@ -1,0 +1,9 @@
+Date: 2026-10-29
+
+kde-monitor-default
+Version=20260215.g8edff03c55f6a1793e1d967bec40ab178b5dfe48
+Release=2
+
+Synopsis:
+Make /usr/bin explicit for the package build and application launcher.
+

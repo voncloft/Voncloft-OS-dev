@@ -3,7 +3,7 @@
 
 name=todolist
 version=0.1.0.git20260621.g690599ea27158280995f4b4ef6e9293a33eeb9aa
-release=1
+release=2
 _commit=${version##*.g}
 _name=Todolist
 source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
@@ -12,7 +12,7 @@ build() {
     cd "Todolist-$_commit"
     # Discard any build directory committed by upstream before configuring.
     rm -rf build
-    plasma-package-installer
+    plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
     # Upstream has no system install target; stage its application and KDE entries.
     install -Dm755 build/todolist "$PKG/usr/bin/todolist"
     ln -s todolist "$PKG/usr/bin/todolist-launcher"

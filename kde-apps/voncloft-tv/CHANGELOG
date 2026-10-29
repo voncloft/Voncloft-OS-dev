@@ -1,0 +1,9 @@
+Date: 2026-10-29
+
+voncloft-tv
+Version=0.2.0.git20260327.g75d591dced2e225c31a897527b6672217b4aae91
+Release=2
+
+Synopsis:
+Make /usr/bin explicit for the package build and application launcher.
+

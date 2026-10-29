@@ -3,7 +3,7 @@
 
 name=smarthome
 version=0.1.git20260314.g12d028126b3deff57ee7090e0eb1332000761505
-release=2
+release=3
 _commit=${version##*.g}
 _name=Smarthome
 source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz
@@ -14,6 +14,6 @@ build() {
     # Discard any build directory committed by upstream before configuring.
     rm -rf build
     patch -Np1 -i "$SRC/smarthome-broadlink.patch"
-    plasma-package-installer
+    plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
     DESTDIR="$PKG" cmake --install build
 }

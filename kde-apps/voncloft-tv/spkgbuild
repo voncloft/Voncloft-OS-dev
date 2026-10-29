@@ -3,7 +3,7 @@
 
 name=voncloft-tv
 version=0.2.0.git20260327.g75d591dced2e225c31a897527b6672217b4aae91
-release=1
+release=2
 _commit=${version##*.g}
 _name=qt6_tv_tuner
 source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
@@ -12,6 +12,8 @@ build() {
     cd "qt6_tv_tuner-$_commit"
     # Discard any build directory committed by upstream before configuring.
     rm -rf build
-    plasma-package-installer
+    # Both generated launchers must use the packaged executable.
+    sed -i 's|^Exec=.*|Exec=/usr/bin/tv_tuner_gui|' assets/tv_tuner_gui.desktop.in
+    plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
     DESTDIR="$PKG" cmake --install build
 }

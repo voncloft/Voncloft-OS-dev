@@ -3,7 +3,7 @@
 
 name=kde-monitor-default
 version=20260215.g8edff03c55f6a1793e1d967bec40ab178b5dfe48
-release=1
+release=2
 _commit=${version##*.g}
 _name=KDE_Monitor_Default
 source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
@@ -12,11 +12,11 @@ build() {
     cd "KDE_Monitor_Default-$_commit"
     # Discard any build directory committed by upstream before configuring.
     rm -rf build
-    plasma-package-installer
+    plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
     # Upstream has no system install target.
     install -Dm755 build/kde-primary-monitor "$PKG/usr/bin/kde-primary-monitor"
     install -Dm644 assets/monitor.svg \
         "$PKG/usr/share/icons/hicolor/scalable/apps/homescreen-monitor.svg"
-    sed 's|^Exec=.*|Exec=kde-primary-monitor|' Homescreen.desktop > build/Homescreen.desktop
+    sed 's|^Exec=.*|Exec=/usr/bin/kde-primary-monitor|' Homescreen.desktop > build/Homescreen.desktop
     install -Dm644 build/Homescreen.desktop "$PKG/usr/share/applications/Homescreen.desktop"
 }

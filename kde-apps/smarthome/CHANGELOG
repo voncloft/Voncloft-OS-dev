@@ -1,0 +1,9 @@
+Date: 2026-10-29
+
+smarthome
+Version=0.1.git20260314.g12d028126b3deff57ee7090e0eb1332000761505
+Release=3
+
+Synopsis:
+Make /usr/bin explicit for the package build and application launcher.
+

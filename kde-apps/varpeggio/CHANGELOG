@@ -1,3 +1,13 @@
+Date: 2026-10-29
+
+varpeggio
+Version=0.2.47.git20261027063836.g82b8b4d22181cbfa23d3d3a57613b24c015549c8
+Release=2
+
+Synopsis:
+Make /usr/bin explicit in the build settings and desktop launcher so KDE does
+not resolve the executable through the /bin alias in PATH.
+
 Date: Tue Oct 27 02:45:57 AM EDT 2026
 
 varpeggio

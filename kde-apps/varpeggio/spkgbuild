@@ -3,7 +3,7 @@
 
 name=varpeggio
 version=0.2.47.git20261027063836.g82b8b4d22181cbfa23d3d3a57613b24c015549c8
-release=1
+release=2
 _commit=${version##*.g}
 _name=VArpeggio
 source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
@@ -12,6 +12,8 @@ build() {
     cd "VArpeggio-$_commit"
     # Discard any build directory committed by upstream before configuring.
     rm -rf build
-    plasma-package-installer
+    # Use the canonical executable path instead of resolving it through PATH.
+    sed -i 's|^Exec=varpeggio$|Exec=/usr/bin/varpeggio|' com.voncloft.VArpeggio.desktop
+    plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
     DESTDIR="$PKG" cmake --install build
 }
