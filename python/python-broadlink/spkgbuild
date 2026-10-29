@@ -1,0 +1,19 @@
+# description : Python library for discovering BroadLink devices and learning and sending infrared remote commands over the local network
+# depends : python python-cryptography python-setuptools python-wheel
+
+name=python-broadlink
+version=0.19.0
+release=1
+_name=${name#python-}
+source="https://files.pythonhosted.org/packages/source/b/${_name}/${_name}-${version}.tar.gz"
+options="!checksum"
+
+build() {
+    cd "${_name}-${version}"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/${_name}-${version}-*.whl
+    install -Dm644 LICENSE "$PKG/usr/share/licenses/$name/LICENSE"
+}

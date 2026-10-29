@@ -1,16 +1,19 @@
-# description : C parser and AST generator written in Python
-  # depends : python-ply
+# description : C language parser and syntax tree generator for Python
+# depends : python python-setuptools python-wheel
 
 name=python-pycparser
 version=3.12
-release=3
-
+release=4
 _name=${name#python-}
-source="https://github.com/eliben/${_name}/archive/refs/tags/release_v$version.tar.gz"
+source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "${_name}-${version}"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/${_name}-${version}-*.whl
+    install -Dm644 LICENSE "$PKG/usr/share/licenses/$name/LICENSE"
+}

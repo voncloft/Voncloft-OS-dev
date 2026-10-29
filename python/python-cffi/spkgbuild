@@ -1,16 +1,19 @@
-# description : Foreign Function Interface for Python calling C code
-# depends : python-pycparser
+# description : Foreign function interface for calling C libraries from Python
+# depends : python python-pycparser python-setuptools python-wheel libffi pkgconf
 
 name=python-cffi
 version=2.1.1
-release=1
-
+release=2
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd "$SRC"/cffi*/
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "${_name}-${version}"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/${_name}-${version}-*.whl
+    install -Dm644 LICENSE "$PKG/usr/share/licenses/$name/LICENSE"
+}

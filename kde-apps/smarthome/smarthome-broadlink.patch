@@ -1,0 +1,1285 @@
+diff --git a/.gitignore b/.gitignore
+index 026b21f..ef9c823 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -10,6 +10,10 @@ build/
+ *.exe
+ *.log
+ *.qrc
++!resources.qrc
++!broadlink.qrc
++/build-broadlink/
++__pycache__/
+ *.moc
+ *.rcc
+ *.pch
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9ac0a1c..923ae58 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.16)
+-project(Lights VERSION 0.1 LANGUAGES CXX)
++project(Lights VERSION 0.1.1 LANGUAGES CXX)
+ 
+ set(CMAKE_AUTOUIC ON)
+ set(CMAKE_AUTOMOC ON)
+@@ -16,6 +16,9 @@ set(PROJECT_SOURCES
+     mainwindow.h
+     mainwindow.ui
+     resources.qrc
++    infraredpanel.cpp
++    infraredpanel.h
++    broadlink.qrc
+ )
+ 
+ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+@@ -41,3 +44,23 @@ set_target_properties(Lights PROPERTIES
+     MACOSX_BUNDLE TRUE
+     WIN32_EXECUTABLE TRUE
+ )
++
++target_compile_definitions(Lights PRIVATE LIGHTS_VERSION="${PROJECT_VERSION}")
++
++include(GNUInstallDirs)
++install(TARGETS Lights RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
++configure_file(Lights.desktop.in ${CMAKE_CURRENT_BINARY_DIR}/lights.desktop @ONLY)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/lights.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
++install(FILES assets/lightbulb.svg DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/scalable/apps RENAME lights.svg)
++
++include(CTest)
++if(BUILD_TESTING)
++    find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Test)
++    find_package(Python3 REQUIRED COMPONENTS Interpreter)
++    add_executable(infraredpanel_test tests/infraredpanel_test.cpp infraredpanel.cpp infraredpanel.h broadlink.qrc)
++    target_include_directories(infraredpanel_test PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
++    target_link_libraries(infraredpanel_test PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network Qt${QT_VERSION_MAJOR}::Test)
++    add_test(NAME infrared_panel COMMAND infraredpanel_test)
++    set_tests_properties(infrared_panel PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
++    add_test(NAME broadlink_bridge COMMAND ${Python3_EXECUTABLE} -m unittest discover -s ${CMAKE_CURRENT_SOURCE_DIR}/tests -p test_broadlink_bridge.py)
++endif()
+diff --git a/README.md b/README.md
+index 1fe7e72..1473618 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,42 @@
+-A simple app for controlling Govee lights, YOU NEED YOUR OWN API KEY
++# SmartHome / Lights
++
++Qt desktop controller for Govee lights and BroadLink infrared remotes.
++Govee lighting requires your own API key.
++
++## BroadLink Mini setup
++
++1. Install the Scratch package `python-broadlink` and its dependencies.
++2. Connect the Mini to 2.4 GHz Wi-Fi using the BroadLink phone app. The PC can use Ethernet on the same network. Disable **Lock device** in the phone app if local control is blocked.
++3. Open **Infrared**, click **Check support**, then **Discover hubs**. **Add by IP address** is available if discovery cannot find it.
++4. Select the hub and name its room. For the Acer H6510BD, click **Add Acer projector** to load published codes without the original remote; then click **Test Menu** with the projector already on. For other devices, click **Add remote** and learn their buttons as follows.
++5. Select **Menu**, click **Learn button**, and point the original remote at the Mini. Press Menu once while learning is active.
++6. Click **Test Menu** with the projector already on to test reception without a power cycle. This button never falls back to Power.
++
++Additional hubs and remotes can be saved for other rooms. Commands go only to the selected remote's hub; rediscovery updates changed addresses while preserving names and buttons. A hub identity check prevents sending to a different device that acquired an old address. Infrared cannot confirm the TV/projector state, and multiple devices within range may respond to identical codes.
++
++Saved hub addresses, room names, and learned codes are stored in `infrared.json` alongside the existing Govee settings. They are separate from `Lights.json` and lighting routines. Learning and sending run asynchronously, and startup does not discover hubs or transmit commands automatically.
++
++## Build and check
++
++```sh
++cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON
++cmake --build build -j2
++ctest --test-dir build --output-on-failure
++# Optional system installation (or make install from the build directory):
++sudo cmake --install build
++```
++
++Tests use simulated hubs and temporary settings, without contacting lights or infrared devices. Python 3 and `broadlink` (including its `cryptography` dependency) are needed for real hub operations. Qt Test is needed only when building tests.
++
++## Changes
++
++### 0.1.1 — 2026-10-29
++
++- Added local BroadLink Mini discovery, room naming, remote-button learning, and sending.
++- Added a dedicated Menu test and per-hub targeting for multiple rooms.
++- Added persistent infrared settings, asynchronous operation status, and automated tests.
++- Added a CMake install target for the app, launcher, and icon.
++
++Hardware transmission and reception still need to be checked with the Mini.
++
++The Acer preset comes from the [exact H6510BD model record](https://github.com/pickysysadmin/logitech-harmony-ir-archive/blob/main/devices/Acer/H6510BD.json) and its [published Harmony code set](https://github.com/pickysysadmin/logitech-harmony-ir-archive/blob/main/codesets/5b/5b0b82bf412b05cc.json). Original Pronto timings and source identity are retained in `assets/acer-h6510bd.json`. Menu is `0x10C821DE` in that archive's notation; Power is a toggle. These are published candidates, not physically verified codes.
+diff --git a/main.cpp b/main.cpp
+index c7d9c34..19cc762 100644
+--- a/main.cpp
++++ b/main.cpp
+@@ -1,11 +1,17 @@
+ #include "mainwindow.h"
+ #include <QApplication>
+ #include <QIcon>
++#include <QCommandLineParser>
+ 
+ int main(int argc, char *argv[])
+ {
+     QApplication a(argc, argv);
+     QApplication::setApplicationName(QStringLiteral("lights"));
++    QApplication::setApplicationVersion(QStringLiteral(LIGHTS_VERSION));
++    QCommandLineParser parser;
++    parser.addHelpOption();
++    parser.addVersionOption();
++    parser.process(a);
+     a.setDesktopFileName(QStringLiteral("lights"));
+     const QIcon appIcon(QStringLiteral(":/assets/lightbulb.svg"));
+     a.setWindowIcon(appIcon);
+diff --git a/mainwindow.cpp b/mainwindow.cpp
+index a6aa07b..09147c9 100644
+--- a/mainwindow.cpp
++++ b/mainwindow.cpp
+@@ -1,4 +1,5 @@
+ #include "mainwindow.h"
++#include "infraredpanel.h"
+ #include <QApplication>
+ #include <QToolBar>
+ #include <QNetworkAccessManager>
+@@ -206,7 +207,7 @@ static QString resolveConfigDirForWrite()
+ MainWindow::MainWindow(QWidget *parent)
+     : QMainWindow(parent)
+ {
+-    setWindowTitle("Govee Lights — Auto + Routines");
++    setWindowTitle("SmartHome — Lights & Infrared");
+     resize(1450, 950);
+ 
+     QMenu *fileMenu = menuBar()->addMenu("File");
+@@ -2667,6 +2668,9 @@ void MainWindow::buildUI()
+         addTabWithId(sa, room + " (" + QString::number(groups[room].size()) + ")", "__tab_room__:" + room);
+     }
+ 
++    if (!infraredPanel)
++        infraredPanel = new InfraredPanel(resolveConfigDirForWrite() + "/infrared.json", this);
++    addTabWithId(infraredPanel, "Infrared", "__tab_infrared__");
+     addTabWithId(createRoutinesTab(), "Routines", "__tab_routines__");
+     addTabWithId(createDiagnosticsTab(), "Diagnostics", "__tab_diagnostics__");
+     addTabWithId(createConfigTab(), "Config", "__tab_config__");
+diff --git a/mainwindow.h b/mainwindow.h
+index d28882d..3b02d2f 100644
+--- a/mainwindow.h
++++ b/mainwindow.h
+@@ -18,6 +18,7 @@ class QPushButton;
+ class QLabel;
+ class QAudioSource;
+ class QIODevice;
++class InfraredPanel;
+ 
+ struct RoutineDeviceSetting {
+     QString group; // "__all__" or room key from device name prefix
+@@ -146,6 +147,7 @@ private:
+ private:
+     QNetworkAccessManager *nam = nullptr;
+     QTabWidget *tabWidget = nullptr;
++    InfraredPanel *infraredPanel = nullptr;
+ 
+     // NEW refresh button
+     QPushButton *refreshBtn = nullptr;
+diff --git a/Lights.desktop.in b/Lights.desktop.in
+new file mode 100644
+index 0000000..adb8ca2
+--- /dev/null
++++ b/Lights.desktop.in
+@@ -0,0 +1,12 @@
++[Desktop Entry]
++Version=1.0
++Type=Application
++Name=Lights
++GenericName=Smart home controller
++Comment=Control Govee lights and BroadLink infrared remotes
++Exec=Lights
++Icon=lights
++Terminal=false
++Categories=Utility;
++StartupNotify=true
++StartupWMClass=Lights
+diff --git a/broadlink.qrc b/broadlink.qrc
+new file mode 100644
+index 0000000..95786d4
+--- /dev/null
++++ b/broadlink.qrc
+@@ -0,0 +1,6 @@
++<RCC>
++    <qresource prefix="/broadlink">
++        <file alias="bridge.py">broadlink_bridge.py</file>
++        <file alias="acer-h6510bd.json">assets/acer-h6510bd.json</file>
++    </qresource>
++</RCC>
+diff --git a/broadlink_bridge.py b/broadlink_bridge.py
+new file mode 100644
+index 0000000..d57e889
+--- /dev/null
++++ b/broadlink_bridge.py
+@@ -0,0 +1,107 @@
++#!/usr/bin/env python3
++"""One requested BroadLink operation per process; JSON in, JSON lines out."""
++import base64
++import ipaddress
++import json
++import re
++import sys
++import time
++
++
++def packet_from_text(text):
++    if not isinstance(text, str) or len(text) > 90000:
++        raise ValueError("Invalid saved infrared command. Learn the button again.")
++    packet = base64.b64decode(text, validate=True)
++    if len(packet) < 6 or packet[0] != 0x26:
++        raise ValueError("This is not a BroadLink infrared command.")
++    length = int.from_bytes(packet[2:4], "little")
++    if length < 2 or length > len(packet) - 4:
++        raise ValueError("The saved infrared command is incomplete.")
++    return packet
++
++
++def describe(device):
++    return {"id": device.mac.hex(), "host": device.host[0],
++            "name": device.name or device.model or "BroadLink Mini",
++            "model": device.model or device.TYPE,
++            "locked": bool(device.is_locked)}
++
++
++def execute(request, broadlink, progress=lambda message: None):
++    if not isinstance(request, dict):
++        raise ValueError("Invalid command request.")
++    action = request.get("action")
++    if action == "check":
++        return {"message": "BroadLink support is ready."}
++    if action == "discover":
++        devices = broadlink.discover(timeout=5)
++        hubs = {d.mac.hex(): describe(d) for d in devices
++                if isinstance(d, broadlink.remote.rmmini)}
++        return {"hubs": list(hubs.values())}
++    if action not in ("identify", "learn", "send"):
++        raise ValueError("Unknown infrared action.")
++    address = ipaddress.IPv4Address(request.get("host", ""))
++    if address.is_unspecified or address.is_multicast or address.is_loopback or str(address) == "255.255.255.255":
++        raise ValueError("Enter the hub's own IPv4 address.")
++    expected = request.get("id", "")
++    if action != "identify" and not re.fullmatch(r"[0-9a-f]{12}", expected):
++        raise ValueError("Discover or add this hub before sending commands.")
++    # Reject invalid codes before contacting any device.
++    packet = packet_from_text(request.get("code")) if action == "send" else None
++    device = broadlink.hello(str(address), timeout=5)
++    if not isinstance(device, broadlink.remote.rmmini):
++        raise ValueError("This device is not a supported BroadLink infrared hub.")
++    if action == "identify":
++        return {"hubs": [describe(device)]}
++    # DHCP addresses can change. Never send to a different hub at an old address.
++    if device.mac.hex() != expected:
++        raise ValueError("A different hub is using that address. Discover hubs again.")
++    device.timeout = 5
++    if device.is_locked:
++        raise ValueError("Turn off 'Lock device' in the BroadLink phone app, then try again.")
++    if not device.auth():
++        raise ValueError("The hub refused authentication. Check 'Lock device' in the BroadLink app.")
++    if action == "send":
++        device.send_data(packet)
++        return {"message": "Command sent. Check the TV or projector for its response."}
++    device.enter_learning()
++    progress("Point the original remote at the Mini and press the selected button once (30 seconds).")
++    deadline = time.monotonic() + 30
++    while time.monotonic() < deadline:
++        try:
++            packet = device.check_data()
++        except broadlink.exceptions.StorageError:
++            packet = None  # No command captured yet.
++        if packet:
++            code = base64.b64encode(packet).decode("ascii")
++            packet_from_text(code)
++            return {"code": code}
++        time.sleep(0.25)
++    raise ValueError("No infrared signal learned. Point the remote at the Mini and try again.")
++
++
++def emit(payload):
++    print(json.dumps(payload), flush=True)
++
++
++def main():
++    try:
++        raw = sys.stdin.read(100001)
++        if len(raw) > 100000:
++            raise ValueError("Command request is too large.")
++        request = json.loads(raw)
++        try:
++            import broadlink
++            import broadlink.remote
++        except ImportError as error:
++            raise RuntimeError("Install the Scratch package python-broadlink and its dependencies, then click Check support.") from error
++        result = execute(request, broadlink, lambda text: emit({"event": "progress", "message": text}))
++        emit({"event": "result", "ok": True, **result})
++        return 0
++    except Exception as error:
++        emit({"event": "result", "ok": False, "message": str(error)})
++        return 1
++
++
++if __name__ == "__main__":
++    sys.exit(main())
+diff --git a/infraredpanel.cpp b/infraredpanel.cpp
+new file mode 100644
+index 0000000..6cd5bb9
+--- /dev/null
++++ b/infraredpanel.cpp
+@@ -0,0 +1,506 @@
++#include "infraredpanel.h"
++#include <QComboBox>
++#include <QDir>
++#include <QFileInfo>
++#include <QFormLayout>
++#include <QGroupBox>
++#include <QHostAddress>
++#include <QInputDialog>
++#include <QJsonDocument>
++#include <QLabel>
++#include <QLineEdit>
++#include <QMessageBox>
++#include <QPushButton>
++#include <QRegularExpression>
++#include <QSaveFile>
++#include <QSet>
++#include <QSignalBlocker>
++#include <QUuid>
++#include <QVBoxLayout>
++
++InfraredPanel::InfraredPanel(const QString &file, QWidget *parent, const QString &helperOverride)
++    : QWidget(parent), settingsFile(file), helper(helperOverride)
++{
++    auto *layout = new QVBoxLayout(this);
++    layout->setContentsMargins(20, 20, 20, 20);
++    auto *intro = new QLabel("Connect your Mini to your home Wi-Fi with the BroadLink phone app, "
++                            "then discover it here. Your PC can use Ethernet. "
++                            "If access is locked, turn off ‘Lock device’ in the phone app.");
++    intro->setWordWrap(true);
++    layout->addWidget(intro);
++
++    auto *hubGroup = new QGroupBox("Room / infrared hub");
++    auto *hubLayout = new QVBoxLayout(hubGroup);
++    hubBox = new QComboBox;
++    hubBox->setObjectName("infraredHub");
++    hubLayout->addWidget(hubBox);
++    hubDetails = new QLabel;
++    hubDetails->setTextFormat(Qt::PlainText);
++    hubDetails->setWordWrap(true);
++    hubLayout->addWidget(hubDetails);
++    auto *hubActions = new QHBoxLayout;
++    auto *discover = new QPushButton("Discover hubs");
++    discover->setObjectName("discoverHubs");
++    auto *addIp = new QPushButton("Add by IP address");
++    auto *rename = new QPushButton("Name room");
++    auto *remove = new QPushButton("Remove hub");
++    auto *check = new QPushButton("Check support");
++    for (auto *button : {discover, addIp, rename, remove, check}) hubActions->addWidget(button);
++    hubLayout->addLayout(hubActions);
++    layout->addWidget(hubGroup);
++
++    auto *remoteGroup = new QGroupBox("TV / projector remote");
++    auto *remoteLayout = new QVBoxLayout(remoteGroup);
++    auto *remoteActions = new QHBoxLayout;
++    remoteBox = new QComboBox;
++    remoteBox->setObjectName("infraredRemote");
++    auto *add = new QPushButton("Add remote");
++    auto *acer = new QPushButton("Add Acer projector");
++    acer->setObjectName("addAcerPreset");
++    removeRemoteButton = new QPushButton("Remove remote");
++    remoteActions->addWidget(remoteBox, 1);
++    remoteActions->addWidget(add);
++    remoteActions->addWidget(acer);
++    remoteActions->addWidget(removeRemoteButton);
++    remoteLayout->addLayout(remoteActions);
++    auto *form = new QFormLayout;
++    commandBox = new QComboBox;
++    commandBox->setObjectName("infraredCommand");
++    commandBox->setEditable(true);
++    commandBox->setInsertPolicy(QComboBox::NoInsert);
++    commandBox->lineEdit()->setMaxLength(80);
++    form->addRow("Remote button:", commandBox);
++    remoteLayout->addLayout(form);
++    auto *commandActions = new QHBoxLayout;
++    learnButton = new QPushButton("Learn button");
++    learnButton->setObjectName("learnInfrared");
++    sendButton = new QPushButton("Send button");
++    sendButton->setObjectName("sendInfrared");
++    menuButton = new QPushButton("Test Menu");
++    menuButton->setObjectName("testInfraredMenu");
++    forgetButton = new QPushButton("Forget button");
++    cancelButton = new QPushButton("Cancel");
++    for (auto *button : {learnButton, sendButton, menuButton, forgetButton, cancelButton}) commandActions->addWidget(button);
++    remoteLayout->addLayout(commandActions);
++    auto *help = new QLabel("Choose a button, click Learn, then point the original remote at the Mini. "
++                           "Test Menu sends only the saved Menu button to this remote’s hub. "
++                           "Power is a normal remote button, not a confirmed on/off state.");
++    help->setWordWrap(true);
++    remoteLayout->addWidget(help);
++    layout->addWidget(remoteGroup);
++    statusLabel = new QLabel("Click Check support, then Discover hubs when your Mini is connected.");
++    statusLabel->setObjectName("infraredStatus");
++    statusLabel->setWordWrap(true);
++    statusLabel->setTextFormat(Qt::PlainText);
++    statusLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
++    layout->addWidget(statusLabel);
++    layout->addStretch();
++    idleControls = {hubBox, remoteBox, commandBox, discover, addIp, rename, remove, check, add, acer};
++
++    if (helper.isEmpty()) {
++        QFile resource(":/broadlink/bridge.py");
++        if (resource.open(QIODevice::ReadOnly) && helperFile.open()) {
++            const QByteArray script = resource.readAll();
++            if (helperFile.write(script) == script.size() && helperFile.flush())
++                helper = helperFile.fileName();
++        }
++    }
++    deadline.setSingleShot(true);
++    connect(&deadline, &QTimer::timeout, this, [this] {
++        canceled = true;
++        status("Hub operation timed out. Check its address and network connection; a sent command may already have reached it.");
++        process.kill();
++    });
++    connect(&process, &QProcess::started, this, [this] {
++        process.write(QJsonDocument(pending).toJson(QJsonDocument::Compact));
++        process.closeWriteChannel();
++    });
++    connect(&process, &QProcess::readyReadStandardOutput, this, &InfraredPanel::consumeOutput);
++    connect(&process, &QProcess::readyReadStandardError, this, [this] { process.readAllStandardError(); });
++    connect(&process, &QProcess::finished, this, &InfraredPanel::finish);
++    connect(&process, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
++        if (error != QProcess::FailedToStart) return;
++        deadline.stop();
++        busy = false;
++        status("Could not start Python 3. Install the python and python-broadlink packages.");
++        refreshButtons();
++    });
++    connect(discover, &QPushButton::clicked, this, [this] { start({{"action", "discover"}}); });
++    connect(check, &QPushButton::clicked, this, [this] { start({{"action", "check"}}); });
++    connect(addIp, &QPushButton::clicked, this, [this] {
++        bool ok = false;
++        const QString host = QInputDialog::getText(this, "Add infrared hub", "Mini’s IPv4 address:", QLineEdit::Normal, {}, &ok).trimmed();
++        if (!ok) return;
++        const QHostAddress address(host);
++        if (address.protocol() != QAbstractSocket::IPv4Protocol) { status("Enter the Mini’s IPv4 address, such as 192.168.1.50."); return; }
++        start({{"action", "identify"}, {"host", host}});
++    });
++    connect(rename, &QPushButton::clicked, this, &InfraredPanel::renameHub);
++    connect(remove, &QPushButton::clicked, this, &InfraredPanel::removeHub);
++    connect(add, &QPushButton::clicked, this, &InfraredPanel::addRemote);
++    connect(acer, &QPushButton::clicked, this, &InfraredPanel::addAcerPreset);
++    connect(removeRemoteButton, &QPushButton::clicked, this, &InfraredPanel::removeRemote);
++    connect(learnButton, &QPushButton::clicked, this, &InfraredPanel::learn);
++    connect(sendButton, &QPushButton::clicked, this, [this] { send(commandBox->currentText().trimmed()); });
++    connect(menuButton, &QPushButton::clicked, this, [this] { send("Menu"); });
++    connect(forgetButton, &QPushButton::clicked, this, &InfraredPanel::forgetCommand);
++    connect(cancelButton, &QPushButton::clicked, this, [this] {
++        canceled = true;
++        status("Canceled. Any previously saved button was kept.");
++        process.kill();
++    });
++    connect(hubBox, &QComboBox::currentIndexChanged, this, [this] { refreshRemotes(); });
++    connect(remoteBox, &QComboBox::currentIndexChanged, this, [this] { refreshCommands(); });
++    connect(commandBox, &QComboBox::currentTextChanged, this, [this] { refreshButtons(); });
++    load();
++    refreshHubs();
++}
++
++InfraredPanel::~InfraredPanel()
++{
++    disconnect(&process, nullptr, this, nullptr);
++    if (process.state() != QProcess::NotRunning) {
++        process.kill();
++        process.waitForFinished(1000);
++    }
++}
++
++void InfraredPanel::status(const QString &text) { statusLabel->setText(text); }
++
++void InfraredPanel::load()
++{
++    QFile file(settingsFile);
++    if (!file.exists()) return;
++    QJsonParseError error;
++    const bool opened = file.open(QIODevice::ReadOnly);
++    const QJsonDocument doc = opened && file.size() <= 1024 * 1024
++        ? QJsonDocument::fromJson(file.readAll(), &error) : QJsonDocument();
++    const QJsonObject root = doc.object();
++    bool valid = !doc.isNull() && error.error == QJsonParseError::NoError
++        && root.value("version").toInt() == 1 && root.value("hubs").isArray() && root.value("remotes").isArray();
++    QSet<QString> ids;
++    const QRegularExpression mac("^[0-9a-f]{12}$");
++    for (const auto &value : root.value("hubs").toArray()) {
++        const QJsonObject hub = value.toObject();
++        const QString id = hub.value("id").toString();
++        valid = valid && mac.match(id).hasMatch() && !ids.contains(id)
++            && QHostAddress(hub.value("host").toString()).protocol() == QAbstractSocket::IPv4Protocol
++            && !hub.value("name").toString().trimmed().isEmpty();
++        ids.insert(id);
++    }
++    QSet<QString> remoteIds;
++    for (const auto &value : root.value("remotes").toArray()) {
++        const QJsonObject remote = value.toObject();
++        const QString id = remote.value("id").toString();
++        valid = valid && !id.isEmpty() && !remoteIds.contains(id) && ids.contains(remote.value("hub").toString())
++            && !remote.value("name").toString().trimmed().isEmpty() && remote.value("commands").isObject();
++        remoteIds.insert(id);
++        const auto codes = remote.value("commands").toObject();
++        for (auto it = codes.begin(); it != codes.end(); ++it)
++            valid = valid && !it.key().trimmed().isEmpty() && it.value().isString();
++    }
++    if (!valid) {
++        readOnly = true;
++        status("Could not read saved infrared settings. The existing file has been left unchanged: " + settingsFile);
++        return;
++    }
++    hubs = root.value("hubs").toArray();
++    remotes = root.value("remotes").toArray();
++}
++
++bool InfraredPanel::save()
++{
++    if (readOnly) return false;
++    QDir().mkpath(QFileInfo(settingsFile).absolutePath());
++    QSaveFile file(settingsFile);
++    const QByteArray data = QJsonDocument(QJsonObject{{"version", 1}, {"hubs", hubs}, {"remotes", remotes}}).toJson();
++    if (!file.open(QIODevice::WriteOnly) || !file.setPermissions(QFile::ReadOwner | QFile::WriteOwner)
++        || file.write(data) != data.size() || !file.commit()) {
++        readOnly = true;
++        status("Could not save infrared settings. Existing settings were kept. Check permissions and restart the app: " + settingsFile);
++        refreshButtons();
++        return false;
++    }
++    return true;
++}
++
++int InfraredPanel::hubIndex() const
++{
++    const QString id = hubBox->currentData().toString();
++    for (int i = 0; i < hubs.size(); ++i) if (hubs[i].toObject().value("id").toString() == id) return i;
++    return -1;
++}
++
++int InfraredPanel::remoteIndex() const
++{
++    const QString id = remoteBox->currentData().toString();
++    for (int i = 0; i < remotes.size(); ++i) if (remotes[i].toObject().value("id").toString() == id) return i;
++    return -1;
++}
++
++QJsonObject InfraredPanel::selectedHub() const { const int i = hubIndex(); return i < 0 ? QJsonObject() : hubs[i].toObject(); }
++QJsonObject InfraredPanel::selectedRemote() const { const int i = remoteIndex(); return i < 0 ? QJsonObject() : remotes[i].toObject(); }
++
++void InfraredPanel::refreshHubs(const QString &selected)
++{
++    const QString id = selected.isEmpty() ? hubBox->currentData().toString() : selected;
++    {
++        QSignalBlocker blocker(hubBox);
++        hubBox->clear();
++        for (const auto &value : hubs) { const auto hub = value.toObject(); hubBox->addItem(hub.value("name").toString(), hub.value("id").toString()); }
++        const int index = hubBox->findData(id);
++        if (index >= 0) hubBox->setCurrentIndex(index);
++    }
++    refreshRemotes();
++}
++
++void InfraredPanel::refreshRemotes(const QString &selected)
++{
++    const QString id = selected.isEmpty() ? remoteBox->currentData().toString() : selected;
++    const QString hubId = hubBox->currentData().toString();
++    {
++        QSignalBlocker blocker(remoteBox);
++        remoteBox->clear();
++        for (const auto &value : remotes) {
++            const auto remote = value.toObject();
++            if (remote.value("hub").toString() == hubId)
++                remoteBox->addItem(remote.value("name").toString(), remote.value("id").toString());
++        }
++        const int index = remoteBox->findData(id);
++        if (index >= 0) remoteBox->setCurrentIndex(index);
++    }
++    refreshCommands();
++}
++
++void InfraredPanel::refreshCommands()
++{
++    const QJsonObject commands = selectedRemote().value("commands").toObject();
++    const QString current = commandBox->currentText().trimmed();
++    {
++        QSignalBlocker blocker(commandBox);
++        commandBox->clear();
++        QStringList names = {"Menu", "Back", "Up", "Down", "Left", "Right", "OK", "Input", "Power", "Volume up", "Volume down", "Mute"};
++        for (const auto &name : commands.keys()) if (!names.contains(name)) names << name;
++        commandBox->addItems(names);
++        if (!current.isEmpty()) commandBox->setCurrentText(current);
++    }
++    refreshButtons();
++}
++
++void InfraredPanel::refreshButtons()
++{
++    const bool available = !busy && !readOnly;
++    for (auto *control : idleControls) control->setEnabled(available);
++    const QJsonObject hub = selectedHub();
++    const QJsonObject remote = selectedRemote();
++    hubDetails->setText(hub.isEmpty() ? "No hub saved yet." : hub.value("model").toString() + " · " + hub.value("host").toString());
++    const QJsonObject commands = remote.value("commands").toObject();
++    const QString command = commandBox->currentText().trimmed();
++    const bool saved = !commands.value(command).toString().isEmpty();
++    learnButton->setEnabled(available && !remote.isEmpty() && !command.isEmpty());
++    sendButton->setEnabled(available && !remote.isEmpty() && saved);
++    menuButton->setEnabled(available && !remote.isEmpty() && !commands.value("Menu").toString().isEmpty());
++    forgetButton->setEnabled(available && saved);
++    removeRemoteButton->setEnabled(available && !remote.isEmpty());
++    cancelButton->setEnabled(busy && pending.value("action") != "send");
++}
++
++void InfraredPanel::start(QJsonObject request)
++{
++    if (busy || readOnly) return;
++    if (helper.isEmpty()) { status("The infrared helper is missing. Rebuild or reinstall SmartHome."); return; }
++    pending = request;
++    output.clear();
++    result = {};
++    gotResult = canceled = false;
++    busy = true;
++    refreshButtons();
++    status(request.value("action") == "learn" ? "Preparing the Mini to learn…" : "Contacting BroadLink support…");
++    deadline.start(request.value("action") == "learn" ? 50000 : 18000);
++    process.start("python3", {"-I", helper});
++}
++
++void InfraredPanel::consumeOutput()
++{
++    output += process.readAllStandardOutput();
++    if (output.size() > 1024 * 1024) { canceled = true; status("Unexpectedly large response from infrared helper."); process.kill(); return; }
++    int end;
++    while ((end = output.indexOf('\n')) >= 0) {
++        const QByteArray line = output.left(end);
++        output.remove(0, end + 1);
++        QJsonParseError error;
++        const auto doc = QJsonDocument::fromJson(line, &error);
++        if (error.error != QJsonParseError::NoError || !doc.isObject()) { canceled = true; status("Invalid response from infrared helper."); process.kill(); return; }
++        const auto event = doc.object();
++        if (event.value("event") == "progress" && !canceled) status(event.value("message").toString());
++        if (event.value("event") == "result") { result = event; gotResult = true; }
++    }
++}
++
++void InfraredPanel::finish(int exitCode, QProcess::ExitStatus exitStatus)
++{
++    consumeOutput();
++    deadline.stop();
++    busy = false;
++    if (canceled) { refreshButtons(); return; }
++    if (!gotResult || !result.value("ok").toBool() || exitCode != 0 || exitStatus != QProcess::NormalExit) {
++        status(result.value("message").toString("Infrared helper stopped without a result. Check Python and python-broadlink."));
++    } else {
++        const QString action = pending.value("action").toString();
++        if (action == "discover" || action == "identify") mergeHubs(result.value("hubs").toArray());
++        else if (action == "learn") {
++            const QString id = pending.value("remoteId").toString();
++            const QString command = pending.value("command").toString();
++            const QString code = result.value("code").toString();
++            if (code.isEmpty()) status("No infrared code was returned. The saved button was kept.");
++            else for (int i = 0; i < remotes.size(); ++i) {
++                auto remote = remotes[i].toObject();
++                if (remote.value("id").toString() != id || remote.value("hub") != pending.value("id")) continue;
++                auto commands = remote.value("commands").toObject();
++                commands[command] = code;
++                remote["commands"] = commands;
++                remotes[i] = remote;
++                if (save()) status("Saved " + command + " for " + remote.value("name").toString() + ".");
++                break;
++            }
++        } else if (action == "send") {
++            status("Sent " + pending.value("command").toString() + " to " + pending.value("remoteName").toString()
++                   + " through " + pending.value("hubName").toString() + ". Check the device for its response.");
++        } else status(result.value("message").toString());
++    }
++    refreshCommands();
++}
++
++void InfraredPanel::mergeHubs(const QJsonArray &found)
++{
++    if (found.isEmpty()) { status("No infrared hubs found. Check Wi-Fi and ‘Lock device’, or add the hub by IP address."); return; }
++    for (const auto &value : found) {
++        auto incoming = value.toObject();
++        bool exists = false;
++        for (int i = 0; i < hubs.size(); ++i) {
++            const auto old = hubs[i].toObject();
++            if (old.value("id") != incoming.value("id")) continue;
++            incoming["name"] = old.value("name");
++            hubs[i] = incoming;
++            exists = true;
++            break;
++        }
++        if (!exists) hubs.append(incoming);
++    }
++    if (save()) status(QString("Found %1 infrared hub(s). Select one and use Name room, then Add remote.").arg(found.size()));
++    refreshHubs();
++}
++
++void InfraredPanel::learn()
++{
++    auto hub = selectedHub();
++    const auto remote = selectedRemote();
++    const QString command = commandBox->currentText().trimmed();
++    if (hub.isEmpty() || remote.isEmpty() || command.isEmpty()) return;
++    hub["action"] = "learn";
++    hub["remoteId"] = remote.value("id");
++    hub["command"] = command;
++    start(hub);
++}
++
++void InfraredPanel::send(const QString &command)
++{
++    auto hub = selectedHub();
++    const auto remote = selectedRemote();
++    const QString code = remote.value("commands").toObject().value(command).toString();
++    if (hub.isEmpty() || remote.isEmpty() || code.isEmpty() || remote.value("hub") != hub.value("id")) {
++        status("Learn " + command + " for this remote first."); return;
++    }
++    hub["action"] = "send";
++    hub["command"] = command;
++    hub["code"] = code;
++    hub["hubName"] = hub.value("name");
++    hub["remoteName"] = remote.value("name");
++    start(hub);
++}
++
++void InfraredPanel::addRemote()
++{
++    const auto hub = selectedHub();
++    if (hub.isEmpty()) { status("Discover or add a hub first."); return; }
++    bool ok = false;
++    const QString name = QInputDialog::getText(this, "Add remote", "Device name (for example, Projector or Bedroom TV):", QLineEdit::Normal, {}, &ok).trimmed();
++    if (!ok || name.isEmpty()) return;
++    const QString id = QUuid::createUuid().toString(QUuid::WithoutBraces);
++    remotes.append(QJsonObject{{"id", id}, {"hub", hub.value("id")}, {"name", name}, {"commands", QJsonObject()}});
++    if (save()) status("Added " + name + ". Learn Menu first for a test without changing power.");
++    refreshRemotes(id);
++}
++
++void InfraredPanel::addAcerPreset()
++{
++    const auto hub = selectedHub();
++    if (hub.isEmpty()) { status("Discover or add a hub first."); return; }
++    for (const auto &value : remotes) {
++        const auto remote = value.toObject();
++        if (remote.value("hub") == hub.value("id") && remote.value("preset") == "acer-h6510bd") {
++            refreshRemotes(remote.value("id").toString());
++            status("Selected the saved Acer remote. Its buttons have been kept.");
++            return;
++        }
++    }
++    QFile file(":/broadlink/acer-h6510bd.json");
++    if (!file.open(QIODevice::ReadOnly)) { status("Acer preset is missing from this build."); return; }
++    const auto preset = QJsonDocument::fromJson(file.readAll()).object();
++    const auto codes = preset.value("commands").toObject();
++    if (codes.value("Menu").toString().isEmpty()) { status("Acer preset has no Menu command."); return; }
++    const QString id = QUuid::createUuid().toString(QUuid::WithoutBraces);
++    remotes.append(QJsonObject{{"id", id}, {"hub", hub.value("id")}, {"name", "Acer H6510BD"},
++                              {"preset", "acer-h6510bd"}, {"commands", codes}});
++    if (save()) status("Added published Acer H6510BD codes. With the projector already on, click Test Menu to check reception. No original remote is needed.");
++    refreshRemotes(id);
++}
++
++void InfraredPanel::renameHub()
++{
++    const int index = hubIndex();
++    if (index < 0) return;
++    auto hub = hubs[index].toObject();
++    bool ok = false;
++    const QString name = QInputDialog::getText(this, "Name room", "Room / hub name:", QLineEdit::Normal, hub.value("name").toString(), &ok).trimmed();
++    if (!ok || name.isEmpty()) return;
++    hub["name"] = name;
++    hubs[index] = hub;
++    if (save()) status("Hub name saved.");
++    refreshHubs(hub.value("id").toString());
++}
++
++void InfraredPanel::removeHub()
++{
++    const int index = hubIndex();
++    if (index < 0) return;
++    const QString id = hubs[index].toObject().value("id").toString();
++    if (QMessageBox::question(this, "Remove hub", "Remove this hub and its saved remotes?", QMessageBox::Yes | QMessageBox::No, QMessageBox::No) != QMessageBox::Yes) return;
++    hubs.removeAt(index);
++    for (int i = remotes.size() - 1; i >= 0; --i) if (remotes[i].toObject().value("hub").toString() == id) remotes.removeAt(i);
++    if (save()) status("Hub removed.");
++    refreshHubs();
++}
++
++void InfraredPanel::removeRemote()
++{
++    const int index = remoteIndex();
++    if (index < 0) return;
++    if (QMessageBox::question(this, "Remove remote", "Remove this remote and its learned buttons?", QMessageBox::Yes | QMessageBox::No, QMessageBox::No) != QMessageBox::Yes) return;
++    remotes.removeAt(index);
++    if (save()) status("Remote removed.");
++    refreshRemotes();
++}
++
++void InfraredPanel::forgetCommand()
++{
++    const int index = remoteIndex();
++    if (index < 0) return;
++    auto remote = remotes[index].toObject();
++    auto codes = remote.value("commands").toObject();
++    codes.remove(commandBox->currentText().trimmed());
++    remote["commands"] = codes;
++    remotes[index] = remote;
++    if (save()) status("Saved button removed.");
++    refreshButtons();
++}
+diff --git a/infraredpanel.h b/infraredpanel.h
+new file mode 100644
+index 0000000..f3c9fbb
+--- /dev/null
++++ b/infraredpanel.h
+@@ -0,0 +1,76 @@
++#ifndef INFRAREDPANEL_H
++#define INFRAREDPANEL_H
++
++#include <QWidget>
++#include <QJsonArray>
++#include <QJsonObject>
++#include <QProcess>
++#include <QTemporaryFile>
++#include <QTimer>
++
++class QComboBox;
++class QLabel;
++class QPushButton;
++
++class InfraredPanel : public QWidget
++{
++    Q_OBJECT
++public:
++    explicit InfraredPanel(const QString &settingsFile, QWidget *parent = nullptr,
++                           const QString &helperOverride = QString());
++    ~InfraredPanel() override;
++
++private:
++    void load();
++    bool save();
++    void refreshHubs(const QString &selected = QString());
++    void refreshRemotes(const QString &selected = QString());
++    void refreshCommands();
++    void refreshButtons();
++    void start(QJsonObject request);
++    void consumeOutput();
++    void finish(int exitCode, QProcess::ExitStatus exitStatus);
++    void mergeHubs(const QJsonArray &found);
++    void learn();
++    void send(const QString &command);
++    void addRemote();
++    void addAcerPreset();
++    void renameHub();
++    void removeHub();
++    void removeRemote();
++    void forgetCommand();
++    int hubIndex() const;
++    int remoteIndex() const;
++    QJsonObject selectedHub() const;
++    QJsonObject selectedRemote() const;
++    void status(const QString &text);
++
++    QString settingsFile;
++    QString helper;
++    QTemporaryFile helperFile;
++    QJsonArray hubs;
++    QJsonArray remotes;
++    bool readOnly = false;
++    bool busy = false;
++    bool gotResult = false;
++    bool canceled = false;
++    QJsonObject pending;
++    QJsonObject result;
++    QByteArray output;
++    QProcess process;
++    QTimer deadline;
++    QComboBox *hubBox;
++    QComboBox *remoteBox;
++    QComboBox *commandBox;
++    QLabel *statusLabel;
++    QLabel *hubDetails;
++    QPushButton *learnButton;
++    QPushButton *sendButton;
++    QPushButton *menuButton;
++    QPushButton *cancelButton;
++    QPushButton *forgetButton;
++    QPushButton *removeRemoteButton;
++    QList<QWidget *> idleControls;
++};
++
++#endif
+diff --git a/resources.qrc b/resources.qrc
+new file mode 100644
+index 0000000..89baa40
+--- /dev/null
++++ b/resources.qrc
+@@ -0,0 +1,5 @@
++<RCC>
++    <qresource prefix="/">
++        <file>assets/lightbulb.svg</file>
++    </qresource>
++</RCC>
+diff --git a/assets/acer-h6510bd.json b/assets/acer-h6510bd.json
+new file mode 100644
+index 0000000..db06ba8
+--- /dev/null
++++ b/assets/acer-h6510bd.json
+@@ -0,0 +1,79 @@
++{
++  "model": "Acer H6510BD",
++  "source": "https://github.com/pickysysadmin/logitech-harmony-ir-archive/blob/main/codesets/5b/5b0b82bf412b05cc.json",
++  "source_blob": "15a9f310d9251c949b1582ba21846f5fc164d4e9",
++  "device_source": "https://github.com/pickysysadmin/logitech-harmony-ir-archive/blob/main/devices/Acer/H6510BD.json",
++  "note": "Published candidate codes; hardware reception not yet tested. Power is a toggle, not discrete on/off. Timings use the published Pronto intro and repeat sequences once, encoded with broadlink.remote.pulses_to_data.",
++  "commands": {
++    "Down": "JgBIAAABEYgQEBAQEBAQMxAQEBAQEBAQEDMQMxAQEBAQMxAQEBAQEBAzEBAQMxAQEBAQEBAQEDMQEBAzEBAQMxAzEDMQMxAQEAAFQA==",
++    "Left": "JgBIAAABEYgQEBAQEBAQMxAQEBAQEBAQEDMQMxAQEBAQMxAQEBAQEBAzEDMQEBAQEBAQEBAQEDMQEBAQEDMQMxAzEDMQMxAQEAAFQA==",
++    "Right": "JgBIAAABEYgQEBAQEBAQMxAQEBAQEBAQEDMQMxAQEBAQMxAQEBAQEBAzEBAQEBAQEBAQEBAQEDMQEBAzEDMQMxAzEDMQMxAQEAAFQA==",
++    "Up": "JgBIAAABEYgQEBAQEBAQMxAQEBAQEBAQEDMQMxAQEBAQMxAQEBAQEBAQEDMQEBAQEBAQEBAQEDMQMxAQEDMQMxAzEDMQMxAQEAAFQA==",
++    "HDMI": "JgBYAAABEYgREBEQERARMhEQERAREBEQETIRMhEQERARMhEQERAREBEQETIREBEyERAREBEyERARMhEQETIREBEyETIREBEyEQAFTwABEUQRAAttAAERRBEAC20=",
++    "Menu": "JgBYAAABEYgREBEQERARMhEQERAREBEQETIRMhEQERARMhEQERAREBEQERARMhEQERAREBEQETIRMhEyERARMhEyETIRMhEQEQAFTwABEUQRAAttAAERRBEAC20=",
++    "Power": "JgBYAAABEYgREBEQERARMhEQERAREBEQETIRMhEQERARMhEQERAREBEyETIRMhEQERAREBEQETIREBEQERARMhEyETIRMhEQEQAFTwABEUQRAAttAAERRBEAC20=",
++    "OK": "JgBYAAABEYgREBEQERARMhEQERAREBEQETIRMhEQERARMhEQERAREBEQERARMhEQERAREBEQETIRMhEyERARMhEyETIRMhEQEQAFTwABEUQRAAttAAERRBEAC20=",
++    "Input": "JgBYAAABEYgREBEQERARMhEQERAREBEQETIRMhEQERARMhEQERAREBEQERARMhEyERAREBEQETIRMhEyERAREBEyETIRMhEQEQAFTwABEUQRAAttAAERRBEAC20="
++  },
++  "original_commands": [
++    {
++      "keycode": "G:MemorexO1 32 Bit:()(0x10C8A15E)():3",
++      "name": "DirectionDown",
++      "pronto": "0000 006D 0022 0000 0156 00AB 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 068F",
++      "protocol": "MemorexO1 32 Bit"
++    },
++    {
++      "keycode": "G:MemorexO1 32 Bit:()(0x10C8C13E)():3",
++      "name": "DirectionLeft",
++      "pronto": "0000 006D 0022 0000 0156 00AB 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 068F",
++      "protocol": "MemorexO1 32 Bit"
++    },
++    {
++      "keycode": "G:MemorexO1 32 Bit:()(0x10C8817E)():3",
++      "name": "DirectionRight",
++      "pronto": "0000 006D 0022 0000 0156 00AB 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 068F",
++      "protocol": "MemorexO1 32 Bit"
++    },
++    {
++      "keycode": "G:MemorexO1 32 Bit:()(0x10C841BE)():3",
++      "name": "DirectionUp",
++      "pronto": "0000 006D 0022 0000 0156 00AB 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0015 0040 0015 0040 0015 0015 0015 0040 0015 0040 0015 0040 0015 0040 0015 0040 0015 0015 0015 068F",
++      "protocol": "MemorexO1 32 Bit"
++    },
++    {
++      "keycode": "G:Toshiba 32 Bit:(0x10C852AD)(Repeat)():3",
++      "name": "InputHdmi",
++      "pronto": "0000 006D 0024 0002 0156 00AB 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 003F 0016 0015 0016 0015 0016 003F 0016 0015 0016 003F 0016 0015 0016 003F 0016 0015 0016 003F 0016 003F 0016 0015 0016 003F 0016 06A2 0156 0055 0016 0E46 0156 0055 0016 0E46",
++      "prontoRepeat": "0000 006D 0000 0002 0156 0055 0016 0E46",
++      "protocol": "Toshiba 32 Bit"
++    },
++    {
++      "keycode": "G:Toshiba 32 Bit:(0x10C821DE)(Repeat)():3",
++      "name": "Menu",
++      "pronto": "0000 006D 0024 0002 0156 00AB 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 003F 0016 0015 0016 003F 0016 003F 0016 003F 0016 003F 0016 0015 0016 06A2 0156 0055 0016 0E46 0156 0055 0016 0E46",
++      "prontoRepeat": "0000 006D 0000 0002 0156 0055 0016 0E46",
++      "protocol": "Toshiba 32 Bit"
++    },
++    {
++      "keycode": "G:Toshiba 32 Bit:(0x10C8E11E)(Repeat)():3",
++      "name": "PowerToggle",
++      "pronto": "0000 006D 0024 0002 0156 00AB 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 003F 0016 003F 0016 0015 0016 06A2 0156 0055 0016 0E46 0156 0055 0016 0E46",
++      "prontoRepeat": "0000 006D 0000 0002 0156 0055 0016 0E46",
++      "protocol": "Toshiba 32 Bit"
++    },
++    {
++      "keycode": "G:Toshiba 32 Bit:(0x10C821DE)(Repeat)():3",
++      "name": "Select",
++      "pronto": "0000 006D 0024 0002 0156 00AB 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 003F 0016 0015 0016 003F 0016 003F 0016 003F 0016 003F 0016 0015 0016 06A2 0156 0055 0016 0E46 0156 0055 0016 0E46",
++      "prontoRepeat": "0000 006D 0000 0002 0156 0055 0016 0E46",
++      "protocol": "Toshiba 32 Bit"
++    },
++    {
++      "keycode": "G:Toshiba 32 Bit:(0x10C831CE)(Repeat)():3",
++      "name": "Source",
++      "pronto": "0000 006D 0024 0002 0156 00AB 0016 0015 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 0015 0016 0015 0016 003F 0016 0015 0016 0015 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 0015 0016 0015 0016 0015 0016 003F 0016 003F 0016 003F 0016 0015 0016 0015 0016 003F 0016 003F 0016 003F 0016 0015 0016 06A2 0156 0055 0016 0E46 0156 0055 0016 0E46",
++      "prontoRepeat": "0000 006D 0000 0002 0156 0055 0016 0E46",
++      "protocol": "Toshiba 32 Bit"
++    }
++  ]
++}
+diff --git a/tests/infraredpanel_test.cpp b/tests/infraredpanel_test.cpp
+new file mode 100644
+index 0000000..6b8e23d
+--- /dev/null
++++ b/tests/infraredpanel_test.cpp
+@@ -0,0 +1,155 @@
++#include "infraredpanel.h"
++#include <QtTest>
++#include <QComboBox>
++#include <QJsonDocument>
++#include <QLabel>
++#include <QLineEdit>
++#include <QPushButton>
++#include <QTemporaryDir>
++
++class InfraredPanelTest : public QObject
++{
++    Q_OBJECT
++    QTemporaryDir dir;
++    QString file;
++    QString helper;
++    QJsonObject settings;
++    const QString menuCode = "JgAEAAECAwQ=";
++    const QString powerCode = "JgAEAAQDAgE=";
++    void write(const QString &path, const QByteArray &data) {
++        QFile f(path); QVERIFY(f.open(QIODevice::WriteOnly)); QCOMPARE(f.write(data), data.size());
++    }
++    QJsonObject read(const QString &path) {
++        QFile f(path); if (!f.open(QIODevice::ReadOnly)) return {}; return QJsonDocument::fromJson(f.readAll()).object();
++    }
++    void reply(QJsonObject response) {
++        response["event"] = "result"; response["ok"] = true;
++        write(helper + ".reply", QJsonDocument(response).toJson());
++    }
++    QPushButton *button(InfraredPanel &panel, const char *name) { return panel.findChild<QPushButton *>(name); }
++    QComboBox *combo(InfraredPanel &panel, const char *name) { return panel.findChild<QComboBox *>(name); }
++private slots:
++    void init() {
++        QVERIFY(dir.isValid());
++        file = dir.filePath("infrared.json"); helper = dir.filePath("fake.py");
++        QFile::remove(helper + ".request");
++        write(helper, R"PY(import json, pathlib, sys
++request = json.load(sys.stdin)
++pathlib.Path(__file__ + '.request').write_text(json.dumps(request))
++print(json.dumps(json.loads(pathlib.Path(__file__ + '.reply').read_text())), flush=True)
++)PY");
++        QJsonArray hubs{
++            QJsonObject{{"id", "001122334455"}, {"host", "192.168.1.20"}, {"name", "Bedroom"}, {"model", "RM4 mini"}},
++            QJsonObject{{"id", "aabbccddeeff"}, {"host", "192.168.1.21"}, {"name", "Projector room"}, {"model", "RM4 mini"}}};
++        QJsonArray remotes{
++            QJsonObject{{"id", "tv"}, {"hub", "001122334455"}, {"name", "TV"}, {"commands", QJsonObject{{"Menu", menuCode}, {"Power", powerCode}}}},
++            QJsonObject{{"id", "projector"}, {"hub", "aabbccddeeff"}, {"name", "Projector"}, {"commands", QJsonObject{{"Menu", menuCode}, {"Power", powerCode}}}}};
++        settings = {{"version", 1}, {"hubs", hubs}, {"remotes", remotes}};
++        write(file, QJsonDocument(settings).toJson());
++        reply({{"message", "Sent"}});
++    }
++    void menuAlwaysUsesMenuAndSelectedHub() {
++        InfraredPanel panel(file, nullptr, helper);
++        combo(panel, "infraredHub")->setCurrentIndex(1);
++        combo(panel, "infraredCommand")->setCurrentText("Power");
++        QVERIFY(button(panel, "testInfraredMenu")->isEnabled());
++        button(panel, "testInfraredMenu")->click();
++        QTRY_VERIFY_WITH_TIMEOUT(QFile::exists(helper + ".request"), 5000);
++        QTRY_VERIFY_WITH_TIMEOUT(button(panel, "testInfraredMenu")->isEnabled(), 5000);
++        const auto request = read(helper + ".request");
++        QCOMPARE(request.value("command").toString(), QString("Menu"));
++        QCOMPARE(request.value("code").toString(), menuCode);
++        QCOMPARE(request.value("id").toString(), QString("aabbccddeeff"));
++        QCOMPARE(request.value("host").toString(), QString("192.168.1.21"));
++        QVERIFY(panel.findChild<QLabel *>("infraredStatus")->text().contains("Projector room"));
++    }
++    void menuNeverFallsBackToPower() {
++        auto remotes = settings["remotes"].toArray();
++        auto remote = remotes[0].toObject(); remote["commands"] = QJsonObject{{"Power", powerCode}}; remotes[0] = remote;
++        settings["remotes"] = remotes; write(file, QJsonDocument(settings).toJson());
++        InfraredPanel panel(file, nullptr, helper);
++        QVERIFY(!button(panel, "testInfraredMenu")->isEnabled());
++        QVERIFY(!button(panel, "sendInfrared")->isEnabled());
++        QVERIFY(!QFile::exists(helper + ".request"));
++    }
++    void learnsAndRestoresCodeForOnlySelectedRemote() {
++        reply({{"code", "JgAEAAUGBwg="}});
++        {
++            InfraredPanel panel(file, nullptr, helper);
++            combo(panel, "infraredHub")->setCurrentIndex(1);
++            button(panel, "learnInfrared")->click();
++            QVERIFY(!combo(panel, "infraredHub")->isEnabled());
++            QTRY_VERIFY_WITH_TIMEOUT(combo(panel, "infraredHub")->isEnabled(), 5000);
++        }
++        const auto saved = read(file)["remotes"].toArray();
++        QCOMPARE(saved[0].toObject()["commands"].toObject()["Menu"].toString(), menuCode);
++        QCOMPARE(saved[1].toObject()["commands"].toObject()["Menu"].toString(), QString("JgAEAAUGBwg="));
++        reply({{"message", "Sent"}});
++        InfraredPanel reopened(file, nullptr, helper);
++        combo(reopened, "infraredHub")->setCurrentIndex(1);
++        button(reopened, "testInfraredMenu")->click();
++        QTRY_VERIFY_WITH_TIMEOUT(button(reopened, "testInfraredMenu")->isEnabled(), 5000);
++        QCOMPARE(read(helper + ".request")["code"].toString(), QString("JgAEAAUGBwg="));
++    }
++    void rediscoveryPreservesNamesRemotesAndUpdatesAddresses() {
++        reply({{"hubs", QJsonArray{QJsonObject{{"id", "001122334455"}, {"host", "192.168.1.99"}, {"name", "Factory name"}, {"model", "RM4 mini"}}}}});
++        InfraredPanel panel(file, nullptr, helper);
++        button(panel, "discoverHubs")->click();
++        QTRY_VERIFY_WITH_TIMEOUT(button(panel, "discoverHubs")->isEnabled(), 5000);
++        const auto root = read(file);
++        QCOMPARE(root["hubs"].toArray().size(), 2);
++        QCOMPARE(root["hubs"].toArray()[0].toObject()["host"].toString(), QString("192.168.1.99"));
++        QCOMPARE(root["hubs"].toArray()[0].toObject()["name"].toString(), QString("Bedroom"));
++        QCOMPARE(root["remotes"], settings["remotes"]);
++    }
++    void malformedSettingsAreNotOverwritten() {
++        write(file, "{broken");
++        InfraredPanel panel(file, nullptr, helper);
++        QVERIFY(!button(panel, "discoverHubs")->isEnabled());
++        QVERIFY(panel.findChild<QLabel *>("infraredStatus")->text().contains("left unchanged"));
++        QFile f(file); QVERIFY(f.open(QIODevice::ReadOnly)); QCOMPARE(f.readAll(), QByteArray("{broken"));
++    }
++    void acerPresetNeedsNoLearningAndNeverSendsOnAdd() {
++        InfraredPanel panel(file, nullptr, helper);
++        combo(panel, "infraredHub")->setCurrentIndex(1);
++        button(panel, "addAcerPreset")->click();
++        QVERIFY(!QFile::exists(helper + ".request"));
++        const auto saved = read(file)["remotes"].toArray();
++        QCOMPARE(saved.size(), 3);
++        const auto remote = saved.last().toObject();
++        QCOMPARE(remote["hub"].toString(), QString("aabbccddeeff"));
++        QVERIFY(!remote["commands"].toObject()["Menu"].toString().isEmpty());
++        QVERIFY(remote["commands"].toObject()["Menu"] != remote["commands"].toObject()["Power"]);
++        button(panel, "addAcerPreset")->click();
++        QCOMPARE(read(file)["remotes"].toArray().size(), 3);
++        button(panel, "testInfraredMenu")->click();
++        QTRY_VERIFY_WITH_TIMEOUT(button(panel, "testInfraredMenu")->isEnabled(), 5000);
++        const auto request = read(helper + ".request");
++        QCOMPARE(request["command"].toString(), QString("Menu"));
++        QCOMPARE(request["code"], remote["commands"].toObject()["Menu"]);
++    }
++    void customButtonNamesKeepSpaces() {
++        InfraredPanel panel(file, nullptr, helper);
++        auto *edit = combo(panel, "infraredCommand")->lineEdit();
++        edit->clear(); QTest::keyClicks(edit, "Custom button");
++        QCOMPARE(edit->text(), QString("Custom button"));
++        QVERIFY(button(panel, "learnInfrared")->isEnabled());
++        QVERIFY(!button(panel, "sendInfrared")->isEnabled());
++    }
++    void failedLearningKeepsSavedCode() {
++        write(helper + ".reply", QJsonDocument(QJsonObject{{"event", "result"}, {"ok", false}, {"message", "Timed out"}}).toJson());
++        InfraredPanel panel(file, nullptr, helper);
++        button(panel, "learnInfrared")->click();
++        QTRY_VERIFY_WITH_TIMEOUT(button(panel, "learnInfrared")->isEnabled(), 5000);
++        QCOMPARE(read(file), settings);
++        QCOMPARE(panel.findChild<QLabel *>("infraredStatus")->text(), QString("Timed out"));
++    }
++    void screenshot() {
++        if (qEnvironmentVariableIsEmpty("LIGHTS_TEST_SCREENSHOT")) QSKIP("No preview requested");
++        InfraredPanel panel(file, nullptr, helper);
++        panel.resize(1100, 550); panel.show(); QTest::qWait(100);
++        QVERIFY(panel.grab().save(qEnvironmentVariable("LIGHTS_TEST_SCREENSHOT")));
++    }
++};
++QTEST_MAIN(InfraredPanelTest)
++#include "infraredpanel_test.moc"
+diff --git a/tests/test_broadlink_bridge.py b/tests/test_broadlink_bridge.py
+new file mode 100644
+index 0000000..ded036d
+--- /dev/null
++++ b/tests/test_broadlink_bridge.py
+@@ -0,0 +1,106 @@
++import base64
++import importlib.util
++from pathlib import Path
++import types
++import unittest
++from unittest.mock import Mock, patch
++
++spec = importlib.util.spec_from_file_location("bridge", Path(__file__).parents[1] / "broadlink_bridge.py")
++bridge = importlib.util.module_from_spec(spec)
++spec.loader.exec_module(bridge)
++PACKET = bytes.fromhex("2600040001020304")
++CODE = base64.b64encode(PACKET).decode()
++
++
++class StorageError(Exception):
++    pass
++
++
++class Mini:
++    def __init__(self, mac="001122334455", host="192.168.1.20"):
++        self.mac = bytes.fromhex(mac)
++        self.host = (host, 80)
++        self.model = "RM4 mini"
++        self.TYPE = "RM4MINI"
++        self.name = "Room"
++        self.is_locked = False
++        self.auth = Mock(return_value=True)
++        self.send_data = Mock()
++        self.enter_learning = Mock()
++        self.check_data = Mock(return_value=PACKET)
++
++
++class BridgeTests(unittest.TestCase):
++    def setUp(self):
++        self.bedroom = Mini()
++        self.livingroom = Mini("aabbccddeeff", "192.168.1.21")
++        self.api = types.SimpleNamespace(
++            remote=types.SimpleNamespace(rmmini=Mini),
++            exceptions=types.SimpleNamespace(StorageError=StorageError),
++            hello=Mock(return_value=self.bedroom),
++            discover=Mock(return_value=[self.bedroom, self.livingroom, object(), self.bedroom]))
++        self.request = {"action": "send", "host": "192.168.1.20", "id": "001122334455", "code": CODE}
++
++    def test_targets_one_hub_without_discovery(self):
++        bridge.execute(self.request, self.api)
++        self.api.hello.assert_called_once_with("192.168.1.20", timeout=5)
++        self.api.discover.assert_not_called()
++        self.bedroom.send_data.assert_called_once_with(PACKET)
++        self.livingroom.send_data.assert_not_called()
++
++    def test_changed_ip_identity_never_sends(self):
++        self.api.hello.return_value = self.livingroom
++        with self.assertRaisesRegex(ValueError, "different hub"):
++            bridge.execute(self.request, self.api)
++        self.livingroom.auth.assert_not_called()
++        self.livingroom.send_data.assert_not_called()
++
++    def test_locked_hub_never_sends(self):
++        self.bedroom.is_locked = True
++        with self.assertRaisesRegex(ValueError, "Lock device"):
++            bridge.execute(self.request, self.api)
++        self.bedroom.send_data.assert_not_called()
++
++    def test_invalid_or_rf_code_rejected_before_network(self):
++        for code in ("bad!", base64.b64encode(b"\xb2\x00\x02\x00\x01\x02").decode(),
++                     base64.b64encode(b"\x26\x00\x09\x00\x01\x02").decode()):
++            with self.subTest(code=code), self.assertRaises(ValueError):
++                bridge.execute({**self.request, "code": code}, self.api)
++        self.api.hello.assert_not_called()
++
++    def test_discovery_filters_and_deduplicates(self):
++        result = bridge.execute({"action": "discover"}, self.api)
++        self.assertEqual([x["id"] for x in result["hubs"]], ["001122334455", "aabbccddeeff"])
++        self.bedroom.auth.assert_not_called()
++        self.bedroom.send_data.assert_not_called()
++
++    def test_learning_waits_for_signal_without_transmitting(self):
++        self.bedroom.check_data.side_effect = [StorageError(), PACKET]
++        progress = Mock()
++        with patch.object(bridge.time, "sleep"):
++            result = bridge.execute({**self.request, "action": "learn"}, self.api, progress)
++        self.assertEqual(result["code"], CODE)
++        self.bedroom.enter_learning.assert_called_once()
++        self.bedroom.send_data.assert_not_called()
++        progress.assert_called_once()
++
++    def test_failed_authentication_does_not_send(self):
++        self.bedroom.auth.return_value = False
++        with self.assertRaisesRegex(ValueError, "authentication"):
++            bridge.execute(self.request, self.api)
++        self.bedroom.send_data.assert_not_called()
++
++    def test_learning_timeout(self):
++        with patch.object(bridge.time, "monotonic", side_effect=[0, 31]):
++            with self.assertRaisesRegex(ValueError, "No infrared signal"):
++                bridge.execute({**self.request, "action": "learn"}, self.api)
++        self.bedroom.send_data.assert_not_called()
++
++    def test_support_check_has_no_network(self):
++        bridge.execute({"action": "check"}, self.api)
++        self.api.hello.assert_not_called()
++        self.api.discover.assert_not_called()
++
++
++if __name__ == "__main__":
++    unittest.main()

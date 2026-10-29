@@ -26,6 +26,7 @@ d:openvpn
 d:filezilla
 d:libnftnl
 d:wpa_supplicant
+f:f846c24fe4fb085c326e5820a6624f88:nethogs/.pkgfiles
 f:fcce95eb5466ef43c4192a32b38ab838:nethogs/CHANGELOG
 f:a3ea60e8ff5b28f54bd1ca2207958b90:nethogs/spkgbuild
 f:e3a6afcad0610342f9f99f207cc25344:pidgin/CHANGELOG

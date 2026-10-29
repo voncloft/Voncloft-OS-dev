@@ -538,7 +538,8 @@ f:944866c0b7e940fd626580b3ce313e9b:kshisen/spkgbuild
 f:7198491f5a70499c1f675b297ed11354:optiimage/spkgbuild
 f:e8befe5d142b44fe0961930d179302a6:optiimage/override
 f:d6c4f965058087609f7362e65560980a:smarthome/.pkgfiles
-f:e7d80caf1d928b507840858fdcb69bec:smarthome/spkgbuild
+f:bb5c86b44321aee132ac7a222007cacd:smarthome/smarthome-broadlink.patch
+f:bc4b038326e4e7ff7e97ca906f6d12e1:smarthome/spkgbuild
 f:24d6534e56fa61f9dfb0f46d7088e0c5:smarthome/override
 f:bbd8f9179cacde69f910d9932921cb45:smarthome/.checksums
 f:ce1984fbde820672889b835d1fb2f0a5:calindori/spkgbuild

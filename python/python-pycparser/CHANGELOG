@@ -1,3 +1,5 @@
+2026-10-29: Build with Python 3 using the declared wheel backend; correct dependencies and PyPI version tracking.
+
 Date: Mon 12 Jul 2021 03:32:42 PM EDT
 
 name=python-pycparser

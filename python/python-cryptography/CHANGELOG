@@ -1,3 +1,5 @@
+2026-10-29: Updated to 50.0.2; use the PEP 517/maturin source build, correct dependencies, and track PyPI versions only.
+
 Date: Sun 11 Jul 2021 01:12:16 PM EDT
 
 name=python-cryptography

@@ -1,16 +1,24 @@
-# description : A package designed to expose cryptographic recipes and primitives to Python developers
-  # depends : python-six python-cffi python-idna python-setuptools python-asn1crypto
+# description : Cryptographic algorithms, certificates, and encryption primitives for Python
+# depends : python python-cffi python-setuptools libffi openssl pkgconf rust
 
 name=python-cryptography
-version=40.0.2
+version=50.0.2
 release=1
-
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "${_name}-${version}"
+    export PYTHONNOUSERSITE=1
+    export CARGO_HOME="$SRC/cargo-home"
+    export CARGO_BUILD_JOBS="${CARGO_BUILD_JOBS:-2}"
+    # PEP 517 supplies the required maturin/CFFI backend in an isolated build
+    # environment. Compile this source tree against the system OpenSSL.
+    python3 -m pip wheel --no-cache-dir --no-deps --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/${_name}-${version}-*.whl
+    install -Dm644 LICENSE "$PKG/usr/share/licenses/$name/LICENSE"
+    install -Dm644 LICENSE.APACHE "$PKG/usr/share/licenses/$name/LICENSE.APACHE"
+    install -Dm644 LICENSE.BSD "$PKG/usr/share/licenses/$name/LICENSE.BSD"
+}
