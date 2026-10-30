@@ -125,12 +125,12 @@ f:386bc73af13ba3862968c01c3ad6f57d:plasma-thunderbolt/spkgbuild
 f:d910b3a899c9e4f2410614556c93c448:powerdevil/.pkgfiles
 f:503ace033dcdb92703f67b69bc1454e9:powerdevil/CHANGELOG
 f:99e858782cd551d50b9e40546d113090:powerdevil/spkgbuild
-f:0e46f5656bcc775c49b692ea1d1d2dd4:kwin/.pkgfiles
+f:7247ab9043b63f1c060d1b43d81b2047:kwin/.pkgfiles
 f:dc83200efde5c5047c50da26b3723a9e:kwin/vulkan-raii-check.cpp
-f:abdfa76fb1a66265363beebb8afdb943:kwin/CHANGELOG
-f:f9598fd1ec8a4e27c00867608c6cc732:kwin/kwin-window-tabs.patch
-f:368a63ad1fec67d2e819790fb91d9024:kwin/spkgbuild
-f:bbdc3dad608c4870d3c8f8bfa3ecbe15:kwin/WINDOW-TABS.md
+f:8278770ea255b1ff9f7a088529765986:kwin/CHANGELOG
+f:d988fc7522c91ef1d146fb5b34e3c35e:kwin/kwin-window-tabs.patch
+f:dd21d7de7fa01e7f49ecf10a6f2f9845:kwin/spkgbuild
+f:9e1532df0002ad9a95701afdfaee9bb2:kwin/WINDOW-TABS.md
 f:09efe660ff517c2ea7b498154d83ed2f:plasma-nm/.pkgfiles
 f:f2e30fd0919002d0e00de0c4a1ab3b1e:plasma-nm/CHANGELOG
 f:f3bbdd3e3f2ebc38012c3481b35708f5:plasma-nm/spkgbuild

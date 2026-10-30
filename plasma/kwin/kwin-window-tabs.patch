@@ -455,7 +455,7 @@
 +}
 --- /dev/null
 +++ b/src/windowtabgroup.cpp
-@@ -0,0 +1,309 @@
+@@ -0,0 +1,326 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#include "windowtabgroup.h"
 +#include "input.h"
@@ -688,10 +688,16 @@
 +        || (source->tabGroup() && source->tabGroup() == target->tabGroup())) {
 +        return false;
 +    }
++    const auto sources = source->tabGroup() ? source->tabGroup()->windows() : QList<Window *>{source};
 +    const auto targets = target->tabGroup() ? target->tabGroup()->windows() : QList<Window *>{target};
 +    QSizeF minimum = source->minSize();
 +    QSizeF maximum = source->maxSize();
-+    for (Window *tab : targets) {
++    // Grouping joins both complete groups. Check every member before moving
++    // any windows, including the inactive tabs in the source group.
++    for (Window *tab : sources + targets) {
++        if (!canGroup(tab)) {
++            return false;
++        }
 +        minimum = minimum.expandedTo(tab->minSize());
 +        maximum = maximum.boundedTo(tab->maxSize());
 +    }
@@ -707,15 +713,26 @@
 +    if (!canGroupWith(source, target)) {
 +        return false;
 +    }
-+    if (source->tabGroup()) {
-+        source->tabGroup()->remove(source);
-+    }
-+    WindowTabGroup *group = target->tabGroup();
++    // Keep an existing group's frame when adding a standalone window. When
++    // merging two groups, keep the target group and transfer every source tab.
++    const auto sources = source->tabGroup() ? source->tabGroup()->windows() : QList<Window *>{source};
++    const auto targets = target->tabGroup() ? target->tabGroup()->windows() : QList<Window *>{target};
++    WindowTabGroup *group = target->tabGroup() ? target->tabGroup() : source->tabGroup();
 +    if (!group) {
 +        group = new WindowTabGroup(this);
 +        group->add(target);
 +    }
-+    group->add(source);
++    for (Window *tab : sources + targets) {
++        if (tab->tabGroup() == group) {
++            continue;
++        }
++        // remove() restores saved flags and can dissolve the old group when
++        // only one member remains. Re-read each tab's group before removing it.
++        if (WindowTabGroup *previous = tab->tabGroup()) {
++            previous->remove(tab);
++        }
++        group->add(tab);
++    }
 +    group->select(target);
 +    return true;
 +}
@@ -997,10 +1014,10 @@
  add_subdirectory(fakes)
  add_subdirectory(activation)
 +
-+integrationTest(NAME testWindowTabGroup SRCS window_tab_group_test.cpp LIBS KDecoration3::KDecoration)
++integrationTest(NAME testWindowTabGroup SRCS window_tab_group_test.cpp LIBS KDecoration3::KDecoration KF6::I18n)
 --- /dev/null
 +++ b/autotests/integration/window_tab_group_test.cpp
-@@ -0,0 +1,596 @@
+@@ -0,0 +1,703 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#include "kwin_wayland_test.h"
 +#include "decorations/tabbeddecoration.h"
@@ -1164,6 +1181,74 @@
 +        QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(target).center());
 +        QTRY_VERIFY(!b->window->tabGroup());
 +        QVERIFY(!a->window->tabGroup());
++    }
++    void windowMenuAddsThirdAndFourth_data()
++    {
++        QTest::addColumn<bool>("fromGroup");
++        QTest::newRow("existing-group-menu") << true;
++        QTest::newRow("incoming-window-menu") << false;
++    }
++    void windowMenuAddsThirdAndFourth()
++    {
++        QFETCH(bool, fromGroup);
++        auto a = createClient(); auto b = createClient(); auto c = createClient(); auto d = createClient();
++        QVERIFY(a && b && c && d);
++        a->shell->set_title(QStringLiteral("First")); b->shell->set_title(QStringLiteral("Second"));
++        c->shell->set_title(QStringLiteral("Third")); d->shell->set_title(QStringLiteral("Fourth"));
++        QTRY_COMPARE(d->window->caption(), QStringLiteral("Fourth"));
++        group(a.get(), b.get());
++        WindowTabGroup *tabs = b->window->tabGroup();
++        const auto frame = b->window->frameGeometry();
++        int count = 2;
++        for (Client *incoming : {c.get(), d.get()}) {
++            Window *source = fromGroup ? tabs->current() : incoming->window.data();
++            Window *target = fromGroup ? incoming->window.data() : tabs->current();
++            QMenu *menu = openTabMenu(source); QVERIFY(menu);
++            QAction *action = menuAction(menu, target->caption()); QVERIFY(action);
++            QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(action).center());
++            ++count;
++            QTRY_COMPARE(tabs->windows().size(), count);
++            QCOMPARE(incoming->window->tabGroup(), tabs);
++            QCOMPARE(a->window->tabGroup(), tabs); QCOMPARE(b->window->tabGroup(), tabs);
++            QCOMPARE(tabs->current(), target);
++            QTRY_VERIFY(!workspace()->userActionsMenu()->hasWindow());
++            for (Window *member : tabs->windows()) {
++                QTRY_COMPARE(member->frameGeometry(), frame);
++                QCOMPARE(member->isShown(), member == target);
++            }
++        }
++        for (int i = 0; i < 8; ++i) {
++            tabs->cycle(1);
++            QCOMPARE(workspace()->activeWindow(), tabs->current());
++        }
++        // Detach one member without dissolving the other three.
++        Window *detached = tabs->current();
++        QMenu *menu = openTabMenu(detached); QVERIFY(menu);
++        QAction *detach = menuAction(menu, QStringLiteral("Detach This Tab")); QVERIFY(detach);
++        QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(detach).center());
++        QTRY_VERIFY(!detached->tabGroup());
++        QCOMPARE(tabs->windows().size(), 3);
++        QVERIFY(detached->isShown());
++    }
++    void mergeChecksInactiveTabConstraints()
++    {
++        auto a = createClient(); auto b = createClient(); auto c = createClient(); QVERIFY(a && b && c);
++        a->shell->set_min_size(700, 340);
++        a->surface->commit(KWayland::Client::Surface::CommitFlag::None);
++        c->shell->set_max_size(650, 500);
++        c->surface->commit(KWayland::Client::Surface::CommitFlag::None);
++        c->shell->set_title(QStringLiteral("Too small"));
++        QTRY_COMPARE(a->window->minSize(), QSizeF(700, 340));
++        QTRY_COMPARE(c->window->maxSize(), QSizeF(650, 500));
++        group(a.get(), b.get());
++        auto tabs = b->window->tabGroup();
++        QVERIFY(!WindowTabManager::canGroupWith(b->window, c->window));
++        QVERIFY(!WindowTabManager::canGroupWith(c->window, b->window));
++        QVERIFY(!workspace()->windowTabManager()->groupWindows(b->window, c->window));
++        QCOMPARE(a->window->tabGroup(), tabs); QCOMPARE(b->window->tabGroup(), tabs);
++        QCOMPARE(tabs->windows().size(), 2); QVERIFY(!c->window->tabGroup());
++        QMenu *menu = openTabMenu(b->window); QVERIFY(menu);
++        QVERIFY(!menuAction(menu, QStringLiteral("Too small")));
 +    }
 +    void windowMenuRefreshAndClosedTarget()
 +    {
@@ -1407,10 +1492,13 @@
 +        QVERIFY(a && b && c && d);
 +        group(a.get(), b.get()); group(c.get(), d.get());
 +        QVERIFY(workspace()->windowTabManager()->groupWindows(a->window, d->window));
-+        QTRY_VERIFY(!b->window->tabGroup());
-+        QVERIFY(b->window->isShown()); QVERIFY(!b->window->skipTaskbar());
++        QCOMPARE(b->window->tabGroup(), d->window->tabGroup());
 +        QCOMPARE(a->window->tabGroup(), d->window->tabGroup());
-+        QCOMPARE(d->window->tabGroup()->windows().size(), 3);
++        QCOMPARE(c->window->tabGroup(), d->window->tabGroup());
++        QCOMPARE(d->window->tabGroup()->windows().size(), 4);
++        // Joining an already shared group is a no-op; never duplicate members.
++        QVERIFY(workspace()->windowTabManager()->groupWindows(a->window, d->window));
++        QCOMPARE(d->window->tabGroup()->windows().size(), 4);
 +        d->window->tabGroup()->select(a->window);
 +        QCOMPARE(workspace()->activeWindow(), a->window.data());
 +        QTRY_COMPARE(a->window->frameGeometry(), d->window->frameGeometry());
@@ -1476,10 +1564,10 @@
 +        QVERIFY(!workspace()->windowTabManager()->groupWindows(nullptr, b->window));
 +        QVERIFY(!workspace()->windowTabManager()->groupWindows(b->window, b->window));
 +    }
-+    void realKateAndKonsole()
++    void realKateKonsoleAndKWrite()
 +    {
 +        if (!qEnvironmentVariableIsSet("KWIN_TABS_REAL_APPS")) {
-+            QSKIP("Set KWIN_TABS_REAL_APPS=1 for the installed Kate/Konsole smoke test");
++            QSKIP("Set KWIN_TABS_REAL_APPS=1 for the installed Kate/Konsole/KWrite smoke test");
 +        }
 +        QTemporaryDir data;
 +        QVERIFY(data.isValid());
@@ -1559,6 +1647,34 @@
 +        QTRY_COMPARE(terminal->maximizeMode(), MaximizeRestore);
 +        QTRY_COMPARE(editor->frameGeometry(), terminal->frameGeometry());
 +        QVERIFY(editor->tabGroup());
++        // Reproduce the user's path: open the menu of an existing pair and
++        // add a third, distinct installed application without losing a tab.
++        QProcess kwrite;
++        kwrite.setProcessEnvironment(env);
++        kwrite.start("/usr/bin/kwrite", {document.fileName()});
++        QVERIFY(kwrite.waitForStarted());
++        QTRY_VERIFY_WITH_TIMEOUT(findWindow(kwrite.processId()), 15000);
++        QPointer<Window> third = findWindow(kwrite.processId());
++        workspace()->activateWindow(editor);
++        Test::pointerMotion(QPointF(editor->frameGeometry().center().x(), editor->y() + 10), 400);
++        Test::pointerButtonPressed(BTN_RIGHT, 401);
++        Test::pointerButtonReleased(BTN_RIGHT, 402);
++        QTRY_VERIFY(workspace()->userActionsMenu()->isShown());
++        QVERIFY(workspace()->userActionsMenu()->isMenuWindow(editor));
++        menu = openTabMenu(editor); QVERIFY(menu);
++        target = menuAction(menu, third->caption().replace(QLatin1Char('&'), QStringLiteral("&&")));
++        QVERIFY(target);
++        QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(target).center());
++        QTRY_VERIFY(third->tabGroup());
++        QTRY_COMPARE(third->tabGroup()->windows().size(), 3);
++        QCOMPARE(editor->tabGroup(), third->tabGroup());
++        QCOMPARE(terminal->tabGroup(), third->tabGroup());
++        QTRY_VERIFY(!workspace()->userActionsMenu()->hasWindow());
++        for (Window *member : {editor.data(), terminal.data(), third.data()}) {
++            third->tabGroup()->select(member);
++            QTRY_VERIFY(member->isShown());
++            QTRY_COMPARE(member->frameGeometry(), third->frameGeometry());
++        }
 +        if (qEnvironmentVariableIsSet("KWIN_TABS_PREVIEW")) {
 +            QImage preview(QSize(qCeil(editor->width()), qCeil(editor->frameMargins().top())), QImage::Format_ARGB32_Premultiplied);
 +            preview.fill(Qt::transparent);
@@ -1567,6 +1683,14 @@
 +            painter.end();
 +            QVERIFY(preview.save(qEnvironmentVariable("KWIN_TABS_PREVIEW")));
 +        }
++        menu = openTabMenu(third); QVERIFY(menu);
++        target = menuAction(menu, QStringLiteral("Detach This Tab")); QVERIFY(target);
++        QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(target).center());
++        QTRY_VERIFY(!third->tabGroup());
++        QCOMPARE(editor->tabGroup(), terminal->tabGroup());
++        QCOMPARE(editor->tabGroup()->windows().size(), 2);
++        kwrite.terminate();
++        QTRY_COMPARE(kwrite.state(), QProcess::NotRunning);
 +        editor->tabGroup()->remove(editor);
 +        QVERIFY(!editor->tabGroup()); QVERIFY(!terminal->tabGroup());
 +        QVERIFY(editor->isShown()); QVERIFY(terminal->isShown());

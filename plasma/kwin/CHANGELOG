@@ -612,3 +612,16 @@ Synopsis:
 Move window tab controls into More Actions -> Tab Windows. List eligible open
 windows by title and icon for direct grouping, with safe handling of closed or
 changed targets. Keep tab shortcuts and the existing Alt+Tab effect.
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 2026
+
+Version=6.8.2
+Release=5
+
+Synopsis:
+Keep every existing tab when adding another window or merging tab groups.
+Check size and decoration compatibility across all members before merging.
+Cover adding third/fourth windows from either menu, group merging, rejection
+of incompatible hidden tabs, and real Kate/Konsole/KWrite grouping.

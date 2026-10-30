@@ -9,6 +9,7 @@ Alt+Tab retains the existing Plasma window-switching effect and shortcuts. A tab
 
 - Focus a window, press **Meta+Ctrl+G**, then click the other window to group it with. Escape cancels selection.
 - Or right-click the titlebar and choose **More Actions → Tab Windows**, then choose the other window from the list.
+- Repeat grouping to add a third, fourth, or more compatible windows. Joining two existing groups keeps all their tabs together. To move only one tab to another group, detach it first.
 - Click a tab, scroll over the tabs, or use **Meta+Ctrl+Tab** / **Meta+Ctrl+Shift+Tab** to switch.
 - **Meta+Ctrl+U** or **More Actions → Tab Windows → Detach This Tab** separates the current window.
 - Drag the selected tab or the small left titlebar grip to move the group. Resize its outer edges normally.
