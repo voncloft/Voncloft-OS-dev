@@ -102,12 +102,45 @@ screen_start()
 
 screen_stop()
 {
+    scan_input_stop
     [ "${screen_active:-}" = 1 ] || return 0
     screen_active=
     # Clear the restored terminal before printing the final results.
     printf '\033[0m\033[?7h\033[?25h\033[?1049l\033[H\033[2J' >&"$screen_fd"
     exec {screen_fd}>&-
     rm -f -- "$screen_output"
+}
+
+# Read scan shortcuts without echoing them over the fixed terminal display.
+scan_input_start()
+{
+    screen_scan_stopped=
+    [ "${screen_active:-}" = 1 ] || return 0
+    if { exec {scan_input_fd}</dev/tty; } 2>/dev/null; then
+        scan_tty_state=$(stty -g <&"$scan_input_fd") || { scan_input_stop; return 0; }
+        stty -echo -icanon min 1 time 0 <&"$scan_input_fd" || scan_input_stop
+    fi
+}
+
+scan_input_stop()
+{
+    if [ -n "${scan_input_fd:-}" ]; then
+        [ -z "${scan_tty_state:-}" ] || stty "$scan_tty_state" <&"$scan_input_fd" 2>/dev/null
+        exec {scan_input_fd}<&-
+        unset scan_input_fd scan_tty_state
+    fi
+}
+
+scan_quit_requested()
+{
+    local key
+    [ -n "${scan_input_fd:-}" ] || return 1
+    while IFS= read -r -s -n 1 -t 0.001 -u "$scan_input_fd" key; do
+        case "$key" in
+            q|Q) screen_scan_stopped=1; return 0 ;;
+        esac
+    done
+    return 1
 }
 
 # Format the progress counter shown while checks are running.
@@ -120,16 +153,42 @@ check_progress()
     printf '%s/%s (%s%%)' "$current" "$total" "$percent"
 }
 
-# Print every result after completion so the full list remains in scrollback.
+# Start long terminal reports at the top; keep every result available to scroll.
 print_stats()
+{
+    if [ -t 1 ] && [ "${TERM:-dumb}" != dumb ]; then
+        printf '\033[0m\033[?7h\033[H\033[2J'
+        if command -v less >/dev/null 2>&1; then
+            if [ -n "${test_upgrade:-}" ] && [ -s "$repo_root/test_updates.sh" ]; then
+                # lesskey returns the ASCII value of the action letter on exit.
+                # Keep even short pending reports open so these actions are available.
+                local report_action
+                print_report | LESS= LESSOPEN= LESSCLOSE= less -R -X \
+                    --lesskey-src=<(printf '#command\na quit a\nl quit l\n') \
+                    -P 'a apply | l apply + upload | (q to exit)'
+                report_action=$?
+                case "$report_action" in
+                    97) "$program_path" -p "$repo_root" -a ;;
+                    108) "$program_path" -p "$repo_root" -l ;;
+                    *) return "$report_action" ;;
+                esac
+                return $?
+            fi
+            print_report | LESS= LESSOPEN= LESSCLOSE= less -R -F -X -P '(q to exit)'
+            return
+        fi
+    fi
+    print_report
+}
+
+print_report()
 {
     local mode='Apply updates' entry part
     local -a update_parts
     [ -z "${test_upgrade:-}" ] || mode='Test run'
     [ -z "${update_repo_newer_only:-}" ] || mode+=" (newer only)"
-    if [ -t 1 ] && [ "${TERM:-dumb}" != dumb ]; then
-        printf '\033[0m\033[?7h\033[H\033[2J'
-    fi
+    [ "${screen_scan_stopped:-}" != 1 ] || mode+=" (stopped early)"
+    printf '%bUpdate report%b\n' "${WHITE:-}" "${NC:-}"
     printf '%bUpdates: %s%b\n' "${BLUE:-}" "${count:-0}" "${NC:-}"
     printf '%bMissing: %s%b\n' "${BLUE:-}" "${missing:-0}" "${NC:-}"
     printf '%bMode: %s%b\n\n' "${YELLOW:-}" "$mode" "${NC:-}"
@@ -274,6 +333,7 @@ screen_draw()
         fields+=('' 'Packages to be updated:  [i] installed  [ ] not installed')
         colors+=('' "${WHITE:-}")
         available=$((rows - ${#fields[@]}))
+        [ -z "${scan_input_fd:-}" ] || available=$((available-1))
         if [ "$available" -gt 0 ]; then
             if [ "${#screen_updates[@]}" -eq 0 ]; then
                 fields+=('None found yet.')
@@ -310,6 +370,9 @@ screen_draw()
     # Clear rows left over after a resize without issuing scrolling newlines.
     if [ "$row" -le "$rows" ]; then
         printf '\033[%s;1H\033[J' "$row" >&"$screen_fd"
+    fi
+    if [ -n "${scan_input_fd:-}" ] && [ "${screen_phase:-}" = scan ]; then
+        screen_write_parts "$rows" "$((columns-1))" "${WHITE:-}" '(q to stop after current check)'
     fi
 }
 
@@ -1066,6 +1129,12 @@ configure_repo_path()
                 repo_root=$2
                 shift
                 ;;
+            -a|-st|-t|-n|-s|-all|--all|-k|-e|-stu|-utg|-tp|-h|-l)
+                ;;
+            *)
+                printf 'ERROR: Unknown option: %s. Use -h for help.\n' "$1" >&2
+                return 2
+                ;;
         esac
         shift
     done
@@ -1080,16 +1149,16 @@ configure_repo_path()
 
 check_handles()
 {
-        while [ $1 ]; do
+        while [ "$#" -gt 0 ]; do
                 case $1 in
-                	-a) apply_test_updates
+                        -a) apply_test_updates || exit $?
                 	apply=1
                 	exit;;
                         -st) skip_tar=1;;
                         -t) test_upgrade=1;;
                         -n) update_repo_newer_only=1;;
                         -s) repos;;
-                        --all) repos="*/*";;
+                        -all|--all) repos="*/*";;
                         -p) shift;; # Path was validated before entering the repository.
                         -k) keep_index=1;;
                         -e) edit_program
@@ -1103,7 +1172,7 @@ check_handles()
                         exit;;
 			-h) help
          		exit;;
-         		-l) apply_test_updates
+                        -l) apply_test_updates || exit $?
          		apply=1
          		update_to_github
          		exit;;
@@ -1163,7 +1232,7 @@ help()
 	echo "-k keep index.html file for debugging"
 	echo "-l too lazy to run two commands merging apply and upload to github"
 	echo "-s check for specific package updates (format category/package_name)"
-	echo "--all check every category/package in the selected repository without prompting"
+	echo "-all, --all check every category/package in the selected repository without prompting"
 	echo "-p PATH use a different recipe repository (default: $default_repo_root)"
 	echo "-st skip the repository backup (does not enable test mode)"
 	echo "-t save available updates to test_updates.sh without applying them"
@@ -1172,6 +1241,8 @@ help()
 	echo "-stu review pending updates saved by a -t run"
 	echo "-utg upload changes to github"
 	echo "-h help"
+	echo "During checks: q stops after the current package and shows the partial report."
+	echo "Finished test report: a applies saved updates; l applies and uploads; q exits."
 }
 show_test_updates()
 {
@@ -1216,20 +1287,23 @@ main()
 		screen_total_packages=$((screen_total_packages+1))
 	done
 	screen_start
+	scan_input_start
 	for f in $repos;
 	do
 		[ "${f##*/}" != "REPO" ] && [ -f "$f/spkgbuild" ] || continue
+		scan_quit_requested && break
 		if [ "${screen_active:-}" = 1 ]; then
 			screen_begin_package "$f"
 			# Keep this in the current shell so counters and detected versions
 			# survive, while override output cannot scroll the terminal.
-			check_package "$f" > "$screen_output" 2>&1
+			check_package "$f" </dev/null > "$screen_output" 2>&1
 			screen_end_package
 		else
 			echo "-----------------------------------------------------------------------------------"
 			check_package "$f"
 		fi
 		checked_packages=$((checked_packages+1))
+		scan_quit_requested && break
 	done
 	# Restore and clear the terminal; completion shows only the summary.
 	screen_stop
