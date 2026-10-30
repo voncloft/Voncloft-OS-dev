@@ -1,4 +1,4 @@
-update-repo-20261027-1
+update-repo-20261029-1
 drwxr-xr-x root/root    sources/
 drwxr-xr-x root/root    sources/Voncloft-OS-dev/
 drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/
@@ -13,6 +13,7 @@ drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/old-test-updates/2026/
 drwxr-xr-x root/root    sources/Voncloft-OS-dev/logs/old-test-updates/2026/Oct/
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
+-rwxr-xr-x root/root    usr/bin/update-rep
 -rwxr-xr-x root/root    usr/bin/update-repo
 drwxr-xr-x root/root    usr/libexec/
 drwxr-xr-x root/root    usr/libexec/update-repo/

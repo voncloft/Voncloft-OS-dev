@@ -1161,13 +1161,13 @@ f:a89b88b414a33fb3fa3c04d2944c6296:gnutls/spkgbuild
 f:1456ecea4258ff3b424ce82fe806d0f0:jasper/.pkgfiles
 f:868fcd714f496d941024bd4bf44cc00e:jasper/CHANGELOG
 f:8c7116ed57f4dbbd14fd923f2d512919:jasper/spkgbuild
-f:d05777fe2226b3868af4782da6d0d215:update-repo/.pkgfiles
-f:33b7010f8ccd23ee80772862a7af5ce1:update-repo/update-repo
+f:85d6e2c95009d9d11c457eb142e52280:update-repo/.pkgfiles
+f:b765086051aefa66f32bda5f987f152a:update-repo/update-repo
 f:d84e82425296cd053a702d3f19dff2f7:update-repo/update-rep
 f:69373343806592fb0edc5f0c1086ecc0:update-repo/changelog
-f:b69355af89af3e7f16b1d1170cd2880f:update-repo/spkgbuild
+f:62554bb4a1c1dea621a04a869687a31c:update-repo/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:update-repo/override
-f:8e410ffd2d7b2ffdb62bb7a702311807:update-repo/.checksums
+f:6648af00444dcaa87d9e9bd1eebc3c4d:update-repo/.checksums
 f:6b9fec89392cad502d89f69f3d87147a:viewnior/CHANGELOG
 f:9dec777b838e2bcb16dedaa1d4d9a6bf:viewnior/spkgbuild
 f:3db606db50137ad150a0577af5d717de:enchant/.pkgfiles

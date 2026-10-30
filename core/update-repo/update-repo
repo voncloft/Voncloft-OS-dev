@@ -233,7 +233,6 @@ screen_fetch()
 
 screen_end_package()
 {
-    local comparison
     screen_phase=scan
     screen_checking=
     screen_checked=$((screen_checked+1))
@@ -242,21 +241,15 @@ screen_end_package()
     if [ -n "${update_repo_skip:-}" ]; then
         screen_found='Not applicable'
         screen_status=${update_repo_skip_status:-Manual update}
-    elif [ -n "${update_repo_review_reason:-}" ] && [ -n "${uversion:-}" ]; then
-        screen_status='Packaging review required'
     elif [ -z "${uversion:-}" ]; then
         screen_status='Version not found'
     elif [ "$uversion" = "$screen_version" ]; then
         screen_status='Already current'
+    elif [ -n "${update_repo_review_reason:-}" ]; then
+        screen_status='Packaging review required'
     else
-        vercomp "$uversion" "$screen_version" >/dev/null
-        comparison=$?
-        if [ "$comparison" = 2 ]; then
-            screen_status='Updated'
-            [ -z "${test_upgrade:-}" ] || screen_status='Update saved for review'
-        else
-            screen_status='Recipe is newer than upstream'
-        fi
+        screen_status='Updated'
+        [ -z "${test_upgrade:-}" ] || screen_status='Update saved for review'
     fi
     # Overrides and external tools can print freely into this package's capture.
     # Show their latest useful message, preferring errors over routine notices.
@@ -292,14 +285,16 @@ screen_prepare_apply()
 {
     local line package
     screen_path_pattern="(^|[[:space:]\"'])(/sources/Voncloft-OS-dev/)?([[:alnum:]_.+-]+/[[:alnum:]_.+-]+)/spkgbuild([[:space:]\"']|$)"
+    # Keep recognizing update scripts saved by older releases.
     screen_version_pattern='s/version=([^/]+)/version=([^/]+)/g'
+    screen_version_metadata='# update-repo-version ([^[:space:]]+) ([^[:space:]]+)$'
     declare -gA screen_pending_packages=() screen_pending_old=() screen_pending_new=() screen_applied=()
     while IFS= read -r line || [ -n "$line" ]; do
         [[ $line == \#* ]] && continue
         [[ $line =~ $screen_path_pattern ]] || continue
         package=${BASH_REMATCH[3]}
         screen_pending_packages["$package"]=1
-        if [[ $line =~ $screen_version_pattern ]]; then
+        if [[ $line =~ $screen_version_metadata ]] || [[ $line =~ $screen_version_pattern ]]; then
             screen_pending_old["$package"]=${BASH_REMATCH[1]}
             screen_pending_new["$package"]=${BASH_REMATCH[2]}
         fi
@@ -380,15 +375,6 @@ check_package()
 
 print_progress() {
         echo -ne " $@\033[0K\r"
-}
-vercomp() {
-        if [ "$1" = "$2" ]; then
-		echo "0" #same version
-        elif [ "$(printf '%s\n' "$1" "$2" | sort -V | head -n1)" = "$1" ]; then
-                return 1 # $1 lower than $2
-        else
-                return 2 # $1 higher than $2
-        fi
 }
 get_url()
 {
@@ -758,20 +744,7 @@ grep_retry()
                 source /sources/Voncloft-OS-dev/test.txt
 		spkg_src=$(echo $spkg_src | sed "s/\"//g")
                 uversion="$pkgver"
-                if [ "$uversion" != "$version" ];then
-                vercomp $uversion $version
-                        if [ $? = 2 ]; then
-				if [ -z $test_upgrade ];then
-					sed -i -e "s,$spkg_src,$source,g" $ppath
-				else
-					echo 'sed -i -e "s,'$spkg_src','$source',g"' $ppath >> test_updates.sh
-					echo 'sed -i -e "s,'$spkg_src','$source',g"' $ppath "<br>" >> $logpath/changes/repository_changes-$(date +"%m-%d-%y").html
-				fi
-                                if [ ! -f /sources/Voncloft-OS-dev/index.html ];then
-                                        echo "NO PACKAGE FOUND AT ARCH"
-                                fi
-                        fi
-                fi
+
 	fi
 }
 perform_override()
@@ -805,51 +778,49 @@ upgrade_normally()
 }
 upgrade_process()
 {
-        #find upgraded version from fetch code compare and then upgrade package using uversion as variable name
-        check=${#uversion}
-        if [ -n "${update_repo_skip:-}" ]; then
-            : # Intentionally local/manual, not a failed upstream lookup.
-        elif [ -n "${update_repo_review_reason:-}" ] && [ $check -ge 1 ]; then
-            printf '%s\n' "$update_repo_review_reason"
-        elif [ $check -ge 1 ];
-        then
-                if [ "$uversion" != "$version" ];
-                then
-                vercomp $uversion $version
-                        if [ $? = 2 ]; then
-                                echo "NEW"
-                                ((count=count+1))
-                                if [ -z $test_upgrade ];then
-                                	title="Updates for: "
-					screen_upgrading "$ppath" "$version" "$uversion" "$((screen_checked+1))" "${screen_total_packages:-1}"
-                                	sed -i -e "s/version=$version/version=$uversion/g" $ppath
-                                	bash "$changelog_program" "$ppath" "Upgraded from version $version to version $uversion"
-					echo -e 'sed -i -e "s/version='$version'/version='$uversion'/g"' $ppath "<br>" >> $logpath/changes/repository_changes-$(date +"%m-%d-%y").html
-				else
-					title="Test updates for: "
-					echo -e 'sed -i -e "s/version='$version'/version='$uversion'/g"' $ppath >> test_updates.sh
-					printf 'bash %q %q %q\n' "$changelog_program" "$ppath" "Upgraded from version $version to version $uversion" >> test_updates.sh
-					echo -e 'sed -i -e "s/version='$version'/version='$uversion'/g"' $ppath "<br>"  >> $logpath/changes/repository_changes-$(date +"%m-%d-%y").html
-				fi
-				create_table $ppath $version $uversion
-                        elif [ $? = 1 ];then
-                                echo "Overupdated"
-					echo $ppath "<br>" >> $logpath/over_updated/over_updated-$(date +"%m-%d-%y").html
-
-                        fi
-                fi
-	else
-                ((missing=missing+1))
-                log_missing
+    local version_assignment replacement version_edit update_command change_message changes_log
+    if [ -n "${update_repo_skip:-}" ]; then
+        : # Intentionally local/manual, not a failed upstream lookup.
+    elif [ -z "${uversion:-}" ]; then
+        ((missing=missing+1))
+        log_missing
+    elif [ "$uversion" = "$version" ]; then
+        : # Exact match: do not edit the recipe or queue an update.
+    elif [ -n "${update_repo_review_reason:-}" ]; then
+        printf '%s\n' "$update_repo_review_reason"
+    else
+        # A different upstream version is a change in either direction.
+        # Replace only the version assignment, leaving names and URLs intact.
+        printf -v version_assignment '%q' "$uversion"
+        replacement=${version_assignment//\\/\\\\}
+        replacement=${replacement//&/\\&}
+        replacement=${replacement//|/\\|}
+        version_edit="s|^[[:space:]]*version=.*$|version=$replacement|"
+        printf -v update_command 'sed -i -e %q %q # update-repo-version %s %s' \
+            "$version_edit" "$ppath" "$version" "$uversion"
+        change_message="Changed from version $version to version $uversion"
+        changes_log="$logpath/changes/repository_changes-$(date +"%m-%d-%y").html"
+        if [ -z "${test_upgrade:-}" ]; then
+            title="Updates for: "
+            screen_upgrading "$ppath" "$version" "$uversion" "$((screen_checked+1))" "${screen_total_packages:-1}"
+            sed -i -e "$version_edit" "$ppath" || return 1
+            bash "$changelog_program" "$ppath" "$change_message"
+        else
+            title="Test updates for: "
+            printf '%s\n' "$update_command" >> test_updates.sh
+            printf 'bash %q %q %q\n' "$changelog_program" "$ppath" "$change_message" >> test_updates.sh
         fi
-        if [ -z $keep_index ];then
-		if [ -f index.html ];then
-        		rm index.html
-		fi
-	fi
-	if [ -f test.txt ];then
-		rm test.txt
-	fi
+        echo "NEW"
+        ((count=count+1))
+        printf '%s <br>\n' "$update_command" >> "$changes_log"
+        create_table "$ppath" "$version" "$uversion"
+    fi
+    if [ -z "${keep_index:-}" ] && [ -f index.html ]; then
+        rm index.html
+    fi
+    if [ -f test.txt ]; then
+        rm test.txt
+    fi
 }
 alerts_and_logs()
 {
