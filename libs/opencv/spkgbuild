@@ -1,31 +1,46 @@
-# description   : The opencv package contains graphics libraries mainly aimed at real-time computer vision
-# depends       : cmake libarchive ffmpeg gst-plugins-base gtk3 jasper libavif libexif libjpeg-turbo libpng libtiff libwebp openjpeg v4l-utils
+# description   : Computer vision and image-processing libraries with Python bindings and contributed modules
+# depends       : cmake libarchive ffmpeg freetype2 gst-plugins-base gtk3 harfbuzz jasper libavif libexif libjpeg-turbo libpng libtiff libva libwebp openexr openjpeg pkgconf python python-numpy tesseract v4l-utils zlib
 
 name=opencv
 version=5.0.0
-release=3
+release=4
 _name=opencv_contrib
-source=" https://github.com/opencv/${name}/archive/$version/${name}-$version.tar.gz
-	https://github.com/opencv/${_name}/archive/${version}/${_name}-$version.tar.gz"
-options="!checksum"
-noextract="opencv_contrib-$version.tar.gz"
+source="https://github.com/opencv/${name}/archive/${version}/${name}-${version}.tar.gz
+        https://github.com/opencv/${_name}/archive/${version}/${_name}-${version}.tar.gz
+        opencv-ffmpeg9.patch"
+
 build() {
-        cd $name-$version
-        tar -xf $SRC/opencv_contrib-4.12.0.tar.gz
-mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=/usr        \
--D CMAKE_BUILD_TYPE=Release         \
--D ENABLE_CXX11=ON                  \
--D BUILD_PERF_TESTS=OFF             \
--D WITH_XINE=OFF                     \
--D BUILD_TESTS=OFF                  \
--D ENABLE_PRECOMPILED_HEADERS=OFF   \
--D CMAKE_SKIP_INSTALL_RPATH=ON      \
--D BUILD_WITH_DEBUG_INFO=OFF        \
--D OPENCV_GENERATE_PKGCONFIG=ON     \
--D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
--W no-dev  ..                       
-make
-make DESTDIR=$PKG install
+    cd "$SRC/$name-$version"
+
+    # These upstream fixes also support the currently installed FFmpeg 7.
+    if patch -p1 --dry-run --batch < "$SRC/opencv-ffmpeg9.patch" >/dev/null 2>&1; then
+        patch -p1 --batch < "$SRC/opencv-ffmpeg9.patch"
+    elif ! patch -Rp1 --dry-run --batch < "$SRC/opencv-ffmpeg9.patch" >/dev/null 2>&1; then
+        echo "OpenCV FFmpeg patch needs updating for $version" >&2
+        return 1
+    fi
+
+    cmake -S . -B build \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_CXX_STANDARD=17 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DOPENCV_EXTRA_MODULES_PATH="$SRC/$_name-$version/modules" \
+        -DOPENCV_GENERATE_PKGCONFIG=ON \
+        -DBUILD_PERF_TESTS=OFF \
+        -DBUILD_TESTS=OFF \
+        -DBUILD_EXAMPLES=OFF \
+        -DBUILD_opencv_python2=OFF \
+        -DBUILD_opencv_python3=ON \
+        -DPYTHON3_EXECUTABLE=/usr/bin/python3 \
+        -DPYTHON3_NUMPY_INCLUDE_DIRS="$(PYTHONNOUSERSITE=1 python3 -c 'import numpy; print(numpy.get_include())')" \
+        -DPYTHON3_PACKAGES_PATH="$(python3 -c 'import sysconfig; print(sysconfig.get_path("platlib", vars={"base": "/usr", "platbase": "/usr"}))')" \
+        -DENABLE_PRECOMPILED_HEADERS=OFF \
+        -DCMAKE_SKIP_INSTALL_RPATH=ON \
+        -DBUILD_WITH_DEBUG_INFO=OFF \
+        -DWITH_XINE=OFF \
+        -Wno-dev
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
 }

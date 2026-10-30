@@ -1,0 +1,11 @@
+--- a/gst-libs/gst/opencv/meson.build
++++ b/gst-libs/gst/opencv/meson.build
+@@ -89,7 +89,7 @@
+   opencv_sources,
+   c_args : gst_plugins_bad_args + ['-DBUILDING_GST_OPENCV'],
+   cpp_args : gst_plugins_bad_args + gstopencv_cargs + ['-DBUILDING_GST_OPENCV', '-DG_LOG_DOMAIN="GStreamer-OpenCV"'],
+-  override_options : ['cpp_std=c++11'],
++  override_options : ['cpp_std=c++17'],
+   include_directories : [configinc, libsinc],
+   version : libversion,
+   soversion : soversion,

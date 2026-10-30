@@ -1,0 +1,87 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 413362d..0563601 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(VArpeggio VERSION 0.2.47 LANGUAGES CXX)
++project(VArpeggio VERSION 0.2.48 LANGUAGES CXX)
+ 
+ include(GNUInstallDirs)
+ 
+@@ -9,7 +9,10 @@ set(CMAKE_AUTOMOC ON)
+ 
+ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets Multimedia Xml Svg Pdf PdfWidgets Concurrent Network)
+ find_package(ALSA REQUIRED)
+-find_package(OpenCV 4 REQUIRED COMPONENTS core imgproc)
++find_package(OpenCV 5 QUIET COMPONENTS core imgproc geometry)
++if(NOT OpenCV_FOUND)
++    find_package(OpenCV 4 REQUIRED COMPONENTS core imgproc)
++endif()
+ find_package(ZLIB REQUIRED)
+ find_package(PkgConfig REQUIRED)
+ pkg_check_modules(SNDFILE REQUIRED IMPORTED_TARGET sndfile)
+diff --git a/README.md b/README.md
+index 4116ce7..21905b3 100644
+--- a/README.md
++++ b/README.md
+@@ -129,6 +129,10 @@ metronome clicks still use the separate internal piano output.
+ 
+ ## Changelog
+ 
++### 0.2.48 — 2026-10-30
++
++- Support OpenCV 5, including the geometry module used by PDF staff and note detection, while retaining compatibility with OpenCV 4.
++
+ ### 0.2.47 — 2026-10-27
+ 
+ - Added the remembered **Settings → Disable tooltips** switch throughout the app, including practice controls and dialogs. Turning tooltips back on restores the original hints without changing score labels, finger numbers, or piano controls.
+@@ -385,7 +389,7 @@ metronome clicks still use the separate internal piano output.
+ 
+ ## Build
+ 
+-Required development and runtime components include Qt 6 Core, Widgets, Multimedia, XML, SVG, PDF/PDF Widgets, Concurrent, and Network; ALSA; OpenCV 4; zlib; and libsndfile. On Linux, installing the `libpulse` development package enables native PulseAudio output and its presentation clock; Qt audio remains the fallback when that backend is unavailable. Python 3, FFmpeg, Poppler's `pdfdetach`, `rsvg-convert`, `pdfunite`, and `pdfattach` support media and engraved-score workflows. `bsdtar` or Flatpak is used for automatic Audiveris setup.
++Required development and runtime components include Qt 6 Core, Widgets, Multimedia, XML, SVG, PDF/PDF Widgets, Concurrent, and Network; ALSA; OpenCV 5 (core, imgproc, and geometry) or OpenCV 4 (core and imgproc); zlib; and libsndfile. On Linux, installing the `libpulse` development package enables native PulseAudio output and its presentation clock; Qt audio remains the fallback when that backend is unavailable. Python 3, FFmpeg, Poppler's `pdfdetach`, `rsvg-convert`, `pdfunite`, and `pdfattach` support media and engraved-score workflows. `bsdtar` or Flatpak is used for automatic Audiveris setup.
+ 
+ ```bash
+ cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+diff --git a/src/helpmanual.cpp b/src/helpmanual.cpp
+index fba9c07..58bbbea 100644
+--- a/src/helpmanual.cpp
++++ b/src/helpmanual.cpp
+@@ -15,7 +15,7 @@
+ #include <QVBoxLayout>
+ 
+ #ifndef VARPEGGIO_VERSION
+-#define VARPEGGIO_VERSION "0.2.47"
++#define VARPEGGIO_VERSION "0.2.48"
+ #endif
+ 
+ namespace {
+diff --git a/src/mainwindow.cpp b/src/mainwindow.cpp
+index 3c46c56..d49d6a8 100644
+--- a/src/mainwindow.cpp
++++ b/src/mainwindow.cpp
+@@ -76,7 +76,7 @@
+ #include <limits>
+ 
+ #ifndef VARPEGGIO_VERSION
+-#define VARPEGGIO_VERSION "0.2.47"
++#define VARPEGGIO_VERSION "0.2.48"
+ #endif
+ 
+ namespace {
+diff --git a/src/pdfrecognizer.cpp b/src/pdfrecognizer.cpp
+index 910482b..fa45aa8 100644
+--- a/src/pdfrecognizer.cpp
++++ b/src/pdfrecognizer.cpp
+@@ -10,6 +10,9 @@
+ #include <algorithm>
+ #include <cmath>
+ #include <opencv2/imgproc.hpp>
++#if CV_VERSION_MAJOR >= 5
++#include <opencv2/geometry.hpp>
++#endif
+ 
+ namespace {
+ struct Staff {

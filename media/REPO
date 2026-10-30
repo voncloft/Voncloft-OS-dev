@@ -120,8 +120,9 @@ f:68e4ec3eb682855e9ecd87459700fdba:chromaprint/spkgbuild
 f:02c32c82a0f0ea125ce85bce0ebdd3af:mythtv/CHANGELOG
 f:b3650ff4aabe53ac40ee409509eb69f5:mythtv/spkgbuild
 f:9a3bf07aeeee50aa3254dcdacfe3a66a:gst-plugins-bad/.pkgfiles
-f:43b0dacfda8487523b98dbb82ed3eca1:gst-plugins-bad/CHANGELOG
-f:a93e51b119638440fbb5dd78eebeead2:gst-plugins-bad/spkgbuild
+f:bc8806b97cdab27cd78cc6237df9241b:gst-plugins-bad/CHANGELOG
+f:2d14e0ed0ae05d16a238146fe82cdaaa:gst-plugins-bad/opencv5.patch
+f:445856a799a150241eab94d2927f0d7f:gst-plugins-bad/spkgbuild
 f:36a81ec567b73f67202d1d147f67e666:gst-plugins-bad/override
 f:c0ca631144bdb6e46c8d639389c50d99:gstreamer/.pkgfiles
 f:63e3dae7f47aac80378b85f16c3d5222:gstreamer/CHANGELOG

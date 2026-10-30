@@ -1,3 +1,13 @@
+Date: 2026-10-30
+
+gst-plugins-bad
+Version=1.28.8
+Release=2
+
+Synopsis:
+Build the OpenCV plugin and helper library using C++17, as OpenCV 5 requires.
+Declare the OpenCV and build-tool dependencies.
+
 Date: Wed 29 Sep 2021 07:32:08 AM EDT
 
 gst-plugins-bad

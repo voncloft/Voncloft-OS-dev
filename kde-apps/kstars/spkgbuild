@@ -3,13 +3,13 @@
 
 name=kstars
 version=3.8.5
-release=2
+release=3
 options="!checksum"
 source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"
 
 build() {
     cd "kstars-${version}"
-    plasma-package-installer \
+    plasma-package-installer -DOpenCV_DIR=/usr/lib/cmake/opencv5 \
         -DBUILD_WITH_QT6=ON
     cd build
     make DESTDIR="$PKG" install

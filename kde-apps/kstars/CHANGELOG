@@ -1,0 +1,9 @@
+Date: 2026-10-30
+
+kstars
+Version=3.8.5
+Release=3
+
+Synopsis:
+Select OpenCV 5 for rebuilding; upstream already supports its new module names.
+

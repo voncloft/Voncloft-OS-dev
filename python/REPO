@@ -3815,8 +3815,8 @@ f:da605b50b81918129254dfa8a7a5c700:python-junit-xml/spkgbuild
 f:bdcf122bf1af1c97e45a45130234436f:python-junit-xml/override
 f:039ccfc8c5d4ef88b5e69980e724adab:python-pyrsistent/CHANGELOG
 f:e459b8c2beb1aafe48a53afb2482d834:python-pyrsistent/spkgbuild
-f:a5ff8e6ac35ba72683ce3fa6803e4b8e:python-pytorch/CHANGELOG
-f:ca0d626d1619e7a6de47906b63929be8:python-pytorch/spkgbuild
+f:e61d8c39a0d8df685feaa7ccd74debd5:python-pytorch/CHANGELOG
+f:4620941635f2654fee95ec34bbddb1b7:python-pytorch/spkgbuild
 f:c6b948a986f3792349f1b0e24edd4beb:python-pytorch/override
 f:8f51c9879c7a6eb71fbce75767f0f254:python-graphql-core/CHANGELOG
 f:71f6df2b062c20fbdd1b5ddddc10c46b:python-graphql-core/spkgbuild

@@ -1,3 +1,14 @@
+Date: 2026-10-30
+
+opencv
+Version=5.0.0
+Release=4
+
+Synopsis:
+Build matching OpenCV and contrib 5 sources, supply Python/contrib dependencies,
+apply upstream FFmpeg 9 compatibility fixes, and track matching stable 5.x tags.
+Remove the obsolete OpenCV 4 package file list so the next build regenerates it.
+
 Date: Tue Oct 27 04:19:22 AM EDT 2026
 
 opencv

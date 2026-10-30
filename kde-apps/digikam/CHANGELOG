@@ -1,0 +1,10 @@
+Date: 2026-10-30
+
+digikam
+Version=9.1.0
+Release=3
+
+Synopsis:
+Port removed OpenCV C APIs to their C++ equivalents, require the contributed
+ML module, and select the OpenCV 5 CMake configuration for rebuilding.
+

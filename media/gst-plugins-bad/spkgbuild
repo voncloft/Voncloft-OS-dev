@@ -1,20 +1,27 @@
 # description	: Set of plug-ins that aren't up to par compared to the rest
-# depends	: gst-plugins-base libdvdread libdvdnav libva soundtouch
+# depends	: meson ninja opencv pkgconf gst-plugins-base libdvdread libdvdnav libva soundtouch
 
 name=gst-plugins-bad
 version=1.28.8
-release=1
-source="https://gstreamer.freedesktop.org/src/${name}/$name-$version.tar.xz"
+release=2
+source="https://gstreamer.freedesktop.org/src/${name}/$name-$version.tar.xz
+        opencv5.patch"
 
 build() {
 	cd $name-$version
+    if patch -p1 --dry-run --batch < "$SRC/opencv5.patch" >/dev/null 2>&1; then
+        patch -p1 --batch < "$SRC/opencv5.patch"
+    elif ! patch -Rp1 --dry-run --batch < "$SRC/opencv5.patch" >/dev/null 2>&1; then
+        echo "The OpenCV 5 compatibility patch needs updating for $name-$version" >&2
+        return 1
+    fi
 
 	mkdir build
         cd build
 
         meson \
 		--prefix=/usr \
-		-D gpl=enabled ..
+		-D gpl=enabled -D opencv=enabled -D cpp_std=c++17 ..
 	ninja
 	DESTDIR=$PKG ninja install
 }

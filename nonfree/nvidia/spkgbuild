@@ -1,152 +1,148 @@
-# description	: NVIDIA Linux Display Driver (Latest Production Branch)
-# depends	: dkms gtk3
+# description : NVIDIA 580 proprietary graphics driver with kernel modules and 64-bit and 32-bit libraries
+# depends : gcc binutils make elfutils kmod gtk3 libglvnd libdrm libxcb libvdpau mesa wayland openssl xorg-libraries libglvnd-32 libdrm-32 libxcb-32 mesa-32 wayland-32 xorg-libraries-32
 
 name=nvidia
 version=580.196.07
-release=1
-source="https://download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run"
+release=2
+source="https://download.nvidia.com/XFree86/Linux-x86_64/${version}/NVIDIA-Linux-x86_64-${version}.run
+        README"
+NO_STRIP=yes
+KEEP_DOC=yes
+
+# pkgbuild sources the recipe even when reusing a cached package. Its kernel
+# modules must match the kernel selected for this install.
+if [ -n "${INSTALL_PKG:-}${UPGRADE_PKG:-}${REINSTALL_PKG:-}" ]; then
+    _nv_kernel=${NVIDIA_KERNEL_RELEASE:-$(uname -r)}
+    _nv_package="$PACKAGE_DIR/$name-$version-$release.spkg.tar.$COMPRESSION_MODE"
+    if [ -f "$_nv_package" ] && [ -z "${FORCE_REBUILD:-}" ]; then
+        _nv_cached=$(tar -xOf "$_nv_package" usr/share/nvidia/kernel-release) || exit 1
+        if [ "$_nv_cached" != "$_nv_kernel" ]; then
+            echo "ERROR: NVIDIA modules were built for $_nv_cached; rebuild for $_nv_kernel with -f." >&2
+            exit 1
+        fi
+    fi
+    unset _nv_kernel _nv_package _nv_cached
+fi
 
 build() {
-	sh NVIDIA-Linux-x86_64-$version.run --extract-only
-	cd NVIDIA-Linux-x86_64-$version
+    if [ ! -d "NVIDIA-Linux-x86_64-$version" ]; then
+        sh "NVIDIA-Linux-x86_64-$version.run" --extract-only
+    fi
+    cd "NVIDIA-Linux-x86_64-$version"
+    # Ignore the stale /lib/modules/KERNELVERSION file. Another prepared
+    # kernel can be selected explicitly with NVIDIA_KERNEL_RELEASE.
+    kernver=${NVIDIA_KERNEL_RELEASE:-$(uname -r)}
+    kernel_build="/lib/modules/$kernver/build"
+    test -r "$kernel_build/Makefile"
+    test -r "$kernel_build/include/config/auto.conf"
+    test "$(cat "$kernel_build/include/config/kernel.release")" = "$kernver"
 
-	# X driver and GLX extension
-	install -d $PKG/usr/lib/xorg/modules/drivers
-	install -d $PKG/usr/lib/xorg/modules/extensions
-	install -m 0755 nvidia_drv.so $PKG/usr/lib/xorg/modules/drivers/
-	install -d -m 0755 $PKG/usr/lib/nvidia/xorg
-	install -m 0755 libglxserver_nvidia.so.$version $PKG/usr/lib/nvidia/xorg/
-	ln -s libglxserver_nvidia.so.$version $PKG/usr/lib/nvidia/xorg/libglxserver_nvidia.so
-	ln -s libglxserver_nvidia.so.$version $PKG/usr/lib/nvidia/xorg/libglxserver_nvidia.so.1
+    # Maxwell/Pascal require the proprietary kernel/ sources. A module build
+    # failure aborts the package BEFORE any live driver files are replaced.
+    make -C kernel -j"${NVIDIA_BUILD_JOBS:-2}" \
+        SYSSRC="$kernel_build" SYSOUT="$kernel_build" KERNEL_UNAME="$kernver" modules
+    for module in nvidia nvidia-modeset nvidia-uvm nvidia-drm nvidia-peermem; do
+        test "$(modinfo -F version "kernel/$module.ko")" = "$version"
+        case "$(modinfo -F vermagic "kernel/$module.ko")" in
+            "$kernver "*) ;;
+            *) echo "ERROR: $module was built for the wrong kernel" >&2; return 1 ;;
+        esac
+        install -Dm644 "kernel/$module.ko" \
+            "$PKG/usr/lib/modules/$kernver/kernel/drivers/video/$module.ko"
+    done
+    install -d "$PKG/usr/share/nvidia"
+    printf '%s\n' "$kernver" > "$PKG/usr/share/nvidia/kernel-release"
 
-	# EGL and OpenGL ES libraries and config
-	install -d $PKG/usr/lib
-	install -m 0755 libGLESv1_CM_nvidia.so.$version $PKG/usr/lib/
-	ln -s libGLESv1_CM_nvidia.so.$version $PKG/usr/lib/libGLESv1_CM_nvidia.so.1
-	install -m 0755 libGLESv2_nvidia.so.$version $PKG/usr/lib/
-	ln -s libGLESv2_nvidia.so.$version $PKG/usr/lib/libGLESv2_nvidia.so.2
-	install -D -m 0644 10_nvidia.json $PKG/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+    # Install both architectures from the SAME driver archive. Keep libglvnd's
+    # generic libGL/libEGL/libGLES libraries owned by their existing packages.
+    for arch in native compat32; do
+        case "$arch" in
+            native) driver_src=.; driver_lib=usr/lib64 ;;
+            compat32) driver_src=32; driver_lib=usr/lib32 ;;
+        esac
+        install -d "$PKG/$driver_lib" "$PKG/$driver_lib/vdpau" "$PKG/$driver_lib/gbm"
+        for library in "$driver_src"/libnvidia-*.so.* "$driver_src"/libcuda.so.* \
+                       "$driver_src"/libnvcuvid.so.* "$driver_src"/libGLX_nvidia.so.* \
+                       "$driver_src"/libEGL_nvidia.so.* "$driver_src"/libGLES*_nvidia.so.* \
+                       "$driver_src"/libOpenCL.so.* "$driver_src"/libvdpau_nvidia.so.*; do
+            test -f "$library"
+            filename=${library##*/}
+            # nvidia-settings uses GTK3. Confidential-compute clients use the
+            # OpenSSL 3 implementation; do not require obsolete GTK2/OpenSSL 1.1.
+            case "$filename" in libnvidia-gtk2.so.*|libnvidia-pkcs11.so.*) continue ;; esac
+            libdir="$PKG/$driver_lib"
+            case "$filename" in libvdpau_nvidia.so.*) libdir="$libdir/vdpau" ;; esac
+            install -m755 "$library" "$libdir/$filename"
+            soname=$(LC_ALL=C readelf -d "$library" | sed -n 's/.*(SONAME).*\[\([^]]*\)\].*/\1/p')
+            test -n "$soname"
+            if [ "$soname" != "$filename" ]; then
+                ln -s "$filename" "$libdir/$soname"
+            fi
+            # Development links only for public, unversioned SONAME families.
+            case "$soname" in
+                *".$version") ;;
+                *) ln -s "$soname" "$libdir/${soname%%.so*}.so" ;;
+            esac
+        done
+        ln -s libOpenCL.so.1.0.0 "$PKG/$driver_lib/libOpenCL.so.1.0"
+        ln -s vdpau/libvdpau_nvidia.so.1 "$PKG/$driver_lib/libvdpau_nvidia.so"
+        ln -s ../libnvidia-allocator.so.1 "$PKG/$driver_lib/gbm/nvidia-drm_gbm.so"
+        ln -s libGLX_nvidia.so.0 "$PKG/$driver_lib/libGLX_indirect.so.0"
+    done
 
-	# wayland EGL library and config
-	#install -d $PKG/usr/share/egl/egl_external_platform.d
-	#install -m 0755 libnvidia-egl-wayland.so.1.0.2 $PKG/usr/lib/
-	#install -m 0644 10_nvidia_wayland.json $PKG/usr/share/egl/egl_external_platform.d/
+    # Libraries that upstream ships only for 64-bit applications.
+    for library in "libcudadebugger.so.$version" "libnvoptix.so.$version"; do
+        install -m755 "$library" "$PKG/usr/lib64/"
+        soname=$(LC_ALL=C readelf -d "$library" | sed -n 's/.*(SONAME).*\[\([^]]*\)\].*/\1/p')
+        test -n "$soname"
+        ln -s "$library" "$PKG/usr/lib64/$soname"
+    done
+    install -Dm644 nvoptix.bin "$PKG/usr/share/nvidia/nvoptix.bin"
+    install -Dm644 sandboxutils-filelist.json \
+        "$PKG/usr/share/nvidia/files.d/sandboxutils-filelist.json"
+    for library in _nvngx.dll nvngx.dll nvngx_dlssg.dll; do
+        install -Dm755 "$library" "$PKG/usr/lib64/nvidia/wine/$library"
+    done
+    for firmware in firmware/*.bin; do
+        install -Dm644 "$firmware" "$PKG/usr/lib/firmware/nvidia/$version/${firmware##*/}"
+    done
 
-	# GLVND vendor implementation libraries
-	install -m 0755 libGLX_nvidia.so.$version $PKG/usr/lib/
-	ln -s libGLX_nvidia.so.$version $PKG/usr/lib/libGLX_nvidia.so.0
-	install -m 0755 libEGL_nvidia.so.$version $PKG/usr/lib/
-	ln -s libEGL_nvidia.so.$version $PKG/usr/lib/libEGL_nvidia.so.0
+    install -Dm644 10_nvidia.json "$PKG/usr/share/glvnd/egl_vendor.d/10_nvidia.json"
+    for config in 10_nvidia_wayland.json 15_nvidia_gbm.json 20_nvidia_xcb.json 20_nvidia_xlib.json; do
+        install -Dm644 "$config" "$PKG/usr/share/egl/egl_external_platform.d/$config"
+    done
+    install -Dm644 nvidia_icd.json "$PKG/etc/vulkan/icd.d/nvidia_icd.json"
+    install -Dm644 nvidia_layers.json "$PKG/etc/vulkan/implicit_layer.d/nvidia_layers.json"
+    install -Dm644 nvidia_icd_vksc.json "$PKG/etc/vulkansc/icd.d/nvidia_icd_vksc.json"
+    install -Dm644 nvidia.icd "$PKG/etc/OpenCL/vendors/nvidia.icd"
 
-	# vulkan ICD config
-	#install -d $PKG/etc/vulkan/icd.d
-	#sed -i -e 's,__NV_VK_ICD__,libGLX_nvidia.so.0,g' nvidia_icd.json.template
-	#install -m 0644 nvidia_icd.json.template $PKG/etc/vulkan/icd.d/nvidia_icd.json
+    # Match the existing NVIDIA installer layout, including its Xorg links.
+    install -Dm755 nvidia_drv.so "$PKG/usr/lib64/xorg/modules/drivers/nvidia_drv.so"
+    install -Dm755 "libglxserver_nvidia.so.$version" \
+        "$PKG/usr/lib64/xorg/modules/extensions/libglxserver_nvidia.so.$version"
+    ln -s "libglxserver_nvidia.so.$version" \
+        "$PKG/usr/lib64/xorg/modules/extensions/libglxserver_nvidia.so"
+    install -Dm644 nvidia-drm-outputclass.conf \
+        "$PKG/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf"
+    sed -i '/Driver *"nvidia"/a\    ModulePath "/usr/lib64/xorg/modules"\n    ModulePath "/usr/lib/xorg/modules"' \
+        "$PKG/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf"
 
-	# driver component libraries
-	install -m 0755 libnvidia-cfg.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-compiler.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-eglcore.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-glcore.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-glsi.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-glvkspirv.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-rtcore.so.$version $PKG/usr/lib/
-	#install -m 0755 libnvidia-cbl.so.$version $PKG/usr/lib/
-
-	# vendor VDPAU library
-	install -D -m 0755 libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.$version
-	ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so.1
-	ln -s libvdpau_nvidia.so.$version $PKG/usr/lib/vdpau/libvdpau_nvidia.so
-
-	# CUDA libraries
-	install -m 0755 libcuda.so.$version $PKG/usr/lib/
-	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so.1
-	ln -s libcuda.so.$version $PKG/usr/lib/libcuda.so
-	install -m 0755 libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/
-	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so.1
-	ln -s libnvidia-ptxjitcompiler.so.$version $PKG/usr/lib/libnvidia-ptxjitcompiler.so
-
-	# OpenCL libraries and config
-	install -m 0755 libOpenCL.so.1.0.0 $PKG/usr/lib/
-	install -m 0755 libnvidia-opencl.so.$version $PKG/usr/lib/
-	ln -s libnvidia-opencl.so.$version $PKG/usr/lib/libnvidia-opencl.so.1
-	ln -s libnvidia-opencl.so.$version $PKG/usr/lib/libnvidia-opencl.so
-	install -D -m 0644 nvidia.icd $PKG/etc/OpenCL/vendors/nvidia.icd
-
-	# CUDA MPI applications
-	install -d $PKG/usr/bin
-	install -m 0755 nvidia-cuda-mps-control $PKG/usr/bin/
-	install -m 0755 nvidia-cuda-mps-server $PKG/usr/bin/
-
-	# TLS libraries
-	install -m 0755 libnvidia-tls.so.$version $PKG/usr/lib/
-	#install -d $PKG/usr/lib/tls
-	#install -m 0755 tls/libnvidia-tls.so.$version $PKG/usr/lib/tls/
-
-	# monitoring and management API library
-	install -m 0755 libnvidia-ml.so.$version $PKG/usr/lib/
-
-	# applications
-	install -m 4755 nvidia-modprobe $PKG/usr/bin/
-	for xx in xconfig settings smi debugdump persistenced; do
-		install -m 0755 nvidia-$xx \
-			$PKG/usr/bin/
-	done
-
-	# nvidia-settings UI libraries
-	for xx in 2 3; do
-		install -m 0755 libnvidia-gtk$xx.so.$version $PKG/usr/lib/
-	done
-	
-	# encoding/decoding libraries
-	install -m 0755 libnvcuvid.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-encode.so.$version $PKG/usr/lib/
-	#install -m 0755 libnvidia-ifr.so.$version $PKG/usr/lib/
-	install -m 0755 libnvidia-fbc.so.$version $PKG/usr/lib/
-
-	# OptiX ray tracing engine
-	install -m 0755 libnvoptix.so.$version $PKG/usr/lib/
-	ln -s libnvoptix.so.$version $PKG/usr/lib/libnvoptix.so.1
-	ln -s libnvoptix.so.$version $PKG/usr/lib/libnvoptix.so
-
-	# X driver config
-	install -D -m 0644 $SRC/10-nvidia-drm-outputclass.conf \
-		$PKG/usr/share/X11/xorg.conf.d/10-nvidia-drm-outputclass.conf
-
-	# application profile keys and documentation
-	install -d -m 0755 $PKG/usr/share/nvidia
-	install -m 0644 nvidia-application-profiles-$version-rc $PKG/usr/share/nvidia/
-	install -m 0644 nvidia-application-profiles-$version-key-documentation $PKG/usr/share/nvidia/
-
-	# desktop file and icon
-	install -d $PKG/usr/share/applications
-	install -d $PKG/usr/share/pixmaps
-	sed -i -e 's,__UTILS_PATH__,/usr/bin,' -e 's,__PIXMAP_PATH__,/usr/share/pixmaps,' nvidia-settings.desktop
-	install -m 0644 nvidia-settings.desktop $PKG/usr/share/applications/
-	install -m 0644 nvidia-settings.png $PKG/usr/share/pixmaps/
-
-sed -i "s/__VERSION_STRING/$version/" kernel/dkms.conf
-	sed -i 's/__JOBS/`nproc`/' kernel/dkms.conf
-	sed -i 's/__DKMS_MODULES//' kernel/dkms.conf
-	sed -i '$iBUILT_MODULE_NAME[0]="nvidia"\
-DEST_MODULE_LOCATION[0]="/kernel/misc"\
-BUILT_MODULE_NAME[1]="nvidia-uvm"\
-DEST_MODULE_LOCATION[1]="/kernel/misc"\
-BUILT_MODULE_NAME[2]="nvidia-modeset"\
-DEST_MODULE_LOCATION[2]="/kernel/misc"\
-BUILT_MODULE_NAME[3]="nvidia-drm"\
-DEST_MODULE_LOCATION[3]="/kernel/drivers/video"' kernel/dkms.conf
-
-	install -dm 755 $PKG/usr/src
-	cp -dr --no-preserve='ownership' kernel $PKG/usr/src/nvidia-$version
-
-	# blacklist conflict module
-	install -d $PKG/etc/modprobe.d
-	echo "blacklist nouveau" > $PKG/etc/modprobe.d/nvidia.conf
-
-	# dkms build modules script
-	mkdir -p $PKG/var/lib/dkms
-	sed -e "s/@name@/$name/g" \
-	    -e "s/@version@/$version/g" \
-	$SRC/buildmodules-$name.sh > $PKG/var/lib/dkms/buildmodules-$name.sh
+    for binary in nvidia-smi nvidia-debugdump nvidia-settings nvidia-xconfig \
+                  nvidia-persistenced nvidia-cuda-mps-control nvidia-cuda-mps-server \
+                  nvidia-bug-report.sh nvidia-powerd nvidia-ngx-updater nvidia-pcc; do
+        install -Dm755 "$binary" "$PKG/usr/bin/$binary"
+    done
+    install -Dm4755 nvidia-modprobe "$PKG/usr/bin/nvidia-modprobe"
+    install -Dm755 systemd/nvidia-sleep.sh "$PKG/usr/bin/nvidia-sleep.sh"
+    install -Dm644 "nvidia-application-profiles-$version-rc" \
+        "$PKG/usr/share/nvidia/nvidia-application-profiles-$version-rc"
+    install -Dm644 "nvidia-application-profiles-$version-key-documentation" \
+        "$PKG/usr/share/nvidia/nvidia-application-profiles-$version-key-documentation"
+    sed 's|__UTILS_PATH__|/usr/bin|g' nvidia-settings.desktop > nvidia-settings-packaged.desktop
+    install -Dm644 nvidia-settings-packaged.desktop "$PKG/usr/share/applications/nvidia-settings.desktop"
+    install -Dm644 nvidia-settings.png "$PKG/usr/share/icons/hicolor/128x128/apps/nvidia-settings.png"
+    install -Dm644 LICENSE "$PKG/usr/share/licenses/nvidia/LICENSE"
+    install -Dm644 "$SRC/README" "$PKG/usr/share/doc/nvidia/README.scratchpkg"
+    install -d "$PKG/etc/modprobe.d"
+    printf '%s\n' 'blacklist nouveau' 'options nvidia-drm modeset=1' > "$PKG/etc/modprobe.d/nvidia.conf"
 }

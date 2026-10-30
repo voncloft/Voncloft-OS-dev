@@ -134,13 +134,13 @@ f:de24e9887d39798e6e5aaca2876c4fbd:xz/.pkgfiles
 f:ca09400630edda77306eca783633eafa:xz/CHANGELOG
 f:5675dc2144a76e3d0da9d6fa337b3c42:xz/spkgbuild
 f:a8e658c10425a343946d098f99a245b5:linux-desktop/.pkgfiles
-f:6f0f530adbe1f4d982c017270087eaf2:linux-desktop/post-install.no
+f:d9fe01a5b35a56270feb14f496eba5c2:linux-desktop/post-install.no
 f:8bc83aa05179429d031aec0c45013f5b:linux-desktop/extract.sh
 f:511d2d2f2ca57c4a5938f0bedb1ff0de:linux-desktop/.old-config
-f:ad48edb5e6a47c82f5f84256c73a631a:linux-desktop/post-upgrade.sh
+f:78bf0b4ec20532e41190af60d507f57f:linux-desktop/post-upgrade.sh
 f:c71871f16c1686ce8b7da00106df2c69:linux-desktop/spkgbuild-old
 f:00f29470c3ec746265bee580841d9af1:linux-desktop/CHANGELOG
-f:6f0f530adbe1f4d982c017270087eaf2:linux-desktop/post-install.sh
+f:d9fe01a5b35a56270feb14f496eba5c2:linux-desktop/post-install.sh
 f:cd5390e5b0e7cbe86cb692fa06666762:linux-desktop/config
 f:2169576f90d68be87f8f0ec8fd101eab:linux-desktop/.config
 f:f3962fe7a8cdb902d674369422a3d673:linux-desktop/spkgbuild

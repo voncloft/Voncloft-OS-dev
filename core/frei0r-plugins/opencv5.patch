@@ -1,0 +1,61 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -12,7 +12,7 @@
+ endif ()
+ 
+ project (frei0r VERSION ${FREI0R_VERSION})
+-set (CMAKE_CXX_STANDARD 11)
++set (CMAKE_CXX_STANDARD 17)
+ set (CMAKE_CXX_STANDARD_REQUIRED True)
+ 
+ include(GNUInstallDirs)
+--- a/src/filter/facebl0r/facebl0r.cpp
++++ b/src/filter/facebl0r/facebl0r.cpp
+@@ -19,6 +19,9 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <opencv2/opencv.hpp>
++#if CV_VERSION_MAJOR >= 5
++#include <opencv2/xobjdetect.hpp>
++#endif
+ #include "frei0r.hpp"
+ #include "frei0r/math.h"
+ 
+@@ -92,10 +95,10 @@
+ 
+   face_found = 0;
+ 
+-  classifier = "/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml";
++  classifier = "/usr/share/opencv5/haarcascades/haarcascade_frontalface_default.xml";
+   register_param(classifier,
+                  "Classifier",
+-                 "Full path to the XML pattern model for recognition; look in /usr/share/opencv/haarcascades");
++                 "Full path to the XML pattern model for recognition; look in /usr/share/opencv5/haarcascades");
+   ellipse = false;
+   register_param(ellipse, "Ellipse", "Draw a red ellipse around the object");
+   recheck = 0.025;
+--- a/src/filter/facedetect/facedetect.cpp
++++ b/src/filter/facedetect/facedetect.cpp
+@@ -21,6 +21,9 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <opencv2/opencv.hpp>
++#if CV_VERSION_MAJOR >= 5
++#include <opencv2/xobjdetect.hpp>
++#endif
+ #include "frei0r.hpp"
+ #include "frei0r/math.h"
+ 
+@@ -65,10 +68,10 @@
+     {
+         roi.width = roi.height = 0;
+         roi.x = roi.y = 0;
+-        classifier = "/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml";
++        classifier = "/usr/share/opencv5/haarcascades/haarcascade_frontalface_default.xml";
+         register_param(classifier,
+                        "Classifier",
+-                       "Full path to the XML pattern model for recognition; look in /usr/share/opencv/haarcascades"); 
++                       "Full path to the XML pattern model for recognition; look in /usr/share/opencv5/haarcascades"); 
+         threads = 0.01; //number of CPUs
+         register_param(threads, "Threads", "How many threads to use divided by 100; 0 uses CPU count");
+         shape = 0.0;

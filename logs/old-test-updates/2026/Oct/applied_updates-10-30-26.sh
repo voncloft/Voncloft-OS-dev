@@ -380,3 +380,5 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.0.19\| kde-apps/kaffein
 bash /usr/libexec/update-repo/changelog kde-apps/kaffeine/spkgbuild Changed\ from\ version\ 2.0.18\ to\ version\ 2.0.19
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.31.0\| kf/oxygen-icons/spkgbuild # update-repo-version 6.2.0 6.31.0
 bash /usr/libexec/update-repo/changelog kf/oxygen-icons/spkgbuild Changed\ from\ version\ 6.2.0\ to\ version\ 6.31.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc\| kde-apps/varpeggio/spkgbuild # update-repo-version 0.2.47.git20261027063836.g82b8b4d22181cbfa23d3d3a57613b24c015549c8 0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc
+bash /usr/libexec/update-repo/changelog kde-apps/varpeggio/spkgbuild Changed\ from\ version\ 0.2.47.git20261027063836.g82b8b4d22181cbfa23d3d3a57613b24c015549c8\ to\ version\ 0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc

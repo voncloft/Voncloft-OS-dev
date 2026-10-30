@@ -1,21 +1,28 @@
 # description	: Minimalistic plugin API for video effects
-# depends	: gavl
+# depends	: cairo cmake gavl opencv pkgconf
 
 name=frei0r-plugins
 version=3.6.0
-release=1
+release=2
 _name=frei0r
-source="https://github.com/dyne/${_name}/archive/refs/tags/v${version}.tar.gz"
+source="https://github.com/dyne/${_name}/archive/refs/tags/v${version}.tar.gz
+        opencv5.patch"
 
 build() {
 	cd "$SRC"/frei0r*/
+    if patch -p1 --dry-run --batch < "$SRC/opencv5.patch" >/dev/null 2>&1; then
+        patch -p1 --batch < "$SRC/opencv5.patch"
+    elif ! patch -Rp1 --dry-run --batch < "$SRC/opencv5.patch" >/dev/null 2>&1; then
+        echo "The OpenCV 5 compatibility patch needs updating for $name-$version" >&2
+        return 1
+    fi
 	
 	mkdir -vp build
 	cd        build
 	
 	cmake -DCMAKE_INSTALL_PREFIX=/usr    \
-	      -DCMAKE_BUILD_TYPE=Release     \
-	      -DOpenCV_DIR=/usr/share/OpenCV \
+	      -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF     \
+	      -DOpenCV_DIR=/usr/lib/cmake/opencv5 \
 	      -Wno-dev ..
 	make
 	make DESTDIR=$PKG install

@@ -3,14 +3,21 @@
 
 name=digikam
 version=9.1.0
-release=2
+release=3
 options="!checksum"
 _name=digiKam
-source="${name}-${version}.tar.xz::https://download.kde.org/stable/digikam/${version}/${_name}-${version}.tar.xz"
+source="${name}-${version}.tar.xz::https://download.kde.org/stable/digikam/${version}/${_name}-${version}.tar.xz
+        opencv5.patch"
 
 build() {
     cd "digikam-${version}"
-    plasma-package-installer \
+    if patch -p1 --dry-run --batch < "$SRC/opencv5.patch" >/dev/null 2>&1; then
+        patch -p1 --batch < "$SRC/opencv5.patch"
+    elif ! patch -Rp1 --dry-run --batch < "$SRC/opencv5.patch" >/dev/null 2>&1; then
+        echo "The OpenCV 5 compatibility patch needs updating for $name-$version" >&2
+        return 1
+    fi
+    plasma-package-installer -DOpenCV_DIR=/usr/lib/cmake/opencv5 \
         -DBUILD_WITH_QT6=ON \
         -DENABLE_SHOWFOTO=ON
     cd build

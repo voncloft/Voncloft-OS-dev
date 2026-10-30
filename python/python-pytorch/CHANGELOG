@@ -1,3 +1,12 @@
+Date: 2026-10-30
+
+python-pytorch
+Version=2.15.0
+Release=5
+
+Synopsis:
+Remove the obsolete OpenCV dependency; this PyTorch version does not use it.
+
 Date: Mon 12 Jul 2021 03:34:41 PM EDT
 
 name=python-pytorch

@@ -1,0 +1,39 @@
+NVIDIA 580 for Scratchpkg
+========================
+
+One nvidia package contains the proprietary kernel modules, 64-bit driver
+libraries, and 32-bit compatibility libraries. nvidia-32 and nvidia-modules
+are no longer separate recipes. Maxwell/Pascal GPUs such as the GTX 960
+require these proprietary modules; the recipe deliberately uses kernel/.
+
+The modules compile during package creation, before installation. No DKMS
+post-install compilation, module unloading, service restart, or automatic
+reboot is performed. Reboot after installing/upgrading the complete package.
+
+The default build targets uname -r, not /lib/modules/KERNELVERSION. Its
+matching, configured kernel build directory must exist. For another kernel:
+  sudo env NVIDIA_KERNEL_RELEASE=YOUR_KERNEL scratch build nvidia -f
+After a kernel change, rebuild/reinstall nvidia for that kernel. Cached
+packages for a different kernel are rejected by pkgbuild's install path.
+NVIDIA_BUILD_JOBS defaults to 2 and may be overridden for the build.
+
+Migrating from NVIDIA's .run installer
+-------------------------------------
+The live system currently has an NVIDIA installer installation outside the
+Scratch database. The first Scratch operation is INSTALL, not UPGRADE.
+This package uses /usr/lib64 and /usr/lib32 to replace the existing driver
+links consistently. It leaves generic libGL/libEGL/libGLES to libglvnd.
+
+Build the complete package first. From a text console with the graphical
+session stopped, install it with Scratch. Existing unowned NVIDIA files
+will otherwise cause Scratch's file-conflict check to stop; use -c for this
+one-time adoption only after confirming conflicts belong to the old NVIDIA
+installation, not another Scratch package. Back up those files first.
+Do not run nvidia-uninstall after Scratch takes ownership of the driver.
+Old version-numbered libraries can coexist; active links select the new ones.
+Future driver updates use: sudo scratch upgrade nvidia
+
+Do not leave a separately installed nvidia-32 or nvidia-modules registered:
+Scratch can later remove files now owned by nvidia. Migrate such records
+before using this combined package. Neither old package was registered on
+the system when this recipe was repaired.

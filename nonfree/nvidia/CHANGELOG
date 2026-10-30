@@ -407,3 +407,17 @@ Release=1
 
 Synopsis:
 Upgraded from version 580.126.18 to version 580.196.07
+
+Date: Fri Oct 30 2026
+
+version=580.196.07
+release=2
+
+Synopsis:
+Consolidated nvidia, nvidia-32 and nvidia-modules into one package.
+Build proprietary modules for the running kernel before installation.
+Package matching native and multilib libraries, Wayland/GBM integration,
+Vulkan manifests and firmware; preserve libglvnd ownership.
+Removed the obsolete post-install DKMS build and its hidden failures.
+
+----------------------------------------------------------------

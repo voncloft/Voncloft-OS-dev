@@ -1,3 +1,14 @@
+Date: 2026-10-30
+
+varpeggio
+Version=0.2.47.git20261027063836.g82b8b4d22181cbfa23d3d3a57613b24c015549c8
+Release=3
+
+Synopsis:
+Apply the VArpeggio 0.2.48 compatibility update for OpenCV 5 geometry APIs.
+The application source continues to support OpenCV 4; rebuild for the installed
+OpenCV major version. Keep the pinned upstream commit and canonical /usr/bin path.
+
 Date: 2026-10-29
 
 varpeggio
@@ -17,3 +28,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.2.46.git20261020 to version 0.2.47.git20261027063836
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 04:38:08 AM EDT 2026
+
+Version=0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc
+Release=3
+
+Synopsis:
+Changed from version 0.2.47.git20261027063836.g82b8b4d22181cbfa23d3d3a57613b24c015549c8 to version 0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc

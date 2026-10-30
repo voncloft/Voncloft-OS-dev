@@ -346,7 +346,8 @@ f:6ddc4218b4845dc2b8cf560f46432afe:kaccounts-integration/spkgbuild
 f:d798398c02b2fded037884caa898854e:ktnef/.pkgfiles
 f:aaa240e3de32f36d51a51c51daec34be:ktnef/CHANGELOG
 f:f777d3a5271ed146b228af51f2d77bd9:ktnef/spkgbuild
-f:41d847ef49ab2db5406fdcf59b6bdb68:kstars/spkgbuild
+f:f6c30668248585921604fcda249d01fd:kstars/CHANGELOG
+f:bb2ba591d9732d41178ec5827f98eb66:kstars/spkgbuild
 f:47e0a9decfff7ed15877d0ba8647f3f2:akonadiconsole/CHANGELOG
 f:8cfb0933e09220f2641ebd76f6c8bc21:akonadiconsole/spkgbuild
 f:1e88faafed0ed8a48c7490b489b321f0:ktp-contact-runner/CHANGELOG
@@ -711,7 +712,9 @@ f:555f0d867f09c62b42a9a33a0a90d794:kanagram/spkgbuild
 f:b5cb5672a99bd4c654bf3e941c9db741:sweeper/.pkgfiles
 f:38616cac7a23c0b8a3f3d115e7f5e6d1:sweeper/CHANGELOG
 f:5f67292c1704d559726b74003e6cbedb:sweeper/spkgbuild
-f:d46cc17107ece09dff92133159dc6fe0:digikam/spkgbuild
+f:064b2dc84b80bbf3e793491914c4469c:digikam/CHANGELOG
+f:1212eefe5c801d9facd2f94c6bf7390c:digikam/opencv5.patch
+f:ee8c525d2446bb1c9269a91a0e0794ac:digikam/spkgbuild
 f:cecc947de7a6d26fbfc87993a3eb49a6:kdesdk-thumbnailers/.pkgfiles
 f:071531f7670cb46f13f1c1a7fd41a76e:kdesdk-thumbnailers/CHANGELOG
 f:e0b8ef8b28ec2db87ab5a6c470d95431:kdesdk-thumbnailers/spkgbuild
@@ -757,8 +760,9 @@ f:0b79fde0f0ae6f08d309e17280459749:kmime/.pkgfiles
 f:1be8e1220fbef9196d5314bffe9a0dbb:kmime/CHANGELOG
 f:d8e070a01d5a11d7be5633d0f1c219d9:kmime/spkgbuild
 f:fbf5dbd2e61de33829cd6dc533d0e9f2:varpeggio/.pkgfiles
-f:01d74b6eb37885b24686bb3d4537a432:varpeggio/CHANGELOG
-f:8e2517f3fcd7dff9e2124a619ac0a427:varpeggio/spkgbuild
+f:2a33ebc0ab48dc0d217bdd5447133ee2:varpeggio/CHANGELOG
+f:d2d61e83ee2fa8cc0d2e942247612ef9:varpeggio/varpeggio-opencv5.patch
+f:09d08d88bab1b35e813d251e04231fc5:varpeggio/spkgbuild
 f:18f992d77a451565ce3f5755836d5bc6:varpeggio/override
 f:13ff916680930e0942582faf6635f892:varpeggio/.checksums
 f:197b91499374c4c69be5ad88f2b2af2b:rocs/CHANGELOG
