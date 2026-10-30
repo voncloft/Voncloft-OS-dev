@@ -376,3 +376,5 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.25.git20210102133559.gd
 bash /usr/libexec/update-repo/changelog qt/signon-plugin-oauth2/spkgbuild Changed\ from\ version\ 0.25.git20210102143559.gd759439066f0a34e5ad352ebab0b3bb2790d429e\ to\ version\ 0.25.git20210102133559.gd759439066f0a34e5ad352ebab0b3bb2790d429e
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.17.git20231016201200.geef943f0edf3beee8ecb85d4a9dae3656002fc24\| qt/signon-ui/spkgbuild # update-repo-version 0.17+git20231016.geef943f0edf3beee8ecb85d4a9dae3656002fc24 0.17.git20231016201200.geef943f0edf3beee8ecb85d4a9dae3656002fc24
 bash /usr/libexec/update-repo/changelog qt/signon-ui/spkgbuild Changed\ from\ version\ 0.17+git20231016.geef943f0edf3beee8ecb85d4a9dae3656002fc24\ to\ version\ 0.17.git20231016201200.geef943f0edf3beee8ecb85d4a9dae3656002fc24
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.0.19\| kde-apps/kaffeine/spkgbuild # update-repo-version 2.0.18 2.0.19
+bash /usr/libexec/update-repo/changelog kde-apps/kaffeine/spkgbuild Changed\ from\ version\ 2.0.18\ to\ version\ 2.0.19

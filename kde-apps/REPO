@@ -515,9 +515,9 @@ f:d040b85ec1157bc0f3656fbd1298a5e6:pimcommon/spkgbuild
 f:c175003a3dd3ca95d2351e7ecc231721:vvave/spkgbuild
 f:6616f0c74de60e4a0139d46e2acebc1e:vvave/override
 f:bbae6f873c985e9da0b283bea1ea3cd8:kaffeine/.pkgfiles
-f:0c10045e31509a9753c628e5c3002c06:kaffeine/CHANGELOG
+f:60bf6502cff48f87202eff99b957f515:kaffeine/CHANGELOG
 f:7f8f2370262da82dda8f7b009c3f549d:kaffeine/kaffeine.tar.xz
-f:2f582a43e199a40ee8d2d34cc712f6fa:kaffeine/spkgbuild
+f:53189becde876b94e99f9dfb1935c577:kaffeine/spkgbuild
 f:2eafbab9953a78ba7fbed99adae04dee:khelpcenter/CHANGELOG
 f:95d6c37c164064657e157304c89264c7:khelpcenter/spkgbuild
 f:bdde3038ee7b49857ffc012991e991c8:audiotube/CHANGELOG
