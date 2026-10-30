@@ -1,6 +1,6 @@
 # Only report uversion; update-repo owns the version= edit.
-# Detect the upstream version from package-specific release metadata.
-source=https://download.kde.org/stable/oxygen-icons/
+# Check the newest KF6 release directory for the actual oxygen-icons archive.
+source=https://download.kde.org/stable/frameworks/
 # update-repo sources this again immediately before fetching index.html.
 url=$source
 
@@ -10,7 +10,7 @@ get_generic()
     local -a fields
     unset uversion
     recipe="${ppath%/*}/spkgbuild"
-    detected=$(python3 - '{"mode":"listing","url":"https://download.kde.org/stable/oxygen-icons/","pattern":"oxygen-icons-([0-9]+\\.[0-9]+(?:\\.[0-9]+)*)\\.tar\\.xz"}' "$recipe" "$version" <<'PYUPSTREAM'
+    detected=$(python3 - '{"mode":"tree","url":"https://download.kde.org/stable/frameworks/","pattern":"oxygen-icons-([0-9]+\\.[0-9]+(?:\\.[0-9]+)*)\\.tar\\.xz","directory_pattern":"(6\\.[0-9]+)","limit":1}' "$recipe" "$version" <<'PYUPSTREAM'
 import datetime,gzip,json,pathlib,re,subprocess,sys,urllib.parse,xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 

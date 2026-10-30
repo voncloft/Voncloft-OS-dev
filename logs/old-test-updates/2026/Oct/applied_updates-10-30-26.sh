@@ -378,3 +378,5 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.17.git20231016201200.ge
 bash /usr/libexec/update-repo/changelog qt/signon-ui/spkgbuild Changed\ from\ version\ 0.17+git20231016.geef943f0edf3beee8ecb85d4a9dae3656002fc24\ to\ version\ 0.17.git20231016201200.geef943f0edf3beee8ecb85d4a9dae3656002fc24
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.0.19\| kde-apps/kaffeine/spkgbuild # update-repo-version 2.0.18 2.0.19
 bash /usr/libexec/update-repo/changelog kde-apps/kaffeine/spkgbuild Changed\ from\ version\ 2.0.18\ to\ version\ 2.0.19
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.31.0\| kf/oxygen-icons/spkgbuild # update-repo-version 6.2.0 6.31.0
+bash /usr/libexec/update-repo/changelog kf/oxygen-icons/spkgbuild Changed\ from\ version\ 6.2.0\ to\ version\ 6.31.0
