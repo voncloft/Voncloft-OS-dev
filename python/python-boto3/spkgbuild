@@ -2,7 +2,7 @@
 # depends : python-botocore python-jmespath python-s3transfer
 
 name=python-boto3
-version=1.43.122
+version=1.43.123
 release=1
 
 _name=${name#python-}

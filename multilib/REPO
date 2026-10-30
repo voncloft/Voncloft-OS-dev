@@ -181,8 +181,8 @@ f:0dbf6bf5c72361a170569b651c275613:libclc-32/spkgbuild
 f:f9c57f89c575477445ae0256fca57364:libtool-32/CHANGELOG
 f:caf77079dc892b1194d91881dfb86d79:libtool-32/spkgbuild
 f:380ea8cebb1cd7528232edc19e1fde5e:libtool-32/override
-f:e648dae53406d81b5a5e401b4adb7bf7:vulkan-loader-32/CHANGELOG
-f:12496b036ecfd0d3756cc4f1821202c5:vulkan-loader-32/spkgbuild
+f:504b9dc4d9742b8bfe1cf6269f41957d:vulkan-loader-32/CHANGELOG
+f:2505d28e58afc6554ccf16c2a53db48d:vulkan-loader-32/spkgbuild
 f:7e3cd37341c846119de73bc9545a8f90:pixman-32/CHANGELOG
 f:7a9650308dd6acd09f140036fb1bc945:pixman-32/spkgbuild
 f:51d083eeac0fe762bb581ad8899e3dd5:pixman-32/override
@@ -213,8 +213,8 @@ f:a5e4df33ee3c09a24a3657490415c84e:libsm-32/override
 f:708de4c3747bdcc26303e6de2fcb122d:spirv-llvm-translator-32/.pkgfiles
 f:400591f42fd7177184992c60387d3b9c:spirv-llvm-translator-32/CHANGELOG
 f:7c372e86b8dfe17e6ffd2af927f348e3:spirv-llvm-translator-32/spkgbuild
-f:df8549782980b28f77444e044d5967f1:kmod-32/CHANGELOG
-f:b30becfa4eefd7ab8b7472ad9f7a243f:kmod-32/spkgbuild
+f:c3003f93c63205d332861fa6e11e0ab5:kmod-32/CHANGELOG
+f:253e77e0bcf362784ebfcd79baaab0e6:kmod-32/spkgbuild
 f:b0d7831c2e001c4793baee4678c485a6:kmod-32/override
 f:a1d10205ee998e09f17e37d03e8ecef1:sdl-32/spkgbuild
 f:781efe5f7ac51a126cf89e3c278b78f0:sdl-32/override

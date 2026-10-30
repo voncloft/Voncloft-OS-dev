@@ -108,8 +108,8 @@ f:fbed267f5a91553e82296d1854136051:python-packaging/CHANGELOG
 f:e79eff497a88ab566b32b462259d6c07:python-packaging/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:kmod/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:kmod/.nanorc
-f:d6c598646e8405f39a48fdc2228b71df:kmod/CHANGELOG
-f:16562c4cb8c345250a82c7d186dd974b:kmod/spkgbuild
+f:c5e64f0875d0224254cbb378479989a1:kmod/CHANGELOG
+f:25a70b00b477987d9367fe94cabc0fd9:kmod/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-flit/.pkgfiles
 f:caa4da5b0eeed9cce86a3490c944e8c8:python-flit/CHANGELOG
 f:59ca3bb4e46a7cb4c53655a4f56d28c4:python-flit/spkgbuild

@@ -1,28 +1,11 @@
-# description	: glib wrapper for poppler
-# depends	: poppler glib glib
+# description	: Compatibility package for GLib PDF bindings provided by Poppler
+# depends	: poppler
 
 name=poppler-glib
 version=26.10.0
-release=1
-_name=poppler
-source="https://poppler.freedesktop.org/${_name}-${version}.tar.xz"
+release=2
+source="README"
 
 build() {
-	cd poppler-$version
-
-  	mkdir build
-	cd    build
-	
-	cmake  -DCMAKE_BUILD_TYPE=Release   \
-       	-DCMAKE_INSTALL_PREFIX=/usr  \
-       	-DTESTDATADIR=$PWD/testfiles \
-       	-DENABLE_UNSTABLE_API_ABI_HEADERS=ON \
-       	..
-	make
-	make DESTDIR=$PKG install
-
-	#rm $PKG/usr/lib/libpoppler.so*
-	#rm $PKG/usr/lib/pkgconfig/poppler.pc
-	#rm $PKG/usr/lib/pkgconfig/poppler-splash.pc
-	#rm $PKG/usr/lib/pkgconfig/poppler-cairo.pc
+    install -Dm644 "$SRC/README" "$PKG/usr/share/poppler-glib/README"
 }

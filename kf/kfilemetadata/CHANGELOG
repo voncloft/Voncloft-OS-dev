@@ -1,3 +1,12 @@
+Date: 2026-10-30
+
+kfilemetadata
+Version=6.31.0
+Release=2
+
+Synopsis:
+Rebuild PDF extraction against Poppler 26.10 and its new core library ABI.
+
 Date: Sat May  8 08:00:32 EDT 2021
 
 name=kfilemetadata

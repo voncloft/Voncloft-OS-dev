@@ -60,8 +60,8 @@ f:5046afe8ca54c766744625a7b3c42bc2:libreoffice/CHANGELOG
 f:d9ca98c45cb198f8246d0c4b17e7a3d3:libreoffice/spkgbuild
 f:3fd61ad592ad34bd4c80583f54c6acd2:libreoffice/override
 f:76e5fb76ed1bb9e020a82fe5cbe3ba97:discord/.pkgfiles
-f:43783055056d318c6924d12c7ade0917:discord/CHANGELOG
-f:c6a2dc823dbf5d63b7bf4c338abfec8c:discord/spkgbuild
+f:72acf36cb4e8d22c186908b13236db0f:discord/CHANGELOG
+f:7048f5f4ab250292f4ca62c520548325:discord/spkgbuild
 f:9c125e95e10cecbf5c1973f7b4db1ff4:discord/override
 f:05c708d759c1059ebec598477e4bf2b3:virtualbox-guest-utils/CHANGELOG
 f:9710904e9e86ec3da272cbe9fe48dbf8:virtualbox-guest-utils/60-vboxguest.rules
@@ -69,9 +69,9 @@ f:9157026032cfa499d823b55b258c8fce:virtualbox-guest-utils/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-utils/override
 f:119f437d4911f637fa586b5eda9aab29:virtualbox-guest-utils/pre-install.sh
 f:89fb28a484e7f5126839e83f10de377a:firefox/pre-upgrade.sh
-f:00f33dcc3b3283d914004197494cb302:firefox/CHANGELOG
+f:5b96c97d52faa5a45d844ee8f62d4d09:firefox/CHANGELOG
 f:37db9ec3cc336d3a09ede8becec2ad69:firefox/fix-ftbfs-newer-cbindgen.patch
-f:3214d7b9d86c6bf6966b43e89819a507:firefox/spkgbuild
+f:8c6ba50837a66fe05a1cb5247cc5e5db:firefox/spkgbuild
 f:a4a0f7c9c1e3424463670d031976aa67:firefox/override
 f:971c77648caea312fca2d9340c4382a6:firefox/firefox.desktop
 f:75aae82b7b33d79bcec25c8783f3ed5c:spotify/spotify

@@ -1,3 +1,12 @@
+Date: 2026-10-30
+
+okular
+Version=26.08.2
+Release=2
+
+Synopsis:
+Rebuild against Poppler 26.10 and its new core library ABI.
+
 Date: Thu May 13 00:01:32 EDT 2021
 
 name=okular

@@ -1,3 +1,12 @@
+Date: 2026-10-30
+
+poppler
+Version=26.10.0
+Release=2
+
+Synopsis:
+Add Brotli and explicit build/runtime dependencies; enable the C++, GLib and Qt6 frontends. Use poppler-data for encoding files and migrate its duplicate ownership before upgrading.
+
 Date: Wed 08 Dec 2021 09:53:49 AM EST
 
 poppler

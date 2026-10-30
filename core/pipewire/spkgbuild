@@ -1,24 +1,39 @@
-# description	: Server and user space API to deal with multimedia
-# depends	: meson alsa-lib gstreamer ffmpeg dbus gst-plugins-base bluez sbc
+# description	: Multimedia transport for audio, video, screen capture and live window previews
+# depends	: alsa-lib avahi bluez dbus elogind fdk-aac ffmpeg glib gst-plugins-base gstreamer libcanberra libdrm libsndfile libusb libx11 libxfixes meson ncurses ninja openssl opus pkgconf pulseaudio readline sbc udev
 
 name=pipewire
 version=1.6.11
-release=1
+release=3
 source="https://github.com/PipeWire/${name}/archive/$version/$name-$version.tar.gz"
+backup="etc/security/limits.d/25-pw-rlimits.conf"
 
 build() {
-	cd $name-$version
+    cd "$SRC/$name-$version"
+    # WirePlumber is packaged separately. Preserve the existing desktop startup
+    # configuration; building pipewire-pulse does not activate it over PulseAudio.
+    # This system uses elogind instead of systemd.
+    meson setup build --prefix=/usr --libdir=lib64 --buildtype=release \
+        -Dsession-managers=[] \
+        -Dlibsystemd=disabled \
+        -Dsystemd-system-service=disabled \
+        -Dsystemd-user-service=disabled \
+        -Dlogind=enabled -Dlogind-provider=libelogind \
+        -Dgstreamer=enabled \
+        -Ddocs=disabled -Dman=disabled \
+        -Dexamples=disabled -Dtests=disabled
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 
-	mkdir build
-	cd build
-
-	#meson --prefix=/usr \
-	#      -Dsystemd=false \
-	#      -Ddocs=false \
-        #      -Dvulkan=false \
-        #      -Dexamples=false \
-	#      -Dpipewire-pulseaudio=false
-	meson --prefix=/usr --buildtype=release -Dsession-managers= ..
-	ninja
-	DESTDIR=$PKG ninja install
+    # PipeWire uses lib64 here, while the installed GStreamer may use lib.
+    # Stage the plugin in GStreamer's advertised search path, not PipeWire's.
+    gst_plugin_dir=$(pkg-config --variable=pluginsdir gstreamer-1.0)
+    case "$gst_plugin_dir" in
+        /usr/*) ;;
+        *) echo "Invalid GStreamer plugin directory: $gst_plugin_dir" >&2; return 1 ;;
+    esac
+    if [ "$gst_plugin_dir" != /usr/lib64/gstreamer-1.0 ]; then
+        install -dm755 "$PKG$gst_plugin_dir"
+        mv "$PKG/usr/lib64/gstreamer-1.0/libgstpipewire.so" "$PKG$gst_plugin_dir/"
+        rmdir "$PKG/usr/lib64/gstreamer-1.0"
+    fi
 }

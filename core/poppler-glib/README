@@ -1,0 +1,3 @@
+The poppler package provides the Poppler GLib library, headers, pkg-config
+metadata and introspection bindings. This compatibility package keeps existing
+poppler-glib dependencies working without installing a second copy of Poppler.

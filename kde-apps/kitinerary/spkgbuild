@@ -1,9 +1,9 @@
 # description : Library and tools for extracting travel reservations and ticket information from emails, documents, and barcodes
-# depends : extra-cmake-modules kcalendarcore kcodecs kcontacts kde-deps-installer ki18n kmime kpkpass libxml2 openssl qt6 shared-mime-info zlib zxing-cpp
+# depends : extra-cmake-modules kcalendarcore kcodecs kcontacts kde-deps-installer ki18n kmime kpkpass libxml2 openssl poppler qt6 shared-mime-info zlib zxing-cpp
 
 name=kitinerary
 version=26.08.2
-release=1
+release=2
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
 options="!checksum"

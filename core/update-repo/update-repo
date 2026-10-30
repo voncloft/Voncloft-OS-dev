@@ -1,11 +1,10 @@
 #!/bin/bash
 #Written: 09-19-21
 
+# Default recipe repository; -p overrides this for the current run.
+repo_root=/sources/Voncloft-OS-dev
+default_repo_root=$repo_root
 program_path=$(readlink -f -- "${BASH_SOURCE[0]}")
-changelog_program=/usr/libexec/update-repo/changelog
-if [ ! -f "$changelog_program" ];then
-	changelog_program=/sources/Voncloft-OS-dev/core/update-repo/changelog
-fi
 
 # Overrides are sourced into this shell. Keep their legacy egrep calls quiet
 # without changing the system egrep command or requiring per-override edits.
@@ -65,6 +64,14 @@ grep() {
 # Use a fixed terminal screen for scans; redirected output keeps its normal format.
 screen_start()
 {
+    # Retain results in every mode, including redirected output.
+    screen_updates=()
+    screen_update_repos=()
+    screen_update_old=()
+    screen_update_new=()
+    # Use the same installed-package database as Scratch, without running it.
+    screen_pkgdb=$(pkgadd --print-dbdir 2>/dev/null)
+    screen_pkgdb=${screen_pkgdb:-/var/lib/scratchpkg/db}
     [ -t 1 ] && [ "${TERM:-dumb}" != dumb ] || return 0
     screen_output=$(mktemp "${TMPDIR:-/tmp}/update-repo-screen.XXXXXX") || return 0
     exec {screen_fd}>&1
@@ -103,36 +110,109 @@ screen_stop()
     rm -f -- "$screen_output"
 }
 
-# The completed scan has one compact summary, with no last-package fields.
+# Format the progress counter shown while checks are running.
+check_progress()
+{
+    local current=${1:-0} total=${2:-0} percent=0
+    if [ "$total" -gt 0 ]; then
+        percent=$((current * 100 / total))
+    fi
+    printf '%s/%s (%s%%)' "$current" "$total" "$percent"
+}
+
+# Print every result after completion so the full list remains in scrollback.
 print_stats()
 {
-    local seconds=${1:-$(( $(date -u +%s) - start_time ))} duration minute_unit=minutes second_unit=seconds
-    if [ "$seconds" -ge 60 ]; then
-        [ "$((seconds / 60))" != 1 ] || minute_unit=minute
-        [ "$((seconds % 60))" != 1 ] || second_unit=second
-        duration="$((seconds / 60)) $minute_unit $((seconds % 60)) $second_unit"
-    else
-        [ "$seconds" != 1 ] || second_unit=second
-        duration="$seconds $second_unit"
+    local mode='Apply updates' entry part
+    local -a update_parts
+    [ -z "${test_upgrade:-}" ] || mode='Test run'
+    [ -z "${update_repo_newer_only:-}" ] || mode+=" (newer only)"
+    if [ -t 1 ] && [ "${TERM:-dumb}" != dumb ]; then
+        printf '\033[0m\033[?7h\033[H\033[2J'
     fi
-    printf '%bupdate-repo stats%b\n' "${WHITE:-}" "${NC:-}"
-    printf '%bPackages updated: %s%b\n' "${BLUE:-}" "${count:-0}" "${NC:-}"
+    printf '%bUpdates: %s%b\n' "${BLUE:-}" "${count:-0}" "${NC:-}"
     printf '%bMissing: %s%b\n' "${BLUE:-}" "${missing:-0}" "${NC:-}"
-    printf '%bChecked: %s%b\n' "${BLUE:-}" "${checked_packages:-0}" "${NC:-}"
-    printf '%bTime: %s%b\n' "${WHITE:-}" "$duration" "${NC:-}"
+    printf '%bMode: %s%b\n\n' "${YELLOW:-}" "$mode" "${NC:-}"
+    printf '%bPackages to be updated:%b\n' "${WHITE:-}" "${NC:-}"
+    if [ "${#screen_updates[@]}" -eq 0 ]; then
+        printf 'None.\n'
+    else
+        for ((entry=0; entry<${#screen_updates[@]}; entry++)); do
+            screen_update_parts "$entry"
+            for ((part=0; part<${#update_parts[@]}; part+=2)); do
+                printf '%b%s' "${update_parts[part]}" "${update_parts[part+1]}"
+            done
+            printf '%b\n' "${NC:-}"
+        done
+    fi
+}
+
+screen_record_update()
+{
+    local repo=${1%/spkgbuild}
+    repo=${repo%/*}
+    screen_updates+=("$2")
+    screen_update_repos+=("${repo##*/}")
+    screen_update_old+=("$3")
+    screen_update_new+=("$4")
+}
+
+# Both renderers declare update_parts locally for this helper to populate.
+screen_update_parts()
+{
+    local entry=$1 installed_marker='[ ] ' installed_color=${WHITE:-}
+    if [ -s "$screen_pkgdb/${screen_updates[entry]}" ]; then
+        installed_marker='[i] '
+    fi
+    update_parts=(
+        "$installed_color" "$installed_marker"
+        "${YELLOW:-}" "[${screen_update_repos[entry]}] "
+        "${GREEN:-}" "${screen_updates[entry]}: "
+        "${RED:-}" "${screen_update_old[entry]}"
+        "${WHITE:-}" ' → '
+        "${BLUE:-}" "${screen_update_new[entry]}"
+    )
+}
+
+# Clip visible text before applying colors, so escape sequences do not consume
+# terminal columns or get cut in half when a row contains several colors.
+screen_write_parts()
+{
+    local row=$1 remaining=$2 color text
+    shift 2
+    printf '\033[%s;1H\033[2K' "$row" >&"$screen_fd"
+    while [ "$#" -ge 2 ] && [ "$remaining" -gt 0 ]; do
+        color=$1
+        text=$2
+        shift 2
+        text=${text//$'\n'/ }
+        text=${text//$'\r'/ }
+        text=${text//$'\t'/ }
+        text=${text:0:remaining}
+        printf '%b%s' "$color" "$text" >&"$screen_fd"
+        remaining=$((remaining - ${#text}))
+    done
+    printf '\033[0m' >&"$screen_fd"
 }
 
 screen_draw()
 {
     [ "${screen_active:-}" = 1 ] || return 0
     [ "${screen_drawing:-}" != 1 ] || return 0
-    local screen_drawing=1 rows columns row text mode
-    local -a fields colors
+    local screen_drawing=1 rows columns row mode current progress available first entry
+    local -a fields colors update_rows update_parts
     read -r rows columns < <(stty size <&"$screen_fd" 2>/dev/null)
     [[ $rows =~ ^[0-9]+$ ]] && [ "$rows" -gt 0 ] || rows=24
     [[ $columns =~ ^[0-9]+$ ]] && [ "$columns" -gt 1 ] || columns=80
+    current=${screen_checked:-0}
+    # While a request is in flight, show the package being checked now.
+    if [ "${screen_checking:-}" = 1 ] && [ -n "${screen_path:-}" ]; then
+        current=$((current + 1))
+    fi
+    progress=$(check_progress "$current" "${screen_total_packages:-0}")
     mode='Applying updates'
     [ -z "${test_upgrade:-}" ] || mode='Test run'
+    [ -z "${update_repo_newer_only:-}" ] || mode+=" (newer only)"
     fields=(
         "PPath:     $screen_path"
         "URL:       $screen_source"
@@ -146,11 +226,11 @@ screen_draw()
         ''
         "Updates: ${count:-0}"
         "Missing: ${missing:-0}"
-        "Checked: $screen_checked"
+        "Checked: $progress"
         "Mode: $mode"
     )
-    colors=("${WHITE:-}" "${YELLOW:-}" "${GREEN:-}" "${BLUE:-}"
-        "${RED:-}" "${PURPLE:-}" "${DBLUE:-}" '' "${CYAN:-}"
+    colors=("${YELLOW:-}" "${YELLOW:-}" "${GREEN:-}" "${RED:-}"
+        "${PINK:-}" "${PURPLE:-}" "${BLUE:-}" '' "${CYAN:-}"
         '' "${BLUE:-}" "${BLUE:-}" "${BLUE:-}" "${YELLOW:-}")
     if [[ $screen_message == *ERROR* || $screen_message == *error* ]]; then
         colors[8]=${RED:-}
@@ -173,24 +253,59 @@ screen_draw()
         fi
     fi
     # Keep the package and totals visible in a short terminal as well.
-    if [ "$rows" -lt "${#fields[@]}" ]; then
+    if [ "$rows" -lt "$((${#fields[@]} + 3))" ]; then
         fields=("${fields[0]}" "Updates: ${count:-0}  Missing: ${missing:-0}"
-            "${fields[3]} -> ${fields[6]#Upgraded:  }"
+            "Checked: $progress"
+            "${fields[3]}" "${fields[6]}"
             "${fields[7]}" "${fields[8]}" "Mode: $mode")
-        colors=("${WHITE:-}" "${BLUE:-}" "${DBLUE:-}" '' "${CYAN:-}" "${YELLOW:-}")
+        colors=("${YELLOW:-}" "${BLUE:-}" "${BLUE:-}" "${RED:-}" "${BLUE:-}" '' "${CYAN:-}" "${YELLOW:-}")
+    fi
+    if [ "$rows" -lt "$((${#fields[@]} + 3))" ]; then
+        fields=("${fields[0]}" "Updates: ${count:-0}  Missing: ${missing:-0}"
+            "Checked: $progress" "Mode: $mode")
+        colors=("${YELLOW:-}" "${BLUE:-}" "${BLUE:-}" "${YELLOW:-}")
     fi
     if [ "${screen_phase:-}" = apply ]; then
         fields=("Updating: $screen_updating"
             "Status: $screen_upgrade_status"
             "Package $screen_apply_index/$screen_apply_total")
         colors=("${GREEN:-}" "${BLUE:-}" "${WHITE:-}")
+    else
+        fields+=('' 'Packages to be updated:  [i] installed  [ ] not installed')
+        colors+=('' "${WHITE:-}")
+        available=$((rows - ${#fields[@]}))
+        if [ "$available" -gt 0 ]; then
+            if [ "${#screen_updates[@]}" -eq 0 ]; then
+                fields+=('None found yet.')
+                colors+=("${WHITE:-}")
+            else
+                # Keep the latest changes visible without scrolling the terminal.
+                first=0
+                if [ "${#screen_updates[@]}" -gt "$available" ]; then
+                    if [ "$available" -gt 1 ]; then
+                        first=$((${#screen_updates[@]} - available + 1))
+                        fields+=("... $first earlier updates")
+                        colors+=("${CYAN:-}")
+                    else
+                        first=$((${#screen_updates[@]} - 1))
+                    fi
+                fi
+                for ((entry=first; entry<${#screen_updates[@]}; entry++)); do
+                    update_rows[${#fields[@]}]=$entry
+                    fields+=("${screen_updates[entry]}")
+                    colors+=("${GREEN:-}")
+                done
+            fi
+        fi
     fi
     for ((row=1; row<=rows && row<=${#fields[@]}; row++)); do
-        text=${fields[row-1]}
-        text=${text//$'\n'/ }
-        text=${text//$'\r'/ }
-        text=${text//$'\t'/ }
-        printf '\033[%s;1H\033[2K%b%s\033[0m' "$row" "${colors[row-1]}" "${text:0:columns-1}" >&"$screen_fd"
+        if [ -n "${update_rows[row-1]+set}" ]; then
+            entry=${update_rows[row-1]}
+            screen_update_parts "$entry"
+            screen_write_parts "$row" "$((columns-1))" "${update_parts[@]}"
+        else
+            screen_write_parts "$row" "$((columns-1))" "${colors[row-1]}" "${fields[row-1]}"
+        fi
     done
     # Clear rows left over after a resize without issuing scrolling newlines.
     if [ "$row" -le "$rows" ]; then
@@ -247,6 +362,8 @@ screen_end_package()
         screen_status='Already current'
     elif [ -n "${update_repo_review_reason:-}" ]; then
         screen_status='Packaging review required'
+    elif [ -n "${update_repo_not_newer:-}" ]; then
+        screen_status='Skipped: found version is not newer (-n)'
     else
         screen_status='Updated'
         [ -z "${test_upgrade:-}" ] || screen_status='Update saved for review'
@@ -283,16 +400,21 @@ screen_upgrading()
 # recipe (source pin, version, changelog) count as one package in the display.
 screen_prepare_apply()
 {
-    local line package
-    screen_path_pattern="(^|[[:space:]\"'])(/sources/Voncloft-OS-dev/)?([[:alnum:]_.+-]+/[[:alnum:]_.+-]+)/spkgbuild([[:space:]\"']|$)"
+    local line package repo_pattern
+    repo_pattern=$(printf '%s' "$repo_root" | sed 's/[][\.^$*+?(){}|]/\\&/g')
+    screen_path_pattern="(^|[[:space:]\"'])($repo_pattern/)?([[:alnum:]_.+-]+/[[:alnum:]_.+-]+)/spkgbuild([[:space:]\"']|$)"
     # Keep recognizing update scripts saved by older releases.
     screen_version_pattern='s/version=([^/]+)/version=([^/]+)/g'
     screen_version_metadata='# update-repo-version ([^[:space:]]+) ([^[:space:]]+)$'
     declare -gA screen_pending_packages=() screen_pending_old=() screen_pending_new=() screen_applied=()
+    screen_pending_order=()
     while IFS= read -r line || [ -n "$line" ]; do
         [[ $line == \#* ]] && continue
         [[ $line =~ $screen_path_pattern ]] || continue
         package=${BASH_REMATCH[3]}
+        if [ -z "${screen_pending_packages[$package]:-}" ]; then
+            screen_pending_order+=("$package")
+        fi
         screen_pending_packages["$package"]=1
         if [[ $line =~ $screen_version_metadata ]] || [[ $line =~ $screen_version_pattern ]]; then
             screen_pending_old["$package"]=${BASH_REMATCH[1]}
@@ -326,11 +448,7 @@ run_saved_updates()
 {
     local result=0 diagnostics
     screen_prepare_apply test_updates.sh
-    # Keep the existing plain output when redirected or on a dumb terminal.
-    if [ ! -t 1 ] || [ "${TERM:-dumb}" = dumb ]; then
-        bash test_updates.sh
-        return $?
-    fi
+    # Start also initializes the retained list for redirected or dumb output.
     screen_start
     if [ "${screen_active:-}" != 1 ]; then
         bash test_updates.sh
@@ -723,25 +841,26 @@ retry_index()
 }
 grep_retry()
 {
+	local retry_file="$repo_root/test.txt" index_file="$repo_root/index.html"
 	unset uversion url_lazy new_url
-	if [ -f test.txt ];then
-        	rm test.txt
+	if [ -f "$retry_file" ];then
+                rm "$retry_file"
 	fi
-	if [ -f /sources/Voncloft-OS-dev/index.html ];then
-		grep "pkg=" index.html > /sources/Voncloft-OS-dev/test.txt
-		grep "_pkg=" index.html >> /sources/Voncloft-OS-dev/test.txt
-		grep "pkgbase=" index.html >> /sources/Voncloft-OS-dev/test.txt
-                grep "pkgver=" index.html >> /sources/Voncloft-OS-dev/test.txt
-                grep "name=" index.html | cut -d ' ' -f1 >> /sources/Voncloft-OS-dev/test.txt
-                grep "pkgname=" index.html | cut -d ' ' -f1 >> /sources/Voncloft-OS-dev/test.txt
-                grep "url=" index.html >> /sources/Voncloft-OS-dev/test.txt
-                grep "source=" index.html >> /sources/Voncloft-OS-dev/test.txt
-		sed -i -e "s/\'//g" /sources/Voncloft-OS-dev/test.txt
-                sed -i -e "s/(//g" /sources/Voncloft-OS-dev/test.txt
-                sed -i -e "s/)//g" /sources/Voncloft-OS-dev/test.txt
-		sed -i -e "s/{,.asc}//g" /sources/Voncloft-OS-dev/test.txt
+	if [ -f "$index_file" ];then
+		grep "pkg=" "$index_file" > "$retry_file"
+		grep "_pkg=" "$index_file" >> "$retry_file"
+		grep "pkgbase=" "$index_file" >> "$retry_file"
+                grep "pkgver=" "$index_file" >> "$retry_file"
+                grep "name=" "$index_file" | cut -d ' ' -f1 >> "$retry_file"
+                grep "pkgname=" "$index_file" | cut -d ' ' -f1 >> "$retry_file"
+                grep "url=" "$index_file" >> "$retry_file"
+                grep "source=" "$index_file" >> "$retry_file"
+		sed -i -e "s/\'//g" "$retry_file"
+                sed -i -e "s/(//g" "$retry_file"
+                sed -i -e "s/)//g" "$retry_file"
+		sed -i -e "s/{,.asc}//g" "$retry_file"
                 new_url=$spkg_url
-                source /sources/Voncloft-OS-dev/test.txt
+                source "$retry_file"
 		spkg_src=$(echo $spkg_src | sed "s/\"//g")
                 uversion="$pkgver"
 
@@ -751,34 +870,44 @@ perform_override()
 {
         get_url $check_override
 	fix_spkgbuild=$(echo $ppath | sed 's/override/spkgbuild/g')
-        echo -e "${WHITE}PPath:     $fix_spkgbuild${NC}"
+        echo -e "${YELLOW}PPath:     $fix_spkgbuild${NC}"
         echo -e "${YELLOW}URL:       $url${NC}"
         echo -e "${GREEN}Filename:  $name${NC}"
-        echo -e "${BLUE}Version:   $version${NC}"
+        echo -e "${RED}Version:   $version${NC}"
         screen_package_details
         alter_per_url
-        echo -e "${RED}New URL:   $url${NC}"
+        echo -e "${PINK}New URL:   $url${NC}"
 	cmd_torun
         ppath=$(echo $ppath | sed 's/override/spkgbuild/g')
         echo -e "${PURPLE}Command:   $cmd${NC}"
-        echo -e "${DBLUE}Upgraded:  $uversion${NC}"
+        echo -e "${BLUE}Upgraded:  $uversion${NC}"
 }
 upgrade_normally()
 {
-	echo -e "${WHITE}PPath:     $ppath${NC}"
+	echo -e "${YELLOW}PPath:     $ppath${NC}"
         echo -e "${YELLOW}URL:       $url${NC}"
         echo -e "${GREEN}Filename:  $name${NC}"
-        echo -e "${BLUE}Version:   $version${NC}"
+        echo -e "${RED}Version:   $version${NC}"
         screen_package_details
         alter_per_url
-        echo -e "${RED}New URL:   $url${NC}"
+        echo -e "${PINK}New URL:   $url${NC}"
         cmd_torun
         echo -e "${PURPLE}Command:   $cmd${NC}"
-        echo -e "${DBLUE}Upgraded:  $uversion${NC}"
+        echo -e "${BLUE}Upgraded:  $uversion${NC}"
 }
+# Use the same version-sort ordering as Scratch, with equality excluded.
+version_is_newer()
+{
+    local latest
+    [ -n "$1" ] && [ -n "$2" ] && [ "$1" != "$2" ] || return 1
+    latest=$(printf '%s\n' "$2" "$1" | LC_ALL=C sort -Vu | tail -n1) || return 1
+    [ "$latest" = "$1" ]
+}
+
 upgrade_process()
 {
     local version_assignment replacement version_edit update_command change_message changes_log
+    unset update_repo_not_newer
     if [ -n "${update_repo_skip:-}" ]; then
         : # Intentionally local/manual, not a failed upstream lookup.
     elif [ -z "${uversion:-}" ]; then
@@ -788,8 +917,11 @@ upgrade_process()
         : # Exact match: do not edit the recipe or queue an update.
     elif [ -n "${update_repo_review_reason:-}" ]; then
         printf '%s\n' "$update_repo_review_reason"
+    elif [ -n "${update_repo_newer_only:-}" ] && ! version_is_newer "$uversion" "$version"; then
+        update_repo_not_newer=1
+        printf 'Skipping %s: found version %s is not newer than %s (-n).\n' "$name" "$uversion" "$version"
     else
-        # A different upstream version is a change in either direction.
+        # Without -n, a different upstream version is a change in either direction.
         # Replace only the version assignment, leaving names and URLs intact.
         printf -v version_assignment '%q' "$uversion"
         replacement=${version_assignment//\\/\\\\}
@@ -812,6 +944,7 @@ upgrade_process()
         fi
         echo "NEW"
         ((count=count+1))
+        screen_record_update "$ppath" "$name" "$version" "$uversion"
         printf '%s <br>\n' "$update_command" >> "$changes_log"
         create_table "$ppath" "$version" "$uversion"
     fi
@@ -826,9 +959,9 @@ alerts_and_logs()
 {
 	if [ ! -z $count ];
 	then
-	echo -e "Packages upgraded: $count<br>\n" >> $logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html
-	echo -e "Packages upgraded: $count<br>\n" >> $logpath/changes/repository_changes-$(date +"%m-%d-%y").html
-	words=$(cat $logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html)
+	echo -e "Packages upgraded: $count<br>\n" >> "$logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html"
+	echo -e "Packages upgraded: $count<br>\n" >> "$logpath/changes/repository_changes-$(date +"%m-%d-%y").html"
+	words=$(cat "$logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html")
 	title="Outdated Packages in Repository: "$(date +"%m-%d-%y")
 	if command -v mailme >/dev/null 2>&1 && [ -r /etc/scratchpkg.email ];
 	then
@@ -844,12 +977,12 @@ alerts_and_logs()
         	#missing=$(cat missing.txt)
         	#mailme voncloft@gmail.com "$missing" "Missing Packages not in the loop to be checked as of: "$(date +"%m-%d-%y")
 	fi
-	cp $logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html /var/log/old/repository_upgrade_report-$(date +"%m-%d-%y").html
-	cp $logpath/changes/repository_changes-$(date +"%m-%d-%y").html /var/log/old/repository_changes-$(date +"%m-%d-%y").html
-	echo -e "<br>" >> $logpath/over_updated/over_updated-$(date +"%m-%d-%y").html 
-	cp $logpath/over_updated/over_updated-$(date +"%m-%d-%y").html /var/log/old/over_updated-$(date +"%m-%d-%y").html
-	if [ -f /sources/Voncloft-OS-dev/logs/secondary.php ];then
-		find /sources/Voncloft-OS-dev/logs/ -mindepth 1 -maxdepth 5 -type d -exec cp /sources/Voncloft-OS-dev/logs/secondary.php {} \;
+	cp "$logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html" /var/log/old/repository_upgrade_report-$(date +"%m-%d-%y").html
+	cp "$logpath/changes/repository_changes-$(date +"%m-%d-%y").html" /var/log/old/repository_changes-$(date +"%m-%d-%y").html
+	echo -e "<br>" >> "$logpath/over_updated/over_updated-$(date +"%m-%d-%y").html"
+	cp "$logpath/over_updated/over_updated-$(date +"%m-%d-%y").html" /var/log/old/over_updated-$(date +"%m-%d-%y").html
+	if [ -f "$repo_root/logs/secondary.php" ];then
+		find "$repo_root/logs/" -mindepth 1 -maxdepth 5 -type d -exec cp "$repo_root/logs/secondary.php" {} \;
 	fi
 	fi
 }
@@ -858,14 +991,14 @@ prepare_log_dirs()
 	# Recreate date-based folders at runtime when the month or year changes.
 	mkdir -pv "$logpath/changes" "$logpath/reports" \
 		"$logpath/over_updated" "$logpath/missing" \
-		"/sources/Voncloft-OS-dev/logs/old-test-updates/$(date +"%Y/%b")" \
+		"$repo_root/logs/old-test-updates/$(date +"%Y/%b")" \
 		/var/log/old
 }
 prepare_backup_and_logs()
 {
 	prepare_log_dirs || return 1
 	if [ -z "$skip_tar" ];then
-		foltotar /var/log/old/repo-$(date +"%m-%d-%y").tar.gz /sources/Voncloft-OS-dev || return 1
+		foltotar "/var/log/old/repo-$(date +"%m-%d-%y").tar.gz" "$repo_root" || return 1
 	fi
 	local logfile
 	for logfile in \
@@ -882,44 +1015,69 @@ prepare_backup_and_logs()
 timestamp_log()
 {
 	#if [ ! -z $count ] && [ $count -eq 1 ];then
-                        #echo -e "\n$(date +%H)<br>" >> $logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html
-                        echo -e "\n$(date +%H)<br>" >> $logpath/changes/repository_changes-$(date +"%m-%d-%y").html
-                        echo -e "\n$(date +%H)<br>" >> $logpath/over_updated/over_updated-$(date +"%m-%d-%y").html
+                        #echo -e "\n$(date +%H)<br>" >> "$logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html"
+                        echo -e "\n$(date +%H)<br>" >> "$logpath/changes/repository_changes-$(date +"%m-%d-%y").html"
+                        echo -e "\n$(date +%H)<br>" >> "$logpath/over_updated/over_updated-$(date +"%m-%d-%y").html"
 	#fi
 }
 log_missing()
 {
 	if [ ! -z $missing ] && [ $missing -eq 1 ];then
-		echo -e "\n$(date +%H)<br>" >> $logpath/missing/missing-$(date +"%m-%d-%y").html
+		echo -e "\n$(date +%H)<br>" >> "$logpath/missing/missing-$(date +"%m-%d-%y").html"
 	fi
 	if [ -z $uversion ];then
-                echo $ppath"<br>" >> $logpath/missing/missing-$(date +"%m-%d-%y").html
+                echo $ppath"<br>" >> "$logpath/missing/missing-$(date +"%m-%d-%y").html"
        	fi
 }
 finish_logs()
 {
 	if [ ! -z $missing ];then
-		echo "<br>Total missing packages: $missing" >> $logpath/missing/missing-$(date +"%m-%d-%y").html
-		echo "<br><br>" >> $logpath/missing/missing-$(date +"%m-%d-%y").html
+		echo "<br>Total missing packages: $missing" >> "$logpath/missing/missing-$(date +"%m-%d-%y").html"
+		echo "<br><br>" >> "$logpath/missing/missing-$(date +"%m-%d-%y").html"
 	fi
 	if [ ! -z $count ];then
-        	echo -e "<br>" >> $logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html
-        	echo -e "<br>" >> $logpath/changes/repository_changes-$(date +"%m-%d-%y").html
-        	echo -e "<br>" >> $logpath/over_updated/over_updated-$(date +"%m-%d-%y").html
-		echo -e "</table>" >> $table_log
+                echo -e "<br>" >> "$logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html"
+                echo -e "<br>" >> "$logpath/changes/repository_changes-$(date +"%m-%d-%y").html"
+                echo -e "<br>" >> "$logpath/over_updated/over_updated-$(date +"%m-%d-%y").html"
+		echo -e "</table>" >> "$table_log"
 	fi
 }
 create_table()
 {
 	if [ $count = 1 ];then
-	        echo "<CENTER>" >> $table_log
-		echo -e '<table border = "2" width="600px"><caption>'$title $(date +"%m-%d-%y") $(date "+%H")'</caption>' >> $table_log
-		echo '<tr><td align=center>Package Path</td><td align=center>Old Version</td><td align=center>New Version</td><td align=center>Changelog</td><td align=center>spkgbuild</td></tr>' >> $table_log
+	        echo "<CENTER>" >> "$table_log"
+		echo -e '<table border = "2" width="600px"><caption>'$title $(date +"%m-%d-%y") $(date "+%H")'</caption>' >> "$table_log"
+		echo '<tr><td align=center>Package Path</td><td align=center>Old Version</td><td align=center>New Version</td><td align=center>Changelog</td><td align=center>spkgbuild</td></tr>' >> "$table_log"
 	fi
 	spkg_dir=$(echo $1 | sed "s/\/spkgbuild//g")
 	changelog="http://voncloft.dnsfor.me/repository/REPOS/$spkg_dir/CHANGELOG"
-        echo '<tr><td align=center>'$1'</td><td align=center>'$2'</td><td align=center>'$3'</td><td align=center><a href='$changelog'>Changelog</a></td><td align=center><a href=http://voncloft.dnsfor.me/repository/REPOS/'$1'>spkgbuild</a></td></tr>' >> $table_log	
+        echo '<tr><td align=center>'$1'</td><td align=center>'$2'</td><td align=center>'$3'</td><td align=center><a href='$changelog'>Changelog</a></td><td align=center><a href=http://voncloft.dnsfor.me/repository/REPOS/'$1'>spkgbuild</a></td></tr>' >> "$table_log"
 }
+configure_repo_path()
+{
+    repo_root=$default_repo_root
+    while [ "$#" -gt 0 ]; do
+        case "$1" in
+            -p)
+                if [ "$#" -lt 2 ] || [ -z "$2" ] || [[ $2 == -* ]]; then
+                    printf '%s\n' 'ERROR: -p requires a repository directory.' >&2
+                    return 2
+                fi
+                repo_root=$2
+                shift
+                ;;
+        esac
+        shift
+    done
+    if [ ! -d "$repo_root" ]; then
+        printf 'ERROR: Repository directory not found: %s\n' "$repo_root" >&2
+        return 1
+    fi
+    repo_root=$(cd -- "$repo_root" && pwd -P) || return 1
+    # Child helpers and saved update scripts use this same selected repository.
+    export UPDATE_REPO_ROOT="$repo_root"
+}
+
 check_handles()
 {
         while [ $1 ]; do
@@ -929,7 +1087,10 @@ check_handles()
                 	exit;;
                         -st) skip_tar=1;;
                         -t) test_upgrade=1;;
+                        -n) update_repo_newer_only=1;;
                         -s) repos;;
+                        --all) repos="*/*";;
+                        -p) shift;; # Path was validated before entering the repository.
                         -k) keep_index=1;;
                         -e) edit_program
                         exit;;
@@ -969,10 +1130,15 @@ update_to_github()
 
 apply_test_updates()
 {
+	local package test_upgrade=
 	if [ -f test_updates.sh ];then
 		run_saved_updates || return 1
-		mkdir -pv /sources/Voncloft-OS-dev/logs/old-test-updates/$(date +"%Y")/$(date +"%b")
-		cat test_updates.sh >> /sources/Voncloft-OS-dev/logs/old-test-updates/$(date +"%Y")/$(date +"%b")/applied_updates-$(date +"%m-%d-%y").sh
+		for package in "${screen_pending_order[@]}"; do
+			screen_record_update "$package/spkgbuild" "${package##*/}" \
+				"${screen_pending_old[$package]:-unknown}" "${screen_pending_new[$package]:-unknown}"
+		done
+		mkdir -pv "$repo_root/logs/old-test-updates/$(date +"%Y/%b")"
+		cat test_updates.sh >> "$repo_root/logs/old-test-updates/$(date +"%Y/%b")/applied_updates-$(date +"%m-%d-%y").sh"
 		rm test_updates.sh
 		count=$screen_apply_total
 		missing=0
@@ -997,8 +1163,12 @@ help()
 	echo "-k keep index.html file for debugging"
 	echo "-l too lazy to run two commands merging apply and upload to github"
 	echo "-s check for specific package updates (format category/package_name)"
+	echo "--all check every category/package in the selected repository without prompting"
+	echo "-p PATH use a different recipe repository (default: $default_repo_root)"
 	echo "-st skip the repository backup (does not enable test mode)"
 	echo "-t save available updates to test_updates.sh without applying them"
+	echo "-n during checks, accept only versions newer than the current recipe"
+	echo "   Without -n, accept any different version, including lower versions."
 	echo "-stu review pending updates saved by a -t run"
 	echo "-utg upload changes to github"
 	echo "-h help"
@@ -1039,13 +1209,13 @@ main()
 	fi
 	prepare_backup_and_logs || return 1
 	timestamp_log
-	screen_start
 	checked_packages=0
 	screen_total_packages=0
 	for f in $repos; do
 		[ "${f##*/}" != "REPO" ] && [ -f "$f/spkgbuild" ] || continue
 		screen_total_packages=$((screen_total_packages+1))
 	done
+	screen_start
 	for f in $repos;
 	do
 		[ "${f##*/}" != "REPO" ] && [ -f "$f/spkgbuild" ] || continue
@@ -1080,14 +1250,20 @@ GREEN='\e[0;32;40m'
 BLUE='\e[0;34;40m'
 WHITE='\e[0;37;40m'
 PURPLE='\e[0;35;40m'
+PINK='\e[0;38;2;255;105;180;40m'
 DBLUE='\e[1;34;40m'
 CYAN='\e[0;36;40m'
 FRED='\e[5;31;40m'
 NC='\033[0m'
-cd /sources/Voncloft-OS-dev || exit 1
+configure_repo_path "$@" || exit $?
+cd -- "$repo_root" || exit 1
+changelog_program=/usr/libexec/update-repo/changelog
+if [ ! -f "$changelog_program" ];then
+	changelog_program="$repo_root/core/update-repo/changelog"
+fi
 ###GLOBAL VARIABLE###
-logpath=/sources/Voncloft-OS-dev/logs/$(date +"%Y")/$(date +"%b")
-table_log=$logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html
+logpath="$repo_root/logs/$(date +"%Y/%b")"
+table_log="$logpath/reports/repository_upgrade_report-$(date +"%m-%d-%y").html"
 # Enabled recipe folders in /etc/scratchpkg.repo.
 repos="core/* hardware/* multilib/* boot-scripts/* displaym/* kde/* kf/* lxde/* mate/* plasma/* qt/* xfce/* xorg/* compilers/* libs/* perl/* python/* ruby-gems/* extra/* fonts/* kde-apps/* media/* nonfree/*"
 
@@ -1107,5 +1283,5 @@ fi
 print_stats "$elapsed"
 
 if [[ $count -gt 0 ]];then
-	echo $minutes_quote"<br>" >> $table_log
+	echo $minutes_quote"<br>" >> "$table_log"
 fi

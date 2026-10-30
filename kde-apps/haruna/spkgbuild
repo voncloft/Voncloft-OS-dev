@@ -2,7 +2,7 @@
 # depends : breeze extra-cmake-modules ffmpeg kcolorscheme kconfig kcoreaddons kcrash kde-deps-installer kdsingleapplication kfilemetadata ki18n kiconthemes kio kirigami kwindowsystem mpvqt qt6 yt-dlp
 
 name=haruna
-version=1.8.1
+version=1.9.0
 release=2
 options="!checksum"
 source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"

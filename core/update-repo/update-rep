@@ -1,37 +1,40 @@
-httpup-repgen /sources/Voncloft-OS-dev/beta
-httpup-repgen /sources/Voncloft-OS-dev/boot-scripts
-httpup-repgen /sources/Voncloft-OS-dev/boot-scripts-server
-httpup-repgen /sources/Voncloft-OS-dev/cinnamon
-httpup-repgen /sources/Voncloft-OS-dev/compilers
-httpup-repgen /sources/Voncloft-OS-dev/core
-httpup-repgen /sources/Voncloft-OS-dev/displaym
-httpup-repgen /sources/Voncloft-OS-dev/extra
-httpup-repgen /sources/Voncloft-OS-dev/firewall
-httpup-repgen /sources/Voncloft-OS-dev/fonts
-httpup-repgen /sources/Voncloft-OS-dev/gnome
-httpup-repgen /sources/Voncloft-OS-dev/hardware
-httpup-repgen /sources/Voncloft-OS-dev/kde
-httpup-repgen /sources/Voncloft-OS-dev/kde-apps
-httpup-repgen /sources/Voncloft-OS-dev/kf
-httpup-repgen /sources/Voncloft-OS-dev/libs
-httpup-repgen /sources/Voncloft-OS-dev/lxde
-httpup-repgen /sources/Voncloft-OS-dev/lxqt
-httpup-repgen /sources/Voncloft-OS-dev/mate
-httpup-repgen /sources/Voncloft-OS-dev/media
-httpup-repgen /sources/Voncloft-OS-dev/multilib
-httpup-repgen /sources/Voncloft-OS-dev/networking
-httpup-repgen /sources/Voncloft-OS-dev/nonfree
-httpup-repgen /sources/Voncloft-OS-dev/perl
-httpup-repgen /sources/Voncloft-OS-dev/personal-repository
-httpup-repgen /sources/Voncloft-OS-dev/plasma
-httpup-repgen /sources/Voncloft-OS-dev/python
-httpup-repgen /sources/Voncloft-OS-dev/qt
-httpup-repgen /sources/Voncloft-OS-dev/ruby-gems
-httpup-repgen /sources/Voncloft-OS-dev/server
-httpup-repgen /sources/Voncloft-OS-dev/xfce
-httpup-repgen /sources/Voncloft-OS-dev/xorg
-httpup-repgen /sources/Voncloft-OS-dev/lfs-base-install
-cd /sources/Voncloft-OS-dev
+#!/bin/bash
+repo_root=${UPDATE_REPO_ROOT:-/sources/Voncloft-OS-dev}
+
+httpup-repgen "$repo_root/beta"
+httpup-repgen "$repo_root/boot-scripts"
+httpup-repgen "$repo_root/boot-scripts-server"
+httpup-repgen "$repo_root/cinnamon"
+httpup-repgen "$repo_root/compilers"
+httpup-repgen "$repo_root/core"
+httpup-repgen "$repo_root/displaym"
+httpup-repgen "$repo_root/extra"
+httpup-repgen "$repo_root/firewall"
+httpup-repgen "$repo_root/fonts"
+httpup-repgen "$repo_root/gnome"
+httpup-repgen "$repo_root/hardware"
+httpup-repgen "$repo_root/kde"
+httpup-repgen "$repo_root/kde-apps"
+httpup-repgen "$repo_root/kf"
+httpup-repgen "$repo_root/libs"
+httpup-repgen "$repo_root/lxde"
+httpup-repgen "$repo_root/lxqt"
+httpup-repgen "$repo_root/mate"
+httpup-repgen "$repo_root/media"
+httpup-repgen "$repo_root/multilib"
+httpup-repgen "$repo_root/networking"
+httpup-repgen "$repo_root/nonfree"
+httpup-repgen "$repo_root/perl"
+httpup-repgen "$repo_root/personal-repository"
+httpup-repgen "$repo_root/plasma"
+httpup-repgen "$repo_root/python"
+httpup-repgen "$repo_root/qt"
+httpup-repgen "$repo_root/ruby-gems"
+httpup-repgen "$repo_root/server"
+httpup-repgen "$repo_root/xfce"
+httpup-repgen "$repo_root/xorg"
+httpup-repgen "$repo_root/lfs-base-install"
+cd -- "$repo_root" || exit 1
 git add .
 git commit -m "Updating dev repo"
 git push origin master

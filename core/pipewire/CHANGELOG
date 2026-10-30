@@ -1,3 +1,23 @@
+Date: 2026-10-30
+
+pipewire
+Version=1.6.11
+Release=3
+
+Synopsis:
+Install the GStreamer plugin in the pluginsdir reported by its pkg-config file,
+so it remains discoverable when GStreamer uses lib and PipeWire uses lib64.
+Declare the runtime dependencies of the enabled modules.
+
+Date: 2026-10-30
+
+pipewire
+Version=1.6.11
+Release=2
+
+Synopsis:
+Use current Meson setup, explicit lib64 and elogind integration, preserve local limits configuration, and leave daemon startup to the existing desktop configuration. Keep WirePlumber separate.
+
 Date: Wed 29 Sep 2021 07:27:04 AM EDT
 
 pipewire

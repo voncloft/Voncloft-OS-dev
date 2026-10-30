@@ -41,8 +41,8 @@ f:264e9171c86894a0645fa8b6abbf7566:xf86-input-wacom/spkgbuild
 f:8d258dcf834016d2e46854c88ad3fca2:.httpup-urlinfo
 f:8b6c79b5055f99289b6927f44cfca71e:gavl/spkgbuild
 f:fb839adca0ca28678718be2727cd8a18:vulkan-loader/.pkgfiles
-f:61ccd76e23699e933ffb8150273dfe6a:vulkan-loader/CHANGELOG
-f:9f89297f78118098832d9d14b364d51d:vulkan-loader/spkgbuild
+f:43c1abbba03f79d5e804f5ae2c040534:vulkan-loader/CHANGELOG
+f:b4ead3e8073fbb213d819a39aa221e69:vulkan-loader/spkgbuild
 f:c3e93c1b71b15096e7a1cf380f3e43a3:xf86-video-fbdev/CHANGELOG
 f:5b2e96ff5d87c3bfdddf12f401c0a498:xf86-video-fbdev/gcc8.diff
 f:a72257cfd74880d3b9d7c31f128e5f8a:xf86-video-fbdev/spkgbuild

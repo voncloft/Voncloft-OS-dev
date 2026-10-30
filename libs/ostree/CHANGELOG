@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2026.4 to version 2026.5
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 05:32:38 PM EDT 2026
+
+Version=2026.6
+Release=1
+
+Synopsis:
+Changed from version 2026.5 to version 2026.6

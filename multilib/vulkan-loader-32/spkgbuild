@@ -2,7 +2,7 @@
 # depends       : cmake vulkanheaders xorglibraries wayland
 
 name=vulkan-loader-32
-version=1.4.366    
+version=1.4.367
 release=1
 _name=Vulkan-Loader
 source="https://github.com/KhronosGroup/${_name}/archive/v${version}/${_name}-${version}.tar.gz"

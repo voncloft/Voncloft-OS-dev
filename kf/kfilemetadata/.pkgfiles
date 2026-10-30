@@ -1,4 +1,4 @@
-kfilemetadata-6.13.0-1
+kfilemetadata-6.31.0-2
 drwxr-xr-x root/root    usr/
 drwxr-xr-x root/root    usr/bin/
 -rwxr-xr-x root/root    usr/bin/kfilemetadata_dump6
@@ -48,28 +48,30 @@ drwxr-xr-x root/root    usr/lib64/cmake/KF6FileMetaData/
 -rw-r--r-- root/root    usr/lib64/cmake/KF6FileMetaData/KF6FileMetaDataConfigVersion.cmake
 -rw-r--r-- root/root    usr/lib64/cmake/KF6FileMetaData/KF6FileMetaDataTargets.cmake
 -rw-r--r-- root/root    usr/lib64/cmake/KF6FileMetaData/KF6FileMetaDataTargets-release.cmake
-lrwxrwxrwx root/root    usr/lib64/libKF6FileMetaData.so.3 -> libKF6FileMetaData.so.6.13.0
--rwxr-xr-x root/root    usr/lib64/libKF6FileMetaData.so.6.13.0
+lrwxrwxrwx root/root    usr/lib64/libKF6FileMetaData.so.3 -> libKF6FileMetaData.so.6.31.0
+-rwxr-xr-x root/root    usr/lib64/libKF6FileMetaData.so.6.31.0
 lrwxrwxrwx root/root    usr/lib64/libKF6FileMetaData.so -> libKF6FileMetaData.so.3
-drwxr-xr-x root/root    usr/plugins/
-drwxr-xr-x root/root    usr/plugins/kf6/
-drwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_exiv2extractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_fb2extractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_ffmpegextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_krita.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_odfextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_office2007extractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_officeextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_plaintextextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_pngextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_poextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_popplerextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_postscriptdscextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_taglibextractor.so
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/kfilemetadata_xmlextractor.so
-drwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/writers/
--rwxr-xr-x root/root    usr/plugins/kf6/kfilemetadata/writers/kfilemetadata_taglibwriter.so
+drwxr-xr-x root/root    usr/lib64/qt6/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_exiv2extractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_fb2extractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_ffmpegextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_krita.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_mobiextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_odfextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_office2007extractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_officeextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_plaintextextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_pngextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_poextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_popplerextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_postscriptdscextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_taglibextractor.so
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/kfilemetadata_xmlextractor.so
+drwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/writers/
+-rwxr-xr-x root/root    usr/lib64/qt6/plugins/kf6/kfilemetadata/writers/kfilemetadata_taglibwriter.so
 drwxr-xr-x root/root    usr/share/
 drwxr-xr-x root/root    usr/share/qlogging-categories6/
 -rw-r--r-- root/root    usr/share/qlogging-categories6/kfilemetadata.categories

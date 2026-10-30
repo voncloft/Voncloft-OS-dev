@@ -2,7 +2,7 @@
 # depends	: kmod xz-32
 
 name=kmod-32
-version=34.2
+version=34.3
 release=1
 _name=${name%-32}
 source="https://www.kernel.org/pub/linux/utils/kernel/${_name}/${_name}-${version}.tar.gz"

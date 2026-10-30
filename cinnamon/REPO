@@ -35,8 +35,8 @@ f:a9cb981e759c2dd735f5d202a79ddda6:system-config-printer/spkgbuild
 f:8a85fdd343dedf0a243ec8d5d2ea8cf3:nm-connection-editor/CHANGELOG
 f:aefb029f786b0016dbaaf264955d1ebf:nm-connection-editor/spkgbuild
 f:457d71ebb7e7d055e4a86eefc66431b2:nm-connection-editor/override
-f:cd91c8935ef82be3ab8ab803d8cf8710:nemo/CHANGELOG
-f:7f4b599aeaaf0d3d9db753a3d06d398b:nemo/spkgbuild
+f:c739c94be02e8ddda436d5ab38c7c5ec:nemo/CHANGELOG
+f:323dcda7f694dee0b6f74db37cf0851a:nemo/spkgbuild
 f:6f12dcd3b34019c61989b44c9a0e6d25:nemo/override
 f:020ce0f3a1230053a9d163ac742c790e:.httpup-urlinfo
 f:11aa93757548764ef61f5bb58b7f00ec:accountsservice/CHANGELOG

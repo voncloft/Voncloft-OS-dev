@@ -697,3 +697,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 21.15.0 to version 21.15.1
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 05:32:38 PM EDT 2026
+
+Version=21.15.2
+Release=1
+
+Synopsis:
+Changed from version 21.15.1 to version 21.15.2

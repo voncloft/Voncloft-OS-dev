@@ -186,9 +186,9 @@ f:9021465ab3e5b19036ee93f0569a102d:ktextwidgets/spkgbuild
 f:653ecdbb5cdfa6a127d1958d5f4ba083:kdeclarative/.pkgfiles
 f:730065526dafe0e251609f4da4654070:kdeclarative/CHANGELOG
 f:47a55b6c7d9ec1658ed201945e46ea4b:kdeclarative/spkgbuild
-f:a8dfc00cf1da92fe725977607e3e2d6b:kfilemetadata/.pkgfiles
-f:9dddc412dd7d9e98c0255543b638ccfe:kfilemetadata/CHANGELOG
-f:2e2b79e38110a6c7338b2fd91f36a89e:kfilemetadata/spkgbuild
+f:3e03b821434885a05027a49af5b6a125:kfilemetadata/.pkgfiles
+f:a732bde14b38b4d731962bf78dfc434d:kfilemetadata/CHANGELOG
+f:83a5397cbc3355a1c5a9c3b05489c8d5:kfilemetadata/spkgbuild
 f:f55ca62c2e08b16885159a9d0c2d60c8:attica/.pkgfiles
 f:30e4208ff13bc43a1f2548665e8eaa4f:attica/CHANGELOG
 f:b443ae1c38766ea56c0c59f797cb698a:attica/spkgbuild

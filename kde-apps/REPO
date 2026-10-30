@@ -383,9 +383,9 @@ f:d0ba43af5e366cbeb73eb70061c1f0c2:ktimetracker/spkgbuild
 f:a497e0e4ecadd3e3137af4a9d6a28e1e:ktimetracker/override
 f:209cecabad4fa4e987a8fa3209af84f7:kollision/CHANGELOG
 f:2df17da806470b420a51e25dcbbeb61f:kollision/spkgbuild
-f:1cf5fa4c39d954729b943f61ad16a366:kitinerary/.pkgfiles
-f:c8f5615ff4bd673d57f41511fe89088c:kitinerary/CHANGELOG
-f:93ccfc5cbe76942fe291e03ab6d4ceeb:kitinerary/spkgbuild
+f:db305306415d613e29c3f96fd4e7f110:kitinerary/.pkgfiles
+f:a2bfada4452fff01176b9a74d3b4ed68:kitinerary/CHANGELOG
+f:a4bd8c04193271b8bbc3e632cddabfa2:kitinerary/spkgbuild
 f:e3f5478bfe13e93eff858c6857fc78d3:audex/spkgbuild
 f:658e8dc72d466cf1557134cce3792c53:klickety/CHANGELOG
 f:92aaf328d573165581e5b44397f95e04:klickety/spkgbuild
@@ -636,9 +636,9 @@ f:61d0c80352b246094ff1ddd1fa6b10bc:markdownpart/CHANGELOG
 f:2968d1683081290218761cf303add612:markdownpart/spkgbuild
 f:9f29931df721123d440d23facd441a3f:kimageannotator/.pkgfiles
 f:b35862048412af496813ffe4335c92d6:kimageannotator/spkgbuild
-f:8104f26b0f3b99748b4a001e1c7fdeb3:okular/.pkgfiles
-f:8f7f5d2279d35e03d8802a81ee4ac04c:okular/CHANGELOG
-f:3df19d041f2a95efae96c92241cd926e:okular/spkgbuild
+f:feec0faca2198f659ff610860cc22878:okular/.pkgfiles
+f:66cad09765504e4ce33ead0e9aa23005:okular/CHANGELOG
+f:369447f564e3333b96c0be2d9ce8b109:okular/spkgbuild
 f:de130a07e29c77cb56d32ecce1801fdb:kdiff3/spkgbuild
 f:2bd1459c4bf9184b8eb5f0f8b7415435:akonadi-mime/.pkgfiles
 f:28c8da54aa7e34ecb74a00f84a81d9e3:akonadi-mime/CHANGELOG
@@ -1010,7 +1010,8 @@ f:836cd33af779fb366c0b2caa5e4f1cb6:kvantum/spkgbuild
 f:3060a1b2b9c0a1c9c753dbfbcd155776:akonadi-contacts/.pkgfiles
 f:038047327f2be96d53ba5f8bc8071207:akonadi-contacts/CHANGELOG
 f:274eeeb392b4880e91c5cdf1234ac7d7:akonadi-contacts/spkgbuild
-f:22ac96c8fda4167d56cb37d2798d66fe:haruna/spkgbuild
+f:2962854a3d04bfead6ac0cfa1251d8f2:haruna/CHANGELOG
+f:64214a2e68211e142b14ce8adfd24a18:haruna/spkgbuild
 f:85e1e5a8865a0db282c97b8c70c952bf:kruler/CHANGELOG
 f:e91573da3e36a4c02a35a4d56db30660:kruler/spkgbuild
 f:2f7fad741485499df0004278de4afc27:kompare/CHANGELOG

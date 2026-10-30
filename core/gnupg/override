@@ -1,0 +1,16 @@
+# Report the current upstream release; update-repo edits only version=.
+# Avoid the generic fallback to archived distribution recipes.
+source=https://gnupg.org/download/index.html
+url=$source
+
+get_generic()
+{
+    unset uversion
+    uversion=$(grep -Eo 'gnupg-[0-9]+([.][0-9]+)+[.]tar[.](bz2|xz|gz)' index.html |
+        sed -E 's/^gnupg-//;s/[.]tar[.](bz2|xz|gz)$//' |
+        LC_ALL=C sort -Vu | tail -n1)
+    if [ -z "$uversion" ]; then
+        printf '%s\n' 'ERROR: No GnuPG release found on the official download page.' >&2
+        return 1
+    fi
+}

@@ -1,31 +1,29 @@
 # description	: PDF rendering library and command line tools used to manipulate PDF files
-# depends	: cmake fontconfig glib boost cairo gpgmepp lcms2 libjpeg-turbo libpng libtiff nss openjpeg qt6
+# depends	: boost brotli cairo cmake curl fontconfig freetype2 glib gpgmepp harfbuzz lcms2 libjpeg-turbo libpng libtiff ninja nss openjpeg pkgconf poppler-data qt6 zlib
 
 name=poppler
 version=26.10.0
-release=1
-_source2_version=0.4.12
-source="https://poppler.freedesktop.org/$name-$version.tar.xz
-	https://${name}.freedesktop.org/${name}-data-${_source2_version}.tar.gz"
-noextract="poppler-data-0.4.12.tar.gz"
+release=2
+source="https://poppler.freedesktop.org/$name-$version.tar.xz"
+
 build() {
-	cd $name-$version
-
-  	mkdir build
-	cd    build
-	
-	cmake -D CMAKE_BUILD_TYPE=Release   \
-      -D CMAKE_INSTALL_PREFIX=/usr  \
-      -D TESTDATADIR=$PWD/testfiles \
-      -D ENABLE_QT5=OFF             \
-      -D ENABLE_UNSTABLE_API_ABI_HEADERS=ON \
-      -G Ninja .. 
-	ninja
-	DESTDIR=$PKG ninja install
-
-	tar -xf $SRC/poppler-data-0.4.12.tar.gz
-	cd poppler-data-0.4.12
-	make DESTDIR=$PKG prefix=/usr install
-
-	
+    cd "$SRC/$name-$version"
+    cmake -S . -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DENABLE_UNSTABLE_API_ABI_HEADERS=ON \
+        -DENABLE_CPP=ON \
+        -DENABLE_GLIB=ON \
+        -DENABLE_GOBJECT_INTROSPECTION=ON \
+        -DENABLE_QT5=OFF \
+        -DENABLE_QT6=ON \
+        -DENABLE_BROTLI=ON \
+        -DBUILD_MANUAL_TESTS=OFF \
+        -DBUILD_CPP_TESTS=OFF \
+        -DBUILD_GTK_TESTS=OFF \
+        -DBUILD_QT5_TESTS=OFF \
+        -DBUILD_QT6_TESTS=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
 }

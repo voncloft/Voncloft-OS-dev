@@ -2,7 +2,7 @@
 # depends : curl fuse3 glib gpgme libarchive libcap make openssl udev util-linux xz
 
 name=ostree
-version=2026.5
+version=2026.6
 release=1
 
 source="$name-$version.tar.xz::https://github.com/ostreedev/${name}/releases/download/v$version/libostree-$version.tar.xz"
