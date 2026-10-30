@@ -196,3 +196,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 8.4 to version 8.5
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=5.36.1
+Release=1
+
+Synopsis:
+Changed from version 5.42.0 to version 5.36.1

@@ -2,7 +2,7 @@
 # depends : libaccounts-glib qt6 doxygen
 
 name=libaccounts-qt
-version=1.17
+version=1.13
 release=2
 
 source="https://gitlab.com/accounts-sso/${name}/-/archive/VERSION_$version/libaccounts-qt-VERSION_$version.tar.gz"

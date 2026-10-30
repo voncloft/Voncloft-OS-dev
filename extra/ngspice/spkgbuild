@@ -2,7 +2,7 @@
 # depends : libx11 libxaw libxt ncurses readline
 
 name=ngspice
-version=45.2
+version=40
 release=1
 
 source="https://downloads.sourceforge.net/project/$name/ng-spice-rework/$version/$name-$version.tar.gz"

@@ -2,7 +2,7 @@
 # depends : python python-flit
 
 name=python-idna
-version=3.10
+version=3.4
 release=1
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/i/${_name}/${_name}-${version}.tar.gz"

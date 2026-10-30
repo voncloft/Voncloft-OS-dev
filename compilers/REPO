@@ -70,8 +70,8 @@ f:f220f0337914010336a396c277f55a31:cargo-c/.pkgfiles
 f:97c1b8c9244b450831ff54b14e556bdf:cargo-c/CHANGELOG
 f:cc851eb2e17f9d9f59501d64ba5311ec:cargo-c/spkgbuild
 f:c3265ca11bed27e9fe4c509729dc2827:meson/.pkgfiles
-f:e94b7421c8d2a4a0b2bb8e1d1f98bedf:meson/CHANGELOG
-f:88306c0e9ae2936ccc6eec334d96f100:meson/spkgbuild
+f:7893637470ba6c7ac8439cf8b479700c:meson/CHANGELOG
+f:d52d489bd743be7d082c42fdfc818316:meson/spkgbuild
 f:bcb9754c03aa84e845ca0e091b5cb3b5:gdb/.pkgfiles
 f:5e994d64d6d6e68d4a3acc412a7414a4:gdb/CHANGELOG
 f:457bb0590eb8ddf864d006706c0f2098:gdb/spkgbuild

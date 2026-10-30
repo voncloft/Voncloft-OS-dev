@@ -5,7 +5,7 @@
     # depends : python-rethinkdb rethinkdb
 
 name=python-rethinkdb
-version=2.4.8
+version=2.3.6
 release=2
 
 _name=${name#python-}

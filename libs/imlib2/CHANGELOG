@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.7.0 to version 1.7.5
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=1.11.1
+Release=1
+
+Synopsis:
+Changed from version 1.12.5 to version 1.11.1

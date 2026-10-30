@@ -2,7 +2,7 @@
 # depends : python-protobuf python-cryptography python-axolotl-curve25519
 
 name=python-axolotl
-version=0.2.3
+version=0.1.6
 release=4
 
 source="https://github.com/tgalal/${name}/archive/refs/tags/v$version.tar.gz"

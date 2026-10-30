@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=8.60.git20260406141555.ga08b05b79100bfd535100b8341df4e8bf1441802
+Release=1
+
+Synopsis:
+Changed from version 8.60+20231124.gc8ad9824 to version 8.60.git20260406141555.ga08b05b79100bfd535100b8341df4e8bf1441802

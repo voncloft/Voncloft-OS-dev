@@ -59,7 +59,8 @@ f:249ea59b5c1e703e73ac2f57f8cd5e81:cinnamon-control-center/CHANGELOG
 f:487d235ff5e6bb13c5411a18ca1854d9:cinnamon-control-center/spkgbuild
 f:30fefdb242c725c8fe2df4bdfbdd08e3:cinnamon-control-center/override
 f:92d03bbcbc439373d65f0d6f0444e836:metacity/spkgbuild
-f:27bdb465fdf07fbd78f1ff3b0b1e6d00:exempi/spkgbuild
+f:51806706c89ded1d55479f9d6aaff959:exempi/CHANGELOG
+f:c856482c2c33689c39beae1047b4dab0:exempi/spkgbuild
 f:cdba7c14766ed512068718e062f8dc10:cinnamon-menus/CHANGELOG
 f:9c85f5d2ae19e5a8a2487e5b8e850605:cinnamon-menus/spkgbuild
 f:ea7d81b44d49fcdbe93f3a349b956b95:cinnamon-settings-daemon/CHANGELOG

@@ -507,3 +507,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 2.11.7 to version 2.50.1
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=1.10.7
+Release=1
+
+Synopsis:
+Changed from version 2.14.1 to version 1.10.7

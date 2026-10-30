@@ -2,7 +2,7 @@
 # depends : python-flask python-six
 
 name=python-flask-talisman
-version=0.8.1
+version=0.7.0
 release=3
 
 _name=${name#python-}

@@ -2,7 +2,7 @@
 # depends : 
 
 name=python-wxpython
-version=4.2.4
+version=4.2.0
 verzion=${version%.*}
 release=5
 

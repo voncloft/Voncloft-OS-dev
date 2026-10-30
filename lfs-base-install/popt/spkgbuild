@@ -1,7 +1,7 @@
 # description	: Popt libraries which are used by some programs to parse command-line options
 
 name=popt
-version=1.19
+version=1.16
 release=1
 source="http://ftp.rpm.org/mirror/$name/$name-$version.tar.gz"
 

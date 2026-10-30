@@ -2,7 +2,7 @@
 # depends : python python-setuptools python-wheel
 
 name=python-charset-normalizer
-version=3.5.2
+version=3.1.0
 release=1
 _name=charset_normalizer
 source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"

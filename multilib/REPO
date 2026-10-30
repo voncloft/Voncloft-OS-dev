@@ -346,7 +346,8 @@ f:c1044f2fcafc6059fb8881cce5700361:libdrm-32/.pkgfiles
 f:4e01f48b5b9d0160f31c665712ad63c2:libdrm-32/CHANGELOG
 f:423af3036d4c7bc1b2f0b7adecddd21c:libdrm-32/spkgbuild
 f:f343aff644af8bf96f1b41bc74237ae5:libdrm-32/override
-f:bc1a8d3a2b215578f1d6fadfb2f5ed01:playonlinux/spkgbuild
+f:80295208ae8c7341e34e5c8a2be0dc64:playonlinux/CHANGELOG
+f:210862bc23ab286e9e00709b90e008dc:playonlinux/spkgbuild
 f:7e5102b4eff7a8e4287a32f76e111f4f:playonlinux/override
 f:fbdd1133fcb06986e73c7993d3d3ab48:libffi-32/CHANGELOG
 f:45a4c8b5be4666ab26a9235b51a91df7:libffi-32/spkgbuild
@@ -432,7 +433,8 @@ f:892c3aa8ed82a8697ac80c00e148317c:libxkbfile-32/override
 f:6d7b52cfafc8080b6d36afb6fa96b850:mpg123-32/CHANGELOG
 f:852c64f6ae96b3e62dd34c07e5a3318c:mpg123-32/spkgbuild
 f:3a322eabef58a30a9ba4bcbe79bbf002:mpg123-32/override
-f:2fed992655e1d2f2c535f57f1b1e5d3b:lm_sensors-32/spkgbuild
+f:459011426a5c944401aa0311175379cd:lm_sensors-32/CHANGELOG
+f:36394067e0faa80bb99a18845680c450:lm_sensors-32/spkgbuild
 f:e470fa373f5a39ed55e8fff973f858bc:lm_sensors-32/override
 f:8e046d30076b2f761398f5f5072ed4de:libxft-32/.pkgfiles
 f:1c79e1b6904d5ee964291f9e459a91ab:libxft-32/CHANGELOG

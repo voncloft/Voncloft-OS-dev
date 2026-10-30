@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.4 to version 2.0.r48.3cf5103
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=1.4
+Release=1
+
+Synopsis:
+Changed from version 2.0.r48.3cf5103 to version 1.4

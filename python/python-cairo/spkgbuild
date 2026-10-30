@@ -2,7 +2,7 @@
 # depends : pycairo
 
 name=python-cairo
-version=1.28.0
+version=1.23.0
 release=1
 options="!checksum"
 

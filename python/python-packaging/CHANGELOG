@@ -157,3 +157,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 24.2 to version 25.0
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=23.1
+Release=2
+
+Synopsis:
+Changed from version 26.3 to version 23.1

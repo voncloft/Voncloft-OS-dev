@@ -2,7 +2,7 @@
 # depends	: bash
 
 name=db
-version=18.1.40
+version=6.2.32
 release=1
 source="http://download.oracle.com/berkeley-db/${name}-${version}.tar.gz"
 

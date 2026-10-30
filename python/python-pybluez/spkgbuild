@@ -2,7 +2,7 @@
   # depends : python bluez-libs
 
 name=python-pybluez
-version=0.23.r58.g4d46ce1
+version=0.23
 release=6
 
 _name=pybluez

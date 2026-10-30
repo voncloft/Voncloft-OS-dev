@@ -2,7 +2,7 @@
 # depends : python python-flit-core python-requests python-docutils python-pytoml
 
 name=python-setuptools
-version=80.9.0
+version=67.7.0
 release=3
 
 _name=setuptools

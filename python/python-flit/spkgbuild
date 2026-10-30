@@ -3,7 +3,7 @@
 # depends : python
 
 name=python-flit
-version=3.12.0
+version=3.9.0
 release=4
 _name=flit_core
 source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"

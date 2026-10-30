@@ -2,7 +2,7 @@
 # depends : python python-flit-core python-requests python-docutils python-pytoml
 
 name=python-wheel
-version=0.46.1
+version=0.40.0
 release=3
 
 _name=wheel

@@ -2,7 +2,7 @@
 # depends : python python-setuptools python-wheel python-markupsafe
 
 name=python-mako
-version=1.3.10
+version=1.2.4
 release=2
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"

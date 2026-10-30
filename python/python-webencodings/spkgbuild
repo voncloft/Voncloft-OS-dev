@@ -2,7 +2,7 @@
 # depends : python python-flit
 
 name=python-webencodings
-version=0.6.1
+version=0.5.1
 release=1
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"

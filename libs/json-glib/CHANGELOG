@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+json-glib
+Version=1.6.6
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 1.10.6 to version 1.6.6

@@ -2,7 +2,7 @@
 # depends : python python-calver python-setuptools python-wheel
 
 name=python-trove-classifiers
-version=2026.9.21.13
+version=2023.4.25
 release=1
 
 _name=trove_classifiers

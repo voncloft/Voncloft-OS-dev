@@ -2,7 +2,7 @@
 # depends	: imlib2 libx11 libxft fontconfig libexif giflib
 
 name=sxiv
-version=26
+version=1.3.2
 release=1
 source="https://github.com/muennich/${name}/archive/v$version/$name-$version.tar.gz"
 

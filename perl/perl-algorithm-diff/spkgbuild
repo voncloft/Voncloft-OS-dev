@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-algorithm-diff
-version=1.1903
+version=1.201
 release=6
 
 _name=Algorithm-Diff

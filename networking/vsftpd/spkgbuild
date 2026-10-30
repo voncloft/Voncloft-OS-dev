@@ -2,7 +2,7 @@
 # depends : libnsl linux-pam
 
 name=vsftpd
-version=3.0.5
+version=3.0.3
 release=1
 
 backup="etc/vsftpd.conf

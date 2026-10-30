@@ -2,7 +2,7 @@
 # depends : python python-setuptools python-wheel
 
 name=python-calver
-version=2025.10.20
+version=2022.06.26
 release=1
 
 _name=${name#python-}

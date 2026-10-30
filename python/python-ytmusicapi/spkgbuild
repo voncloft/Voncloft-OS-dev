@@ -2,7 +2,7 @@
 # depends : python python-requests python-setuptools python-setuptools-scm python-wheel
 
 name=python-ytmusicapi
-version=1.12.3
+version=1.0.2
 release=1
 
 _name=${name#python-}

@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.9.2 to version 1.4w
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=0.9.2
+Release=1
+
+Synopsis:
+Changed from version 1.4w to version 0.9.2

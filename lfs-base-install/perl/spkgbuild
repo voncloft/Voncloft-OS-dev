@@ -2,7 +2,7 @@
 # depends	: 
 
 name=perl
-version=5.42.0
+version=5.36.1
 release=1
 source="https://www.cpan.org/src/5.0/${name}-$version.tar.xz
 	https://www.linuxfromscratch.org/patches/lfs/development/${name}-$version-upstream_fix-1.patch"

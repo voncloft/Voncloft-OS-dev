@@ -2,7 +2,7 @@
 # depends : cups ghostscript
 
 name=epson-inkjet-printer-escpr
-version=1.7.19
+version=1.6.38
 release=1
 
 source="https://download3.ebz.epson.net/dsc/f/03/00/13/71/14/0eb0d3f849bc3048d0d327020f32e4538d59eedc/${name}-$version-1lsb3.2.tar.gz

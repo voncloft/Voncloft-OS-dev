@@ -57,3 +57,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.9.16 to version 1.9.17
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=1.9.17
+Release=1
+
+Synopsis:
+Changed from version 1.9.17p1 to version 1.9.17

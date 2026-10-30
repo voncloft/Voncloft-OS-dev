@@ -2,7 +2,7 @@
 # depends : python python-setuptools python-wheel python-urllib3 python-idna certifi python-charset-normalizer
 
 name=python-requests
-version=2.32.4
+version=2.28.2
 release=2
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/r/${_name}/${_name}-${version}.tar.gz"

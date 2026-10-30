@@ -2,7 +2,7 @@
 # depends	: 
 
 name=lm_sensors-32
-version=3.6.0
+version=3.4.0
 release=1
 _name=${name%-32}
 source="https://ftp.gwdg.de/pub/linux/misc/lm-sensors/${_name}-$version.tar.bz2"

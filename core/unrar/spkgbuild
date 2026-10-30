@@ -1,7 +1,7 @@
 # description	: Extraction utility used for extracting files from RAR archives
 
 name=unrar
-version=7.1.8
+version=6.2.7
 release=1
 _name=unrarsrc
 source="https://www.rarlab.com/rar/${_name}-${version}.tar.gz"

@@ -7,3 +7,13 @@ Release=8
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.06 to version 0.08
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=0.08
+Release=8
+
+Synopsis:
+Changed from version 0.8 to version 0.08

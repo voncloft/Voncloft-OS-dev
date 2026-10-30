@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+libsigc++
+Version=2.12.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 2.12.1 to version 2.12.0

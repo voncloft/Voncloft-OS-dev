@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+db
+Version=6.2.32
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 18.1.40 to version 6.2.32

@@ -3,7 +3,7 @@
 
 name=python-pyqt5-sip
 _upstream_name=python-pyqt6-sip
-version=13.5.1
+version=12.12.1
 release=3
 
 _name=PyQt6_sip

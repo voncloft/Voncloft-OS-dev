@@ -2,7 +2,7 @@
 # depends : kde-deps-installer libsecret qt6
 
 name=qtkeychain
-version=0.17.0
+version=0.14.0
 release=1
 
 source="$name-$version.tar.gz::https://github.com/frankosterfeld/${name}/archive/refs/tags/$version.tar.gz"

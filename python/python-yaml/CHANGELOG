@@ -27,3 +27,13 @@ Release=4
 
 Synopsis:
 Upgraded from version 6.0.1 to version 6.0.2
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=6.0
+Release=1
+
+Synopsis:
+Changed from version 6.0.3 to version 6.0

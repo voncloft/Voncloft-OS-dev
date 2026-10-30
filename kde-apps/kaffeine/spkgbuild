@@ -3,7 +3,7 @@
 # depends : kde-deps-installer extra-cmake-modules qt6 kcoreaddons kconfig ki18n kxmlgui kio solid kdbusaddons vlc v4l-utils
 
 name=kaffeine
-version=2.0.19
+version=2.0.18
 release=2
 
 source="kaffeine.tar.xz"

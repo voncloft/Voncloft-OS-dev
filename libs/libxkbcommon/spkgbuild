@@ -2,7 +2,7 @@
 # depends	: xkeyboard-config libxcb wayland-protocols wayland
 
 name=libxkbcommon
-version=1.7.0
+version=1.5.0
 release=1
 source="https://xkbcommon.org/download/$name-$version.tar.xz"
 

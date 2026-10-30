@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.5.2 to version 2.1.0
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=2.1.0
+Release=1
+
+Synopsis:
+Changed from version 2.5.3 to version 2.1.0

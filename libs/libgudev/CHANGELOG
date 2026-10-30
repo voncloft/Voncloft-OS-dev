@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 fixed build and upgraded as well
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=237
+Release=1
+
+Synopsis:
+Changed from version 238 to version 237

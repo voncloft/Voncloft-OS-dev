@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+glib-networking
+Version=2.76.0
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 2.80.1 to version 2.76.0

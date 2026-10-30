@@ -2,7 +2,7 @@
 # depends       : none
 
 name=fcron
-version=3.4.0    
+version=3.3.1
 release=1
 source="http://fcron.free.fr/archives/${name}-${version}.src.tar.gz"
 

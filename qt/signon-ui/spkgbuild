@@ -2,7 +2,7 @@
 # depends : libaccounts-qt qt6 signond
 
 name=signon-ui
-version=0.17+git20231016.geef943f0edf3beee8ecb85d4a9dae3656002fc24
+version=0.17.git20231016201200.geef943f0edf3beee8ecb85d4a9dae3656002fc24
 release=1
 _commit=${version##*.g}
 

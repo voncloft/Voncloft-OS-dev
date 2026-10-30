@@ -12,8 +12,8 @@ d:cups-old
 d:ansible-core
 d:ansible
 d:tl-unx
-f:417dda6d82917557fe01e60377c2867b:sonaar/CHANGELOG
-f:a3a8cd80aacc7f2cf5e3c180afffba5c:sonaar/spkgbuild
+f:f7f3fc648a2acfd97a0dcd0a59cdcb33:sonaar/CHANGELOG
+f:71cc20d102c5399b189dcabe4a6b3a05:sonaar/spkgbuild
 f:920e2d8dde47e41a024d20389054277d:collabora-online-server/service.patch
 f:37da350bb8cf3da7c298e4227e5bf7fc:collabora-online-server/coolwsd.patch
 f:d75784cd2d6011872f13c2af06c16568:collabora-online-server/post-upgrade.sh
@@ -33,8 +33,8 @@ f:eb2fec376b23cfbcad5d543b20a90704:kwin-effects-cube/spkgbuild
 f:7e0165b9b08a176870f431b382041347:jellyfin-web-bin/CHANGELOG
 f:19dbc290385b31a37ca8b4d96c73e3a1:jellyfin-web-bin/spkgbuild
 f:f759a8cc52a83983e97647765bd70274:jellyfin-web-bin/override
-f:f1a8acd1414b409acf7752793002a939:jellyfin-bin/CHANGELOG
-f:c02a86f37c530f3d57a0e1d35bd51730:jellyfin-bin/spkgbuild
+f:97a2a5b36498c2da54f23491a4e8389a:jellyfin-bin/CHANGELOG
+f:d273415dc5c5b58482c4f7ff18a12100:jellyfin-bin/spkgbuild
 f:c3f806a642bd6976268f52e3a4ea65bf:libvncserver/CHANGELOG
 f:a7538a740b968a120641a4d26987290e:libvncserver/spkgbuild
 f:e4412c02e101874e9df2df8ae09e86cc:jellyfin-server-bin/jellyfin.sysusers
@@ -55,8 +55,8 @@ f:fe92fe73e29dd55d3f4d0bf55264be65:cups-old/spkgbuild
 f:485892b0c31bacd1d8f96e8d2d470a86:cups-old/pre-install.sh
 f:ca39f33041c8d4a6e9f37199b8c6eece:ansible-core/CHANGELOG
 f:ea831ca0434a5b690a10e3a9088464f9:ansible-core/spkgbuild
-f:18d8143977aac3ff5f1cc45fb009014d:ansible/CHANGELOG
-f:efbc4d6eed59ee70e819f9adac4eb9f2:ansible/spkgbuild
+f:0b1cca0c63bb5f782c0cb096867457f9:ansible/CHANGELOG
+f:53f26bbe2ad1b29c52db03e18627248c:ansible/spkgbuild
 f:1d49537e83959b4d7120bb94589e2a37:.httpup-repo.current
 f:ad8994ee954858fa655618f4c121a49c:tl-unx/CHANGELOG
 f:9d5d7cfcae9a0502d6fcabb70d077dd2:tl-unx/post-install.sh

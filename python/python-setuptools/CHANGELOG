@@ -1287,3 +1287,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 80.6.0 to version 80.9.0
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=67.7.0
+Release=1
+
+Synopsis:
+Changed from version 82.0.0 to version 67.7.0

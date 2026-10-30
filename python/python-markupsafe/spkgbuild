@@ -2,7 +2,7 @@
 # depends : python python-setuptools python-wheel
 
 name=python-markupsafe
-version=3.0.4
+version=2.1.2
 release=1
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"

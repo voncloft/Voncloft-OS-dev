@@ -2,7 +2,7 @@
 # depends	: cairo cargo-c gdk-pixbuf pango glib vala
 
 name=librsvg
-version=2.60.0
+version=2.56.0
 release=1
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
 options="!checksum"

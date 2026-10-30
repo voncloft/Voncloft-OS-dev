@@ -2,7 +2,7 @@
 # depends : signond
 
 name=signon-plugin-oauth2
-version=0.25.git20210102143559.gd759439066f0a34e5ad352ebab0b3bb2790d429e
+version=0.25.git20210102133559.gd759439066f0a34e5ad352ebab0b3bb2790d429e
 release=1
 
 _commit=${version##*.g}

@@ -507,3 +507,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 25.04.2 to version 25.04.3
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=2.0.18
+Release=2
+
+Synopsis:
+Changed from version 2.0.19 to version 2.0.18

@@ -77,3 +77,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 3.3.5 to version 3.3.6
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=3.4.3
+Release=1
+
+Synopsis:
+Changed from version 3.11.2 to version 3.4.3

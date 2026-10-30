@@ -2,7 +2,7 @@
 # depends : python python-six
 
 name=python-ptrace
-version=1.0.1
+version=0.9.9
 release=3
 
 source="https://github.com/haypo/${name}/archive/refs/tags/$version.tar.gz"

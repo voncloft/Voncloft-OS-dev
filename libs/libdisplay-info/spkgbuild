@@ -2,7 +2,7 @@
 # description : libdisplay-info - KDE dependency
 
 name=libdisplay-info
-version=0.4.0
+version=0.1.1
 release=1
 
 source="$name-$version.tar.xz::https://gitlab.freedesktop.org/emersion/${name}/-/releases/$version/downloads/${name}-$version.tar.xz"

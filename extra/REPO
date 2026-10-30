@@ -146,8 +146,8 @@ f:be7905bc548306e688e9c265e2947e8b:sane/spkgbuild
 f:ef11707afae0ee5fb931f4e81edb616a:sane/net.conf
 f:77131606ed754d399ddf928bf623926b:sane/override
 f:be26385ce91be30517d465d00321f829:sane/pre-install.sh
-f:cc1347064094c2cf55f9bb202c6e83da:epson-inkjet-printer-escpr/CHANGELOG
-f:e4ff3a66ddf5a3f1c9c5f7d53042a810:epson-inkjet-printer-escpr/spkgbuild
+f:b174e28a0966fb93d576322eee9d1aa6:epson-inkjet-printer-escpr/CHANGELOG
+f:b005f76211b7e91f5b6c5dc4207939e6:epson-inkjet-printer-escpr/spkgbuild
 f:f884fbf6726f9ab103e2d832d8ad27fe:epson-inkjet-printer-escpr/bug_x86_64.patch
 f:124fcccdb40e0b65999b2d80386b6d41:samba/spkgbuild
 f:83a73c3503007907b7f1ff45fb3f4b68:maven/.pkgfiles
@@ -217,8 +217,8 @@ f:6b6870e6abf4653794ad75099451329d:cmatrix/CHANGELOG
 f:2012fbff5ea332ce2b2d19b327b46c93:cmatrix/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:htmlq/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:htmlq/.nanorc
-f:75e40077c529179b9a5087e0033ff25f:htmlq/CHANGELOG
-f:59f3eb7c25c623bb84fa764d546eaa5d:htmlq/spkgbuild
+f:dbd15cf95a45458b26f07579934b0dd4:htmlq/CHANGELOG
+f:9b78eec6d1cb62daf7568840b1fd4883:htmlq/spkgbuild
 f:24ea8b83792054dfcc6e59ffffe07b0d:htmlq/override
 f:f6e45406ddf40ea37185fa47512a71e4:djvulibre/CHANGELOG
 f:570ff5628e5dded743b45409c9f860da:djvulibre/spkgbuild
@@ -277,7 +277,8 @@ f:20bf22832126ba25128c699d03cea539:dotnet-host/spkgbuild
 f:6cff7f52e0e13c6f988f051a93676765:dotnet-host/dotnet-core-sdk-telemetry-optout.patch
 f:f122ecda9294e984027769694712714e:dotnet-host/override
 f:b0a6696b7a0a6a2b4cc10fa3a6018cbf:ngspice/.pkgfiles
-f:c41e430fdc17a6b2b083cd3ffa58aa07:ngspice/spkgbuild
+f:05de3c644a016227fc837369e058a748:ngspice/CHANGELOG
+f:b7f682340e17e9a4ac968f3bed6e87ff:ngspice/spkgbuild
 f:1622181a205950786bc4c695003feff9:onboard/CHANGELOG
 f:621b05f645393758dc6d38278e5aafca:onboard/spkgbuild
 f:927632175f5d5ba45e0838096ac9a33d:minecraft-launcher/CHANGELOG
@@ -296,7 +297,8 @@ f:99f2867339f57ec1fa3b6cec25202e30:gtk2/CHANGELOG
 f:bb0ad7d077d5a01e5aa061e1662d37fa:gtk2/post-install.sh
 f:40a8e95eb14b52fa809ef65958f9b492:gtk2/spkgbuild
 f:633bae522b47c51f89fbd8da859bac05:kicad-library/.pkgfiles
-f:ecea616b7ace2e4600b0deb9eb832d25:kicad-library/spkgbuild
+f:5b274d88a94a033dbf0effab4bf22984:kicad-library/CHANGELOG
+f:41521565d48dc0be683f1100375515ca:kicad-library/spkgbuild
 f:adb57a225085067f2252941d51cdcf4f:gtk4/.pkgfiles
 f:d8f0c2809a2e048fc20c389685974a7b:gtk4/CHANGELOG
 f:640dc41d3bd524983d3ff3daba3b3b5d:gtk4/spkgbuild

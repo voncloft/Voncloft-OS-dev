@@ -2,7 +2,7 @@
 # depends	: gc openssl ncurses imlib2
 
 name=w3m
-version=0.5.3.git20230121_1
+version=0.5.3
 release=3
 _source2_version=8.3
 _source2_version2=0.5.3

@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-nmigen
-version=0.6.0
+version=0.5.10
 release=3
 
 _name=${name#python-}

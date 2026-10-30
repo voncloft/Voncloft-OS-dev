@@ -2,7 +2,7 @@
 # depends : python-pillow python-setuptools tesseract
 
 name=python-pytesseract
-version=0.3.8
+version=0.3.6
 release=1
 
 _name=${name#python-}

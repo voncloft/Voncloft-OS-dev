@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.0.7 to version 2.0.8
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=2.0.7
+Release=1
+
+Synopsis:
+Changed from version 2.0.8 to version 2.0.7

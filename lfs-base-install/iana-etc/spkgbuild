@@ -1,7 +1,7 @@
 # description	: Provides data for network services and protocols
 
 name=iana-etc
-version=20250618
+version=20230405
 release=1
 source="services protocols"
 

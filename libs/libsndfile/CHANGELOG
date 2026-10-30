@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+libsndfile
+Version=1.0.30
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 1.2.2 to version 1.0.30

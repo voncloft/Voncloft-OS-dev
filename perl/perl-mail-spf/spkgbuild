@@ -2,7 +2,7 @@
 # depends : perl-error perl-netaddr-ip perl-uri perl-net-dns perl
 
 name=perl-mail-spf
-version=v2.9.0
+version=2.9.0
 release=7
 
 _name=Mail-SPF

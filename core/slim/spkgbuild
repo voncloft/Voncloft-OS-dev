@@ -2,7 +2,7 @@
 # depends	: libx11 libxft libxrender libxrandr libxmu freetype2 libjpeg-turbo libpng zlib consolekit2 linux-pam
 
 name=slim
-version=1.4.0
+version=1.3.6
 release=4
 backup="etc/slim.conf"
 source="https://sourceforge.net/projects/${name}.berlios/files/$name-$version.tar.gz

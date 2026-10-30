@@ -1,7 +1,7 @@
 # description : Perl/CPAN Module Gettext
 
 name=perl-gettext
-version=1.07
+version=0.01
 release=10
 
 _name=Locale-gettext

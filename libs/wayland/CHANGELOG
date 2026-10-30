@@ -17,3 +17,13 @@ Release=1
 
 Synopsis:
 fixed build instructions
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=1.22.0
+Release=2
+
+Synopsis:
+Changed from version 1.26.0 to version 1.22.0

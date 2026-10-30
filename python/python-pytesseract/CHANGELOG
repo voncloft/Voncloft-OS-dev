@@ -57,3 +57,13 @@ release=1
 
 Synopsis:
 Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=0.3.6
+Release=1
+
+Synopsis:
+Changed from version 0.3.8 to version 0.3.6

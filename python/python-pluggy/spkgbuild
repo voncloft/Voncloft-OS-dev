@@ -2,7 +2,7 @@
 # depends : python python-setuptools python-setuptools-scm python-wheel
 
 name=python-pluggy
-version=1.6.0
+version=1.0.0
 release=5
 
 _name=${name#python-}

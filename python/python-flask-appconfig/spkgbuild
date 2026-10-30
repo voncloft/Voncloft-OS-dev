@@ -2,7 +2,7 @@
 # depends : python-click python-flask python-six
 
 name=python-flask-appconfig
-version=0.11.1.20151214
+version=0.11.1
 release=4
 
 _name=${name#python-}

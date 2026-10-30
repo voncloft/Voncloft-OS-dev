@@ -2,7 +2,7 @@
 # depends : python python-packaging
 
 name=python-setuptools
-version=82.0.0
+version=67.7.0
 release=1
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"

@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+ntp
+Version=4.2.8.p15
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 4.2.8p18 to version 4.2.8.p15

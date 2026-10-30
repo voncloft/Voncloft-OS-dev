@@ -257,3 +257,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 23.04.2 to version 23.04.3
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=25.12.3
+Release=1
+
+Synopsis:
+Changed from version 26.08.2 to version 25.12.3

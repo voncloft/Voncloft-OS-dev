@@ -2,7 +2,7 @@
 # depends : python-chardet python-httpcore python-idna python-rfc3986 python-sniffio
 
 name=python-httpx
-version=1.0.0
+version=0.28.1
 release=3
 
 _name=${name#python-}

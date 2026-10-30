@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-args
-version=0.1.0.20170708
+version=0.1.0
 release=5
 
 _name=${name#python-}

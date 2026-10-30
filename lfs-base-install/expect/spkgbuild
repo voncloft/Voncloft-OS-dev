@@ -2,7 +2,7 @@
 # depends	: 
 
 name=expect
-version=5.45.4
+version=5.44.1.15
 release=1
 source="https://prdownloads.sourceforge.net/expect/expect$version.tar.gz
 	https://www.linuxfromscratch.org/patches/lfs/development/${name}-${version}-gcc15-1.patch"

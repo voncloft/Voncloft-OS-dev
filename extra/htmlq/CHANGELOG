@@ -206,3 +206,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 0.4.0 to version 9.3
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=0.4.0
+Release=1
+
+Synopsis:
+Changed from version 9.3 to version 0.4.0

@@ -17,3 +17,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 0.5.3 to version 0.5.3.git20230121_1
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=0.5.3
+Release=3
+
+Synopsis:
+Changed from version 0.5.3.git20230121_1 to version 0.5.3

@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+python-wheel
+Version=0.40.0
+Release=3
+
+Synopsis:
+Added Changelog to package
+Changed from version 0.46.1 to version 0.40.0

@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-graphics-colornames
-version=v3.5.0
+version=3.5.0
 release=9
 
 _name=Graphics-ColorNames

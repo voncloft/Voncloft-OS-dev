@@ -7,3 +7,13 @@ release=6
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=1.201
+Release=6
+
+Synopsis:
+Changed from version 1.1903 to version 1.201

@@ -2,7 +2,7 @@
 # depends : cmake
 
 name=kicad-library
-version=9.0.7
+version=7.0.3
 release=1
 
 _name=libraries

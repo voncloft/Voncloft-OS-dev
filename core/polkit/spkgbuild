@@ -2,7 +2,7 @@
 # depends	: duktape glib elogind linux-pam
 
 name=polkit
-version=126
+version=0.120
 release=1
 source="https://github.com/polkit-org/${name}/archive/$version/${name}-$version.tar.gz"
 options="!checksum"

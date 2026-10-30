@@ -2,7 +2,7 @@
 # depends : python python-flit-core python-requests python-docutils python-pytoml
 
 name=python-packaging
-version=25.0
+version=23.1
 release=3
 
 _name=packaging

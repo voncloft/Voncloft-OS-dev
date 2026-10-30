@@ -2,7 +2,7 @@
 # depends : gtk4 librsvg
 
 name=adwaita-icon-theme
-version=48.1
+version=44.0
 release=1
 options="!strip"
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"

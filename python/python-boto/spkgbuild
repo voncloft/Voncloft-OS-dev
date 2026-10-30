@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-boto
-version=2.49.0.20190327
+version=2.49.0
 release=5
 
 _name=${name#python-}

@@ -2,7 +2,7 @@
 # depends : libvirt perl
 
 name=perl-sys-virt
-version=v7.7.0
+version=9.0.0
 release=1
 
 _name=Sys-Virt

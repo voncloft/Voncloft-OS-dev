@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=7.5.0
+Release=1
+
+Synopsis:
+Changed from version 8.6.1 to version 7.5.0

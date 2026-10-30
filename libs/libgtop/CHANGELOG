@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+libgtop
+Version=2.40.0+2+g31db82ef
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 2.41.3 to version 2.40.0+2+g31db82ef

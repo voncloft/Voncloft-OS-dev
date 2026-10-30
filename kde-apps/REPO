@@ -515,9 +515,9 @@ f:d040b85ec1157bc0f3656fbd1298a5e6:pimcommon/spkgbuild
 f:c175003a3dd3ca95d2351e7ecc231721:vvave/spkgbuild
 f:6616f0c74de60e4a0139d46e2acebc1e:vvave/override
 f:bbae6f873c985e9da0b283bea1ea3cd8:kaffeine/.pkgfiles
-f:3ffc801f8d5780f898602b2f4605bba7:kaffeine/CHANGELOG
+f:0c10045e31509a9753c628e5c3002c06:kaffeine/CHANGELOG
 f:7f8f2370262da82dda8f7b009c3f549d:kaffeine/kaffeine.tar.xz
-f:e020cd71222b4eb92b780273335ba20a:kaffeine/spkgbuild
+f:2f582a43e199a40ee8d2d34cc712f6fa:kaffeine/spkgbuild
 f:2eafbab9953a78ba7fbed99adae04dee:khelpcenter/CHANGELOG
 f:95d6c37c164064657e157304c89264c7:khelpcenter/spkgbuild
 f:bdde3038ee7b49857ffc012991e991c8:audiotube/CHANGELOG
@@ -872,8 +872,8 @@ f:82298f72620f71646548881ee45c53b1:crow-translate/spkgbuild
 f:6dec5cd76a9b3d8cdce21b8727947e92:koko/spkgbuild
 f:c8c90c84fede1ba58f1d0316f56f582e:ktp-desktop-applets/CHANGELOG
 f:e0caad1e81a1782a5034d5f975cf0e3d:ktp-desktop-applets/spkgbuild
-f:4b7fdd28454e4e0569de4e0345ec5693:kalendar/CHANGELOG
-f:f7e20abc5268045ca2c7c960dbf21a51:kalendar/spkgbuild
+f:e1cecf7fe95f93773519c6f213eb1f77:kalendar/CHANGELOG
+f:a7c33c601a5a9759cabd3f22ce2132d9:kalendar/spkgbuild
 f:34d1317d30e8342495e453396c7f0ff4:heaptrack/spkgbuild
 f:214d28f107f01a81c9f2fed08c345268:heaptrack/override
 f:f586814a4d2009476c6144503a17f069:ktorrent/CHANGELOG

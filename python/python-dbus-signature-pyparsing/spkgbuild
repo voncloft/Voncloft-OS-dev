@@ -2,7 +2,7 @@
 # depends : python-pyparsing
 
 name=python-dbus-signature-pyparsing
-version=0.4
+version=0.04
 release=8
 
 _name=${name#python-}

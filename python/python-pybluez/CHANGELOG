@@ -67,3 +67,13 @@ Release=6
 
 Synopsis:
 Upgraded from version 0.23 to version 0.23.r58.g4d46ce1
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=0.23
+Release=6
+
+Synopsis:
+Changed from version 0.23.r58.g4d46ce1 to version 0.23

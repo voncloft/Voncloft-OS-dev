@@ -3,7 +3,7 @@
 
 name=sonaar
 _name=Sonarr
-version=6.4.4.10685
+version=5.0.0.2870
 release=1
 
 source="https://github.com/Sonarr/Sonarr/archive/refs/tags/v${version}.tar.gz"

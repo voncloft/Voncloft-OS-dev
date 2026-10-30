@@ -3,7 +3,7 @@
 # note : Contains no application files. Use merkuro for the maintained source package.
 
 name=kalendar
-version=26.08.2
+version=25.12.3
 release=1
 options="!checksum"
 

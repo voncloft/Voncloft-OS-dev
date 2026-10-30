@@ -43,8 +43,8 @@ f:66b188862f5d6e4781315da2468e3a6b:wireshark/CHANGELOG
 f:365f5a4e2535b871004539f5f6cb1603:wireshark/spkgbuild
 f:1f314102f6de5698a25681d1a290db2c:wireshark/override
 f:6736b07aea5c8a1239a964908036ff95:wireshark/pre-install.sh
-f:c5dfd0ba94ebbfb12d0b8903467b6ede:nftables/CHANGELOG
-f:4ac6fa3cd2e75b34bbd160d969a931df:nftables/spkgbuild
+f:1fca42c1c928a44394016fd19fc6a870:nftables/CHANGELOG
+f:7bf1a0a0c073e9717666d54451df8ac0:nftables/spkgbuild
 f:bea51ee7d8aec45d56a25ad8aa62a9e0:nftables/nftables.conf
 f:f2ac6dbec1b92404bdf2249736f686a7:hostapd/hostapd
 f:d4a47a01969d64563c5773e4a68a6121:hostapd/post-upgrade.sh
@@ -59,11 +59,11 @@ f:bff07736bf1317268c1bfe3735d5d1d2:noip/post-install.sh
 f:e4767f703140b4fdf9d02eab0ba806ac:noip/spkgbuild
 f:be84289665aeb669f2cdfb7b0928fb53:vsftpd/post-upgrade.sh
 f:0e0cad5714b8bab8e67dd75abcc8729c:vsftpd/vsftpd
-f:e75dc59687d42119c78f3fb50e7b5a9c:vsftpd/CHANGELOG
+f:7b1578326d537dcdad83895bb5ee5621:vsftpd/CHANGELOG
 f:d8e8fca2dc0f896fd7cb4cb0031ba249:vsftpd/ftpusers
 f:2605055b626d53da0cc069d547984c8e:vsftpd/post-install.sh
 f:c7a14f65b50c019ae497388705623f3c:vsftpd/vsftpd.conf
-f:c92a7bf13637f52ef83f29b5b08dea09:vsftpd/spkgbuild
+f:4572dde3cb706400b7f39a6f6dfd5c5c:vsftpd/spkgbuild
 f:a9f7930f64c0fd72e7c0e49cfd676f12:vsftpd/pre-install.sh
 f:497d4af7bf83dbe15393a04847f79571:youtube-dl/CHANGELOG
 f:c71c1cf8de6e2bb5ded1dbb19ec3edf6:youtube-dl/spkgbuild
@@ -98,8 +98,8 @@ f:3c6aeebad5e2d1a785aa51578d691412:bind/spkgbuild
 f:15337d7f22033ef0b202e71be64e8960:bind/override
 f:05cc26def44480c59e62f87a78868977:tcpdump/CHANGELOG
 f:94a18eebd3b29fdcdfa96c729c16b7dd:tcpdump/spkgbuild
-f:fe1d34be66609950652b009e6ac1b3b0:libnetfilter_conntrack/CHANGELOG
-f:331c51e7e54fa014d824e4ee838df94f:libnetfilter_conntrack/spkgbuild
+f:0bbc5253bf46baa2e90e2c327d11621e:libnetfilter_conntrack/CHANGELOG
+f:e57e5ffbb4985af5f43b941128ec7e4a:libnetfilter_conntrack/spkgbuild
 f:39d95d0122309f031bed97d6dbd5f1c1:nmap/.pkgfiles
 f:dc00443d5cb09c752d11034a0b26e7e6:nmap/CHANGELOG
 f:a758152335a641ef8ea425372a41c05d:nmap/spkgbuild

@@ -2,7 +2,7 @@
 # depends : python python-packaging python-vcs-versioning python-setuptools python-wheel
 
 name=python-setuptools-scm
-version=10.3.4
+version=7.1.0
 release=1
 _name=setuptools_scm
 source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"

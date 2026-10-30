@@ -7,3 +7,13 @@ Release=6
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.4.1-2 to version 0.4.1.2
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=0.4.1
+Release=6
+
+Synopsis:
+Changed from version 0.4.1.2 to version 0.4.1

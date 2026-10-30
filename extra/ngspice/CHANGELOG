@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+ngspice
+Version=40
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 45.2 to version 40

@@ -2,7 +2,7 @@
 # depends : jellyfin-server-bin jellyfin-web-bin
 
 name=jellyfin-bin
-version=10.8.8
+version=2.3.6
 release=1
 
 build() {

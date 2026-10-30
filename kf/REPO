@@ -162,8 +162,8 @@ f:02caba65c90b5d10c33f1b3cdb5a8dc3:ktexttemplate/.pkgfiles
 f:323a4a1a0afd23bbd2a32d331d38f1d6:ktexttemplate/CHANGELOG
 f:43ca3f640b716b9ea3e165433ef8ff5c:ktexttemplate/spkgbuild
 f:a222119a4a4bebb381e66c17078f95a0:oxygen-icons/.pkgfiles
-f:689fc1546e1345f3c767baf01e24048e:oxygen-icons/CHANGELOG
-f:a8a5bcc645e605723cec7e6a86899a0f:oxygen-icons/spkgbuild
+f:8dd99cfbdb0d1efdf8bd55064ff46a39:oxygen-icons/CHANGELOG
+f:d043a4be58a218fac42860a83e801c5f:oxygen-icons/spkgbuild
 f:294ca61b230f19362d8c2850e6fd7d14:oxygen-icons/override
 f:8f3ae3b7ffaf9a3c8ddeb4b38c70a497:kdelibs4support/CHANGELOG
 f:6386b7a8436c9bac173392615f7b5d5f:kdelibs4support/spkgbuild

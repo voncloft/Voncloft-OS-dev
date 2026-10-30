@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-distlib
-version=0.4.4
+version=0.3.6
 release=2
 
 _name=${name#python-}

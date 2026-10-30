@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-thrift
-version=0.25.0
+version=0.18.1
 release=4
 
 _name=${name#python-}

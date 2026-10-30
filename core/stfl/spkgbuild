@@ -2,7 +2,7 @@
 # depends	: ncurses swig
 
 name=stfl
-version=0.24
+version=0.22
 release=1
 source="http://www.clifford.at/${name}/${name}-$version.tar.gz"
 

@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Initial creation of package in repo
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:13 AM EDT 2026
+
+Version=0.17.git20231016201200.geef943f0edf3beee8ecb85d4a9dae3656002fc24
+Release=1
+
+Synopsis:
+Changed from version 0.17+git20231016.geef943f0edf3beee8ecb85d4a9dae3656002fc24 to version 0.17.git20231016201200.geef943f0edf3beee8ecb85d4a9dae3656002fc24

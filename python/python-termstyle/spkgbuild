@@ -2,7 +2,7 @@
 # depends : python-setuptools
 
 name=python-termstyle
-version=0.1.11
+version=0.1.10
 release=7
 
 _name=${name#python-}

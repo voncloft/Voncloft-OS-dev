@@ -2,7 +2,7 @@
 # depends : python python-wheel
 
 name=python-poetry-core
-version=2.5.0
+version=1.6.0
 release=1
 
 _name=poetry_core

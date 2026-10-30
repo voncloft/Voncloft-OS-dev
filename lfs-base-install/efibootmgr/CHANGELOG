@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+efibootmgr
+Version=0.12
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 18 to version 0.12

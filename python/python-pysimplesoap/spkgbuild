@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-pysimplesoap
-version=1.16.2
+version=1.16
 release=5
 
 _name=${name#python-}

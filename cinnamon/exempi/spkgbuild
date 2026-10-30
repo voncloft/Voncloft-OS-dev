@@ -2,7 +2,7 @@
 # depends : boost valgrind
 
 name=exempi
-version=2.6.6
+version=2.6.3
 release=1
 
 source="https://libopenraw.freedesktop.org/download/${name}-${version}.tar.xz"

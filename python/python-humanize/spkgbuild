@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-humanize
-version=3.11.0
+version=3.1.0
 release=3
 
 _name=${name#python-}

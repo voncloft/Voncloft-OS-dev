@@ -2,7 +2,7 @@
 # depends : python python-setuptools cython3 yaml python-wheel
 
 name=python-yaml
-version=6.0.3
+version=6.0
 release=1
 _name=pyyaml
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"

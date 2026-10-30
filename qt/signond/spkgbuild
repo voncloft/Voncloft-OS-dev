@@ -2,7 +2,7 @@
 # depends : qt6 sqlite
 
 name=signond
-version=8.60+20231124.gc8ad9824
+version=8.60.git20260406141555.ga08b05b79100bfd535100b8341df4e8bf1441802
 release=1
 _commit=${version##*.g}
 

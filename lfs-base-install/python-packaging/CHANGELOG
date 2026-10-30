@@ -1,0 +1,9 @@
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+python-packaging
+Version=23.1
+Release=3
+
+Synopsis:
+Added Changelog to package
+Changed from version 25.0 to version 23.1

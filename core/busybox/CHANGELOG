@@ -76,3 +76,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.37.0 to version 1.38.0
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 12:31:12 AM EDT 2026
+
+Version=1.34.1
+Release=1
+
+Synopsis:
+Changed from version 1.38.0 to version 1.34.1

@@ -2,7 +2,7 @@
 # depends : python python-setuptools python-wheel python-markdown python-markupsafe python-pygments jinja2 python-packaging python-typogrify
 
 name=gi-docgen
-version=2026.1
+version=2023.1
 release=1
 _name=gi_docgen
 source="https://files.pythonhosted.org/packages/source/g/${_name}/${_name}-${version}.tar.gz"

@@ -2,7 +2,7 @@
 # depends : python python-flit
 
 name=python-pip
-version=26.2.2
+version=23.1.2
 release=2
 options="!checksum"
 _name=${name#python-}

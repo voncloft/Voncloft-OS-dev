@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-arpeggio
-version=1.10.2
+version=1.9.2
 release=3
 
 _name=Arpeggio

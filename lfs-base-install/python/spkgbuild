@@ -2,7 +2,7 @@
 # depends	: 
 
 name=python
-version=3.13.6
+version=3.11.3
 release=1
 _name=Python
 source="https://www.python.org/ftp/python/$version/${_name}-$version.tar.xz"
