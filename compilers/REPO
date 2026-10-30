@@ -132,7 +132,7 @@ f:ab2cceb433117c52bc088710791c7f93:cmake/spkgbuild
 f:4f6f8e00ae4fe46df19791b5183c3c11:cmake/override
 f:cea1e92da5e154b5f073e610a3ee238a:.httpup-repo.current
 f:277b0ccff30b904ac06222a46022afeb:luajit/.pkgfiles
-f:637ff5a25790ea56a2429680795e52ca:luajit/CHANGELOG
-f:6f5662bf4fd597fe4bc469e79a707392:luajit/spkgbuild
+f:44f06a3c7e4722fa77f338f8112ee253:luajit/CHANGELOG
+f:880daf5ba99d10764aa5859085b17e78:luajit/spkgbuild
 f:c759755f895db93f5e31881255203b12:luajit/override
 f:0af6e871d68b3e9318d7e7cd6c905ad6:luajit/.checksums

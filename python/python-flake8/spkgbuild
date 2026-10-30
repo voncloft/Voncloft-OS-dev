@@ -2,7 +2,7 @@
 # depends: python-entrypoints python-mccabe python-pycodestyle python-pyflakes
 
 name=python-flake8
-version=7.4.1
+version=7.5.0
 
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/f/${_name}/${_name}-${version}.tar.gz"

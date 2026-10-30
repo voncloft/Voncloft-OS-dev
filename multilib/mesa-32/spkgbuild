@@ -2,7 +2,7 @@
 # depends       : xorg-libraries libdrm-32
 
 name=mesa-32
-version=26.2.5
+version=26.2.6
 release=1
 
 _name=${name%-32}

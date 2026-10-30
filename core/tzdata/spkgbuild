@@ -1,7 +1,7 @@
 # description	: Sources for time zone and daylight saving time data
 
 name=tzdata
-version=2026e
+version=2026f
 release=1
 source="https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz
 	https://www.iana.org/time-zones/repository/releases/tzcode${version}.tar.gz"

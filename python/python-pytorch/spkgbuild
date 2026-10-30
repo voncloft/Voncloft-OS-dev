@@ -2,7 +2,7 @@
 # depends : google-glog gflags opencv openmp nccl pybind11 python python-yaml libuv
 
 name=python-pytorch
-version=2.14.1
+version=2.15.0
 release=4
 
 _name=${name#python-}

@@ -44,8 +44,8 @@ f:4703dc0019932e442486942adb6c90a4:pulseaudio-alsa/asound.conf
 f:4d1860ef3d37b45aaa133384d5c2b8ff:pulseaudio-alsa/CHANGELOG
 f:d417165c676338af1bbebb546ac6ac2b:pulseaudio-alsa/spkgbuild
 f:eaaa0fbf7a195af6e33661e689b77f64:ffmpegthumbnailer/.pkgfiles
-f:44a05235876eee00585a1aceb5c76b44:ffmpegthumbnailer/CHANGELOG
-f:d3daa2ff1de1cec0b2c0d4d2a375d406:ffmpegthumbnailer/spkgbuild
+f:b70a6bbb698a988ffa6e61a74be77f08:ffmpegthumbnailer/CHANGELOG
+f:54e1ef35d7c9ed59d284031e6b686599:ffmpegthumbnailer/spkgbuild
 f:ebc4db76aa6bfa8d91b07788bc63e120:x264/.pkgfiles
 f:476fb3f87dc142dfdc6e4e6add6f6d0f:x264/CHANGELOG
 f:bc073df6a8a4627c2e2a974305090d6c:x264/spkgbuild

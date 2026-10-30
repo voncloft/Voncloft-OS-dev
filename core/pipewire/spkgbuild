@@ -2,7 +2,7 @@
 # depends	: meson alsa-lib gstreamer ffmpeg dbus gst-plugins-base bluez sbc
 
 name=pipewire
-version=1.6.10
+version=1.6.11
 release=1
 source="https://github.com/PipeWire/${name}/archive/$version/$name-$version.tar.gz"
 

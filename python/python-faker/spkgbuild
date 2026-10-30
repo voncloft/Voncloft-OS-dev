@@ -2,7 +2,7 @@
 # depends : python-setuptools python-dateutil python-text-unidecode
 
 name=python-faker
-version=40.43.0
+version=40.44.0
 release=1
 
 _name=${name#python-}

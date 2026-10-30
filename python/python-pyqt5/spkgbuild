@@ -3,7 +3,7 @@
 
 name=python-pyqt5
 _upstream_name=python-pyqt6
-version=6.11.0
+version=6.12.0
 release=2
 _name=${_upstream_name#python-}
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"

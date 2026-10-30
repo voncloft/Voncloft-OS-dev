@@ -373,7 +373,8 @@ f:b4a7dd4ca51e36ca8a1c6dca9be5b7aa:libx11/CHANGELOG
 f:46793f3d225c8f367403ef61db74511d:libx11/spkgbuild
 f:da5757663d3e7a92cb5fa953bc71b809:libx11/override
 f:b85754471ef9b23c59c65eb752b05268:tesseract/.pkgfiles
-f:c412ba263fc151e7c8edfd52168db7bf:tesseract/spkgbuild
+f:ef4446a6ea31c5d76f4b3a32839567bd:tesseract/CHANGELOG
+f:f0318061a9a4f0f9b7528eca7fe2614f:tesseract/spkgbuild
 f:91fcf99fbe327b32a871b947b2135d2d:libpgm/CHANGELOG
 f:b9e34d9ac441b86f4b52d74dff6e3e3a:libpgm/spkgbuild
 f:168869c230e1f7e51ee563c0e305cc7c:libpgm/override
@@ -540,8 +541,8 @@ f:ab67b6712fff18bf380f715bda576787:libqalculate/spkgbuild
 f:393e46ffd3ff9d43aa10a08917498b9c:libwebp/.pkgfiles
 f:a5fd7058ad8a045d618d7cebf57f3fa3:libwebp/CHANGELOG
 f:3c6449f1163b709fb9c365824fcbe232:libwebp/spkgbuild
-f:4fbe7a4b7041c23b5cb0f20882e057eb:cracklib-dict/CHANGELOG
-f:4ce1683515d1321630cc10f88e935f21:cracklib-dict/spkgbuild
+f:77462a72c3385465d232431d10914035:cracklib-dict/CHANGELOG
+f:c3e38ea04d3101b82446576add611bd2:cracklib-dict/spkgbuild
 f:dd735e99d11645164835d4742129cfdb:babl/.pkgfiles
 f:fdaeaa39fe64fe4ac694b52ade3114dd:babl/CHANGELOG
 f:09f5f68d40b269d6568db9ce35cb57c5:babl/spkgbuild

@@ -440,8 +440,8 @@ f:f0cfe55c904f58fc5a6ce4dff6c4a717:libxft-32/spkgbuild
 f:ff10d397bde10657bc334480b055fc21:libxft-32/override
 f:bf48f528c7ec25f3766218c68cbbbe3c:mesa-32/crossfile
 f:df668e4686f855770a7f4376f4f4fcbd:mesa-32/.pkgfiles
-f:5aaffd62a761356512a1c1b5d6a26852:mesa-32/CHANGELOG
-f:68a5e0122ec76cc8eef87a17f6796e76:mesa-32/spkgbuild
+f:4d11d5b1a831f717f6ce039e589b802c:mesa-32/CHANGELOG
+f:b17ba1dcd63dae7874bebbec8ef5aea2:mesa-32/spkgbuild
 f:bffb623366352861e427885c31dde4d2:mesa-32/old/crossfile
 f:c11db8f37d7e73bf0d9308206e8c6f51:mesa-32/old/hello
 f:5c11ff1def313f2a87eabf3a30f130ad:mesa-32/old/test.c

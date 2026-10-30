@@ -2,7 +2,7 @@
 # depends : python python-urllib3
 
 name=python-selenium
-version=4.51.0
+version=4.52.0
 release=3
 
 _name=${name#python-}

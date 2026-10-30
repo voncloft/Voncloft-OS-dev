@@ -81,7 +81,8 @@ f:4d2b9675efd2e520b34567af95d0bcec:qxmpp/spkgbuild
 f:746106f73ca5c841800ab998b915a23a:qxmpp/override
 f:9145de8405ebc6613fdaca31ed24adc0:mauikit/spkgbuild
 f:5411be55c5d3b1854ace075eaf9713b6:appstream-qt/.pkgfiles
-f:838c6488b05b7f7e4ed5bafda419adbc:appstream-qt/spkgbuild
+f:5483d7059d5cce8bf2b519b8e3ec6bbf:appstream-qt/CHANGELOG
+f:1a225d97be788970d93e2ac0032a4416:appstream-qt/spkgbuild
 f:317299c198930001b9810785efccb2d0:appstream-qt/override
 f:9aea1b15a7061ca7fc504dec279b3f62:qtwebengine/pre-upgrade.sh
 f:d8e3650dd0fca51128187d8bd8504786:qtwebengine/post-upgrade.sh

@@ -2,7 +2,7 @@
 # depends : python symengine
 
 name=python-symengine
-version=0.14.1
+version=0.15.0
 release=1
 
 _name=symengine.py

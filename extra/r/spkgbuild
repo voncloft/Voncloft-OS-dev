@@ -2,7 +2,7 @@
 # depends : bzip2 cairo curl gcc-fortran icu libjpeg-turbo libpng libtiff libxt make pcre2 readline xz zlib
 
 name=r
-version=4.6.1
+version=4.6.2
 release=2
 options="!checksum"
 _name=R

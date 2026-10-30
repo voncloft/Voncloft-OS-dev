@@ -61,8 +61,8 @@ f:7467f0039ea378967a98908afcfde2d5:nvidia-32/CHANGELOG
 f:41244cbe951bab9daff54d83913d0150:nvidia-32/spkgbuild
 f:d420b596d7427eed2d83f496d350a6a1:nvidia-32/override
 f:43cfbf82694715f2d13e458eaad32f46:libreoffice/.pkgfiles
-f:ad65548f5e974ecaf682fa37d858c5d7:libreoffice/CHANGELOG
-f:14245bfa448c57c40de2fd110aca18cb:libreoffice/spkgbuild
+f:5046afe8ca54c766744625a7b3c42bc2:libreoffice/CHANGELOG
+f:d9ca98c45cb198f8246d0c4b17e7a3d3:libreoffice/spkgbuild
 f:3fd61ad592ad34bd4c80583f54c6acd2:libreoffice/override
 f:76e5fb76ed1bb9e020a82fe5cbe3ba97:discord/.pkgfiles
 f:43783055056d318c6924d12c7ade0917:discord/CHANGELOG
@@ -74,9 +74,9 @@ f:9157026032cfa499d823b55b258c8fce:virtualbox-guest-utils/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-utils/override
 f:119f437d4911f637fa586b5eda9aab29:virtualbox-guest-utils/pre-install.sh
 f:89fb28a484e7f5126839e83f10de377a:firefox/pre-upgrade.sh
-f:e63fcbf3ab63b2a5045fc734d62a3478:firefox/CHANGELOG
+f:00f33dcc3b3283d914004197494cb302:firefox/CHANGELOG
 f:37db9ec3cc336d3a09ede8becec2ad69:firefox/fix-ftbfs-newer-cbindgen.patch
-f:5e91f9554147efec06897a9f44e745bc:firefox/spkgbuild
+f:3214d7b9d86c6bf6966b43e89819a507:firefox/spkgbuild
 f:a4a0f7c9c1e3424463670d031976aa67:firefox/override
 f:971c77648caea312fca2d9340c4382a6:firefox/firefox.desktop
 f:75aae82b7b33d79bcec25c8783f3ed5c:spotify/spotify
@@ -95,8 +95,8 @@ f:2a20be6e36932c3c71ce0be221e3a2f6:telegram-desktop-bin/CHANGELOG
 f:fa93a0c669b5f0cd8b9be4c8eecf5cdd:telegram-desktop-bin/telegram-desktop-bin.desktop
 f:a1d901f2bac42c354bad22ecf17ce231:telegram-desktop-bin/spkgbuild
 f:2a9ba90f79c0467d2e20c12555555345:telegram-desktop-bin/override
-f:5745df605591616bed3d399567605ea9:google-chrome/CHANGELOG
-f:79aa9b5d1782a2242837b53fae0242b7:google-chrome/spkgbuild
+f:559a749f6b0576db67d6620a0f516555:google-chrome/CHANGELOG
+f:a9fab996bfc7d8280af43773372ea75a:google-chrome/spkgbuild
 f:99fa93d5e7fb5d622cef0f9621f3ffa3:google-chrome/google-chrome-stable.sh
 f:99a39ef5a37ae082a2611cab8d04e55c:google-chrome/override
 f:e3d45624533e5b79c7db1df0939dda49:firefox-esr/CHANGELOG
@@ -125,9 +125,9 @@ f:4b1645c2d3f85426435736c60f928375:wps-office/override
 f:a4a1eeafa7bcc4532cdff3473234a471:pandoc-bin/CHANGELOG
 f:b00d8a59eb31ca3574456f6af6278e3c:pandoc-bin/spkgbuild
 f:893d63e191bf450550d28cdb864170f0:vscode-bin/visual-studio-code-url-handler.desktop
-f:3ff8296a7040eeb3c3dfaa6a674b661d:vscode-bin/CHANGELOG
+f:ce2de8de209857fde97fac977c2ffc14:vscode-bin/CHANGELOG
 f:afe04352e57ca51932e0a1b8eb32e25b:vscode-bin/visual-studio-code.desktop
-f:a9eb1949d6d4303ece5233654a3d5eb2:vscode-bin/spkgbuild
+f:d0cf2f907dea924a75f3fedc92a0d71e:vscode-bin/spkgbuild
 f:93babcf9e9fc18636c2ddcff63a99440:vscode-bin/override
 f:2965d6561c4c4473e1e392a20f5e61cb:icecat-bin/icecat.desktop
 f:5c498b31bd52c1f1d92c8d7da27c5d6f:icecat-bin/icecat-safe.desktop

@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kcolorscheme kconfig kcoreaddons kcrash kde-deps-installer kglobalaccel kguiaddons ki18n kiconthemes kirigami qt6
 
 name=kirigami-addons
-version=1.15.0
+version=1.16.0
 release=1
 
 source="https://download.kde.org/stable/${name}/${name}-$version.tar.xz"

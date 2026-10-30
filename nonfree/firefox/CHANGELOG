@@ -3326,3 +3326,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 140.0esr to version 160.0b1
+
+----------------------------------------------------------------
+
+Date: Thu Oct 29 11:31:13 PM EDT 2026
+
+Version=160.0b2
+Release=1
+
+Synopsis:
+Upgraded from version 160.0b1 to version 160.0b2

@@ -32,11 +32,11 @@ f:a3ea60e8ff5b28f54bd1ca2207958b90:nethogs/spkgbuild
 f:e3a6afcad0610342f9f99f207cc25344:pidgin/CHANGELOG
 f:6fe9212a7059b21d96a398b2e924e3a5:pidgin/spkgbuild
 f:4bea0f1cbf40d757526b9ea3ec17ef35:pidgin/override
-f:2364cb23eca0dfc1ab7d5fef8cbaa5d3:tor/CHANGELOG
+f:b4ac83894131cd744bf14efd4b72d16a:tor/CHANGELOG
 f:9000ad824fd570d43e02e8033dbf2767:tor/rc.tor
 f:c03a74c62be382749b206c13ce5560b0:tor/run
 f:c1dd4004c63edaeaa829e01be5413cfc:tor/torrc
-f:e3e16f3f5f63b49b9791d1682203583f:tor/spkgbuild
+f:b96051e286649d7815fd5877cec2950d:tor/spkgbuild
 f:f58147f876effca915152f5ca8b60f0f:tor/mkdirs
 f:7d36366889907a378f46922b63e280be:tor/pre-install.sh
 f:66b188862f5d6e4781315da2468e3a6b:wireshark/CHANGELOG

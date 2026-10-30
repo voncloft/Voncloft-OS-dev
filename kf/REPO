@@ -254,8 +254,8 @@ f:c488112cf814eb5529b293096c5a4605:syndication/.pkgfiles
 f:382aba42f9732b4c88ac7e9aa711cf38:syndication/CHANGELOG
 f:23e5c627eb6bdff7c012371d88e657af:syndication/spkgbuild
 f:710807e3af2dc9f4b3c9c6b297f5c782:kirigami-addons/.pkgfiles
-f:664266107052a6f3834c7de34c41e925:kirigami-addons/CHANGELOG
-f:ec191110c80eea1d3338855df19e5228:kirigami-addons/spkgbuild
+f:76b0b1bcca8715d3da5f89682964750c:kirigami-addons/CHANGELOG
+f:37d74b9468a5a357f82b552c22d03e48:kirigami-addons/spkgbuild
 f:9ce6bc87c13136b1983a2b3c7c04bfc6:kactivities/CHANGELOG
 f:add6c168c62fb5d8802ca6aad8bbc196:kactivities/spkgbuild
 f:c1098fd15062b9aab875f98b42a8f2d4:kactivities-stats/CHANGELOG

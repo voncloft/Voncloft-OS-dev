@@ -3,11 +3,11 @@
 # note : Official x86_64 binary; requires OpenSSL 3 runtime libraries. The device-key module for controlling other computers additionally needs tpm2-tss; receiving control from a phone does not require that module.
 
 name=chatgpt-desktop
-version=26.1023.51421
+version=26.1027.30824
 release=1
 _name=chatgpt
 _package_path=pool/main/c/${_name}/${_name}_${version}_amd64.deb
-_pinned_version=26.1023.51421
+_pinned_version=26.1027.30824
 _pinned_sha256=eb0831c734f154f93f8ebcf0e17d118da0dea7dc1737dc61a1e71444375bf190
 source="https://persistent.oaistatic.com/codex-app-prod/linux/deb/$_package_path
     ${name}-${version}-Packages::https://persistent.oaistatic.com/codex-app-prod/linux/deb/dists/stable/main/binary-amd64/Packages

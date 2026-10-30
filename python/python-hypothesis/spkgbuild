@@ -2,7 +2,7 @@
 # depends : python-attrs python-sortedcontainers
 
 name=python-hypothesis
-version=6.170.12
+version=6.170.13
 release=1
 
 _name=${name#python-}

@@ -2,7 +2,7 @@
 # depends : meson ninja wayland
 
 name=wayland-protocols
-version=1.49
+version=1.50
 release=1
 
 source="$name-$version.tar.xz::https://gitlab.freedesktop.org/wayland/${name}/-/releases/$version/downloads/${name}-$version.tar.xz"

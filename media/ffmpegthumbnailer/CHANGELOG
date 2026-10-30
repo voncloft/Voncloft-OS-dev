@@ -27,3 +27,13 @@ Release=2
 
 Synopsis:
 Fixed source URL to use the upstream v-prefixed release tag.
+
+----------------------------------------------------------------
+
+Date: Thu Oct 29 11:31:13 PM EDT 2026
+
+Version=2.4.1
+Release=2
+
+Synopsis:
+Upgraded from version 2.3.1 to version 2.4.1
