@@ -1,3 +1,14 @@
+Date: 2026-10-30
+
+gst-plugins-base
+Version=1.28.8
+Release=2
+
+Synopsis:
+Keep GStreamer libraries and plugins together under /usr/lib.
+Use explicit Meson setup and declare its build tools; omit development-only
+tests, examples, and documentation from the package build.
+
 Date: Wed 13 Apr 2022 04:34:18 PM EDT
 
 gst-plugins-base

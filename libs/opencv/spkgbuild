@@ -3,44 +3,67 @@
 
 name=opencv
 version=5.0.0
-release=4
+release=5
 _name=opencv_contrib
 source="https://github.com/opencv/${name}/archive/${version}/${name}-${version}.tar.gz
         https://github.com/opencv/${_name}/archive/${version}/${_name}-${version}.tar.gz
-        opencv-ffmpeg9.patch"
+        opencv-ffmpeg9.patch
+        detect-cuda.py
+        cuda-probe.cmake
+        cuda-probe.cu"
 
 build() {
-    cd "$SRC/$name-$version"
+    cd "$SRC/$name-$version" || return 1
 
     # These upstream fixes also support the currently installed FFmpeg 7.
     if patch -p1 --dry-run --batch < "$SRC/opencv-ffmpeg9.patch" >/dev/null 2>&1; then
-        patch -p1 --batch < "$SRC/opencv-ffmpeg9.patch"
+        patch -p1 --batch < "$SRC/opencv-ffmpeg9.patch" || return 1
     elif ! patch -Rp1 --dry-run --batch < "$SRC/opencv-ffmpeg9.patch" >/dev/null 2>&1; then
         echo "OpenCV FFmpeg patch needs updating for $version" >&2
         return 1
     fi
 
-    cmake -S . -B build \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_CXX_STANDARD=17 \
-        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-        -DOPENCV_EXTRA_MODULES_PATH="$SRC/$_name-$version/modules" \
-        -DOPENCV_GENERATE_PKGCONFIG=ON \
-        -DBUILD_PERF_TESTS=OFF \
-        -DBUILD_TESTS=OFF \
-        -DBUILD_EXAMPLES=OFF \
-        -DBUILD_opencv_python2=OFF \
-        -DBUILD_opencv_python3=ON \
-        -DPYTHON3_EXECUTABLE=/usr/bin/python3 \
-        -DPYTHON3_NUMPY_INCLUDE_DIRS="$(PYTHONNOUSERSITE=1 python3 -c 'import numpy; print(numpy.get_include())')" \
-        -DPYTHON3_PACKAGES_PATH="$(python3 -c 'import sysconfig; print(sysconfig.get_path("platlib", vars={"base": "/usr", "platbase": "/usr"}))')" \
-        -DENABLE_PRECOMPILED_HEADERS=OFF \
-        -DCMAKE_SKIP_INSTALL_RPATH=ON \
-        -DBUILD_WITH_DEBUG_INFO=OFF \
-        -DWITH_XINE=OFF \
-        -Wno-dev
-    cmake --build build
+    # CUDA is optional: use only an installed toolkit and the current compiler.
+    # Never download, install, or replace GCC to make CUDA work.
+    python3 "$SRC/detect-cuda.py" --output "$SRC/opencv-cuda.cmake" \
+        --probe-dir "$SRC/opencv-cuda-probe" || return 1
+
+    configure_opencv() {
+        cmake -C "$SRC/opencv-cuda.cmake" -S . -B build \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DCMAKE_INSTALL_LIBDIR=lib \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_CXX_STANDARD=17 \
+            -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+            -DOPENCV_EXTRA_MODULES_PATH="$SRC/$_name-$version/modules" \
+            -DOPENCV_GENERATE_PKGCONFIG=ON \
+            -DBUILD_PERF_TESTS=OFF \
+            -DBUILD_TESTS=OFF \
+            -DBUILD_EXAMPLES=OFF \
+            -DBUILD_opencv_python2=OFF \
+            -DBUILD_opencv_python3=ON \
+            -DPYTHON3_EXECUTABLE=/usr/bin/python3 \
+            -DPYTHON3_NUMPY_INCLUDE_DIRS="$(PYTHONNOUSERSITE=1 python3 -c 'import numpy; print(numpy.get_include())')" \
+            -DPYTHON3_PACKAGES_PATH="$(python3 -c 'import sysconfig; print(sysconfig.get_path("platlib", vars={"base": "/usr", "platbase": "/usr"}))')" \
+            -DENABLE_PRECOMPILED_HEADERS=OFF \
+            -DCMAKE_SKIP_INSTALL_RPATH=ON \
+            -DBUILD_WITH_DEBUG_INFO=OFF \
+            -DWITH_XINE=OFF \
+            -Wno-dev
+    }
+
+    if ! configure_opencv || ! cmake --build build; then
+        # A working probe cannot guarantee that every OpenCV CUDA module builds.
+        # Retry once without CUDA; ordinary CPU build failures remain errors.
+        if ! grep -q '^set(WITH_CUDA ON ' "$SRC/opencv-cuda.cmake"; then
+            return 1
+        fi
+        echo "OpenCV CUDA build failed; retrying once without CUDA."
+        python3 "$SRC/detect-cuda.py" --cpu-only --output "$SRC/opencv-cuda.cmake" \
+            --probe-dir "$SRC/opencv-cuda-probe" || return 1
+        rm -rf build
+        configure_opencv || return 1
+        cmake --build build || return 1
+    fi
     DESTDIR="$PKG" cmake --install build
 }

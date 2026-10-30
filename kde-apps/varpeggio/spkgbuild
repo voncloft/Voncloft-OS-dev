@@ -3,20 +3,13 @@
 
 name=varpeggio
 version=0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc
-release=3
+release=4
 _commit=${version##*.g}
 _name=VArpeggio
-source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz
-        varpeggio-opencv5.patch"
+source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz"
 
 build() {
     cd "VArpeggio-$_commit"
-    if patch -p1 --dry-run --batch < "$SRC/varpeggio-opencv5.patch" >/dev/null 2>&1; then
-        patch -p1 --batch < "$SRC/varpeggio-opencv5.patch"
-    elif ! patch -Rp1 --dry-run --batch < "$SRC/varpeggio-opencv5.patch" >/dev/null 2>&1; then
-        echo "The OpenCV 5 compatibility patch needs updating for $name-$version" >&2
-        return 1
-    fi
     # Discard any build directory committed by upstream before configuring.
     rm -rf build
     # Use the canonical executable path instead of resolving it through PATH.

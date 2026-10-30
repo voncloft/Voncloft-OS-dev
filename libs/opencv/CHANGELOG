@@ -2,6 +2,20 @@ Date: 2026-10-30
 
 opencv
 Version=5.0.0
+Release=5
+
+Synopsis:
+Automatically enable CUDA only when the installed toolkit, current compiler,
+and detected GPU pass a compile and runtime check. Test cuDNN separately before
+enabling the CUDA DNN backend. Use a CPU build when CUDA is unavailable or
+incompatible, and retry once without CUDA if the full CUDA build fails.
+Do not install or change GCC or the CUDA toolkit. Regenerate the package file
+list on the next build because optional CUDA changes the installed modules.
+
+Date: 2026-10-30
+
+opencv
+Version=5.0.0
 Release=4
 
 Synopsis:

@@ -759,10 +759,9 @@ f:28b5718c8fbcec69263840ddffe0343b:klevernotes/spkgbuild
 f:0b79fde0f0ae6f08d309e17280459749:kmime/.pkgfiles
 f:1be8e1220fbef9196d5314bffe9a0dbb:kmime/CHANGELOG
 f:d8e070a01d5a11d7be5633d0f1c219d9:kmime/spkgbuild
-f:fbf5dbd2e61de33829cd6dc533d0e9f2:varpeggio/.pkgfiles
-f:2a33ebc0ab48dc0d217bdd5447133ee2:varpeggio/CHANGELOG
-f:d2d61e83ee2fa8cc0d2e942247612ef9:varpeggio/varpeggio-opencv5.patch
-f:09d08d88bab1b35e813d251e04231fc5:varpeggio/spkgbuild
+f:46799a005c03c0c1dd7dfa161064d18b:varpeggio/.pkgfiles
+f:8acd26fc85f0a68f09794c130ddf93e7:varpeggio/CHANGELOG
+f:74c9ce27891530132ee92ffc47c3d35c:varpeggio/spkgbuild
 f:18f992d77a451565ce3f5755836d5bc6:varpeggio/override
 f:13ff916680930e0942582faf6635f892:varpeggio/.checksums
 f:197b91499374c4c69be5ad88f2b2af2b:rocs/CHANGELOG

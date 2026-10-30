@@ -567,9 +567,12 @@ f:c9adf880e87b8f736c323fd9d5b8ce72:glib/spkgbuild
 f:0d44e1bf65fcab2c427e7d314a6bb61d:glib/override
 f:a221652c98575179869f27ae19231dfa:libcanberra/.pkgfiles
 f:7456078fb359cea04a3fc28fca534406:libcanberra/spkgbuild
-f:81e1f629c3deb33429f63134d686384a:opencv/CHANGELOG
+f:d81141e1a7317737ca6eb424f17980e0:opencv/cuda-probe.cu
+f:b32ea96096ba3d4bcc17758902e611ae:opencv/CHANGELOG
 f:899a7009c35e18f4e43d79fe51a7a4cf:opencv/opencv-ffmpeg9.patch
-f:e0320d5bb6a3ad47c8f9f008bd820d84:opencv/spkgbuild
+f:ec9e8eac976f4cc0ed5d70ceedbf85c0:opencv/cuda-probe.cmake
+f:c115351e14a8cc89bcb512e8c1cb67c6:opencv/detect-cuda.py
+f:51e60dce340017eae4ef9eda6b6065a9:opencv/spkgbuild
 f:c85e5dde8fcd564714bada7e5cf19667:opencv/override
 f:7dade8f54263d786057bfe597ada1ae2:modemmanager/.pkgfiles
 f:7df1f0df1adbaff49cc34d2e4b873225:modemmanager/spkgbuild

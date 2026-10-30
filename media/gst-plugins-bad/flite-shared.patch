@@ -1,0 +1,11 @@
+--- a/ext/flite/meson.build
++++ b/ext/flite/meson.build
+@@ -30,7 +30,7 @@
+ 
+ flite_deps = [ ]
+ foreach flite_lib : flite_libs
+-  flite_lib_dep = cc.find_library(flite_lib, required : get_option('flite'))
++  flite_lib_dep = cc.find_library(flite_lib, static : false, required : get_option('flite'))
+   if flite_lib_dep.found()
+     flite_deps += [flite_lib_dep]
+   endif

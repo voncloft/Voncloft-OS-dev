@@ -1,6 +1,16 @@
 Date: 2026-10-30
 
 varpeggio
+Version=0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc
+Release=4
+
+Synopsis:
+Use the upstream commit that already contains OpenCV 4/5 compatibility.
+Remove the now-redundant downstream patch to avoid failures on future updates.
+
+Date: 2026-10-30
+
+varpeggio
 Version=0.2.47.git20261027063836.g82b8b4d22181cbfa23d3d3a57613b24c015549c8
 Release=3
 

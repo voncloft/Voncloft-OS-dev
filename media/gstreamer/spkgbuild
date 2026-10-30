@@ -1,21 +1,22 @@
 # description	: Streaming media framework that enables applications to share a common set of plugins
-# depends	: glib
+# depends	: glib meson ninja pkgconf
 
 name=gstreamer
 version=1.28.8
-release=1
+release=2
 source="https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
 options="!checksum"
 build() {
-	cd $name-$version
-
-	mkdir build
-        cd build
-
-	meson setup ..            \
-      --prefix=/usr       \
-      --buildtype=release \
-      -D gst_debug=false 
-	ninja
-	DESTDIR=$PKG ninja install
+    cd "$SRC/$name-$version"
+    meson setup build \
+        --prefix=/usr \
+        --libdir=lib \
+        --buildtype=release \
+        -Dtests=disabled \
+        -Dexamples=disabled \
+        -Ddoc=disabled \
+        -Dbenchmarks=disabled \
+        -Dgst_debug=false
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }
