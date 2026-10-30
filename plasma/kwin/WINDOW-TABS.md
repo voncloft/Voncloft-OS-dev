@@ -8,12 +8,14 @@ It is a Voncloft patch, not an upstream KDE feature. Qt does not need rebuilding
 Alt+Tab retains the existing Plasma window-switching effect and shortcuts. A tab group appears as its current window; the separate Meta+Ctrl+Tab shortcuts switch inside the group.
 
 - Focus a window, press **Meta+Ctrl+G**, then click the other window to group it with. Escape cancels selection.
-- Or right-click the titlebar and choose **Window Tabs → Group with Another Window**.
+- Or right-click the titlebar and choose **More Actions → Tab Windows**, then choose the other window from the list.
 - Click a tab, scroll over the tabs, or use **Meta+Ctrl+Tab** / **Meta+Ctrl+Shift+Tab** to switch.
-- **Meta+Ctrl+U** or **Window Tabs → Detach This Tab** separates the current window.
+- **Meta+Ctrl+U** or **More Actions → Tab Windows → Detach This Tab** separates the current window.
 - Drag the selected tab or the small left titlebar grip to move the group. Resize its outer edges normally.
 - The close button closes the current tab. Middle-click a tab to close that application window.
 - The last remaining window automatically gets its ordinary decoration back.
+
+The list refreshes each time it opens and shows compatible open windows by title and icon. Other tab groups appear once, under their current window. Windows already in your group are omitted. The pointer-selection shortcut remains available.
 
 ## Scope
 

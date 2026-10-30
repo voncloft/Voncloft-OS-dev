@@ -586,3 +586,29 @@ Release=2
 
 Synopsis:
 Upgraded from version 6.8.1 to version 6.8.2
+
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 2026
+
+Version=6.8.2
+Release=3
+
+Synopsis:
+Add native, session-local window tab groups for server-decorated applications.
+Provide a tabbed decoration, Window Tabs menu, separate grouping/tab shortcuts,
+and shared geometry, tiling and window state. Preserve Alt+Tab and its selected
+effect. Include integration coverage and WINDOW-TABS.md usage instructions.
+
+----------------------------------------------------------------
+
+Date: Fri Oct 30 2026
+
+Version=6.8.2
+Release=4
+
+Synopsis:
+Move window tab controls into More Actions -> Tab Windows. List eligible open
+windows by title and icon for direct grouping, with safe handling of closed or
+changed targets. Keep tab shortcuts and the existing Alt+Tab effect.
