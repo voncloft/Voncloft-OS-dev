@@ -3439,8 +3439,8 @@ f:376ecbce4379f8a0715e03b32b76a1a4:python-httpretty/CHANGELOG
 f:20a45e1c7a88a815e18197a77732abf0:python-httpretty/spkgbuild
 f:09bfcdb5d6e13a1a99a22cfc3696a6ca:python-litepcie/CHANGELOG
 f:515e73da9cc9491416468b36319308a3:python-litepcie/spkgbuild
-f:f8f4c9d805b59ebf57a299fe80b56d15:python-aws-xray-sdk/CHANGELOG
-f:4420e934420b0eb17497417664fc7dd4:python-aws-xray-sdk/spkgbuild
+f:3580b78bc1b080a87766ec3a12a116db:python-aws-xray-sdk/CHANGELOG
+f:7495c26db1b609d9360fb07ad22f1216:python-aws-xray-sdk/spkgbuild
 f:dd08fcf2c9e4af027c544394abd806c8:python-josepy/CHANGELOG
 f:e79f946d736e1905342be00c6e34b2fb:python-josepy/spkgbuild
 f:20b864ed11fcc5c89d95a6e7818da4d4:python-flake8-debugger/CHANGELOG
@@ -3969,8 +3969,8 @@ f:94df73a6c407d20c0f3fb4faa702b0e4:python-owslib/spkgbuild
 f:6fd99642fc8e442c66bd852ffd5c074b:python-backports.csv/CHANGELOG
 f:263b86061c3b57164d4ce44e14bbe197:python-backports.csv/spkgbuild
 f:a1faa90a724e200d084c7438ca2fe5e2:python-backports.csv/override
-f:35d7b5ffe25b8cbced81da11eadff9db:python-aws-sam-translator/CHANGELOG
-f:706a99d60b366cdfaf02cac56cc7901e:python-aws-sam-translator/spkgbuild
+f:175c0c8f92be0fcfdfae64d6a8620990:python-aws-sam-translator/CHANGELOG
+f:4b69a9d02092bb07f5126e011e2184f4:python-aws-sam-translator/spkgbuild
 f:ee53922c4522c6cf4bbb00ea2ebfca8e:python-termcolor/CHANGELOG
 f:0cf53f005be45ea1e1642724fbb23ebe:python-termcolor/spkgbuild
 f:460980f90be817b75cbce04cc9c4589d:python-freezegun/CHANGELOG

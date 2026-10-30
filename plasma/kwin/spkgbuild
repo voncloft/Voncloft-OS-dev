@@ -3,10 +3,12 @@
 
 name=kwin
 version=6.8.2
-release=2
+release=3
 
 source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz
-        vulkan-raii-check.cpp"
+        vulkan-raii-check.cpp
+        kwin-window-tabs.patch
+        WINDOW-TABS.md"
 options="!checksum"
 
 build() {
@@ -15,7 +17,9 @@ build() {
         echo "KWin needs newer Vulkan C++ headers. Run: sudo scratch upgrade vulkan-headers" >&2
         return 1
     fi
+    patch --batch --forward --fuzz=0 -Np1 -i "$SRC/kwin-window-tabs.patch"
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install
+    install -Dm644 "$SRC/WINDOW-TABS.md" "$PKG/usr/share/doc/kwin/WINDOW-TABS.md"
 }

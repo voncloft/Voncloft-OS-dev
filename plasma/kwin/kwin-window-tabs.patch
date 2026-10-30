@@ -1,0 +1,1215 @@
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -38,6 +38,8 @@
+ )
+ 
+ target_sources(kwin PRIVATE
++    windowtabgroup.cpp
++    decorations/tabbeddecoration.cpp
+     3rdparty/xcursor.c
+     a11ymanager.cpp
+     activation.cpp
+--- a/src/window.h
++++ b/src/window.h
+@@ -59,6 +59,7 @@
+ class SurfaceItem;
+ class VirtualDesktop;
+ class WindowItem;
++class WindowTabGroup;
+ 
+ namespace Decoration
+ {
+@@ -1208,6 +1209,12 @@
+     virtual bool isPlaceable() const;
+     virtual bool isCloseable() const = 0;
+     bool isShown() const;
++    WindowTabGroup *tabGroup() const;
++    void setTabGroup(WindowTabGroup *group);
++    void setHiddenByTabGroup(bool hidden);
++    // Temporary group visibility must not overwrite remembered window rules.
++    void setTabGroupSkipFlags(bool taskbar, bool switcher, bool pager);
++    bool isHiddenByTabGroup() const;
+     bool isHidden() const;
+     void setHidden(bool hidden);
+     bool isHiddenByShowDesktop() const;
+@@ -2113,6 +2120,9 @@
+     QString m_description;
+ 
+     QString m_activationToken;
++
++    WindowTabGroup *m_tabGroup = nullptr;
++    bool m_hiddenByTabGroup = false;
+ };
+ 
+ inline RectF Window::bufferGeometry() const
+--- a/src/window.cpp
++++ b/src/window.cpp
+@@ -8,6 +8,7 @@
+     SPDX-License-Identifier: GPL-2.0-or-later
+ */
+ #include "window.h"
++#include "windowtabgroup.h"
+ #include "effect/globals.h"
+ #include "utils/common.h"
+ 
+@@ -4103,7 +4104,19 @@
+ {
+     const QSizeF unconstrainedClientSize = nextFrameSizeToClientSize(size);
+     const QSizeF constrainedClientSize = constrainClientSize(unconstrainedClientSize);
+-    return nextClientSizeToFrameSize(constrainedClientSize);
++    QSizeF frameSize = nextClientSizeToFrameSize(constrainedClientSize);
++    if (m_tabGroup) {
++        QSizeF minimum(1, 1);
++        QSizeF maximum(std::numeric_limits<int>::max(), std::numeric_limits<int>::max());
++        for (Window *tab : m_tabGroup->windows()) {
++            minimum = minimum.expandedTo(tab->nextClientSizeToFrameSize(tab->minSize()));
++            maximum = maximum.boundedTo(tab->nextClientSizeToFrameSize(tab->maxSize()));
++        }
++        // Clients may change their constraints while grouped. Prefer keeping
++        // their contents usable if new minimum/maximum hints contradict.
++        frameSize = frameSize.expandedTo(minimum).boundedTo(maximum.expandedTo(minimum));
++    }
++    return frameSize;
+ }
+ 
+ RectF Window::fullscreenGeometryRestore() const
+@@ -4300,6 +4313,9 @@
+ {
+     if (workspace()->rulebook()->areUpdatesDisabled()) {
+         return;
++    }
++    if (m_tabGroup && m_hiddenByTabGroup) {
++        selection &= ~(Rules::SkipTaskbar | Rules::SkipSwitcher | Rules::SkipPager);
+     }
+     m_rules.update(this, selection);
+ }
+@@ -4441,9 +4457,62 @@
+     return !isDeleted() && !isHidden() && !isHiddenByShowDesktop() && !isMinimized();
+ }
+ 
++WindowTabGroup *Window::tabGroup() const
++{
++    return m_tabGroup;
++}
++
++void Window::setTabGroup(WindowTabGroup *group)
++{
++    if (m_tabGroup == group) {
++        return;
++    }
++    m_tabGroup = group;
++    if (!isDeleted()) {
++        invalidateDecoration();
++    }
++}
++
++void Window::setTabGroupSkipFlags(bool taskbar, bool switcher, bool pager)
++{
++    if (m_skipTaskbar != taskbar) {
++        m_skipTaskbar = taskbar;
++        doSetSkipTaskbar();
++        Q_EMIT skipTaskbarChanged();
++    }
++    if (m_skipSwitcher != switcher) {
++        m_skipSwitcher = switcher;
++        doSetSkipSwitcher();
++        Q_EMIT skipSwitcherChanged();
++    }
++    if (m_skipPager != pager) {
++        m_skipPager = pager;
++        doSetSkipPager();
++        Q_EMIT skipPagerChanged();
++    }
++}
++
++bool Window::isHiddenByTabGroup() const
++{
++    return m_hiddenByTabGroup;
++}
++
++void Window::setHiddenByTabGroup(bool hidden)
++{
++    if (m_hiddenByTabGroup == hidden) {
++        return;
++    }
++    m_hiddenByTabGroup = hidden;
++    for (Window *transient : transients()) {
++        if (!transient->isDeleted()) transient->setHiddenByTabGroup(hidden);
++    }
++    doSetHidden();
++    Q_EMIT hiddenChanged();
++}
++
+ bool Window::isHidden() const
+ {
+-    return m_hidden;
++    return m_hidden || m_hiddenByTabGroup;
+ }
+ 
+ void Window::setHidden(bool hidden)
+--- a/src/workspace.h
++++ b/src/workspace.h
+@@ -40,6 +40,7 @@
+ 
+ namespace KWin
+ {
++class WindowTabManager;
+ 
+ namespace Decoration
+ {
+@@ -418,6 +419,7 @@
+     FocusChain *focusChain() const;
+     ApplicationMenu *applicationMenu() const;
+     Decoration::DecorationBridge *decorationBridge() const;
++    WindowTabManager *windowTabManager() const;
+     Outline *outline() const;
+     Placement *placement() const;
+     RuleBook *rulebook() const;
+@@ -757,6 +759,7 @@
+     QList<QString> m_recentlyRemovedDpmsOffOutputs;
+     QTimer m_dpmsTimer;
+     std::shared_ptr<FileDescriptor> m_sleepInhibitor;
++    std::unique_ptr<WindowTabManager> m_windowTabManager;
+ 
+ private:
+     friend Workspace *workspace();
+--- a/src/workspace.cpp
++++ b/src/workspace.cpp
+@@ -11,6 +11,7 @@
+ */
+ // own
+ #include "workspace.h"
++#include "windowtabgroup.h"
+ // kwin libs
+ #include "opengl/glplatform.h"
+ // kwin
+@@ -184,6 +185,7 @@
+         }
+     });
+ 
++    m_windowTabManager = std::make_unique<WindowTabManager>(this);
+     initShortcuts();
+ 
+     init();
+@@ -3117,6 +3119,11 @@
+     return m_applicationMenu.get();
+ }
+ 
++WindowTabManager *Workspace::windowTabManager() const
++{
++    return m_windowTabManager.get();
++}
++
+ Decoration::DecorationBridge *Workspace::decorationBridge() const
+ {
+     return m_decorationBridge.get();
+--- a/src/activation.cpp
++++ b/src/activation.cpp
+@@ -18,6 +18,7 @@
+ #include "cursor.h"
+ #include "focuschain.h"
+ #include "workspace.h"
++#include "windowtabgroup.h"
+ #if KWIN_BUILD_ACTIVITIES
+ #include "activities.h"
+ #endif
+@@ -300,6 +301,7 @@
+     if (!window->isClient() || window->isDeleted() || !window->wantsInput()) {
+         return;
+     }
++    if (m_windowTabManager) m_windowTabManager->selectForActivation(window);
+     if (window->isHiddenByShowDesktop()) {
+         ++block_focus;
+         setShowingDesktop(false);
+@@ -370,6 +372,7 @@
+         return false;
+     }
+ 
++    if (m_windowTabManager) m_windowTabManager->selectForActivation(window);
+     Window *modal = window->findModal();
+     if (modal != nullptr && modal != window) {
+         if (modal->desktops() != window->desktops()) {
+--- a/src/useractions.cpp
++++ b/src/useractions.cpp
+@@ -35,6 +35,7 @@
+ #include "virtualdesktops.h"
+ #include "window.h"
+ #include "workspace.h"
++#include "windowtabgroup.h"
+ #if KWIN_BUILD_X11
+ #include "x11window.h"
+ #endif
+@@ -287,6 +288,43 @@
+     m_keepAboveOperation->setCheckable(true);
+     m_keepAboveOperation->setData(Options::KeepAboveOp);
+ 
++    QMenu *tabsMenu = m_menu->addMenu(i18n("Window &Tabs"));
++    QAction *groupTab = tabsMenu->addAction(i18n("Group with Another Window…"));
++    QAction *nextTab = tabsMenu->addAction(i18n("Next Tab"));
++    QAction *previousTab = tabsMenu->addAction(i18n("Previous Tab"));
++    QAction *detachTab = tabsMenu->addAction(i18n("Detach This Tab"));
++    setShortcut(groupTab, QStringLiteral("Window Tab Group"));
++    setShortcut(nextTab, QStringLiteral("Window Tab Next"));
++    setShortcut(previousTab, QStringLiteral("Window Tab Previous"));
++    setShortcut(detachTab, QStringLiteral("Window Tab Detach"));
++    connect(tabsMenu, &QMenu::aboutToShow, this, [this, groupTab, nextTab, previousTab, detachTab] {
++        groupTab->setEnabled(WindowTabManager::canGroup(m_window));
++        const bool grouped = m_window && m_window->tabGroup();
++        nextTab->setEnabled(grouped);
++        previousTab->setEnabled(grouped);
++        detachTab->setEnabled(grouped);
++    });
++    // Defer changes until the menu has closed; replacing its decoration while
++    // handling a menu action can invalidate the input event's receiver.
++    auto tabAction = [this](auto action) {
++        const QPointer<Window> window = m_window;
++        QMetaObject::invokeMethod(workspace(), [window, action] {
++            if (window && !window->isDeleted()) action(window);
++        }, Qt::QueuedConnection);
++    };
++    connect(groupTab, &QAction::triggered, this, [tabAction] {
++        tabAction([](Window *window) { workspace()->windowTabManager()->pickTarget(window); });
++    });
++    connect(nextTab, &QAction::triggered, this, [tabAction] {
++        tabAction([](Window *window) { if (window->tabGroup()) window->tabGroup()->cycle(1); });
++    });
++    connect(previousTab, &QAction::triggered, this, [tabAction] {
++        tabAction([](Window *window) { if (window->tabGroup()) window->tabGroup()->cycle(-1); });
++    });
++    connect(detachTab, &QAction::triggered, this, [tabAction] {
++        tabAction([](Window *window) { if (window->tabGroup()) window->tabGroup()->remove(window); });
++    });
++
+     QAction *overflowAction = m_menu->addMenu(advancedMenu);
+     overflowAction->setText(i18n("&More Actions"));
+     overflowAction->setIcon(QIcon::fromTheme(QStringLiteral("overflow-menu")));
+@@ -822,6 +860,15 @@
+ 
+     // PLEASE NOTE: Never change the ID of an existing shortcut! It will cause users'
+     // custom shortcuts to be lost. Instead, only change the description
++
++    initShortcut("Window Tab Group", i18n("Group with Another Window"),
++                 Qt::META | Qt::CTRL | Qt::Key_G, m_windowTabManager.get(), &WindowTabManager::groupActiveWindow, false);
++    initShortcut("Window Tab Detach", i18n("Detach Window from Tabs"),
++                 Qt::META | Qt::CTRL | Qt::Key_U, m_windowTabManager.get(), &WindowTabManager::detachActiveWindow, false);
++    initShortcut("Window Tab Next", i18n("Next Window Tab"),
++                 Qt::META | Qt::CTRL | Qt::Key_Tab, m_windowTabManager.get(), &WindowTabManager::nextTab, true);
++    initShortcut("Window Tab Previous", i18n("Previous Window Tab"),
++                 Qt::META | Qt::CTRL | Qt::SHIFT | Qt::Key_Tab, m_windowTabManager.get(), &WindowTabManager::previousTab, true);
+ 
+     initShortcut("Window Operations Menu", i18n("Window Menu"),
+                  Qt::ALT | Qt::Key_F3, &Workspace::slotWindowOperations, true);
+--- a/src/decorations/decorationbridge.cpp
++++ b/src/decorations/decorationbridge.cpp
+@@ -7,6 +7,7 @@
+     SPDX-License-Identifier: GPL-2.0-or-later
+ */
+ #include "decorationbridge.h"
++#include "tabbeddecoration.h"
+ 
+ #include "decoratedwindow.h"
+ #include "decorations_logging.h"
+@@ -262,7 +263,9 @@
+     if (!m_theme.isEmpty()) {
+         args.insert(QStringLiteral("theme"), m_theme);
+     }
+-    auto deco = m_factory->create<KDecoration3::Decoration>(window, QVariantList{args});
++    KDecoration3::Decoration *deco = window->tabGroup() && style == KDecoration3::Style::Titled
++        ? new TabbedDecoration(window, QVariantList{args})
++        : m_factory->create<KDecoration3::Decoration>(window, QVariantList{args});
+     deco->setSettings(m_settings);
+     deco->create();
+     if (!deco->init()) {
+--- /dev/null
++++ b/src/windowtabgroup.h
+@@ -0,0 +1,61 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#pragma once
++
++#include "kwin_export.h"
++#include <QHash>
++#include <QList>
++#include <QObject>
++#include <QPointer>
++
++namespace KWin {
++class Window;
++class Workspace;
++
++// A group owns no application windows. Closing/detaching the last tab restores
++// its ordinary decoration and all taskbar/switcher flags.
++class KWIN_EXPORT WindowTabGroup : public QObject
++{
++    Q_OBJECT
++public:
++    explicit WindowTabGroup(QObject *parent);
++    ~WindowTabGroup() override;
++    QList<Window *> windows() const;
++    Window *current() const;
++    void add(Window *window);
++    void remove(Window *window, bool closing = false);
++    void select(Window *window, bool activate = true);
++    void cycle(int direction);
++    void synchronize(Window *source);
++Q_SIGNALS:
++    void changed();
++private:
++    void updateVisibility();
++    struct SavedState {
++        bool skipTaskbar;
++        bool skipSwitcher;
++        bool skipPager;
++    };
++    QList<Window *> m_windows;
++    QHash<Window *, SavedState> m_saved;
++    QPointer<Window> m_current;
++    bool m_updating = false;
++    bool m_destroying = false;
++};
++
++class KWIN_EXPORT WindowTabManager : public QObject
++{
++    Q_OBJECT
++public:
++    explicit WindowTabManager(Workspace *workspace);
++    static bool canGroup(Window *window);
++    bool groupWindows(Window *source, Window *target);
++    void pickTarget(Window *source);
++    void selectForActivation(Window *window);
++    void groupActiveWindow();
++    void detachActiveWindow();
++    void nextTab();
++    void previousTab();
++private:
++    Workspace *m_workspace;
++};
++}
+--- /dev/null
++++ b/src/windowtabgroup.cpp
+@@ -0,0 +1,255 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#include "windowtabgroup.h"
++#include "input.h"
++#include "tiles/tile.h"
++#include "window.h"
++#include "workspace.h"
++
++#include <KDecoration3/Decoration>
++#include <QScopedValueRollback>
++
++namespace KWin {
++WindowTabGroup::WindowTabGroup(QObject *parent) : QObject(parent) {}
++WindowTabGroup::~WindowTabGroup()
++{
++    m_destroying = true;
++    // Workspace destroys windows before its managers during normal shutdown.
++    // Removing a manager explicitly must not leave any of its tabs hidden.
++    const auto members = m_windows;
++    for (Window *window : members) {
++        remove(window, window->isDeleted());
++    }
++}
++QList<Window *> WindowTabGroup::windows() const { return m_windows; }
++Window *WindowTabGroup::current() const { return m_current; }
++
++void WindowTabGroup::add(Window *window)
++{
++    if (!window || m_windows.contains(window)) {
++        return;
++    }
++    m_saved.insert(window, {window->skipTaskbar(), window->skipSwitcher(), window->skipPager()});
++    m_windows.append(window);
++    if (!m_current) {
++        m_current = window;
++    }
++    window->setTabGroup(this);
++    connect(window, &Window::closed, this, [this, window] { remove(window, true); });
++    connect(window, &Window::captionChanged, this, &WindowTabGroup::changed);
++    connect(window, &Window::iconChanged, this, &WindowTabGroup::changed);
++    connect(window, &Window::frameGeometryChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::requestedTileChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::maximizeGeometryRestoreChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::fullscreenGeometryRestoreChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::maximizedChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::fullScreenChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::minimizedChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::desktopsChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::activitiesChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::keepAboveChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::keepBelowChanged, this, [this, window] { synchronize(window); });
++    connect(window, &Window::decorationChanged, this, [this, window] { synchronize(window); });
++    // A client can opt out of decorations after mapping (for example fullscreen).
++    // Keep the group reachable with its shortcuts; ordinary decoration returns
++    // automatically when the client restores its titlebar.
++    synchronize(m_current);
++    updateVisibility();
++    Q_EMIT changed();
++}
++
++void WindowTabGroup::updateVisibility()
++{
++    for (Window *window : std::as_const(m_windows)) {
++        const bool inactive = window != m_current;
++        const auto saved = m_saved.value(window);
++        window->setHiddenByTabGroup(inactive);
++        window->setTabGroupSkipFlags(inactive || saved.skipTaskbar,
++                                    inactive || saved.skipSwitcher,
++                                    inactive || saved.skipPager);
++    }
++}
++
++void WindowTabGroup::synchronize(Window *source)
++{
++    if (m_updating || !source || source != m_current || source->isDeleted()) {
++        return;
++    }
++    QScopedValueRollback guard(m_updating, true);
++    auto geometry = source->moveResizeGeometry();
++    if (!source->isFullScreen() && source->requestedMaximizeMode() == MaximizeRestore) {
++        geometry.setSize(source->constrainFrameSize(geometry.size()));
++        if (geometry != source->moveResizeGeometry()) source->moveResize(geometry);
++    }
++    for (Window *window : std::as_const(m_windows)) {
++        if (window == source || window->isDeleted()) {
++            continue;
++        }
++        window->setDesktops(source->desktops());
++        window->setOnActivities(source->activities());
++        window->setKeepAbove(source->keepAbove());
++        window->setKeepBelow(source->keepBelow());
++        window->setMinimized(source->isMinimized());
++        window->setFullScreen(source->isFullScreen());
++        window->maximize(source->requestedMaximizeMode());
++        if (window->requestedTile() != source->requestedTile()) {
++            if (Tile *tile = source->requestedTile()) {
++                tile->manage(window);
++            } else if (Tile *previous = window->requestedTile()) {
++                previous->unmanage(window);
++            }
++        }
++        window->moveResize(geometry);
++        window->setGeometryRestore(source->geometryRestore());
++        window->setFullscreenGeometryRestore(source->fullscreenGeometryRestore());
++    }
++    Q_EMIT changed();
++}
++
++void WindowTabGroup::select(Window *window, bool activate)
++{
++    if (!window || window->isDeleted() || !m_windows.contains(window) || m_updating) {
++        return;
++    }
++    if (m_current != window) {
++        synchronize(m_current);
++        m_current = window;
++        updateVisibility();
++        Q_EMIT changed();
++    }
++    if (activate) {
++        workspace()->activateWindow(window, true);
++    }
++}
++
++void WindowTabGroup::cycle(int direction)
++{
++    if (m_windows.size() > 1) {
++        select(m_windows.at((m_windows.indexOf(m_current) + direction + m_windows.size()) % m_windows.size()));
++    }
++}
++
++void WindowTabGroup::remove(Window *window, bool closing)
++{
++    if (!m_windows.contains(window)) {
++        return;
++    }
++    const bool wasCurrent = m_current == window;
++    const bool wasActive = workspace()->activeWindow() == window;
++    const auto saved = m_saved.take(window);
++    m_windows.removeAll(window);
++    disconnect(window, nullptr, this, nullptr);
++    window->setTabGroupSkipFlags(saved.skipTaskbar, saved.skipSwitcher, saved.skipPager);
++    window->setTabGroup(nullptr);
++    if (!closing && !window->isDeleted()) {
++        window->setHiddenByTabGroup(false);
++    }
++    if (wasCurrent) {
++        m_current = m_windows.isEmpty() ? nullptr : m_windows.first();
++    }
++    updateVisibility();
++    Q_EMIT changed();
++    if (closing && wasActive && m_current) {
++        workspace()->activateWindow(m_current, true);
++    }
++    if (m_windows.size() == 1) {
++        remove(m_windows.first());
++    }
++    if (m_windows.isEmpty() && !m_destroying) {
++        deleteLater();
++    }
++}
++
++WindowTabManager::WindowTabManager(Workspace *workspace)
++    : QObject(workspace), m_workspace(workspace)
++{
++    connect(workspace, &Workspace::windowAdded, this, [](Window *window) {
++        if (Window *parent = window->transientFor()) {
++            window->setHiddenByTabGroup(parent->isHiddenByTabGroup());
++        }
++    });
++}
++
++bool WindowTabManager::canGroup(Window *window)
++{
++    return window && !window->isDeleted() && window->isNormalWindow()
++        && !window->isTransient() && !window->isFullScreen()
++        && window->isMovable() && window->isResizable()
++        && window->decoration() && window->decoration()->style() == KDecoration3::Style::Titled;
++}
++
++bool WindowTabManager::groupWindows(Window *source, Window *target)
++{
++    if (source == target || !canGroup(source) || !canGroup(target)) {
++        return false;
++    }
++    if (source->tabGroup() && source->tabGroup() == target->tabGroup()) {
++        return true;
++    }
++    const auto targets = target->tabGroup() ? target->tabGroup()->windows() : QList<Window *>{target};
++    QSizeF minimum = source->minSize();
++    QSizeF maximum = source->maxSize();
++    for (Window *tab : targets) {
++        minimum = minimum.expandedTo(tab->minSize());
++        maximum = maximum.boundedTo(tab->maxSize());
++    }
++    if (minimum.width() > maximum.width() || minimum.height() > maximum.height()) {
++        return false;
++    }
++    if (source->tabGroup()) {
++        source->tabGroup()->remove(source);
++    }
++    WindowTabGroup *group = target->tabGroup();
++    if (!group) {
++        group = new WindowTabGroup(this);
++        group->add(target);
++    }
++    group->add(source);
++    group->select(target);
++    return true;
++}
++
++void WindowTabManager::pickTarget(Window *source)
++{
++    if (!canGroup(source)) {
++        return;
++    }
++    const QPointer<Window> guardedSource(source);
++    input()->startInteractiveWindowSelection([this, guardedSource](Window *target) {
++        if (guardedSource) {
++            groupWindows(guardedSource, target);
++        }
++    }, QByteArrayLiteral("crosshair"));
++}
++
++void WindowTabManager::selectForActivation(Window *window)
++{
++    // Dialogs belonging to an inactive tab must reveal their parent tab too.
++    for (Window *parent = window; parent; parent = parent->transientFor()) {
++        if (parent->tabGroup()) {
++            parent->tabGroup()->select(parent, false);
++            return;
++        }
++    }
++}
++void WindowTabManager::groupActiveWindow() { pickTarget(m_workspace->activeWindow()); }
++void WindowTabManager::detachActiveWindow()
++{
++    if (Window *window = m_workspace->activeWindow(); window && window->tabGroup()) {
++        window->tabGroup()->remove(window);
++        m_workspace->activateWindow(window, true);
++    }
++}
++void WindowTabManager::nextTab()
++{
++    if (Window *window = m_workspace->activeWindow(); window && window->tabGroup()) {
++        window->tabGroup()->cycle(1);
++    }
++}
++void WindowTabManager::previousTab()
++{
++    if (Window *window = m_workspace->activeWindow(); window && window->tabGroup()) {
++        window->tabGroup()->cycle(-1);
++    }
++}
++}
++#include "moc_windowtabgroup.cpp"
+--- /dev/null
++++ b/src/decorations/tabbeddecoration.h
+@@ -0,0 +1,35 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#pragma once
++#include "kwin_export.h"
++#include <KDecoration3/Decoration>
++#include <QPointer>
++
++namespace KWin {
++class Window;
++class WindowTabGroup;
++namespace Decoration {
++class KWIN_EXPORT TabbedDecoration : public KDecoration3::Decoration
++{
++    Q_OBJECT
++public:
++    explicit TabbedDecoration(Window *window, const QVariantList &args);
++    bool init() override;
++    void paint(QPainter *painter, const QRectF &repaintArea) override;
++protected:
++    void mousePressEvent(QMouseEvent *event) override;
++    void mouseReleaseEvent(QMouseEvent *event) override;
++    void hoverMoveEvent(QHoverEvent *event) override;
++    void hoverLeaveEvent(QHoverEvent *event) override;
++    void wheelEvent(QWheelEvent *event) override;
++private:
++    void relayout();
++    int hitTest(const QPointF &point) const;
++    QRectF tabRect(int index) const;
++    qreal tabHeight() const;
++    Window *m_window;
++    QPointer<WindowTabGroup> m_group;
++    int m_pressed = -1;
++    int m_hovered = -1;
++};
++}
++}
+--- /dev/null
++++ b/src/decorations/tabbeddecoration.cpp
+@@ -0,0 +1,183 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#include "tabbeddecoration.h"
++#include "window.h"
++#include "windowtabgroup.h"
++
++#include <KDecoration3/DecoratedWindow>
++#include <KDecoration3/DecorationSettings>
++#include <QApplication>
++#include <QFontMetricsF>
++#include <QHoverEvent>
++#include <QMouseEvent>
++#include <QPainter>
++#include <QWheelEvent>
++
++namespace KWin::Decoration {
++namespace {
++constexpr int MinimizeButton = -2;
++constexpr int MaximizeButton = -3;
++constexpr int CloseButton = -4;
++constexpr qreal ButtonWidth = 30;
++constexpr qreal DragHandle = 20;
++}
++TabbedDecoration::TabbedDecoration(Window *window, const QVariantList &args)
++    : KDecoration3::Decoration(window, args), m_window(window), m_group(window->tabGroup())
++{
++}
++qreal TabbedDecoration::tabHeight() const
++{
++    return std::max<qreal>(30, QFontMetricsF(settings()->font()).height() + 12);
++}
++bool TabbedDecoration::init()
++{
++    setOpaque(true);
++    connect(window(), &KDecoration3::DecoratedWindow::widthChanged, this, &TabbedDecoration::relayout);
++    connect(window(), &KDecoration3::DecoratedWindow::maximizedChanged, this, &TabbedDecoration::relayout);
++    connect(window(), &KDecoration3::DecoratedWindow::activeChanged, this, [this] { update(); });
++    connect(window(), &KDecoration3::DecoratedWindow::paletteChanged, this, [this] { update(); });
++    connect(settings().get(), &KDecoration3::DecorationSettings::reconfigured, this, &TabbedDecoration::relayout);
++    if (m_group) {
++        connect(m_group, &WindowTabGroup::changed, this, [this] { update(); });
++    }
++    relayout();
++    return true;
++}
++void TabbedDecoration::relayout()
++{
++    const qreal edge = window()->isMaximized() ? 0 : 3;
++    setBorders(QMarginsF(edge, tabHeight(), edge, edge));
++    setResizeOnlyBorders(QMarginsF(5, 0, 5, 5));
++    setTitleBar(QRectF(0, 0, size().width(), tabHeight()));
++    update();
++}
++QRectF TabbedDecoration::tabRect(int index) const
++{
++    const int count = m_group ? m_group->windows().size() : 0;
++    const qreal usable = std::max<qreal>(1, size().width() - DragHandle - 3 * ButtonWidth);
++    const qreal width = usable / std::max(1, count);
++    return QRectF(DragHandle + index * width, 0, width, tabHeight());
++}
++int TabbedDecoration::hitTest(const QPointF &point) const
++{
++    if (point.y() < 0 || point.y() >= tabHeight() || point.x() < 0 || point.x() >= size().width()) {
++        return -1;
++    }
++    if (point.x() >= size().width() - ButtonWidth) return CloseButton;
++    if (point.x() >= size().width() - 2 * ButtonWidth) return MaximizeButton;
++    if (point.x() >= size().width() - 3 * ButtonWidth) return MinimizeButton;
++    if (m_group) {
++        const auto tabs = m_group->windows();
++        for (int i = 0; i < tabs.size(); ++i) {
++            if (tabRect(i).contains(point)) return i;
++        }
++    }
++    return -1;
++}
++void TabbedDecoration::paint(QPainter *painter, const QRectF &repaintArea)
++{
++    const auto palette = window()->palette();
++    const auto colorGroup = window()->isActive() ? QPalette::Active : QPalette::Inactive;
++    painter->save();
++    painter->setClipRect(repaintArea);
++    painter->setRenderHint(QPainter::Antialiasing);
++    painter->fillRect(rect(), palette.color(colorGroup, QPalette::Window));
++    painter->setFont(settings()->font());
++    painter->setPen(palette.color(colorGroup, QPalette::Mid));
++    painter->drawRect(rect().adjusted(.5, .5, -.5, -.5));
++    if (m_group) {
++        const auto tabs = m_group->windows();
++        for (int i = 0; i < tabs.size(); ++i) {
++            const QRectF tab = tabRect(i).adjusted(1, 2, -1, -2);
++            const bool selected = tabs[i] == m_group->current();
++            QColor background = palette.color(colorGroup, selected ? QPalette::Highlight : QPalette::Button);
++            if (m_hovered == i && !selected) background = background.lighter(112);
++            painter->fillRect(tab, background);
++            painter->setPen(palette.color(colorGroup, selected ? QPalette::HighlightedText : QPalette::ButtonText));
++            const QRectF label = tab.adjusted(7, 0, -7, 0);
++            const QString caption = painter->fontMetrics().elidedText(tabs[i]->caption(), Qt::ElideRight, qMax(0, int(label.width())));
++            painter->drawText(label, Qt::AlignVCenter | Qt::AlignLeft, caption);
++        }
++    }
++    for (int button = 0; button < 3; ++button) {
++        const int id = MinimizeButton - button;
++        const QRectF area(size().width() - (3 - button) * ButtonWidth, 0, ButtonWidth, tabHeight());
++        if (m_hovered == id) {
++            painter->fillRect(area, button == 2 ? QColor(190, 45, 45) : palette.color(colorGroup, QPalette::Midlight));
++        }
++        painter->setPen(QPen(button == 2 && m_hovered == id ? Qt::white : palette.color(colorGroup, QPalette::WindowText), 1.5));
++        const QPointF center = area.center();
++        if (button == 0) {
++            painter->drawLine(center + QPointF(-5, 3), center + QPointF(5, 3));
++        } else if (button == 1) {
++            painter->drawRect(QRectF(center - QPointF(4, 4), QSizeF(8, 8)));
++        } else {
++            painter->drawLine(center + QPointF(-4, -4), center + QPointF(4, 4));
++            painter->drawLine(center + QPointF(-4, 4), center + QPointF(4, -4));
++        }
++    }
++    painter->restore();
++}
++void TabbedDecoration::mousePressEvent(QMouseEvent *event)
++{
++    const int hit = hitTest(event->position());
++    if (event->button() == Qt::LeftButton && hit <= MinimizeButton) {
++        m_pressed = hit;
++        event->accept();
++        return;
++    }
++    if (m_group && hit >= 0 && (event->button() == Qt::LeftButton || event->button() == Qt::MiddleButton)) {
++        const auto tabs = m_group->windows();
++        const QPointer<Window> target = tabs.value(hit);
++        if (event->button() == Qt::MiddleButton || target != m_group->current()) {
++            const bool close = event->button() == Qt::MiddleButton;
++            QMetaObject::invokeMethod(this, [group = m_group, target, close] {
++                if (group && target) {
++                    if (close) target->closeWindow();
++                    else group->select(target);
++                }
++            }, Qt::QueuedConnection);
++            event->accept();
++            return;
++        }
++    }
++    // The selected tab and the left grip remain a normal draggable titlebar.
++    event->ignore();
++}
++void TabbedDecoration::mouseReleaseEvent(QMouseEvent *event)
++{
++    if (event->button() == Qt::LeftButton && m_pressed <= MinimizeButton) {
++        const int action = m_pressed;
++        m_pressed = -1;
++        if (hitTest(event->position()) == action) {
++            if (action == CloseButton) requestClose();
++            else if (action == MaximizeButton) requestToggleMaximization(Qt::LeftButton);
++            else requestMinimize();
++        }
++        event->accept();
++        return;
++    }
++    event->ignore();
++}
++void TabbedDecoration::hoverMoveEvent(QHoverEvent *event)
++{
++    m_hovered = hitTest(event->position());
++    update();
++    KDecoration3::Decoration::hoverMoveEvent(event);
++}
++void TabbedDecoration::hoverLeaveEvent(QHoverEvent *event)
++{
++    m_hovered = -1;
++    update();
++    KDecoration3::Decoration::hoverLeaveEvent(event);
++}
++void TabbedDecoration::wheelEvent(QWheelEvent *event)
++{
++    if (m_group && hitTest(event->position()) >= 0 && event->angleDelta().y()) {
++        m_group->cycle(event->angleDelta().y() < 0 ? 1 : -1);
++        event->accept();
++        return;
++    }
++    event->ignore();
++}
++}
++#include "moc_tabbeddecoration.cpp"
+--- a/autotests/integration/CMakeLists.txt
++++ b/autotests/integration/CMakeLists.txt
+@@ -232,3 +232,5 @@
+ add_subdirectory(effects)
+ add_subdirectory(fakes)
+ add_subdirectory(activation)
++
++integrationTest(NAME testWindowTabGroup SRCS window_tab_group_test.cpp LIBS KDecoration3::KDecoration)
+--- /dev/null
++++ b/autotests/integration/window_tab_group_test.cpp
+@@ -0,0 +1,336 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#include "kwin_wayland_test.h"
++#include "decorations/tabbeddecoration.h"
++#include "pointer_input.h"
++#include "virtualdesktops.h"
++#include "wayland_server.h"
++#include "window.h"
++#include "windowtabgroup.h"
++#include "workspace.h"
++#include <KWayland/Client/surface.h>
++#include <linux/input.h>
++#include <QProcess>
++#include <QTemporaryDir>
++#include <QPainter>
++#include <QFile>
++#if KWIN_BUILD_X11
++#include "x11window.h"
++#include <xcb/xcb.h>
++#endif
++
++namespace KWin {
++class WindowTabGroupTest : public QObject
++{
++    Q_OBJECT
++private:
++    struct Client {
++        std::unique_ptr<KWayland::Client::Surface> surface;
++        std::unique_ptr<Test::XdgToplevel> shell;
++        std::unique_ptr<Test::XdgToplevelDecorationV1> decoration;
++        QPointer<Window> window;
++        QSize size{500, 300};
++    };
++    std::unique_ptr<Client> createClient(Test::XdgToplevel *parent = nullptr)
++    {
++        auto client = std::make_unique<Client>();
++        Client *c = client.get();
++        c->surface = Test::createSurface();
++        c->shell = Test::createXdgToplevelSurface(c->surface.get(), Test::CreationSetup::CreateOnly);
++        if (parent) c->shell->set_parent(parent->object());
++        c->decoration = Test::createXdgToplevelDecorationV1(c->shell.get());
++        c->decoration->set_mode(Test::XdgToplevelDecorationV1::mode_server_side);
++        connect(c->shell.get(), &Test::XdgToplevel::configureRequested, c->surface.get(), [c](const QSize &size) {
++            if (!size.isEmpty()) c->size = size;
++        });
++        connect(c->shell->xdgSurface(), &Test::XdgSurface::configureRequested, c->surface.get(), [c](quint32 serial) {
++            c->shell->xdgSurface()->ack_configure(serial);
++            Test::render(c->surface.get(), c->size, Qt::blue);
++        });
++        QSignalSpy added(workspace(), &Workspace::windowAdded);
++        c->surface->commit(KWayland::Client::Surface::CommitFlag::None);
++        if (!added.wait()) return nullptr;
++        c->window = added.last().first().value<Window *>();
++        return client;
++    }
++    void group(Client *a, Client *b)
++    {
++        QVERIFY(workspace()->windowTabManager()->groupWindows(a->window, b->window));
++        QTRY_VERIFY(qobject_cast<Decoration::TabbedDecoration *>(a->window->decoration()));
++        QTRY_VERIFY(qobject_cast<Decoration::TabbedDecoration *>(b->window->decoration()));
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++    }
++private Q_SLOTS:
++    void initTestCase()
++    {
++        qRegisterMetaType<KWin::Window *>();
++        QVERIFY(waylandServer()->init(qAppName()));
++        auto config = KSharedConfig::openConfig(QString(), KConfig::SimpleConfig);
++        config->group(QStringLiteral("Desktops")).writeEntry("Number", 2);
++        config->group(QStringLiteral("org.kde.kdecoration3")).writeEntry("library", "org.kde.breeze");
++        kwinApp()->setConfig(config);
++        kwinApp()->start();
++        Test::setOutputConfig({Rect(0, 0, 1280, 1024), Rect(1280, 0, 1280, 1024)});
++        setenv("QT_QPA_PLATFORM", "wayland", true);
++    }
++    void init()
++    {
++        QVERIFY(Test::setupWaylandConnection(Test::AdditionalWaylandInterface::Seat | Test::AdditionalWaylandInterface::XdgDecorationV1));
++        QVERIFY(Test::waitForWaylandPointer());
++    }
++    void cleanup()
++    {
++        Test::destroyWaylandConnection();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++    }
++    void visibilityAndSwitching()
++    {
++        auto a = createClient(); auto b = createClient();
++        QVERIFY(a && b);
++        group(a.get(), b.get());
++        auto tabs = a->window->tabGroup();
++        QVERIFY(tabs);
++        QCOMPARE(tabs, b->window->tabGroup());
++        QVERIFY(a->window->isHidden()); QVERIFY(!b->window->isHidden());
++        QVERIFY(a->window->skipTaskbar()); QVERIFY(!b->window->skipTaskbar());
++        QVERIFY(a->window->skipSwitcher()); QVERIFY(!b->window->skipSwitcher());
++        const auto geometry = b->window->frameGeometry();
++        for (int i = 0; i < 20; ++i) {
++            tabs->cycle(1);
++            QCOMPARE(workspace()->activeWindow(), tabs->current());
++            QVERIFY(tabs->current()->isShown());
++        }
++        QTRY_COMPARE(a->window->frameGeometry(), geometry);
++        QTRY_COMPARE(b->window->frameGeometry(), geometry);
++        workspace()->activateWindow(a->window);
++        QCOMPARE(tabs->current(), a->window.data());
++        QVERIFY(!a->window->skipTaskbar()); QVERIFY(b->window->skipTaskbar());
++    }
++    void pointerSelectsTab()
++    {
++        auto a = createClient(); auto b = createClient(); QVERIFY(a && b);
++        group(a.get(), b.get());
++        auto tabs = b->window->tabGroup();
++        // target b is first; source a is second.
++        const auto frame = b->window->frameGeometry();
++        const qreal width = (frame.width() - 110) / 2;
++        const QPointF secondTab(frame.x() + 20 + width * 1.5, frame.y() + 15);
++        Test::pointerMotion(secondTab, 1);
++        Test::pointerButtonPressed(BTN_LEFT, 2);
++        Test::pointerButtonReleased(BTN_LEFT, 3);
++        QTRY_COMPARE(tabs->current(), a->window.data());
++        QCOMPARE(workspace()->activeWindow(), a->window.data());
++    }
++    void geometryAndState()
++    {
++        auto a = createClient(); auto b = createClient(); QVERIFY(a && b);
++        group(a.get(), b.get());
++        b->window->moveResize(RectF(100, 140, 700, 450));
++        QTRY_COMPARE(b->window->frameGeometry(), RectF(100, 140, 700, 450));
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++        b->window->setMinimized(true);
++        QVERIFY(a->window->isMinimized()); QVERIFY(b->window->isMinimized());
++        workspace()->activateWindow(a->window);
++        QVERIFY(!a->window->isMinimized()); QVERIFY(!b->window->isMinimized());
++        const auto restoredGeometry = a->window->frameGeometry();
++        a->window->maximize(MaximizeFull);
++        QTRY_COMPARE(a->window->maximizeMode(), MaximizeFull);
++        QTRY_COMPARE(b->window->maximizeMode(), MaximizeFull);
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++        a->window->tabGroup()->select(b->window);
++        b->window->maximize(MaximizeRestore);
++        QTRY_COMPARE(a->window->maximizeMode(), MaximizeRestore);
++        QTRY_COMPARE(b->window->maximizeMode(), MaximizeRestore);
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++        QTRY_COMPARE(b->window->frameGeometry(), restoredGeometry);
++        b->window->setQuickTileModeAtCurrentPosition(QuickTileFlag::Left);
++        QTRY_COMPARE(a->window->quickTileMode(), QuickTileMode(QuickTileFlag::Left));
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++        b->window->tabGroup()->select(a->window);
++        a->window->setQuickTileModeAtCurrentPosition(QuickTileFlag::None);
++        QTRY_COMPARE(b->window->quickTileMode(), QuickTileMode(QuickTileFlag::None));
++        QTRY_COMPARE(a->window->frameGeometry(), restoredGeometry);
++        a->window->tabGroup()->select(b->window);
++        b->window->moveResize(RectF(1400, 120, 700, 450));
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++        QTRY_COMPARE(a->window->output(), b->window->output());
++        b->window->tabGroup()->cycle(1);
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++        a->window->tabGroup()->select(b->window);
++        b->window->setKeepAbove(true);
++        QVERIFY(a->window->keepAbove());
++        b->window->setDesktops({VirtualDesktopManager::self()->desktops().last()});
++        QCOMPARE(a->window->desktops(), b->window->desktops());
++        b->window->setDesktops({VirtualDesktopManager::self()->desktops().first()});
++        b->window->setFullScreen(true);
++        QTRY_VERIFY(a->window->isFullScreen());
++        QTRY_VERIFY(b->window->isFullScreen());
++        b->window->tabGroup()->select(a->window);
++        a->window->setFullScreen(false);
++        QTRY_VERIFY(!b->window->isFullScreen());
++        QTRY_VERIFY(qobject_cast<Decoration::TabbedDecoration *>(a->window->decoration()));
++        QTRY_COMPARE(a->window->frameGeometry(), b->window->frameGeometry());
++    }
++    void detachRestoresWindows()
++    {
++        auto a = createClient(); auto b = createClient(); QVERIFY(a && b);
++        a->window->setSkipPager(true);
++        group(a.get(), b.get());
++        b->window->tabGroup()->remove(b->window);
++        QVERIFY(!a->window->tabGroup()); QVERIFY(!b->window->tabGroup());
++        QVERIFY(!a->window->isHidden()); QVERIFY(!b->window->isHidden());
++        QVERIFY(!a->window->skipTaskbar()); QVERIFY(!b->window->skipTaskbar());
++        QVERIFY(a->window->skipPager()); QVERIFY(!b->window->skipPager());
++        QTRY_VERIFY(a->window->decoration() && !qobject_cast<Decoration::TabbedDecoration *>(a->window->decoration()));
++        QTRY_VERIFY(b->window->decoration() && !qobject_cast<Decoration::TabbedDecoration *>(b->window->decoration()));
++    }
++    void closeCurrentAndBackground()
++    {
++        auto a = createClient(); auto b = createClient(); auto c = createClient(); QVERIFY(a && b && c);
++        group(a.get(), b.get()); group(c.get(), b.get());
++        QCOMPARE(b->window->tabGroup()->windows().size(), 3);
++        a.reset();
++        QTRY_COMPARE(b->window->tabGroup()->windows().size(), 2);
++        b.reset();
++        QTRY_VERIFY(!c->window->tabGroup());
++        QTRY_VERIFY(c->window->isShown());
++        QTRY_COMPARE(workspace()->activeWindow(), c->window.data());
++        QVERIFY(!c->window->skipTaskbar());
++    }
++#if KWIN_BUILD_X11
++    void mixedWaylandAndXwayland()
++    {
++        auto native = createClient(); QVERIFY(native);
++        auto connection = Test::createX11Connection();
++        QVERIFY(!xcb_connection_has_error(connection.get()));
++        const xcb_window_t id = xcb_generate_id(connection.get());
++        const auto screen = xcb_setup_roots_iterator(xcb_get_setup(connection.get())).data;
++        xcb_create_window(connection.get(), XCB_COPY_FROM_PARENT, id, screen->root,
++                          40, 50, 600, 400, 0, XCB_WINDOW_CLASS_INPUT_OUTPUT,
++                          XCB_COPY_FROM_PARENT, 0, nullptr);
++        QSignalSpy added(workspace(), &Workspace::windowAdded);
++        xcb_map_window(connection.get(), id);
++        xcb_flush(connection.get());
++        QVERIFY(added.wait());
++        QPointer<Window> legacy = added.last().first().value<Window *>();
++        QVERIFY(legacy);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(legacy, native->window));
++        QTRY_VERIFY(qobject_cast<Decoration::TabbedDecoration *>(legacy->decoration()));
++        QTRY_COMPARE(legacy->frameGeometry(), native->window->frameGeometry());
++        native->window->tabGroup()->select(legacy);
++        QTRY_COMPARE(workspace()->activeWindow(), legacy.data());
++        QVERIFY(legacy->isShown()); QVERIFY(native->window->isHidden());
++        legacy->moveResize(RectF(120, 130, 800, 500));
++        QTRY_COMPARE(legacy->frameGeometry(), native->window->frameGeometry());
++        legacy->tabGroup()->select(native->window);
++        QVERIFY(legacy->isHidden()); QVERIFY(native->window->isShown());
++        xcb_destroy_window(connection.get(), id);
++        xcb_flush(connection.get());
++        QTRY_VERIFY(!native->window->tabGroup());
++        QVERIFY(!native->window->skipTaskbar());
++    }
++#endif
++    void minimumSizeAndUnsupportedWindows()
++    {
++        auto a = createClient(); auto b = createClient(); QVERIFY(a && b);
++        a->shell->set_min_size(620, 340);
++        a->surface->commit(KWayland::Client::Surface::CommitFlag::None);
++        QTRY_COMPARE(a->window->minSize(), QSizeF(620, 340));
++        group(a.get(), b.get());
++        QVERIFY(b->window->clientSize().width() >= 620);
++        QVERIFY(b->window->clientSize().height() >= 340);
++        const auto constrained = b->window->constrainFrameSize(QSizeF(50, 50));
++        QVERIFY(constrained.width() >= 620);
++        QVERIFY(constrained.height() >= 340);
++        QVERIFY(!workspace()->windowTabManager()->groupWindows(nullptr, b->window));
++        QVERIFY(!workspace()->windowTabManager()->groupWindows(b->window, b->window));
++    }
++    void realKateAndKonsole()
++    {
++        if (!qEnvironmentVariableIsSet("KWIN_TABS_REAL_APPS")) {
++            QSKIP("Set KWIN_TABS_REAL_APPS=1 for the installed Kate/Konsole smoke test");
++        }
++        QTemporaryDir data;
++        QVERIFY(data.isValid());
++        QFile document(data.filePath("window-tabs.txt"));
++        QVERIFY(document.open(QIODevice::WriteOnly));
++        document.write("Kate and Konsole: native KWin window tab test.\n");
++        document.close();
++        auto env = QProcessEnvironment::systemEnvironment();
++        env.insert("WAYLAND_DISPLAY", waylandServer()->socketName());
++        env.insert("QT_QPA_PLATFORM", "wayland");
++        env.insert("XDG_CONFIG_HOME", data.filePath("config"));
++        env.insert("XDG_DATA_HOME", data.filePath("data"));
++        env.insert("XDG_CACHE_HOME", data.filePath("cache"));
++        env.remove("SESSION_MANAGER");
++        QProcess kate, konsole;
++        kate.setProcessEnvironment(env); konsole.setProcessEnvironment(env);
++        kate.start("/usr/bin/kate", {"--new", "--startanon", document.fileName()});
++        konsole.start("/usr/bin/konsole", {"--separate", "--builtin-profile", "--workdir", data.path(), "-e", "/bin/sleep", "120"});
++        QVERIFY(kate.waitForStarted()); QVERIFY(konsole.waitForStarted());
++        auto findWindow = [](qint64 pid) -> Window * {
++            for (Window *window : workspace()->windows()) {
++                if (window->pid() == pid && window->isNormalWindow()) return window;
++            }
++            return nullptr;
++        };
++        QTRY_VERIFY_WITH_TIMEOUT(findWindow(kate.processId()), 15000);
++        QTRY_VERIFY_WITH_TIMEOUT(findWindow(konsole.processId()), 15000);
++        QPointer<Window> editor = findWindow(kate.processId());
++        QPointer<Window> terminal = findWindow(konsole.processId());
++        QVERIFY(workspace()->windowTabManager()->groupWindows(editor, terminal));
++        QTRY_VERIFY(qobject_cast<Decoration::TabbedDecoration *>(editor->decoration()));
++        QTRY_VERIFY(qobject_cast<Decoration::TabbedDecoration *>(terminal->decoration()));
++        QTRY_COMPARE(editor->frameGeometry(), terminal->frameGeometry());
++        terminal->moveResize(RectF(80, 90, 900, 650));
++        QTRY_COMPARE(editor->frameGeometry(), terminal->frameGeometry());
++        for (int i = 0; i < 10; ++i) {
++            editor->tabGroup()->cycle(1);
++            QTRY_COMPARE(workspace()->activeWindow(), editor->tabGroup()->current());
++        }
++        terminal->setMinimized(true);
++        QTRY_VERIFY(editor->isMinimized());
++        workspace()->activateWindow(editor);
++        QTRY_VERIFY(!terminal->isMinimized());
++        editor->maximize(MaximizeFull);
++        QTRY_COMPARE(terminal->maximizeMode(), MaximizeFull);
++        editor->maximize(MaximizeRestore);
++        QTRY_COMPARE(terminal->maximizeMode(), MaximizeRestore);
++        QTRY_COMPARE(editor->frameGeometry(), terminal->frameGeometry());
++        if (qEnvironmentVariableIsSet("KWIN_TABS_PREVIEW")) {
++            QImage preview(QSize(qCeil(editor->width()), qCeil(editor->frameMargins().top())), QImage::Format_ARGB32_Premultiplied);
++            preview.fill(Qt::transparent);
++            QPainter painter(&preview);
++            editor->decoration()->paint(&painter, QRectF(QPointF(), preview.size()));
++            painter.end();
++            QVERIFY(preview.save(qEnvironmentVariable("KWIN_TABS_PREVIEW")));
++        }
++        editor->tabGroup()->remove(editor);
++        QVERIFY(!editor->tabGroup()); QVERIFY(!terminal->tabGroup());
++        QVERIFY(editor->isShown()); QVERIFY(terminal->isShown());
++        QVERIFY(workspace()->windowTabManager()->groupWindows(editor, terminal));
++        kate.terminate();
++        QTRY_COMPARE(kate.state(), QProcess::NotRunning);
++        QTRY_VERIFY(!terminal->tabGroup());
++        QVERIFY(terminal->isShown());
++        konsole.terminate();
++        QTRY_COMPARE(konsole.state(), QProcess::NotRunning);
++    }
++    void modalRevealsParent()
++    {
++        auto a = createClient(); auto b = createClient(); QVERIFY(a && b);
++        group(a.get(), b.get());
++        auto dialog = createClient(a->shell.get()); QVERIFY(dialog);
++        workspace()->activateWindow(dialog->window);
++        QCOMPARE(a->window->tabGroup()->current(), a->window.data());
++        QVERIFY(a->window->isShown());
++        QVERIFY(!WindowTabManager::canGroup(dialog->window));
++        a->window->tabGroup()->select(b->window);
++        QVERIFY(dialog->window->isHidden());
++        workspace()->activateWindow(dialog->window);
++        QVERIFY(!dialog->window->isHidden());
++        QCOMPARE(a->window->tabGroup()->current(), a->window.data());
++    }
++};
++}
++WAYLANDTEST_MAIN(KWin::WindowTabGroupTest)
++#include "window_tab_group_test.moc"

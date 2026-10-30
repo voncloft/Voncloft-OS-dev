@@ -438,3 +438,9 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=21.15.2\| python/python-v
 bash /usr/libexec/update-repo/changelog python/python-virtualenv/spkgbuild Changed\ from\ version\ 21.15.1\ to\ version\ 21.15.2
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=17.4\| python/python-websockets/spkgbuild # update-repo-version 17.3 17.4
 bash /usr/libexec/update-repo/changelog python/python-websockets/spkgbuild Changed\ from\ version\ 17.3\ to\ version\ 17.4
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=3.15.3\| libs/libaom/spkgbuild # update-repo-version 3.15.2 3.15.3
+bash /usr/libexec/update-repo/changelog libs/libaom/spkgbuild Changed\ from\ version\ 3.15.2\ to\ version\ 3.15.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.116.0\| python/python-aws-sam-translator/spkgbuild # update-repo-version 1.115.0 1.116.0
+bash /usr/libexec/update-repo/changelog python/python-aws-sam-translator/spkgbuild Changed\ from\ version\ 1.115.0\ to\ version\ 1.116.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.16.0\| python/python-aws-xray-sdk/spkgbuild # update-repo-version 2.15.0 2.16.0
+bash /usr/libexec/update-repo/changelog python/python-aws-xray-sdk/spkgbuild Changed\ from\ version\ 2.15.0\ to\ version\ 2.16.0

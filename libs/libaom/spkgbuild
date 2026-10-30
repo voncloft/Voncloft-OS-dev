@@ -2,7 +2,7 @@
 # depends : nasm
 
 name=libaom
-version=3.15.2
+version=3.15.3
 release=1
 
 source="https://storage.googleapis.com/aom-releases/${name}-$version.tar.gz"

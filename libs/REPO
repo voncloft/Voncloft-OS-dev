@@ -1198,8 +1198,8 @@ f:df34337c187de6b3566e6c6b6869b1c2:cairo/.pkgfiles
 f:2fb61ce301118091a5a299a740f24cc1:cairo/CHANGELOG
 f:3c23d61d067ed0a69de28ea15a73cb01:cairo/spkgbuild
 f:2bb65c4686ad142292d28af65dc763b9:libaom/.pkgfiles
-f:c36ad14bae1f01e1840bafe1bc4f30e6:libaom/CHANGELOG
-f:d21decbb6141a755ae03acce09f2e489:libaom/spkgbuild
+f:f08abd53f0318a1fca159ddfc97687b9:libaom/CHANGELOG
+f:601f99a97ebb4cb392184da152a096eb:libaom/spkgbuild
 f:69a6074e26ecb09b3677026db35c9c09:libxml2/.pkgfiles
 f:9ff32c22b24e00202f01908c60f03828:libxml2/CHANGELOG
 f:c63070e525fc66067b30384386f3d8fb:libxml2/spkgbuild
