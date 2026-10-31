@@ -1,0 +1,22 @@
+# description : Eight-card golf game for KDE with 1–4 players, computer opponents, and online multiplayer
+# depends : cmake ninja qt6
+
+name=turnover-golf
+version=1.0.8.git20261031230811.gd47525c7910e4c5bea5a1405f23c3df8980b946f
+release=1
+_commit=${version##*.g}
+source="$name-$_commit.tar.gz::https://github.com/voncloft/Turnover-golf/archive/$_commit.tar.gz"
+
+build() {
+    : "${PKG:?Package staging directory is required}"
+    cd "Turnover-golf-$_commit"
+    cmake -S . -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_BINDIR=bin \
+        -DBUILD_TESTING=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+    install -Dm644 LICENSE "$PKG/usr/share/licenses/$name/LICENSE"
+    install -Dm644 README.md "$PKG/usr/share/doc/$name/README.md"
+}

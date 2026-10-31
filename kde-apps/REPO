@@ -236,6 +236,7 @@ d:ktp-send-file
 d:kolf
 d:alligator
 d:kleopatra
+d:turnover-golf
 d:qrca
 d:kmahjongg
 d:artikulate
@@ -842,6 +843,11 @@ f:1976605ae24bfa6ea0e33d84f24c8bbc:kolf/spkgbuild
 f:d29fcd08cd7ac4f7c2a39c85bea288df:alligator/spkgbuild
 f:e6a94ab6260f50da9710af586d3b0335:kleopatra/CHANGELOG
 f:633b9c9f8368f2250f2f805aedf49208:kleopatra/spkgbuild
+f:f7086eb6e959d78b31c74b4dd2520a68:turnover-golf/.pkgfiles
+f:796d5e9a19dd15155e42c1a993d588cd:turnover-golf/CHANGELOG
+f:2d2636b331225cda41eafc74b3600d99:turnover-golf/spkgbuild
+f:3163cd6c0c03bfc51137b0ed94bda97d:turnover-golf/override
+f:7d4ef9693e8db412de330a44ff8a5390:turnover-golf/.checksums
 f:eb4e2b9ea1eeb1566350321d6160b189:qrca/spkgbuild
 f:a7d21c507fdaa3876126ed1e0c5577bd:kmahjongg/.pkgfiles
 f:c87cf6adcc97f6122244950188cf7c5b:kmahjongg/CHANGELOG

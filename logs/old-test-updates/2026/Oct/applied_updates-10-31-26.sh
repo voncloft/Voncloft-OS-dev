@@ -18,3 +18,5 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=7.0.0\| python/python-wat
 bash /usr/libexec/update-repo/changelog python/python-watchdog/spkgbuild Changed\ from\ version\ 6.0.0\ to\ version\ 7.0.0
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.152.0\| python/python-zeroconf/spkgbuild # update-repo-version 0.151.5 0.152.0
 bash /usr/libexec/update-repo/changelog python/python-zeroconf/spkgbuild Changed\ from\ version\ 0.151.5\ to\ version\ 0.152.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.8.git20261031230811.gd47525c7910e4c5bea5a1405f23c3df8980b946f\| kde-apps/turnover-golf/spkgbuild # update-repo-version 1.0.7.git20261031225421.gf644bfa1d5b884129c3e385c3ebdc7ad63dd5aad 1.0.8.git20261031230811.gd47525c7910e4c5bea5a1405f23c3df8980b946f
+bash /usr/libexec/update-repo/changelog kde-apps/turnover-golf/spkgbuild Changed\ from\ version\ 1.0.7.git20261031225421.gf644bfa1d5b884129c3e385c3ebdc7ad63dd5aad\ to\ version\ 1.0.8.git20261031230811.gd47525c7910e4c5bea5a1405f23c3df8980b946f
