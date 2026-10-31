@@ -357,3 +357,14 @@ Release=1
 
 Synopsis:
 Track stable even-minor GStreamer releases instead of development snapshots.
+
+----------------------------------------------------------------
+
+Date: 2026-10-30
+
+Version=1.28.8
+Release=2
+
+Synopsis:
+Use explicit Meson setup and system FFmpeg, with tests/docs disabled.
+Declare ninja and pkgconf; remove the unused assembler dependency.

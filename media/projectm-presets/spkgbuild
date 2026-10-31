@@ -1,0 +1,23 @@
+# description : MilkDrop visualization presets for projectM and Clementine
+# depends :
+
+name=projectm-presets
+version=20251009033236.g0180df21f5e0bd39b9060cc5de420ed2f1f9e509
+release=1
+# Presets are text data, so skip scanning thousands of files for ELF stripping.
+NO_STRIP=yes
+_commit=${version##*.g}
+_upstream=presets-cream-of-the-crop
+source="$name-$version.tar.gz::https://github.com/projectM-visualizer/$_upstream/archive/$_commit.tar.gz"
+
+build() {
+    cd "$SRC/$_upstream-$_commit"
+
+    # Clementine searches this shared projectM path, including subdirectories.
+    install -d "$PKG/usr/share/projectM/presets"
+    cp -a -- */ "$PKG/usr/share/projectM/presets/"
+    find "$PKG/usr/share/projectM" -type d -exec chmod 755 {} +
+    find "$PKG/usr/share/projectM" -type f -exec chmod 644 {} +
+    install -Dm644 LICENSE.md "$PKG/usr/share/licenses/$name/LICENSE.md"
+    install -Dm644 README.md "$PKG/usr/share/doc/$name/README.md"
+}

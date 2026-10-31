@@ -1,27 +1,33 @@
 # description : A modern music player and library organizer
-# depends : kde5 cmake alsa-lib chromaprint gst-plugins-base gst-plugins-bad gst-plugins-good gst-plugins-ugly gst-libav hicolor-icon-theme libcdio liblastfm-qt6 libmtp libmygpo-qt6 pulseaudio projectm protobuf taglib qt6-x11extras
+# depends : cmake pkgconf qt6 boost gettext alsa-lib chromaprint glib gstreamer gst-plugins-base gst-plugins-bad gst-plugins-good gst-plugins-ugly gst-libav hicolor-icon-theme libcdio libmtp libglvnd libxml2 pulseaudio protobuf sqlite taglib zlib projectm-presets
 
 name=clementine
 version=1.4.3
-release=1
+release=3
 
-_misc=rc1-494-gdfb953a78
 _name=Clementine
-source="https://github.com/clementine-player/${_name}/archive/$version/$name-$version.tar.gz"
+source="https://github.com/clementine-player/${_name}/releases/download/$version/$name-$version.tar.xz
+        clementine-bundled-mygpo.patch"
 options="!checksum"
 
 build() {
-	cd *
-	sed -e 's|CRYPTOPP cryptopp|CRYPTOPP libcryptopp|' -i $name-${version//+/-}/CMakeLists.txt
+    cd "$name-$version"
+    # The bundled gpodder client is ported to Qt 6 despite its legacy folder name.
+    patch --batch --forward --fuzz=0 -Np1 -i "$SRC/clementine-bundled-mygpo.patch"
 
-	mkdir build
-	cd build
-	cmake .. \
-	-DCMAKE_INSTALL_PREFIX=/usr \
-    	-DUSE_SYSTEM_PROJECTM=ON \
-    	-DUSE_SYSTEM_TAGLIB=ON
+    # Release tarballs have no .git directory; upstream records this in its RPM spec.
+    _git_revision=$(sed -n 's/.*-DFORCE_GIT_REVISION=\([^[:space:]]*\).*/\1/p' dist/clementine.spec)
+    case "$_git_revision" in
+        "$version"-0-g*) ;;
+        *) printf '%s\n' "Missing release revision for Clementine $version" >&2; return 1 ;;
+    esac
 
-	make 
-	make DESTDIR=$PKG install
+    cmake -S . -B build -G "Unix Makefiles" \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DFORCE_GIT_REVISION="$_git_revision" \
+        -DUSE_SYSTEM_PROJECTM=OFF \
+        -DUSE_SYSTEM_TAGLIB=ON
+    make -C build
+    make -C build DESTDIR="$PKG" install
 }
-

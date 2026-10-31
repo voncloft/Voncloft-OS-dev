@@ -1,0 +1,9 @@
+Date: 2026-10-30
+
+Version=20251009033236.g0180df21f5e0bd39b9060cc5de420ed2f1f9e509
+Release=1
+
+Synopsis:
+Package the upstream Cream of the Crop collection of 9,795 MilkDrop presets.
+Install under /usr/share/projectM/presets, a preset search path used by Clementine.
+Track GitHub commits through a version-only override.

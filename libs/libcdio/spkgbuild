@@ -1,15 +1,16 @@
 # description	: library for CD-ROM and CD image access
-# depends	: ncurses
+# depends	: ncurses libiconv
 
 name=libcdio
 version=2.1.0
-release=1
-source="ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2"
+release=2
+source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2"
 
 build() {
-	cd $name-$version
+    cd "$SRC/$name-$version"
 
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    # Avoid exporting libtool-only -R flags in libcdio.pc.
+    ./configure --prefix=/usr --disable-static --disable-rpath
+    make
+    make DESTDIR="$PKG" install
 }

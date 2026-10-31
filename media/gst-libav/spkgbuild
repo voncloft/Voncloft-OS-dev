@@ -1,20 +1,21 @@
-# description	: GStreamer plugins for Libav (a fork of FFmpeg)
-# depends	: gst-plugins-base ffmpeg yasm meson
+# description	: GStreamer audio and video codecs using FFmpeg
+# depends	: gst-plugins-base ffmpeg meson ninja pkgconf
 
 name=gst-libav
 version=1.28.8
-release=1
-source="https://gstreamer.freedesktop.org/src/${name}/$name-$version.tar.xz"
+release=2
+source="https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
-
-	mkdir build
-        cd build
-
-        meson --prefix=/usr \
-	      -Ddoc=disabled \
-	      -Dpackage-name="GStreamer FFmpeg Plugins $version (Venom)"
-        ninja
-        DESTDIR=$PKG ninja install
+    cd "$SRC/$name-$version"
+    meson setup build \
+        --prefix=/usr \
+        --libdir=lib \
+        --buildtype=release \
+        --wrap-mode=nofallback \
+        -Dtests=disabled \
+        -Ddoc=disabled \
+        -Dpackage-name="GStreamer FFmpeg Plugins $version (Voncloft Linux)"
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

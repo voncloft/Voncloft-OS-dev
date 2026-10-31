@@ -1,0 +1,12 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -73,7 +73,8 @@
+ pkg_check_modules(GSTREAMER_PBUTILS REQUIRED gstreamer-pbutils-1.0)
+ pkg_check_modules(LIBGPOD libgpod-1.0>=0.7.92)
+ pkg_check_modules(LIBMTP libmtp>=1.0)
+-pkg_check_modules(LIBMYGPO_QT5 libmygpo-qt5>=1.0.9)
++# The vendored client is ported to Qt 6; do not link a system Qt 5 client.
++set(LIBMYGPO_QT5_FOUND FALSE)
+ pkg_check_modules(LIBPULSE libpulse)
+ pkg_check_modules(LIBXML libxml-2.0)
+ pkg_check_modules(TAGLIB taglib)

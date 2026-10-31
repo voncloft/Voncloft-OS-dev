@@ -1,16 +1,26 @@
-# description : a visualization for VLC and other media players
-# depends : ftgl glew glm libglvnd pulseaudio sdl2 qt6
+# description : Music visualization engine and preset playlist library
+# depends : cmake pkgconf glm libglvnd
 
-pkgbase=projectm
 name=projectm
 version=4.1.8
-release=1
+release=2
 
-source="https://github.com/projectM-visualizer/$pkgbase/releases/download/v$version/projectM-$version.tar.gz"
+source="https://github.com/projectM-visualizer/$name/releases/download/v$version/libprojectM-$version.tar.gz"
+options="!checksum"
+
 build() {
-	cd projectM-$version
-	./configure --prefix=/usr --enable-gles --enable-sdl --enable-threading --enable-qt
-	sed -i -e 's/ -shared / -Wl,-O1,--as-needed\0/g' libtool 
-	make
-	make DESTDIR=$PKG install
+    cd "libprojectM-$version"
+    cmake -S . -B build -G "Unix Makefiles" \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DBUILD_SHARED_LIBS=ON \
+        -DENABLE_SYSTEM_GLM=ON \
+        -DENABLE_SYSTEM_PROJECTM_EVAL=OFF \
+        -DENABLE_PLAYLIST=ON \
+        -DENABLE_DEBUG_POSTFIX=OFF \
+        -DBUILD_TESTING=OFF \
+        -DBUILD_DOCS=OFF
+    make -C build
+    make -C build DESTDIR="$PKG" install
 }

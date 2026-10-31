@@ -1,0 +1,11 @@
+Date: 2026-10-30
+
+Version=2.4.0
+Release=3
+
+Synopsis:
+Backport upstream d546aefd73dcbb0d0d1e0f3c916770d7f9f98169 to fix
+FT_Outline tag pointer types with current FreeType headers.
+Verified Scratch package build and font-outline extraction without installation.
+
+----------------------------------------------------------------

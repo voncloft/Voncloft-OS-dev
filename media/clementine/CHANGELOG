@@ -26,3 +26,26 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.4.1 to version 1.4.3
+
+----------------------------------------------------------------
+
+Date: 2026-10-30
+
+Version=1.4.3
+Release=2
+
+Synopsis:
+Replace obsolete KDE5 and nonexistent Qt dependency names with the Qt6 build requirements.
+Use the Qt6-ported bundled gpodder library and bundled projectM 4.2+ visualizer.
+Fix the source directory, remove the obsolete Crypto++ edit, and read the release revision from the tarball RPM spec.
+
+----------------------------------------------------------------
+
+Date: 2026-10-30
+
+Version=1.4.3
+Release=3
+
+Synopsis:
+Depend on projectm-presets so the bundled visualization engine has its runtime data.
+The projectM engine alone does not install presets on Linux.

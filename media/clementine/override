@@ -1,0 +1,33 @@
+# Read the latest stable release, not GitHub's nightly tags page.
+source="https://api.github.com/repos/clementine-player/Clementine/releases/latest"
+# update-repo sources this again immediately before fetching index.html.
+url=$source
+
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - <<'PYRELEASE'
+import json
+import pathlib
+import re
+import sys
+
+try:
+    release = json.loads(pathlib.Path("index.html").read_text())
+    version = release["tag_name"]
+    if release.get("draft") or release.get("prerelease"):
+        raise ValueError("expected a stable release")
+    if not isinstance(version, str) or not re.fullmatch(r"[0-9]+(?:\.[0-9]+)+", version):
+        raise ValueError("invalid release version")
+    archive = f"clementine-{version}.tar.xz"
+    if not any(asset.get("name") == archive for asset in release["assets"]):
+        raise ValueError("release source archive is missing")
+    print(version)
+except (OSError, ValueError, KeyError, TypeError, AttributeError) as error:
+    print(f"ERROR: Clementine release lookup failed: {error}", file=sys.stderr)
+    sys.exit(1)
+PYRELEASE
+    ) || return 1
+    # Only report the version; update-repo owns any version= edit.
+    [ -n "$uversion" ]
+}

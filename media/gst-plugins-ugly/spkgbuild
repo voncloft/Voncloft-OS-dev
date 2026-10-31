@@ -1,22 +1,30 @@
-# description	: A set of plug-ins considered by the GStreamer developers to have good quality and correct functionality, but distributing them might pose problems
-# depends	: gst-plugins-base lame liba52 libdvdread x264 meson
+# description	: GStreamer plug-ins for DVD, CD audio, AC-3 and H.264 support
+# depends	: gst-plugins-base liba52 libcdio libdvdread x264 meson ninja pkgconf
 
 name=gst-plugins-ugly
 version=1.28.8
-release=1
+release=2
 source="https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
+    cd "$SRC/$name-$version"
 
-	mkdir build
-        cd build
+    # Older libcdio packages export libtool's -R flag, which cc rejects.
+    # Fix a private copy so this also builds before libcdio is upgraded.
+    mkdir -p "$SRC/pkgconfig"
+    sed -E 's/(^|[[:space:]])-R[[:space:]]*([^[:space:]]+)/\1-Wl,-rpath,\2/g' \
+        "$(pkg-config --variable=pcfiledir libcdio)/libcdio.pc" \
+        > "$SRC/pkgconfig/libcdio.pc"
+    export PKG_CONFIG_PATH="$SRC/pkgconfig${PKG_CONFIG_PATH:+:$PKG_CONFIG_PATH}"
 
-        meson \
-		--prefix=/usr \
-		--buildtype=release \
-		-Dgpl=enabled\
-		-Dpackage-name="GStreamer Ugly Plugins $version (Voncloft Linux)"
-	ninja
-	DESTDIR=$PKG ninja install
+    meson setup build \
+        --prefix=/usr \
+        --libdir=lib \
+        --buildtype=release \
+        -Dtests=disabled \
+        -Ddoc=disabled \
+        -Dgpl=enabled \
+        -Dpackage-name="GStreamer Ugly Plugins $version (Voncloft Linux)"
+    ninja -C build
+    DESTDIR="$PKG" ninja -C build install
 }

@@ -971,7 +971,8 @@ f:4479dac3b9b11212a13dcf2fae68437e:libxdg-basedir/CHANGELOG
 f:2a3670ec13357c4e3c8d55f07d1ec699:libxdg-basedir/xdgGetRelativeHome-overflow.patch
 f:f98016b5a78ebdc4eddd8d322f4d1622:libxdg-basedir/spkgbuild
 f:879baaca39ab337a15cc7fb9e9d12ecf:libcdio/.pkgfiles
-f:d125ac121aff96741e5c7f96019415ff:libcdio/spkgbuild
+f:5ac9519f5067e759a582be9f43c528a6:libcdio/CHANGELOG
+f:c1ba552e5935143f98c696919fca6bf8:libcdio/spkgbuild
 f:a705c8194b1a854511b43f0105dbfc9c:libomemo-c/spkgbuild
 f:2a8ebf88bbe8a019e2f30c0c14c39fc1:libxau/.pkgfiles
 f:d544fd919d5651e20de41773a58d0908:libxau/spkgbuild

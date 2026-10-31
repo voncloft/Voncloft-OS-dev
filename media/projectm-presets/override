@@ -1,0 +1,31 @@
+# This data set has no tagged releases. Only report the upstream commit version.
+# update-repo owns any version= edit; the source URL derives its commit from it.
+source="https://api.github.com/repos/projectM-visualizer/presets-cream-of-the-crop/commits?per_page=1"
+url=$source
+
+get_generic()
+{
+    unset uversion
+    uversion=$(python3 - <<'PYVERSION'
+import datetime
+import json
+import pathlib
+import re
+import sys
+
+try:
+    commit = json.loads(pathlib.Path("index.html").read_text())[0]
+    sha = commit["sha"]
+    if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-f]{40}", sha):
+        raise ValueError("invalid GitHub commit ID")
+    stamp = datetime.datetime.strptime(
+        commit["commit"]["committer"]["date"], "%Y-%m-%dT%H:%M:%SZ"
+    ).strftime("%Y%m%d%H%M%S")
+    print(f"{stamp}.g{sha}")
+except (OSError, ValueError, KeyError, IndexError, TypeError) as error:
+    print(f"ERROR: projectM preset version lookup failed: {error}", file=sys.stderr)
+    sys.exit(1)
+PYVERSION
+    ) || return 1
+    [ -n "$uversion" ]
+}

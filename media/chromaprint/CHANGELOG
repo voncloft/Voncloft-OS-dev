@@ -17,3 +17,14 @@ Release=3
 
 Synopsis:
 Upgraded from version 1.5.1 to version 1.6.2
+
+----------------------------------------------------------------
+
+Date: 2026-10-30
+
+Version=1.6.2
+Release=4
+
+Synopsis:
+Remove the obsolete FindGTest.cmake deletion and use the supported CMake options.
+Declare FFmpeg and the build tools; use FFmpeg avtx and retain the fpcalc utility.

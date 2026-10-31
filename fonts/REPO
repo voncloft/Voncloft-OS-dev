@@ -91,8 +91,11 @@ f:19335f23fd806d4c8ea381f3fb20e382:font-adobe-75dpi/spkgbuild
 f:be124e88bcf59749db93653fc3562e14:harfbuzz/.pkgfiles
 f:07ed0ead9d2f16f7536250553f17d036:harfbuzz/CHANGELOG
 f:1e65f32909723b940ce2eb2ba0be17b4:harfbuzz/spkgbuild
+f:41940409dbb628c5feb490bef55ea4f0:ftgl/.pkgfiles
+f:f8d0cd2453e1d28112ba7e22afd7d02c:ftgl/CHANGELOG
+f:f44653ce6ed8a87437dd71678b5513de:ftgl/freetype-outline-tags.patch
 f:fba1e1c548ebe3ab362495e96a7a0670:ftgl/v2.4.0.tar.gz
-f:cd47dfb455832218032028efb381cc01:ftgl/spkgbuild
+f:9b1cafa2ba46564b15cdeb27a6ef3bd3:ftgl/spkgbuild
 f:5cb6b0699a5e44e739544b1ab529bceb:mkfontscale/.pkgfiles
 f:0a1e6209af5d21e9cdb6c70881fd231e:mkfontscale/CHANGELOG
 f:7fe88bfb1f3d17d3ec7a3f67f7c17b2c:mkfontscale/spkgbuild

@@ -56,3 +56,15 @@ Release=1
 
 Synopsis:
 Upgraded from version 4.1.4 to version 4.1.8
+
+----------------------------------------------------------------
+
+Date: 2026-10-30
+
+Version=4.1.8
+Release=2
+
+Synopsis:
+Correct the upstream release archive name to libprojectM-$version.tar.gz.
+Use the supported CMake build and install the shared visualization and playlist libraries.
+Replace obsolete projectM 2 dependencies with the current build requirements.
