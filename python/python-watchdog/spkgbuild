@@ -2,7 +2,7 @@
 # depends : python-pathtools python-yaml python-argh
 
 name=python-watchdog
-version=6.0.0
+version=7.0.0
 release=1
 
 _name=${name#python-}

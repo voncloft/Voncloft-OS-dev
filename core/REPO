@@ -1066,8 +1066,8 @@ f:ef8003796a1ede4b0a100af932089017:cowsay/spkgbuild
 f:7091f9a6d97006299a1f27a665b638b6:cowsay/cowsay.patch
 f:f8dd3ed29ddd8bb1258381faf892a5ef:terminator/CHANGELOG
 f:c311b67165eb08913618b1dc87980326:terminator/spkgbuild
-f:a7e578eb3c439fbc3a4101d3691a89b3:weechat/CHANGELOG
-f:8792c6194f89eeb6db099ae2e9d8f005:weechat/spkgbuild
+f:88fa2da6ae03b68c915451fa91adfce4:weechat/CHANGELOG
+f:12096064555865545a32813e60fce5bb:weechat/spkgbuild
 f:facdd75441705344c13b69d57749054a:transmission-gtk/CHANGELOG
 f:b021e2d314659b667a5dcf1bd1692da5:transmission-gtk/spkgbuild
 f:e332ca2a618a00eb159e1dfb38bc271e:transmission-gtk/override
@@ -1140,8 +1140,8 @@ f:289b60c7f1efcd1383626d7db31f812e:boost/.pkgfiles
 f:473a5218938895558ef90d6f420f36af:boost/CHANGELOG
 f:6e782035b8a3e74a8a482d0e24082e90:boost/spkgbuild
 f:782559ddc05a71495dd0286b92312ad7:conky/.pkgfiles
-f:d9419150a65d55eb8ccdda0b6834c04b:conky/CHANGELOG
-f:3e3ce92c724409f4b99155891080ca09:conky/spkgbuild
+f:c248ee002051b999c375c9a9bce1b809:conky/CHANGELOG
+f:6e3296f36869d8956420211b61305142:conky/spkgbuild
 f:b4ae39ab442b1a522f20c67efb2ccf9f:elinks/spkgbuild
 f:d42500b7a326a548fa0b631fb5b280a3:elinks/override
 f:c580262d1326041f784374916b4801b0:simplescreenrecorder/CHANGELOG
@@ -1970,8 +1970,8 @@ f:b83279b355c2fc00d9ad0bb2225bee01:numix-icon-theme/CHANGELOG
 f:c4681982b2f88a89ba09035384b9292b:numix-icon-theme/spkgbuild
 f:f8e4c602f60dc6fd4df858e06ab12acb:numix-icon-theme/override
 f:c7a367feaf3fc6e6d7f0cf6ed339e438:mtools/.pkgfiles
-f:0ecd02d84477e0417e317bb6e864ddf0:mtools/CHANGELOG
-f:13feb02bf08642ead23d6a3c1b65f660:mtools/spkgbuild
+f:a7928f64f401fbb92b35a3201ad2d725:mtools/CHANGELOG
+f:3f5565d2b3cf8a0cdc58b00de896eecd:mtools/spkgbuild
 f:80cba4b2e521ed17cfeca8a7f7148e0c:rc/CHANGELOG
 f:85d24c4ba433ac1dd84a10d67b1a33c8:rc/spkgbuild
 f:8cdf42db3964327e5829a3f194e6a01b:rc/override
@@ -2016,8 +2016,8 @@ f:f791d588bbc876b292a8c1792fcfe144:kbd/CHANGELOG
 f:55c1f7358ae2abb83a6f183beb9eaa2e:kbd/spkgbuild
 f:7e757ac2a3feb82b38e693306d80e06c:pnmixer/spkgbuild
 f:d8243abf194721955820f42d7af70838:e2fsprogs/.pkgfiles
-f:138e36be367fa251b5273d14da17f876:e2fsprogs/CHANGELOG
-f:a4b9328e8815706dc4ab8d0db25cf84c:e2fsprogs/spkgbuild
+f:b57de5d7f6b99a7b0a578ccc4f55176e:e2fsprogs/CHANGELOG
+f:498a99ef41bdc71ede4a646541905c2f:e2fsprogs/spkgbuild
 f:04a54506b0b3e480040e5ef9339aeefc:dialog/CHANGELOG
 f:d3fac66eea147a6134b426149a2e7394:dialog/spkgbuild
 f:b47c18b644c1113c88d43f9135d8246a:dialog/override

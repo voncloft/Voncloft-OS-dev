@@ -1047,3 +1047,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 0.147.0 to version 0.151.5
+
+----------------------------------------------------------------
+
+Date: Sat Oct 31 07:07:16 AM EDT 2026
+
+Version=0.152.0
+Release=1
+
+Synopsis:
+Changed from version 0.151.5 to version 0.152.0

@@ -1885,8 +1885,8 @@ f:34c758370bcf852def324dc69fc63292:python-tqdm/CHANGELOG
 f:cc9473f50849eba2cabfaff86895ce57:python-tqdm/spkgbuild
 f:b2e55f0757d317d9ae6ef180fafd4f51:python-ply/CHANGELOG
 f:5e4beb7379d20c3ff9bdbed2187c3ecc:python-ply/spkgbuild
-f:254350b29e29c0a0ca7489720a66922e:python-zeroconf/CHANGELOG
-f:1b9bcced931b89d40e85224d699f42ac:python-zeroconf/spkgbuild
+f:330c0932a74ecea347392b825eff8939:python-zeroconf/CHANGELOG
+f:6da27c73c9c553901c97bc4733a8ae21:python-zeroconf/spkgbuild
 f:a462d7e5042106afc668b4352e005f67:python-graphviz/CHANGELOG
 f:5f28dda3bc994d1757ce2bcbb0edd8c3:python-graphviz/spkgbuild
 f:a99e34c006a22b064f4081092cac1d13:python-pydenticon/CHANGELOG
@@ -3247,8 +3247,8 @@ f:516e51497ccfca1f2b7b0fd8c41b30ed:python-parsedatetime/CHANGELOG
 f:bcd9ef8270650076f617a909da64b305:python-parsedatetime/spkgbuild
 f:7a0f1fe9abbcf7e6562a1d6c36342a1e:python-pasta/CHANGELOG
 f:df0ebb37026b9fe251ddc8423b8a31b5:python-pasta/spkgbuild
-f:bfbc1e2c2d5467936a68d908d1acfe3e:python-watchdog/CHANGELOG
-f:216553224d47f442640400d7f0681b74:python-watchdog/spkgbuild
+f:853d6cfdf5544ac2e4410841c9c7d686:python-watchdog/CHANGELOG
+f:ceb5c1fb021e273cc718bde7a441acb7:python-watchdog/spkgbuild
 f:e14166e1e198527d055ef7bca11fb955:python-simplespectral/CHANGELOG
 f:835eba673dda3c0940c55cafcbe49ab3:python-simplespectral/spkgbuild
 f:d0aca2fb1718c9f4fba17f25f2304580:python-js2py/CHANGELOG
@@ -3809,8 +3809,8 @@ f:ae1b8be053f251778f61557d341496da:python-repoze.lru/spkgbuild
 f:5a6a840b306665f53200ffe5f4dc6ad1:python-pyfix/CHANGELOG
 f:f99626168d294d4874f109c198bab266:python-pyfix/spkgbuild
 f:7d6d38f89366ccdfa5bd279b77c34057:python-pyfix/override
-f:1cf22e8cd4fcbe980990fcae80c1b6f3:python-symengine/CHANGELOG
-f:dc03525fe6ed0253f632a44000dd1ea1:python-symengine/spkgbuild
+f:07887df3c45b3fa07cea2202b47bd1e4:python-symengine/CHANGELOG
+f:cbb0360fb99ad93e9ea29f729ccf4b92:python-symengine/spkgbuild
 f:da605b50b81918129254dfa8a7a5c700:python-junit-xml/spkgbuild
 f:bdcf122bf1af1c97e45a45130234436f:python-junit-xml/override
 f:039ccfc8c5d4ef88b5e69980e724adab:python-pyrsistent/CHANGELOG
@@ -3888,8 +3888,8 @@ f:d4a88543d80a63feea9c4352306aa039:python-redbaron/spkgbuild
 f:ad252f75e08425f7f3b2ebd9cb5dd53b:python-keyutils/CHANGELOG
 f:08cea0b46fe3a6ff5a496d1c29e9aa5e:python-keyutils/spkgbuild
 f:d581dd3a685c78544ea6b866bb624076:python-keyutils/override
-f:7fe018be93e938279cb859c92aff0b3d:python-pipx/CHANGELOG
-f:c56b54a18832a1e9b8758d992e645334:python-pipx/spkgbuild
+f:e5ac30bdb0d1a7d86bd0d2aa447790a4:python-pipx/CHANGELOG
+f:b9e97159dd116810786b2823772a52b8:python-pipx/spkgbuild
 f:b0850a5c6cbe81c39e6a07590a8ec574:python-pywinrm/CHANGELOG
 f:2c77e2461c5ab240b67bd489442ae1fd:python-pywinrm/spkgbuild
 f:81acb52c0c7b538b8e13dace3a04dba3:python-poyo/CHANGELOG

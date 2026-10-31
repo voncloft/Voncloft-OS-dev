@@ -2,7 +2,7 @@
 # depends : gnupg ghostscript xorg libxcb epdfview freeglut python
 
 name=tl-unx
-version=20261030
+version=20261031
 release=1
 
 source="${name}-${version}-install-tl-unx.tar.gz::https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz"

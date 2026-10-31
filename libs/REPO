@@ -883,8 +883,8 @@ f:3b5d704654cfaa80a274e990a47e23c9:libnsl/CHANGELOG
 f:75a55a676dc7c60a7ec1afe5742a4542:libnsl/post-install.sh
 f:3dfc6578a9d5c7d4e12336401ae0867e:libnsl/spkgbuild
 f:e9a9b860e1410986d18f94c3bdef99ef:openexr/.pkgfiles
-f:84e74cbc2418bcd70d52040979f7999b:openexr/CHANGELOG
-f:e5a40d7356cbaec47deacb39ddd91884:openexr/spkgbuild
+f:93b281a3392ac0b5d68aa3ca3c58cbbd:openexr/CHANGELOG
+f:51763e5188668452179a525d7cf5c773:openexr/spkgbuild
 f:ac064aa02db6d8c0b41230dca7fa53f7:aqbanking/CHANGELOG
 f:f5a0cdecb643149ebe78cacdd9a60b6a:aqbanking/spkgbuild
 f:602aeb432d81470f49d753bdabb99fe8:aqbanking/override

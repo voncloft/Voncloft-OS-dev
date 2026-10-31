@@ -337,3 +337,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.22.1 to version 1.25.5
+
+----------------------------------------------------------------
+
+Date: Sat Oct 31 07:07:16 AM EDT 2026
+
+Version=1.26.0
+Release=1
+
+Synopsis:
+Changed from version 1.25.5 to version 1.26.0
