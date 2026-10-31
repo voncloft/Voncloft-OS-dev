@@ -1017,7 +1017,7 @@
 +integrationTest(NAME testWindowTabGroup SRCS window_tab_group_test.cpp LIBS KDecoration3::KDecoration KF6::I18n)
 --- /dev/null
 +++ b/autotests/integration/window_tab_group_test.cpp
-@@ -0,0 +1,703 @@
+@@ -0,0 +1,716 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#include "kwin_wayland_test.h"
 +#include "decorations/tabbeddecoration.h"
@@ -1197,7 +1197,7 @@
 +        c->shell->set_title(QStringLiteral("Third")); d->shell->set_title(QStringLiteral("Fourth"));
 +        QTRY_COMPARE(d->window->caption(), QStringLiteral("Fourth"));
 +        group(a.get(), b.get());
-+        WindowTabGroup *tabs = b->window->tabGroup();
++        QPointer<WindowTabGroup> tabs = b->window->tabGroup();
 +        const auto frame = b->window->frameGeometry();
 +        int count = 2;
 +        for (Client *incoming : {c.get(), d.get()}) {
@@ -1207,9 +1207,11 @@
 +            QAction *action = menuAction(menu, target->caption()); QVERIFY(action);
 +            QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(action).center());
 +            ++count;
++            QTRY_VERIFY(incoming->window->tabGroup());
++            QVERIFY(tabs);
++            QCOMPARE(incoming->window->tabGroup(), tabs.data());
++            QCOMPARE(a->window->tabGroup(), tabs.data()); QCOMPARE(b->window->tabGroup(), tabs.data());
 +            QTRY_COMPARE(tabs->windows().size(), count);
-+            QCOMPARE(incoming->window->tabGroup(), tabs);
-+            QCOMPARE(a->window->tabGroup(), tabs); QCOMPARE(b->window->tabGroup(), tabs);
 +            QCOMPARE(tabs->current(), target);
 +            QTRY_VERIFY(!workspace()->userActionsMenu()->hasWindow());
 +            for (Window *member : tabs->windows()) {
@@ -1490,6 +1492,8 @@
 +        auto a = createClient(); auto b = createClient();
 +        auto c = createClient(); auto d = createClient();
 +        QVERIFY(a && b && c && d);
++        a->window->setSkipPager(true);
++        b->window->setSkipTaskbar(true);
 +        group(a.get(), b.get()); group(c.get(), d.get());
 +        QVERIFY(workspace()->windowTabManager()->groupWindows(a->window, d->window));
 +        QCOMPARE(b->window->tabGroup(), d->window->tabGroup());
@@ -1502,6 +1506,14 @@
 +        d->window->tabGroup()->select(a->window);
 +        QCOMPARE(workspace()->activeWindow(), a->window.data());
 +        QTRY_COMPARE(a->window->frameGeometry(), d->window->frameGeometry());
++        // Dissolving the source group must preserve each tab's original flags.
++        a->window->tabGroup()->remove(a->window);
++        b->window->tabGroup()->remove(b->window);
++        QVERIFY(a->window->skipPager()); QVERIFY(!a->window->skipTaskbar());
++        QVERIFY(b->window->skipTaskbar()); QVERIFY(!b->window->skipPager());
++        QVERIFY(a->window->isShown()); QVERIFY(b->window->isShown());
++        QCOMPARE(c->window->tabGroup(), d->window->tabGroup());
++        QCOMPARE(d->window->tabGroup()->windows().size(), 2);
 +    }
 +    void closeCurrentAndBackground()
 +    {
@@ -1676,10 +1688,11 @@
 +            QTRY_COMPARE(member->frameGeometry(), third->frameGeometry());
 +        }
 +        if (qEnvironmentVariableIsSet("KWIN_TABS_PREVIEW")) {
-+            QImage preview(QSize(qCeil(editor->width()), qCeil(editor->frameMargins().top())), QImage::Format_ARGB32_Premultiplied);
++            Window *previewWindow = editor->tabGroup()->current();
++            QImage preview(QSize(qCeil(previewWindow->width()), qCeil(previewWindow->frameMargins().top())), QImage::Format_ARGB32_Premultiplied);
 +            preview.fill(Qt::transparent);
 +            QPainter painter(&preview);
-+            editor->decoration()->paint(&painter, QRectF(QPointF(), preview.size()));
++            previewWindow->decoration()->paint(&painter, QRectF(QPointF(), preview.size()));
 +            painter.end();
 +            QVERIFY(preview.save(qEnvironmentVariable("KWIN_TABS_PREVIEW")));
 +        }
