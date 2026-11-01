@@ -2,7 +2,7 @@
 # depends : cmake ninja qt6
 
 name=turnover-golf
-version=1.0.8.git20261031230811.gd47525c7910e4c5bea5a1405f23c3df8980b946f
+version=1.0.10.git20261101025336.gc6829a5a130978e0089ec26ab85d07f1a29b429e
 release=1
 _commit=${version##*.g}
 source="$name-$_commit.tar.gz::https://github.com/voncloft/Turnover-golf/archive/$_commit.tar.gz"

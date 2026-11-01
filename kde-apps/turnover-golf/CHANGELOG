@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Changed from version 1.0.7.git20261031225421.gf644bfa1d5b884129c3e385c3ebdc7ad63dd5aad to version 1.0.8.git20261031230811.gd47525c7910e4c5bea5a1405f23c3df8980b946f
+
+----------------------------------------------------------------
+
+Date: Sat Oct 31 10:54:17 PM EDT 2026
+
+Version=1.0.10.git20261101025336.gc6829a5a130978e0089ec26ab85d07f1a29b429e
+Release=1
+
+Synopsis:
+Changed from version 1.0.8.git20261031230811.gd47525c7910e4c5bea5a1405f23c3df8980b946f to version 1.0.10.git20261101025336.gc6829a5a130978e0089ec26ab85d07f1a29b429e
