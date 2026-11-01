@@ -1,0 +1,1396 @@
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -39,6 +39,7 @@
+
+ target_sources(kwin PRIVATE
+     windowtabgroup.cpp
++    windowlayoutmemory.cpp
+     decorations/tabbeddecoration.cpp
+     3rdparty/xcursor.c
+     a11ymanager.cpp
+--- a/src/workspace.h
++++ b/src/workspace.h
+@@ -41,6 +41,7 @@
+ namespace KWin
+ {
+ class WindowTabManager;
++class WindowLayoutMemory;
+
+ namespace Decoration
+ {
+@@ -760,6 +761,7 @@
+     QTimer m_dpmsTimer;
+     std::shared_ptr<FileDescriptor> m_sleepInhibitor;
+     std::unique_ptr<WindowTabManager> m_windowTabManager;
++    std::unique_ptr<WindowLayoutMemory> m_windowLayoutMemory;
+
+ private:
+     friend Workspace *workspace();
+--- a/src/workspace.cpp
++++ b/src/workspace.cpp
+@@ -12,6 +12,7 @@
+ // own
+ #include "workspace.h"
+ #include "windowtabgroup.h"
++#include "windowlayoutmemory.h"
+ // kwin libs
+ #include "opengl/glplatform.h"
+ // kwin
+@@ -186,6 +187,10 @@
+     });
+
+     m_windowTabManager = std::make_unique<WindowTabManager>(this);
++    // Integration tests create their own memory with an isolated state file.
++    if (!QStandardPaths::isTestModeEnabled()) {
++        m_windowLayoutMemory = std::make_unique<WindowLayoutMemory>(this);
++    }
+     initShortcuts();
+
+     init();
+@@ -489,6 +494,7 @@
+
+ Workspace::~Workspace()
+ {
++    if (m_windowLayoutMemory) m_windowLayoutMemory->freeze();
+     m_scripting.reset();
+
+     blockStackingUpdates(true);
+--- a/src/useractions.cpp
++++ b/src/useractions.cpp
+@@ -364,7 +364,7 @@
+                 defer([](Window *window) { if (window->tabGroup()) window->tabGroup()->cycle(-1); });
+             });
+             connect(detachTab, &QAction::triggered, this, [defer] {
+-                defer([](Window *window) { if (window->tabGroup()) window->tabGroup()->remove(window); });
++                defer([](Window *window) { if (window->tabGroup()) window->tabGroup()->detach(window); });
+             });
+         }
+     });
+--- a/src/windowtabgroup.h
++++ b/src/windowtabgroup.h
+@@ -25,11 +25,15 @@
+     Window *current() const;
+     void add(Window *window);
+     void remove(Window *window, bool closing = false);
++    void detach(Window *window);
++    void setOrder(const QList<Window *> &windows);
+     void select(Window *window, bool activate = true);
+     void cycle(int direction);
+     void synchronize(Window *source);
+ Q_SIGNALS:
+     void changed();
++    void detached(Window *window);
++    void selected(Window *window);
+ private:
+     void updateVisibility();
+     void reconcileGeometry();
+@@ -55,13 +59,17 @@
+     explicit WindowTabManager(Workspace *workspace);
+     static bool canGroup(Window *window);
+     static bool canGroupWith(Window *source, Window *target);
+-    bool groupWindows(Window *source, Window *target);
++    bool groupWindows(Window *source, Window *target, bool activate = true);
+     void pickTarget(Window *source);
+     void selectForActivation(Window *window);
+     void groupActiveWindow();
+     void detachActiveWindow();
+     void nextTab();
+     void previousTab();
++Q_SIGNALS:
++    void groupsChanged();
++    void tabDetached(Window *window);
++    void tabSelected(Window *window);
+ private:
+     Workspace *m_workspace;
+ };
+--- a/src/windowtabgroup.cpp
++++ b/src/windowtabgroup.cpp
+@@ -162,6 +162,7 @@
+         m_current = window;
+         updateVisibility();
+         Q_EMIT changed();
++        Q_EMIT selected(window);
+     }
+     if (activate) {
+         workspace()->activateWindow(window, true);
+@@ -208,6 +209,24 @@
+     }
+ }
+
++void WindowTabGroup::detach(Window *window)
++{
++    if (!m_windows.contains(window)) return;
++    // Only an explicit Untab action forgets persistent membership. Internal
++    // removal also happens on close, merge, shutdown, and resize failure.
++    Q_EMIT detached(window);
++    remove(window);
++}
++
++void WindowTabGroup::setOrder(const QList<Window *> &windows)
++{
++    const QSet<Window *> desired(windows.cbegin(), windows.cend());
++    if (windows.size() != m_windows.size() || desired.size() != windows.size()
++        || desired != QSet<Window *>(m_windows.cbegin(), m_windows.cend()) || windows == m_windows) return;
++    m_windows = windows;
++    Q_EMIT changed();
++}
++
+ WindowTabManager::WindowTabManager(Workspace *workspace)
+     : QObject(workspace), m_workspace(workspace)
+ {
+@@ -248,7 +267,7 @@
+     return minimum.width() <= maximum.width() && minimum.height() <= maximum.height();
+ }
+
+-bool WindowTabManager::groupWindows(Window *source, Window *target)
++bool WindowTabManager::groupWindows(Window *source, Window *target, bool activate)
+ {
+     if (canGroup(source) && canGroup(target) && source != target
+         && source->tabGroup() && source->tabGroup() == target->tabGroup()) {
+@@ -264,6 +283,9 @@
+     WindowTabGroup *group = target->tabGroup() ? target->tabGroup() : source->tabGroup();
+     if (!group) {
+         group = new WindowTabGroup(this);
++        connect(group, &WindowTabGroup::changed, this, &WindowTabManager::groupsChanged);
++        connect(group, &WindowTabGroup::detached, this, &WindowTabManager::tabDetached);
++        connect(group, &WindowTabGroup::selected, this, &WindowTabManager::tabSelected);
+         group->add(target);
+     }
+     for (Window *tab : sources + targets) {
+@@ -277,7 +299,7 @@
+         }
+         group->add(tab);
+     }
+-    group->select(target);
++    group->select(target, activate);
+     return true;
+ }
+
+@@ -308,7 +330,7 @@
+ void WindowTabManager::detachActiveWindow()
+ {
+     if (Window *window = m_workspace->activeWindow(); window && window->tabGroup()) {
+-        window->tabGroup()->remove(window);
++        window->tabGroup()->detach(window);
+         m_workspace->activateWindow(window, true);
+     }
+ }
+--- a/autotests/integration/CMakeLists.txt
++++ b/autotests/integration/CMakeLists.txt
+@@ -234,6 +234,7 @@
+ add_subdirectory(activation)
+
+ integrationTest(NAME testWindowTabGroup SRCS window_tab_group_test.cpp LIBS KDecoration3::KDecoration KF6::I18n)
++integrationTest(NAME testWindowLayoutMemory SRCS window_layout_memory_test.cpp LIBS KDecoration3::KDecoration KF6::I18n)
+
+ # Optional end-to-end coverage using Plasma's real taskbar model.
+ find_package(LibTaskManager CONFIG QUIET)
+--- /dev/null
++++ b/src/windowlayoutmemory.h
+@@ -0,0 +1,84 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#pragma once
++
++#include "core/rect.h"
++#include "kwin_export.h"
++
++#include <QHash>
++#include <QMap>
++#include <QObject>
++#include <QPointer>
++#include <QSet>
++#include <QStringList>
++#include <QTimer>
++
++namespace KWin
++{
++class Window;
++class WindowTabGroup;
++class Workspace;
++
++// Compositor-owned placement history. Application session restore launches
++// clients; this class places their normal windows and reunites saved tab groups.
++class KWIN_EXPORT WindowLayoutMemory : public QObject
++{
++    Q_OBJECT
++public:
++    explicit WindowLayoutMemory(Workspace *workspace, const QString &fileName = {});
++    ~WindowLayoutMemory() override;
++    void save();
++    void freeze();
++    void resume();
++
++private:
++    struct Record {
++        QString id;
++        QString app;
++        QString role;
++        QString title;
++        QString output;
++        QString outputName;
++        RectF outputGeometry;
++        RectF geometry;
++        QStringList desktops;
++        int maximize = 0;
++        qint64 touched = 0;
++    };
++    struct Group {
++        QStringList members;
++        QString current;
++    };
++    static bool eligible(Window *window);
++    static QString application(Window *window);
++    void load();
++    void track(Window *window);
++    void processPending();
++    void bind(Window *window, int record);
++    int match(Window *window, bool allowUniqueFallback) const;
++    int newRecord(Window *window);
++    void capture(Window *window);
++    void restore(Window *window, const Record &record);
++    void finishDeferredRestores();
++    void restoreGroups();
++    void captureGroups();
++    void forgetMembership(Window *window);
++    void watchGroup(WindowTabGroup *group, const QString &id);
++    void scheduleSave();
++    void closed(Window *window);
++
++    Workspace *m_workspace;
++    QString m_fileName;
++    QList<Record> m_records;
++    QMap<QString, Group> m_groups;
++    QHash<Window *, QString> m_bindings;
++    QHash<Window *, int> m_pending;
++    QList<Window *> m_windowOrder;
++    QHash<Window *, Record> m_deferredRestores;
++    QHash<WindowTabGroup *, QString> m_liveGroups;
++    QSet<QString> m_restoredGroups;
++    QTimer m_restoreTimer;
++    QTimer m_saveTimer;
++    bool m_frozen = false;
++    bool m_applying = false;
++};
++}
+--- /dev/null
++++ b/src/windowlayoutmemory.cpp
+@@ -0,0 +1,541 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#include "windowlayoutmemory.h"
++
++#include "core/output.h"
++#include "rules.h"
++#include "sm.h"
++#include "virtualdesktops.h"
++#include "window.h"
++#include "windowtabgroup.h"
++#include "workspace.h"
++
++#include <QCoreApplication>
++#include <QDateTime>
++#include <QDir>
++#include <QFile>
++#include <QFileInfo>
++#include <QJsonArray>
++#include <QJsonDocument>
++#include <QJsonObject>
++#include <QSaveFile>
++#include <QScopedValueRollback>
++#include <QStandardPaths>
++#include <QUuid>
++#include <algorithm>
++#include <cmath>
++
++namespace KWin
++{
++static QJsonArray rectJson(const RectF &rect)
++{
++    return {rect.x(), rect.y(), rect.width(), rect.height()};
++}
++
++static RectF readRect(const QJsonValue &value)
++{
++    const auto array = value.toArray();
++    if (array.size() != 4) return {};
++    for (const auto &coordinate : array) {
++        if (!coordinate.isDouble() || !std::isfinite(coordinate.toDouble())
++            || std::abs(coordinate.toDouble()) > 1000000) return {};
++    }
++    return RectF(array[0].toDouble(), array[1].toDouble(), array[2].toDouble(), array[3].toDouble());
++}
++
++WindowLayoutMemory::WindowLayoutMemory(Workspace *workspace, const QString &fileName)
++    : QObject(workspace)
++    , m_workspace(workspace)
++    , m_fileName(fileName.isEmpty()
++                     ? QStandardPaths::writableLocation(QStandardPaths::StateLocation) + QStringLiteral("/kwin-window-layout.json")
++                     : fileName)
++{
++    load();
++    m_restoreTimer.setInterval(100);
++    connect(&m_restoreTimer, &QTimer::timeout, this, &WindowLayoutMemory::processPending);
++    m_saveTimer.setInterval(500);
++    m_saveTimer.setSingleShot(true);
++    connect(&m_saveTimer, &QTimer::timeout, this, &WindowLayoutMemory::save);
++    connect(workspace, &Workspace::windowAdded, this, &WindowLayoutMemory::track);
++    connect(workspace->windowTabManager(), &WindowTabManager::groupsChanged, this, [this] {
++        if (m_frozen || m_applying) return;
++        // Grouping by hand is already a placement decision; do not undo it
++        // while waiting for a newly opened window's identity to settle.
++        for (Window *window : std::as_const(m_windowOrder)) {
++            if (m_pending.contains(window) && window->tabGroup() && !application(window).isEmpty()) {
++                const int found = match(window, true);
++                bind(window, found >= 0 ? found : newRecord(window));
++                capture(window);
++            }
++        }
++        captureGroups();
++        scheduleSave();
++    });
++    connect(workspace->windowTabManager(), &WindowTabManager::tabDetached, this, &WindowLayoutMemory::forgetMembership);
++    connect(workspace->windowTabManager(), &WindowTabManager::tabSelected, this, [this](Window *window) {
++        if (m_frozen || m_applying || !m_bindings.contains(window)) return;
++        captureGroups();
++        const QString groupId = m_liveGroups.value(window->tabGroup());
++        if (m_groups.contains(groupId)) m_groups[groupId].current = m_bindings.value(window);
++        scheduleSave();
++    });
++    connect(workspace, &Workspace::currentDesktopChanged, this, [this] {
++        // Desktop switching first updates visibility and tiling. Reapply an
++        // unfinished resize after those updates, when the client can render.
++        QTimer::singleShot(0, this, &WindowLayoutMemory::finishDeferredRestores);
++    });
++    connect(workspace->sessionManager(), &SessionManager::stateChanged, this, [this] {
++        if (m_workspace->sessionManager()->state() == SessionState::Normal) resume();
++        else freeze();
++    });
++    connect(workspace->sessionManager(), &SessionManager::prepareSessionSaveRequested, this, &WindowLayoutMemory::save);
++    connect(qApp, &QCoreApplication::aboutToQuit, this, &WindowLayoutMemory::freeze);
++    for (Window *window : workspace->windows()) track(window);
++}
++
++WindowLayoutMemory::~WindowLayoutMemory()
++{
++    save();
++}
++
++bool WindowLayoutMemory::eligible(Window *window)
++{
++    return window && !window->isDeleted() && window->isNormalWindow()
++        && !window->isUnmanaged() && !window->isTransient()
++        && !window->isInternal() && !window->isAppletPopup();
++}
++
++QString WindowLayoutMemory::application(Window *window)
++{
++    if (!window->desktopFileName().isEmpty()) return QStringLiteral("desktop:") + window->desktopFileName();
++    if (!window->resourceClass().isEmpty()) return QStringLiteral("class:") + window->resourceClass();
++    return {};
++}
++
++void WindowLayoutMemory::load()
++{
++    QFile file(m_fileName);
++    if (!file.open(QIODevice::ReadOnly) || file.size() > 4 * 1024 * 1024) return;
++    const auto root = QJsonDocument::fromJson(file.readAll()).object();
++    if (root.value(QStringLiteral("version")).toInt() != 1) return;
++    QSet<QString> ids;
++    for (const auto &value : root.value(QStringLiteral("windows")).toArray()) {
++        const auto object = value.toObject();
++        Record record;
++        record.id = object.value(QStringLiteral("id")).toString();
++        record.app = object.value(QStringLiteral("app")).toString();
++        record.role = object.value(QStringLiteral("role")).toString();
++        record.title = object.value(QStringLiteral("title")).toString();
++        record.output = object.value(QStringLiteral("output")).toString();
++        record.outputName = object.value(QStringLiteral("outputName")).toString();
++        record.outputGeometry = readRect(object.value(QStringLiteral("outputGeometry")));
++        record.geometry = readRect(object.value(QStringLiteral("geometry")));
++        record.desktops = object.value(QStringLiteral("desktops")).toVariant().toStringList();
++        record.maximize = object.value(QStringLiteral("maximize")).toInt() & int(MaximizeFull);
++        record.touched = object.value(QStringLiteral("touched")).toInteger();
++        if (record.id.isEmpty() || ids.contains(record.id) || record.app.isEmpty()
++            || !record.geometry.isValid()) continue;
++        ids.insert(record.id);
++        m_records.append(record);
++    }
++    const auto groups = root.value(QStringLiteral("groups")).toObject();
++    QSet<QString> grouped;
++    for (auto it = groups.begin(); it != groups.end(); ++it) {
++        const auto object = it.value().toObject();
++        Group group;
++        for (const auto &value : object.value(QStringLiteral("members")).toArray()) {
++            const auto id = value.toString();
++            if (ids.contains(id) && !grouped.contains(id) && !group.members.contains(id)) group.members.append(id);
++        }
++        if (group.members.size() < 2) continue;
++        for (const auto &id : group.members) grouped.insert(id);
++        group.current = object.value(QStringLiteral("current")).toString();
++        if (!group.members.contains(group.current)) group.current = group.members.first();
++        m_groups.insert(it.key(), group);
++    }
++}
++
++void WindowLayoutMemory::track(Window *window)
++{
++    if (!eligible(window) || m_pending.contains(window) || m_bindings.contains(window)) return;
++    m_pending.insert(window, 0);
++    m_windowOrder.append(window);
++    connect(window, &Window::closed, this, [this, window] { closed(window); });
++    const auto changed = [this, window] {
++        if (!m_applying && !m_frozen) {
++            if (!m_bindings.contains(window) && !m_pending.contains(window) && eligible(window) && !application(window).isEmpty()) {
++                m_pending.insert(window, 0);
++                m_restoreTimer.start();
++            }
++            capture(window);
++            scheduleSave();
++        }
++    };
++    connect(window, &Window::frameGeometryChanged, this, changed);
++    connect(window, &Window::maximizeGeometryRestoreChanged, this, changed);
++    connect(window, &Window::maximizedChanged, this, changed);
++    connect(window, &Window::desktopsChanged, this, changed);
++    connect(window, &Window::desktopsChanged, this, [this, window] {
++        if (!m_applying && !m_frozen) m_deferredRestores.remove(window);
++    });
++    connect(window, &Window::outputChanged, this, changed);
++    connect(window, &Window::captionNormalChanged, this, changed);
++    connect(window, &Window::desktopFileNameChanged, this, changed);
++    connect(window, &Window::windowClassChanged, this, changed);
++    connect(window, &Window::windowRoleChanged, this, changed);
++    connect(window, &Window::decorationChanged, this, [this] {
++        QTimer::singleShot(0, this, &WindowLayoutMemory::restoreGroups);
++    });
++    connect(window, &Window::interactiveMoveResizeStarted, this, [this, window] {
++        m_deferredRestores.remove(window);
++        if (!m_frozen && m_pending.remove(window) && !application(window).isEmpty()) bind(window, newRecord(window));
++    });
++    connect(window, &Window::interactiveMoveResizeFinished, this, [this, window] {
++        // Never snap a window back after the user has already positioned it.
++        m_deferredRestores.remove(window);
++        if (!m_frozen && m_pending.remove(window) && !application(window).isEmpty()) bind(window, newRecord(window));
++        capture(window);
++        scheduleSave();
++    });
++    if (!m_frozen) m_restoreTimer.start();
++}
++
++int WindowLayoutMemory::match(Window *window, bool allowUniqueFallback) const
++{
++    QList<int> candidates;
++    const QString app = application(window);
++    const auto claimed = m_bindings.values();
++    for (int i = 0; i < m_records.size(); ++i) {
++        const auto &record = m_records[i];
++        if (record.app == app && record.role == window->windowRole() && !claimed.contains(record.id)) candidates.append(i);
++    }
++    for (int i : candidates) {
++        if (m_records[i].title == window->captionNormal()) return i;
++    }
++    // Ambiguous windows with different titles must not steal each other's slot.
++    return allowUniqueFallback && candidates.size() == 1 ? candidates.first() : -1;
++}
++
++int WindowLayoutMemory::newRecord(Window *window)
++{
++    Record record;
++    record.id = QUuid::createUuid().toString(QUuid::WithoutBraces);
++    record.app = application(window);
++    record.role = window->windowRole();
++    m_records.append(record);
++    return m_records.size() - 1;
++}
++
++void WindowLayoutMemory::bind(Window *window, int record)
++{
++    m_bindings.insert(window, m_records[record].id);
++    m_pending.remove(window);
++    for (auto it = m_groups.cbegin(); it != m_groups.cend(); ++it) {
++        if (it->members.contains(m_records[record].id)) m_restoredGroups.remove(it.key());
++    }
++}
++
++void WindowLayoutMemory::processPending()
++{
++    if (m_frozen) return;
++    const auto windows = m_windowOrder;
++    for (Window *window : windows) {
++        if (!m_pending.contains(window)) continue;
++        if (!eligible(window)) { m_pending.remove(window); continue; }
++        const int attempt = ++m_pending[window];
++        if (application(window).isEmpty()) {
++            if (attempt >= 30) m_pending.remove(window);
++            continue;
++        }
++        const int found = match(window, attempt >= 10);
++        if (found >= 0) {
++            const auto record = m_records[found];
++            bind(window, found);
++            QScopedValueRollback applying(m_applying, true);
++            restore(window, record);
++        } else if (attempt >= 20) {
++            bind(window, newRecord(window));
++        } else {
++            continue;
++        }
++        capture(window);
++        scheduleSave();
++    }
++    restoreGroups();
++    if (m_pending.isEmpty()) m_restoreTimer.stop();
++}
++
++void WindowLayoutMemory::capture(Window *window)
++{
++    if (m_frozen || m_applying || !eligible(window) || !m_bindings.contains(window)) return;
++    auto it = std::find_if(m_records.begin(), m_records.end(), [&](const Record &record) { return record.id == m_bindings.value(window); });
++    if (it == m_records.end() || !window->moveResizeOutput()) return;
++    it->app = application(window);
++    it->role = window->windowRole();
++    it->title = window->captionNormal();
++    if (m_deferredRestores.contains(window)) return;
++    auto output = window->moveResizeOutput();
++    it->output = output->uuid();
++    it->outputName = output->name();
++    it->outputGeometry = output->geometry();
++    auto geometry = window->moveResizeGeometry();
++    if (window->isFullScreen() && window->fullscreenGeometryRestore().isValid()) geometry = window->fullscreenGeometryRestore();
++    else if (window->requestedMaximizeMode() != MaximizeRestore && window->geometryRestore().isValid()) geometry = window->geometryRestore();
++    it->geometry = geometry;
++    it->desktops = window->desktopIds();
++    it->maximize = int(window->requestedMaximizeMode());
++    it->touched = QDateTime::currentMSecsSinceEpoch();
++}
++
++void WindowLayoutMemory::restore(Window *window, const Record &record)
++{
++    auto output = window->moveResizeOutput();
++    for (auto candidate : m_workspace->outputs()) {
++        if (candidate->uuid() == record.output) { output = candidate; break; }
++        if (candidate->name() == record.outputName) output = candidate;
++    }
++    output = window->rules()->checkOutput(output, true);
++    if (!output) return;
++    window->sendToOutput(output);
++    QList<VirtualDesktop *> desktops;
++    for (const auto &id : record.desktops) {
++        if (auto desktop = VirtualDesktopManager::self()->desktopForId(id)) desktops.append(desktop);
++    }
++    // An empty saved list means "all desktops"; a removed desktop falls back
++    // to the current desktop instead of accidentally becoming sticky.
++    if (record.desktops.isEmpty() || !desktops.isEmpty()) window->setDesktops(window->rules()->checkDesktops(desktops, true));
++    auto area = m_workspace->clientArea(PlacementArea, window, output);
++    auto geometry = record.geometry;
++    if (record.outputGeometry.isValid()) geometry.translate(output->geometry().topLeft() - record.outputGeometry.topLeft());
++    QSizeF size = geometry.size().boundedTo(area.size());
++    size = window->constrainFrameSize(window->rules()->checkSize(size, true));
++    geometry.setSize(size);
++    geometry.moveTopLeft(QPointF(std::clamp(geometry.x(), area.left(), qMax(area.left(), area.right() - geometry.width())),
++                                std::clamp(geometry.y(), area.top(), qMax(area.top(), area.bottom() - geometry.height()))));
++    geometry = window->rules()->checkGeometrySafe(geometry, true);
++    window->maximize(window->rules()->checkMaximize(MaximizeRestore, true));
++    window->moveResize(geometry);
++    window->setGeometryRestore(geometry);
++    window->maximize(window->rules()->checkMaximize(MaximizeMode(record.maximize), true));
++    if (!window->isOnCurrentDesktop()) {
++        // Suspended Wayland clients may acknowledge a configure with their
++        // old buffer size. Do not let that overwrite the remembered size.
++        m_deferredRestores.insert(window, record);
++    }
++}
++
++void WindowLayoutMemory::finishDeferredRestores()
++{
++    if (m_frozen || m_applying) return;
++    for (Window *window : m_deferredRestores.keys()) {
++        if (!eligible(window) || !window->isOnCurrentDesktop()) continue;
++        const auto record = m_deferredRestores.take(window);
++        {
++            QScopedValueRollback applying(m_applying, true);
++            restore(window, record);
++        }
++        capture(window);
++    }
++    scheduleSave();
++}
++
++void WindowLayoutMemory::watchGroup(WindowTabGroup *group, const QString &id)
++{
++    if (m_liveGroups.contains(group)) return;
++    m_liveGroups.insert(group, id);
++    connect(group, &QObject::destroyed, this, [this, group] {
++        m_liveGroups.remove(group);
++        // Runtime groups disappear on close; saved membership survives. A new
++        // bind retries restoration, without looping on incompatible clients.
++    });
++}
++
++void WindowLayoutMemory::restoreGroups()
++{
++    if (m_frozen || m_applying) return;
++    QScopedValueRollback applying(m_applying, true);
++    for (auto it = m_groups.cbegin(); it != m_groups.cend(); ++it) {
++        if (m_restoredGroups.contains(it.key())) continue;
++        QList<Window *> members;
++        Window *selected = nullptr;
++        bool waitingForDecoration = false;
++        for (const auto &id : it->members) {
++            Window *window = m_bindings.key(id, nullptr);
++            if (!eligible(window)) continue;
++            if (!WindowTabManager::canGroup(window)) { waitingForDecoration = true; continue; }
++            if (window->tabGroup() && m_liveGroups.value(window->tabGroup()) != it.key()) { members.clear(); break; }
++            if (!members.isEmpty() && (window->desktops() != members.first()->desktops()
++                                      || window->moveResizeOutput() != members.first()->moveResizeOutput()
++                                      || (!(window->tabGroup() && window->tabGroup() == members.first()->tabGroup())
++                                          && !WindowTabManager::canGroupWith(window, members.first())))) { members.clear(); break; }
++            members.append(window);
++            if (id == it->current) selected = window;
++        }
++        // Any two available members can reunite. Missing applications retain
++        // their slots and join in the saved order when they reopen later.
++        if (members.size() < 2) continue;
++        if (members.first()->tabGroup() && members.first()->tabGroup()->windows() == members) {
++            if (!waitingForDecoration) m_restoredGroups.insert(it.key());
++            continue;
++        }
++        QSizeF minimum = members.first()->minSize();
++        QSizeF maximum = members.first()->maxSize();
++        for (Window *member : members) {
++            minimum = minimum.expandedTo(member->minSize());
++            maximum = maximum.boundedTo(member->maxSize());
++        }
++        if (minimum.width() > maximum.width() || minimum.height() > maximum.height()) continue;
++        Window *first = members.first();
++        bool complete = true;
++        for (int i = 1; i < members.size(); ++i) {
++            if (!m_workspace->windowTabManager()->groupWindows(members[i], first, false)) { complete = false; break; }
++        }
++        if (first->tabGroup()) {
++            watchGroup(first->tabGroup(), it.key());
++            first->tabGroup()->setOrder(members);
++            Window *current = selected ? selected : first;
++            const bool activeMember = members.contains(m_workspace->activeWindow());
++            first->tabGroup()->select(current, activeMember && current->isOnCurrentDesktop());
++            if (activeMember && m_workspace->activeWindow() && !m_workspace->activeWindow()->isShown()) {
++                m_workspace->activateNextWindow(m_workspace->activeWindow());
++            }
++        }
++        if (complete && !waitingForDecoration) m_restoredGroups.insert(it.key());
++    }
++}
++
++void WindowLayoutMemory::captureGroups()
++{
++    QSet<WindowTabGroup *> seen;
++    for (Window *window : m_bindings.keys()) {
++        auto group = window->tabGroup();
++        if (!group || seen.contains(group)) continue;
++        seen.insert(group);
++        QStringList liveMembers;
++        bool complete = true;
++        for (Window *member : group->windows()) {
++            if (!m_bindings.contains(member)) { complete = false; break; }
++            liveMembers.append(m_bindings.value(member));
++        }
++        if (!complete || liveMembers.size() < 2) continue;
++        QString id = m_liveGroups.value(group);
++        if (id.isEmpty()) {
++            id = QUuid::createUuid().toString(QUuid::WithoutBraces);
++            watchGroup(group, id);
++        }
++        Group saved = m_groups.value(id);
++        if (saved.members.isEmpty()) saved.members = liveMembers;
++        // Merging live groups also keeps their temporarily closed members.
++        for (auto it = m_groups.begin(); it != m_groups.end();) {
++            if (it.key() != id && std::any_of(liveMembers.cbegin(), liveMembers.cend(), [&](const QString &member) { return it->members.contains(member); })) {
++                for (const auto &member : it->members) if (!saved.members.contains(member)) saved.members.append(member);
++                m_restoredGroups.remove(it.key());
++                it = m_groups.erase(it);
++                continue;
++            }
++            ++it;
++        }
++        for (const auto &member : liveMembers) if (!saved.members.contains(member)) saved.members.append(member);
++        if (!saved.members.contains(saved.current) || liveMembers.contains(saved.current)) saved.current = m_bindings.value(group->current());
++        m_groups.insert(id, saved);
++    }
++}
++
++void WindowLayoutMemory::forgetMembership(Window *window)
++{
++    if (m_frozen || m_applying) return;
++    captureGroups();
++    const QString id = m_bindings.value(window);
++    for (auto it = m_groups.begin(); it != m_groups.end();) {
++        it->members.removeAll(id);
++        if (it->members.size() < 2) it = m_groups.erase(it);
++        else {
++            if (it->current == id) it->current = it->members.first();
++            ++it;
++        }
++    }
++    scheduleSave();
++}
++
++void WindowLayoutMemory::closed(Window *window)
++{
++    if (!m_frozen) captureGroups();
++    const QString id = m_bindings.take(window);
++    m_pending.remove(window);
++    m_windowOrder.removeAll(window);
++    m_deferredRestores.remove(window);
++    if (m_frozen) return;
++    for (auto it = m_groups.cbegin(); it != m_groups.cend(); ++it) {
++        if (it->members.contains(id)) m_restoredGroups.remove(it.key());
++    }
++    scheduleSave();
++}
++
++void WindowLayoutMemory::scheduleSave()
++{
++    if (!m_frozen && !m_applying) m_saveTimer.start();
++}
++
++void WindowLayoutMemory::save()
++{
++    if (m_frozen || m_applying) return;
++    m_saveTimer.stop();
++    for (Window *window : m_bindings.keys()) capture(window);
++    captureGroups();
++    // Retain useful closed-window history without unbounded growth.
++    if (m_records.size() > 512) {
++        auto live = m_bindings.values();
++        for (const auto &group : std::as_const(m_groups)) live.append(group.members);
++        std::stable_sort(m_records.begin(), m_records.end(), [&](const Record &a, const Record &b) {
++            if (live.contains(a.id) != live.contains(b.id)) return live.contains(a.id);
++            return a.touched > b.touched;
++        });
++        while (m_records.size() > 512 && !live.contains(m_records.last().id)) m_records.removeLast();
++    }
++    QJsonArray windows;
++    QSet<QString> ids;
++    for (const auto &record : std::as_const(m_records)) {
++        if (!record.geometry.isValid()) continue;
++        ids.insert(record.id);
++        windows.append(QJsonObject{{QStringLiteral("id"), record.id}, {QStringLiteral("app"), record.app},
++            {QStringLiteral("role"), record.role}, {QStringLiteral("title"), record.title},
++            {QStringLiteral("output"), record.output}, {QStringLiteral("outputName"), record.outputName},
++            {QStringLiteral("outputGeometry"), rectJson(record.outputGeometry)}, {QStringLiteral("geometry"), rectJson(record.geometry)},
++            {QStringLiteral("desktops"), QJsonArray::fromStringList(record.desktops)},
++            {QStringLiteral("maximize"), record.maximize}, {QStringLiteral("touched"), record.touched}});
++    }
++    QJsonObject groups;
++    for (auto it = m_groups.cbegin(); it != m_groups.cend(); ++it) {
++        if (std::all_of(it->members.cbegin(), it->members.cend(), [&](const QString &id) { return ids.contains(id); })) {
++            groups.insert(it.key(), QJsonObject{{QStringLiteral("members"), QJsonArray::fromStringList(it->members)}, {QStringLiteral("current"), it->current}});
++        }
++    }
++    QDir().mkpath(QFileInfo(m_fileName).absolutePath());
++    QSaveFile file(m_fileName);
++    if (!file.open(QIODevice::WriteOnly)) return;
++    file.setPermissions(QFileDevice::ReadOwner | QFileDevice::WriteOwner);
++    const auto data = QJsonDocument(QJsonObject{{QStringLiteral("version"), 1}, {QStringLiteral("windows"), windows}, {QStringLiteral("groups"), groups}}).toJson();
++    if (file.write(data) != data.size()) { file.cancelWriting(); return; }
++    file.commit();
++}
++
++void WindowLayoutMemory::freeze()
++{
++    if (m_frozen) return;
++    for (auto it = m_pending.begin(); it != m_pending.end(); ++it) it.value() = 30;
++    processPending();
++    save();
++    m_frozen = true;
++    m_saveTimer.stop();
++    m_restoreTimer.stop();
++}
++
++void WindowLayoutMemory::resume()
++{
++    m_frozen = false;
++    finishDeferredRestores();
++    if (!m_pending.isEmpty()) m_restoreTimer.start();
++    scheduleSave();
++}
++}
++
++#include "moc_windowlayoutmemory.cpp"
+--- /dev/null
++++ b/autotests/integration/window_layout_memory_test.cpp
+@@ -0,0 +1,553 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#include "kwin_wayland_test.h"
++#include "core/output.h"
++#include "rules.h"
++#include "sm.h"
++#include "virtualdesktops.h"
++#include "wayland_server.h"
++#include "window.h"
++#include "windowlayoutmemory.h"
++#include "windowtabgroup.h"
++#include "workspace.h"
++
++#include <KWayland/Client/surface.h>
++#include <QFile>
++#include <QJsonArray>
++#include <QJsonDocument>
++#include <QJsonObject>
++#include <QTemporaryDir>
++#if KWIN_BUILD_X11
++#include <xcb/xcb.h>
++#endif
++
++namespace KWin
++{
++class WindowLayoutMemoryTest : public QObject
++{
++    Q_OBJECT
++    struct Client {
++        std::unique_ptr<KWayland::Client::Surface> surface;
++        std::unique_ptr<Test::XdgToplevel> shell;
++        std::unique_ptr<Test::XdgToplevelDecorationV1> decoration;
++        QPointer<Window> window;
++        QSize size{500, 300};
++        bool deferResize = false;
++    };
++    std::unique_ptr<QTemporaryDir> m_directory;
++    std::unique_ptr<WindowLayoutMemory> m_memory;
++    KSharedConfigPtr m_rules;
++    QString path() const { return m_directory->filePath(QStringLiteral("layout.json")); }
++    QJsonObject state() const
++    {
++        QFile file(path());
++        if (!file.open(QIODevice::ReadOnly)) return {};
++        return QJsonDocument::fromJson(file.readAll()).object();
++    }
++    std::unique_ptr<Client> client(const QString &app, const QString &title, Test::XdgToplevel *parent = nullptr, bool deferResize = false)
++    {
++        auto result = std::make_unique<Client>();
++        Client *c = result.get();
++        c->deferResize = deferResize;
++        c->surface = Test::createSurface();
++        c->shell = Test::createXdgToplevelSurface(c->surface.get(), Test::CreationSetup::CreateOnly);
++        c->shell->set_app_id(app);
++        c->shell->set_title(title);
++        if (parent) c->shell->set_parent(parent->object());
++        c->decoration = Test::createXdgToplevelDecorationV1(c->shell.get());
++        c->decoration->set_mode(Test::XdgToplevelDecorationV1::mode_server_side);
++        connect(c->shell.get(), &Test::XdgToplevel::configureRequested, c->surface.get(), [c](const QSize &size) {
++            if (!size.isEmpty()) c->size = size;
++        });
++        connect(c->shell->xdgSurface(), &Test::XdgSurface::configureRequested, c->surface.get(), [c](quint32 serial) {
++            c->shell->xdgSurface()->ack_configure(serial);
++            Test::render(c->surface.get(), c->deferResize ? QSize(500, 300) : c->size, Qt::blue);
++        });
++        QSignalSpy added(workspace(), &Workspace::windowAdded);
++        c->surface->commit(KWayland::Client::Surface::CommitFlag::None);
++        if (!added.wait()) return nullptr;
++        c->window = added.last().first().value<Window *>();
++        return result;
++    }
++    void position(Client *client, const RectF &geometry, int desktop = 0)
++    {
++        client->window->moveResize(geometry);
++        client->window->setDesktops({VirtualDesktopManager::self()->desktops().at(desktop)});
++        QTRY_COMPARE(client->window->frameGeometry(), geometry);
++    }
++    void stopMemory()
++    {
++        m_memory->freeze();
++        m_memory.reset();
++    }
++    void startMemory()
++    {
++        m_memory = std::make_unique<WindowLayoutMemory>(workspace(), path());
++    }
++private Q_SLOTS:
++    void initTestCase()
++    {
++        QVERIFY(waylandServer()->init(qAppName()));
++        const QString externalFile = qEnvironmentVariable("KWIN_LAYOUT_TEST_FILE");
++        auto config = KSharedConfig::openConfig(externalFile.isEmpty() ? QString() : externalFile + QStringLiteral(".kwinrc"), KConfig::SimpleConfig);
++        config->group(QStringLiteral("Desktops")).writeEntry("Number", 3);
++        config->group(QStringLiteral("org.kde.kdecoration3")).writeEntry("library", "org.kde.breeze");
++        kwinApp()->setConfig(config);
++        kwinApp()->start();
++        setenv("QT_QPA_PLATFORM", "wayland", true);
++    }
++    void init()
++    {
++        m_directory = std::make_unique<QTemporaryDir>();
++        QVERIFY(m_directory->isValid());
++        Test::setOutputConfig({Rect(0, 0, 1280, 1024), Rect(1280, 0, 1280, 1024)});
++        VirtualDesktopManager::self()->setCount(3);
++        VirtualDesktopManager::self()->setCurrent(VirtualDesktopManager::self()->desktops().first());
++        workspace()->setActiveOutput(workspace()->outputs().first());
++        m_rules = KSharedConfig::openConfig(m_directory->filePath(QStringLiteral("rulesrc")), KConfig::SimpleConfig);
++        workspace()->rulebook()->setConfig(m_rules);
++        workspace()->rulebook()->load();
++        QVERIFY(Test::setupWaylandConnection(Test::AdditionalWaylandInterface::XdgDecorationV1));
++        startMemory();
++    }
++    void cleanup()
++    {
++        if (m_memory) stopMemory();
++        Test::destroyWaylandConnection();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        QVERIFY(QMetaObject::invokeMethod(workspace()->sessionManager(), "setState", Qt::DirectConnection, Q_ARG(uint, 0u)));
++        m_directory.reset();
++    }
++    void positionMonitorAndDesktop()
++    {
++        const RectF saved(1450, 160, 680, 480);
++        auto original = client(QStringLiteral("golf"), QStringLiteral("Round 1")); QVERIFY(original);
++        position(original.get(), saved, 1);
++        stopMemory();
++        original.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        auto reopened = client(QStringLiteral("golf"), QStringLiteral("Round 2")); QVERIFY(reopened);
++        QTRY_COMPARE(reopened->window->frameGeometry(), saved);
++        QCOMPARE(reopened->window->output(), workspace()->outputs()[1]);
++        QCOMPARE(reopened->window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops()[1]});
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 1);
++    }
++    void maximizedAndRestoreGeometry()
++    {
++        const RectF saved(150, 90, 700, 500);
++        auto original = client(QStringLiteral("editor"), QStringLiteral("Editor")); QVERIFY(original);
++        position(original.get(), saved);
++        original->window->maximize(MaximizeFull);
++        QTRY_COMPARE(original->window->maximizeMode(), MaximizeFull);
++        stopMemory(); original.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        auto reopened = client(QStringLiteral("editor"), QStringLiteral("Editor")); QVERIFY(reopened);
++        QTRY_COMPARE(reopened->window->maximizeMode(), MaximizeFull);
++        QCOMPARE(reopened->window->geometryRestore(), saved);
++        reopened->window->maximize(MaximizeRestore);
++        QTRY_COMPARE(reopened->window->frameGeometry(), saved);
++    }
++    void suspendedClientRestoresSizeWhenDesktopBecomesVisible()
++    {
++        const RectF saved(1450, 160, 740, 520);
++        auto original = client(QStringLiteral("editor"), QStringLiteral("Editor")); QVERIFY(original);
++        position(original.get(), saved, 1);
++        stopMemory(); original.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        auto reopened = client(QStringLiteral("editor"), QStringLiteral("Editor"), nullptr, true); QVERIFY(reopened);
++        QTRY_COMPARE(reopened->window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops()[1]});
++        QTRY_COMPARE(reopened->window->frameGeometry().topLeft(), saved.topLeft());
++        QVERIFY(reopened->window->frameGeometry().size() != saved.size());
++        reopened->deferResize = false;
++        VirtualDesktopManager::self()->setCurrent(VirtualDesktopManager::self()->desktops()[1]);
++        QTRY_COMPARE(reopened->window->frameGeometry(), saved);
++    }
++    void multipleWindowsAndDelayedTitles()
++    {
++        const RectF left(100, 100, 600, 420), right(1460, 180, 640, 450);
++        auto a = client(QStringLiteral("editor"), QStringLiteral("Document A"));
++        auto b = client(QStringLiteral("editor"), QStringLiteral("Document B")); QVERIFY(a && b);
++        position(a.get(), left); position(b.get(), right, 1);
++        stopMemory(); a.reset(); b.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        b = client(QStringLiteral("editor"), QStringLiteral("Loading")); QVERIFY(b);
++        a = client(QStringLiteral("editor"), QStringLiteral("Document A")); QVERIFY(a);
++        b->shell->set_title(QStringLiteral("Document B"));
++        QTRY_COMPARE(a->window->frameGeometry(), left);
++        QTRY_COMPARE(b->window->frameGeometry(), right);
++        QCOMPARE(a->window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops()[0]});
++        QCOMPARE(b->window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops()[1]});
++    }
++    void identicalWindowsUseSeparateSlots()
++    {
++        const RectF left(100, 100, 600, 420), right(1460, 180, 640, 450);
++        auto a = client(QStringLiteral("terminal"), QStringLiteral("Terminal"));
++        auto b = client(QStringLiteral("terminal"), QStringLiteral("Terminal")); QVERIFY(a && b);
++        position(a.get(), left); position(b.get(), right);
++        stopMemory(); a.reset(); b.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        a = client(QStringLiteral("terminal"), QStringLiteral("Terminal"));
++        b = client(QStringLiteral("terminal"), QStringLiteral("Terminal")); QVERIFY(a && b);
++        QTRY_VERIFY((a->window->frameGeometry() == left && b->window->frameGeometry() == right)
++                    || (a->window->frameGeometry() == right && b->window->frameGeometry() == left));
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 2);
++    }
++    void restoreThreeTabsInDifferentLaunchOrder()
++    {
++        auto golf = client(QStringLiteral("golf"), QStringLiteral("Turnover Golf"));
++        auto kasts = client(QStringLiteral("kasts"), QStringLiteral("Kasts"));
++        auto lights = client(QStringLiteral("lights"), QStringLiteral("Lights")); QVERIFY(golf && kasts && lights);
++        const RectF saved(1440, 130, 760, 530);
++        position(golf.get(), saved, 1);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(kasts->window, golf->window));
++        QVERIFY(workspace()->windowTabManager()->groupWindows(lights->window, golf->window));
++        golf->window->tabGroup()->select(kasts->window);
++        QTRY_COMPARE(lights->window->frameGeometry(), saved);
++        stopMemory(); golf.reset(); kasts.reset(); lights.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        lights = client(QStringLiteral("lights"), QStringLiteral("Lights"));
++        kasts = client(QStringLiteral("kasts"), QStringLiteral("Kasts")); QVERIFY(lights && kasts);
++        QTRY_COMPARE(lights->window->frameGeometry(), saved);
++        QTRY_VERIFY(lights->window->tabGroup()); // Available members reunite immediately.
++        QCOMPARE(lights->window->tabGroup()->windows(), (QList<Window *>{kasts->window, lights->window}));
++        golf = client(QStringLiteral("golf"), QStringLiteral("Turnover Golf")); QVERIFY(golf);
++        QTRY_VERIFY(golf->window->tabGroup());
++        auto group = golf->window->tabGroup();
++        QCOMPARE(group->windows(), (QList<Window *>{golf->window, kasts->window, lights->window}));
++        QCOMPARE(group->current(), kasts->window.data());
++        for (Window *window : group->windows()) {
++            QTRY_COMPARE(window->frameGeometry(), saved);
++            QCOMPARE(window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops()[1]});
++            QVERIFY(!window->skipTaskbar());
++        }
++        QVERIFY(kasts->window->isShown()); QVERIFY(golf->window->isHidden()); QVERIFY(lights->window->isHidden());
++        workspace()->activateWindow(lights->window);
++        QCOMPARE(group->current(), lights->window.data());
++    }
++    void detachIsRemembered()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One"));
++        auto b = client(QStringLiteral("two"), QStringLiteral("Two")); QVERIFY(a && b);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(b->window, a->window));
++        m_memory->freeze(); m_memory->resume();
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject().size(), 1);
++        a->window->tabGroup()->detach(b->window);
++        QTRY_VERIFY(!a->window->tabGroup());
++        QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
++        stopMemory(); a.reset(); b.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        QVERIFY(state().value(QStringLiteral("groups")).toObject().isEmpty());
++        startMemory();
++        a = client(QStringLiteral("one"), QStringLiteral("One"));
++        b = client(QStringLiteral("two"), QStringLiteral("Two")); QVERIFY(a && b);
++        m_memory->freeze();
++        QVERIFY(!a->window->tabGroup()); QVERIFY(!b->window->tabGroup());
++    }
++    void logoutKeepsGroupsAndCancellationResumesSaving()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One"));
++        auto b = client(QStringLiteral("two"), QStringLiteral("Two")); QVERIFY(a && b);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(b->window, a->window));
++        QVERIFY(QMetaObject::invokeMethod(workspace()->sessionManager(), "setState", Qt::DirectConnection, Q_ARG(uint, 1u))); // Plasma: Saving.
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject().size(), 1);
++        a.reset(); b.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject().size(), 1);
++        QVERIFY(QMetaObject::invokeMethod(workspace()->sessionManager(), "setState", Qt::DirectConnection, Q_ARG(uint, 0u))); // Plasma: Normal after cancellation.
++        b = client(QStringLiteral("two"), QStringLiteral("Two"));
++        a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a && b);
++        QTRY_VERIFY(a->window->tabGroup());
++        QCOMPARE(a->window->tabGroup(), b->window->tabGroup());
++        auto c = client(QStringLiteral("three"), QStringLiteral("Three")); QVERIFY(c);
++        const RectF moved(270, 180, 650, 410);
++        position(c.get(), moved);
++        m_memory->freeze();
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 3);
++    }
++    void plasmaLogoutSequenceKeepsThreeTabs()
++    {
++        auto kasts = client(QStringLiteral("org.kde.kasts"), QStringLiteral("Kasts"));
++        auto golf = client(QStringLiteral("io.voncloft.TurnoverGolf"), QStringLiteral("Turnover Golf"));
++        auto lights = client(QStringLiteral("lights"), QStringLiteral("SmartHome")); QVERIFY(kasts && golf && lights);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(golf->window, kasts->window));
++        QVERIFY(workspace()->windowTabManager()->groupWindows(lights->window, kasts->window));
++        kasts->window->tabGroup()->select(golf->window);
++        // These are Plasma's D-Bus wire values, not KWin's internal enum.
++        QVERIFY(QMetaObject::invokeMethod(workspace()->sessionManager(), "setState", Qt::DirectConnection, Q_ARG(uint, 1u)));
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject().size(), 1);
++        QVERIFY(QMetaObject::invokeMethod(workspace()->sessionManager(), "setState", Qt::DirectConnection, Q_ARG(uint, 2u)));
++        kasts.reset(); golf.reset(); lights.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject().size(), 1);
++        m_memory.reset();
++        QVERIFY(QMetaObject::invokeMethod(workspace()->sessionManager(), "setState", Qt::DirectConnection, Q_ARG(uint, 0u)));
++        startMemory();
++        lights = client(QStringLiteral("lights"), QStringLiteral("SmartHome"));
++        golf = client(QStringLiteral("io.voncloft.TurnoverGolf"), QStringLiteral("Turnover Golf"));
++        kasts = client(QStringLiteral("org.kde.kasts"), QStringLiteral("Kasts")); QVERIFY(kasts && golf && lights);
++        QTRY_VERIFY(kasts->window->tabGroup());
++        QCOMPARE(kasts->window->tabGroup()->windows(), (QList<Window *>{kasts->window, golf->window, lights->window}));
++        QCOMPARE(kasts->window->tabGroup()->current(), golf->window.data());
++        m_memory->freeze();
++    }
++    void closingAndReopeningKeepsMembership()
++    {
++        auto a = client(QStringLiteral("kasts"), QStringLiteral("Kasts"));
++        auto b = client(QStringLiteral("golf"), QStringLiteral("Turnover Golf"));
++        auto c = client(QStringLiteral("lights"), QStringLiteral("SmartHome")); QVERIFY(a && b && c);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(b->window, a->window));
++        QVERIFY(workspace()->windowTabManager()->groupWindows(c->window, a->window));
++        a->window->tabGroup()->select(b->window);
++        m_memory->save();
++        const auto original = state().value(QStringLiteral("groups")).toObject();
++        b.reset();
++        QTRY_COMPARE(waylandServer()->windows().size(), 2);
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject(), original);
++        b = client(QStringLiteral("golf"), QStringLiteral("Turnover Golf")); QVERIFY(b);
++        QTRY_VERIFY(b->window->tabGroup());
++        QCOMPARE(b->window->tabGroup()->windows(), (QList<Window *>{a->window, b->window, c->window}));
++        QCOMPARE(b->window->tabGroup()->current(), b->window.data());
++        a.reset(); b.reset(); c.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject(), original);
++        stopMemory(); startMemory();
++        c = client(QStringLiteral("lights"), QStringLiteral("SmartHome"));
++        a = client(QStringLiteral("kasts"), QStringLiteral("Kasts")); QVERIFY(a && c);
++        QTRY_VERIFY(a->window->tabGroup());
++        QCOMPARE(a->window->tabGroup()->windows(), (QList<Window *>{a->window, c->window}));
++        b = client(QStringLiteral("golf"), QStringLiteral("Turnover Golf")); QVERIFY(b);
++        QTRY_COMPARE(a->window->tabGroup()->windows(), (QList<Window *>{a->window, b->window, c->window}));
++        QCOMPARE(a->window->tabGroup()->current(), b->window.data());
++        m_memory->freeze();
++    }
++    void untabForgetsOnlyThatMember()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One"));
++        auto b = client(QStringLiteral("two"), QStringLiteral("Two"));
++        auto c = client(QStringLiteral("three"), QStringLiteral("Three")); QVERIFY(a && b && c);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(b->window, a->window));
++        QVERIFY(workspace()->windowTabManager()->groupWindows(c->window, a->window));
++        // The normal shortcut and the titlebar menu both call detach().
++        workspace()->activateWindow(b->window);
++        workspace()->windowTabManager()->detachActiveWindow();
++        QVERIFY(!b->window->tabGroup());
++        a.reset(); b.reset(); c.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        stopMemory(); startMemory();
++        c = client(QStringLiteral("three"), QStringLiteral("Three"));
++        b = client(QStringLiteral("two"), QStringLiteral("Two"));
++        a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a && b && c);
++        QTRY_VERIFY(a->window->tabGroup());
++        QCOMPARE(a->window->tabGroup()->windows(), (QList<Window *>{a->window, c->window}));
++        QVERIFY(!b->window->tabGroup());
++        m_memory->freeze();
++    }
++    void mergingGroupsKeepsClosedMembers()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One"));
++        auto b = client(QStringLiteral("two"), QStringLiteral("Two"));
++        auto c = client(QStringLiteral("three"), QStringLiteral("Three"));
++        auto d = client(QStringLiteral("four"), QStringLiteral("Four")); QVERIFY(a && b && c && d);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(b->window, a->window));
++        QVERIFY(workspace()->windowTabManager()->groupWindows(d->window, c->window));
++        m_memory->save();
++        b.reset(); d.reset();
++        QTRY_COMPARE(waylandServer()->windows().size(), 2);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(c->window, a->window));
++        b = client(QStringLiteral("two"), QStringLiteral("Two"));
++        d = client(QStringLiteral("four"), QStringLiteral("Four")); QVERIFY(b && d);
++        QTRY_VERIFY(a->window->tabGroup() && a->window->tabGroup()->windows().size() == 4);
++        QCOMPARE(a->window->tabGroup(), b->window->tabGroup());
++        QCOMPARE(a->window->tabGroup(), c->window->tabGroup());
++        QCOMPARE(a->window->tabGroup(), d->window->tabGroup());
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject().size(), 1);
++        m_memory->freeze();
++    }
++    void savedGroupsSurviveHistoryPruning()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One"));
++        auto b = client(QStringLiteral("two"), QStringLiteral("Two")); QVERIFY(a && b);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(b->window, a->window));
++        m_memory->save();
++        a.reset(); b.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        stopMemory();
++        auto root = state();
++        auto records = root.value(QStringLiteral("windows")).toArray();
++        for (int i = 0; i < 600; ++i) {
++            auto record = records.first().toObject();
++            record.insert(QStringLiteral("id"), QStringLiteral("old-%1").arg(i));
++            record.insert(QStringLiteral("app"), QStringLiteral("desktop:old-%1").arg(i));
++            record.insert(QStringLiteral("touched"), double(9000000000000LL + i));
++            records.append(record);
++        }
++        root.insert(QStringLiteral("windows"), records);
++        QFile file(path()); QVERIFY(file.open(QIODevice::WriteOnly));
++        file.write(QJsonDocument(root).toJson()); file.close();
++        startMemory(); m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 512);
++        QCOMPARE(state().value(QStringLiteral("groups")).toObject().size(), 1);
++        b = client(QStringLiteral("two"), QStringLiteral("Two"));
++        a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a && b);
++        QTRY_VERIFY(a->window->tabGroup());
++        QCOMPARE(a->window->tabGroup(), b->window->tabGroup());
++        m_memory->freeze();
++    }
++    void missingMonitorAndDesktopStayVisible()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a);
++        position(a.get(), RectF(2130, 700, 680, 480), 2);
++        stopMemory(); a.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        Test::setOutputConfig({Rect(0, 0, 1000, 700)});
++        VirtualDesktopManager::self()->setCount(1);
++        startMemory();
++        a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a);
++        QTRY_COMPARE(a->window->frameGeometry().size(), QSizeF(680, 480));
++        QTRY_VERIFY(RectF(0, 0, 1000, 700).contains(a->window->frameGeometry()));
++        QCOMPARE(a->window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops().first()});
++        QVERIFY(!a->window->isOnAllDesktops());
++    }
++    void allDesktopsAndTransientExclusion()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a);
++        a->window->setOnAllDesktops(true);
++        auto dialog = client(QStringLiteral("one"), QStringLiteral("Dialog"), a->shell.get()); QVERIFY(dialog);
++        stopMemory(); dialog.reset(); a.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 1);
++        startMemory();
++        a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a);
++        QTRY_VERIFY(a->window->isOnAllDesktops());
++    }
++    void explicitRulesTakePriority()
++    {
++        auto a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a);
++        position(a.get(), RectF(1450, 160, 680, 480), 1);
++        stopMemory(); a.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        m_rules->group(QStringLiteral("General")).writeEntry("count", 1);
++        auto rule = m_rules->group(QStringLiteral("1"));
++        rule.writeEntry("wmclass", "one"); rule.writeEntry("wmclassmatch", 1);
++        rule.writeEntry("position", QPoint(50, 60)); rule.writeEntry("positionrule", int(Rules::Force));
++        rule.writeEntry("desktops", QStringList{VirtualDesktopManager::self()->desktops().first()->id()});
++        rule.writeEntry("desktopsrule", int(Rules::Force));
++        rule.writeEntry("screen", 0); rule.writeEntry("screenrule", int(Rules::Force));
++        m_rules->sync(); workspace()->rulebook()->load();
++        startMemory();
++        a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a);
++        m_memory->freeze();
++        QTRY_COMPARE(a->window->frameGeometry().topLeft(), QPointF(50, 60));
++        QCOMPARE(a->window->output(), workspace()->outputs().first());
++        QCOMPARE(a->window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops().first()});
++    }
++    void corruptStateDoesNotAffectNewWindows()
++    {
++        stopMemory();
++        QFile file(path()); QVERIFY(file.open(QIODevice::WriteOnly)); file.write("{broken"); file.close();
++        startMemory();
++        auto a = client(QStringLiteral("one"), QStringLiteral("One")); QVERIFY(a);
++        const RectF desired(190, 180, 640, 470);
++        position(a.get(), desired);
++        m_memory->freeze();
++        QCOMPARE(a->window->frameGeometry(), desired);
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 1);
++    }
++    void persistentSession()
++    {
++        const QString externalFile = qEnvironmentVariable("KWIN_LAYOUT_TEST_FILE");
++        if (!externalFile.isEmpty()) {
++            stopMemory();
++            m_memory = std::make_unique<WindowLayoutMemory>(workspace(), externalFile);
++        }
++        const bool reading = qEnvironmentVariable("KWIN_LAYOUT_TEST_PHASE") == QStringLiteral("read");
++        const RectF saved(1420, 150, 740, 520);
++        auto first = client(reading ? QStringLiteral("lights") : QStringLiteral("golf"), reading ? QStringLiteral("Lights") : QStringLiteral("Golf"));
++        auto second = client(QStringLiteral("kasts"), QStringLiteral("Kasts"));
++        auto third = client(reading ? QStringLiteral("golf") : QStringLiteral("lights"), reading ? QStringLiteral("Golf") : QStringLiteral("Lights"));
++        QVERIFY(first && second && third);
++        if (!reading) {
++            position(first.get(), saved, 1);
++            QVERIFY(workspace()->windowTabManager()->groupWindows(second->window, first->window));
++            QVERIFY(workspace()->windowTabManager()->groupWindows(third->window, first->window));
++            first->window->tabGroup()->select(second->window);
++            QTRY_COMPARE(third->window->frameGeometry(), saved);
++            VirtualDesktopManager::self()->save();
++            kwinApp()->config()->sync();
++            m_memory->freeze();
++        } else {
++            QTRY_VERIFY(third->window->tabGroup());
++            auto group = third->window->tabGroup();
++            QCOMPARE(group->windows(), (QList<Window *>{third->window, second->window, first->window}));
++            QCOMPARE(group->current(), second->window.data());
++            for (Window *window : group->windows()) {
++                QTRY_COMPARE(window->frameGeometry(), saved);
++                QCOMPARE(window->desktops(), QList<VirtualDesktop *>{VirtualDesktopManager::self()->desktops()[1]});
++                QVERIFY(!window->skipTaskbar());
++            }
++            m_memory->freeze();
++        }
++    }
++#if KWIN_BUILD_X11
++    void mixedWaylandAndXwaylandRestore()
++    {
++        auto connection = Test::createX11Connection();
++        QVERIFY(!xcb_connection_has_error(connection.get()));
++        xcb_window_t id = XCB_WINDOW_NONE;
++        auto mapLegacy = [&]() -> Window * {
++            const auto screen = xcb_setup_roots_iterator(xcb_get_setup(connection.get())).data;
++            id = xcb_generate_id(connection.get());
++            xcb_create_window(connection.get(), XCB_COPY_FROM_PARENT, id, screen->root,
++                              40, 50, 600, 400, 0, XCB_WINDOW_CLASS_INPUT_OUTPUT,
++                              XCB_COPY_FROM_PARENT, 0, nullptr);
++            const QByteArray klass("legacy\0LegacyLayoutTest\0", 24);
++            xcb_change_property(connection.get(), XCB_PROP_MODE_REPLACE, id, XCB_ATOM_WM_CLASS,
++                                XCB_ATOM_STRING, 8, klass.size(), klass.constData());
++            const QByteArray title("Legacy");
++            xcb_change_property(connection.get(), XCB_PROP_MODE_REPLACE, id, XCB_ATOM_WM_NAME,
++                                XCB_ATOM_STRING, 8, title.size(), title.constData());
++            QSignalSpy added(workspace(), &Workspace::windowAdded);
++            xcb_map_window(connection.get(), id); xcb_flush(connection.get());
++            if (!added.wait()) return nullptr;
++            return added.last().first().value<Window *>();
++        };
++        auto native = client(QStringLiteral("native"), QStringLiteral("Native")); QVERIFY(native);
++        QPointer<Window> legacy = mapLegacy(); QVERIFY(legacy);
++        const RectF saved(1450, 140, 720, 510);
++        position(native.get(), saved, 1);
++        QVERIFY(workspace()->windowTabManager()->groupWindows(legacy, native->window));
++        native->window->tabGroup()->select(legacy);
++        QTRY_COMPARE(legacy->frameGeometry(), saved);
++        stopMemory(); native.reset();
++        xcb_destroy_window(connection.get(), id); xcb_flush(connection.get());
++        QTRY_VERIFY(!legacy);
++        startMemory();
++        legacy = mapLegacy(); QVERIFY(legacy);
++        native = client(QStringLiteral("native"), QStringLiteral("Native")); QVERIFY(native);
++        QTRY_VERIFY(native->window->tabGroup());
++        QCOMPARE(native->window->tabGroup(), legacy->tabGroup());
++        QCOMPARE(legacy->tabGroup()->current(), legacy.data());
++        QTRY_COMPARE(legacy->frameGeometry(), saved);
++        QVERIFY(!legacy->skipTaskbar()); QVERIFY(!native->window->skipTaskbar());
++        m_memory->freeze();
++        xcb_destroy_window(connection.get(), id); xcb_flush(connection.get());
++        QTRY_VERIFY(!legacy);
++    }
++#endif
++};
++}
++
++WAYLANDTEST_MAIN(KWin::WindowLayoutMemoryTest)
++#include "window_layout_memory_test.moc"
+--- a/src/sm.cpp
++++ b/src/sm.cpp
+@@ -318,13 +318,17 @@
+ {
+     switch (state) {
+     case 0:
++        setState(SessionState::Normal);
++        break;
++    case 1:
+         setState(SessionState::Saving);
+         break;
+-    case 1:
++    case 2:
+         setState(SessionState::Quitting);
+         break;
+     default:
+-        setState(SessionState::Normal);
++        qCWarning(KWIN_CORE) << "Invalid session state from D-Bus:" << state;
++        break;
+     }
+ }
+

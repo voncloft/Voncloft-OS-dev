@@ -625,3 +625,77 @@ Keep every existing tab when adding another window or merging tab groups.
 Check size and decoration compatibility across all members before merging.
 Cover adding third/fourth windows from either menu, group merging, rejection
 of incompatible hidden tabs, and real Kate/Konsole/KWrite grouping.
+
+----------------------------------------------------------------
+
+Date: Sat Oct 31 2026
+
+Version=6.8.2
+Release=6
+
+Synopsis:
+Keep all tabbed applications visible and activatable in the taskbar, including
+Xwayland tabs across minimize/restore. Preserve normal pinned-launcher merging,
+explicit skip-taskbar rules, and the existing Alt+Tab group behavior.
+Add a three-window, one-pinned-application regression using Plasma's taskbar model.
+
+----------------------------------------------------------------
+
+Date: Sun Nov 1 2026
+
+Version=6.8.2
+Release=7
+
+Synopsis:
+Identify existing tab groups by all member titles in the Tab Windows menu,
+for example Group: Turnover Golf + Kasts. Keep a stable label when selecting
+a different tab. Preserve whole-group joining and the release 6 taskbar fix.
+Cover combined labels, literal ampersands, and adding third/fourth windows.
+
+----------------------------------------------------------------
+
+Date: Sun Nov 1 2026
+
+Version=6.8.2
+Release=8
+
+Synopsis:
+Automatically remember normal windows' virtual desktop, monitor, geometry,
+restored size and maximized state. Restore tab groups, tab order and selected
+tab when applications reopen. No settings switches or manual save required.
+Match multiple windows by application, role and title; respect window rules
+and keep windows visible when a monitor or desktop is removed. Save atomically
+and freeze the layout before logout closes applications. Keep the release 6
+per-application taskbar behavior and release 7 combined group menu labels.
+Add integration coverage for restoration, grouping and session lifecycle.
+
+----------------------------------------------------------------
+
+Date: Sun Nov 1 2026
+
+Version=6.8.2
+Release=9
+
+Synopsis:
+Separate automatic layout memory into kwin-window-layout-memory.patch,
+applied after kwin-window-tabs.patch. Keep tabbing, group menu labels and
+taskbar behavior in the tab patch. Add separate layout-memory documentation.
+Both patches together produce the identical compiled and tested release 8
+source; no runtime behavior or settings changes.
+
+----------------------------------------------------------------
+
+Date: Sun Nov 1 2026
+
+Version=6.8.2
+Release=10
+
+Synopsis:
+Fix the KWin session D-Bus state mapping to match Plasma's normal/saving/quitting
+values, so logout cannot resume recording and erase groups as apps close.
+Remember tab membership until explicit detach, including when every app closes.
+Reunite any available members in either launch order; later members join in saved
+order without launching other applications. Preserve closed members when merging
+groups and pruning window history. Keep all changes in the separate layout-memory
+patch, with the window-tabs patch unchanged. Add lifecycle integration regressions
+and verify close/reopen plus logout/login using isolated production compositors.

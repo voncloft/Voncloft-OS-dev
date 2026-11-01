@@ -168,6 +168,20 @@
  }
 
  void Window::setHidden(bool hidden)
+--- a/src/x11window.cpp
++++ b/src/x11window.cpp
+@@ -1219,7 +1219,10 @@
+     }
+     if (isHidden()) {
+         info->setState(NET::Hidden, NET::Hidden);
+-        setSkipTaskbar(true); // Also hide from taskbar
++        // Inactive tabs remain available through their taskbar entries.
++        if (!isHiddenByTabGroup()) {
++            setSkipTaskbar(true);
++        }
+         internalHide();
+         return;
+     }
 --- a/src/workspace.h
 +++ b/src/workspace.h
 @@ -40,6 +40,7 @@
@@ -269,7 +283,7 @@
 
  #include <QCheckBox>
  #include <QFileInfo>
-@@ -287,6 +290,75 @@
+@@ -287,6 +290,85 @@
      m_keepAboveOperation->setCheckable(true);
      m_keepAboveOperation->setData(Options::KeepAboveOp);
 
@@ -297,12 +311,22 @@
 +                candidates.append(target);
 +            }
 +        }
-+        std::stable_sort(candidates.begin(), candidates.end(), [](Window *a, Window *b) {
-+            return QString::localeAwareCompare(a->caption(), b->caption()) < 0;
++        const auto targetLabel = [](Window *target) {
++            if (WindowTabGroup *group = target->tabGroup()) {
++                QStringList titles;
++                for (Window *tab : group->windows()) {
++                    titles.append(tab->caption());
++                }
++                return i18n("Group: %1", titles.join(QStringLiteral(" + ")));
++            }
++            return target->caption();
++        };
++        std::stable_sort(candidates.begin(), candidates.end(), [&targetLabel](Window *a, Window *b) {
++            return QString::localeAwareCompare(targetLabel(a), targetLabel(b)) < 0;
 +        });
 +        for (Window *target : std::as_const(candidates)) {
 +            const QPointer<Window> guardedTarget = target;
-+            QAction *action = tabsMenu->addAction(target->icon(), target->caption().replace(QLatin1Char('&'), QStringLiteral("&&")));
++            QAction *action = tabsMenu->addAction(target->icon(), targetLabel(target).replace(QLatin1Char('&'), QStringLiteral("&&")));
 +            connect(target, &Window::closed, action, [action] { action->setEnabled(false); });
 +            connect(action, &QAction::triggered, this, [defer, guardedTarget] {
 +                defer([guardedTarget](Window *source) {
@@ -345,7 +369,7 @@
      QAction *overflowAction = m_menu->addMenu(advancedMenu);
      overflowAction->setText(i18n("&More Actions"));
      overflowAction->setIcon(QIcon::fromTheme(QStringLiteral("overflow-menu")));
-@@ -822,6 +894,15 @@
+@@ -822,6 +904,15 @@
 
      // PLEASE NOTE: Never change the ID of an existing shortcut! It will cause users'
      // custom shortcuts to be lost. Instead, only change the description
@@ -455,7 +479,7 @@
 +}
 --- /dev/null
 +++ b/src/windowtabgroup.cpp
-@@ -0,0 +1,326 @@
+@@ -0,0 +1,328 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#include "windowtabgroup.h"
 +#include "input.h"
@@ -535,7 +559,9 @@
 +        const bool inactive = window != m_current;
 +        const auto saved = m_saved.value(window);
 +        window->setHiddenByTabGroup(inactive);
-+        window->setTabGroupSkipFlags(inactive || saved.skipTaskbar,
++        // Each application keeps its taskbar entry, including inactive tabs.
++        // Activation through that entry selects the tab in selectForActivation().
++        window->setTabGroupSkipFlags(saved.skipTaskbar,
 +                                    inactive || saved.skipSwitcher,
 +                                    inactive || saved.skipPager);
 +    }
@@ -1009,15 +1035,24 @@
 +#include "moc_tabbeddecoration.cpp"
 --- a/autotests/integration/CMakeLists.txt
 +++ b/autotests/integration/CMakeLists.txt
-@@ -232,3 +232,5 @@
+@@ -232,3 +232,14 @@
  add_subdirectory(effects)
  add_subdirectory(fakes)
  add_subdirectory(activation)
 +
 +integrationTest(NAME testWindowTabGroup SRCS window_tab_group_test.cpp LIBS KDecoration3::KDecoration KF6::I18n)
++
++# Optional end-to-end coverage using Plasma's real taskbar model.
++find_package(LibTaskManager CONFIG QUIET)
++if (TARGET PW::LibTaskManager)
++    add_executable(window_tab_taskbar_probe helper/window_tab_taskbar_probe.cpp)
++    target_link_libraries(window_tab_taskbar_probe PRIVATE PW::LibTaskManager Qt::Test)
++    add_dependencies(testWindowTabGroup window_tab_taskbar_probe)
++    target_compile_definitions(testWindowTabGroup PRIVATE KWIN_TAB_TASKBAR_PROBE="$<TARGET_FILE:window_tab_taskbar_probe>")
++endif()
 --- /dev/null
 +++ b/autotests/integration/window_tab_group_test.cpp
-@@ -0,0 +1,716 @@
+@@ -0,0 +1,802 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#include "kwin_wayland_test.h"
 +#include "decorations/tabbeddecoration.h"
@@ -1058,13 +1093,14 @@
 +        QSize size{500, 300};
 +        bool ignoreResize = false;
 +    };
-+    std::unique_ptr<Client> createClient(Test::XdgToplevel *parent = nullptr)
++    std::unique_ptr<Client> createClient(Test::XdgToplevel *parent = nullptr, const QString &appId = {})
 +    {
 +        auto client = std::make_unique<Client>();
 +        Client *c = client.get();
 +        c->surface = Test::createSurface();
 +        c->shell = Test::createXdgToplevelSurface(c->surface.get(), Test::CreationSetup::CreateOnly);
 +        if (parent) c->shell->set_parent(parent->object());
++        if (!appId.isEmpty()) c->shell->set_app_id(appId);
 +        c->decoration = Test::createXdgToplevelDecorationV1(c->shell.get());
 +        c->decoration->set_mode(Test::XdgToplevelDecorationV1::mode_server_side);
 +        connect(c->shell.get(), &Test::XdgToplevel::configureRequested, c->surface.get(), [c](const QSize &size) {
@@ -1155,7 +1191,7 @@
 +        auto dialog = createClient(a->shell.get()); QVERIFY(dialog);
 +        a->shell->set_title(QStringLiteral("Kate"));
 +        b->shell->set_title(QStringLiteral("Shell & tools — Konsole"));
-+        c->shell->set_title(QStringLiteral("Hidden group member"));
++        c->shell->set_title(QStringLiteral("Hidden & group member"));
 +        d->shell->set_title(QStringLiteral("Other group"));
 +        dialog->shell->set_title(QStringLiteral("Dialog"));
 +        QTRY_COMPARE(b->window->caption(), QStringLiteral("Shell & tools — Konsole"));
@@ -1164,9 +1200,10 @@
 +        b->window->setMinimized(true);
 +        QMenu *menu = openTabMenu(a->window); QVERIFY(menu);
 +        QVERIFY(!menuAction(menu, QStringLiteral("Kate")));
-+        QVERIFY(!menuAction(menu, QStringLiteral("Hidden group member")));
++        QVERIFY(!menuAction(menu, QStringLiteral("Hidden && group member")));
 +        QVERIFY(!menuAction(menu, QStringLiteral("Dialog")));
-+        QVERIFY(menuAction(menu, QStringLiteral("Other group")));
++        QVERIFY(!menuAction(menu, QStringLiteral("Other group")));
++        QVERIFY(menuAction(menu, QStringLiteral("Group: Other group + Hidden && group member")));
 +        QAction *target = menuAction(menu, QStringLiteral("Shell && tools — Konsole"));
 +        QVERIFY(target); QVERIFY(target->isEnabled());
 +        QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(target).center());
@@ -1199,12 +1236,17 @@
 +        group(a.get(), b.get());
 +        QPointer<WindowTabGroup> tabs = b->window->tabGroup();
 +        const auto frame = b->window->frameGeometry();
++        // The group label keeps tab order even when a different tab is selected.
++        tabs->select(a->window);
 +        int count = 2;
 +        for (Client *incoming : {c.get(), d.get()}) {
 +            Window *source = fromGroup ? tabs->current() : incoming->window.data();
 +            Window *target = fromGroup ? incoming->window.data() : tabs->current();
 +            QMenu *menu = openTabMenu(source); QVERIFY(menu);
-+            QAction *action = menuAction(menu, target->caption()); QVERIFY(action);
++            const QString label = fromGroup ? target->caption()
++                : count == 2 ? QStringLiteral("Group: Second + First")
++                             : QStringLiteral("Group: Second + First + Third");
++            QAction *action = menuAction(menu, label); QVERIFY(action);
 +            QTest::mouseClick(menu, Qt::LeftButton, Qt::NoModifier, menu->actionGeometry(action).center());
 +            ++count;
 +            QTRY_VERIFY(incoming->window->tabGroup());
@@ -1290,6 +1332,73 @@
 +        menu = openTabMenu(a->window); QVERIFY(menu);
 +        QVERIFY(!menuAction(menu, QStringLiteral("Target")));
 +    }
++    void threeTaskbarIconsWithOnePinned()
++    {
++#ifndef KWIN_TAB_TASKBAR_PROBE
++        QSKIP("Plasma LibTaskManager is unavailable");
++#else
++        QTemporaryDir state;
++        QVERIFY(state.isValid());
++        const QStringList appIds = {QStringLiteral("org.kde.kwin.test.Golf"),
++                                    QStringLiteral("org.kde.kwin.test.Kate"),
++                                    QStringLiteral("org.kde.kwin.test.Konsole")};
++        for (const QString &appId : appIds) {
++            QFile desktop(state.filePath(appId + QStringLiteral(".desktop")));
++            QVERIFY(desktop.open(QIODevice::WriteOnly));
++            desktop.write("[Desktop Entry]\nType=Application\nName=" + appId.toUtf8()
++                          + "\nExec=/bin/true\nIcon=applications-games\n");
++        }
++        const QString readyFile = state.filePath(QStringLiteral("group-ready"));
++        QByteArray output;
++        QProcess probe;
++        auto env = QProcessEnvironment::systemEnvironment();
++        env.insert(QStringLiteral("WAYLAND_DISPLAY"), waylandServer()->socketName());
++        env.insert(QStringLiteral("QT_QPA_PLATFORM"), QStringLiteral("wayland"));
++        env.insert(QStringLiteral("KWIN_TAB_TASKBAR_READY_FILE"), readyFile);
++        env.insert(QStringLiteral("KWIN_TAB_TASKBAR_DESKTOP_DIR"), state.path());
++        probe.setProcessEnvironment(env);
++        probe.setProcessChannelMode(QProcess::MergedChannels);
++        connect(&probe, &QProcess::readyReadStandardOutput, &probe, [&] { output += probe.readAll(); });
++        probe.start(QString::fromUtf8(KWIN_TAB_TASKBAR_PROBE));
++        QVERIFY(probe.waitForStarted());
++        QTRY_VERIFY_WITH_TIMEOUT(output.contains("TASKBAR_READY"), 10000);
++
++        // Distinct desktop files prevent Plasma's PID/executable fallback
++        // from grouping all three synthetic clients as the test binary.
++        // Publish each identity before mapping, as real applications do.
++        auto golf = createClient(nullptr, state.filePath(appIds[0]));
++        auto kate = createClient(nullptr, state.filePath(appIds[1]));
++        auto konsole = createClient(nullptr, state.filePath(appIds[2]));
++        QVERIFY(golf && kate && konsole);
++        const QList<Window *> windows = {golf->window, kate->window, konsole->window};
++        for (int i = 0; i < windows.size(); ++i) {
++            QTRY_COMPARE(windows[i]->resourceClass(), state.filePath(appIds[i]));
++        }
++        group(golf.get(), kate.get()); group(konsole.get(), kate.get());
++        QCOMPARE(kate->window->tabGroup()->windows().size(), 3);
++        QSet<Window *> activated;
++        bool everyActivatedTabShown = true;
++        QObject connectionContext;
++        const auto connection = connect(workspace(), &Workspace::windowActivated, &connectionContext, [&](Window *window) {
++            if (windows.contains(window)) {
++                activated.insert(window);
++                everyActivatedTabShown &= window->isShown() && window->tabGroup()->current() == window;
++            }
++        });
++        QFile ready(readyFile);
++        QVERIFY(ready.open(QIODevice::WriteOnly));
++        ready.close();
++        QTRY_COMPARE_WITH_TIMEOUT(probe.state(), QProcess::NotRunning, 30000);
++        disconnect(connection);
++        output += probe.readAll();
++        qInfo().noquote() << output;
++        QCOMPARE(probe.exitStatus(), QProcess::NormalExit);
++        QCOMPARE(probe.exitCode(), 0);
++        QCOMPARE(activated.size(), 3);
++        QVERIFY(everyActivatedTabShown);
++        for (Window *window : windows) QVERIFY(!window->skipTaskbar());
++#endif
++    }
 +    void visibilityAndSwitching()
 +    {
 +        auto a = createClient(); auto b = createClient();
@@ -1299,19 +1408,20 @@
 +        QVERIFY(tabs);
 +        QCOMPARE(tabs, b->window->tabGroup());
 +        QVERIFY(a->window->isHidden()); QVERIFY(!b->window->isHidden());
-+        QVERIFY(a->window->skipTaskbar()); QVERIFY(!b->window->skipTaskbar());
++        QVERIFY(!a->window->skipTaskbar()); QVERIFY(!b->window->skipTaskbar());
 +        QVERIFY(a->window->skipSwitcher()); QVERIFY(!b->window->skipSwitcher());
 +        const auto geometry = b->window->frameGeometry();
 +        for (int i = 0; i < 20; ++i) {
 +            tabs->cycle(1);
 +            QCOMPARE(workspace()->activeWindow(), tabs->current());
 +            QVERIFY(tabs->current()->isShown());
++            QVERIFY(!a->window->skipTaskbar()); QVERIFY(!b->window->skipTaskbar());
 +        }
 +        QTRY_COMPARE(a->window->frameGeometry(), geometry);
 +        QTRY_COMPARE(b->window->frameGeometry(), geometry);
 +        workspace()->activateWindow(a->window);
 +        QCOMPARE(tabs->current(), a->window.data());
-+        QVERIFY(!a->window->skipTaskbar()); QVERIFY(b->window->skipTaskbar());
++        QVERIFY(!a->window->skipTaskbar()); QVERIFY(!b->window->skipTaskbar());
 +    }
 +#if KWIN_BUILD_TABBOX && KWIN_BUILD_GLOBALSHORTCUTS
 +    void keyboardGroupingControls()
@@ -1555,6 +1665,17 @@
 +        QTRY_COMPARE(legacy->frameGeometry(), native->window->frameGeometry());
 +        legacy->tabGroup()->select(native->window);
 +        QVERIFY(legacy->isHidden()); QVERIFY(native->window->isShown());
++        QVERIFY(!legacy->skipTaskbar()); QVERIFY(!native->window->skipTaskbar());
++        // Visibility updates such as minimizing must not lose an Xwayland tab's icon.
++        native->window->setMinimized(true);
++        QTRY_VERIFY(legacy->isMinimized());
++        QVERIFY(!legacy->skipTaskbar()); QVERIFY(!native->window->skipTaskbar());
++        workspace()->activateWindow(legacy);
++        QTRY_COMPARE(workspace()->activeWindow(), legacy.data());
++        QCOMPARE(legacy->tabGroup()->current(), legacy.data());
++        QVERIFY(!legacy->isMinimized()); QVERIFY(!native->window->isMinimized());
++        legacy->tabGroup()->select(native->window);
++        QVERIFY(!legacy->skipTaskbar());
 +        xcb_destroy_window(connection.get(), id);
 +        xcb_flush(connection.get());
 +        QTRY_VERIFY(!native->window->tabGroup());
@@ -1734,3 +1855,70 @@
 +}
 +WAYLANDTEST_MAIN(KWin::WindowTabGroupTest)
 +#include "window_tab_group_test.moc"
+--- /dev/null
++++ b/autotests/integration/helper/window_tab_taskbar_probe.cpp
+@@ -0,0 +1,64 @@
++/* SPDX-License-Identifier: GPL-2.0-or-later */
++#include <QFile>
++#include <QDir>
++#include <QTest>
++#include <QUrl>
++#include <abstracttasksmodel.h>
++#include <tasksmodel.h>
++
++using namespace TaskManager;
++
++class WindowTabTaskbarProbe : public QObject
++{
++    Q_OBJECT
++private Q_SLOTS:
++    void threeTabsWithOnePinnedApplication()
++    {
++        const QStringList appIds = {QStringLiteral("org.kde.kwin.test.Golf"),
++                                    QStringLiteral("org.kde.kwin.test.Kate"),
++                                    QStringLiteral("org.kde.kwin.test.Konsole")};
++        const QDir directory(qEnvironmentVariable("KWIN_TAB_TASKBAR_DESKTOP_DIR"));
++        const QString launcher = directory.filePath(appIds.first() + QStringLiteral(".desktop"));
++        QVERIFY(QFile::exists(launcher));
++
++        TasksModel model;
++        model.setHideActivatedLaunchers(true);
++        model.setSeparateLaunchers(true);
++        model.setLaunchInPlace(true);
++        model.setSortMode(TasksModel::SortManual);
++        model.setGroupMode(TasksModel::GroupApplications);
++        model.setLauncherList({QUrl::fromLocalFile(launcher).toString()});
++
++        auto indexForApp = [&model](const QString &appId) {
++            for (int row = 0; row < model.rowCount(); ++row) {
++                const auto index = model.index(row, 0);
++                if (index.data(AbstractTasksModel::AppId).toString() == appId) return index;
++            }
++            return QModelIndex();
++        };
++        // Start like a real panel: subscribe before the application windows open.
++        QTRY_COMPARE(model.rowCount(), 1);
++        qInfo() << "TASKBAR_READY";
++        const QString readyFile = qEnvironmentVariable("KWIN_TAB_TASKBAR_READY_FILE");
++        QVERIFY(!readyFile.isEmpty());
++        QTRY_VERIFY_WITH_TIMEOUT(QFile::exists(readyFile), 15000);
++        QTRY_COMPARE(model.rowCount(), 3);
++        QCOMPARE(model.launcherList().size(), 1);
++        for (int turn = 0; turn < 18; ++turn) {
++            for (const QString &id : appIds) {
++                QTRY_VERIFY(indexForApp(id).isValid());
++                const auto index = indexForApp(id);
++                QVERIFY(index.data(AbstractTasksModel::IsWindow).toBool());
++                QVERIFY(!index.data(AbstractTasksModel::IsLauncher).toBool());
++                QCOMPARE(index.data(AbstractTasksModel::HasLauncher).toBool(), id == appIds.first());
++            }
++            const QString id = appIds.at(turn % appIds.size());
++            model.requestActivate(indexForApp(id));
++            QTRY_VERIFY(indexForApp(id).data(AbstractTasksModel::IsActive).toBool());
++            QCOMPARE(model.rowCount(), 3);
++        }
++    }
++};
++
++QTEST_MAIN(WindowTabTaskbarProbe)
++#include "window_tab_taskbar_probe.moc"

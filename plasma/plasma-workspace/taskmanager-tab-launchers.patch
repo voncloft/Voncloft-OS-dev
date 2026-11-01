@@ -1,0 +1,186 @@
+--- a/libtaskmanager/taskfilterproxymodel.cpp
++++ b/libtaskmanager/taskfilterproxymodel.cpp
+@@ -86,6 +86,9 @@
+         if ((d->hideActivatedLaunchers
+              && (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId)
+                  || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)
++                 // Switching a KWin window tab changes SkipTaskbar without changing
++                 // application identity. Re-evaluate the matching launcher as well.
++                 || (d->filterSkipTaskbar && roles.contains(AbstractTasksModel::SkipTaskbar))
+                  // Launchers are hidden based on windows passing the other filters, so re-check them when a window changes screen.
+                  || (d->filterByScreen && roles.contains(AbstractTasksModel::ScreenGeometry))))) {
+             invalidateFilter();
+--- a/libtaskmanager/autotests/CMakeLists.txt
++++ b/libtaskmanager/autotests/CMakeLists.txt
+@@ -10,6 +10,7 @@
+
+ ecm_add_tests(
+     tasktoolstest.cpp
++    taskfilterproxymodeltest.cpp
+     launchertasksmodeltest.cpp
+     LINK_LIBRARIES taskmanager Qt::Test KF6::Service KF6::ConfigCore
+ )
+--- /dev/null
++++ b/libtaskmanager/autotests/taskfilterproxymodeltest.cpp
+@@ -0,0 +1,161 @@
++/*
++    SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
++*/
++
++#include "abstracttasksmodel.h"
++#include "taskfilterproxymodel.h"
++
++#include <QAbstractItemModelTester>
++#include <QStandardItemModel>
++#include <QTest>
++
++using namespace TaskManager;
++
++class TaskFilterProxyModelTest : public QObject
++{
++    Q_OBJECT
++
++    static QStandardItem *addTask(QStandardItemModel &source, const QString &appId, bool launcher, bool hidden = false)
++    {
++        auto *item = new QStandardItem(appId);
++        item->setData(appId, AbstractTasksModel::AppId);
++        item->setData(launcher, AbstractTasksModel::IsLauncher);
++        item->setData(!launcher, AbstractTasksModel::IsWindow);
++        item->setData(hidden, AbstractTasksModel::SkipTaskbar);
++        source.appendRow(item);
++        return item;
++    }
++
++private Q_SLOTS:
++    void pinnedLauncherFollowsTabVisibility_data()
++    {
++        QTest::addColumn<bool>("initialHidden");
++        QTest::addColumn<bool>("launcherFirst");
++        QTest::newRow("hidden-tab-launcher-first") << true << true;
++        QTest::newRow("visible-tab-launcher-first") << false << true;
++        QTest::newRow("hidden-tab-window-first") << true << false;
++        QTest::newRow("visible-tab-window-first") << false << false;
++    }
++
++    void pinnedLauncherFollowsTabVisibility()
++    {
++        QFETCH(bool, initialHidden);
++        QFETCH(bool, launcherFirst);
++        QStandardItemModel source;
++        const QString appId = QStringLiteral("io.voncloft.TurnoverGolf");
++        if (launcherFirst) {
++            addTask(source, appId, true);
++        }
++        auto *window = addTask(source, appId, false, initialHidden);
++        if (!launcherFirst) {
++            addTask(source, appId, true);
++        }
++        TaskFilterProxyModel filter;
++        filter.setSourceModel(&source);
++        QAbstractItemModelTester tester(&filter, QAbstractItemModelTester::FailureReportingMode::QtTest);
++        QCOMPARE(filter.rowCount(), 1);
++        QCOMPARE(filter.index(0, 0).data(AbstractTasksModel::IsLauncher).toBool(), initialHidden);
++
++        // Switching back and forth must always leave exactly one matching icon.
++        bool hidden = initialHidden;
++        for (int i = 0; i < 12; ++i) {
++            hidden = !hidden;
++            window->setData(hidden, AbstractTasksModel::SkipTaskbar);
++            QCOMPARE(filter.rowCount(), 1);
++            QCOMPARE(filter.index(0, 0).data(AbstractTasksModel::IsLauncher).toBool(), hidden);
++        }
++    }
++
++    void switchingDifferentApplications()
++    {
++        QStandardItemModel source;
++        QList<QStandardItem *> windows;
++        for (const QString &id : {QStringLiteral("golf"), QStringLiteral("kate"), QStringLiteral("konsole")}) {
++            addTask(source, id, true);
++            windows.append(addTask(source, id, false, windows.size() != 0));
++        }
++        TaskFilterProxyModel filter;
++        filter.setSourceModel(&source);
++        QAbstractItemModelTester tester(&filter, QAbstractItemModelTester::FailureReportingMode::QtTest);
++        auto checkIcons = [&] {
++            QCOMPARE(filter.rowCount(), 3);
++            QSet<QString> appIds;
++            int visibleWindows = 0;
++            for (int row = 0; row < filter.rowCount(); ++row) {
++                const auto index = filter.index(row, 0);
++                appIds.insert(index.data(AbstractTasksModel::AppId).toString());
++                visibleWindows += index.data(AbstractTasksModel::IsWindow).toBool();
++            }
++            QCOMPARE(appIds.size(), 3);
++            QCOMPARE(visibleWindows, 1);
++        };
++        checkIcons();
++        for (int turn = 1; turn <= 12; ++turn) {
++            // KWin updates the group in insertion order, not activation order.
++            for (int i = 0; i < windows.size(); ++i) {
++                windows[i]->setData(i != turn % windows.size(), AbstractTasksModel::SkipTaskbar);
++            }
++            checkIcons();
++        }
++        // Detaching the group exposes all windows, with no duplicate launchers.
++        for (auto *window : windows) {
++            window->setData(false, AbstractTasksModel::SkipTaskbar);
++        }
++        QCOMPARE(filter.rowCount(), 3);
++        for (int row = 0; row < filter.rowCount(); ++row) {
++            QVERIFY(filter.index(row, 0).data(AbstractTasksModel::IsWindow).toBool());
++        }
++    }
++
++    void anotherWindowKeepsLauncherHidden()
++    {
++        QStandardItemModel source;
++        const QString appId = QStringLiteral("golf");
++        addTask(source, appId, true);
++        auto *first = addTask(source, appId, false);
++        auto *second = addTask(source, appId, false);
++        TaskFilterProxyModel filter;
++        filter.setSourceModel(&source);
++        QCOMPARE(filter.rowCount(), 2);
++        first->setData(true, AbstractTasksModel::SkipTaskbar);
++        QCOMPARE(filter.rowCount(), 1);
++        QVERIFY(filter.index(0, 0).data(AbstractTasksModel::IsWindow).toBool());
++        second->setData(true, AbstractTasksModel::SkipTaskbar);
++        QCOMPARE(filter.rowCount(), 1);
++        QVERIFY(filter.index(0, 0).data(AbstractTasksModel::IsLauncher).toBool());
++        first->setData(false, AbstractTasksModel::SkipTaskbar);
++        QCOMPARE(filter.rowCount(), 1);
++        QVERIFY(filter.index(0, 0).data(AbstractTasksModel::IsWindow).toBool());
++    }
++
++    void optionalFiltering_data()
++    {
++        QTest::addColumn<bool>("hideActivatedLaunchers");
++        QTest::addColumn<bool>("filterSkipTaskbar");
++        QTest::newRow("show-launchers") << false << true;
++        QTest::newRow("show-skipped-windows") << true << false;
++        QTest::newRow("show-both") << false << false;
++    }
++
++    void optionalFiltering()
++    {
++        QFETCH(bool, hideActivatedLaunchers);
++        QFETCH(bool, filterSkipTaskbar);
++        QStandardItemModel source;
++        addTask(source, QStringLiteral("golf"), true);
++        auto *window = addTask(source, QStringLiteral("golf"), false);
++        TaskFilterProxyModel filter;
++        filter.setHideActivatedLaunchers(hideActivatedLaunchers);
++        filter.setFilterSkipTaskbar(filterSkipTaskbar);
++        filter.setSourceModel(&source);
++        QCOMPARE(filter.rowCount(), hideActivatedLaunchers ? 1 : 2);
++        window->setData(true, AbstractTasksModel::SkipTaskbar);
++        QCOMPARE(filter.rowCount(), filterSkipTaskbar || hideActivatedLaunchers ? 1 : 2);
++        window->setData(false, AbstractTasksModel::SkipTaskbar);
++        QCOMPARE(filter.rowCount(), hideActivatedLaunchers ? 1 : 2);
++    }
++};
++
++QTEST_MAIN(TaskFilterProxyModelTest)
++
++#include "taskfilterproxymodeltest.moc"

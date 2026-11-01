@@ -586,3 +586,16 @@ Release=2
 
 Synopsis:
 Upgraded from version 6.8.1 to version 6.8.2
+
+----------------------------------------------------------------
+
+Date: Sat Oct 31 2026
+
+Version=6.8.2
+Release=3
+
+Synopsis:
+Refresh matching pinned launchers when a window's SkipTaskbar state changes.
+Fix duplicate or missing taskbar icons when switching KWin window tabs.
+Include regression coverage for repeated switches, multiple applications,
+multiple windows of one application, detaching tabs, and optional filtering.
