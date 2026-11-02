@@ -2,7 +2,7 @@
 # depends : cmake ninja qt6
 
 name=velvet-casino
-version=1.0.17.git20261102125120.g09cd53a8556e0cbd3d981be838c621e4d1b78ce6
+version=1.0.18.git20261102125939.g3cf5731c8475a33ba8ee7c5ef9a329ab8728216e
 release=1
 _commit=${version##*.g}
 source="$name-$_commit.tar.gz::https://github.com/voncloft/Velvet_casino/archive/$_commit.tar.gz
