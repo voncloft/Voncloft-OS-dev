@@ -219,6 +219,7 @@ d:kmix
 d:dolphin
 d:k3b
 d:kiriki
+d:velvet-casino
 d:kcalc
 d:skanlite
 d:akonadi-import-wizard
@@ -808,6 +809,12 @@ f:bdf8d511ed5780021c6b68101728264b:k3b/CHANGELOG
 f:176011b514dbed9ae7c078cce6c089a5:k3b/spkgbuild
 f:b977fe02179f23de633c3d5e02e12538:kiriki/CHANGELOG
 f:21ba7ebaf7ef965ba455c95f6101b4be:kiriki/spkgbuild
+f:584254235444e8a92e5bf8f59b53a79f:velvet-casino/.pkgfiles
+f:c8d634a627d6344e8c338072e829821d:velvet-casino/CHANGELOG
+f:2b650df23c2dfea62a9784b7e3c40255:velvet-casino/io.voncloft.VelvetCasino.desktop
+f:9e30da325f1b65c65437168d73c370f6:velvet-casino/spkgbuild
+f:660b419377186af7964c0ce7a44c318b:velvet-casino/override
+f:72bb148ef9d549a444150b1aac9cabfb:velvet-casino/.checksums
 f:42bc1a7b8932b870edf1f6220dff92e3:kcalc/.pkgfiles
 f:0451250a94c606a1107f304d392b514e:kcalc/CHANGELOG
 f:ccffaac1cf073ebf6911f966cff01617:kcalc/spkgbuild

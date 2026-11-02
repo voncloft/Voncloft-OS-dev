@@ -1,0 +1,2 @@
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.17.git20261102125120.g09cd53a8556e0cbd3d981be838c621e4d1b78ce6\| kde-apps/velvet-casino/spkgbuild # update-repo-version 1.0.16.git20261102121506.g69a592ae59d201c94ba50301a897b46e81052895 1.0.17.git20261102125120.g09cd53a8556e0cbd3d981be838c621e4d1b78ce6
+bash /usr/libexec/update-repo/changelog kde-apps/velvet-casino/spkgbuild Changed\ from\ version\ 1.0.16.git20261102121506.g69a592ae59d201c94ba50301a897b46e81052895\ to\ version\ 1.0.17.git20261102125120.g09cd53a8556e0cbd3d981be838c621e4d1b78ce6
