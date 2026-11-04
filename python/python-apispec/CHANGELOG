@@ -277,3 +277,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 6.8.2 to version 6.10.0
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:55 AM EST 2026
+
+Version=6.10.1
+Release=3
+
+Synopsis:
+Changed from version 6.10.0 to version 6.10.1

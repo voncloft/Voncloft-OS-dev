@@ -2,7 +2,7 @@
 # depends : python python-pip python-certifi
 
 name=python-pipenv
-version=2026.10.4
+version=2026.10.5
 release=1
 
 _name=${name#python-}

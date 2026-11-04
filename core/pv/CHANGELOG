@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.6.6 to version 1.12.0
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:54 AM EST 2026
+
+Version=1.12.7
+Release=1
+
+Synopsis:
+Changed from version 1.12.0 to version 1.12.7

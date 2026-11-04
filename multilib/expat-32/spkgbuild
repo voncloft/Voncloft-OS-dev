@@ -2,7 +2,7 @@
 # depends	: expat
 
 name=expat-32
-version=2.9.0
+version=2.10.0
 release=1
 _name=${name%-32}
 source="https://downloads.sourceforge.net/project/${_name}/${_name}/${version}/${_name}-${version}.tar.xz"

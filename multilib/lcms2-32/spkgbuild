@@ -2,7 +2,7 @@
 # depends	: lcms2
 
 name=lcms2-32
-version=2.19.1
+version=2.20
 release=1
 _name=${name%-32}
 source="https://downloads.sourceforge.net/project/lcms/lcms/${version}/${_name}-${version}.tar.gz"

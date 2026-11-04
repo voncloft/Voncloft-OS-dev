@@ -2,7 +2,7 @@
 # description	: Collection of modular and reusable compiler and toolchain technologies
 
 name=llvm
-version=23.1.4
+version=23.1.5
 release=2
 options="!checksum"
 _name=llvm-project

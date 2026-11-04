@@ -25,9 +25,9 @@ d:tuner/test/Driver85
 d:tuner/test/Driver85/64bit
 d:dropbox
 f:6a88c6894d8e09120ef1d48004c3c550:veracrypt/no-makeself.patch
-f:4392e4a1b01441b2060c33a73aa1a8a3:veracrypt/CHANGELOG
+f:846925acea407fbfcf59efd3212153a7:veracrypt/CHANGELOG
 f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
-f:6085069de5dd74824871867fbc538447:veracrypt/spkgbuild
+f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
 f:58d43b27b1195030c8875239e92efea9:firefox-bin/CHANGELOG
@@ -69,9 +69,9 @@ f:9157026032cfa499d823b55b258c8fce:virtualbox-guest-utils/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-utils/override
 f:119f437d4911f637fa586b5eda9aab29:virtualbox-guest-utils/pre-install.sh
 f:89fb28a484e7f5126839e83f10de377a:firefox/pre-upgrade.sh
-f:5b96c97d52faa5a45d844ee8f62d4d09:firefox/CHANGELOG
+f:acade47b5395177370381fe434ad582a:firefox/CHANGELOG
 f:37db9ec3cc336d3a09ede8becec2ad69:firefox/fix-ftbfs-newer-cbindgen.patch
-f:8c6ba50837a66fe05a1cb5247cc5e5db:firefox/spkgbuild
+f:83b163e850e37fa4a26906bc7bf64b24:firefox/spkgbuild
 f:a4a0f7c9c1e3424463670d031976aa67:firefox/override
 f:971c77648caea312fca2d9340c4382a6:firefox/firefox.desktop
 f:75aae82b7b33d79bcec25c8783f3ed5c:spotify/spotify
@@ -115,9 +115,9 @@ f:4b1645c2d3f85426435736c60f928375:wps-office/override
 f:a4a1eeafa7bcc4532cdff3473234a471:pandoc-bin/CHANGELOG
 f:b00d8a59eb31ca3574456f6af6278e3c:pandoc-bin/spkgbuild
 f:893d63e191bf450550d28cdb864170f0:vscode-bin/visual-studio-code-url-handler.desktop
-f:ce2de8de209857fde97fac977c2ffc14:vscode-bin/CHANGELOG
+f:55fd1d9da6bc5ffe78f42901f64431fa:vscode-bin/CHANGELOG
 f:afe04352e57ca51932e0a1b8eb32e25b:vscode-bin/visual-studio-code.desktop
-f:d0cf2f907dea924a75f3fedc92a0d71e:vscode-bin/spkgbuild
+f:7fa8ab3fbf8edc70f689cfb34787b5e4:vscode-bin/spkgbuild
 f:93babcf9e9fc18636c2ddcff63a99440:vscode-bin/override
 f:2965d6561c4c4473e1e392a20f5e61cb:icecat-bin/icecat.desktop
 f:5c498b31bd52c1f1d92c8d7da27c5d6f:icecat-bin/icecat-safe.desktop

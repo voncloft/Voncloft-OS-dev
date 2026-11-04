@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.11 to version 2.19.1
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:55 AM EST 2026
+
+Version=2.20
+Release=1
+
+Synopsis:
+Changed from version 2.19.1 to version 2.20

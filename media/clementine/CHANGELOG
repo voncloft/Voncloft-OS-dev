@@ -49,3 +49,13 @@ Release=3
 Synopsis:
 Depend on projectm-presets so the bundled visualization engine has its runtime data.
 The projectM engine alone does not install presets on Linux.
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:55 AM EST 2026
+
+Version=1.4.4
+Release=3
+
+Synopsis:
+Changed from version 1.4.3 to version 1.4.4

@@ -1,0 +1,23 @@
+# description : Blackjack and poker with computer opponents, network players, card themes, and bundled sound effects
+# depends : cmake ninja qt6
+
+name=voncloft-casino
+version=1.0.19.git20261102134323.g60746f9f9cc1726fc1e0db38a4a5fb434ff9e3fc
+release=1
+_commit=${version##*.g}
+source="$name-$_commit.tar.gz::https://github.com/voncloft/Voncloft-Casino/archive/$_commit.tar.gz"
+
+build() {
+    : "${PKG:?Package staging directory is required}"
+    cd "Voncloft-Casino-$_commit"
+    cmake -S . -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_TESTING=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
+    install -Dm644 LICENSE "$PKG/usr/share/licenses/$name/LICENSE"
+    install -Dm644 licenses/Kenney-Casino-Audio.txt "$PKG/usr/share/licenses/$name/Kenney-Casino-Audio.txt"
+    install -Dm644 licenses/Freesound-Intro.txt "$PKG/usr/share/licenses/$name/Freesound-Intro.txt"
+    install -Dm644 licenses/Pixabay-Sounds.md "$PKG/usr/share/licenses/$name/Pixabay-Sounds.md"
+}

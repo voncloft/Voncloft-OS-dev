@@ -2,7 +2,7 @@
 # depends : python python-sip python-packaging python-setuptools python-wheel
 
 name=python-pyqt-builder
-version=1.20.3
+version=1.21.0
 release=1
 _name=pyqt_builder
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"

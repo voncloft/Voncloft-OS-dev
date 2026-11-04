@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules gst-plugins-base gstreamer kde-deps-installer libomemo-c openssl qt6
 
 name=qxmpp
-version=1.17.0
+version=1.17.1
 release=2
 options="!checksum"
 source="${name}-${version}.tar.gz::https://invent.kde.org/libraries/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"

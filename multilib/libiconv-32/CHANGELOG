@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.18 to version 1.19
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:55 AM EST 2026
+
+Version=1.19.1
+Release=1
+
+Synopsis:
+Changed from version 1.19 to version 1.19.1

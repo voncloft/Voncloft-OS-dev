@@ -162,8 +162,8 @@ f:a14f209998948b5bd4c48878c22a781e:qqc2-breeze-style/.pkgfiles
 f:cd0a4a9b995c19fe726d3974e1c49f51:qqc2-breeze-style/CHANGELOG
 f:3183769f459dc24c5bd5914c918c9849:qqc2-breeze-style/spkgbuild
 f:f7bcfb5d24a448f29412904ee48e7c80:kgamma/.pkgfiles
-f:6d4181366e59b825b723081c8dbd440a:kgamma/CHANGELOG
-f:7dafa374515be2eb3a03b6d46c731f57:kgamma/spkgbuild
+f:1f5027c8b85d77ad5bfc4cbe46d75f2e:kgamma/CHANGELOG
+f:9a6f51a2f55ec2549447864a6c397ced:kgamma/spkgbuild
 f:3ba1a2c5473253b83e4ba6d6ee7d44df:kgamma/override
 f:f36f0afa93868877266b208b4e7b4bbf:drkonqi/CHANGELOG
 f:8c00976af5a98d60ec3ec93ba7e8abbd:drkonqi/spkgbuild
@@ -214,8 +214,8 @@ f:121b345f0c2aefea4071e6726e5b7773:breeze/spkgbuild
 f:ca519ef2c5cb448770846fa39e1adeab:kgamma5/CHANGELOG
 f:b442189cd7d20cce4c108fdf8c1e1e6c:kgamma5/spkgbuild
 f:c741af439e5e2c96c7e59095b4de7a8d:kwin-x11/.pkgfiles
-f:6d479cf1941f78488374a8e8310414c3:kwin-x11/CHANGELOG
-f:1be80e1217b95b962c068410f302078f:kwin-x11/spkgbuild
+f:d1fb32e969fbd0e72519ae6629b5a767:kwin-x11/CHANGELOG
+f:a85b3fb74f921662a109433adb443f14:kwin-x11/spkgbuild
 f:99b02aa334d54ee6d6b3b6498b9aab3e:kwin-x11/override
 f:678d55da5c5393df774f9ee696d62e87:plasma5support/.pkgfiles
 f:78716252b39fedba57b9256d7012e147:plasma5support/CHANGELOG

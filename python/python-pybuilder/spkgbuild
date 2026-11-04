@@ -2,7 +2,7 @@
 # depends : python-pip python-pypandoc python-tailer python-tblib python-twine python-wheel
 
 name=python-pybuilder
-version=0.13.24
+version=0.13.25
 release=4
 
 _name=${name#python-}

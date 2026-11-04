@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.397 to version 0.412
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:54 AM EST 2026
+
+Version=0.413
+Release=1
+
+Synopsis:
+Changed from version 0.412 to version 0.413

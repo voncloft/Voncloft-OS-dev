@@ -4,7 +4,7 @@
 # description : Legacy Plasma X11 window manager and compositor with window rules and desktop effects
 
 name=kwin-x11
-version=6.7.5
+version=6.7.6
 release=1
 
 source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"

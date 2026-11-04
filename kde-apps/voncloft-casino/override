@@ -1,6 +1,6 @@
 # Track master commits: upstream does not publish release tags.
 # Only report uversion; update-repo owns the version= edit, including in test mode.
-_upstream_repo=Velvet_casino
+_upstream_repo=Voncloft-Casino
 source="https://raw.githubusercontent.com/voncloft/$_upstream_repo/master/CMakeLists.txt"
 # update-repo sources this again immediately before its fetch.
 url="https://api.github.com/repos/voncloft/$_upstream_repo/commits?sha=master&per_page=1"

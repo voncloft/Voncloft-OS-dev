@@ -27,3 +27,28 @@ Release=1
 
 Synopsis:
 Changed from version 1.0.17.git20261102125120.g09cd53a8556e0cbd3d981be838c621e4d1b78ce6 to version 1.0.18.git20261102125939.g3cf5731c8475a33ba8ee7c5ef9a329ab8728216e
+
+
+----------------------------------------------------------------
+
+Date: Mon Nov 02 2026
+
+voncloft-casino
+Version=1.0.19.git20261102132105.gbe9a4cd794aed44fa571423f26ce36214b9092be
+Release=1
+
+Synopsis:
+Renamed the package and upstream to voncloft-casino / voncloft/Voncloft-Casino.
+In-game branding reads Voncloft Casino. Preserve existing profiles and aliases.
+Use the desktop entry installed by CMake and the default bundled sound pack;
+no CASINO_SOUND_DIR option is needed. Track the new upstream in override.
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:54 AM EST 2026
+
+Version=1.0.19.git20261102134323.g60746f9f9cc1726fc1e0db38a4a5fb434ff9e3fc
+Release=1
+
+Synopsis:
+Changed from version 1.0.19.git20261102132105.gbe9a4cd794aed44fa571423f26ce36214b9092be to version 1.0.19.git20261102134323.g60746f9f9cc1726fc1e0db38a4a5fb434ff9e3fc

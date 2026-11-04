@@ -219,7 +219,6 @@ d:kmix
 d:dolphin
 d:k3b
 d:kiriki
-d:velvet-casino
 d:kcalc
 d:skanlite
 d:akonadi-import-wizard
@@ -227,6 +226,7 @@ d:kmouth
 d:akregator
 d:keditbookmarks
 d:khtml
+d:voncloft-casino
 d:ksudoku
 d:incidenceeditor
 d:subtitlecomposer
@@ -357,6 +357,7 @@ f:e4943d93aa71e242947f22cedea68c05:ktp-contact-runner/spkgbuild
 f:88f924eb1b7b6b0f6809ab55aefbd037:akonadi-search/.pkgfiles
 f:f5e069c997747502c0ca9c5f033cc747:akonadi-search/CHANGELOG
 f:4edab03cbd7e2173c70883d8be893839:akonadi-search/spkgbuild
+f:0114cdadf4a0649462eb5077ef95cd80:kio-admin/.pkgfiles
 f:ea500ce04394772d42e011ca001b10bc:kio-admin/CHANGELOG
 f:48498fc770de2c81d1ac20f50deac0e5:kio-admin/spkgbuild
 f:8a076f892fb52dcd738ee5501314c21c:libksane/.pkgfiles
@@ -374,7 +375,8 @@ f:05fc5875abb65c2db130967cb5c24d91:kfind/CHANGELOG
 f:4fdde894b57d5e962d7dbd2ceb8f57ec:kfind/spkgbuild
 f:459684558e56d0bde8a785ab2b96dc57:kapman/CHANGELOG
 f:98ed613330c87dd76577f58ba32ee789:kapman/spkgbuild
-f:f81c12b7f5a6a0bad7d8e4f38e57bd74:kst/spkgbuild
+f:c8f7785f8551d7e874cad90c9e9b9f32:kst/CHANGELOG
+f:b71b66264ef12d8c19816e8eb8262286:kst/spkgbuild
 f:7463e1e4c80a972055a985cc9e352665:kst/override
 f:8847126fca537e9a0be0ad1f0f5999d8:kolourpaint/.pkgfiles
 f:2d3ab7383542caa00ec8c6386b8b24b8:kolourpaint/CHANGELOG
@@ -809,12 +811,6 @@ f:bdf8d511ed5780021c6b68101728264b:k3b/CHANGELOG
 f:176011b514dbed9ae7c078cce6c089a5:k3b/spkgbuild
 f:b977fe02179f23de633c3d5e02e12538:kiriki/CHANGELOG
 f:21ba7ebaf7ef965ba455c95f6101b4be:kiriki/spkgbuild
-f:584254235444e8a92e5bf8f59b53a79f:velvet-casino/.pkgfiles
-f:c1300aa12b761b45af4077e95b31c84e:velvet-casino/CHANGELOG
-f:2b650df23c2dfea62a9784b7e3c40255:velvet-casino/io.voncloft.VelvetCasino.desktop
-f:0c62226c75572297662f99b1974dd494:velvet-casino/spkgbuild
-f:660b419377186af7964c0ce7a44c318b:velvet-casino/override
-f:72bb148ef9d549a444150b1aac9cabfb:velvet-casino/.checksums
 f:42bc1a7b8932b870edf1f6220dff92e3:kcalc/.pkgfiles
 f:0451250a94c606a1107f304d392b514e:kcalc/CHANGELOG
 f:ccffaac1cf073ebf6911f966cff01617:kcalc/spkgbuild
@@ -830,6 +826,10 @@ f:9697eda6a8fc3a37bf9fca22cf56c054:keditbookmarks/CHANGELOG
 f:c3358ea9d54f2d8ddb7892fe1fbb16e1:keditbookmarks/spkgbuild
 f:fc2ff1fd1defeade0093e0c8ecf7ade0:khtml/CHANGELOG
 f:41b1e884c8c83fea12df2142a9bc5971:khtml/spkgbuild
+f:0d32ea0cf1cff88a4c70c73d1af5eede:voncloft-casino/.pkgfiles
+f:85854d66a54556d97add0ef01609aa1a:voncloft-casino/CHANGELOG
+f:6368478674ff507486ca479bee006ead:voncloft-casino/spkgbuild
+f:a200f19fdb7ee627240ae94c360cae97:voncloft-casino/override
 f:46e610dfad2e20d8c42b2a5e46dd7524:ksudoku/.pkgfiles
 f:3ba6cf007fd49492d948d3b08e6b21b2:ksudoku/CHANGELOG
 f:6847fc22184f28990e31b674be3891de:ksudoku/spkgbuild

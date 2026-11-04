@@ -345,8 +345,8 @@ f:51fc6d41b3fa835f7e959803191bd555:findutils/spkgbuild
 f:8ca7e1a9cc2e705e1120644f019e8cac:gawk/.pkgfiles
 f:a31bb0256525ae505ac391fa1e96d32d:gawk/CHANGELOG
 f:b8fd2b3aec21a76d470439836f3de668:gawk/spkgbuild
-f:fffc60d7efe55878a44ad9ea58f5d6e1:expat/CHANGELOG
-f:377e45637b00864bcf80e65a989425b1:expat/spkgbuild
+f:b85ceec6edf5445016fa2573cec478d0:expat/CHANGELOG
+f:957799fc37f26dc01aae316af9a9b2a6:expat/spkgbuild
 f:295f5946a96ae40947328e15e629e30f:expat/override
 f:f74b2a0cf1215e1a469a6734bcfb3d0d:patch/.pkgfiles
 f:c0d9642accb8d5f8a8806c3f489b4c90:patch/CHANGELOG

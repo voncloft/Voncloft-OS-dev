@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 6.9.11.29 to version 6.9.13.59
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:54 AM EST 2026
+
+Version=6.9.13.60
+Release=1
+
+Synopsis:
+Changed from version 6.9.13.59 to version 6.9.13.60

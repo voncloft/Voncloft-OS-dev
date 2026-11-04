@@ -2,7 +2,7 @@
 # depends : python python-flask python-eventlet python-socketio
 
 name=python-flask-socketio
-version=5.7.0
+version=5.7.2
 release=1
 
 _name=Flask-SocketIO

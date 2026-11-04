@@ -197,3 +197,13 @@ Release=4
 
 Synopsis:
 Upgraded from version 0.13.15 to version 0.13.24
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:55 AM EST 2026
+
+Version=0.13.25
+Release=4
+
+Synopsis:
+Changed from version 0.13.24 to version 0.13.25

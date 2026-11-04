@@ -2,7 +2,7 @@
 # depends : spirv-llvm-translator
 
 name=libclc
-version=23.1.4
+version=23.1.5
 release=1
 
 _name=llvm-project

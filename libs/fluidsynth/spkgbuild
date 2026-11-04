@@ -2,7 +2,7 @@
 # depends : alsa-lib gcem glib kde-deps-installer libsndfile pulseaudio readline
 
 name=fluidsynth
-version=2.6.1
+version=2.6.2
 release=1
 
 source="$name-$version.tar.gz::https://github.com/FluidSynth/${name}/archive/refs/tags/v$version.tar.gz"

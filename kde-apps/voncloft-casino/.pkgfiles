@@ -1,0 +1,29 @@
+voncloft-casino-1.0.19.git20261102132105.gbe9a4cd794aed44fa571423f26ce36214b9092be-1
+drwxrwxr-x root/root    usr/
+drwxrwxr-x root/root    usr/bin/
+lrwxrwxrwx root/root    usr/bin/velvet-casino -> voncloft-casino
+-rwxr-xr-x root/root    usr/bin/voncloft-casino
+drwxrwxr-x root/root    usr/share/
+drwxrwxr-x root/root    usr/share/applications/
+-rw-r--r-- root/root    usr/share/applications/io.voncloft.VelvetCasino.desktop
+drwxrwxr-x root/root    usr/share/doc/
+drwxrwxr-x root/root    usr/share/doc/voncloft-casino/
+-rw-r--r-- root/root    usr/share/doc/voncloft-casino/LICENSE
+-rw-r--r-- root/root    usr/share/doc/voncloft-casino/README.md
+-rw-r--r-- root/root    usr/share/doc/voncloft-casino/THIRD_PARTY_NOTICES.txt
+drwxrwxr-x root/root    usr/share/doc/voncloft-casino/licenses/
+-rw-r--r-- root/root    usr/share/doc/voncloft-casino/licenses/Freesound-Intro.txt
+-rw-r--r-- root/root    usr/share/doc/voncloft-casino/licenses/Kenney-Casino-Audio.txt
+-rw-r--r-- root/root    usr/share/doc/voncloft-casino/licenses/Pixabay-Sounds.md
+drwxrwxr-x root/root    usr/share/icons/
+drwxrwxr-x root/root    usr/share/icons/hicolor/
+drwxrwxr-x root/root    usr/share/icons/hicolor/scalable/
+drwxrwxr-x root/root    usr/share/icons/hicolor/scalable/apps/
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/velvet-casino.svg
+-rw-r--r-- root/root    usr/share/icons/hicolor/scalable/apps/voncloft-casino.svg
+drwxr-xr-x root/root    usr/share/licenses/
+drwxr-xr-x root/root    usr/share/licenses/voncloft-casino/
+-rw-r--r-- root/root    usr/share/licenses/voncloft-casino/Freesound-Intro.txt
+-rw-r--r-- root/root    usr/share/licenses/voncloft-casino/Kenney-Casino-Audio.txt
+-rw-r--r-- root/root    usr/share/licenses/voncloft-casino/LICENSE
+-rw-r--r-- root/root    usr/share/licenses/voncloft-casino/Pixabay-Sounds.md

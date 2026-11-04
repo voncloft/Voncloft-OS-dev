@@ -2,7 +2,7 @@
 # depends : python-yaml python-wrapt python-six python-yarl
 
 name=python-vcrpy
-version=9.2.0
+version=9.4.2
 release=3
 
 _name=${name#python-}

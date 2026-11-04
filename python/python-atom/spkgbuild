@@ -2,7 +2,7 @@
 # depends : python python-setuptools
 
 name=python-atom
-version=0.13.0
+version=0.14.0
 release=3
 
 _name=${name#python-}

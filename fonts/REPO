@@ -52,10 +52,10 @@ f:b6049f2a56565de09dba5f8983bde0b5:font-adobe-100dpi/CHANGELOG
 f:ada02a15d53ec134f26335bb8e82c24b:font-adobe-100dpi/spkgbuild
 f:697e66261bfd2210f3970c7d670850c7:noto-fonts/.pkgfiles
 f:e99b33ffbf57d7a7d277acea0a0ce910:noto-fonts/66-noto-serif.conf
-f:267647359d9d7bd86db230c5556be420:noto-fonts/CHANGELOG
+f:cbdb0e26b7a8d2fba148b5251911157b:noto-fonts/CHANGELOG
 f:2478ab187743480e77c10e9e8af5d326:noto-fonts/66-noto-mono.conf
 f:d1c1f1fdd1ee428b9317de9e639d7544:noto-fonts/66-noto-sans.conf
-f:c904b55e5851934ddb5927d3ea466314:noto-fonts/spkgbuild
+f:9fb8671448ff27e8690b808e7ba2b969:noto-fonts/spkgbuild
 f:c6616661c0d8232d773df854382ab242:font-daewoo-misc/CHANGELOG
 f:5a189ce4f42405f51cfc30d25a1acea9:font-daewoo-misc/spkgbuild
 f:d7e06e58ce12a821ca530d3e24461277:.httpup-urlinfo

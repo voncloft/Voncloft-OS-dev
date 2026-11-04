@@ -3,7 +3,7 @@
 
 name=llvm-old-2023-06-07
 _upstream_name=llvm
-version=23.1.4
+version=23.1.5
 release=1
 _name=llvm-project
 source="https://github.com/llvm/${_name}/releases/download/llvmorg-$version/${_upstream_name}-$version.src.tar.xz

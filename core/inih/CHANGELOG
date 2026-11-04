@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 60 to version 62
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:54 AM EST 2026
+
+Version=63
+Release=1
+
+Synopsis:
+Changed from version 62 to version 63

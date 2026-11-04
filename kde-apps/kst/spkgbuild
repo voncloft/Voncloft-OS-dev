@@ -2,7 +2,7 @@
 # depends : cfitsio extra-cmake-modules gsl hdf5 kde-deps-installer libtiff netcdf qt6
 
 name=kst
-version=3.0.0
+version=3.1.0
 release=2
 options="!checksum"
 _name=kst-plot

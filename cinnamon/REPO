@@ -35,8 +35,8 @@ f:a9cb981e759c2dd735f5d202a79ddda6:system-config-printer/spkgbuild
 f:8a85fdd343dedf0a243ec8d5d2ea8cf3:nm-connection-editor/CHANGELOG
 f:aefb029f786b0016dbaaf264955d1ebf:nm-connection-editor/spkgbuild
 f:457d71ebb7e7d055e4a86eefc66431b2:nm-connection-editor/override
-f:c739c94be02e8ddda436d5ab38c7c5ec:nemo/CHANGELOG
-f:323dcda7f694dee0b6f74db37cf0851a:nemo/spkgbuild
+f:a74fe092fa89ea307c0ce86bd2d1ce47:nemo/CHANGELOG
+f:d0d90990fd6260b66826eb417a6a361f:nemo/spkgbuild
 f:6f12dcd3b34019c61989b44c9a0e6d25:nemo/override
 f:020ce0f3a1230053a9d163ac742c790e:.httpup-urlinfo
 f:11aa93757548764ef61f5bb58b7f00ec:accountsservice/CHANGELOG
@@ -45,8 +45,8 @@ f:0c7ed67b433840cb7e7f8c6c201e5d72:accountsservice/override
 f:69015d8682a6b4634a4d894437a67b7d:cinnamon-session/CHANGELOG
 f:423cd46f63fdf4a0561c2a7d1cb30a64:cinnamon-session/spkgbuild
 f:bd5b5f24e04e6cd8cfa701bf67fc36f5:cinnamon-desktop/config.patch
-f:ea0270e6c2bc3a8ac435efd5e696be41:cinnamon-desktop/CHANGELOG
-f:03206cd70e32583ff3d1e0d17e6811c2:cinnamon-desktop/spkgbuild
+f:50fa33465c3134fb9fe208db2ef8b52e:cinnamon-desktop/CHANGELOG
+f:168cbccc018ca7463dbea393eac38076:cinnamon-desktop/spkgbuild
 f:115e17e7c5eb80a518a7acc23c43bed6:cinnamon-desktop/override
 f:b60bd1478898cb2faf59fc7ad55b1d7f:timezonemap/CHANGELOG
 f:caa121f9489cb5fe3293d069b0e72fe1:timezonemap/spkgbuild
@@ -63,8 +63,8 @@ f:51806706c89ded1d55479f9d6aaff959:exempi/CHANGELOG
 f:c856482c2c33689c39beae1047b4dab0:exempi/spkgbuild
 f:cdba7c14766ed512068718e062f8dc10:cinnamon-menus/CHANGELOG
 f:9c85f5d2ae19e5a8a2487e5b8e850605:cinnamon-menus/spkgbuild
-f:ea7d81b44d49fcdbe93f3a349b956b95:cinnamon-settings-daemon/CHANGELOG
-f:04b0c5d86c0043992869f9a50e2db23b:cinnamon-settings-daemon/spkgbuild
+f:f131363614e52980b41263c8a5d83fef:cinnamon-settings-daemon/CHANGELOG
+f:40be563bae8ea41e45726583a9538de6:cinnamon-settings-daemon/spkgbuild
 f:96954475d3ee9e78b484de4655a28988:cinnamon/0001-cinnamon-settings-don-t-rely-on-the-presence-of-cinn.patch
 f:7bd9b5ddc6d4574a447c54e3371b9fea:cinnamon/CHANGELOG
 f:b4f0e83c5d4db976c54379148db8b0c6:cinnamon/set_wheel.diff
@@ -83,7 +83,7 @@ f:8ea9d8770ac61a17fd562ba8537d2ba1:evolution-data-server/spkgbuild
 f:5128723c35abcfd2a0d98905da847dac:rarian/spkgbuild
 f:5ff70c79ad0cc8885898ec288d474543:rarian/override
 f:a82ccb85f0ace22b25bf002e885408db:clutter/spkgbuild
-f:a4b721ce68a3ff63c15938328df76d75:muffin/CHANGELOG
-f:538c1ddcf6b0501bd235d035df8a710f:muffin/spkgbuild
+f:02272ccffb99769afe757be0a02f4b8e:muffin/CHANGELOG
+f:f4f461292b9eaca7a834fb1d2fa05073:muffin/spkgbuild
 f:a5da7a8359e21530a3962a7db2bec843:muffin/override
 f:9d2de6a845bbeca9cc57857be02da3be:.httpup-repo.current

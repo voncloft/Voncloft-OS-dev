@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 20.1.8 to version 23.1.4
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:55 AM EST 2026
+
+Version=23.1.5
+Release=1
+
+Synopsis:
+Changed from version 23.1.4 to version 23.1.5

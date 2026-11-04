@@ -2,7 +2,7 @@
 # depends	: llvm
 
 name=clang
-version=23.1.4
+version=23.1.5
 release=1
 _name=llvm-project
 source="https://github.com/llvm/${_name}/releases/download/llvmorg-$version/llvm-$version.src.tar.xz

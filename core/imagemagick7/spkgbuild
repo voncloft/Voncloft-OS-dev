@@ -2,7 +2,7 @@
 # depends : bzip2 fontconfig freetype2 graphviz lcms2 libjpeg-turbo libpng libraw librsvg libtiff libtool libwebp libxext libxml2 libxt openjpeg pango perl pkgconf xz zlib zstd
 
 name=imagemagick7
-version=7.1.2.34
+version=7.1.2.35
 release=1
 options="libtool !checksum"
 source="https://download.imagemagick.org/releases/ImageMagick-${version%.*}-${version##*.}.tar.xz"

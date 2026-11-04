@@ -2,7 +2,7 @@
 # depends : python python-sphinx python-typing_extensions
 
 name=python-sphinx-autodoc-typehints
-version=3.17.4
+version=3.17.5
 release=2
 
 _name=sphinx_autodoc_typehints

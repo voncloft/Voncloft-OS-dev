@@ -157,3 +157,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 2.7.1 to version 2.9.0
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:54 AM EST 2026
+
+Version=2.10.0
+Release=1
+
+Synopsis:
+Changed from version 2.9.0 to version 2.10.0

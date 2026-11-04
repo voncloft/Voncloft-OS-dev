@@ -77,3 +77,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 4.5.1 to version 6.2.0
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 04:15:55 AM EST 2026
+
+Version=6.3.2
+Release=1
+
+Synopsis:
+Changed from version 6.2.0 to version 6.3.2
