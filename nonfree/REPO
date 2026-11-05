@@ -34,7 +34,7 @@ f:58d43b27b1195030c8875239e92efea9:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
 f:cd1df5a1bffeca5c33eb8dfd829106cf:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
-f:35e8ee778f4c579f9bfae518d041e8cd:firefox-bin/override
+f:f1014123fc84686d300b44c2e5caf4f9:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
 f:5fdf11469832223d1c950330fb68144a:virtualbox/.pkgfiles
 f:b62c9723f5cb45cf8122265026b97af9:virtualbox/dkms.conf
@@ -69,9 +69,9 @@ f:9157026032cfa499d823b55b258c8fce:virtualbox-guest-utils/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-utils/override
 f:119f437d4911f637fa586b5eda9aab29:virtualbox-guest-utils/pre-install.sh
 f:89fb28a484e7f5126839e83f10de377a:firefox/pre-upgrade.sh
-f:acade47b5395177370381fe434ad582a:firefox/CHANGELOG
+f:2c390d0fa48811c85ea5880277b0915f:firefox/CHANGELOG
 f:37db9ec3cc336d3a09ede8becec2ad69:firefox/fix-ftbfs-newer-cbindgen.patch
-f:83b163e850e37fa4a26906bc7bf64b24:firefox/spkgbuild
+f:1de3868490c8f1cbd6a9d79437f345db:firefox/spkgbuild
 f:a4a0f7c9c1e3424463670d031976aa67:firefox/override
 f:971c77648caea312fca2d9340c4382a6:firefox/firefox.desktop
 f:75aae82b7b33d79bcec25c8783f3ed5c:spotify/spotify
@@ -86,12 +86,12 @@ f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-modules/override
 f:501ab7b371ea0ac9bbebc886be9f3027:virtualbox-guest-modules/vboxvideo-upstream.conf
 f:91891835ddaa34a41d7020775b14ede6:iridium/spkgbuild
 f:04aef81e9ba3f11efd4297bac65ef249:iridium/override
-f:2a20be6e36932c3c71ce0be221e3a2f6:telegram-desktop-bin/CHANGELOG
+f:f86043fd42dfea01a1054ac7297e7ed8:telegram-desktop-bin/CHANGELOG
 f:fa93a0c669b5f0cd8b9be4c8eecf5cdd:telegram-desktop-bin/telegram-desktop-bin.desktop
-f:a1d901f2bac42c354bad22ecf17ce231:telegram-desktop-bin/spkgbuild
+f:b9b0bc277b9f1091b12d28a53b05ce84:telegram-desktop-bin/spkgbuild
 f:2a9ba90f79c0467d2e20c12555555345:telegram-desktop-bin/override
-f:559a749f6b0576db67d6620a0f516555:google-chrome/CHANGELOG
-f:a9fab996bfc7d8280af43773372ea75a:google-chrome/spkgbuild
+f:15a20f52f53d6b5b8c1ea510b2c3c546:google-chrome/CHANGELOG
+f:831da7c0f5e91ca2d5159e9e3818dba7:google-chrome/spkgbuild
 f:99fa93d5e7fb5d622cef0f9621f3ffa3:google-chrome/google-chrome-stable.sh
 f:99a39ef5a37ae082a2611cab8d04e55c:google-chrome/override
 f:e3d45624533e5b79c7db1df0939dda49:firefox-esr/CHANGELOG
@@ -128,7 +128,7 @@ f:362400fd2f20491517f6a8f6f2a756d4:packettracer/cisco-pt.desktop
 f:367c64382056110df3e35d1d74749889:packettracer/CHANGELOG
 f:8f2ecb1b71ef5f7ccbb5bef10da5a846:packettracer/cisco-ptsa.desktop
 f:d9a0fa9e808f2e9a55a356da4c33804a:packettracer/spkgbuild
-f:d96c8d5f50f244076ffb1436aad44ea6:packettracer/override
+f:a55e38e7358d709292770cbeedb0c9ad:packettracer/override
 f:8bc83aa05179429d031aec0c45013f5b:tuner/extract.sh
 f:1e0a6f897c5991825caa7ec19b64bf00:tuner/CHANGELOG
 f:5f4eea016627fcac6aa75f56e015e6c6:tuner/test/Driver85/hcw85enc.ax

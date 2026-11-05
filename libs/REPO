@@ -1030,7 +1030,8 @@ f:db03b2ebd0922e07729fe469d87fd4e3:libqmi/.pkgfiles
 f:a1f7108c7196742f3086f6ce7857d26c:libqmi/CHANGELOG
 f:308f855826ee76d0acbc1258ce4b51b1:libqmi/spkgbuild
 f:4b9aee026defd80cd348161b7ec896a6:libqmi/override
-f:09c7ed018a8c3a2e11723da0e0f0e9b0:libphonenumber/spkgbuild
+f:36a005bda5717debabafa91c70e8827f:libphonenumber/CHANGELOG
+f:42442284a297ac33d58174040b7fcdfa:libphonenumber/spkgbuild
 f:3e01f08dfc3a235949690d53fb837a0f:libftdi-compat/.pkgfiles
 f:0a005deb5d7707d70f7d87dab1f45096:libftdi-compat/spkgbuild
 f:37701e97555e368e4db9799f14f07013:libdisplay-info/.pkgfiles
@@ -1051,8 +1052,8 @@ f:20967723cacab4e332344a7d6e2e338c:xine-lib/patch.patch
 f:588131a0e5063a08ef34d303e33cced7:xine-lib/spkgbuild
 f:e7cdd73e4044b03f7dcc2200101fdd1a:libgnome-keyring/CHANGELOG
 f:ff2e91718912e502841b4dcb4e3394db:libgnome-keyring/spkgbuild
-f:9eebd2fec66bf0a5eec37a1e2e19bc45:libsysstat/CHANGELOG
-f:1104ec85c5bfff6c703e224af6043c8d:libsysstat/spkgbuild
+f:3e43cc857c04f78dadf68628987053c3:libsysstat/CHANGELOG
+f:f3088bd363462e36ae666d24e1e2be1f:libsysstat/spkgbuild
 f:161f8af060573727148d689ec45c1d77:chmlib/.pkgfiles
 f:b3848dac1f8e8e0a8619834e2aea92f5:chmlib/CHANGELOG
 f:377b9cecabf4a3380b378e99bc61286d:chmlib/spkgbuild

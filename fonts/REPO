@@ -89,8 +89,8 @@ f:20cacd1acb17325a213cc9f70234c7c0:harfbuzz-icu/override
 f:a68a0f3009e26bde86518801224d9876:font-adobe-75dpi/CHANGELOG
 f:19335f23fd806d4c8ea381f3fb20e382:font-adobe-75dpi/spkgbuild
 f:be124e88bcf59749db93653fc3562e14:harfbuzz/.pkgfiles
-f:07ed0ead9d2f16f7536250553f17d036:harfbuzz/CHANGELOG
-f:1e65f32909723b940ce2eb2ba0be17b4:harfbuzz/spkgbuild
+f:109c9a110accc1b69aac593e86b83343:harfbuzz/CHANGELOG
+f:17d6cc1e6cf5686e79b77d4256a750f2:harfbuzz/spkgbuild
 f:41940409dbb628c5feb490bef55ea4f0:ftgl/.pkgfiles
 f:f8d0cd2453e1d28112ba7e22afd7d02c:ftgl/CHANGELOG
 f:f44653ce6ed8a87437dd71678b5513de:ftgl/freetype-outline-tags.patch

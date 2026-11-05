@@ -486,8 +486,8 @@ f:6589467472623dfc48f87efbfe6ddd00:curl-32/CHANGELOG
 f:7170d7b5d8662fca48c545cb1947d218:curl-32/spkgbuild
 f:2ab2fd51a5d53ce21c2d56b931fd54ed:curl-32/override
 f:a153e2064d36d2aa4741780646b64189:harfbuzz-32/.pkgfiles
-f:a5fa84ffd60e175e5ac876cce0579cdd:harfbuzz-32/CHANGELOG
-f:deefb283c17fd0fa5b6c8ac7e3405dc8:harfbuzz-32/spkgbuild
+f:c37938572501f017432b3ec33e49b9fc:harfbuzz-32/CHANGELOG
+f:a16220504c765ce111e0f52602bf68e1:harfbuzz-32/spkgbuild
 f:67f4847830735062e70db2123ee244d6:spirv-tools-32/.pkgfiles
 f:faf557c8e1c4300b47a90869db7955f4:spirv-tools-32/CHANGELOG
 f:38ed758c3e6c16b0c248c2721f99bc79:spirv-tools-32/spkgbuild

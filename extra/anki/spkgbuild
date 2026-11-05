@@ -2,7 +2,7 @@
 # depends : alsa-lib bzip2 dbus fontconfig freetype2 glib lame libdrm libglvnd libx11 libxcb libxcomposite libxcursor libxdamage libxext libxfixes libxi libxkbcommon libxkbfile libxrandr libxrender libxtst mesa mitkrb mpv nspr nss shared-mime-info udev wayland xcb-util-cursor xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm zlib zstd
 
 name=anki
-version=26.09.3
+version=26.09.4
 release=1
 source="https://github.com/ankitects/$name/releases/download/$version/$name-$version-linux-x86_64.tar.zst"
 noextract="$name-$version-linux-x86_64.tar.zst"

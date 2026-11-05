@@ -2,7 +2,7 @@
 # depends : cinnamon-desktop glib libcanberra libinput libsm libxkbcommon startup-notification zenity
 
 name=muffin
-version=6.8.0
+version=6.8.1
 release=1
 
 source="https://github.com/linuxmint/${name}/archive/refs/tags/$version.tar.gz"

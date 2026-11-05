@@ -194,3 +194,97 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=3.16.128\| server/blackli
 bash /usr/libexec/update-repo/changelog server/blacklist-hosts/spkgbuild Changed\ from\ version\ 3.16.127\ to\ version\ 3.16.128
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.git20261102172648.g5f5b7fb9ea744acc183a42c2ff712e32469b5905\| server/blacklist-youtubeads/spkgbuild # update-repo-version 1.0.git20261028203845.g7aaddf4f59496229b93ea0d0a66ab55aae951000 1.0.git20261102172648.g5f5b7fb9ea744acc183a42c2ff712e32469b5905
 bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Changed\ from\ version\ 1.0.git20261028203845.g7aaddf4f59496229b93ea0d0a66ab55aae951000\ to\ version\ 1.0.git20261102172648.g5f5b7fb9ea744acc183a42c2ff712e32469b5905
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=20261104\| beta/tl-unx/spkgbuild # update-repo-version 20261103 20261104
+bash /usr/libexec/update-repo/changelog beta/tl-unx/spkgbuild Changed\ from\ version\ 20261103\ to\ version\ 20261104
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.8.0\| cinnamon/cinnamon/spkgbuild # update-repo-version 6.6.9 6.8.0
+bash /usr/libexec/update-repo/changelog cinnamon/cinnamon/spkgbuild Changed\ from\ version\ 6.6.9\ to\ version\ 6.8.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.8.1\| cinnamon/cinnamon-settings-daemon/spkgbuild # update-repo-version 6.8.0 6.8.1
+bash /usr/libexec/update-repo/changelog cinnamon/cinnamon-settings-daemon/spkgbuild Changed\ from\ version\ 6.8.0\ to\ version\ 6.8.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.8.1\| cinnamon/muffin/spkgbuild # update-repo-version 6.8.0 6.8.1
+bash /usr/libexec/update-repo/changelog cinnamon/muffin/spkgbuild Changed\ from\ version\ 6.8.0\ to\ version\ 6.8.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.8.3\| cinnamon/nemo/spkgbuild # update-repo-version 6.8.2 6.8.3
+bash /usr/libexec/update-repo/changelog cinnamon/nemo/spkgbuild Changed\ from\ version\ 6.8.2\ to\ version\ 6.8.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.5.35\| core/ibus/spkgbuild # update-repo-version 1.5.34 1.5.35
+bash /usr/libexec/update-repo/changelog core/ibus/spkgbuild Changed\ from\ version\ 1.5.34\ to\ version\ 1.5.35
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.11.0\| core/lz4/spkgbuild # update-repo-version 1.10.0 1.11.0
+bash /usr/libexec/update-repo/changelog core/lz4/spkgbuild Changed\ from\ version\ 1.10.0\ to\ version\ 1.11.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.42.0\| core/mpv/spkgbuild # update-repo-version 0.41.0 0.42.0
+bash /usr/libexec/update-repo/changelog core/mpv/spkgbuild Changed\ from\ version\ 0.41.0\ to\ version\ 0.42.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=139.0.6053.38\| core/opera/spkgbuild # update-repo-version 139.0.6053.22 139.0.6053.38
+bash /usr/libexec/update-repo/changelog core/opera/spkgbuild Changed\ from\ version\ 139.0.6053.22\ to\ version\ 139.0.6053.38
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.6.1\| core/squashfs-tools/spkgbuild # update-repo-version 4.5.1 4.6.1
+bash /usr/libexec/update-repo/changelog core/squashfs-tools/spkgbuild Changed\ from\ version\ 4.5.1\ to\ version\ 4.6.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.09.4\| extra/anki/spkgbuild # update-repo-version 26.09.3 26.09.4
+bash /usr/libexec/update-repo/changelog extra/anki/spkgbuild Changed\ from\ version\ 26.09.3\ to\ version\ 26.09.4
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=7.27.0\| extra/openapi-generator/spkgbuild # update-repo-version 7.26.0 7.27.0
+bash /usr/libexec/update-repo/changelog extra/openapi-generator/spkgbuild Changed\ from\ version\ 7.26.0\ to\ version\ 7.27.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=15.1.0\| fonts/harfbuzz/spkgbuild # update-repo-version 15.0.0 15.1.0
+bash /usr/libexec/update-repo/changelog fonts/harfbuzz/spkgbuild Changed\ from\ version\ 15.0.0\ to\ version\ 15.1.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=3.46.0\| gnome/gnome-panel/spkgbuild # update-repo-version 3.40.0 3.46.0
+bash /usr/libexec/update-repo/changelog gnome/gnome-panel/spkgbuild Changed\ from\ version\ 3.40.0\ to\ version\ 3.46.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.11.0\| lfs-base-install/lz4/spkgbuild # update-repo-version 1.10.0 1.11.0
+bash /usr/libexec/update-repo/changelog lfs-base-install/lz4/spkgbuild Changed\ from\ version\ 1.10.0\ to\ version\ 1.11.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=9.0.43\| libs/libphonenumber/spkgbuild # update-repo-version 9.0.42 9.0.43
+bash /usr/libexec/update-repo/changelog libs/libphonenumber/spkgbuild Changed\ from\ version\ 9.0.42\ to\ version\ 9.0.43
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.2.0\| libs/libsysstat/spkgbuild # update-repo-version 1.1.0 1.2.0
+bash /usr/libexec/update-repo/changelog libs/libsysstat/spkgbuild Changed\ from\ version\ 1.1.0\ to\ version\ 1.2.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-about/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-about/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-admin/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-admin/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-config/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-config/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-globalkeys/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-globalkeys/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-notificationd/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-notificationd/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-openssh-askpass/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-openssh-askpass/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-panel/spkgbuild # update-repo-version 2.4.1 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-panel/spkgbuild Changed\ from\ version\ 2.4.1\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-policykit/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-policykit/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-powermanagement/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-powermanagement/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-runner/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-runner/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-session/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-session/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| lxqt/lxqt-sudo/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog lxqt/lxqt-sudo/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=15.1.0\| multilib/harfbuzz-32/spkgbuild # update-repo-version 15.0.0 15.1.0
+bash /usr/libexec/update-repo/changelog multilib/harfbuzz-32/spkgbuild Changed\ from\ version\ 15.0.0\ to\ version\ 15.1.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.4.9.16\| networking/tor/spkgbuild # update-repo-version 0.4.9.15 0.4.9.16
+bash /usr/libexec/update-repo/changelog networking/tor/spkgbuild Changed\ from\ version\ 0.4.9.15\ to\ version\ 0.4.9.16
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=160.0b5\| nonfree/firefox/spkgbuild # update-repo-version 160.0b4 160.0b5
+bash /usr/libexec/update-repo/changelog nonfree/firefox/spkgbuild Changed\ from\ version\ 160.0b4\ to\ version\ 160.0b5
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=157.0.8103.38\| nonfree/google-chrome/spkgbuild # update-repo-version 156.0.8078.79 157.0.8103.38
+bash /usr/libexec/update-repo/changelog nonfree/google-chrome/spkgbuild Changed\ from\ version\ 156.0.8078.79\ to\ version\ 157.0.8103.38
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=7.3.5\| nonfree/telegram-desktop-bin/spkgbuild # update-repo-version 7.3.3 7.3.5
+bash /usr/libexec/update-repo/changelog nonfree/telegram-desktop-bin/spkgbuild Changed\ from\ version\ 7.3.3\ to\ version\ 7.3.5
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.14.1\| python/python-atom/spkgbuild # update-repo-version 0.14.0 0.14.1
+bash /usr/libexec/update-repo/changelog python/python-atom/spkgbuild Changed\ from\ version\ 0.14.0\ to\ version\ 0.14.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.9.4\| python/python-authlib/spkgbuild # update-repo-version 1.9.3 1.9.4
+bash /usr/libexec/update-repo/changelog python/python-authlib/spkgbuild Changed\ from\ version\ 1.9.3\ to\ version\ 1.9.4
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.43.124\| python/python-boto3/spkgbuild # update-repo-version 1.43.123 1.43.124
+bash /usr/libexec/update-repo/changelog python/python-boto3/spkgbuild Changed\ from\ version\ 1.43.123\ to\ version\ 1.43.124
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.43.124\| python/python-botocore/spkgbuild # update-repo-version 1.43.123 1.43.124
+bash /usr/libexec/update-repo/changelog python/python-botocore/spkgbuild Changed\ from\ version\ 1.43.123\ to\ version\ 1.43.124
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=7.17.2\| python/python-coverage/spkgbuild # update-repo-version 7.17.1 7.17.2
+bash /usr/libexec/update-repo/changelog python/python-coverage/spkgbuild Changed\ from\ version\ 7.17.1\ to\ version\ 7.17.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.5.0\| python/python-dateparser/spkgbuild # update-repo-version 1.4.3 1.5.0
+bash /usr/libexec/update-repo/changelog python/python-dateparser/spkgbuild Changed\ from\ version\ 1.4.3\ to\ version\ 1.5.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.2.9\| python/python-filelock/spkgbuild # update-repo-version 4.2.8 4.2.9
+bash /usr/libexec/update-repo/changelog python/python-filelock/spkgbuild Changed\ from\ version\ 4.2.8\ to\ version\ 4.2.9
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.42\| python/python-jsonpatch/spkgbuild # update-repo-version 1.41 1.42
+bash /usr/libexec/update-repo/changelog python/python-jsonpatch/spkgbuild Changed\ from\ version\ 1.41\ to\ version\ 1.42
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.2.0\| python/python-paho-mqtt/spkgbuild # update-repo-version 2.1.0 2.2.0
+bash /usr/libexec/update-repo/changelog python/python-paho-mqtt/spkgbuild Changed\ from\ version\ 2.1.0\ to\ version\ 2.2.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.21.0\| python/python-pygit2/spkgbuild # update-repo-version 1.20.1 1.21.0
+bash /usr/libexec/update-repo/changelog python/python-pygit2/spkgbuild Changed\ from\ version\ 1.20.1\ to\ version\ 1.21.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.0.1\| python/python-soupsieve/spkgbuild # update-repo-version 4.0 4.0.1
+bash /usr/libexec/update-repo/changelog python/python-soupsieve/spkgbuild Changed\ from\ version\ 4.0\ to\ version\ 4.0.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=7.1.0\| python/python-watchdog/spkgbuild # update-repo-version 7.0.0 7.1.0
+bash /usr/libexec/update-repo/changelog python/python-watchdog/spkgbuild Changed\ from\ version\ 7.0.0\ to\ version\ 7.1.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.0\| qt/pavucontrol-qt/spkgbuild # update-repo-version 2.4.0 2.5.0
+bash /usr/libexec/update-repo/changelog qt/pavucontrol-qt/spkgbuild Changed\ from\ version\ 2.4.0\ to\ version\ 2.5.0

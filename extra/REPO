@@ -109,8 +109,8 @@ f:6a3bdb8e7b3b0df3be135c666c24525b:waterfox/override
 f:da86052816c68ee971245289d6a5cda8:convertlit/CHANGELOG
 f:60a00b9be840b28d17e119087e5d4a35:convertlit/spkgbuild
 f:f9df5aad2829a33047900a93b07b61e2:anki/.pkgfiles
-f:64df7d72c2e1ef61734bf8d56e2c104a:anki/CHANGELOG
-f:d5f4e7c7b380ac8b5d02054ec682dd3f:anki/spkgbuild
+f:8e5bf692b409433323d87e7705a5ad41:anki/CHANGELOG
+f:c173d26a063461d4b347859551db1ce9:anki/spkgbuild
 f:bece9e728fab1562c369f093b983aa46:anki/override
 f:25aa91fd9ab4132d5240e7fbc3a23105:anki/.checksums
 f:6c462a9e6bab116ba8d1be9d7c498d17:nspr/.pkgfiles
@@ -192,8 +192,8 @@ f:182d294f6367ebed6cc4e144c9695dcb:vidtomp3/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:vidtomp3/override
 f:2bf7828368f07554044a6a6dab4d496e:setconf/spkgbuild
 f:c4706731fd2d48fe0fc161790e923298:openapi-generator/.pkgfiles
-f:cc574d4909df9d62b06aee4914b93c4d:openapi-generator/CHANGELOG
-f:00de4726af3ed35e2d7c9ea6997e179a:openapi-generator/spkgbuild
+f:d72d74c554cb4fa3ebea7ba060025a07:openapi-generator/CHANGELOG
+f:8e7cc733c50a38b782cf866c774c6f7c:openapi-generator/spkgbuild
 f:da1b5902f72a6c090245f59a03f70cc0:ncdu/.pkgfiles
 f:002e9e75bec3c438a483188239234c4d:ncdu/CHANGELOG
 f:39bb74b515e6f6125625a4b541aab3ef:ncdu/spkgbuild

@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.1.13 to version 7.3.3
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 09:45:24 PM EST 2026
+
+Version=7.3.5
+Release=1
+
+Synopsis:
+Changed from version 7.3.3 to version 7.3.5

@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 11.2.1 to version 15.0.0
+
+----------------------------------------------------------------
+
+Date: Wed Nov  4 09:45:24 PM EST 2026
+
+Version=15.1.0
+Release=1
+
+Synopsis:
+Changed from version 15.0.0 to version 15.1.0

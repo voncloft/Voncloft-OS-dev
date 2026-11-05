@@ -2,7 +2,7 @@
 # depends : python-jsonpointer
 
 name=python-jsonpatch
-version=1.41
+version=1.42
 release=1
 
 _name=python-json-patch

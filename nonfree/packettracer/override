@@ -1,5 +1,5 @@
 # This package has no independent, automatically applicable upstream release.
-source=local
+source="https://www.netacad.com/resources/lab-downloads/"
 url=$source
 update_repo_skip='Cisco archive is supplied manually after signing in; no public release feed.'
 update_repo_skip_status='Manual update'

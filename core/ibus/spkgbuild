@@ -2,7 +2,7 @@
 # depends : dconf iso-codes vala glib gtk2 gtk3 libnotify
 
 name=ibus
-version=1.5.34
+version=1.5.35
 release=1
 
 source="https://github.com/ibus/${name}/releases/download/$version/${name}-$version.tar.gz"

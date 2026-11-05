@@ -170,8 +170,8 @@ f:ebf4fbc3e667e697c3fe6965ff210793:libcap/.pkgfiles
 f:0236b935ee5b316352f9d8bbf2d60f75:libcap/CHANGELOG
 f:8acba0b3ab302be25334243d54d1604e:libcap/spkgbuild
 f:dd389669b06a2e0136fb8ab8e9b6d88e:lz4/.pkgfiles
-f:d678006a4e87d73a38e425bcde86a3aa:lz4/CHANGELOG
-f:b1f4f3c349bd9520adb3fdf79985098e:lz4/spkgbuild
+f:b75e7fe6ae98609fd39b7f0ba056b32b:lz4/CHANGELOG
+f:49601fad67d12ef62eb69e8c0020c079:lz4/spkgbuild
 f:2b85460e2bf8ca4d551c4bd9bd5baf6a:.httpup-urlinfo
 f:fe07c432c464e42b023caa057cafb410:isl/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:isl/.nanorc
