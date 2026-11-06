@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kcrash kde-deps-installer kdoctools kguiaddons ki18n kio kjobwidgets ktextwidgets kwidgetsaddons kxmlgui libksane qt6
 
 name=kolourpaint
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

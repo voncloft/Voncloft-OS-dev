@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kcodecs kcolorscheme kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdoctools kfilemetadata ki18n kiconthemes kio kirigami kirigami-addons kxmlgui qqc2-desktop-style qt6
 
 name=elisa
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

@@ -2,7 +2,7 @@
 # depends : akonadi akonadi-contacts akonadi-mime extra-cmake-modules gpgmepp karchive kcodecs kcolorscheme kcompletion kconfig kdbusaddons kde-deps-installer kguiaddons ki18n kiconthemes kidentitymanagement kio kitemmodels kitemviews kmailtransport kmime ktextaddons kwidgetsaddons kxmlgui libkdepim mailimporter messagelib pimcommon plasma-activities qgpgme-qt qt6 syntax-highlighting
 
 name=mailcommon
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

@@ -2,7 +2,7 @@
 # depends : akonadi akonadi-calendar akonadi-mime calendarsupport eventviews extra-cmake-modules kcalendarcore kcalutils kcodecs kde-deps-installer kdiagram kguiaddons ki18n kiconthemes kidentitymanagement kio kldap kmime kpimtextedit ktextwidgets libkdepim pimcommon qt6
 
 name=incidenceeditor
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

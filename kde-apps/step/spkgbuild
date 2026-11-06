@@ -2,7 +2,7 @@
 # depends : eigen extra-cmake-modules kconfig kcrash kde-deps-installer kdoctools ki18n kiconthemes kio knewstuff kplotting ktextwidgets kxmlgui qt6 shared-mime-info
 
 name=step
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

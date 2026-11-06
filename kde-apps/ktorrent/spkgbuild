@@ -2,7 +2,7 @@
 # depends : boost extra-cmake-modules karchive kcmutils kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools kglobalaccel ki18n kiconthemes kio kitemviews knotifications knotifyconfig kparts kplotting kstatusnotifieritem ktextwidgets kwidgetsaddons kwindowsystem kxmlgui libktorrent qt6 syndication
 
 name=ktorrent
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

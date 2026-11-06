@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules karchive kcmutils kcodecs kcrash kdbusaddons kde-deps-installer kdesu kdoctools kguiaddons ki18n kiconthemes kio kparts ktexteditor ktextwidgets kwindowsystem plasma-activities qt6 sonnet
 
 name=konqueror
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

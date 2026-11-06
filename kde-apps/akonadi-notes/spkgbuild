@@ -3,7 +3,7 @@
 # description : Library for storing and retrieving notes through Akonadi
 
 name=akonadi-notes
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

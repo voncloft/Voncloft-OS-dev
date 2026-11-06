@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules karchive kcodecs kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kdsingleapplication ki18n kiconthemes kidletime kio kitemviews knotifications knotifyconfig kstatusnotifieritem ktextaddons ktextwidgets kuserfeedback kxmlgui networkmanager-qt openssl plasma-activities prison purpose qt6 qtkeychain sonnet syntax-highlighting
 
 name=ruqola
-version=2.9.0
+version=2.9.1
 release=2
 options="!checksum"
 source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${name}-${version}.tar.xz"

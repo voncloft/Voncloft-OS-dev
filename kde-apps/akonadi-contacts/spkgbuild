@@ -2,7 +2,7 @@
 # depends : akonadi extra-cmake-modules grantleetheme kcodecs kcolorscheme kcompletion kcontacts kcoreaddons kde-deps-installer kguiaddons ki18n kiconthemes kio kmime kservice ktextaddons ktexttemplate ktextwidgets kwidgetsaddons kxmlgui prison qt6
 
 name=akonadi-contacts
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

@@ -2,7 +2,7 @@
 # depends : akonadi akonadi-contacts akonadi-mime extra-cmake-modules kcalendarcore kcalutils kcodecs kcompletion kconfig kconfigwidgets kcontacts kcrash kdbusaddons kde-deps-installer kglobalaccel kguiaddons kholidays ki18n kiconthemes kidentitymanagement kio kitemmodels kjobwidgets kmailtransport kmime knotifications knotifyconfig kservice kstatusnotifieritem ktextaddons ktextwidgets kwidgetsaddons kwindowsystem kxmlgui mpv qt6 vlc
 
 name=kalarm
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

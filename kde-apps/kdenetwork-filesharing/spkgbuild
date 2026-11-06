@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kauth kcompletion kcoreaddons kde-deps-installer ki18n kio kwidgetsaddons packagekit-qt qcoro qt6
 
 name=kdenetwork-filesharing
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

@@ -2,7 +2,7 @@
 # depends : cmark extra-cmake-modules icu kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer ki18n kiconthemes kio kirigami kirigami-addons kitemmodels knotifications kquickcharts kquickimageeditor kunifiedpush kwindowsystem libquotient prison purpose qcoro qqc2-desktop-style qt6 qtkeychain sonnet syntax-highlighting
 
 name=neochat
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

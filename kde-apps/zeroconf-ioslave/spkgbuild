@@ -3,7 +3,7 @@
 # note : Contains no application files. Use kio-zeroconf for the maintained source package.
 
 name=zeroconf-ioslave
-version=26.08.2
+version=26.08.3
 release=1
 options="!checksum"
 

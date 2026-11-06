@@ -2,7 +2,7 @@
 # depends : baloo extra-cmake-modules karchive kcolorscheme kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kfilemetadata ki18n kirigami kirigami-addons kquickcharts kwindowsystem qqc2-desktop-style qt6
 
 name=arianna
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

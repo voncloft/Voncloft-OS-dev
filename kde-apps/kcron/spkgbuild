@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kauth kcmutils kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kirigami-addons qt6
 
 name=kcron
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

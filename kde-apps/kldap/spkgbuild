@@ -2,7 +2,7 @@
 # depends : cyrus-sasl extra-cmake-modules kde-deps-installer kdoctools ki18n kio kwidgetsaddons qt6 qtkeychain
 
 name=kldap
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

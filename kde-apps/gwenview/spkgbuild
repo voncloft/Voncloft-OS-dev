@@ -2,7 +2,7 @@
 # depends : exiv2 extra-cmake-modules kcolorpicker kconfig kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kiconthemes kimageannotator kio kitemmodels knewstuff knotifications kparts kwidgetsaddons kwindowsystem kxmlgui lcms2 libjpeg-turbo libkdcraw libpng plasma-activities purpose qt6 wayland wayland-protocols
 
 name=gwenview
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

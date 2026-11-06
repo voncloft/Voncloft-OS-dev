@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules gpgmepp kcmutils kcodecs kcolorscheme kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools kdsingleapplication ki18n kiconthemes kidentitymanagement kio kitemmodels kmailtransport kmime kwidgetsaddons kwindowsystem kxmlgui libassuan libgpg-error libkleo mimetreeparser qgpgme-qt qt6
 
 name=kleopatra
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

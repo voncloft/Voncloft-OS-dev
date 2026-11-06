@@ -2,7 +2,7 @@
 # depends : akonadi akonadi-contacts akonadi-search extra-cmake-modules karchive kcalendarcore kcmutils kcodecs kcolorscheme kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kguiaddons ki18n kiconthemes kimap kio kitemmodels kitemviews kjobwidgets kldap knewstuff knotifications knotifyconfig kparts kservice ktextaddons kwidgetsaddons kwindowsystem kxmlgui libkdepim plasma-activities purpose qt6 sonnet
 
 name=pimcommon
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

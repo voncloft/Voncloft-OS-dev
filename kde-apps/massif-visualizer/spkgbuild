@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules karchive kconfig kcoreaddons kde-deps-installer kdiagram kgraphviewer ki18n kio kparts qt6
 
 name=massif-visualizer
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

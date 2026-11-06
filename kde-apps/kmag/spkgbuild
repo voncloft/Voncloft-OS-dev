@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kcrash kde-deps-installer kdoctools ki18n kio kxmlgui libqaccessibilityclient qt6
 
 name=kmag
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

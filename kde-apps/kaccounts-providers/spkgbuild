@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kaccounts-integration kde-deps-installer ki18n kio kpackage qcoro qt6
 
 name=kaccounts-providers
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

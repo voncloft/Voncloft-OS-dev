@@ -2,7 +2,7 @@
 # depends : analitza extra-cmake-modules kconfigwidgets kcoreaddons kde-deps-installer kdoctools ki18n kio kwidgetsaddons kxmlgui libplasma qt6
 
 name=kalgebra
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kcalendarcore kcodecs kcontacts kde-deps-installer ki18n kmime kpkpass libxml2 openssl poppler qt6 shared-mime-info zlib zxing-cpp
 
 name=kitinerary
-version=26.08.2
+version=26.08.3
 release=2
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

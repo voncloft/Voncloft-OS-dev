@@ -2,7 +2,7 @@
 # depends : akonadi akonadi-contacts akonadi-mime akonadi-search calendarsupport extra-cmake-modules kcalendarcore kcompletion kconfig kcontacts kcrash kdbusaddons kde-deps-installer kdoctools ki18n kimap kio kitemmodels kitemviews kmime ktextwidgets kwidgetsaddons kxmlgui libkdepim messagelib qt6 xapian
 
 name=akonadiconsole
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

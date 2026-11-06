@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules karchive kauth kcmutils kconfig kcoreaddons kde-deps-installer kdoctools kfilemetadata ki18n kiconthemes kio kjobwidgets knewstuff knotifications knotifyconfig kwidgetsaddons kxmlgui libkcddb libsamplerate qt6 solid
 
 name=k3b
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

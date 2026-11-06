@@ -1,0 +1,522 @@
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/accessibility-inspector/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/accessibility-inspector/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi-calendar/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi-calendar/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi-calendar-tools/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi-calendar-tools/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadiconsole/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadiconsole/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi-contacts/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi-contacts/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi-import-wizard/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi-import-wizard/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi-mime/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi-mime/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi-notes/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi-notes/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akonadi-search/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akonadi-search/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/akregator/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/akregator/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/alligator/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/alligator/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/analitza/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/analitza/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/angelfish/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/angelfish/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/arianna/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/arianna/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ark/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ark/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/artikulate/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/artikulate/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/audex/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/audex/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/audiocd-kio/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/audiocd-kio/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/audiotube/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/audiotube/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/baloo-widgets/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/baloo-widgets/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/blinken/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/blinken/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/bomber/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/bomber/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/bovo/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/bovo/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/calendarsupport/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/calendarsupport/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/calindori/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/calindori/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/calligra/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/calligra/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/cantor/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/cantor/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/cervisia/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/cervisia/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/colord-kde/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/colord-kde/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/dolphin/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/dolphin/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/dolphin-plugins/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/dolphin-plugins/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/dragon/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/dragon/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/elisa/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/elisa/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/eventviews/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/eventviews/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/falkon/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/falkon/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ffmpegthumbs/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ffmpegthumbs/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/filelight/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/filelight/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/francis/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/francis/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ghostwriter/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ghostwriter/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/granatier/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/granatier/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/grantlee-editor/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/grantlee-editor/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/grantleetheme/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/grantleetheme/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/gwenview/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/gwenview/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/incidenceeditor/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/incidenceeditor/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/isoimagewriter/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/isoimagewriter/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/itinerary/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/itinerary/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/juk/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/juk/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/k3b/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/k3b/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kaccounts-integration/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kaccounts-integration/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kaccounts-providers/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kaccounts-providers/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kaddressbook/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kaddressbook/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.17.0\| kde-apps/kaidan/spkgbuild # update-repo-version 0.16.0 0.17.0
+bash /usr/libexec/update-repo/changelog kde-apps/kaidan/spkgbuild Changed\ from\ version\ 0.16.0\ to\ version\ 0.17.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kajongg/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kajongg/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kalarm/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kalarm/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kalgebra/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kalgebra/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kalk/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kalk/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kalm/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kalm/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kalzium/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kalzium/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kamera/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kamera/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kamoso/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kamoso/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kanagram/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kanagram/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kapman/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kapman/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kapptemplate/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kapptemplate/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kasts/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kasts/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kate/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kate/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/katomic/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/katomic/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kbackup/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kbackup/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kblackbox/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kblackbox/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kblocks/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kblocks/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kbounce/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kbounce/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kbreakout/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kbreakout/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kbruch/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kbruch/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kcachegrind/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kcachegrind/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kcalc/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kcalc/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kcalutils/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kcalutils/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kcharselect/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kcharselect/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kclock/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kclock/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kcolorchooser/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kcolorchooser/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kcron/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kcron/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdebugsettings/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdebugsettings/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdeconnect-kde/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdeconnect-kde/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kde-dev-scripts/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kde-dev-scripts/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kde-dev-utils/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kde-dev-utils/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdeedu-data/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdeedu-data/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdegraphics-mobipocket/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdegraphics-mobipocket/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdegraphics-thumbnailers/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdegraphics-thumbnailers/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kde-inotify-survey/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kde-inotify-survey/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdenetwork-filesharing/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdenetwork-filesharing/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdenlive/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdenlive/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdepim-addons/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdepim-addons/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdepim-runtime/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdepim-runtime/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdesdk-kio/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdesdk-kio/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdesdk-thumbnailers/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdesdk-thumbnailers/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdevelop/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdevelop/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdev-php/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdev-php/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdev-python/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdev-python/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdf/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdf/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdialog/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdialog/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdiamond/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdiamond/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kdominate/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kdominate/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/keditbookmarks/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/keditbookmarks/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/keepsecret/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/keepsecret/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/keysmith/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/keysmith/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kfind/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kfind/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kfourinline/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kfourinline/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kgeography/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kgeography/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kget/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kget/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kgoldrunner/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kgoldrunner/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kgpg/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kgpg/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kgraphviewer/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kgraphviewer/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/khangman/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/khangman/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/khealthcertificate/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/khealthcertificate/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/khelpcenter/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/khelpcenter/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kidentitymanagement/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kidentitymanagement/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kig/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kig/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kigo/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kigo/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/killbots/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/killbots/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kimagemapeditor/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kimagemapeditor/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kimap/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kimap/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kio-admin/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kio-admin/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kio-extras/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kio-extras/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kio-gdrive/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kio-gdrive/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kio-zeroconf/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kio-zeroconf/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kipi-plugins/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kipi-plugins/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kirigami-gallery/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kirigami-gallery/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kiriki/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kiriki/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kiten/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kiten/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kitinerary/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kitinerary/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kjournald/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kjournald/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kjumpingcube/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kjumpingcube/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kldap/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kldap/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kleopatra/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kleopatra/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/klettres/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/klettres/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/klickety/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/klickety/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/klines/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/klines/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmag/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmag/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmahjongg/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmahjongg/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmail/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmail/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmail-account-wizard/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmail-account-wizard/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmailtransport/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmailtransport/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmbox/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmbox/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmines/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmines/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmix/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmix/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmousetool/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmousetool/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmouth/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmouth/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kmplot/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kmplot/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/knavalbattle/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/knavalbattle/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/knetwalk/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/knetwalk/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/knights/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/knights/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/knotes/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/knotes/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/koko/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/koko/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kolf/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kolf/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kollision/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kollision/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kolourpaint/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kolourpaint/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kompare/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kompare/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kongress/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kongress/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/konqueror/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/konqueror/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/konquest/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/konquest/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/konsole/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/konsole/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kontact/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kontact/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kontactinterface/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kontactinterface/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kontrast/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kontrast/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/konversation/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/konversation/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kopeninghours/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kopeninghours/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/korganizer/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/korganizer/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kosmindoormap/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kosmindoormap/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kpat/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kpat/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kpimtextedit/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kpimtextedit/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kpkpass/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kpkpass/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kpmcore/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kpmcore/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kpublictransport/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kpublictransport/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kqtquickcharts/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kqtquickcharts/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/krdc/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/krdc/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/krecorder/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/krecorder/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kreversi/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kreversi/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/krfb/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/krfb/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kross-interpreters/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kross-interpreters/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kruler/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kruler/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ksanecore/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ksanecore/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kshisen/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kshisen/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ksirk/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ksirk/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ksmtp/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ksmtp/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ksnakeduel/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ksnakeduel/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kspaceduel/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kspaceduel/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ksquares/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ksquares/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ksudoku/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ksudoku/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ksystemlog/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ksystemlog/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kteatime/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kteatime/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ktimer/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ktimer/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ktnef/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ktnef/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ktorrent/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ktorrent/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ktouch/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ktouch/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ktrip/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ktrip/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/ktuberling/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/ktuberling/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kturtle/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kturtle/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kubrick/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kubrick/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kunifiedpush/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kunifiedpush/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kwalletmanager/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kwalletmanager/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kwave/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kwave/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kweather/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kweather/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kweathercore/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kweathercore/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/kwordquiz/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/kwordquiz/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libgravatar/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libgravatar/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkcddb/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkcddb/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkdcraw/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkdcraw/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkdegames/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkdegames/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkdepim/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkdepim/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkeduvocdocument/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkeduvocdocument/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkexiv2/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkexiv2/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkgapi/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkgapi/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkipi/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkipi/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkleo/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkleo/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkmahjongg/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkmahjongg/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libkomparediff2/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libkomparediff2/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libksane/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libksane/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libksieve/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libksieve/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/libktorrent/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/libktorrent/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/lokalize/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/lokalize/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/lskat/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/lskat/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/mailcommon/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/mailcommon/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/mailimporter/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/mailimporter/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/marble/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/marble/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/markdownpart/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/markdownpart/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/massif-visualizer/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/massif-visualizer/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/mbox-importer/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/mbox-importer/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/merkuro/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/merkuro/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/messagelib/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/messagelib/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/mimetreeparser/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/mimetreeparser/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/minuet/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/minuet/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/neochat/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/neochat/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/okular/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/okular/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/palapeli/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/palapeli/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/parley/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/parley/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/partitionmanager/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/partitionmanager/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/picmi/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/picmi/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/pimcommon/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/pimcommon/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/pim-data-exporter/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/pim-data-exporter/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/pim-sieve-editor/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/pim-sieve-editor/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/plasma-camera/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/plasma-camera/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/plasma-phonebook/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/plasma-phonebook/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/plasma-settings/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/plasma-settings/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/plasmatube/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/plasmatube/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/poxml/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/poxml/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/qmlkonsole/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/qmlkonsole/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/qrca/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/qrca/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/rocs/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/rocs/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.9.1\| kde-apps/ruqola/spkgbuild # update-repo-version 2.9.0 2.9.1
+bash /usr/libexec/update-repo/changelog kde-apps/ruqola/spkgbuild Changed\ from\ version\ 2.9.0\ to\ version\ 2.9.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/signon-kwallet-extension/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/signon-kwallet-extension/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/skanlite/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/skanlite/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/skanpage/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/skanpage/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/skladnik/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/skladnik/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/step/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/step/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/svgpart/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/svgpart/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/sweeper/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/sweeper/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/telly-skout/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/telly-skout/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/tokodon/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/tokodon/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/umbrello/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/umbrello/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/yakuake/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/yakuake/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/zanshin/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/zanshin/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.08.3\| kde-apps/zeroconf-ioslave/spkgbuild # update-repo-version 26.08.2 26.08.3
+bash /usr/libexec/update-repo/changelog kde-apps/zeroconf-ioslave/spkgbuild Changed\ from\ version\ 26.08.2\ to\ version\ 26.08.3

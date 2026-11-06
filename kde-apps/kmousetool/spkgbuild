@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kconfig kcoreaddons kdbusaddons kde-deps-installer kdoctools ki18n kiconthemes kstatusnotifieritem kwidgetsaddons kwindowsystem kxmlgui libx11 libxext libxfixes libxi libxrender libxtst qt6
 
 name=kmousetool
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

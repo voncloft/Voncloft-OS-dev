@@ -2,7 +2,7 @@
 # depends : boost extra-cmake-modules karchive kconfig kcoreaddons kcrash kde-deps-installer kdoctools ki18n kitemviews ktexteditor ktexttemplate ktextwidgets kxmlgui qt6
 
 name=rocs
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

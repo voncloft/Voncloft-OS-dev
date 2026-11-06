@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules icu kbookmarks kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdoctools kglobalaccel kguiaddons ki18n kiconthemes kio knewstuff knotifications knotifyconfig kparts kpty kservice ktextwidgets kwidgetsaddons kwindowsystem kxmlgui libssh qt6
 
 name=konsole
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

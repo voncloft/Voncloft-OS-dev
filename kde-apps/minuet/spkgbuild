@@ -2,7 +2,7 @@
 # depends : aubio extra-cmake-modules fluidsynth kcolorscheme kcoreaddons kcrash kde-deps-installer kdoctools ki18n kirigami kirigami-addons pkgconf qqc2-desktop-style qt6
 
 name=minuet
-version=26.08.2
+version=26.08.3
 release=2
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

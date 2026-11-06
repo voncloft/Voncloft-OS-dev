@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules gpgmepp kcalendarcore kcolorscheme kde-deps-installer ki18n kio kirigami kmbox kmime kservice kwidgetsaddons libkleo qt6
 
 name=mimetreeparser
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

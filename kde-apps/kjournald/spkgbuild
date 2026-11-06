@@ -3,7 +3,7 @@
 # platform : Requires systemd; excluded from the SysVinit desktop aggregate.
 
 name=kjournald
-version=26.08.2
+version=26.08.3
 release=2
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

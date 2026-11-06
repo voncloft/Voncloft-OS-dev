@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kconfig kcoreaddons kde-deps-installer kdevelop ki18n kparts kservice ktexteditor kwidgetsaddons kxmlgui python qt6 threadweaver
 
 name=kdev-python
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

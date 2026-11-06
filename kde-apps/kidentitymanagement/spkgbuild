@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules kcodecs kconfig kcoreaddons kde-deps-installer ki18n kio kirigami-addons kpimtextedit ktextaddons kxmlgui qt6
 
 name=kidentitymanagement
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

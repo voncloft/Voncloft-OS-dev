@@ -2,7 +2,7 @@
 # depends : extra-cmake-modules karchive kcalendarcore kcolorscheme kconfig kcontacts kcoreaddons kcrash kdbusaddons kde-deps-installer kfilemetadata khealthcertificate kholidays ki18n kio kirigami kirigami-addons kitemmodels kitinerary kmime knotifications kosmindoormap kpkpass kpublictransport kunitconversion kwindowsystem libquotient prison qcoro qqc2-desktop-style qt6 qtkeychain shared-mime-info zlib
 
 name=itinerary
-version=26.08.2
+version=26.08.3
 release=1
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"

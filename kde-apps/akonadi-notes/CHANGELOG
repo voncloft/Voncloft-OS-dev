@@ -517,3 +517,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 24.08.3 to version 26.08.2
+
+----------------------------------------------------------------
+
+Date: Fri Nov  6 04:15:43 AM EST 2026
+
+Version=26.08.3
+Release=1
+
+Synopsis:
+Changed from version 26.08.2 to version 26.08.3
