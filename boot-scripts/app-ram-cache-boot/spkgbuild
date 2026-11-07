@@ -1,0 +1,19 @@
+# description : SysV startup for Von's bounded RAM application caches
+# depends : coreutils gstreamer lfs-bootscripts python util-linux
+
+name=app-ram-cache-boot
+version=1
+release=1
+source="app-ram-cache
+        von-app-ram-cache
+        von-app-ram-cache.json"
+backup="etc/von-app-ram-cache.json"
+options="!checksum"
+
+build() {
+    install -Dm755 "$SRC/app-ram-cache" "$PKG/etc/rc.d/init.d/app-ram-cache"
+    install -Dm755 "$SRC/von-app-ram-cache" "$PKG/usr/local/sbin/von-app-ram-cache"
+    install -Dm644 "$SRC/von-app-ram-cache.json" "$PKG/etc/von-app-ram-cache.json"
+    install -d "$PKG/etc/rc.d/rcS.d"
+    ln -s ../init.d/app-ram-cache "$PKG/etc/rc.d/rcS.d/S95app-ram-cache"
+}

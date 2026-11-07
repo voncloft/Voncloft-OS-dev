@@ -1,0 +1,14 @@
+# description : SysV boot loading for the virtual input driver used by Onboard
+# depends : kmod lfs-bootscripts
+
+name=uinput-boot
+version=1
+release=1
+source="uinput"
+options="!checksum"
+
+build() {
+    install -Dm755 "$SRC/uinput" "$PKG/etc/rc.d/init.d/uinput"
+    install -d "$PKG/etc/rc.d/rcS.d"
+    ln -s ../init.d/uinput "$PKG/etc/rc.d/rcS.d/S06uinput"
+}

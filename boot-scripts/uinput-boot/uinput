@@ -1,0 +1,40 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          uinput
+# Required-Start:    mountvirtfs modules
+# Required-Stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Load the virtual input driver before desktop startup
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+case "${1:-}" in
+    start|restart|reload)
+        if modprobe uinput; then
+            log_success_msg "Virtual input driver loaded."
+        else
+            # A missing optional input driver must not block graphical login.
+            log_warning_msg "Could not load uinput; the on-screen keyboard may be unavailable."
+        fi
+        ;;
+    stop)
+        # Active input clients may still need the module.
+        ;;
+    status)
+        if [ -d /sys/module/uinput ]; then
+            echo "uinput: loaded"
+        else
+            echo "uinput: not loaded"
+            exit 1
+        fi
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|reload|status}" >&2
+        exit 2
+        ;;
+esac
+
+exit 0

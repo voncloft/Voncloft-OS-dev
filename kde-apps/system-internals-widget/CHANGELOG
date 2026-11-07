@@ -1,0 +1,10 @@
+1.1.0-2
+- Organize application sources under source/ with code, tests and Plasma UI subdirectories.
+- Restore source paths after Scratch staging and build outside the source tree.
+
+1.1.0
+- Add per-interface download/upload rates and 60-second traffic graphs.
+- Handle new, removed and reset interfaces without lifetime-counter spikes.
+
+1.0.0
+- Initial temperature, fan, CPU, memory, disk activity and free-space dashboard.

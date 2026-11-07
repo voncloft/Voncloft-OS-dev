@@ -1,0 +1,183 @@
+[
+  {
+    "id": "codex-web",
+    "path": "/home/von/.cache/Codex",
+    "allow_cache_journals": true
+  },
+  {
+    "id": "codex-diagnostics",
+    "path": "/home/von/.config/Codex/sentry"
+  },
+  {
+    "id": "steam-web",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/Default/Cache"
+  },
+  {
+    "id": "steam-code",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/Default/Code Cache"
+  },
+  {
+    "id": "graphics-4",
+    "path": "/home/von/.config/Codex/Default/DawnGraphiteCache"
+  },
+  {
+    "id": "graphics-5",
+    "path": "/home/von/.config/Codex/Default/DawnWebGPUCache"
+  },
+  {
+    "id": "graphics-6",
+    "path": "/home/von/.config/Codex/Default/GPUCache"
+  },
+  {
+    "id": "graphics-7",
+    "path": "/home/von/.config/Codex/Default/Partitions/codex-browser-app/DawnGraphiteCache"
+  },
+  {
+    "id": "graphics-8",
+    "path": "/home/von/.config/Codex/Default/Partitions/codex-browser-app/DawnWebGPUCache"
+  },
+  {
+    "id": "graphics-9",
+    "path": "/home/von/.config/Codex/Default/Partitions/codex-browser-app/GPUCache"
+  },
+  {
+    "id": "graphics-10",
+    "path": "/home/von/.config/Codex/Default/Partitions/codex-mcp-app-sandbox%3Aconnection-a8dc3e0cccd12129a36b9f1790e842211ad6c9f0f48e82ac/DawnGraphiteCache"
+  },
+  {
+    "id": "graphics-11",
+    "path": "/home/von/.config/Codex/Default/Partitions/codex-mcp-app-sandbox%3Aconnection-a8dc3e0cccd12129a36b9f1790e842211ad6c9f0f48e82ac/DawnWebGPUCache"
+  },
+  {
+    "id": "graphics-12",
+    "path": "/home/von/.config/Codex/Default/Partitions/codex-mcp-app-sandbox%3Aconnection-a8dc3e0cccd12129a36b9f1790e842211ad6c9f0f48e82ac/GPUCache"
+  },
+  {
+    "id": "graphics-13",
+    "path": "/home/von/.config/Codex/GPUPersistentCache"
+  },
+  {
+    "id": "graphics-14",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/Default/DawnGraphiteCache"
+  },
+  {
+    "id": "graphics-15",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/Default/DawnWebGPUCache"
+  },
+  {
+    "id": "graphics-16",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/Default/GPUCache"
+  },
+  {
+    "id": "graphics-17",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/GrShaderCache"
+  },
+  {
+    "id": "graphics-18",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/GraphiteDawnCache"
+  },
+  {
+    "id": "graphics-19",
+    "path": "/home/von/.local/share/Steam/config/htmlcache/ShaderCache"
+  },
+  {
+    "id": "app-c47533fa0a5b0e39",
+    "path": "/home/von/.config/discord/DawnWebGPUCache"
+  },
+  {
+    "id": "app-c033e19120f0972d",
+    "path": "/home/von/.config/discord/GPUPersistentCache"
+  },
+  {
+    "id": "app-ecf65bbea414912d",
+    "path": "/home/von/.config/discord/DawnGraphiteCache"
+  },
+  {
+    "id": "app-9d4135c83c60efb1",
+    "path": "/home/von/.config/discord/Cache"
+  },
+  {
+    "id": "app-95e8b9f9248e2c04",
+    "path": "/home/von/.config/discord/Code Cache"
+  },
+  {
+    "id": "app-578c7363d30fa2a9",
+    "path": "/home/von/.config/discord/GPUCache"
+  },
+  {
+    "id": "app-1e524e54eba98091",
+    "path": "/home/von/.config/Code/DawnWebGPUCache"
+  },
+  {
+    "id": "app-5132ced40dda0e5d",
+    "path": "/home/von/.config/Code/DawnGraphiteCache"
+  },
+  {
+    "id": "app-5f455e56bc675a47",
+    "path": "/home/von/.config/Code/Cache"
+  },
+  {
+    "id": "app-63b95fa59ae381c7",
+    "path": "/home/von/.config/Code/Code Cache"
+  },
+  {
+    "id": "app-eb7ce5ca35b2448e",
+    "path": "/home/von/.config/Code/GPUCache"
+  },
+  {
+    "id": "app-72e59ab5be5906a3",
+    "path": "/home/von/.config/Session/DawnWebGPUCache"
+  },
+  {
+    "id": "app-251f9110d862574a",
+    "path": "/home/von/.config/Session/DawnGraphiteCache"
+  },
+  {
+    "id": "app-0acac461276f521c",
+    "path": "/home/von/.config/Session/Cache"
+  },
+  {
+    "id": "app-4d11c042ea11f7ae",
+    "path": "/home/von/.config/Session/Code Cache"
+  },
+  {
+    "id": "app-73dfe21427b540f4",
+    "path": "/home/von/.config/Session/GPUCache"
+  },
+  {
+    "id": "app-0000fc17ef94aa47",
+    "path": "/home/von/.config/libreoffice/4/cache"
+  },
+  {
+    "id": "app-f9a07612703858cc",
+    "path": "/home/von/.local/share/Paradox Interactive/launcher-v2/cache"
+  },
+  {
+    "id": "app-bd4c300d3587a3b7",
+    "path": "/home/von/.local/share/Steam/appcache/httpcache"
+  },
+  {
+    "id": "app-a1376cea120212f1",
+    "path": "/home/von/.local/share/Steam/appcache/librarycache"
+  },
+  {
+    "id": "app-24c700b82c9bd541",
+    "path": "/home/von/.local/share/Steam/config/avatarcache"
+  },
+  {
+    "id": "app-2f36f6708a920958",
+    "path": "/home/von/.local/share/Steam/steamapps/shadercache"
+  },
+  {
+    "id": "app-7390658c51ced421",
+    "path": "/home/von/.local/share/Steam/depotcache"
+  },
+  {
+    "id": "app-1f1d1cd9f355854a",
+    "path": "/home/von/.config/Code/CachedData"
+  },
+  {
+    "id": "app-70ff326e3e71fc47",
+    "path": "/home/von/.config/Code/CachedExtensionVSIXs"
+  }
+]

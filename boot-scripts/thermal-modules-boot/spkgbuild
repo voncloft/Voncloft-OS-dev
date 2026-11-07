@@ -1,0 +1,14 @@
+# description : SysV boot loading for CPU, motherboard and drive temperature modules
+# depends : kmod lfs-bootscripts
+
+name=thermal-modules-boot
+version=1
+release=1
+source="thermal-modules"
+options="!checksum"
+
+build() {
+    install -Dm755 "$SRC/thermal-modules" "$PKG/etc/rc.d/init.d/thermal-modules"
+    install -d "$PKG/etc/rc.d/rcS.d"
+    ln -s ../init.d/thermal-modules "$PKG/etc/rc.d/rcS.d/S55thermal-modules"
+}

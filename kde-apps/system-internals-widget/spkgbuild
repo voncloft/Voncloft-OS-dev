@@ -1,0 +1,36 @@
+# description : Plasma 6 system internals widget with temperature gauges, animated fans, disk activity, network graphs and free space
+# depends : cmake kirigami libplasma qt6 thermal-modules-boot
+
+name=system-internals-widget
+version=1.1.0
+release=2
+
+source="source/CMakeLists.txt
+        source/README.md
+        source/LICENSE
+        source/src/Telemetry.h
+        source/src/Telemetry.cpp
+        source/src/Sampler.h
+        source/src/Sampler.cpp
+        source/tests/preview.cpp
+        source/tests/sampler-test.cpp
+        source/package/metadata.json
+        source/package/contents/ui/main.qml
+        source/package/contents/ui/Dashboard.qml
+        source/package/contents/ui/TempGauge.qml
+        source/package/contents/ui/FanTile.qml
+        source/package/contents/ui/Sparkline.qml"
+options="!checksum"
+
+build() {
+    # Scratch copies local inputs by basename; restore the declared source tree.
+    for file in $source; do
+        install -Dm644 "$SRC/${file##*/}" "$SRC/$file"
+    done
+    cmake -S "$SRC/source" -B "$SRC/build" \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DINTERNALS_QML_INSTALL_DIR="$(qmake6 -query QT_INSTALL_QML)/org/voncloft/internals"
+    cmake --build "$SRC/build" --parallel 4
+    DESTDIR="$PKG" cmake --install "$SRC/build"
+}

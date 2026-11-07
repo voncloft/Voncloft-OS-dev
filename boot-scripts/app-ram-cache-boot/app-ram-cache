@@ -1,0 +1,15 @@
+#!/bin/sh
+# Mount bounded RAM app caches before the graphical login.
+# Persistent runtime binaries and document-editing files are preserved on disk.
+case "$1" in
+    start)
+        # RAM caching is optional. LFS rc otherwise waits for Enter on errors,
+        # preventing the graphical login from starting unattended.
+        if ! /usr/local/sbin/von-app-ram-cache start; then
+            echo 'WARNING: RAM-cache startup failed; continuing normal boot. Check cache status.' >&2
+        fi
+        ;;
+    status) /usr/local/sbin/von-app-ram-cache status ;;
+    stop) /usr/local/sbin/von-app-ram-cache stop ;;
+    *) echo "Usage: $0 {start|status|stop}"; exit 1 ;;
+esac

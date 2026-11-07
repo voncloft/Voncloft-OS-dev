@@ -1,0 +1,249 @@
+#!/usr/bin/python3
+"""Bounded RAM caches for von's desktop apps; never stops applications."""
+import fcntl
+import hashlib
+import json
+import os
+from pathlib import Path
+import pwd
+import re
+import signal
+import subprocess
+import sys
+
+BASE = Path('/run/von-app-ram-cache')
+CONFIG = Path('/etc/von-app-ram-cache.json')
+XDG = Path('/home/von/.cache')
+DISK_VIEW = BASE / 'private' / 'original-xdg-cache'
+USER = pwd.getpwnam('von')
+PRESERVE = ('codex-runtimes', 'ms-playwright', 'kioexec', 'FreeCAD', '.bluetoothctl_history', 'deviceid')
+LIMIT = '8G'
+GST_INSPECT = '/usr/bin/gst-inspect-1.0'
+GST_TIMEOUT = 30
+
+def run(*args, **kwargs):
+    return subprocess.run(args, check=True, **kwargs)
+
+def mountpoints():
+    def unescape(s):
+        return re.sub(r'\\([0-7]{3})', lambda m: chr(int(m[1], 8)), s)
+    return {Path(unescape(line.split()[4])) for line in Path('/proc/self/mountinfo').read_text().splitlines()}
+
+def on_ram(path):
+    try:
+        return BASE in mountpoints() and path.stat().st_dev == BASE.stat().st_dev
+    except OSError:
+        return False
+
+def belongs(name, path):
+    return name == str(path) or name.startswith(str(path) + '/')
+
+def open_paths():
+    result = set()
+    for proc in Path('/proc').iterdir():
+        if not proc.name.isdigit():
+            continue
+        try:
+            for fd in (proc / 'fd').iterdir():
+                try:
+                    name = os.readlink(fd).removesuffix(' (deleted)')
+                    if name.startswith('/home/von/'):
+                        result.add(name)
+                except OSError:
+                    pass
+            for line in (proc / 'maps').read_text().splitlines():
+                fields = line.split(maxsplit=5)
+                if len(fields) == 6 and fields[5].startswith('/home/von/'):
+                    result.add(fields[5].removesuffix(' (deleted)'))
+        except OSError:
+            pass
+    return result
+
+def check_target(path):
+    if not str(path).startswith('/home/von/') or path.resolve() != path:
+        raise RuntimeError(f'Unsafe cache path: {path}')
+    if not path.is_dir() or path.stat().st_uid != USER.pw_uid:
+        raise RuntimeError(f'Cache is not a directory owned by von: {path}')
+
+def user_dir(path):
+    path.mkdir(mode=0o700, parents=True, exist_ok=True)
+    os.chown(path, USER.pw_uid, USER.pw_gid)
+
+def prepare_gstreamer(cache_root):
+    """Build the RAM registry without access to an unfinished display session."""
+    registry_dir = cache_root / 'gstreamer-1.0'
+    user_dir(registry_dir)
+    env = {
+        'HOME': USER.pw_dir, 'USER': USER.pw_name, 'LOGNAME': USER.pw_name,
+        'PATH': '/usr/bin:/bin', 'LANG': 'C', 'LC_ALL': 'C',
+        'XDG_CACHE_HOME': str(cache_root),
+    }
+    # Do not inherit DISPLAY, WAYLAND_DISPLAY, XDG_RUNTIME_DIR or a session bus.
+    # Run as the desktop user; this must not create root-owned cache files.
+    process = subprocess.Popen(
+        [GST_INSPECT, '--print-blacklist'], env=env, cwd='/',
+        user=USER.pw_uid, group=USER.pw_gid,
+        extra_groups=os.getgrouplist(USER.pw_name, USER.pw_gid),
+        stdin=subprocess.DEVNULL, stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT, text=True, start_new_session=True,
+    )
+    try:
+        output, _ = process.communicate(timeout=GST_TIMEOUT)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except ProcessLookupError:
+            pass
+        try:
+            process.communicate(timeout=2)
+        except subprocess.TimeoutExpired:
+            # A driver stuck in an uninterruptible wait must not hold up boot.
+            process.stdout.close()
+        raise RuntimeError('GStreamer preparation timed out; RAM cache was not attached.')
+    registries = list(registry_dir.glob('registry.*.bin'))
+    if (process.returncode != 0 or 'Total count: 0 blacklisted files' not in output
+            or not any(p.is_file() and p.stat().st_size > 0
+                       and p.stat().st_uid == USER.pw_uid for p in registries)):
+        raise RuntimeError('GStreamer preparation failed; RAM cache was not attached.\n'
+                           + output[-2000:])
+    print('GStreamer registry prepared in RAM before graphical startup.', flush=True)
+
+def entries_for_session(config):
+    entries = list(config)
+    known = {entry['path'] for entry in entries}
+    # A running desktop prevents replacing the whole cache tree. Mount only
+    # cache subdirectories that have no open files, leaving the rest for boot.
+    if not on_ram(XDG):
+        candidates = [p for p in XDG.iterdir() if p.is_dir() and not p.is_symlink()
+                      and p.name not in PRESERVE and p.name != 'gstreamer-1.0']
+        # Firefox keeps cache databases open in the parent, separately from HTTP cache2.
+        candidates += list((XDG / 'mozilla' / 'firefox').glob('*/cache2'))
+        for path in sorted(candidates, key=lambda p: (len(p.parts), str(p))):
+            if str(path) in known:
+                continue
+            key = hashlib.sha256(str(path).encode()).hexdigest()[:16]
+            entries.append({'id': 'xdg-' + key, 'path': str(path)})
+            known.add(str(path))
+    return entries
+
+def setup_xdg(opened):
+    if on_ram(XDG):
+        return
+    mounts = mountpoints()
+    if any(belongs(p, XDG) for p in opened) or any(p != XDG and belongs(str(p), XDG) for p in mounts):
+        print('Whole standard cache directory: scheduled for next boot; applying safe subdirectories now.', flush=True)
+        return
+    check_target(XDG)
+    DISK_VIEW.parent.mkdir(mode=0o700, exist_ok=True)
+    DISK_VIEW.mkdir(mode=0o700, exist_ok=True)
+    if DISK_VIEW not in mounts:
+        # A non-recursive bind preserves access to the original on-disk tree.
+        run('/bin/mount', '--bind', str(XDG), str(DISK_VIEW))
+    source = BASE / 'xdg-all'
+    user_dir(source)
+    attached = []
+    try:
+        # Finish discovery before publishing an empty .cache to desktop clients.
+        # A failure leaves the original on-disk cache visible.
+        prepare_gstreamer(source)
+        run('/bin/mount', '--bind', str(source), str(XDG))
+        attached.append(XDG)
+        for name in PRESERVE:
+            original, target = DISK_VIEW / name, XDG / name
+            if not original.exists():
+                continue
+            if original.is_symlink():
+                raise RuntimeError(f'Refusing symlink for preserved data: {original}')
+            if original.is_dir():
+                user_dir(target)
+            elif original.is_file():
+                target.touch(mode=0o600, exist_ok=True)
+                os.chown(target, USER.pw_uid, USER.pw_gid)
+            else:
+                raise RuntimeError(f'Unexpected preserved data type: {original}')
+            run('/bin/mount', '--bind', str(original), str(target))
+            attached.append(target)
+        print('RAM cache active: entire /home/von/.cache (with documented persistent exceptions).', flush=True)
+    except Exception:
+        for target in reversed(attached):
+            run('/bin/umount', str(target))
+        run('/bin/umount', str(DISK_VIEW))
+        raise
+
+def apply_entry(entry, opened, live):
+    target = Path(entry['path'])
+    if on_ram(target):
+        return
+    if not target.exists():
+        return
+    check_target(target)
+    if target in mountpoints():
+        print(f'Leaving an existing unrelated mount unchanged: {target}', flush=True)
+        return
+    busy = [name for name in opened if belongs(name, target)]
+    blocking = [name for name in busy if not (
+        entry.get('allow_cache_journals', False)
+        and name.endswith('/Cache/No_Vary_Search/journal.baj'))]
+    if blocking:
+        print(f'Deferred until next boot or normal app close: {target}', flush=True)
+        return
+    source = BASE / entry['id']
+    user_dir(source)
+    # Existing cached content remains underneath the mount. Apps refill these
+    # disposable caches on demand; avoid gigabytes of unnecessary disk copying.
+    run('/bin/mount', '--bind', str(source), str(target))
+    print(f'RAM cache active: {target}', flush=True)
+
+def stop(config):
+    opened = open_paths()
+    mounts = mountpoints()
+    targets = [p for p in mounts if str(p).startswith('/home/von/') and on_ram(p)]
+    if on_ram(XDG):
+        targets += [XDG / name for name in PRESERVE if XDG / name in mounts]
+    if any(belongs(name, target) for target in targets for name in opened):
+        sys.exit('Cache paths are in use. Log out of the graphical desktop before stopping RAM caches.')
+    for target in sorted(set(targets), key=lambda p: len(p.parts), reverse=True):
+        run('/bin/umount', str(target))
+    if DISK_VIEW in mountpoints():
+        run('/bin/umount', str(DISK_VIEW))
+    if BASE in mountpoints():
+        run('/bin/umount', str(BASE))
+
+def main():
+    if os.geteuid() != 0:
+        sys.exit('Run with sudo.')
+    action = sys.argv[1] if len(sys.argv) > 1 else 'status'
+    config = json.loads(CONFIG.read_text())
+    with open('/run/von-app-ram-cache.lock', 'w') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        if action == 'status':
+            print(('RAM  ' if on_ram(XDG) else 'BOOT '), XDG, '(whole standard cache directory)')
+            for entry in entries_for_session(config):
+                path = Path(entry['path'])
+                print(('RAM  ' if on_ram(path) else 'DISK '), path)
+            print('Preserved on disk:', ', '.join(PRESERVE))
+            if BASE in mountpoints():
+                run('/bin/df', '-h', str(BASE))
+            return
+        if action == 'stop':
+            stop(config)
+            return
+        if action not in ('start', 'start-live'):
+            sys.exit('Usage: von-app-ram-cache {start|start-live|status|stop}')
+        BASE.mkdir(mode=0o750, exist_ok=True)
+        if BASE not in mountpoints():
+            run('/bin/mount', '-t', 'tmpfs', '-o',
+                f'size={LIMIT},nr_inodes=1048576,noswap,nosuid,nodev,noatime,uid=0,gid={USER.pw_gid},mode=0750',
+                'von-app-ram-cache', str(BASE))
+        else:
+            run('/bin/mount', '-o', f'remount,size={LIMIT},nr_inodes=1048576,noswap,uid=0,gid={USER.pw_gid},mode=0750', str(BASE))
+        # tmpfs remount options do not update the existing root inode permissions.
+        os.chown(BASE, 0, USER.pw_gid)
+        os.chmod(BASE, 0o750)
+        opened = open_paths()
+        setup_xdg(opened)
+        for entry in entries_for_session(config):
+            apply_entry(entry, opened, action == 'start-live')
+
+if __name__ == '__main__':
+    main()

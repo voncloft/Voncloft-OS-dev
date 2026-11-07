@@ -228,7 +228,7 @@ f:e10125f78449ccedbf2b06f976ed31c0:clazy/CHANGELOG
 f:36bdf7180586d2e28d35d6f424c3fe11:clazy/spkgbuild
 f:5f0d9b274c7362384367a6199d32b199:session-desktop/.pkgfiles
 f:54a6239b44316baed1b60076ca422bb1:session-desktop/CHANGELOG
-f:95acd00fda03f9f060f2cf9f55cdbe04:session-desktop/spkgbuild
+f:7a62ceac0df737fecadf07b36d193bc7:session-desktop/spkgbuild
 f:47e480f53f600a0e8368903f65b6b0e0:wayland-protocols/.pkgfiles
 f:1465418054d135614ba92e9e4073b90d:wayland-protocols/CHANGELOG
 f:e2ed757cca8303240f22b0952fadda25:wayland-protocols/spkgbuild

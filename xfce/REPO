@@ -94,7 +94,7 @@ f:a9f01dcee59ba1a3d6641b9acc559154:xfce4-battery-plugin/spkgbuild
 f:955ff5ca3b1d4a2cd3a42564ada35758:xfce4-panel/CHANGELOG
 f:dedd05f2295ff8edbe92b8852b224a20:xfce4-panel/spkgbuild
 f:9a6ce8fbae8f8f57eb2e3cb15def8392:xfce4-sensors-plugin/CHANGELOG
-f:3e91248de085bd8dadd8125aa5335d26:xfce4-sensors-plugin/spkgbuild
+f:d61e0fd8a970d23abf5bf5356f070a35:xfce4-sensors-plugin/spkgbuild
 f:5a13999f1b7b8183a117bacefbfa7d94:thunar-archive-plugin/CHANGELOG
 f:940ff38dc63747e6de6bc052a6c83d90:thunar-archive-plugin/spkgbuild
 f:2ac824baf5185b8a81954d2222b5e6cc:garcon/CHANGELOG

@@ -1,0 +1,15 @@
+# description : SysV startup and shutdown for the BlueZ Bluetooth daemon
+# depends : bluez dbus-boot lfs-bootscripts
+
+name=bluetooth-boot
+version=20251220
+release=1
+_name=blfs-bootscripts
+source="https://anduin.linuxfromscratch.org/BLFS/${_name}/${_name}-${version}.tar.xz"
+backup="etc/sysconfig/bluetooth"
+options="!checksum"
+
+build() {
+    cd "$SRC/blfs-bootscripts-$version"
+    make DESTDIR="$PKG" install-bluetooth
+}

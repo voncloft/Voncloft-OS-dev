@@ -1,5 +1,5 @@
 # description : iostat package
-# depends : lm_sensors
+# depends : lm-sensors
 
 name=sysstat
 version=12.8.0

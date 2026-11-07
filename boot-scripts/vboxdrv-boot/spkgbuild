@@ -1,0 +1,24 @@
+# description : SysV boot integration for VirtualBox host kernel modules
+# depends : kmod
+
+name=vboxdrv-boot
+version=1
+release=1
+source=""
+options="!checksum"
+
+build() {
+    # The virtualbox package depends on this package and provides this script.
+    # Use its matching version instead of maintaining a second script copy.
+    install -d "$PKG/etc/rc.d/init.d"
+    ln -s /opt/VirtualBox/vboxdrv.sh "$PKG/etc/rc.d/init.d/vboxdrv"
+
+    for level in 3 4 5; do
+        install -d "$PKG/etc/rc.d/rc$level.d"
+        ln -s ../init.d/vboxdrv "$PKG/etc/rc.d/rc$level.d/S20vboxdrv"
+    done
+    for level in 0 1 2 6; do
+        install -d "$PKG/etc/rc.d/rc$level.d"
+        ln -s ../init.d/vboxdrv "$PKG/etc/rc.d/rc$level.d/K80vboxdrv"
+    done
+}

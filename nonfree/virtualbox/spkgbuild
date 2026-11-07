@@ -1,5 +1,5 @@
 # description	: Powerful x86 virtualization for enterprise as well as home use
-# depends	:  qt5
+# depends	:  qt6 vboxdrv-boot
 
 name=virtualbox
 _name=${name%-*}

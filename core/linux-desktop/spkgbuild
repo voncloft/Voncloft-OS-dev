@@ -1,5 +1,5 @@
 # description : linux kernel for desktop
-# depends : sof-firmware linux-firmware tuner-firmware
+# depends : sof-firmware linux-firmware tuner-firmware thermal-modules-boot uinput-boot
 name=linux-desktop
 version=6.19.14
 release=1

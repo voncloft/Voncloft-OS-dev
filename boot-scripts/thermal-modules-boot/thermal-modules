@@ -1,0 +1,50 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          thermal-modules
+# Required-Start:    $local_fs udev_retry
+# Required-Stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Load CPU, motherboard and drive temperature drivers
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+case "${1:-}" in
+    start|restart|reload)
+        failed_modules=""
+        for module in coretemp nct6775 drivetemp; do
+            if ! modprobe "$module"; then
+                failed_modules="$failed_modules $module"
+            fi
+        done
+        if [ -n "$failed_modules" ]; then
+            # Monitoring is optional: never hold up boot for unavailable hardware.
+            log_warning_msg "Thermal modules unavailable:$failed_modules"
+        else
+            log_success_msg "Thermal monitoring modules loaded."
+        fi
+        ;;
+    stop)
+        # Keep sensors available to applications until kernel shutdown.
+        ;;
+    status)
+        result=0
+        for module in coretemp nct6775 drivetemp; do
+            if [ -d "/sys/module/$module" ]; then
+                printf '%s: loaded\n' "$module"
+            else
+                printf '%s: not loaded\n' "$module"
+                result=1
+            fi
+        done
+        exit "$result"
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|reload|status}" >&2
+        exit 2
+        ;;
+esac
+
+exit 0
