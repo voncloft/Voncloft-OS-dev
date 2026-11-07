@@ -2,7 +2,7 @@
 # depends	: boost brotli cairo cmake curl fontconfig freetype2 glib gpgmepp harfbuzz lcms2 libjpeg-turbo libpng libtiff ninja nss openjpeg pkgconf poppler-data qt6 zlib
 
 name=poppler
-version=26.10.0
+version=26.11.0
 release=2
 source="https://poppler.freedesktop.org/$name-$version.tar.xz"
 

@@ -2,7 +2,7 @@
 # depends	: gtk2
 
 name=ssh-askpass
-version=10.6p1
+version=10.6p2
 release=1
 _name=openssh
 source="https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/${_name}-${version}.tar.gz"

@@ -109,9 +109,9 @@ f:ada5d1b217d76cc3acc400d18faf2e45:openssl1.0/spkgbuild
 f:b94d4b17b2fdddf8bfe422041320e174:openssl1.0/openssl-compat_versioned_symbols-1.patch
 f:28256197db8334d614c44e34bbb68df5:openvpn/openvpn-torrent
 f:ef06c0c62ef268cb974e7aa5a2adea04:openvpn/post-upgrade.sh
-f:2639dd860bbf7253342b3962cf38e00e:openvpn/CHANGELOG
+f:71e68322f2e6f539394eb1df8ba21e59:openvpn/CHANGELOG
 f:d18dce76462cdf0fb6d05986ec9a9985:openvpn/post-install.sh
-f:b10c6b4d730963bfcae5d5bb4cde4a48:openvpn/spkgbuild
+f:956174ddff79011a9241f768d18d4c9c:openvpn/spkgbuild
 f:82bf846c7f96266299920d9ede006ab7:filezilla/CHANGELOG
 f:809bbccd2e094d7bb3b14bebe990a1a5:filezilla/spkgbuild
 f:6eb2e845fc4cc15794076e14226b25d2:filezilla/missing-list-include.patch

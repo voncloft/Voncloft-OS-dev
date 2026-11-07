@@ -181,8 +181,8 @@ f:8e93954455e7979081bd81adf34dc270:libclc-32/spkgbuild
 f:f9c57f89c575477445ae0256fca57364:libtool-32/CHANGELOG
 f:caf77079dc892b1194d91881dfb86d79:libtool-32/spkgbuild
 f:380ea8cebb1cd7528232edc19e1fde5e:libtool-32/override
-f:504b9dc4d9742b8bfe1cf6269f41957d:vulkan-loader-32/CHANGELOG
-f:2505d28e58afc6554ccf16c2a53db48d:vulkan-loader-32/spkgbuild
+f:1f969813dff8e341b7ab3b63ee8eaa31:vulkan-loader-32/CHANGELOG
+f:b2c7fe917fabb05f806194d4839d8e98:vulkan-loader-32/spkgbuild
 f:7e3cd37341c846119de73bc9545a8f90:pixman-32/CHANGELOG
 f:7a9650308dd6acd09f140036fb1bc945:pixman-32/spkgbuild
 f:51d083eeac0fe762bb581ad8899e3dd5:pixman-32/override
@@ -297,8 +297,8 @@ f:be47444052de135116c5b48a82160438:libx11-32/CHANGELOG
 f:d4e4d388e3ea168d7283af4f745d164d:libx11-32/spkgbuild
 f:da5757663d3e7a92cb5fa953bc71b809:libx11-32/override
 f:73ea912643e3be5a38999bd5c03dedfa:zlib-32/.pkgfiles
-f:a1f4cc2519f29cdf5916736a8470ec69:zlib-32/CHANGELOG
-f:5e05cac1a573afa52dbee4254f7204d6:zlib-32/spkgbuild
+f:857b9b8ab2ca309668c2dfc7ddcf0e00:zlib-32/CHANGELOG
+f:0b24a202dd04a14104536b16ec9b5b12:zlib-32/spkgbuild
 f:365f530dcacc99c804f84de8ef3b7171:zlib-32/override
 f:3fd0ef3ab8f7552009cd7f8018c8cc06:gst-plugins-base-32/CHANGELOG
 f:ab0127e20e80ee5a8f2bf42e4f642e68:gst-plugins-base-32/spkgbuild

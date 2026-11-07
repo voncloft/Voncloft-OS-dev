@@ -2,7 +2,7 @@
 # depends       : cmake libarchive ffmpeg freetype2 gst-plugins-base gtk3 harfbuzz jasper libavif libexif libjpeg-turbo libpng libtiff libva libwebp openexr openjpeg pkgconf python python-numpy tesseract v4l-utils zlib
 
 name=opencv
-version=5.0.0
+version=5.1.0
 release=5
 _name=opencv_contrib
 source="https://github.com/opencv/${name}/archive/${version}/${name}-${version}.tar.gz

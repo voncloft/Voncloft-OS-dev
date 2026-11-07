@@ -2,7 +2,7 @@
 # depends	: gst-plugins-base cairo flac gdk-pixbuf lame libsoup libvpx mpg123 nasm pulseaudio meson ninja pkgconf
 
 name=gst-plugins-good
-version=1.28.8
+version=1.28.9
 release=2
 source="https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
 

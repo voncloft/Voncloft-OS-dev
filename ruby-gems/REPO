@@ -74,8 +74,8 @@ f:7028571a54eb39a813f458a00129c5a3:ruby-manpages/.pkgfiles
 f:1a07bb9e7cbbccb44517aa3c74b1fc9c:ruby-manpages/CHANGELOG
 f:afd96f4cf8dd46951dbc43f902e5145f:ruby-manpages/spkgbuild
 f:22bfc49414f9181682d0612681f69093:ruby-tins/.pkgfiles
-f:bf16c8620c10ca24e676270030d5a3b2:ruby-tins/CHANGELOG
-f:ed0b1c1c13e73462df227c7d5994aa39:ruby-tins/spkgbuild
+f:85d7be4443ce013929593f68c8c9585a:ruby-tins/CHANGELOG
+f:c786bc5b1be9da0b78919baa128f15be:ruby-tins/spkgbuild
 f:b058930969c537bf93551f383e9db1d7:ruby-paint/.pkgfiles
 f:a8b84df0e71cf0b8b4dcec65520fc2ce:ruby-paint/CHANGELOG
 f:8f72e57c6740cce8911bad0d62c07af8:ruby-paint/spkgbuild

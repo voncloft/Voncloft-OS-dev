@@ -41,9 +41,9 @@ f:0c4212893556a750d024596d74e4e95d:wireguard/spkgbuild
 f:81ef5394b527e1897e785cb0e188ced5:wireguard/override
 f:e60137753879f141f627014084ab9ab2:blacklist-youtubeads/.pkgfiles
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-upgrade.sh
-f:8a3a76a1b144100888ec2e3fd2c6c2db:blacklist-youtubeads/CHANGELOG
+f:72fff43a59a1978449b1634b4c3cc498:blacklist-youtubeads/CHANGELOG
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
-f:a67031ae8b81a90be5206b45f49ce2b7:blacklist-youtubeads/spkgbuild
+f:29ddc1c6e50269f62d4ea7051ff937ee:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
 f:1360cfbaac7d9d561eaebd186dc0d45e:homeassistant/CHANGELOG
 f:05515e2e4f2d382e9050cee738f3cc5e:homeassistant/spkgbuild
@@ -118,10 +118,10 @@ f:d36d8c1ca1e0fc10e6bc24714ac963bf:blacklist-hosts/post-install.sh
 f:3b365d0e52f2510a3e6f60ae04ec45af:blacklist-hosts/test
 f:d68fdb99e9eeacd92e080e73e88941c8:blacklist-hosts/spkgbuild
 f:915ed49eb11eeccfcc4e8b87a5b9c7e2:httpd/post-upgrade.sh
-f:0d5801010ea6d7e1a8256392650a4b48:httpd/CHANGELOG
+f:adb07cd507e7e55e8a2fd8d287cadd6a:httpd/CHANGELOG
 f:01b882c49d81d4f9a48106834fe88e54:httpd/httpd
 f:6728f2b3aa5f409ef61aede4e9577942:httpd/post-install.sh
-f:11a87efa7cb8a263e700d6a7e82666d0:httpd/spkgbuild
+f:8483ef62362097fc14568d76b16bde31:httpd/spkgbuild
 f:2a424710304fdd98868c6511c4814d41:httpd/pre-install.sh
 f:db198aa502f71742e5768904a88ecd30:php/.pkgfiles
 f:44d2be15152b16a9dddf9113ab2c80cb:php/php-fpm

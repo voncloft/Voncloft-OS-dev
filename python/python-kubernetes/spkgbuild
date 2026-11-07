@@ -2,7 +2,7 @@
 # depends : python python-certifi python-six python-dateutil
 
 name=python-kubernetes
-version=37.0.1
+version=37.0.2
 release=2
 
 _name=python

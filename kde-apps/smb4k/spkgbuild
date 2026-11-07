@@ -2,7 +2,7 @@
 # depends : cifs-utils extra-cmake-modules kauth kcompletion kconfig kconfigwidgets kcoreaddons kcrash kdbusaddons kde-deps-installer kdnssd kdoctools ki18n kiconthemes kio kirigami kjobwidgets knotifications kstatusnotifieritem kwallet kwidgetsaddons kwindowsystem kxmlgui libplasma qt6 qtkeychain samba solid
 
 name=smb4k
-version=4.0.7
+version=4.0.8
 release=2
 options="!checksum"
 source="${name}-${version}.tar.gz::https://invent.kde.org/network/${name}/-/archive/${version}/${name}-${version}.tar.gz"

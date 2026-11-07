@@ -2,7 +2,7 @@
 # depends : 
 
 name=python-graphql-core
-version=3.3.1
+version=3.3.2
 release=3
 
 _name=graphql_core

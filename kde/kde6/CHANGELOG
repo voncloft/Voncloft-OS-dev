@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 6.8.1 to version 26.08.2
+
+----------------------------------------------------------------
+
+Date: Sat Nov  7 07:47:49 AM EST 2026
+
+Version=26.08.3
+Release=1
+
+Synopsis:
+Changed from version 26.08.2 to version 26.08.3

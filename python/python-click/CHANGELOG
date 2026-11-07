@@ -187,3 +187,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 8.2.1 to version 8.5.0
+
+----------------------------------------------------------------
+
+Date: Sat Nov  7 07:47:49 AM EST 2026
+
+Version=8.5.1
+Release=3
+
+Synopsis:
+Changed from version 8.5.0 to version 8.5.1

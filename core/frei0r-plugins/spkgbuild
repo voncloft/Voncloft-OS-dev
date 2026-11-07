@@ -2,7 +2,7 @@
 # depends	: cairo cmake gavl opencv pkgconf
 
 name=frei0r-plugins
-version=3.6.0
+version=3.7.0
 release=2
 _name=frei0r
 source="https://github.com/dyne/${_name}/archive/refs/tags/v${version}.tar.gz

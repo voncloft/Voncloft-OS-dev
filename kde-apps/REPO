@@ -709,7 +709,8 @@ f:9506eb590421ce676e99b9d3750fe035:kcolorpicker/.pkgfiles
 f:349f3b3c5ad3212bf0b440db86cedfb8:kcolorpicker/spkgbuild
 f:2e38f161a560033b16ce061f1bd6fec9:konversation/CHANGELOG
 f:ff892471e12d108eb890eeadd9d54b43:konversation/spkgbuild
-f:855f229e3c8137e8e0361f270f7ac071:smb4k/spkgbuild
+f:efa128123f3f05bfdd1aae54eebab5ae:smb4k/CHANGELOG
+f:54642e797b3cc867ac5e6e4751e77743:smb4k/spkgbuild
 f:ee60e8aad87e38b88d449a5292c6d218:smb4k/override
 f:cbf73165f83441d7c3b7b150b7251831:kamoso/CHANGELOG
 f:567c62c4d921ab1f90f087669e84ad02:kamoso/spkgbuild

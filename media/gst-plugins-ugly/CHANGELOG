@@ -368,3 +368,13 @@ Release=2
 Synopsis:
 Build against older libcdio metadata using a private compiler-safe pkg-config copy.
 Declare libcdio and the build tools; use explicit Meson setup and disable tests/docs.
+
+----------------------------------------------------------------
+
+Date: Sat Nov  7 07:47:49 AM EST 2026
+
+Version=1.28.9
+Release=2
+
+Synopsis:
+Changed from version 1.28.8 to version 1.28.9

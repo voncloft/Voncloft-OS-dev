@@ -2,7 +2,7 @@
 # depends : python-cryptography
 
 name=python-authlib
-version=1.9.4
+version=1.9.5
 release=3
 
 _name=${name#python-}

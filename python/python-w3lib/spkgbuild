@@ -2,7 +2,7 @@
 # depends : python-six
 
 name=python-w3lib
-version=2.5.0
+version=2.6.0
 release=3
 
 _name=${name#python-}

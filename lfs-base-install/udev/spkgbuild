@@ -2,7 +2,7 @@
 # depends	: 
 
 name=udev
-version=262.1
+version=262.2
 release=1
 _name=systemd
 source="https://github.com/systemd/${_name}/archive/v${version}/${_name}-$version.tar.gz

@@ -1,7 +1,7 @@
 # description : Refactoring library
 
 name=python-rope
-version=1.15.0
+version=1.15.2
 release=3
 
 _name=${name#python-}

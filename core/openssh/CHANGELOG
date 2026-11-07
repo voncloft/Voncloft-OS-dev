@@ -156,3 +156,13 @@ Release=1
 
 Synopsis:
 Track portable OpenSSH releases including the required p suffix.
+
+----------------------------------------------------------------
+
+Date: Sat Nov  7 07:47:49 AM EST 2026
+
+Version=10.6p2
+Release=1
+
+Synopsis:
+Changed from version 10.6p1 to version 10.6p2

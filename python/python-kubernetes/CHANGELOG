@@ -297,3 +297,13 @@ Release=2
 
 Synopsis:
 Upgraded from version 33.1.0 to version 37.0.1
+
+----------------------------------------------------------------
+
+Date: Sat Nov  7 07:47:49 AM EST 2026
+
+Version=37.0.2
+Release=2
+
+Synopsis:
+Changed from version 37.0.1 to version 37.0.2

@@ -568,11 +568,11 @@ f:0d44e1bf65fcab2c427e7d314a6bb61d:glib/override
 f:a221652c98575179869f27ae19231dfa:libcanberra/.pkgfiles
 f:7456078fb359cea04a3fc28fca534406:libcanberra/spkgbuild
 f:d81141e1a7317737ca6eb424f17980e0:opencv/cuda-probe.cu
-f:b32ea96096ba3d4bcc17758902e611ae:opencv/CHANGELOG
+f:130284edb6bc17fddf7fb9625682cc80:opencv/CHANGELOG
 f:899a7009c35e18f4e43d79fe51a7a4cf:opencv/opencv-ffmpeg9.patch
 f:ec9e8eac976f4cc0ed5d70ceedbf85c0:opencv/cuda-probe.cmake
 f:c115351e14a8cc89bcb512e8c1cb67c6:opencv/detect-cuda.py
-f:51e60dce340017eae4ef9eda6b6065a9:opencv/spkgbuild
+f:e90f129cdaac749c9f4bb25b4d647aee:opencv/spkgbuild
 f:c85e5dde8fcd564714bada7e5cf19667:opencv/override
 f:7dade8f54263d786057bfe597ada1ae2:modemmanager/.pkgfiles
 f:7df1f0df1adbaff49cc34d2e4b873225:modemmanager/spkgbuild
@@ -1067,8 +1067,8 @@ f:a61061c7d1de7660f0524273ad18486d:freerdp/CHANGELOG
 f:e616f22b67dc3b185d1643d92a394ae7:freerdp/spkgbuild
 f:af726e977eed101a30b847d222acd9f6:poppler/.pkgfiles
 f:d521aa428df1b65e73d72d2c11e92207:poppler/pre-upgrade.sh
-f:7b9926d8493ea7bcd776ed842770f787:poppler/CHANGELOG
-f:2e302aaf145e6cd19772ed18815c296a:poppler/spkgbuild
+f:8877aef84fd4670e61daf8720b8436e3:poppler/CHANGELOG
+f:d3686c9ac5c59ac7d948c809ebe00bdc:poppler/spkgbuild
 f:fa1ab5f5a8003c1b0e1faeada8560d8f:libffi/.pkgfiles
 f:36cd4a0a2ad452753e54b1ed63447752:libffi/CHANGELOG
 f:2f64a1f692179a8d53856a4f452eb213:libffi/spkgbuild

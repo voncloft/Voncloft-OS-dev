@@ -261,8 +261,8 @@ f:061e2448527596f94b29ab64879a5a0a:libtool/.pkgfiles
 f:82740a6a8136c15dfdd8095e14f5401d:libtool/CHANGELOG
 f:9d6c284b57922c7ac547ddd16d7516e6:libtool/spkgbuild
 f:0b6db63436ff55a433fa394530e48729:zlib/.pkgfiles
-f:2f382537d67c75e79ab1f3e27c077ef3:zlib/CHANGELOG
-f:81cc7b502b3cfb2d4eaade48efdf9fab:zlib/spkgbuild
+f:22d91706d174fc0d108ab46450fd9549:zlib/CHANGELOG
+f:ab42dc771760aa302c13e8d57d236d8d:zlib/spkgbuild
 f:1b3f458743fd8a2b1cd81091e3a775d8:diffutils/.pkgfiles
 f:13039426f97e90fb6d3d4e1d67403f1f:diffutils/CHANGELOG
 f:e63265732f509b2aa3c36887b2a570ac:diffutils/spkgbuild
@@ -363,8 +363,8 @@ f:3d50ef4c9d00b719e6fba414cfd7b810:binutils/CHANGELOG
 f:6a9a00a75a78fcb7fa032af1893fc9ca:binutils/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:udev/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:udev/.nanorc
-f:760f963d3337831c501b721ccf6f1cfd:udev/CHANGELOG
-f:ab860f2f7e1c02121046a0e96203baaf:udev/spkgbuild
+f:0814669ad56bcde6a93b39ea5da7d990:udev/CHANGELOG
+f:96e5c6a6ac32df67c16e0dc809e32885:udev/spkgbuild
 f:dc97f4255fe3835e2aad5c50d203321e:iproute2/.pkgfiles
 f:9f544e37c4ffb4b63c2ab720099cfa9d:iproute2/CHANGELOG
 f:1382f707b5aed4539f0b8b223cfe05ee:iproute2/spkgbuild

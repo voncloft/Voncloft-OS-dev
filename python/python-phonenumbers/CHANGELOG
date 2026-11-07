@@ -877,3 +877,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 9.0.8 to version 9.0.42
+
+----------------------------------------------------------------
+
+Date: Sat Nov  7 07:47:49 AM EST 2026
+
+Version=9.0.43
+Release=1
+
+Synopsis:
+Changed from version 9.0.42 to version 9.0.43

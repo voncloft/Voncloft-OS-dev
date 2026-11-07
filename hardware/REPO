@@ -28,8 +28,8 @@ f:6912799edf45bc2421a7e81d646fdf0d:xf86-video-nouveau/readme
 f:d02c81a0ef2c5c2209529689b375297b:xf86-video-nouveau/CHANGELOG
 f:4e2f9fef4b2a2b070fdf925067052c09:xf86-video-nouveau/spkgbuild
 f:f754bb3d513b19809b1aaabeeca2edc4:vulkan-headers/.pkgfiles
-f:cff202a8f7419081f68e4c4dba123083:vulkan-headers/CHANGELOG
-f:71e133cdc7a5a2c225d27b177f40dda2:vulkan-headers/spkgbuild
+f:40d42cfb7a9f98d9f01c49b50f8700be:vulkan-headers/CHANGELOG
+f:9032ef36a574417e0391fb6ffc862575:vulkan-headers/spkgbuild
 f:98002aa12a48bc71b3c48b6e64ef9e17:xf86-video-vmware/.pkgfiles
 f:3c1279952caa185185ffd035e48aae04:xf86-video-vmware/readme
 f:606d4d6314e748ca00297900aad21f97:xf86-video-vmware/CHANGELOG
@@ -41,8 +41,8 @@ f:264e9171c86894a0645fa8b6abbf7566:xf86-input-wacom/spkgbuild
 f:8d258dcf834016d2e46854c88ad3fca2:.httpup-urlinfo
 f:8b6c79b5055f99289b6927f44cfca71e:gavl/spkgbuild
 f:fb839adca0ca28678718be2727cd8a18:vulkan-loader/.pkgfiles
-f:43c1abbba03f79d5e804f5ae2c040534:vulkan-loader/CHANGELOG
-f:b4ead3e8073fbb213d819a39aa221e69:vulkan-loader/spkgbuild
+f:5081d2e6e1abcc89139529453f4fa8c6:vulkan-loader/CHANGELOG
+f:ceecdeaf6928efd82c63ed0c9a5e9793:vulkan-loader/spkgbuild
 f:c3e93c1b71b15096e7a1cf380f3e43a3:xf86-video-fbdev/CHANGELOG
 f:5b2e96ff5d87c3bfdddf12f401c0a498:xf86-video-fbdev/gcc8.diff
 f:a72257cfd74880d3b9d7c31f128e5f8a:xf86-video-fbdev/spkgbuild

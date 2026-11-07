@@ -86,9 +86,9 @@ f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-modules/override
 f:501ab7b371ea0ac9bbebc886be9f3027:virtualbox-guest-modules/vboxvideo-upstream.conf
 f:91891835ddaa34a41d7020775b14ede6:iridium/spkgbuild
 f:04aef81e9ba3f11efd4297bac65ef249:iridium/override
-f:f86043fd42dfea01a1054ac7297e7ed8:telegram-desktop-bin/CHANGELOG
+f:3fea047a06b4da4c509c0f92d18743fa:telegram-desktop-bin/CHANGELOG
 f:fa93a0c669b5f0cd8b9be4c8eecf5cdd:telegram-desktop-bin/telegram-desktop-bin.desktop
-f:b9b0bc277b9f1091b12d28a53b05ce84:telegram-desktop-bin/spkgbuild
+f:7e576df5194eef09184d3a84610c84c3:telegram-desktop-bin/spkgbuild
 f:2a9ba90f79c0467d2e20c12555555345:telegram-desktop-bin/override
 f:15a20f52f53d6b5b8c1ea510b2c3c546:google-chrome/CHANGELOG
 f:831da7c0f5e91ca2d5159e9e3818dba7:google-chrome/spkgbuild
@@ -115,9 +115,9 @@ f:4b1645c2d3f85426435736c60f928375:wps-office/override
 f:a4a1eeafa7bcc4532cdff3473234a471:pandoc-bin/CHANGELOG
 f:b00d8a59eb31ca3574456f6af6278e3c:pandoc-bin/spkgbuild
 f:893d63e191bf450550d28cdb864170f0:vscode-bin/visual-studio-code-url-handler.desktop
-f:55fd1d9da6bc5ffe78f42901f64431fa:vscode-bin/CHANGELOG
+f:0c49f11b05cb69abe57abad89955b813:vscode-bin/CHANGELOG
 f:afe04352e57ca51932e0a1b8eb32e25b:vscode-bin/visual-studio-code.desktop
-f:7fa8ab3fbf8edc70f689cfb34787b5e4:vscode-bin/spkgbuild
+f:5af7655fb7f51001646fa94022652a6f:vscode-bin/spkgbuild
 f:93babcf9e9fc18636c2ddcff63a99440:vscode-bin/override
 f:2965d6561c4c4473e1e392a20f5e61cb:icecat-bin/icecat.desktop
 f:5c498b31bd52c1f1d92c8d7da27c5d6f:icecat-bin/icecat-safe.desktop
