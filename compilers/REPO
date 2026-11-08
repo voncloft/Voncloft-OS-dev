@@ -123,8 +123,8 @@ f:66f2eebca1c26022e4b893a906bf1228:ccache/CHANGELOG
 f:022254cda10698fca514e763c9bee7bf:ccache/spkgbuild
 f:14f85ae383e4200af2132682e33ab6ff:ccache/ccache.conf
 f:168a474af7ca2e0b08d990552c4879ba:automake/.pkgfiles
-f:dee73dcae3c24af16b0b71fe44d6bc64:automake/CHANGELOG
-f:48f0ba9ceab4ca34714614527d298699:automake/spkgbuild
+f:8ace17af17ea4bba59c69d616c0319c8:automake/CHANGELOG
+f:5685d46b96bfd64121fad31152bb5b4e:automake/spkgbuild
 f:e976867c08a51955dbcf2a3a808290dc:cmake/.pkgfiles
 f:3f39b93763b60f790bd49b4212d74a68:cmake/CHANGELOG
 f:8ba3c9f07f4f88b451083053325a1552:cmake/override-old

@@ -187,3 +187,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 11.2.0 to version 12.2.0
+
+----------------------------------------------------------------
+
+Date: Sat Nov  7 07:43:09 PM EST 2026
+
+Version=12.2.1
+Release=1
+
+Synopsis:
+Changed from version 12.2.0 to version 12.2.1

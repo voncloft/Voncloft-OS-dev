@@ -222,8 +222,8 @@ f:9b78eec6d1cb62daf7568840b1fd4883:htmlq/spkgbuild
 f:24ea8b83792054dfcc6e59ffffe07b0d:htmlq/override
 f:f6e45406ddf40ea37185fa47512a71e4:djvulibre/CHANGELOG
 f:570ff5628e5dded743b45409c9f860da:djvulibre/spkgbuild
-f:8f0e5974e06a2a1bccbc663b42e7c8d8:inotify-tools/CHANGELOG
-f:ebab2980e508f51227e3ecdbd0252c14:inotify-tools/spkgbuild
+f:6424d2da922e2287639ed844a8eefdc7:inotify-tools/CHANGELOG
+f:71b9faae5feeba30300aba62c7a17e22:inotify-tools/spkgbuild
 f:e10125f78449ccedbf2b06f976ed31c0:clazy/CHANGELOG
 f:36bdf7180586d2e28d35d6f424c3fe11:clazy/spkgbuild
 f:5f0d9b274c7362384367a6199d32b199:session-desktop/.pkgfiles

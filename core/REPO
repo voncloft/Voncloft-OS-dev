@@ -1201,8 +1201,8 @@ f:544a0f79eafe37db2f4ef0bd52544fe9:inkscape/CHANGELOG
 f:7d92225b612700677cdfb353d1182965:inkscape/spkgbuild
 f:cdba1c3e2eceab2ac39daf4a13e59479:inkscape/override
 f:664b2c752dd6a57663aa6a11e9b01614:groff/.pkgfiles
-f:11d2455fa2bbce832877cbf4fb6d4d1b:groff/CHANGELOG
-f:e99acca00efb23f6cea99dba0d12270a:groff/spkgbuild
+f:e77d915ad21b9a9c0212cfb6b192fca3:groff/CHANGELOG
+f:72186157d251e366056f11ec1183a046:groff/spkgbuild
 f:6d3d58dbb13de8cef4af1ec9dcfddc01:ohsnap/spkgbuild
 f:cc8132c9ae8b4949460492477eaff9c6:ohsnap/override
 f:b899e0dff33031568a6dce9c7b5ccf27:neofetch/.pkgfiles

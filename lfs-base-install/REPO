@@ -223,8 +223,8 @@ f:1d3b2a995d0bfe06d7b7c74f6b5c1d62:zstd/spkgbuild
 f:f52ad4744649b1d6ea08adba4ab9e5e7:lfs-base/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:lfs-base/override
 f:664b2c752dd6a57663aa6a11e9b01614:groff/.pkgfiles
-f:86c8f6bdc5a4d1ff56445e0305eb2aaa:groff/CHANGELOG
-f:2d88ec693eb5d19b59da8deee9cb0a04:groff/spkgbuild
+f:7facf687440497ef625f6ed56e72213f:groff/CHANGELOG
+f:432b86c8a84a5079cd4c5e6fea8b33f0:groff/spkgbuild
 f:375f8aba31a5949b2d2e60acfed6dcc7:tzdata/.pkgfiles
 f:c36968b65461fb7006916e3527fbe309:tzdata/spkgbuild
 f:2eb55a1e6a882c0527bec9519f5a709b:glibc/.pkgfiles
@@ -414,8 +414,8 @@ f:d8243abf194721955820f42d7af70838:e2fsprogs/.pkgfiles
 f:138e36be367fa251b5273d14da17f876:e2fsprogs/CHANGELOG
 f:0a076d5f53fbb5db78ec6e79f3610a56:e2fsprogs/spkgbuild
 f:168a474af7ca2e0b08d990552c4879ba:automake/.pkgfiles
-f:73064005f93d81d204724f369a76b241:automake/CHANGELOG
-f:2925d0884d3e988eb33958ad86cd2b36:automake/spkgbuild
+f:9c1d7b2f8d2e8eaa8ab538ee0a6481df:automake/CHANGELOG
+f:3ad5fa6cf6e43b356149a176834461b8:automake/spkgbuild
 f:99347abe7f538f9e5b6c767793f1623d:file/.pkgfiles
 f:ba212d99280ffbddb8aa83ea062979c5:file/CHANGELOG
 f:1aa3573463c61ee33355143f69279e9f:file/spkgbuild

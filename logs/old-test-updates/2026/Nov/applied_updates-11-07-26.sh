@@ -114,3 +114,23 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.git20261107013626.g8a
 bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Changed\ from\ version\ 1.0.git20261102172648.g5f5b7fb9ea744acc183a42c2ff712e32469b5905\ to\ version\ 1.0.git20261107013626.g8ac4fd19d35b4b9dec76f57ce8cf1642ee8f7494
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.4.70\| server/httpd/spkgbuild # update-repo-version 2.4.69 2.4.70
 bash /usr/libexec/update-repo/changelog server/httpd/spkgbuild Changed\ from\ version\ 2.4.69\ to\ version\ 2.4.70
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=20261107\| beta/tl-unx/spkgbuild # update-repo-version 20261105 20261107
+bash /usr/libexec/update-repo/changelog beta/tl-unx/spkgbuild Changed\ from\ version\ 20261105\ to\ version\ 20261107
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.20\| compilers/automake/spkgbuild # update-repo-version 1.19 1.20
+bash /usr/libexec/update-repo/changelog compilers/automake/spkgbuild Changed\ from\ version\ 1.19\ to\ version\ 1.20
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.25.0\| core/groff/spkgbuild # update-repo-version 1.24.2 1.25.0
+bash /usr/libexec/update-repo/changelog core/groff/spkgbuild Changed\ from\ version\ 1.24.2\ to\ version\ 1.25.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.26.272\| extra/inotify-tools/spkgbuild # update-repo-version 4.26.270 4.26.272
+bash /usr/libexec/update-repo/changelog extra/inotify-tools/spkgbuild Changed\ from\ version\ 4.26.270\ to\ version\ 4.26.272
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.20\| lfs-base-install/automake/spkgbuild # update-repo-version 1.19 1.20
+bash /usr/libexec/update-repo/changelog lfs-base-install/automake/spkgbuild Changed\ from\ version\ 1.19\ to\ version\ 1.20
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.25.0\| lfs-base-install/groff/spkgbuild # update-repo-version 1.24.2 1.25.0
+bash /usr/libexec/update-repo/changelog lfs-base-install/groff/spkgbuild Changed\ from\ version\ 1.24.2\ to\ version\ 1.25.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=12.2.1\| libs/fmt/spkgbuild # update-repo-version 12.2.0 12.2.1
+bash /usr/libexec/update-repo/changelog libs/fmt/spkgbuild Changed\ from\ version\ 12.2.0\ to\ version\ 12.2.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.162.2\| python/python-fastapi/spkgbuild # update-repo-version 0.162.0 0.162.2
+bash /usr/libexec/update-repo/changelog python/python-fastapi/spkgbuild Changed\ from\ version\ 0.162.0\ to\ version\ 0.162.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=10.18.0\| python/python-pikepdf/spkgbuild # update-repo-version 10.17.0 10.18.0
+bash /usr/libexec/update-repo/changelog python/python-pikepdf/spkgbuild Changed\ from\ version\ 10.17.0\ to\ version\ 10.18.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.git20261107170852.g58963b8ce86bd1f982a1d9ffbf29a10d924820f4\| server/blacklist-youtubeads/spkgbuild # update-repo-version 1.0.git20261107013626.g8ac4fd19d35b4b9dec76f57ce8cf1642ee8f7494 1.0.git20261107170852.g58963b8ce86bd1f982a1d9ffbf29a10d924820f4
+bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Changed\ from\ version\ 1.0.git20261107013626.g8ac4fd19d35b4b9dec76f57ce8cf1642ee8f7494\ to\ version\ 1.0.git20261107170852.g58963b8ce86bd1f982a1d9ffbf29a10d924820f4

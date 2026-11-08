@@ -1038,8 +1038,8 @@ f:37701e97555e368e4db9799f14f07013:libdisplay-info/.pkgfiles
 f:db9b07a8b7c1de497fbad2405a0cb087:libdisplay-info/CHANGELOG
 f:779a6062b2536d42919078ecca1155bd:libdisplay-info/spkgbuild
 f:2fa23a922489d1c7eeaa1b921090964b:fmt/.pkgfiles
-f:0d8097a36e94a269422af538ded191d2:fmt/CHANGELOG
-f:5251c92fa3fec6c8086a080195cb53cd:fmt/spkgbuild
+f:5231efb8e5e311ecd7efffbd9b5267ea:fmt/CHANGELOG
+f:05967bc4ef200ad5f21ce71a037aea27:fmt/spkgbuild
 f:ee4703e47a5310db455181fce9cc57a4:libmodplug/spkgbuild
 f:f1d84a2c443ee1842c573f36d737f4fa:libmpcdec/spkgbuild
 f:16203112bfae1a61df3ebeabbdeca8b5:libmpcdec/override

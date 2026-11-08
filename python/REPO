@@ -2145,8 +2145,8 @@ f:dd23cd2b0c6c2483e0f7aa65106e054a:python-lru-dict/CHANGELOG
 f:fe5616815ae36feecf5558b43d2266ac:python-lru-dict/spkgbuild
 f:3bc0254a31397084ef8221a5322534b2:python-oauth2client/CHANGELOG
 f:e0355386920524653ee3737afa579bbd:python-oauth2client/spkgbuild
-f:7ff8a3f0ecc21a2ec6cff495fa39190e:python-fastapi/CHANGELOG
-f:cb80bc1b5a3bf8933d8406032da9f8db:python-fastapi/spkgbuild
+f:0f51a39034ca2858caf239cbec56a509:python-fastapi/CHANGELOG
+f:82462adc0bccaf2024c4eda3fbc992fd:python-fastapi/spkgbuild
 f:1e9263955969f99c31889f38ac77bf39:python-six/.pkgfiles
 f:97d4d3c36195dbfec84b2c56079e95eb:python-six/CHANGELOG
 f:6faced44ad4a765c0939bfdff20e5a8f:python-six/spkgbuild
@@ -3591,8 +3591,8 @@ f:64e02627ce44ea82c77e11bb9075f227:python-pytest-xprocess/CHANGELOG
 f:7138157ce1209e2fea1b5b943933fdbb:python-pytest-xprocess/spkgbuild
 f:8207f1302e3f9d56d01d45bb113daaaa:python-signedjson/CHANGELOG
 f:7ca701047fdd1b44e46a35dd20b8db05:python-signedjson/spkgbuild
-f:36a5e283ca3f4f89bba51b0cdf1b3676:python-pikepdf/CHANGELOG
-f:b796d2250946cadc54760063e31986b7:python-pikepdf/spkgbuild
+f:4b7483d95feeca2a99988fbcfd481e6a:python-pikepdf/CHANGELOG
+f:1aedfe648e01fe8d4ace215dcbcfbac4:python-pikepdf/spkgbuild
 f:8673de2c204224916051a526738481b8:python-mocket/CHANGELOG
 f:676dc7a228ff77c362b791ba6211296a:python-mocket/spkgbuild
 f:9be56965b874de9f62ecea1f8f6ed946:python-flake8-typing-imports/CHANGELOG
