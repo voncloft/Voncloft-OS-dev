@@ -1,16 +1,17 @@
-# description	: A tool that makes it easy to create Python bindings for C and C++ libraries
-# depends	: python
+# description : Generate Python bindings for C and C++ libraries
+# depends : python python-pip python-packaging python-setuptools python-setuptools-scm
 
 name=python-sip
 version=6.17.2
 release=1
-
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
-options="!checksum"
 
 build() {
-   cd *
-   python setup.py build
-   python setup.py install --optimize=1 --root=$PKG
- }
+    cd "$SRC/$_name-$version" || return 1
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist . || return 1
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/$_name-"$version"-*.whl
+}

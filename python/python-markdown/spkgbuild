@@ -3,9 +3,9 @@
 # note : Requires Python >=3.11 and setuptools >=77; pip is provided by the python package.
 
 name=python-markdown
-version=3.4.3
+version=3.11.3
 release=1
-_name=${name#python-}
+_name=markdown
 source="https://files.pythonhosted.org/packages/source/m/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

@@ -1,0 +1,64 @@
+--- a/scratch
++++ b/scratch
+@@ -878,7 +878,7 @@
+ 	NEWPKG=0	
+ 	if [ "$NODEP" != 1 ]; then
+ 		echo "Resolving dependencies..."
+-		DEP=$(scratch_deplist $upkg $EXOPT | awk '{print $2}')
++		DEP=$(scratch_deplist --upgrade-plan $upkg $EXOPT) || return 1
+ 		echo
+ 		for d in $DEP; do
+ 			if [ "$(echo $upkg | tr ' ' '\n' | grep -x $d)" = "$d" ]; then
+@@ -1164,6 +1164,7 @@
+ 	while [ "$1" ]; do
+ 		case $1 in
+ 			-q|--quick) quick=1;;
++			--upgrade-plan) quick=1; upgrade_plan=1;;
+ 			--exclude=*) for i in ${1#*=}; do exclude="$exclude $i"; done;;
+ 			-*) ;;
+ 			*) PKG="$PKG $1";;
+@@ -1183,10 +1184,15 @@
+ 		fi
+ 	done
+ 	
++	[ "$upgrade_plan" = 1 ] && UPGRADE_TARGETS="$PPKG"
+ 	for p in $PPKG; do
+ 		deplist $p
+ 	done
+ 	
++	if [ "$upgrade_plan" = 1 ] && [ "$MISSINGDEP" ]; then
++		msgerr "Unresolvable upgrade dependencies: $MISSINGDEP"
++		return 1
++	fi
+ 	[ "$DEP" ] || return 0
+ 	
+ 	if [ "$quick" = 1 ]; then
+@@ -1226,7 +1232,8 @@
+ 	
+ 	# check dependencies
+ 	for i in $(get_depends $1); do
+-		if [ "$quick" = 1 ] && isinstalled $i; then
++		if [ "$quick" = 1 ] && isinstalled "$i" &&
++		   ! printf '%s\n' $UPGRADE_TARGETS | grep -Fqx -- "$i"; then
+ 			continue
+ 		else
+ 			if ! echo $DEP | tr " " "\n" | grep -qx $i; then
+@@ -1242,7 +1249,9 @@
+ 	# add dependency to list checked dep
+ 	if ! echo $DEP | tr " " "\n" | grep -qx $1; then
+ 		if [ "$quick" = 1 ]; then
+-			isinstalled $1 || DEP="$DEP $1"
++			if ! isinstalled "$1" || printf '%s\n' $UPGRADE_TARGETS | grep -Fqx -- "$1"; then
++				DEP="$DEP $1"
++			fi
+ 		else
+ 			DEP="$DEP $1"
+ 		fi
+@@ -1461,6 +1470,7 @@
+ 
+     deplist <ports>          print all dependencies for ports
+                              -q|--quick       skip installed ports
++                             --upgrade-plan   requested upgrades and missing dependencies
+                              --exclude=*      exclude dependencies, comma separated
+ 
+     build   <ports> <arg>    build ports (use pkgbuild arg, except '-i', '-u', '-r', '-g', & '-p')

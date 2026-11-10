@@ -2,9 +2,11 @@
 # depends	: duktape glib elogind linux-pam
 
 name=polkit
-version=0.120
+version=128
 release=1
-source="https://github.com/polkit-org/${name}/archive/$version/${name}-$version.tar.gz"
+backup="etc/pam.d/polkit-1"
+source="https://github.com/polkit-org/${name}/archive/$version/${name}-$version.tar.gz
+        polkit-1"
 options="!checksum"
 build() {
 	cd $name-$version
@@ -14,12 +16,18 @@ build() {
       --prefix=/usr                \
       --buildtype=release          \
       -D man=true                  \
+      -D pam_prefix=/etc/pam.d    \
       -D session_tracking=elogind  \
       -D systemdsystemunitdir=/tmp \
       -D tests=false
 	ninja
 	DESTDIR=$PKG ninja install
 
-	rm -v $PKG/tmp/*.service                 &&
-	rm -rf $PKG/usr/lib/{sysusers,tmpfiles}.d 
+	# These systemd units are unused on Voncloft's SysV system.
+	rm -v "$PKG"/tmp/*.service "$PKG"/tmp/*.socket
+	rmdir "$PKG/tmp"
+	rm -rf "$PKG/usr/lib/sysusers.d" "$PKG/usr/lib/tmpfiles.d"
+
+	# Match the Voncloft PAM stack; Scratch preserves an existing local file.
+	install -Dm644 "$SRC/polkit-1" "$PKG/etc/pam.d/polkit-1"
 }

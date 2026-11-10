@@ -3,13 +3,13 @@
 
 name=libpng
 version=1.6.59
-release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.xz
-	https://downloads.sourceforge.net/sourceforge/$name-apng/$name-$version-apng.patch.gz"
+release=2
+source="https://downloads.sourceforge.net/project/$name/libpng16/$version/$name-$version.tar.gz
+	https://downloads.sourceforge.net/project/apng/$name/libpng16/$name-$version-apng.patch.gz"
 build() {
 	cd $name-$version
 
-  	gzip -cd $SRC/$name-$version-apng.patch.gz | patch -p1
+	gzip -cd $SRC/$name-$version-apng.patch.gz | patch --fuzz=0 -p0
 
 	./configure --prefix=/usr --disable-static
 	make

@@ -1,0 +1,13 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -298,7 +298,9 @@
+ # Keep tar's exit status. A pipeline would return the read loop's status
+ # and could register a package whose payload was only partly extracted.
+ TMP_EXTRACTED_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_extracted_files"
+-tar -xvhpf "$PKGNAME" --no-wildcards --anchored --exclude-from="$TMP_ADOPTED_SYMLINKS" -C "$ROOT_DIR"/ > "$TMP_EXTRACTED_FILES" || {
++# Preserve existing directory ownership and permissions; package directories
++# can be shared or locally configured. New directories retain archive metadata.
++tar -xvhpf "$PKGNAME" --no-overwrite-dir --no-wildcards --anchored --exclude-from="$TMP_ADOPTED_SYMLINKS" -C "$ROOT_DIR"/ > "$TMP_EXTRACTED_FILES" || {
+     msgerr "Extraction failed for $name; the package database was not updated."
+     ret 1
+ }

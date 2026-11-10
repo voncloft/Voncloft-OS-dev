@@ -1,9 +1,9 @@
 # description   : The libva package contains a library which provides access to hardware accelerated video processing, using hardware to accelerate video processing in order to offload the central processing unit (CPU) to decode and encode compressed digital video
-# depends       : xorgbuildenvironment libdrm mesa
+# depends       : meson ninja pkgconf libdrm-32 libx11-32 libxext-32 libxfixes-32 libxcb-32 libglvnd-32 wayland-32 wayland
 
 name=libva-32
 version=2.24.1    
-release=1
+release=3
 _name=${name%-32}
 source="https://github.com/intel/${_name}/archive/${version}/${_name}-${version}.tar.gz"
 
@@ -15,6 +15,7 @@ build() {
     export CXX="g++ -m32"
     export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
     export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
+    mkdir -p build
     cd build 
     meson setup --prefix=/usr --libdir=/usr/lib32 --buildtype=release 
     ninja

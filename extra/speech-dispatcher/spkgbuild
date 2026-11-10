@@ -4,7 +4,7 @@
 
 name=speech-dispatcher
 version=0.12.1
-release=1
+release=2
 _name=speechd
 source="https://github.com/brailcom/${_name}/releases/download/$version/$name-$version.tar.gz"
 options="!checksum"
@@ -19,6 +19,7 @@ build() {
         --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc \
         --localstatedir=/var --disable-static --enable-python \
         --with-flite --without-espeak --without-espeak-ng \
+        --without-baratinoo --without-kali --without-voxin \
         --with-pulse --with-pipewire --with-alsa \
         --with-default-audio-method=pulse,alsa \
         --with-systemdsystemunitdir=no --with-systemduserunitdir=no

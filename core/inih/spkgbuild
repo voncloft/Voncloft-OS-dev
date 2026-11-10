@@ -3,7 +3,7 @@
 
 name=inih
 version=63
-release=1
+release=2
 
 source="https://github.com/benhoyt/${name}/archive/r$version/inih-r$version.tar.gz"
 
@@ -15,6 +15,5 @@ build()
 
 	meson setup --prefix=/usr --buildtype=release .. &&
 	ninja
-
 	DESTDIR=$PKG ninja install
 }

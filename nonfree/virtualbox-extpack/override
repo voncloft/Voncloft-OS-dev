@@ -1,0 +1,6 @@
+source=https://download.virtualbox.org/virtualbox/LATEST-STABLE.TXT
+url=$source
+get_generic() {
+    uversion=$(tr -d '\r\n' < index.html)
+    case "$uversion" in *[!0-9.]*|"") return 1 ;; esac
+}

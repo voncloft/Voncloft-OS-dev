@@ -2,7 +2,7 @@
 # depends : perl perl-http-date perl-http-message
 
 name=perl-http-cookies
-version=6.10
+version=6.12
 release=1
 
 _name=HTTP-Cookies

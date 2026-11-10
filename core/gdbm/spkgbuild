@@ -3,21 +3,21 @@
 
 name=gdbm
 version=1.26
-release=1
-source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
-	fix-build-with-gcc10.patch"
+release=3
+source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+    cd "$name-$version"
+    ./configure --prefix=/usr --disable-static --disable-nls --enable-libgdbm-compat
+    make
+    make DESTDIR="$PKG" install
 
-	patch -Np1 -i ../fix-build-with-gcc10.patch
-
-	./configure --prefix=/usr \
-	            --disable-static \
-		    --disable-nls \
-	            --enable-libgdbm-compat
-	make
-	make DESTDIR=$PKG install
-
-	rm -r $PKG/usr/share/info
+    make distclean
+    CC="gcc -m32" CXX="g++ -m32" \
+        PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+        ./configure --prefix=/usr --libdir=/usr/lib32 --disable-static --disable-nls --enable-libgdbm-compat
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+    install -dm755 "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

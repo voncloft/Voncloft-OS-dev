@@ -2,23 +2,38 @@
 # depends       : java-headless glib
 
 name=apache-ant
-version=1.10.18    
-release=1
+version=1.10.18
+release=3
 source="https://archive.apache.org/dist/ant/source/${name}-${version}-src.tar.xz"
 
 options="!checksum"
 
+backup="etc/profile.d/ant.sh"
+
 build() {
         cd $name-$version
 
-	source /etc/profile.d/openjdk.sh
+        # Login profiles can call shell functions that are unavailable in a
+        # package build. Use the selected JDK without executing those profiles.
+        if [ -z "${JAVA_HOME:-}" ] || [ ! -x "$JAVA_HOME/bin/javac" ]; then
+                _javac="$(command -v javac)" || return 1
+                JAVA_HOME="$(dirname "$(dirname "$(readlink -f "$_javac")")")"
+        fi
+        export JAVA_HOME
+        export PATH="$JAVA_HOME/bin:$PATH"
+        # Keep unrelated application jars out of the package build.
+        unset CLASSPATH
         ./bootstrap.sh
-bootstrap/bin/ant -f fetch.xml -Ddest=optional
-./build.sh -Ddist.dir=$PWD/ant-1.10.15 dist
+        # Keep resolver downloads and temporary files inside package work.
+        mkdir -p "$SRC/maven-cache" "$SRC/fetch-cache"
+        bootstrap/bin/ant -f fetch.xml -Ddest=optional \
+                -Dmaven.repo.local="$SRC/maven-cache" \
+                -Dtemp.dir="$SRC/fetch-cache"
+./build.sh -Ddist.dir=$PWD/ant-$version dist
 mkdir -pv $PKG/opt
-cp -rv ant-1.10.15 $PKG/opt/            
-chown -R root:root $PKG/opt/ant-1.10.15 
-ln -sfv ant-1.10.15 $PKG/opt/ant
+cp -rv ant-$version $PKG/opt/
+chown -R root:root $PKG/opt/ant-$version
+ln -sfv ant-$version $PKG/opt/ant
 mkdir -pv $PKG/etc/profile.d
 cat > $PKG/etc/profile.d/ant.sh << EOF
 # Begin /etc/profile.d/ant.sh

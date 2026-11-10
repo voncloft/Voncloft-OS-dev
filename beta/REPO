@@ -54,7 +54,7 @@ f:7ff084677614b02915fa8e05e8817cfe:cups-old/run
 f:fe92fe73e29dd55d3f4d0bf55264be65:cups-old/spkgbuild
 f:485892b0c31bacd1d8f96e8d2d470a86:cups-old/pre-install.sh
 f:ca39f33041c8d4a6e9f37199b8c6eece:ansible-core/CHANGELOG
-f:ea831ca0434a5b690a10e3a9088464f9:ansible-core/spkgbuild
+f:b7cdb23237003a67a22a1bea0b1c6920:ansible-core/spkgbuild
 f:0b1cca0c63bb5f782c0cb096867457f9:ansible/CHANGELOG
 f:53f26bbe2ad1b29c52db03e18627248c:ansible/spkgbuild
 f:1d49537e83959b4d7120bb94589e2a37:.httpup-repo.current

@@ -1,5 +1,5 @@
 # description : Breeze theme that makes GTK applications match the Plasma desktop
-# depends : breeze extra-cmake-modules kde-deps-installer python-cairo qt6 sassc
+# depends : breeze extra-cmake-modules kde-deps-installer pycairo qt6 sassc
 
 name=breeze-gtk
 version=6.8.2

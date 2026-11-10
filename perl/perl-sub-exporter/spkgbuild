@@ -1,9 +1,9 @@
 # description : A sophisticated exporter for custom-built routines
-# depends : perl perl-data-optlist perl-params-util perl-sub-install
+# depends : perl perl-data-optlist perl-params-someutil perl-sub-install
 
 name=perl-sub-exporter
-version=0.989
-release=6
+version=0.992
+release=1
 
 _name=Sub-Exporter
 source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"

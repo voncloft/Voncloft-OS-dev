@@ -1,0 +1,15 @@
+# description : Message digest library
+# depends : glibc
+
+name=libmd
+version=1.3.0
+release=1
+source="https://libbsd.freedesktop.org/releases/${name}-${version}.tar.xz"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    ./configure --prefix=/usr --libdir=/usr/lib --disable-static
+    make
+    make DESTDIR="$PKG" install
+}

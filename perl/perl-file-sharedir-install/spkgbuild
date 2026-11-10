@@ -1,4 +1,5 @@
 # description : File::ShareDir::Install - Install read-only data files from a distribution
+# depends : perl
 
 name=perl-file-sharedir-install
 version=0.14

@@ -3,7 +3,7 @@
 
 name=highway
 version=1.4.0
-release=3
+release=4
 options="!checksum"
 source="${name}-${version}.tar.gz::https://github.com/google/${name}/archive/refs/tags/${version}.tar.gz"
 

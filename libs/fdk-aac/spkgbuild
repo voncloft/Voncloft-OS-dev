@@ -2,7 +2,7 @@
 
 name=fdk-aac
 version=3.0.0
-release=1
+release=2
 source="https://downloads.sourceforge.net/project/opencore-amr/${name}/${name}-${version}.tar.gz"
 
 build() {

@@ -1,5 +1,5 @@
 # description : libfyaml - KDE dependency
-# depends : make
+# depends : make pkgconf llvm
 
 name=libfyaml
 version=0.9.6

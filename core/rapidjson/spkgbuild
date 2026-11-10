@@ -5,16 +5,22 @@ name=rapidjson
 version=1.1.0
 release=5
 
-source="https://github.com/miloyip/$name/archive/v$version/$name-$version.tar.gz"
+source="https://github.com/Tencent/$name/archive/v$version/$name-$version.tar.gz
+	immutable-stringref.patch"
 options="!checksum"
 
 build() {
 	cd $name-$version
+	patch -Np1 --fuzz=0 -i "$SRC/immutable-stringref.patch" || return 1
 	find -name CMakeLists.txt | xargs sed -e 's|-Werror||' -i # Don't use -Werror
 	mkdir -p build
  	cd build
 
   cmake .. \
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -DRAPIDJSON_BUILD_TESTS=OFF \
+      -DRAPIDJSON_BUILD_EXAMPLES=OFF \
+      -DRAPIDJSON_BUILD_DOC=OFF \
       -DCMAKE_BUILD_TYPE=None \
       -DCMAKE_INSTALL_PREFIX:PATH=/usr \
       -DRAPIDJSON_HAS_STDSTRING=ON \

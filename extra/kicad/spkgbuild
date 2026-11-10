@@ -1,20 +1,22 @@
 # description : tool to make pcb boards
 # depends : abseil-cpp cairo curl fontconfig freetype2 gcc glib glibc glm gtk3 harfbuzz hicolor-icon-theme
-# depends : libgit2 libglvnd libsecret ngspice nng opencascade protobuf python 
+# depends : libgit2 libglvnd libsecret libspnav ngspice nng opencascade protobuf python python-wxpython 
 # depends : unixodbc wayland wxwidgets zlib
 # depends : zlib zstd kicad-library boost cmake git mesa ninja swig
 
 name=kicad
 version=10.0.8
-release=5
+release=8
 
 _name=kicad-source-mirror
-source="https://github.com/KiCad/${_name}/archive/refs/tags/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/KiCad/${_name}/archive/refs/tags/$version.tar.gz
+nng2-api.patch"
 
 build()
 {
 
-	cd *
+	cd "$SRC/$_name-$version" || return 1
+	patch -Np1 --fuzz=0 < "$SRC/nng2-api.patch" || return 1
 	mkdir build
 	cd build
 cmake .. \

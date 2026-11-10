@@ -1,0 +1,21 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -109,7 +109,8 @@
+ 
+ ret() {
+ 	# remove lock and all tmp files on exit
+-	rm -f "$ROOT_DIR/$LOCK_FILE" "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT"
++	[ "${PKGADD_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
++	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT"
+ 	exit $1
+ }
+ 
+@@ -171,6 +172,8 @@
+ 	msgerr "Cannot create lock file in '$ROOT_DIR/$LOCK_FILE'."
+ 	exit 1
+ }
++
++PKGADD_LOCK_OWNED=1
+ 
+ BASEPKGNAME=$(basename $PKGNAME)
+ 

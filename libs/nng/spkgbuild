@@ -3,24 +3,24 @@
 
 name=nng
 version=2.1.0
-release=2
+release=6
 
-source="https://github.com/nanomsg/${name}/archive/refs/tags/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/nanomsg/${name}/archive/refs/tags/v$version.tar.gz"
 
 build()
 {
-echo $PWD
-cd *
+cd "$name-$version"
 mkdir build
 cd build
 cmake .. \
-    -DCMAKE_BUILD_TYPE=None \
+    -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DBUILD_SHARED_LIBS=ON \
     -DNNG_ENABLE_TLS=ON \
     -DNNG_TLS_ENGINE=wolf \
     -DNNG_ENABLE_DOC=OFF 
 
-make -j9
+make
+
 make DESTDIR=$PKG install
 }

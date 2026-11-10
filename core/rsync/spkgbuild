@@ -3,11 +3,14 @@
 
 name=rsync
 version=3.5.2
-release=1
-backup="etc/rsyncd.conf"
+release=3
 source="https://www.samba.org/ftp/${name}/src/$name-$version.tar.gz
 	rc.rsyncd
 	run"
+
+backup="etc/rc.d/rsyncd
+        etc/rsyncd.conf
+        etc/sv/rsync/run"
 
 build() {
 	cd $name-$version

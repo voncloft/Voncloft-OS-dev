@@ -1,5 +1,5 @@
 # description : libplacebo
-# depends : glslang lcms2 libepoxy meson ninja python python-glad python-jinja vulkan-headers vulkan-loader xxhash
+# depends : glslang lcms2 libepoxy meson ninja python python-glad jinja2 vulkan-headers vulkan-loader xxhash
 
 name=libplacebo
 version=7.387.0

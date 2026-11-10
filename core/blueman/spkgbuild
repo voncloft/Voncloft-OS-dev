@@ -1,5 +1,5 @@
 # description	: GTK+ Bluetooth Manager
-# depends	: bluez gtk3 python-cairo python-gobject3 cython3 intltool inetutils polkit
+# depends	: bluez gtk3 pycairo python-gobject3 cython3 intltool inetutils polkit
 
 name=blueman
 version=2.4.6

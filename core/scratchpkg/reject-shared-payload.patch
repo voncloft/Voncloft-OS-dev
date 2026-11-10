@@ -1,0 +1,29 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -234,10 +234,26 @@
+ 
+ # check for file conflict
+ if [ ! "$IGNORE_CONFLICT" ]; then
++    # Existing duplicate ownership must not authorize overwriting another
++    # package's payload during upgrade or reinstall. Check database ownership
++    # even when the corresponding file has gone missing from the filesystem.
++    TMP_SHARED_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_shared_files"
++    set -- "$ROOT_DIR/$PKGDB_DIR"/*
++    if [ -f "$1" ]; then
++        awk -v own="$ROOT_DIR/$PKGDB_DIR/$name" \
++            'FILENAME != own && FNR > 1 { print }' "$@" > "$TMP_SHARED_FILES" || ret 1
++    else
++        : > "$TMP_SHARED_FILES" || ret 1
++    fi
+ 	grep -v '/$' "$TMP_PKGADD" | awk '{print $6}' | while read -r line; do
+ 		if [ "$line" = "${line%.*}.spkgnew" ]; then
+ 			line=${line%.*}
+ 		fi
++        if grep -Fqx -- "$line" "$TMP_SHARED_FILES"; then
++            echo "$line (also owned by another installed package)"
++            touch "$TMP_CONFLICT"
++            continue
++        fi
+ 		if [ -e "$ROOT_DIR/$line" ] || [ -L "$ROOT_DIR/$line" ]; then
+ 			if [ "$UPGRADE_PKG" ] || [ "$REINSTALL_PKG" ]; then
+ 				if ! grep -Fqx "$line" "$ROOT_DIR/$PKGDB_DIR/$name"; then

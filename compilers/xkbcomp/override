@@ -1,0 +1,18 @@
+# Read stable source filenames from the official release listing.
+source="https://www.x.org/pub/individual/app/"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re
+versions=re.findall('xkbcomp-([0-9]+(?:\\.[0-9]+)+)\\.tar\\.(?:gz|xz|bz2)',pathlib.Path('index.html').read_text())
+if not versions: raise SystemExit('No stable source release found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

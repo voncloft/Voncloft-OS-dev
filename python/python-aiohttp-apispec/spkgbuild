@@ -1,5 +1,5 @@
 # description : Build and document REST APIs with aiohttp and apispec
-# depends : python-aiohttp python-apispec python-webargs python-jinja
+# depends : python-aiohttp python-apispec python-webargs jinja2
 
 name=python-aiohttp-apispec
 version=3.0.0

@@ -3,20 +3,25 @@
 
 name=libxcrypt
 version=4.5.2
-release=1
+release=5
 
-source="https://github.com/besser82/$name/archive/refs/tags/v$version.tar.gz"
+source="$name-$version.tar.gz::https://github.com/besser82/$name/archive/refs/tags/v$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
-	autoreconf -ifv
-	./configure \
-    --prefix=/usr \
-    --disable-static \
-    --enable-hashes=strong,glibc \
-    --enable-obsolete-api=no \
-    --disable-failure-tokens
-  make
-  make DESTDIR=$PKG install
+    cd "$name-$version"
+    autoreconf -ifv
+    ./configure --prefix=/usr --disable-static --enable-hashes=strong,glibc --enable-obsolete-api=no --disable-failure-tokens
+    make
+    make DESTDIR="$PKG" install
+
+    # Preserve the existing 32-bit libcrypt.so.1 ABI used by installed programs.
+    make distclean
+    CC="gcc -m32" CXX="g++ -m32" \
+        PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+        ./configure --prefix=/usr --libdir=/usr/lib32 --disable-static --enable-hashes=strong,glibc --enable-obsolete-api=yes --disable-failure-tokens
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+    install -dm755 "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

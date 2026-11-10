@@ -2,8 +2,8 @@
 # depends : perl perl-cpan-meta perl-inc-latest
 
 name=perl-module-build
-version=0.4232
-release=3
+version=0.4234
+release=1
 
 _name=Module-Build
 source="https://cpan.metacpan.org/authors/id/L/LE/LEONT/${_name}-${version}.tar.gz"

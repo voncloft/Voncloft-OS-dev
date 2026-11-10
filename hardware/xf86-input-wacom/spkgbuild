@@ -1,5 +1,5 @@
 # description : x11 driver for tablets
-# depends : xorg-server
+# depends : xorg-server udev
 
 name=xf86-input-wacom
 version=1.2.4
@@ -12,7 +12,7 @@ build() {
 	cd $name-$version
 	./configure --prefix=/usr --sysconfdir=/etc \
     		--localstatedir=/var --disable-static --with-systemd-unit-dir=no \
-            --with-udev-rules-dir=/lib/udev/rules.d
+            --with-udev-rules-dir=/usr/lib/udev/rules.d
         make
         make DESTDIR=$PKG install
 }

@@ -1,0 +1,19 @@
+# Xorg .99 versions are development snapshots, not stable releases.
+source="https://www.x.org/pub/individual/xserver/"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re
+versions=re.findall('xwayland-([0-9]+(?:\\.[0-9]+)+)\\.tar\\.(?:gz|bz2|xz)',pathlib.Path('index.html').read_text())
+versions=[v for v in versions if '99' not in v.split('.')]
+if not versions: raise SystemExit('No stable Xorg source release found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

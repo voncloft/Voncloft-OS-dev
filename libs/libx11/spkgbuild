@@ -3,7 +3,7 @@
 
 name=libx11
 version=1.8.14
-release=1
+release=2
 _name=libX11
 source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 

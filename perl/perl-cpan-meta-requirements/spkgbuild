@@ -1,0 +1,16 @@
+# description : Version requirement handling for CPAN distribution metadata
+# depends : perl
+
+name=perl-cpan-meta-requirements
+version=2.145
+release=1
+_name=CPAN-Meta-Requirements
+source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"
+options="!checksum"
+
+build() {
+    cd "${_name}-${version}"
+    perl Makefile.PL MAN3EXT=3pm
+    make
+    make DESTDIR="$PKG" install
+}

@@ -3,11 +3,13 @@
 
 name=dbus-boot
 version=20251220
-release=1
+release=2
 
 _name=blfs-bootscripts
 source="https://anduin.linuxfromscratch.org/BLFS/${_name}/${_name}-${version}.tar.xz"
 options="!checksum"
+
+backup="etc/rc.d/init.d/dbus"
 
 build()
 {

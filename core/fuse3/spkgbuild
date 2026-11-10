@@ -4,6 +4,7 @@
 name=fuse3
 version=3.18.3
 release=2
+backup="etc/fuse.conf"
 _name=libfuse
 source="https://github.com/libfuse/${_name}/releases/download/fuse-$version/fuse-$version.tar.gz"
 
@@ -11,8 +12,9 @@ build() {
     cd "fuse-$version"
     # Device setup belongs to the system's selected device manager.
     sed -i '/^udev/,$ s/^/#/' util/meson.build
-    meson setup build --prefix=/usr --libdir=lib --sbindir=bin --buildtype=release
+    meson setup build --prefix=/usr --sysconfdir=/etc --libdir=lib64 --sbindir=bin --buildtype=release
     ninja -C build
     DESTDIR="$PKG" ninja -C build install
+    install -Dm644 util/fuse.conf "$PKG/etc/fuse.conf"
     chmod u+s "$PKG/usr/bin/fusermount3"
 }

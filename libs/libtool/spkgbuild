@@ -3,7 +3,7 @@
 
 name=libtool
 version=2.6.2
-release=1
+release=2
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
 
 build() {
@@ -13,4 +13,10 @@ build() {
 	make
 	make DESTDIR=$PKG install
 	rm -r $PKG/usr/share/info
+
+	# Keep the 32-bit libltdl library already owned by this package.
+	make distclean
+	CC="gcc -m32" CXX="g++ -m32" ./configure --prefix=/usr --libdir=/usr/lib32
+	make libltdl/libltdl.la
+	make DESTDIR="$PKG" install-libLTLIBRARIES
 }

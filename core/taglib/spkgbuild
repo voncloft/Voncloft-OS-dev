@@ -2,9 +2,9 @@
 # depends	: cmake
 
 name=taglib
-version=1.13
+version=2.3.2
 release=1
-source="https://taglib.github.io/releases/$name-$version.tar.gz"
+source="https://github.com/taglib/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
 	cd $name-$version

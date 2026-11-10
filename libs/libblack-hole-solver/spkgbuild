@@ -3,7 +3,7 @@
 
 name=libblack-hole-solver
 version=1.14.0
-release=1
+release=2
 
 _name=black-hole-solver
 source="https://fc-solve.shlomifish.org/downloads/fc-solve/${_name}-${version}.tar.xz"
@@ -18,5 +18,6 @@ build() {
     	-DBUILD_STATIC_LIBRARY=OFF
 
 	make
+
 	make DESTDIR=$PKG install
 }

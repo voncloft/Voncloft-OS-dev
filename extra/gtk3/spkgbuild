@@ -5,13 +5,12 @@
 name=gtk3
 version=3.24.52
 release=1
+backup="etc/gtk-3.0/im-multipress.conf"
 _name=gtk
-source="https://download.gnome.org/sources/${_name}/${version%.*}/${_name}-${version}.tar.xz
-	https://www.linuxfromscratch.org/patches/blfs/svn/${_name}-$version-upstream_fix-1.patch"
+source="https://download.gnome.org/sources/${_name}/${version%.*}/${_name}-${version}.tar.xz"
 
 build() {
 	cd gtk-$version
-	patch -Np1 -i $SRC/gtk-3.24.49-upstream_fix-1.patch
 
 	mkdir build
 	cd build

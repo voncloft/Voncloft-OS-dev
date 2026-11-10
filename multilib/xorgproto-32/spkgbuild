@@ -1,9 +1,9 @@
 # description	: Combined X.Org X11 Protocol headers
-# depends	: meson
+# depends : meson ninja
 
 name=xorgproto-32
 version=2026.1
-release=1
+release=2
 _name=${name%-32}
 source="https://www.x.org/pub/individual/proto/${_name}-${version}.tar.gz"
 
@@ -17,7 +17,7 @@ build() {
 	mkdir build
 	cd build
 	
-	meson --prefix=/usr --libdir=/usr/lib32 --datadir=/usr/lib32
+	meson setup --prefix=/usr --libdir=/usr/lib32 --datadir=/usr/lib32 ..
 	ninja
 	DESTDIR=$PWD/DESTDIR ninja install
 	mkdir -p $PKG/usr/lib32

@@ -1,0 +1,28 @@
+# Read every published source series instead of the recipe's current directory.
+source="https://download.gnome.org/sources/json-glib/cache.json"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+project='json-glib'
+entries=json.loads(pathlib.Path('index.html').read_text())[1][project]
+versions=[]
+for version,files in entries.items():
+    if not re.fullmatch(r'[0-9]+(?:\.[0-9]+)*',version): continue
+    if not any(key.startswith('tar.') for key in files): continue
+    parts=tuple(map(int,version.split('.')))
+    if project=='librsvg' and len(parts)>2 and parts[2]>=90: continue
+    if None is not None and parts[0] != None: continue
+    if True and len(parts)>1 and parts[1]%2: continue
+    versions.append(version)
+if not versions: raise SystemExit('No stable source release found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

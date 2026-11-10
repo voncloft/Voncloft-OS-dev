@@ -1,12 +1,12 @@
 # description : SDK intended for applications dealing with 3d CAD
-# depends : freetype2 fontconfig tk 
+# depends : freetype2 fontconfig tk rapidjson 
 
 name=opencascade
 version=8.0.1
-release=1
+release=2
 _version=${version}
 _name=OCCT
-source="https://github.com/Open-Cascade-SAS/${_name}/archive/refs/tags/V$_version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/Open-Cascade-SAS/${_name}/archive/refs/tags/V$_version.tar.gz"
 
 build()
 {
@@ -15,7 +15,8 @@ build()
 	cd build
 	cmake .. \
 	    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=/usr 
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DUSE_RAPIDJSON=ON 
 
     make
     make DESTDIR=$PKG install

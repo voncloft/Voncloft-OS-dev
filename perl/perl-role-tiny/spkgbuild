@@ -2,8 +2,8 @@
 # depends : perl
 
 name=perl-role-tiny
-version=2.002004
-release=2
+version=2.002005
+release=1
 
 _name=Role-Tiny
 source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"

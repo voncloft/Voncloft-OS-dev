@@ -1,0 +1,22 @@
+# Read current upstream release metadata, excluding prereleases.
+source="https://api.github.com/repos/brailcom/speechd/releases/latest"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re,subprocess
+text=pathlib.Path("index.html").read_text()
+data=json.loads(text)
+assert not data.get("draft") and not data.get("prerelease")
+match=re.fullmatch('([0-9]+(?:\\.[0-9]+)*)',data["tag_name"])
+assert match,"Unexpected release tag"
+versions=[match[1]]
+if not versions:raise SystemExit("No final upstream release found")
+print(max(set(versions),key=lambda v:tuple(map(int,v.split(".")))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

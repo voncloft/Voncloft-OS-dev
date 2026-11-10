@@ -1,9 +1,9 @@
 # description	: Generate scripting interfaces to C/C++ code
-# depends	: pcre
+# depends : pcre2
 
 name=swig
 version=4.5.1
-release=1
+release=2
 source="https://downloads.sourceforge.net/${name}/${name}-${version}.tar.gz"
 
 build() {

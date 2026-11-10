@@ -1,9 +1,9 @@
-# depends : perl-class-method-modifiers perl-devel-globaldestruction perl-import-into
+# depends : perl-class-method-modifiers perl-devel-globaldestruction perl-import-into perl-role-tiny
 # description : Minimalist Object Orientation with Moose compatiblity
 
 name=perl-moo
 version=2.005005
-release=3
+release=4
 
 _name=Moo
 source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"

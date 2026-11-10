@@ -12,7 +12,7 @@ build() {
 	cd $name-$version
 	mkdir build
 	cd build
-	meson .. --default-library=static
+	meson setup .. --prefix=/usr --libdir=lib --buildtype=release --default-library=shared -Denable_tests=false
 	ninja
 	DESTDIR=$PKG ninja install
 	

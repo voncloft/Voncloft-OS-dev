@@ -1,0 +1,167 @@
+diff --git a/scratch b/scratch
+--- a/scratch
++++ b/scratch
+@@ -537,7 +537,12 @@
+ 						break
+ 					}
+                                         [ -f ./post-install.sh ] && {
+-                                                sh ./post-install.sh
++                                                sh ./post-install.sh || {
++                                                	msgerr "post-install.sh failed for $ii; stopping transaction."
++                                                	error=1
++                                                	done_pkg="$done_pkg $ii"
++                                                	break
++                                                }
+                                         }
+ 
+ 					done_pkg="$done_pkg $ii"
+@@ -560,10 +565,12 @@
+ 			else
+ 				cd $(getportpath $ii)
+ 					settermtitle "Installing $ii..."
++					[ ! -f ./pre-install.sh ] || sh ./pre-install.sh || { error=1; break; }
+ 					pkgbuild -i $OPTS || {
+ 						error=1
+ 						break
+ 					}
++					[ ! -f ./post-install.sh ] || sh ./post-install.sh || { error=1; done_pkg="$done_pkg $ii"; break; }
+ 					done_pkg="$done_pkg $ii"
+ 				cd - >/dev/null
+ 			fi
+@@ -608,7 +615,12 @@
+ 				cd $portpathh
+ 					settermtitle "[ $count/$total ] installing $int..."
+ 					[ -f ./pre-install.sh ] && {
+-						sh ./pre-install.sh
++						sh ./pre-install.sh || {
++							msgerr "pre-install.sh failed for $int; stopping transaction."
++							error=1
++							count=$(( count - 1 ))
++							break
++						}
+ 					}
+ 					pkgbuild -i $OPTS || {
+ 						error=1
+@@ -616,7 +628,12 @@
+ 						break
+ 					}
+ 					[ -f ./post-install.sh ] && {
+-						sh ./post-install.sh
++						sh ./post-install.sh || {
++							msgerr "post-install.sh failed for $int; stopping transaction."
++							error=1
++							done_pkg="$done_pkg $int"
++							break
++						}
+ 					}
+ 					done_pkg="$done_pkg $int"
+ 				cd - >/dev/null
+@@ -769,7 +786,12 @@
+ 		if ! isinstalled $inst; then
+ 			settermtitle "[ $count/$total ] Installing $inst..."
+ 			[ -f ./pre-install.sh ] && {
+-				sh ./pre-install.sh
++				sh ./pre-install.sh || {
++					msgerr "pre-install.sh failed for $inst; stopping transaction."
++					error=1
++					count=$(( count - 1 ))
++					break
++				}
+ 			}
+ 			pkgbuild -i $OPTS || {
+ 				error=1
+@@ -777,12 +799,22 @@
+ 				break
+ 			}
+ 			[ -f ./post-install.sh ] && {
+-				sh ./post-install.sh
++				sh ./post-install.sh || {
++					msgerr "post-install.sh failed for $inst; stopping transaction."
++					error=1
++					done_pkg="$done_pkg $inst"
++					break
++				}
+ 			}
+ 		else
+ 			settermtitle "[ $count/$total ] Upgrading $inst..."
+ 			[ -f ./pre-upgrade.sh ] && {
+-				sh ./pre-upgrade.sh
++				sh ./pre-upgrade.sh || {
++					msgerr "pre-upgrade.sh failed for $inst; stopping transaction."
++					error=1
++					count=$(( count - 1 ))
++					break
++				}
+ 			}
+ 			pkgbuild -u $OPTS || {
+ 				error=1
+@@ -790,7 +822,12 @@
+ 				break
+ 			}
+ 			[ -f ./post-upgrade.sh ] && {
+-				sh ./post-upgrade.sh
++				sh ./post-upgrade.sh || {
++					msgerr "post-upgrade.sh failed for $inst; stopping transaction."
++					error=1
++					done_pkg="$done_pkg $inst"
++					break
++				}
+ 			}
+ 		fi
+ 		cd - >/dev/null
+@@ -877,21 +914,36 @@
+ 		cd $(getportpath $inst)
+ 		if ! isinstalled $inst; then
+ 			settermtitle "[ $count/$total ] Installing $inst..."
+-			[ -f ./pre-upgrade.sh ] && {
+-				sh ./pre-upgrade.sh
++			[ -f ./pre-install.sh ] && {
++				sh ./pre-install.sh || {
++					msgerr "pre-install.sh failed for $inst; stopping transaction."
++					error=1
++					count=$(( count - 1 ))
++					break
++				}
+ 			}
+ 			pkgbuild -i $OPTS || {
+ 				error=1
+ 				count=$(( count - 1 ))
+ 				break
+ 			}
+-			[ -f ./post-upgrade.sh ] && {
+-				sh ./post-upgrade.sh
++			[ -f ./post-install.sh ] && {
++				sh ./post-install.sh || {
++					msgerr "post-install.sh failed for $inst; stopping transaction."
++					error=1
++					done_pkg="$done_pkg $inst"
++					break
++				}
+ 			}
+ 		else
+ 			settermtitle "[ $count/$total ] Upgrading $inst..."
+ 			[ -f ./pre-upgrade.sh ] && {
+-				sh ./pre-upgrade.sh
++				sh ./pre-upgrade.sh || {
++					msgerr "pre-upgrade.sh failed for $inst; stopping transaction."
++					error=1
++					count=$(( count - 1 ))
++					break
++				}
+ 			}
+ 			pkgbuild -u $OPTS || {
+ 				error=1
+@@ -899,7 +951,12 @@
+ 				break
+ 			}
+ 			[ -f ./post-upgrade.sh ] && {
+-				sh ./post-upgrade.sh
++				sh ./post-upgrade.sh || {
++					msgerr "post-upgrade.sh failed for $inst; stopping transaction."
++					error=1
++					done_pkg="$done_pkg $inst"
++					break
++				}
+ 			}
+ 		fi
+ 		cd - >/dev/null

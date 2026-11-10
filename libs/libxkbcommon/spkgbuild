@@ -2,12 +2,12 @@
 # depends	: xkeyboard-config libxcb wayland-protocols wayland
 
 name=libxkbcommon
-version=1.5.0
+version=1.13.2
 release=1
-source="https://xkbcommon.org/download/$name-$version.tar.xz"
+source="${name}-${version}.tar.gz::https://github.com/xkbcommon/${name}/archive/refs/tags/xkbcommon-${version}.tar.gz"
 
 build() {
-	cd $name-$version
+	cd "$name-xkbcommon-$version"
 
 	mkdir build
 	cd build

@@ -1,15 +1,29 @@
 # description	: List of country, language and currency names
-# depends	: python
+# depends	: gettext meson ninja patch python
 
 name=iso-codes
 version=4.20.1
-release=1
-source="https://salsa.debian.org/iso-codes-team/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"
+release=2
+source="https://salsa.debian.org/iso-codes-team/${name}/-/archive/v${version}/${name}-v${version}.tar.gz
+        escape-xml-attributes.patch"
 
 build() {
-	cd *
+	cd "$name-v$version"
 
-	./configure --prefix=/usr
-	make
-	make pkgconfigdir=/usr/lib/pkgconfig DESTDIR=$PKG install
+	patch -Np1 -i "$SRC/escape-xml-attributes.patch"
+	meson setup build --prefix=/usr
+	meson compile -C build
+
+    # Validate the legacy XML generated from JSON before packaging it.
+    # ISO 3166-3 has no standalone XML representation; upstream leaves it empty.
+    python3 - <<'CHECK_XML'
+from pathlib import Path
+import xml.etree.ElementTree as ET
+for path in Path("build").glob("iso_*.xml"):
+    if path.name == "iso_3166-3.xml":
+        assert path.stat().st_size == 0
+    else:
+        ET.parse(path)
+CHECK_XML
+	DESTDIR="$PKG" meson install -C build
 }

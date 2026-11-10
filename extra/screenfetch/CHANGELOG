@@ -1,3 +1,17 @@
+Date: Sun Nov 8 2026
+
+Version=3.9.9
+Release=2
+
+Synopsis:
+Restore Voncloft OS branding as a patch on upstream 3.9.9: original V logo,
+green/purple colors, distro detection, Scratch package count, and local
+information lines. Keep upstream -C support. Count actual package records
+and detect the current network interface instead of a hard-coded device.
+Apply the patch and verify logo rendering during the Scratch build.
+
+----------------------------------------------------------------
+
 Date: Sat 20 Mar 2021 11:05:45 AM EDT
 
 name=screenfetch

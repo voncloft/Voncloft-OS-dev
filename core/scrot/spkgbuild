@@ -1,10 +1,10 @@
 # description	: Simple command-line screenshot utility for X
-# depends	: giblib imlib2 autoconf-archive
+# depends	: imlib2 libbsd libx11 libxrandr libxfixes autoconf-archive
 
 name=scrot
 version=2.0.0
-release=1
-source="http://http.debian.net/debian/pool/main/s/${name}/${name}_${version}.orig.tar.gz"
+release=4
+source="https://github.com/resurrecting-open-source-projects/$name/releases/download/$version/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

@@ -1,5 +1,5 @@
 # description	: PDF rendering library and command line tools used to manipulate PDF files
-# depends	: boost brotli cairo cmake curl fontconfig freetype2 glib gpgmepp harfbuzz lcms2 libjpeg-turbo libpng libtiff ninja nss openjpeg pkgconf poppler-data qt6 zlib
+# depends	: boost brotli cairo cmake curl fontconfig freetype2 glib gpgmepp harfbuzz lcms2 libjpeg-turbo libpng libtiff ninja nss openjpeg2 pkgconf poppler-data qt6 zlib
 
 name=poppler
 version=26.11.0

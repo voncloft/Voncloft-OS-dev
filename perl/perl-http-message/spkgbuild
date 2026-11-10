@@ -1,9 +1,9 @@
 # description : HTTP style messages
-# depends : perl perl-clone perl-encode-locale perl-http-date perl-io-html
+# depends : perl perl-clone perl-encode-locale perl-http-date perl-io-html perl-lwp-mediatypes
 
 name=perl-http-message
 version=7.04
-release=1
+release=2
 
 _name=HTTP-Message
 source="https://github.com/libwww-perl/${_name}/archive/v${version}/${name}-${version}.tar.gz"

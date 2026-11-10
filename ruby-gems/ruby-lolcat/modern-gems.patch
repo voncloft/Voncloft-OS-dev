@@ -1,0 +1,12 @@
+--- a/lolcat.gemspec
++++ b/lolcat.gemspec
+@@ -21,7 +21,7 @@
+ 
+   s.add_development_dependency(%q<rake>.freeze, [">= 0".freeze])
+   s.add_runtime_dependency(%q<paint>.freeze, ["~> 2.1".freeze])
+-  s.add_runtime_dependency(%q<optimist>.freeze, ["~> 3.0.0".freeze])
+-  s.add_runtime_dependency(%q<manpages>.freeze, ["~> 0.6.1".freeze])
++  s.add_runtime_dependency(%q<optimist>.freeze, [">= 3.0.0".freeze, "< 4.0".freeze])
++  s.add_runtime_dependency(%q<manpages>.freeze, [">= 0.6.1".freeze, "< 0.8".freeze])
+ end
+ 

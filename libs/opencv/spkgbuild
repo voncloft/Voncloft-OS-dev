@@ -1,5 +1,5 @@
 # description   : Computer vision and image-processing libraries with Python bindings and contributed modules
-# depends       : cmake libarchive ffmpeg freetype2 gst-plugins-base gtk3 harfbuzz jasper libavif libexif libjpeg-turbo libpng libtiff libva libwebp openexr openjpeg pkgconf python python-numpy tesseract v4l-utils zlib
+# depends       : cmake libarchive ffmpeg freetype2 gst-plugins-base gtk3 harfbuzz jasper libavif libexif libjpeg-turbo libpng libtiff libva libwebp openexr openjpeg2 pkgconf python python-numpy tesseract v4l-utils zlib
 
 name=opencv
 version=5.1.0
@@ -7,7 +7,7 @@ release=5
 _name=opencv_contrib
 source="https://github.com/opencv/${name}/archive/${version}/${name}-${version}.tar.gz
         https://github.com/opencv/${_name}/archive/${version}/${_name}-${version}.tar.gz
-        opencv-ffmpeg9.patch
+        freetype-harfbuzz-namespace.patch
         detect-cuda.py
         cuda-probe.cmake
         cuda-probe.cu"
@@ -15,13 +15,7 @@ source="https://github.com/opencv/${name}/archive/${version}/${name}-${version}.
 build() {
     cd "$SRC/$name-$version" || return 1
 
-    # These upstream fixes also support the currently installed FFmpeg 7.
-    if patch -p1 --dry-run --batch < "$SRC/opencv-ffmpeg9.patch" >/dev/null 2>&1; then
-        patch -p1 --batch < "$SRC/opencv-ffmpeg9.patch" || return 1
-    elif ! patch -Rp1 --dry-run --batch < "$SRC/opencv-ffmpeg9.patch" >/dev/null 2>&1; then
-        echo "OpenCV FFmpeg patch needs updating for $version" >&2
-        return 1
-    fi
+    patch --fuzz=0 -p1 -d "$SRC/$_name-$version" < "$SRC/freetype-harfbuzz-namespace.patch" || return 1
 
     # CUDA is optional: use only an installed toolkit and the current compiler.
     # Never download, install, or replace GCC to make CUDA work.

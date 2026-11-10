@@ -2,10 +2,10 @@
 # depends : python python-flit python-wheel
 
 name=python-pyparsing
-version=3.0.9
-release=4
+version=3.3.3
+release=1
 
-_name=${name#python-}
+_name=pyparsing
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

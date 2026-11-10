@@ -3,9 +3,19 @@
 
 name=cups
 version=2.4.20
-release=1
+release=2
 source="https://github.com/OpenPrinting/${name}/releases/download/v$version/${name}-$version-source.tar.gz
 	cupsd.conf"
+
+backup="etc/cups/client.conf
+        etc/cups/cups-files.conf
+        etc/cups/cups-files.conf.default
+        etc/cups/cupsd.conf
+        etc/cups/cupsd.conf.default
+        etc/cups/snmp.conf
+        etc/cups/snmp.conf.default
+        etc/dbus-1/system.d/cups.conf
+        etc/pam.d/cups"
 
 build() {
 	cd $name-$version
@@ -25,7 +35,9 @@ sed -e "s/format-truncation//" \
             make DESTDIR=$PKG install 
 	    mkdir $PKG/usr/share/doc/
             ln -sf ../cups/doc-$version $PKG/usr/share/doc/cups-$version
-            rm -rf $PKG/tmp/cupsinit
+            rm -rf "$PKG/tmp/cupsinit"
+            # Init scripts belong to cups-boot; omit their empty temporary parent.
+            rmdir "$PKG/tmp"
 	echo "voncloft /run/cups/cups.sock" > $PKG/etc/cups/client.conf
 	# Linux PAM Configuration
 	mkdir -p $PKG/etc/pam.d

@@ -1,18 +1,19 @@
-# description	: International Components for Unicode library
+# description : International Components for Unicode libraries
 
 name=icu
 version=79.1
-release=1
-source="https://github.com/unicode-org/icu/releases/download/release-${version}/icu4c-${version}-sources.tgz"
+release=4
+_name=icu
+_source_name=icu4c
+source="https://github.com/unicode-org/${_name}/releases/download/release-${version}/${_source_name}-${version}-sources.tgz
+        bidi-array-overflow.patch"
 
 build() {
-	cd icu/source
-
-	# icu tries to use clang by default
-	#[ "$CC" ] || export CC=gcc
-	#[ "$CXX" ] || export CXX=g++
-
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
+    export CC=gcc
+    export CXX=g++
+    cd "$SRC/icu/source"
+    patch --fuzz=0 -p1 < "$SRC/bidi-array-overflow.patch"
+    ./configure --prefix=/usr --libdir=/usr/lib --disable-static
+    make
+    make DESTDIR="$PKG" install
 }

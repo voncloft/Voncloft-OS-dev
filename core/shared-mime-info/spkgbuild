@@ -1,9 +1,9 @@
 # description	: A MIME database
-# depends	: glib libxml2
+# depends	: glib libxml2 meson ninja
 
 name=shared-mime-info
 version=2.5.1
-release=5
+release=6
 options="!makeflags"
 source="https://gitlab.freedesktop.org/xdg/${name}/-/archive/${version}/${name}-${version}.tar.gz"
 
@@ -13,7 +13,8 @@ build() {
 	# https://bugs.freedesktop.org/show_bug.cgi?id=70366
 	mkdir build
 	cd build
-	meson setup --prefix=/usr --buildtype=release -D update-mimedb=true ..
+	meson setup --prefix=/usr --buildtype=release -D update-mimedb=false ..
 	ninja
+	# Derived caches are rebuilt by post-install/post-upgrade on the host.
 	DESTDIR=$PKG ninja install
 }

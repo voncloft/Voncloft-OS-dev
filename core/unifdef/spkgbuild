@@ -1,0 +1,15 @@
+# description : Selectively remove C preprocessor conditionals
+# depends : glibc
+
+name=unifdef
+version=2.12
+release=1
+source="https://dotat.at/prog/$name/$name-$version.tar.xz
+        c23-identifier.patch"
+
+build() {
+    cd "$name-$version" || return 1
+    patch --fuzz=0 -Np1 -i "$SRC/c23-identifier.patch" || return 1
+    make || return 1
+    make prefix=/usr DESTDIR="$PKG" install
+}

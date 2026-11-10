@@ -1,0 +1,21 @@
+perl-www-robotrules-6.02-8
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/WWW/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/WWW/RobotRules/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/WWW/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/WWW/RobotRules/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/WWW/RobotRules/AnyDBM_File.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/WWW/RobotRules/DB_File.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/WWW/RobotRules.pm
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/WWW::RobotRules.3.gz
+-r--r--r-- root/root    usr/share/man/man3/WWW::RobotRules::AnyDBM_File.3.gz
+-r--r--r-- root/root    usr/share/man/man3/WWW::RobotRules::DB_File.3.gz

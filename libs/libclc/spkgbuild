@@ -1,25 +1,31 @@
-# description : implementation of library reqs for opencl
-# depends : spirv-llvm-translator
+# description : OpenCL built-in libraries for LLVM
+# depends : cmake ninja llvm spirv-llvm-translator
 
 name=libclc
 version=23.1.5
 release=1
-
 _name=llvm-project
-source="https://github.com/llvm/${_name}/releases/download/llvmorg-$version/${name}-$version.src.tar.xz"
+source="https://github.com/llvm/${_name}/releases/download/llvmorg-${version}/${_name}-${version}.src.tar.xz"
 options="!checksum"
 
 build()
 {
-	cd *
-	mkdir build 
-	cd    build 
-
-#cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DLLVM_DIR=/usr/lib/cmake/llvm -G Ninja
-	
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
-      -D CMAKE_BUILD_TYPE=Release  \
-      -G Ninja ..
-	ninja
-	DESTDIR=$PKG ninja install
+    cd "$SRC/${_name}-${version}.src/${name}"
+    # LLVM 23 builds each runtime target separately with an existing Clang.
+    # All outputs are target-qualified inside the one libclc package.
+    for _target in amdgcn-amd-amdhsa nvptx64-nvidia-cuda \
+                   spirv32-unknown-unknown spirv64-unknown-unknown \
+                   spirv32-unknown-vulkan spirv64-unknown-vulkan; do
+        cmake -S . -B "build-${_target}" -G Ninja \
+            -DCMAKE_INSTALL_PREFIX=/usr \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_C_COMPILER=clang \
+            -DCMAKE_CXX_COMPILER=clang++ \
+            -DCMAKE_CLC_COMPILER="$(llvm-config --bindir)/clang" \
+            -DLLVM_DIR="$(llvm-config --cmakedir)" \
+            -DLLVM_DEFAULT_TARGET_TRIPLE="${_target}" \
+            -DLLVM_INCLUDE_TESTS=OFF
+        ninja -C "build-${_target}"
+        DESTDIR="$PKG" ninja -C "build-${_target}" install
+    done
 }

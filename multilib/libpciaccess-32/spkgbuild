@@ -1,27 +1,21 @@
 # description	: X11 PCI access library
-# depends	: libpciaccess util-macros
+# depends	: libpciaccess util-macros meson ninja
 
 name=libpciaccess-32
 version=0.19
-release=1
+release=2
 _name=${name%-32}
 source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.xz"
 
 build() {
-	cd libpciaccess-$version
-
-	export CC="gcc -m32"
-	export CXX="g++ -m32"
-	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
-
-	./configure \
-		--prefix=/usr \
-		--libdir=/usr/lib32 \
-                --sysconfdir=/etc \
-                --localstatedir=/var \
-                --disable-static
-	make
-	make DESTDIR=$PWD/DESTDIR install
-	mkdir -p $PKG/usr/lib32
-	cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+    cd "libpciaccess-$version"
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export PKG_CONFIG_PATH="/usr/lib32/pkgconfig:/usr/share/pkgconfig"
+    export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig:/usr/share/pkgconfig"
+    meson setup build --prefix=/usr --libdir=lib32 --buildtype=release
+    meson compile -C build
+    DESTDIR="$PWD/DESTDIR" meson install -C build
+    install -d "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

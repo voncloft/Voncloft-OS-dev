@@ -3,8 +3,8 @@
 
 name=dbus-glib
 version=0.116
-release=2
-source="http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz"
+release=4
+source="https://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz"
 
 build() {
 	cd $name-$version

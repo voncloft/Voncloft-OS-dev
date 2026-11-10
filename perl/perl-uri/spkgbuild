@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-uri
-version=5.18
+version=5.40
 release=1
 
 _name=URI

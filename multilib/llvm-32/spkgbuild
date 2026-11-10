@@ -25,6 +25,7 @@ build() {
 	      -DCMAKE_INSTALL_LIBDIR=lib32 \
 	      -DLLVM_ENABLE_PROJECTS=clang -DLLVM_ENABLE_FFI=ON                  \
 	      -DCMAKE_BUILD_TYPE=Release            \
+	      -DLLVM_PARALLEL_LINK_JOBS=1            \
 	      -DLLVM_BUILD_LLVM_DYLIB=ON            \
       	      -DLLVM_LINK_LLVM_DYLIB=ON             \
 	      -DLLVM_ENABLE_RTTI=ON                 \
@@ -35,15 +36,18 @@ build() {
 	      -DLLVM_TARGET_ARCH:STRING=i686        \
 	      -DLLVM_DEFAULT_TARGET_TRIPLE="i686-pc-linux-gnu" \
 	      -Wno-dev
-	ninja
-	DESTDIR=$PKG ninja install
+	ninja -j"${NINJAJOBS:-6}"
+	DESTDIR=$PKG ninja -j"${NINJAJOBS:-6}" install
 
 	# keep 32bit header and config
 	mkdir -p $SRC/keep
 	install -t $SRC/keep $PKG/usr/bin/llvm-config $PKG/usr/include/llvm/Config/llvm-config.h
 
 	# remove unneeded files
-	rm -rf $PKG/usr/{bin,include,share,libexec}
+	# Native helper scripts and headers belong to llvm; this addon owns
+	# only lib32 plus its explicitly renamed configuration tool/header.
+	rm -rf "$PKG/usr/bin" "$PKG/usr/include" "$PKG/usr/share" \
+	       "$PKG/usr/libexec" "$PKG/usr/lib"
 
 	# install 32bit header and config
 	install -m 0755 -D $SRC/keep/llvm-config $PKG/usr/bin/llvm-config-32

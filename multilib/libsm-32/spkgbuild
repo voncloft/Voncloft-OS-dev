@@ -1,9 +1,9 @@
 # description	: X11 Session Management library
-# depends	: libsm
+# depends	: libsm libice-32
 
 name=libsm-32
 version=1.2.6
-release=1
+release=2
 _name=libSM
 source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 

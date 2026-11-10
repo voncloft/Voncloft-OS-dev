@@ -3,7 +3,7 @@
 
 name=w_scan2
 version=1.0.17.git20261105184505.gd7ff9dbcbc691d4d158d272ee6de698f13fa80d9
-release=1
+release=2
 _commit=${version##*.g}
 source="$name-$_commit.tar.gz::https://github.com/stefantalpalaru/${name}/archive/$_commit.tar.gz"
 

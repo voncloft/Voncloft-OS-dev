@@ -4,6 +4,7 @@
 name=libblockdev
 version=3.5.0
 release=1
+backup="etc/libblockdev/3/conf.d/00-default.cfg"
 source="https://github.com/storaged-project/${name}/releases/download/$version/$name-$version.tar.gz"
 
 build() {

@@ -1,9 +1,9 @@
-# description	: Simple text editor which aims to replace Pico, the default editor in the Pine package
+# description : Integer set library for polyhedral compilation and optimization
 # depends	: 
 
 name=isl
 version=0.28
-release=1
+release=3
 source="https://libisl.sourceforge.io/${name}-$version.tar.xz"
 options="!checksum"
 build() {

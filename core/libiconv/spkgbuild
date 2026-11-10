@@ -1,9 +1,9 @@
-# description : blah
+# description : Character encoding conversion library and utilities
 # depends :
 
 name=libiconv
 version=1.19.1
-release=1
+release=3
 
 source="https://ftp.gnu.org/pub/gnu/${name}/${name}-${version}.tar.gz"
 options="!checksum"

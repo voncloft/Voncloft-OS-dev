@@ -1,5 +1,5 @@
 # description : Numpys Sphinx extensions
-# depends : python-sphinx python-jinja
+# depends : python-sphinx jinja2
 
 name=python-numpydoc
 version=1.11.0

@@ -1,0 +1,68 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -113,7 +113,11 @@
+ ret() {
+ 	# remove lock and all tmp files on exit
+ 	[ "${PKGADD_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
+-	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES" "$TMP_ADOPTED_SYMLINKS"
++	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES" "$TMP_ADOPTED_SYMLINKS" "$TMP_EXTRACTED_FILES"
++    if [ -n "${TMP_RECORD_DIR:-}" ]; then
++        rm -f "$TMP_RECORD_DIR/record"
++        rmdir "$TMP_RECORD_DIR"
++    fi
+ 	exit $1
+ }
+ 
+@@ -291,16 +295,35 @@
+ cp "$TMP_ADOPTED_SYMLINKS" "$TMP_PKGINSTALL" || ret 1
+ 
+ # extract package into ROOT_DIR
+-tar -xvhpf "$PKGNAME" --no-wildcards --anchored --exclude-from="$TMP_ADOPTED_SYMLINKS" -C "$ROOT_DIR"/ | while read -r line; do
++# Keep tar's exit status. A pipeline would return the read loop's status
++# and could register a package whose payload was only partly extracted.
++TMP_EXTRACTED_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_extracted_files"
++tar -xvhpf "$PKGNAME" --no-wildcards --anchored --exclude-from="$TMP_ADOPTED_SYMLINKS" -C "$ROOT_DIR"/ > "$TMP_EXTRACTED_FILES" || {
++    msgerr "Extraction failed for $name; the package database was not updated."
++    ret 1
++}
++while IFS= read -r line; do
+ 	if [ "$line" = "${line%.*}.spkgnew" ]; then
+ 		line=${line%.*}
+         if { [ ! -e "$ROOT_DIR/$line" ] && [ ! -L "$ROOT_DIR/$line" ]; } || [ "$NO_BACKUP" = yes ]; then
+-            mv "$ROOT_DIR/$line".spkgnew "$ROOT_DIR/$line"
++            mv "$ROOT_DIR/$line".spkgnew "$ROOT_DIR/$line" || {
++                msgerr "Cannot activate configuration $line; stopping installation."
++                ret 1
++            }
+         fi
+ 	fi
+ 	[ "$VERBOSE_INSTALL" ] && echo "extracted '$line'"
+-	echo "$line" >> $TMP_PKGINSTALL
+-done
++	printf '%s\n' "$line" >> "$TMP_PKGINSTALL" || ret 1
++done < "$TMP_EXTRACTED_FILES"
++
++# Write a complete record before replacing the old one. Keep the staging
++# file in a private directory on the database filesystem, so readers never
++# mistake it for an installed package and the final rename is atomic.
++TMP_RECORD_DIR=$(mktemp -d "$ROOT_DIR/$PKGDB_DIR/.pkgadd-record.XXXXXXXX") || ret 1
++{ printf '%s %s\n' "$version" "$release" && cat "$TMP_PKGINSTALL"; } > "$TMP_RECORD_DIR/record" || {
++    msgerr "Cannot write the package record for $name."
++    ret 1
++}
+ 
+ # Remove obsolete payload only when no other package still owns the path.
+ if [ "$UPGRADE_PKG" ] || [ "$REINSTALL_PKG" ]; then
+@@ -323,9 +346,9 @@
+     done
+ fi
+ 
+-# register package into database
+-echo "$version $release" > "$ROOT_DIR/$PKGDB_DIR/$name"
+-cat "$TMP_PKGINSTALL" >> "$ROOT_DIR/$PKGDB_DIR/$name"
++mv -f "$TMP_RECORD_DIR/record" "$ROOT_DIR/$PKGDB_DIR/$name" || ret 1
++rmdir "$TMP_RECORD_DIR" || ret 1
++TMP_RECORD_DIR=
+ mkdir -p "$ROOT_DIR/$PKGDBPERMS_DIR"
+ rm -f "$ROOT_DIR/$PKGDBPERMS_DIR/$name"
+ grep '/$' $TMP_PKGADD | while read -r perms own junk1 junk2 junk3 dir; do

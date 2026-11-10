@@ -1,0 +1,21 @@
+# Track the upstream-designated stable release, excluding prereleases.
+source="https://api.github.com/repos/besser82/libxcrypt/releases/latest"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+release=json.loads(pathlib.Path('index.html').read_text())
+if release.get('draft') or release.get('prerelease'):
+    raise SystemExit('Upstream response is not a stable release')
+match=re.fullmatch('v([0-9]+(?:\\.[0-9]+)*)',release.get('tag_name',''))
+if not match: raise SystemExit('No matching stable release tag found')
+print(match[1].replace('.','.'))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

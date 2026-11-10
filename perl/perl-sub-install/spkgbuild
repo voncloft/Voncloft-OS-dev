@@ -2,8 +2,8 @@
 # depends : perl
 
 name=perl-sub-install
-version=0.928
-release=6
+version=0.929
+release=1
 
 _name=Sub-Install
 source="https://cpan.metacpan.org/authors/id/R/RJ/RJBS/${_name}-${version}.tar.gz"

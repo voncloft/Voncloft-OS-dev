@@ -2,23 +2,21 @@
 
 name=alsa-lib
 version=1.2.16.1
-release=1
+release=2
 source="https://www.alsa-project.org/files/pub/lib/${name}-$version.tar.bz2"
 options="!checksum"
 build() {
-	cd $name-$version
-
-  	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
-
-                make distclean
-        CC="gcc -m32 CCX=g++ -m32" ./configure \
-    --prefix=/usr                 \
-    --libdir=/usr/lib32           \
+    cd "$name-$version"
+    ./configure --prefix=/usr --disable-static
     make
-    mkdir -pv $PKG/usr/lib32
-    make DESTDIR=$PWD/DESTDIR install
-    cp -Rv DESTDIR/usr/lib32/* /usr/lib32
+    make DESTDIR="$PKG" install
 
+    make distclean
+    CC="gcc -m32" CXX="g++ -m32" \
+        PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig \
+        ./configure --prefix=/usr --libdir=/usr/lib32 --disable-static
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+    install -dm755 "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

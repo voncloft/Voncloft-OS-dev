@@ -2,10 +2,10 @@
 # depends : python python-setuptools python-wheel
 
 name=python-calver
-version=2022.06.26
+version=2025.10.20
 release=1
 
-_name=${name#python-}
+_name=calver
 source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

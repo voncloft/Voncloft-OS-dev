@@ -1,10 +1,10 @@
 # note : A Secret Service provider is needed at runtime; Plasma can use KWallet.
-# depends : glib gnutls libgcrypt vala
+# depends : glib gnutls libgcrypt vala meson ninja
 # description   : The libsecret package contains a GObject based library for accessing the Secret Service API
 
 name=libsecret
 version=0.21.8.2    
-release=2
+release=3
 _minor=${version#*.}
 source="https://download.gnome.org/sources/${name}/${version%%.*}.${_minor%%.*}/${name}-${version}.tar.xz"
 
@@ -18,9 +18,6 @@ meson setup --prefix=/usr       \
 --buildtype=release \
 -D gtk_doc=false    \
 ..                  
-ninja
-sed "s/api_version_major/'0.21.7'/"            \
--i ../docs/reference/libsecret/meson.build 
 ninja
 DESTDIR=$PKG ninja install
 }

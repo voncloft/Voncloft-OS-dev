@@ -3,7 +3,7 @@
 
 name=file
 version=5.48
-release=1
+release=2
 source="ftp://ftp.astron.com/pub/$name/$name-$version.tar.gz"
 options="!checksum"
 
@@ -17,4 +17,14 @@ build() {
                 --disable-libseccomp
 	make
 	make DESTDIR=$PKG install
+
+	# The installed file package also owns the 32-bit libmagic ABI.
+	# Preserve it when upgrading the command and native library.
+	make distclean
+	CC="gcc -m32" CXX="g++ -m32" ./configure \
+		--prefix=/usr --libdir=/usr/lib32 \
+		--disable-static --disable-libseccomp
+	make -C src libmagic.la
+	make -C src DESTDIR="$PKG" install-libLTLIBRARIES
+	make DESTDIR="$PKG" install-pkgconfigexecDATA
 }

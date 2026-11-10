@@ -1,14 +1,14 @@
 # description   : The Tk package contains a TCL GUI Toolkit
-# depends       : xorg libraries
+# depends       : tcl xorg-libraries
 
 name=tk
-version=8.6.17
+version=9.1.0
 release=1
 source=" https://downloads.sourceforge.net/tcl/${name}${version}-src.tar.gz"
 options="!checksum"
 
 build() {
-        cd *
+        cd "$name$version"
         cd unix 
 	./configure --prefix=/usr \
             --mandir=/usr/share/man \
@@ -21,6 +21,6 @@ build() {
 
     make DESTDIR=$PKG install 
     make DESTDIR=$PKG install-private-headers 
-ln -v -sf wish8.6 $PKG/usr/bin/wish
-chmod -v 755 $PKG/usr/lib/libtk8.6.so
+ln -v -sf "wish${version%.*}" "$PKG/usr/bin/wish"
+chmod -v 755 "$PKG/usr/lib/libtk${version%.*}.so"
 }

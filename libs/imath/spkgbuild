@@ -1,5 +1,5 @@
-# description : imath - KDE dependency
-# depends : kde-deps-installer
+# description : Math library for computer graphics and image processing
+# depends : cmake
 
 name=imath
 version=3.2.3
@@ -10,8 +10,14 @@ source="$name-$version.tar.gz::https://github.com/AcademySoftwareFoundation/${_n
 options="!checksum"
 
 build() {
-    cd "Imath-$version"
-    plasma-package-installer -DBUILD_SHARED_LIBS=ON -DPYTHON=OFF -DPYBIND11=OFF
-    cd build
-    make DESTDIR="$PKG" install
+    cmake -S "$_name-$version" -B build \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DBUILD_SHARED_LIBS=ON \
+        -DBUILD_TESTING=OFF \
+        -DPYTHON=OFF \
+        -DPYBIND11=OFF
+    cmake --build build
+    DESTDIR="$PKG" cmake --install build
 }

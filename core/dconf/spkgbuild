@@ -2,9 +2,9 @@
 # depends	: dbus glib gtk3 libxml2 libxslt vala 
 
 name=dconf
-version=0.40.0
+version=51.0
 release=1
-source="http://ftp.gnome.org/pub/gnome/sources/${name}/${version%.*}/$name-$version.tar.xz"
+source="https://ftp.gnome.org/pub/gnome/sources/${name}/${version%.*}/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version
@@ -12,7 +12,7 @@ build() {
 	mkdir build
 	cd    build
 
-	meson --prefix=/usr -Dbash_completion=false ..
+	meson setup --prefix=/usr -Dbash_completion=false ..
 	ninja
 	DESTDIR=$PKG ninja install
 }

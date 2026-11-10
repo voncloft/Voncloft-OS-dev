@@ -147,7 +147,7 @@ f:95ebabcac025f08aa5a6fa3035378efb:kf-depends/qt6.sh
 f:b0aeda26e9c3ee999a7121d4cf274a46:kf-depends/CHANGELOG
 f:3a8440dd277dc4f1e0a5024f1b0a2222:kf-depends/kf6.sh
 f:30783572de00a3d86dd5f2967c04a143:kf-depends/qt
-f:41288fcd076af36ae7bf4e271f183a9e:kf-depends/spkgbuild
+f:ca0eca48eaa7f779a4afc5960ef1a2fd:kf-depends/spkgbuild
 f:aab67fcc8b24cbb67385ba65462c0951:kf-depends/override
 f:8ff57ee35184edd5da79c11bba6f2da1:kxmlgui/.pkgfiles
 f:59931591eb95023479016f97179f8db6:kxmlgui/CHANGELOG
@@ -304,7 +304,7 @@ f:a2b92d694558be98245b7b44e41eb8e6:knewstuff/CHANGELOG
 f:cff066ae0198938bd6127fcc74bc6038:knewstuff/spkgbuild
 f:858a8954b7bdb4d6a543893c0b2f8eb6:kimageformats/.pkgfiles
 f:122cc948b86e1bb849c74d8c43445df6:kimageformats/CHANGELOG
-f:a0bb289a21bd7d0f7fe8fb87d1aa8bb2:kimageformats/spkgbuild
+f:207550bc6d366655d596abc46769e431:kimageformats/spkgbuild
 f:83bef792697368405404f1aa2b702946:kcoreaddons/.pkgfiles
 f:c305c2952f5a4182403da02f52413e53:kcoreaddons/CHANGELOG
 f:e7aa068f59626471eec4cfa4435bc12d:kcoreaddons/spkgbuild
@@ -322,6 +322,7 @@ f:f8382e2c1e1d8e8e7f88f3d21f073116:kjs/spkgbuild
 f:fcc5313029f1e3b92376a223f4301077:kapidox/.pkgfiles
 f:d13ab967dc569533e180523322451ee5:kapidox/CHANGELOG
 f:844ac03e04782c3cedd4d178f2c9272a:kapidox/spkgbuild
+f:deca9dff9b5b6e2da78f4e02cdbd923a:kapidox/override
 f:6590b8339b87aa4a35a06b47017cba84:kcmutils/.pkgfiles
 f:f2c498cca7b558414865afeec2b52d2c:kcmutils/CHANGELOG
 f:c2fd2da201ce6981b8ff80ed4a664eaf:kcmutils/spkgbuild

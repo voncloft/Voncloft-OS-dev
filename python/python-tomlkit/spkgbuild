@@ -2,10 +2,10 @@
 # depends : python python-poetry-core python-wheel
 
 name=python-tomlkit
-version=0.11.8
+version=0.15.2
 release=1
 
-_name=${name#python-}
+_name=tomlkit
 source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

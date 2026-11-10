@@ -602,7 +602,8 @@ f:4106b5cf899bd703c0ce4bdff8d78e86:plasma-camera/spkgbuild
 f:e93a14f778af036d84336461c081b969:kphotoalbum/spkgbuild
 f:6ee516412544690b15fb493fb129cacb:kdeconnect-kde/.pkgfiles
 f:4a0b14e7ad725efcc586fb64f1571f7f:kdeconnect-kde/CHANGELOG
-f:190b4b181af6a82a80d3a416539769d6:kdeconnect-kde/spkgbuild
+f:ba74374a43d296a8a102614993139996:kdeconnect-kde/spkgbuild
+f:0a24b1badb0a68a2d0a6c44b1079e9b1:kdeconnect-kde/configurable-udev-directory.patch
 f:b1af0aafaf01bcf40020fada3cf2745f:kpublictransport/CHANGELOG
 f:2d6804048337b69b3c86385d7cb8e15c:kpublictransport/spkgbuild
 f:8a19ff5894b0a9c2cad79b884a12d0da:kcron/CHANGELOG
@@ -669,7 +670,7 @@ f:9f29931df721123d440d23facd441a3f:kimageannotator/.pkgfiles
 f:b35862048412af496813ffe4335c92d6:kimageannotator/spkgbuild
 f:feec0faca2198f659ff610860cc22878:okular/.pkgfiles
 f:8f22a18e54f521c697b52907c5cd0a05:okular/CHANGELOG
-f:8c38e53179e907474c664dcf73335d4c:okular/spkgbuild
+f:d74ef3a761fda9429f6a979a61044c63:okular/spkgbuild
 f:de130a07e29c77cb56d32ecce1801fdb:kdiff3/spkgbuild
 f:2bd1459c4bf9184b8eb5f0f8b7415435:akonadi-mime/.pkgfiles
 f:da8815f5124eb86be234d1145bf34144:akonadi-mime/CHANGELOG
@@ -711,7 +712,7 @@ f:06b43eeaa6fe529d2f36524c427783ea:kde-dev-scripts/CHANGELOG
 f:eea3d1885a20cf086405cf5fe082ca66:kde-dev-scripts/spkgbuild
 f:1fec064b95cb43a90340384ea5f949d3:kbreakout/CHANGELOG
 f:12aee84277e15e36a26efcefc56f731e:kbreakout/spkgbuild
-f:f536d25ea1f9d921dc13d9cad6c62927:krita/spkgbuild
+f:62ef1f51bce2d2ab5ce487d294a8e514:krita/spkgbuild
 f:9506eb590421ce676e99b9d3750fe035:kcolorpicker/.pkgfiles
 f:349f3b3c5ad3212bf0b440db86cedfb8:kcolorpicker/spkgbuild
 f:2e38f161a560033b16ce061f1bd6fec9:konversation/CHANGELOG
@@ -765,7 +766,7 @@ f:765f7bc385ad624e5f066a22eee2ab0d:kdominate/CHANGELOG
 f:7bf51f844fe5c8ab9419b65cbd7efcce:kdominate/spkgbuild
 f:789c151ed61ad1c7edc457f6fda6186d:akonadi/.pkgfiles
 f:33d7293d291609b331dd0be3e397a71e:akonadi/CHANGELOG
-f:0fe4e1cf1acf6b296cca1091f4d6de64:akonadi/spkgbuild
+f:4c66dfc2bd536efbb1228879bdf5affc:akonadi/spkgbuild
 f:059ab6c8079faf5b5fd159172b7cf12d:kigo/CHANGELOG
 f:68bfd1c36cda3ecb6084d17838f94d69:kigo/spkgbuild
 f:b844d796c5b5372989ddbfaddd512708:ksmtp/.pkgfiles
@@ -992,7 +993,7 @@ f:a73a1047b0ad1e714fa6e1c36099477e:kmousetool/CHANGELOG
 f:d9ab00d2ec108561be64ab529c6a07ed:kmousetool/spkgbuild
 f:6a7b4ae261e8d3e3bd6cf6f394f7483d:kio-extras/.pkgfiles
 f:f706301f7b78500ccc88eda0a77e79f6:kio-extras/CHANGELOG
-f:2a7fe9ce947c961986d65fcdc44cf8c0:kio-extras/spkgbuild
+f:5c00de459962e2286eb44aa389bb864a:kio-extras/spkgbuild
 f:a889581736a3ddbb8f185ea5460909d0:keepsecret/CHANGELOG
 f:e3b7147cdc35d3e696f9f7e660e9fc0f:keepsecret/spkgbuild
 f:a745be8bee3e618759dc1d48b923babc:kbruch/CHANGELOG
@@ -1048,7 +1049,7 @@ f:bc13b71adf96f93e72ccbf02faa24fff:analitza/CHANGELOG
 f:21083236a37b4ef743454d507e55ca10:analitza/spkgbuild
 f:1a716a319566d9f1f2d52f0a29ed6bda:spectacle/.pkgfiles
 f:203ea36cf168f973ee84e70e42133233:spectacle/CHANGELOG
-f:6fdf3237dd143969fe34ade30650fb58:spectacle/spkgbuild
+f:31f812aa8d94cdbcbad65b457abf6b7e:spectacle/spkgbuild
 f:0361c51040fd91cbf66c6317fd78cc2f:pim-data-exporter/CHANGELOG
 f:8e4da66760fe9157ffe6f385398fda5c:pim-data-exporter/spkgbuild
 f:1543c167e5485595b2e29b972dd1a362:mbox-importer/CHANGELOG

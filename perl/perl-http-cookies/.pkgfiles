@@ -1,0 +1,21 @@
+perl-http-cookies-6.10-1
+drwxr-xr-x root/root    usr/
+drwxr-xr-x root/root    usr/lib/
+drwxr-xr-x root/root    usr/lib/perl5/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/core_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/HTTP/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/auto/HTTP/Cookies/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/HTTP/
+drwxr-xr-x root/root    usr/lib/perl5/5.40/site_perl/HTTP/Cookies/
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/HTTP/Cookies/Microsoft.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/HTTP/Cookies/Netscape.pm
+-r--r--r-- root/root    usr/lib/perl5/5.40/site_perl/HTTP/Cookies.pm
+drwxr-xr-x root/root    usr/share/
+drwxr-xr-x root/root    usr/share/man/
+drwxr-xr-x root/root    usr/share/man/man3/
+-r--r--r-- root/root    usr/share/man/man3/HTTP::Cookies.3.gz
+-r--r--r-- root/root    usr/share/man/man3/HTTP::Cookies::Microsoft.3.gz
+-r--r--r-- root/root    usr/share/man/man3/HTTP::Cookies::Netscape.3.gz

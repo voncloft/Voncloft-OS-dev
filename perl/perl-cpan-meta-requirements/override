@@ -1,0 +1,18 @@
+# Use the distribution's released CPAN metadata.
+source="https://fastapi.metacpan.org/v1/release/CPAN-Meta-Requirements"
+url=$source
+get_generic() {
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+data=json.loads(pathlib.Path('index.html').read_text())
+assert data['distribution']=='CPAN-Meta-Requirements' and data['maturity']=='released'
+version=str(data['version'])
+assert re.fullmatch(r'[0-9]+(?:\.[0-9]+)*',version)
+print(version)
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

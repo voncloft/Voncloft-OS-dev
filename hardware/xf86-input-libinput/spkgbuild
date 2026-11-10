@@ -1,24 +1,15 @@
-# description	: Wrapper around libinput and allows for libinput to be used for input devices in X
-# depends	: libinput xorg-server xorgproto
+# description : Xorg input driver using libinput
+# depends : libinput xorg-server
 
 name=xf86-input-libinput
-version=1.32.0
+version=1.5.0
 release=1
-_name=libinput
-source="https://gitlab.freedesktop.org/${_name}/${_name}/-/archive/${version}/${_name}-${version}.tar.gz"
+source="https://www.x.org/pub/individual/driver/${name}-${version}.tar.xz"
 
 build() {
-	cd *
-	mkdir build &&
-cd    build &&
-
-meson setup ..              \
-      --prefix=/usr \
-      --buildtype=release   \
-      -D debug-gui=false    \
-      -D tests=false        \
-      -D libwacom=false     \
-      -D udev-dir=/usr/lib/udev &&
-ninja
-DESTDIR=$PKG ninja install
+    cd "$name-$version"
+    ./configure --prefix=/usr --sysconfdir=/etc \
+        --localstatedir=/var --disable-static
+    make
+    make DESTDIR="$PKG" install
 }

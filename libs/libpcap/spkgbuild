@@ -1,12 +1,12 @@
 # description	: A system-independent interface for user-level packet capture
-# homepage	: http://www.tcpdump.org/
+# homepage	: https://www.tcpdump.org/
 # maintainer	: Emmett1, emmett1.2miligrams at gmail.com
 # depends	: dbus libnl libusb bash flex
 
 name=libpcap
 version=1.11.0
-release=1
-source="http://www.tcpdump.org/release/$name-$version.tar.gz
+release=3
+source="https://www.tcpdump.org/release/$name-$version.tar.gz
         libpcap-1.9.1-enable_bluetooth-1.patch"
 
 build() {

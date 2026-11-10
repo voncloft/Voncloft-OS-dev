@@ -3,10 +3,11 @@
 
 name=iftop
 version=1.0pre4
-release=1
+release=3
 
 source="https://www.ex-parrot.com/pdw/${name}/download/${name}-${version}.tar.gz
-	patch.patch"
+	patch.patch
+        config-prototype.patch"
 
 build()
 {
@@ -14,6 +15,7 @@ build()
 	autoreconf -ifv
 	CFLAGS+=' -fcommon'
 	patch -p0 -i $SRC/patch.patch
+    patch --fuzz=0 -p1 < "$SRC/config-prototype.patch"
 	./configure --prefix=/usr --sbindir=/usr/bin --mandir=/usr/share/man
 	make
 	make DESTDIR=$PKG install

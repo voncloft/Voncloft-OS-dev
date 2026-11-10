@@ -3,7 +3,7 @@
 
 name=libnvme
 version=1.16.2
-release=1
+release=2
 
 source="https://github.com/linux-nvme/${name}/archive/v${version}/${name}-$version.tar.gz"
 
@@ -17,6 +17,5 @@ build()
 
 	meson setup --prefix=/usr --buildtype=release -D libdbus=auto .. &&
 	ninja
-
 	DESTDIR=$PKG ninja install
 }

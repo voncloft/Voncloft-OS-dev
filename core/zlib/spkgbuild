@@ -2,17 +2,13 @@
 
 name=zlib
 version=1.4
-release=1
+release=3
 source="https://zlib.net/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
-
-	./configure --prefix=/usr
-	make
-	make DESTDIR=$PKG install
-
-	mkdir -p $PKG/lib
-	mv -v $PKG/usr/lib/libz.so.* $PKG/lib
-	ln -sfv ../../lib/$(readlink $PKG/usr/lib/libz.so) $PKG/usr/lib/libz.so
+    cd "$name-$version"
+    ./configure --prefix=/usr
+    make
+    make DESTDIR="$PKG" install
+    # The separate zlib-32 package owns the 32-bit runtime.
 }

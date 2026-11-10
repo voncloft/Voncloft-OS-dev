@@ -1,11 +1,11 @@
 # note : X11 component from Plasma 6.7; not part of the Wayland-only Plasma 6.8 desktop.
-# depends : kde-deps-installer
+# depends : extra-cmake-modules kde-deps-installer qt6 kcoreaddons ki18n kglobalaccel kconfig kxmlgui kwidgetsaddons kwindowsystem knotifications kdbusaddons kdoctools kcmutils kio libxcb libxi libx11 libplasma plasma5support libwacom xf86-input-wacom
 # status : Final archived release; excluded from current Frameworks/Plasma/Gear package groups.
 # description : Plasma settings and profiles for configuring Wacom tablet mapping, buttons, and pen behavior
 
 name=wacomtablet
-version=6.8.2
-release=1
+version=6.7.6
+release=2
 
 source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"
 options="!checksum"

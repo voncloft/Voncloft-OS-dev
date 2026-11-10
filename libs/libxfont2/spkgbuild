@@ -3,7 +3,7 @@
 
 name=libxfont2
 version=2.0.9
-release=1
+release=2
 _name=libXfont2
 source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.gz"
 

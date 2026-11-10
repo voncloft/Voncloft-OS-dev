@@ -1,21 +1,26 @@
 # note : GEGL can use Graphviz output; it is not a Graphviz build dependency.
 # description	: Graph visualization software
-# depends : pango cairo xorg-libraries fontconfig libpng cmake
+# depends : pango cairo xorg-libraries fontconfig libpng cmake ruby swig java-headless perl
 
 name=graphviz
 version=16.1.0
-release=2
+release=3
 source="https://gitlab.com/graphviz/${name}/-/archive/$version/${name}-$version.tar.bz2"
 
 options="!checksum"
 
 build() {
+    # Use the stable JDK path provided by java-headless for JNI discovery.
+    export JAVA_HOME=/opt/jdk
 	cd $name-$version
 	mkdir build &&
 	cd    build &&
 
 	cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
+      -D ENABLE_SWIG=ON -D ENABLE_RUBY=ON \
+      -D ENABLE_JAVA=ON -D ENABLE_PERL=ON \
+      -D CMAKE_INSTALL_RPATH_USE_LINK_PATH=ON \
       ..                           &&
 
 	sed -i '/GZIP/s/:.*$/=/' CMakeCache.txt &&

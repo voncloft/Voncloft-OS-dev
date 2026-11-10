@@ -1,18 +1,18 @@
 # description : headers for spirv
-# depends : cmake
+# depends : cmake ninja
 
 name=spirv-headers
 version=1.4.363.0
-release=1
+release=2
 
 #source="https://github.com/KhronosGroup/SPIRV-Headers/archive/vulkan-sdk-$version/SPIRV-Headers-vulkan-sdk-$version.tar.gz"
 _name=SPIRV-Headers
-source="https://github.com/KhronosGroup/${_name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
+source="spirv-headers-$version.tar.gz::https://github.com/KhronosGroup/${_name}/archive/refs/tags/vulkan-sdk-${version}.tar.gz"
 options="!checksum"
 
 build()
 {
-	cd *
+	cd "${_name}-vulkan-sdk-${version}"
 	mkdir build 
 	cd    build 
 

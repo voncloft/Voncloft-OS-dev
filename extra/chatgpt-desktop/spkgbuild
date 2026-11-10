@@ -1,10 +1,10 @@
 # description : Official OpenAI desktop application for ChatGPT conversations and Codex coding tasks
-# depends : alsa-lib at-spi2-core bash cairo coreutils cups dbus expat gcc gdk-pixbuf git glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libusb libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr mesa nspr nss openssl pango udev xdg-utils xz python
+# depends : alsa-lib at-spi2-core bash cairo coreutils cups dbus expat gcc gdk-pixbuf git glib gtk3 hicolor-icon-theme libarchive libdrm libnotify libusb libx11 libxcb libxcomposite libxdamage libxext libxfixes libxkbcommon libxrandr mesa nspr nss openssl pango udev xdg-utils xz python qt6 tpm2-tss
 # note : Official x86_64 binary; requires OpenSSL 3 runtime libraries. The device-key module for controlling other computers additionally needs tpm2-tss; receiving control from a phone does not require that module.
 
 name=chatgpt-desktop
 version=26.1103.32239
-release=1
+release=2
 _name=chatgpt
 _package_path=pool/main/c/${_name}/${_name}_${version}_amd64.deb
 _pinned_version=26.1027.30824
@@ -46,6 +46,10 @@ build() {
 
     # Preserve upstream's normal /usr layout. Never run Debian maintainer scripts.
     bsdtar -xpf "$payload" -o -C "$PKG" || return 1
+    # Chromium loads either Qt shim at runtime; Voncloft uses Qt6 only.
+    # Require upstream's Qt6 shim before dropping its optional Qt5 fallback.
+    test -f "$PKG/usr/lib/chatgpt/libqt6_shim.so" || return 1
+    rm -f "$PKG/usr/lib/chatgpt/libqt5_shim.so" || return 1
     test -x "$PKG/usr/lib/chatgpt/ChatGPT" || return 1
     test -x "$PKG/usr/lib/chatgpt/codex-launcher" || return 1
     test -f "$PKG/usr/share/applications/chatgpt.desktop" || return 1

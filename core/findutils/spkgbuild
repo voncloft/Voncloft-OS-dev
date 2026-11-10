@@ -3,7 +3,7 @@
 
 name=findutils
 version=4.11.0
-release=1
+release=2
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
 options="!checksum"
 build() {
@@ -16,10 +16,6 @@ build() {
 		--disable-nls
 	make
 	make DESTDIR=$PKG install
-
-	mkdir -pv $PKG/bin
-	mv -v $PKG/usr/bin/find $PKG/bin
-	sed -i 's|find:=${BINDIR}|find:=/bin|' $PKG/usr/bin/updatedb
 
 	rm -r $PKG/usr/share/info
 }

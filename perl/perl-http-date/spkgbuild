@@ -2,8 +2,8 @@
 # depends : perl-timedate
 
 name=perl-http-date
-version=6.05
-release=3
+version=6.08
+release=1
 
 _name=HTTP-Date
 source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/${_name}-${version}.tar.gz"

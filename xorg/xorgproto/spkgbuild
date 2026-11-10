@@ -1,9 +1,9 @@
 # description	: Combined X.Org X11 Protocol headers
-# depends	: util-macros
+# depends : util-macros meson ninja
 
 name=xorgproto
 version=2026.1
-release=1
+release=2
 source="https://xorg.freedesktop.org/archive/individual/proto/$name-$version.tar.xz"
 
 build() {
@@ -12,7 +12,7 @@ build() {
 	mkdir build
 	cd build
 	
-	meson --prefix=/usr ..
+	meson setup --prefix=/usr ..
 	ninja
 	DESTDIR=$PKG ninja install
 }

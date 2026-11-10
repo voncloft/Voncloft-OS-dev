@@ -2,21 +2,22 @@
 # depends       : libjpeg-turbo jasper lcms2
 
 name=libraw
-version=0.22.3    
-release=1
+version=0.22.3
+release=4
 _name=LibRaw
-source="https://github.com/LibRaw/${_name}/archive/refs/tags/${version}.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/LibRaw/${_name}/archive/refs/tags/${version}.tar.gz"
 
 options="!checksum"
 
 build() {
         cd "$SRC"/LibRaw*/
+        autoreconf --install --force
         ./configure --prefix=/usr    \
 --enable-jpeg    \
 --enable-jasper  \
 --enable-lcms    \
 --disable-static \
---docdir=/usr/share/doc/libraw-0.21.4 
+--docdir=/usr/share/doc/libraw-$version
 make
 make DESTDIR=$PKG install
 }

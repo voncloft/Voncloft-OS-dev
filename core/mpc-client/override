@@ -1,0 +1,17 @@
+# Verify final releases using the actual upstream project.
+source="https://www.musicpd.org/download/mpc/0/"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re
+versions=re.findall(r'mpc-([0-9]+(?:\.[0-9]+)*)\.tar\.xz',pathlib.Path('index.html').read_text())
+if not versions:raise SystemExit('No MPD client release found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

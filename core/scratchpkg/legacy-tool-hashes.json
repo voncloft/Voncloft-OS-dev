@@ -1,0 +1,16 @@
+{
+  "usr/bin/xchroot": "5ffb1ff1a510100840e6a501d8866472b967b50d2f65a7e40e35138a6efa5b7c",
+  "usr/bin/revdep": "6453c27934ef2cedb938ff4e7987cb8e09d1c05016abec4aecf75e158a7ac8bc",
+  "usr/bin/pkgadd": "4442efce3a4389a0726429e17f1fe839b3dd27065a21597b252a80acbf3f1fe0",
+  "usr/bin/pkgdel": "797076acd919392c7c4082cfb8390f26cf55be34b39125272440da26e16a6454",
+  "usr/bin/pkgbuild": "9e8180d420a75c420a47178d1cdf2c38ef7b0348d8b9801c4a8bc042e8c9886d",
+  "usr/bin/scratch": "e12186c3ba70442945c1c03e5a539ed640d62572d82ef12f63dd85806323513e",
+  "usr/bin/updateconf": "2a625a4bb1d8da07f85f874f1fe1138ee08cdcd920639137ddb239b906f7cc13",
+  "usr/bin/portsync": "d53201915c242fea3dfb0ec4b5fcd74b1d7b554d776acd1880bcd2c9b1b22d7c",
+  "usr/bin/pkgbase": "0034f4415c650729d024e3f49fe51d7ba7af15006da78d46fee1caeb34901845",
+  "usr/bin/pkgdepends": "81486990502c3b0f8b93ee79ce852fcd6ab554601dd60d2c2ed77230efb7b645",
+  "usr/bin/pkgrebuild": "9008856783ecf10196e5124d197436b763f2c00e8df744256b7eb9715a80efc2",
+  "usr/bin/pkgfix": "76db7f35354e1dc5039647ab1644c97dd678d0498b929ce9203ede017c6f303f",
+  "usr/bin/portcreate": "7a91af2eeecf2f8ea1c6e5c5c5a0a5fc65f7a0186a8ab3fa548c1df6749b90ee",
+  "usr/bin/create_startup_directories": "a8ab09baf3d79391c5a6031ebc7a9205664d81d09f1ba433f6ebb084a81a41ad"
+}

@@ -1,5 +1,5 @@
 # description : leptonica - KDE dependency
-# depends : giflib kde-deps-installer libjpeg-turbo libpng libtiff libwebp openjpeg zlib
+# depends : giflib kde-deps-installer libjpeg-turbo libpng libtiff libwebp openjpeg2 zlib
 
 name=leptonica
 version=1.87.0

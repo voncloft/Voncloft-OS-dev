@@ -1,23 +1,16 @@
 # description   : The Fcron package contains a periodical command scheduler which aims at replacing Vixie Cron
-# depends       : none
+# depends       : linux-pam
 
 name=fcron
-version=3.3.1
+version=3.4.1
 release=1
-source="http://fcron.free.fr/archives/${name}-${version}.src.tar.gz"
+source="https://ftp.osuosl.org/pub/blfs/conglomeration/${name}/${name}-${version}.src.tar.gz"
 
 options="!checksum"
+backup="etc/fcron.conf etc/fcron.allow etc/fcron.deny etc/pam.d/fcron etc/pam.d/fcrontab var/spool/fcron/systab.orig"
 
 build() {
-        cd *
-	mkdir $PKG/etc
-cat >> $PKG/etc/syslog.conf << "EOF"
-# Begin fcron addition to /etc/syslog.conf
-
-cron.* -/var/log/cron.log
-
-# End fcron addition
-EOF
+        cd $name-$version
 	mkdir -pv $PKG/etc/pam.d
 	./configure --prefix=/usr          \
             --sysconfdir=/etc      \

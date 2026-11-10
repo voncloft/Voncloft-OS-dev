@@ -3,20 +3,20 @@
 
 name=boost
 version=1.92.0
-release=1
-verzion=1_76_0
+release=2
 
 source="https://github.com/boostorg/${name}/releases/download/${name}-$version/${name}-$version-b2-nodocs.tar.xz"
 options="!checksum"
 
 build() {
-	cd boost-$version
+	cd "$name-$version"
 	case $(uname -m) in
    i?86)
       sed -e "s/defined(__MINGW32__)/& || defined(__i386__)/" \
           -i ./libs/stacktrace/src/exception_headers.h ;;
 	esac
 	./bootstrap.sh --prefix=/usr --with-python=python3
-	./b2 stage -j$(nproc)--stagedir=$PKG/usr threading=multi link=shared
-	./b2 install --prefix=$PKG/usr threading=multi link=shared
+	./b2 -j"${NINJAJOBS:-4}" threading=multi link=shared variant=release stage
+    ./b2 -j"${NINJAJOBS:-4}" threading=multi link=shared variant=release \
+        --prefix="$PKG/usr" install
 }

@@ -1,0 +1,19 @@
+# Read project-specific upstream release metadata; reject prerelease tags.
+source="https://gitlab.com/api/v4/projects/kicad%2Flibraries%2Fkicad-packages3D/repository/tags?per_page=100"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+pattern='([0-9]+(?:\\.[0-9]+)*)'
+text=pathlib.Path('index.html').read_text()
+versions=[re.fullmatch(pattern,d['name'])[1] for d in json.loads(text) if re.fullmatch(pattern,d['name'])]
+if not versions:raise SystemExit('No matching final upstream release')
+print(max(set(versions),key=lambda v:tuple(map(int,re.findall(r'[0-9]+',v)))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

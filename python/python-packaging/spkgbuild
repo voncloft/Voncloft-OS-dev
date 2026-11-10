@@ -2,9 +2,9 @@
 # depends : python python-flit
 
 name=python-packaging
-version=23.1
-release=2
-_name=${name#python-}
+version=26.3
+release=1
+_name=packaging
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

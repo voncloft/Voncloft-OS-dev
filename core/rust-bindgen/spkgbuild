@@ -3,16 +3,17 @@
 
 name=rust-bindgen
 version=0.73.2
-release=1
+release=2
 
 source="https://github.com/rust-lang/${name}/archive/v$version/${name}-$version.tar.gz"
 options="!checksum"
 
 build()
 {
+    export CARGO_HOME="$SRC/cargo-home"
 	cd *
 	export PATH="/opt/rustc/bin:$PATH"
-	cargo build --release
+	cargo build --locked --release
 	mkdir -pv $PKG/usr/bin
 	install -v -m755 target/release/bindgen $PKG/usr/bin
 	mkdir -pv $PKG/usr/share/bash-completion/completions

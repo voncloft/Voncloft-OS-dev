@@ -1,0 +1,45 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -113,7 +113,7 @@
+ ret() {
+ 	# remove lock and all tmp files on exit
+ 	[ "${PKGADD_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
+-	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES"
++	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES" "$TMP_ADOPTED_SYMLINKS"
+ 	exit $1
+ }
+ 
+@@ -234,6 +234,12 @@
+ [ "$UPGRADE_PKG" ] && opr=upgrade
+ [ "$REINSTALL_PKG" ] && opr=reinstall
+ echo "$opr: $name-$version-$release..."
++
++# Preserve identical unowned symlinks in place while recording their owner.
++# In particular, adopting /bin/sh must never unlink the active shell alias.
++TMP_ADOPTED_SYMLINKS="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_adopted_symlinks"
++python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
++    --adoptable-symlinks "$PKGNAME" > "$TMP_ADOPTED_SYMLINKS" || ret 1
+ 
+ # check for file conflict
+ if [ ! "$IGNORE_CONFLICT" ]; then
+@@ -259,6 +265,7 @@
+             touch "$TMP_CONFLICT"
+             continue
+         fi
++        grep -Fqx -- "$line" "$TMP_ADOPTED_SYMLINKS" && continue
+ 		if [ -e "$ROOT_DIR/$line" ] || [ -L "$ROOT_DIR/$line" ]; then
+             # A backup payload writes a .spkgnew sibling and preserves the
+             # existing configuration, including an unowned local config.
+@@ -281,10 +288,10 @@
+ 	fi
+ fi
+ 
+-rm -f $TMP_PKGINSTALL
++cp "$TMP_ADOPTED_SYMLINKS" "$TMP_PKGINSTALL" || ret 1
+ 
+ # extract package into ROOT_DIR
+-tar -xvhpf "$PKGNAME" -C "$ROOT_DIR"/ | while read -r line; do
++tar -xvhpf "$PKGNAME" --no-wildcards --anchored --exclude-from="$TMP_ADOPTED_SYMLINKS" -C "$ROOT_DIR"/ | while read -r line; do
+ 	if [ "$line" = "${line%.*}.spkgnew" ]; then
+ 		line=${line%.*}
+         if { [ ! -e "$ROOT_DIR/$line" ] && [ ! -L "$ROOT_DIR/$line" ]; } || [ "$NO_BACKUP" = yes ]; then

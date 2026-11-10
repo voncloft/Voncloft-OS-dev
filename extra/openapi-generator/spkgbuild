@@ -1,10 +1,10 @@
 # description : OpenAPI Generator command line tool for Qt OpenAPI and other clients
 # depends : java-headless bash
-# note : Match the generator version used by Qt 6.11.2's Maven project.
+# note : Generator upgrades do not rebuild the installed Qt libraries.
 
 name=openapi-generator
 version=7.27.0
-release=1
+release=2
 source="https://repo.maven.apache.org/maven2/org/openapitools/openapi-generator-cli/$version/openapi-generator-cli-$version.jar"
 options="!checksum"
 

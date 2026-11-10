@@ -3,13 +3,13 @@
 
 name=sed
 version=4.10
-release=1
+release=2
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr --bindir=/bin --disable-nls
+	./configure --prefix=/usr --disable-nls
 	make
 	make html
 	make DESTDIR=$PKG install

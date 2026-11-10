@@ -1,9 +1,9 @@
 # description	: Portable foreign function interface library
 
 name=libffi
-version=3.4.4
+version=3.8.0
 release=1
-source="ftp://sourceware.org/pub/$name/$name-$version.tar.gz"
+source="https://github.com/libffi/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
 	cd $name-$version
@@ -19,4 +19,14 @@ build() {
 	make
 	make DESTDIR=$PKG install
 	rm -r $PKG/usr/share/info
+	# This package owns both ABIs on VonOS; upgrade both in the same package.
+	make distclean
+	CC="gcc -m32" CXX="g++ -m32" ./configure \
+	    --host=i686-pc-linux-gnu --prefix=/usr --libdir=/usr/lib32 \
+	    --disable-static --with-gcc-arch=i686
+	make
+	make DESTDIR="$PWD/DESTDIR32" install
+	mkdir -p "$PKG/usr/lib32"
+	cp -a DESTDIR32/usr/lib32/. "$PKG/usr/lib32/"
+
 }

@@ -1,0 +1,21 @@
+# Stable source tags; prerelease and unrelated tag names do not match.
+source="https://api.github.com/repos/slicer69/sysvinit/git/matching-refs/tags/"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+versions=[]
+for entry in json.loads(pathlib.Path('index.html').read_text()):
+    match=re.fullmatch('refs/tags/([0-9]+(?:\\.[0-9]+)+)',entry.get('ref',''))
+    if match: versions.append(match[1])
+if not versions: raise SystemExit('No stable source tags found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

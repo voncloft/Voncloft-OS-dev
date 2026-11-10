@@ -1,5 +1,5 @@
 # description : Qt image plugins for reading and writing additional graphics formats
-# depends : extra-cmake-modules karchive kde-deps-installer qt6
+# depends : extra-cmake-modules karchive kde-deps-installer qt6 libraw openexr
 
 name=kimageformats
 version=6.31.0

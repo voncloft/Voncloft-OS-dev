@@ -3,12 +3,12 @@
 
 name=libdvdnav
 version=7.0.0
-release=1
-source="https://get.videolan.org/${name}/$version/$name-$version.tar.bz2"
+release=4
+source="https://download.videolan.org/pub/videolan/$name/$version/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    cd "$name-$version"
+    meson setup build --prefix=/usr --libdir=/usr/lib --buildtype=release --default-library=shared
+    meson compile -C build
+    DESTDIR="$PKG" meson install -C build
 }

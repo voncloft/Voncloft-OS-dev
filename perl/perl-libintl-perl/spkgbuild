@@ -2,7 +2,7 @@
 # depends : coreutils gettext perl
 
 name=perl-libintl-perl
-version=1.33
+version=1.37
 release=1
 
 _name=${name#perl-}

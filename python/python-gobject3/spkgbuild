@@ -1,5 +1,5 @@
 # description	: python bindings for PyGObject3
-# depends	: python-cairo glib
+# depends	: pycairo glib
 
 name=python-gobject3
 version=3.58.1

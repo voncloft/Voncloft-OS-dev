@@ -1,13 +1,16 @@
 # description	: Wrapper for IPv6 Neighbor Discovery Protocol
 
+# depends : autoconf automake libtool
+
 name=libndp
-version=1.8
+version=1.9
 release=1
-source="http://libndp.org/files/$name-$version.tar.gz"
+source="$name-$version.tar.gz::https://github.com/jpirko/$name/archive/refs/tags/v$version.tar.gz"
 
 build() {
 	cd $name-$version
 
+	autoreconf -fiv
 	./configure --prefix=/usr        \
 	            --sysconfdir=/etc    \
 	            --localstatedir=/var \

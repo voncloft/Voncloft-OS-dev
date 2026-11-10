@@ -18,4 +18,16 @@ build() {
             --docdir=/usr/share/doc/ruby-$version
 	make
 	make DESTDIR=$PKG install
+
+        # Bundler and Rake have their own Scratch packages. Keep their command
+        # wrappers and gems under one owner when upgrading Ruby's ABI.
+        rm -f "$PKG/usr/bin/bundle" "$PKG/usr/bin/bundler" "$PKG/usr/bin/rake"
+        rm -rf "$PKG"/usr/lib/ruby/*/bundler
+        rm -f "$PKG"/usr/lib/ruby/*/bundler.rb
+        for _gem in bundler rake; do
+                rm -rf "$PKG"/usr/lib/ruby/gems/*/gems/"$_gem"-*
+                rm -f "$PKG"/usr/lib/ruby/gems/*/specifications/"$_gem"-*.gemspec \
+                      "$PKG"/usr/lib/ruby/gems/*/specifications/default/"$_gem"-*.gemspec \
+                      "$PKG"/usr/lib/ruby/gems/*/cache/"$_gem"-*.gem
+        done
 }

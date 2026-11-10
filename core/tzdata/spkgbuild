@@ -1,29 +1,20 @@
-# description	: Sources for time zone and daylight saving time data
+# description : Sources for time zone and daylight saving time data
 
 name=tzdata
 version=2026f
-release=1
-source="https://data.iana.org/time-zones/releases/tzdata2026e.tar.gz
-	https://www.iana.org/time-zones/repository/releases/tzcode${version}.tar.gz"
+release=3
+source="https://data.iana.org/time-zones/releases/tzdata${version}.tar.gz
+        https://data.iana.org/time-zones/releases/tzcode${version}.tar.gz"
 
 build() {
-	make
-	make DESTDIR=$PKG install
-
-	ZONEINFO=$PKG/usr/share/zoneinfo
-	mkdir -pv $ZONEINFO/posix \
-	          $ZONEINFO/right
-
-	for tz in etcetera southamerica northamerica europe africa antarctica  \
-	          asia australasia backward pacificnew systemv; do
-	    ./zic -L /dev/null   -d $ZONEINFO       -y "sh yearistype.sh" ${tz}
-	    ./zic -L /dev/null   -d $ZONEINFO/posix -y "sh yearistype.sh" ${tz}
-	    ./zic -L leapseconds -d $ZONEINFO/right -y "sh yearistype.sh" ${tz}
-	done
-
-	cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
-	./zic -d $ZONEINFO -p America/New_York
-	
-	# conflict with glibc
-	rm $PKG/etc/localtime
+    # Build a matching compiler locally; glibc owns the installed zic and zdump.
+    make CC=gcc zic tzdata.zi
+    ZONEINFO="$PKG/usr/share/zoneinfo"
+    mkdir -p "$ZONEINFO/posix" "$ZONEINFO/right"
+    ./zic -b fat -d "$ZONEINFO" tzdata.zi
+    ./zic -b fat -d "$ZONEINFO/posix" tzdata.zi
+    ./zic -b fat -L leapseconds -d "$ZONEINFO/right" tzdata.zi
+    ./zic -b fat -d "$ZONEINFO" -p America/New_York
+    cp zone.tab zone1970.tab zonenow.tab iso3166.tab leapseconds leap-seconds.list tzdata.zi "$ZONEINFO/"
+    # Package data only, preserving /etc/localtime and the current timezone choice.
 }

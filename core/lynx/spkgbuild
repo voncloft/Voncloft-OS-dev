@@ -3,8 +3,10 @@
 
 name=lynx
 version=2.9.3
-release=1
+release=2
 source="https://invisible-mirror.net/archives/lynx/tarballs/${name}${version}.tar.bz2"
+
+backup="etc/lynx/lynx.cfg etc/lynx/lynx.lss"
 
 build() {
 	cd ${name}${version}

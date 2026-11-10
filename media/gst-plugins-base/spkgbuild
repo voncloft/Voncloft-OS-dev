@@ -1,5 +1,5 @@
 # description	: Well-groomed and well-maintained collection of GStreamer plug-ins and elements
-# depends	: alsa-lib gstreamer libtheora libvorbis libogg glib iso-codes meson ninja pkgconf
+# depends	: alsa-lib gstreamer libglvnd libtheora libvorbis libogg glib iso-codes meson ninja pkgconf
 
 name=gst-plugins-base
 version=1.28.9
@@ -8,10 +8,12 @@ source="https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
 
 build() {
     cd "$SRC/$name-$version"
+    # GL headers are provided by libglvnd; do not fetch and install a second copy.
     meson setup build \
         --prefix=/usr \
         --libdir=lib \
         --buildtype=release \
+        --wrap-mode=nofallback \
         -Dtests=disabled \
         -Dexamples=disabled \
         -Ddoc=disabled \

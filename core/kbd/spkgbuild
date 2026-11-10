@@ -1,14 +1,16 @@
 # description	: Keytable files
-# depends	: 
+# depends : bzip2 zlib xz zstd autoconf automake libtool
 
 name=kbd
 version=2.10.0
-release=1
+release=4
 source="https://www.kernel.org/pub/linux/utils/${name}/${name}-$version.tar.xz
-	https://www.linuxfromscratch.org/patches/lfs/development/${name}-$version-backspace-1.patch"
+	https://www.linuxfromscratch.org/patches/downloads/${name}/${name}-$version-backspace-1.patch
+        vonos-library-and-test-portability.patch"
 options="!checksum"
 build() {
 	cd $name-$version
+    patch --fuzz=0 -p1 < "$SRC/vonos-library-and-test-portability.patch"
 	patch -Np1 -i $SRC/kbd-$version-backspace-1.patch
 
 	sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure

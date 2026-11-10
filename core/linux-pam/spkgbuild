@@ -4,11 +4,26 @@
 
 name=linux-pam
 version=1.7.3
-release=2
+release=4
 
 source="https://github.com/linux-pam/${name}/releases/download/v$version/Linux-PAM-$version.tar.xz"
 
 options="!checksum"
+
+backup="etc/environment
+        etc/pam.d/other
+        etc/pam.d/system-account
+        etc/pam.d/system-auth
+        etc/pam.d/system-session
+        etc/security/access.conf
+        etc/security/faillock.conf
+        etc/security/group.conf
+        etc/security/limits.conf
+        etc/security/namespace.conf
+        etc/security/namespace.init
+        etc/security/pam_env.conf
+        etc/security/pwhistory.conf
+        etc/security/time.conf"
 
 build() {
 	cd Linux-PAM-$version
@@ -20,10 +35,12 @@ build() {
 	mkdir build &&
 	cd    build &&
 
+	# Keep configuration templates in /etc for Scratch backup handling.
 	meson setup ..        \
-  	--prefix=/usr       \
-  	-D docdir=/usr/share/doc/Linux-PAM-$version
-  	
+	--prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc \
+	-D vendordir= \
+	-D docdir=/usr/share/doc/Linux-PAM-$version
+
 	ninja
 	DESTDIR=$PKG ninja install
 	chmod -v 4755 $PKG/usr/sbin/unix_chkpwd
@@ -41,7 +58,7 @@ build() {
 # End /etc/pam.d/other
 #EOF
 
-	
+
 cat > $PKG/etc/pam.d/system-account << "EOF" &&
 # Begin /etc/pam.d/system-account
 

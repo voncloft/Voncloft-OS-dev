@@ -55,7 +55,8 @@ f:e99b33ffbf57d7a7d277acea0a0ce910:noto-fonts/66-noto-serif.conf
 f:cbdb0e26b7a8d2fba148b5251911157b:noto-fonts/CHANGELOG
 f:2478ab187743480e77c10e9e8af5d326:noto-fonts/66-noto-mono.conf
 f:d1c1f1fdd1ee428b9317de9e639d7544:noto-fonts/66-noto-sans.conf
-f:9fb8671448ff27e8690b808e7ba2b969:noto-fonts/spkgbuild
+f:2573eb3de3282a76910810db52d3e486:noto-fonts/spkgbuild
+f:eb5d7cfa8f3a1a214a8c448cc418dd21:noto-fonts/override
 f:c6616661c0d8232d773df854382ab242:font-daewoo-misc/CHANGELOG
 f:5a189ce4f42405f51cfc30d25a1acea9:font-daewoo-misc/spkgbuild
 f:d7e06e58ce12a821ca530d3e24461277:.httpup-urlinfo
@@ -90,7 +91,8 @@ f:a68a0f3009e26bde86518801224d9876:font-adobe-75dpi/CHANGELOG
 f:19335f23fd806d4c8ea381f3fb20e382:font-adobe-75dpi/spkgbuild
 f:be124e88bcf59749db93653fc3562e14:harfbuzz/.pkgfiles
 f:109c9a110accc1b69aac593e86b83343:harfbuzz/CHANGELOG
-f:17d6cc1e6cf5686e79b77d4256a750f2:harfbuzz/spkgbuild
+f:b61ee9157c6bcb2924c4f51d634f4c23:harfbuzz/spkgbuild
+f:cb55bc063f7d44586accacd558882add:harfbuzz/override
 f:41940409dbb628c5feb490bef55ea4f0:ftgl/.pkgfiles
 f:f8d0cd2453e1d28112ba7e22afd7d02c:ftgl/CHANGELOG
 f:f44653ce6ed8a87437dd71678b5513de:ftgl/freetype-outline-tags.patch
@@ -112,7 +114,8 @@ f:12c0afb97f51f175cd495e0481e5c246:dejavu-fonts/override
 f:3304c4b0011f457c3a8a394424a2f8b7:.httpup-repo.current
 f:b140af24303778b9e6d5aa0f9e3475f0:fontconfig/.pkgfiles
 f:00bfac683564966c1106d16c02fefa6a:fontconfig/CHANGELOG
-f:67020d995b04b48709843575e424f166:fontconfig/spkgbuild
+f:1ce5247909e5b9b0b2621351d9497eab:fontconfig/spkgbuild
+f:7030d7ed521457cee89205806ca40d65:fontconfig/override
 f:8e18dbefea39aef5e34207c2cd281116:font-bh-type1/.pkgfiles
 f:61007cc9c5084df496eeab7eb74f5fcf:font-bh-type1/CHANGELOG
 f:41285812989d534e4f10cd6046ea176c:font-bh-type1/spkgbuild

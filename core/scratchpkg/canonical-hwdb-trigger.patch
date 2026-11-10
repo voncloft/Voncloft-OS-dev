@@ -1,0 +1,20 @@
+--- a/scratch
++++ b/scratch
+@@ -262,6 +262,8 @@
+ 	for i in $PKGDBPERMS_DIR/*; do
+ 		[ -s $i ] || continue
+ 		while read -r perms own dir; do
++			# Runtime directories may not exist yet, especially in a build root.
++			[ -e "/$dir" ] || continue
+ 			chmod $(cvperms $perms) /$dir
+ 			echo $own | while IFS=/ read -r o g; do
+ 				chown $o:$g /$dir
+@@ -388,7 +390,7 @@
+ 	# hwdb
+ 	if [ "$trig_4" != "1" ]; then
+ 		for pkg in $@; do
+-			if [ -s "$PKGDB_DIR/$pkg" ] && [ "$(grep ^etc/udev/hwdb.d/$ $PKGDB_DIR/$pkg)" ]; then
++			if [ -s "$PKGDB_DIR/$pkg" ] && grep -Eq '^(etc|lib|usr/lib)/udev/hwdb[.]d(/|$)' "$PKGDB_DIR/$pkg"; then
+ 				trig_4=1
+ 				break
+ 			fi

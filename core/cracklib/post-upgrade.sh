@@ -1,1 +1,2 @@
-sudo scratch install -rc -y shadow
+#!/bin/sh
+exec sh ./update-dictionary.sh

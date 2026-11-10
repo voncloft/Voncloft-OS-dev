@@ -2,12 +2,21 @@
 # depends	: ncurses
 
 name=readline
-version=8.3
+version=8.3.6
 release=1
-source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz"
+_baseversion=${version%.*}
+_patchlevel=${version##*.}
+_series=$(printf '%s' "$_baseversion" | tr -d .)
+source="https://ftp.gnu.org/gnu/${name}/${name}-${_baseversion}.tar.gz"
+for _patch in $(seq -f '%03g' 1 "$_patchlevel"); do
+        source="$source https://ftp.gnu.org/gnu/${name}/${name}-${_baseversion}-patches/${name}${_series}-${_patch}"
+done
 
 build() {
-	cd $name-$version
+	cd "$name-$_baseversion"
+	for _patch in $(seq -f '%03g' 1 "$_patchlevel"); do
+		patch --fuzz=0 -Np0 -i "$SRC/${name}${_series}-${_patch}"
+	done
 
 	sed -i '/MV.*old/d' Makefile.in
 	sed -i '/{OLDSUFF}/c:' support/shlib-install
@@ -15,15 +24,19 @@ build() {
 	./configure --prefix=/usr    \
 	            --disable-static
 	make SHLIB_LIBS="-lncursesw"
-	make SHLIB_LIBS="-lncurses" DESTDIR=$PKG install
+	make SHLIB_LIBS="-lncursesw" DESTDIR=$PKG install
 
-	mkdir -p $PKG/lib
-	mv -v $PKG/usr/lib/libreadline.so.* \
-	      $PKG/usr/lib/libhistory.so.* \
-	      $PKG/lib
-	ln -sfv ../../lib/$(readlink $PKG/usr/lib/libreadline.so) $PKG/usr/lib/libreadline.so
-	ln -sfv ../../lib/$(readlink $PKG/usr/lib/libhistory.so ) $PKG/usr/lib/libhistory.so
+	# Keep libraries in /usr/lib; /lib is the host usrmerge alias.
 
 	rm -r $PKG/usr/share/info \
 	      $PKG/usr/share/doc
+	# Preserve and upgrade the 32-bit libraries already owned by this package.
+	make distclean
+	CC="gcc -m32" ./configure --host=i686-pc-linux-gnu \
+	    --prefix=/usr --libdir=/usr/lib32 --disable-static --with-curses
+	make SHLIB_LIBS="-lncursesw"
+	make SHLIB_LIBS="-lncursesw" DESTDIR="$PWD/DESTDIR32" install
+	mkdir -p "$PKG/usr/lib32"
+	cp -a DESTDIR32/usr/lib32/. "$PKG/usr/lib32/"
+
 }

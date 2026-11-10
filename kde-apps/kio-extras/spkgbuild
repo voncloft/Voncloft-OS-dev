@@ -1,5 +1,5 @@
 # description : Additional KIO workers and file previews for remote services, archives, and special file locations
-# depends : extra-cmake-modules karchive kcmutils kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdnssd kdoctools kdsoap kdsoap-ws-discovery-client kguiaddons ki18n kio knotifications libkexiv2 libproxy plasma-activities plasma-activities-stats qcoro qt6 solid syntax-highlighting
+# depends : extra-cmake-modules karchive kcmutils kconfig kconfigwidgets kcoreaddons kdbusaddons kde-deps-installer kdnssd kdoctools kdsoap kdsoap-ws-discovery-client kguiaddons ki18n kio knotifications libkexiv2 libproxy plasma-activities plasma-activities-stats qcoro qt6 solid syntax-highlighting openexr
 
 name=kio-extras
 version=26.08.3

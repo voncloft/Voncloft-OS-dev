@@ -4,6 +4,7 @@ name=kf-depends
 version=6.31.0
 release=1
 options="!checksum"
+backup="etc/profile.d/qt6.sh etc/sudoers.d/qt etc/sudoers.d/kde"
 source="kf6.sh
 	qt6.sh
 	qt

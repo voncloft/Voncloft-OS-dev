@@ -3,7 +3,7 @@
 
 name=kmod
 version=34.3
-release=1
+release=2
 source="https://www.kernel.org/pub/linux/utils/kernel/${name}/${name}-$version.tar.xz"
 options="!checksum"
 build() {
@@ -11,7 +11,7 @@ build() {
 	mkdir -p build
 	cd       build
 
-	meson setup --prefix=/usr ..    \
+	meson setup --prefix=/usr --libdir=lib ..    \
             --buildtype=release \
             -D manpages=false
 	ninja
@@ -24,6 +24,7 @@ build() {
 
 	
 
+	PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig" \
 	PKG_CONFIG_PATH="/usr/lib32/pkgconfig" \
 	CC="gcc -m32 -march=i686"              \
 	CXX="g++ -m32 -march=i686"             \

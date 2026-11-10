@@ -1,0 +1,16 @@
+# description : Compact parameter checking functions for Perl
+# depends : perl perl-scalar-list-utils
+
+name=perl-params-someutil
+version=1.12
+release=1
+_name=Params-SomeUtil
+source="https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/${_name}-${version}.tar.gz"
+options="!checksum"
+
+build() {
+    cd "${_name}-${version}"
+    perl Makefile.PL
+    make
+    make DESTDIR="$PKG" install
+}

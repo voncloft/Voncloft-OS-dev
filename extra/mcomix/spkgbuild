@@ -1,5 +1,5 @@
 # description : comic book reading utility
-# depends : gtk3 python-cairo python-gobject3 python-pillow lhasa unrar p7zip unrar unzip git
+# depends : gtk3 pycairo python-gobject3 python-pillow lhasa unrar p7zip unrar unzip git
 
 name=mcomix
 version=1.3.0.git20221027142238.gcb63d286a0357af45b2b5defd70618c70b9e709d

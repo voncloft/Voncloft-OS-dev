@@ -1,6 +1,9 @@
-# description	: Portable web rendering engine WebKit to the GTK+ 3 and GTK+ 2 platforms
-# depends	: cairo cmake gst-plugins-base gst-plugins-bad gtk2 gtk3 harfbuzz-icu libgudev libsecret libsoup libseccomp
-# depends	: libwebp mesa ruby sqlite which enchant libxslt openjpeg2 libwpe bubblewrap xdg-dbus-proxy wpebackend-fdo libxcomposite libnotify libxt
+# description : GTK 3 web rendering engine used by wxWebView
+# depends : at-spi2-core bubblewrap cairo cmake enchant expat flite fontconfig freetype2
+# depends : glib gperf gst-plugins-base gst-plugins-bad gtk3 harfbuzz icu lcms2 libavif
+# depends : libepoxy libgcrypt libgudev libjpeg-turbo libpng libsecret libsoup libseccomp
+# depends : libtasn1 libwebp libxml2 libxslt mesa ninja perl python ruby sqlite unifdef
+# depends : wayland wayland-protocols which xdg-dbus-proxy zlib
 
 name=webkitgtk
 version=2.54.2
@@ -8,22 +11,32 @@ release=1
 source="https://webkitgtk.org/releases/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
-	
-	mkdir build
-	cd build
-	
-	cmake -DCMAKE_BUILD_TYPE=Release \
-	      -DCMAKE_INSTALL_PREFIX=/usr \
-	      -DCMAKE_SKIP_RPATH=ON \
-	      -DPORT=GTK \
-	      -DLIB_INSTALL_DIR=/usr/lib \
-	      -DCMAKE_INSTALL_LIBEXECDIR:PATH=/usr/lib \
-	      -DUSE_LIBHYPHEN=OFF \
-	      -DENABLE_MINIBROWSER=ON \
-	      -DUSE_WOFF2=OFF \
-	      -DENABLE_GEOLOCATION=OFF \
-	      -Wno-dev -G Ninja ..
-	ninja
-	DESTDIR=$PKG ninja install
+    cd "$name-$version" || return 1
+    # Bound memory-heavy linking separately from the configured compile jobs.
+    export WEBKIT_NINJA_LINK_MAX="${WEBKIT_NINJA_LINK_MAX:-1}"
+    export WEBKIT_NINJA_COMPILE_MAX="${NINJAJOBS:-$(nproc)}"
+    cmake -S . -B build -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_SKIP_INSTALL_RPATH=ON \
+        -DPORT=GTK \
+        -DLIB_INSTALL_DIR=/usr/lib \
+        -DCMAKE_INSTALL_LIBEXECDIR=lib \
+        -DUSE_GTK4=OFF \
+        -DUSE_LIBBACKTRACE=OFF \
+        -DUSE_LIBHYPHEN=OFF \
+        -DUSE_WOFF2=OFF \
+        -DUSE_JPEGXL=OFF \
+        -DUSE_SYSTEM_SYSPROF_CAPTURE=OFF \
+        -DUSE_FLITE=ON -DUSE_SPIEL=OFF \
+        -DENABLE_GAMEPAD=OFF \
+        -DENABLE_GEOLOCATION=OFF \
+        -DENABLE_JOURNALD_LOG=OFF \
+        -DENABLE_BUBBLEWRAP_SANDBOX=ON \
+        -DENABLE_MINIBROWSER=ON \
+        -DENABLE_DOCUMENTATION=OFF \
+        -DENABLE_API_TESTS=OFF \
+        -DENABLE_LAYOUT_TESTS=OFF || return 1
+    cmake --build build --parallel "${NINJAJOBS:-$(nproc)}" || return 1
+    DESTDIR="$PKG" cmake --install build
 }

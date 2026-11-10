@@ -1,5 +1,5 @@
 # description : An abstraction library for interfacing EDA tools
-# depends : python python-jinja
+# depends : python jinja2
 
 name=python-edalize
 version=0.6.8

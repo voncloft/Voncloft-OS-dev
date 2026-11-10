@@ -2,11 +2,11 @@
 # depends : perl
 
 name=perl-clone
-version=0.46
-release=2
+version=0.51
+release=1
 
 _name=Clone
-source="https://cpan.metacpan.org/authors/id/G/GA/GARU/${_name}-${version}.tar.gz"
+source="https://cpan.metacpan.org/authors/id/A/AT/ATOOMIC/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

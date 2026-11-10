@@ -1,20 +1,14 @@
-# depends : libx11 util-macros xorgproto
-# description	: X11 keyboard file manipulation library
+# description : X11 keyboard file manipulation library
+# depends : libx11 util-macros xorgproto meson ninja
 
 name=libxkbfile
 version=1.2.0
-release=2
-options="!checksum"
-source="http://ftp.x.org/pub/individual/lib/${name}-$version.tar.xz"
+release=3
+source="https://www.x.org/pub/individual/lib/libxkbfile-$version.tar.xz"
 
 build() {
-	cd libxkbfile-$version
-
-	./configure \
-		--prefix=/usr \
-                --sysconfdir=/etc \
-                --localstatedir=/var \
-                --disable-static
-	make
-	make DESTDIR=$PKG install
+    cd "libxkbfile-$version"
+    meson setup build --prefix=/usr --libdir=lib --buildtype=release
+    meson compile -C build
+    DESTDIR="$PKG" meson install -C build
 }

@@ -5,7 +5,7 @@
 name=python-pyxdg
 version=0.28
 release=1
-_name=${name#python-}
+_name=pyxdg
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

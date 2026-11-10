@@ -3,9 +3,9 @@
 
 name=brotli
 version=1.2.1
-release=4
+release=5
 
-source="https://github.com/google/${name}/archive/v$version.tar.gz"
+source="brotli-$version.tar.gz::https://github.com/google/${name}/archive/v$version.tar.gz"
 options="!checksum"
 
 build() {

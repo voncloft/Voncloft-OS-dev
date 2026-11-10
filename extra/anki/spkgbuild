@@ -23,6 +23,9 @@ build() {
     # Stage the bundle directly: install.sh also changes the live system.
     install -dm755 "$PKG/usr/share/$name" "$PKG/usr/bin"
     cp -a app app_packages python anki LICENSE README.md "$PKG/usr/share/$name/"
+    # Publisher archive UIDs are not system package ownership. Preserve the
+    # upstream modes, including its advisory lock, but own the bundle as root.
+    chown -hR root:root "$PKG/usr/share/$name"
     ln -s "../share/$name/anki" "$PKG/usr/bin/$name"
 
     install -Dm644 anki.desktop "$PKG/usr/share/applications/$name.desktop"

@@ -2,10 +2,11 @@
 # depends       : 
 
 name=bash-completion
-version=2.11.0
-release=2
+version=2.18.0
+release=4
 
-source="profile
+source="https://github.com/scop/$name/releases/download/$version/$name-$version.tar.xz
+	profile
 	bash_completion.sh
 	dircolors.sh
 	extrapaths.sh
@@ -16,12 +17,31 @@ source="profile
 	.bash_profile
 	.profile
 	.bashrc
-	.bash_logout
-	.nanorc"
+	.bash_logout"
+
+backup="etc/profile.d/bash_completion.sh
+        etc/bashrc
+        etc/dircolors
+        etc/profile
+        etc/profile.d/dircolors.sh
+        etc/profile.d/extrapaths.sh
+        etc/profile.d/i18n.sh
+        etc/profile.d/readline.sh
+        etc/profile.d/umask.sh
+        etc/skel/.bash_logout
+        etc/skel/.bash_profile
+        etc/skel/.bashrc
+        etc/skel/.profile"
 
 build()
 {
-	mkdir $PKG/etc
+    cd "$name-$version"
+    ./configure --prefix=/usr --sysconfdir=/etc
+    make
+    make DESTDIR="$PKG" install
+    cd "$SRC"
+
+	mkdir -p $PKG/etc
 	install --directory --mode=0755 --owner=root --group=root $PKG/etc/profile.d
 	install -Dm644 $SRC/profile $PKG/etc/profile
 	install --directory --mode=0755 --owner=root --group=root $PKG/etc/bash_completion.d
@@ -39,24 +59,6 @@ build()
 	install -Dm644 $SRC/.profile $PKG/etc/skel/.profile
 	install -Dm644 $SRC/.bashrc $PKG/etc/skel/.bashrc
 	install -Dm644 $SRC/.bash_logout $PKG/etc/skel/.bash_logout
-	install -Dm644 $SRC/.nanorc $PKG/etc/skel/.nanorc
 	dircolors -p > $PKG/etc/dircolors
 
-	# Build systems use this metadata to locate completion installation paths.
-	install -d "$PKG/usr/share/pkgconfig"
-	cat > "$PKG/usr/share/pkgconfig/bash-completion.pc" <<EOF
-prefix=/usr
-datadir=\${prefix}/share
-sysconfdir=/etc
-
-compatdir=\${sysconfdir}/bash_completion.d
-completionsdir=\${datadir}/bash-completion/completions
-helpersdir=\${datadir}/bash-completion/helpers
-
-Name: bash-completion
-Description: programmable completion for the bash shell
-URL: https://github.com/scop/bash-completion
-Version: $version
-EOF
-	
 }

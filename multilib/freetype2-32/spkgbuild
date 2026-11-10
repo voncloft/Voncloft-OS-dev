@@ -3,7 +3,7 @@
 
 name=freetype2-32
 version=2.15.0
-release=1
+release=3
 _name=freetype
 source="https://downloads.sourceforge.net/project/${_name}/freetype2/${version}/${_name}-${version}.tar.xz"
 
@@ -13,6 +13,7 @@ build() {
 	export CC="gcc -m32"
 	export CXX="g++ -m32"
 	export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
+    export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
 
 	sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg
 

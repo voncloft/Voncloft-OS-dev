@@ -1,0 +1,20 @@
+# Read the upstream release archive instead of a version-specific directory.
+source="https://ftp.gnu.org/gnu/mpfr/"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re,subprocess
+name='mpfr'
+url='https://ftp.gnu.org/gnu/mpfr/'
+versions=set(re.findall('mpfr-([0-9]+(?:\\.[0-9]+)*)\\.tar\\.',pathlib.Path('index.html').read_text()))
+versions=sorted(versions,key=lambda v:tuple(map(int,re.findall(r'[0-9]+',v))),reverse=True)
+if not versions:raise SystemExit('No stable source releases found')
+print(versions[0])
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

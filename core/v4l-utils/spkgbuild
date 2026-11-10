@@ -3,18 +3,20 @@
 
 name=v4l-utils
 version=1.32.0
-release=1
-source=" https://www.linuxtv.org/downloads/v4l-utils/v4l-utils-$version.tar.xz"
+release=2
+backup="etc/rc_maps.cfg"
+source=" https://www.linuxtv.org/downloads/${name}/${name}-$version.tar.xz"
 options="!checksum"
 
 build() {
         cd $name-$version
-        sed -i '/^ir_bpf_enabled/s/=.*/= false/' utils/keytable/meson.build
 mkdir build 
 cd    build 
 meson setup ..            \
 --prefix=/usr       \
 --buildtype=release \
+-D udevdir=/usr/lib/udev \
+-D bpf=disabled     \
 -D gconv=disabled   \
 -D doxygen-doc=disabled 
 ninja

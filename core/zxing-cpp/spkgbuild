@@ -5,17 +5,18 @@ name=zxing-cpp
 version=3.1.1
 release=2
 
-source="https://github.com/nu-book/${name}/archive/v$version/$name-$version.tar.gz"
+# The release archive includes bundled Zint; GitHub snapshots do not.
+source="$name-$version-release.tar.gz::https://github.com/zxing-cpp/${name}/releases/download/v$version/$name-$version.tar.gz"
 
 build() {
-	cd *
+	cd "$SRC/$name-$version" || return 1
 	mkdir build &&
 	cd    build &&
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
       -D ZXING_EXAMPLES=OFF        \
-      -W no-dev ..                 
+      -Wno-dev ..                 
 	make
 	make DESTDIR=$PKG install
 }

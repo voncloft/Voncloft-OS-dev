@@ -1,5 +1,5 @@
 # description : Locate per-dist and per-module shared files
-# depends : perl-class-inspector
+# depends : perl-class-inspector perl-file-sharedir-install
 
 name=perl-file-sharedir
 version=1.118

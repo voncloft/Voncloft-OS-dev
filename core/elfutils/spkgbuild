@@ -2,18 +2,21 @@
 
 name=elfutils
 version=0.197
-release=1
+release=4
 source="https://sourceware.org/ftp/${name}/$version/${name}-$version.tar.bz2"
 
 build() {
-	cd $name-$version
+    cd "$name-$version"
+    ./configure --prefix=/usr --program-prefix=eu- --disable-nls --disable-debuginfod --enable-deterministic-archives
+    make
+    make DESTDIR="$PKG" install
 
-	./configure \
-		--prefix=/usr \
-		--program-prefix="eu-" \
-		--disable-nls \
-		--disable-debuginfod \
-		--enable-deterministic-archives
-	make
-	make DESTDIR=$PKG install
+    make distclean
+    CC="gcc -m32" CXX="g++ -m32" \
+        PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+        ./configure --prefix=/usr --libdir=/usr/lib32 --program-prefix=eu- --disable-nls --disable-debuginfod --enable-deterministic-archives
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+    install -dm755 "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

@@ -1,0 +1,21 @@
+# Use the package registry's own release metadata.
+source="https://rubygems.org/api/v1/gems/rainbow.json"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+data=json.loads(pathlib.Path('index.html').read_text())
+project='rainbow'
+if data['name']!=project: raise SystemExit('RubyGems project mismatch')
+version=data['version']
+if not re.fullmatch(r'[0-9]+(?:\.[0-9]+)*',version): raise SystemExit('Not a stable RubyGems release')
+print(version)
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

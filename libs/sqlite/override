@@ -1,0 +1,17 @@
+# Verify final releases using the actual upstream project.
+source="https://sqlite.org/download.html"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re
+versions=re.findall(r'[0-9]{4}/sqlite-autoconf-([0-9]{7})\.tar\.gz',pathlib.Path('index.html').read_text())
+if not versions:raise SystemExit('No released SQLite amalgamation found')
+print(max(versions,key=int))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

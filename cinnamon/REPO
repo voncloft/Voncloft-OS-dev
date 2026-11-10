@@ -31,7 +31,7 @@ f:9730cf704f4a4296c5f86092ea96e2f6:elogind/spkgbuild
 f:262d394f8168379d8779d1c9b14d6559:cogl/spkgbuild
 f:8d5cc34a20a9ffbd6c2996e39baac8c9:rest/spkgbuild
 f:4b8c513bf2e5cfdf15bbe7555af60f1b:system-config-printer/CHANGELOG
-f:a9cb981e759c2dd735f5d202a79ddda6:system-config-printer/spkgbuild
+f:ea5afab15aacf2bab5585ee58b808178:system-config-printer/spkgbuild
 f:8a85fdd343dedf0a243ec8d5d2ea8cf3:nm-connection-editor/CHANGELOG
 f:aefb029f786b0016dbaaf264955d1ebf:nm-connection-editor/spkgbuild
 f:457d71ebb7e7d055e4a86eefc66431b2:nm-connection-editor/override
@@ -53,7 +53,7 @@ f:caa121f9489cb5fe3293d069b0e72fe1:timezonemap/spkgbuild
 f:38bee6f3d4557236c64826d7696a2273:blueberry/CHANGELOG
 f:7fc80b752ce752e7f1c05a9f1e87e292:blueberry/spkgbuild
 f:4513e98d82281b91ab23a6ea4031ae28:cinnamon-screensaver/CHANGELOG
-f:f6a2de06cafb7e3ce724903804d737eb:cinnamon-screensaver/spkgbuild
+f:cb2de077b6d31b8fddcaecc9e2db117c:cinnamon-screensaver/spkgbuild
 f:de6ad45eafc690d214a306deb2e9f219:caribou/spkgbuild
 f:249ea59b5c1e703e73ac2f57f8cd5e81:cinnamon-control-center/CHANGELOG
 f:487d235ff5e6bb13c5411a18ca1854d9:cinnamon-control-center/spkgbuild
@@ -69,7 +69,7 @@ f:96954475d3ee9e78b484de4655a28988:cinnamon/0001-cinnamon-settings-don-t-rely-on
 f:ebeff2eb17a3f421b6c8796f098f3ff3:cinnamon/CHANGELOG
 f:b4f0e83c5d4db976c54379148db8b0c6:cinnamon/set_wheel.diff
 f:fb02bc7803ee4b118d06357500e97809:cinnamon/default-theme.patch
-f:f22a7629c53d1d47af16372b401bc308:cinnamon/spkgbuild
+f:ca379b6623248d446fe25f9edb73d320:cinnamon/spkgbuild
 f:beba02387a88d189530458afd59301bc:alacarte/CHANGELOG
 f:d7466dfc919846d137d51c5563a5097f:alacarte/spkgbuild
 f:5676a14c2295951ffbaf4a6bc27ffe16:cinnamon-translations/CHANGELOG

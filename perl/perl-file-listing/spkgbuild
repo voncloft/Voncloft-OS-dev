@@ -2,7 +2,7 @@
 # depends : perl perl-http-date
 
 name=perl-file-listing
-version=6.15
+version=6.16
 release=1
 
 _name=File-Listing

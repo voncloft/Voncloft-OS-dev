@@ -1,19 +1,17 @@
-# description : Cross-platform GUI toolkit
-# depends : 
+# description : Python bindings for the wxWidgets GUI toolkit
+# depends : python wxwidgets python-numpy python-sip python-setuptools python-requests cython3
 
 name=python-wxpython
-version=4.2.0
-verzion=${version%.*}
-release=5
-
+version=4.3.2
+release=2
 _name=${name#python-}
 source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"
-options="!checksum"
 
 build() {
-   cd *
-   #python3 build.py install --destdir="$PKG"
-
-   python3 build.py build --use_syswx --no_magic --prefix=/usr --no_html2
-   python3 build.py install --prefix=/usr --destdir="$PKG"
- }
+    cd "$SRC/$_name-$version" || return 1
+    export PYTHONNOUSERSITE=1
+    python3 build.py build --use_syswx --no_magic --release --prefix=/usr \
+        --jobs="${NINJAJOBS:-$(nproc)}" || return 1
+    python3 build.py install --use_syswx --no_magic --prefix=/usr \
+        --destdir="$PKG" --extra_setup="--prefix=/usr"
+}

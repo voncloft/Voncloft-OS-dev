@@ -1,24 +1,29 @@
-# description   : Node
-# depends       : which brotli c-ares icu libuv nghttp2
+# description   : Node.js JavaScript runtime
+# depends       : which brotli c-ares icu libuv nghttp2 openssl simdutf zlib python pkgconf
 
 name=nodejs
-version=22.23.4    
+version=26.13.0
 release=1
 _name=node
-source="https://nodejs.org/dist/v${version}/${_name}-v${version}.tar.xz"
+source="https://nodejs.org/dist/v${version}/${_name}-v${version}.tar.xz
+        https://www.linuxfromscratch.org/patches/downloads/${_name}/${_name}-v${version}-icu4c-79_fix-1.patch"
 
 options="!checksum"
 
 build() {
-	cd "$SRC"/node*/
-        ./configure --prefix=/usr          \
---shared-brotli        \
---shared-cares         \
---shared-libuv         \
---shared-openssl       \
---shared-nghttp2       \
---shared-zlib          \
---with-intl=system-icu 
-make
-make DESTDIR=$PKG install 
+    cd "$_name-v$version"
+    patch --batch --forward --fuzz=0 -Np1 -d deps/v8 \
+        -i "$SRC/${_name}-v${version}-icu4c-79_fix-1.patch"
+    export JOBS="${NINJAJOBS:-$(nproc)}"
+    ./configure --prefix=/usr \
+        --shared-brotli \
+        --shared-cares \
+        --shared-libuv \
+        --shared-nghttp2 \
+        --shared-openssl \
+        --shared-simdutf \
+        --shared-zlib \
+        --with-intl=system-icu
+    make
+    make DESTDIR="$PKG" install
 }

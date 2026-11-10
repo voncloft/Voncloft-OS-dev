@@ -7,7 +7,11 @@ source="https://www.kernel.org/pub/linux/docs/$name/$name-$version.tar.xz"
 options="!checksum"
 build() {
 	cd $name-$version
-	make DESTDIR=$PKG install
+	make -R prefix=/usr DESTDIR="$PKG" install
+
+	# These manual pages are owned by libxcrypt.
+	rm "$PKG/usr/share/man/man3/crypt.3" \
+	   "$PKG/usr/share/man/man3/crypt_r.3"
 
 	# ship with tzdata
 #	rm $PKG/usr/share/man/man5/tzfile.5 \

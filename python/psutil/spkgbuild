@@ -1,15 +1,17 @@
 # description : library for retrieving info on running processes
-# depends : 
+# depends : python python-setuptools python-wheel
 
 name=psutil
 version=7.2.2
-release=1
+release=2
 
 source="https://files.pythonhosted.org/packages/source/p/${name}/${name}-${version}.tar.gz"
 
-build()
-{
-	cd *
-	pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
-	pip3 install --no-index --find-links dist --no-user psutil --root=$PKG
+build() {
+    cd "$name-$version"
+    export PYTHONNOUSERSITE=1
+    python3 -m pip wheel --no-cache-dir --no-index --no-deps \
+        --no-build-isolation --wheel-dir dist .
+    python3 -m pip install --no-cache-dir --no-index --no-deps --no-user \
+        --ignore-installed --root="$PKG" --prefix=/usr dist/*.whl
 }

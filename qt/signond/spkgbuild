@@ -2,16 +2,19 @@
 # depends : qt6 sqlite
 
 name=signond
-version=8.60.git20260406141555.ga08b05b79100bfd535100b8341df4e8bf1441802
+version=8.61+20260406.141555.ga08b05b79100bfd535100b8341df4e8bf1441802
 release=1
+backup="etc/signond.conf"
 _commit=${version##*.g}
 
-source="$name-$_commit.tar.gz::https://gitlab.com/accounts-sso/${name}/-/archive/$_commit/$name-$_commit.tar.gz"
+source="$name-$_commit.tar.gz::https://gitlab.com/accounts-sso/${name}/-/archive/$_commit/$name-$_commit.tar.gz
+        ${name}-qt6.patch"
 options="!checksum"
 
 build() {
 	cd $name-$_commit
-	qmake6 PREFIX=/usr LIBDIR=/usr/lib
+	patch --fuzz=0 -Np1 -i "$SRC/${name}-qt6.patch"
+	qmake6 PREFIX=/usr LIBDIR=/usr/lib -after "SUBDIRS-=tests test"
 	make
 	make INSTALL_ROOT="$PKG" install
 }

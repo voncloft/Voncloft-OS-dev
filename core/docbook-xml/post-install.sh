@@ -1,4 +1,5 @@
-#!/binsh
+#!/bin/sh
+set -e
 	if [ ! -e /etc/xml/catalog ]; then
 		xmlcatalog --noout --create /etc/xml/catalog
 	fi

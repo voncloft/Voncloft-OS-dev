@@ -1,5 +1,5 @@
 # description   : The GLib package contains low-level libraries useful for providing data structure handling for C, portability wrappers and interfaces for runtime functionality such as an event loop, threads, dynamic loading and an object system
-# depends       : docutils libxslt pcre2 sharedmimeinfo desktopfileutils
+# depends       : python-docutils libxslt pcre2-32 shared-mime-info desktop-file-utils
 
 name=glib-32
 version=2.90.1    

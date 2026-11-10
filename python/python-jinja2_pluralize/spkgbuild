@@ -1,5 +1,5 @@
 # description : Jinja2 pluralize filters
-# depends : python-inflect python-jinja
+# depends : python-inflect jinja2
 
 name=python-jinja2_pluralize
 version=0.3.0

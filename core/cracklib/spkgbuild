@@ -1,25 +1,27 @@
-# description	: Library used to enforce strong passwords by comparing user selected passwords to words in chosen word lists
-# depends	: 
+# description : Library used to enforce strong passwords against dictionary words
+# depends : gettext python zlib
 
 name=cracklib
 version=2.10.4
 release=1
-source="https://github.com/cracklib/${name}/releases/download/v$version/$name-$version.tar.gz
-	https://github.com/${name}/${name}/releases/download/v$version/${name}-words-$version.xz"
+source="https://github.com/${name}/${name}/releases/download/v$version/$name-$version.tar.gz
+        https://github.com/${name}/${name}/releases/download/v$version/${name}-words-$version.xz"
+noextract="${name}-words-$version.xz"
+backup="usr/share/dict/cracklib-extra-words"
 
 build() {
-	cd $name-$version
-	CPPFLAGS+=' -I /usr/include/python3.13' \
-	./configure --prefix=/usr               \
-            --disable-static            \
-            --with-default-dict=/usr/lib/cracklib/pw_dict
-
-	make
-	mkdir -pv $PKG/usr/share/dict
-	xzcat $SRC/cracklib-words-2.10.3.xz \
-		> $PKG/usr/share/dict/cracklib-words
-
-	ln -v -sf cracklib-words $PKG/usr/share/dict/words
-	echo $(hostname) >> $PKG/usr/share/dict/cracklib-extra-words
-	install -v -m755 -d $PKG/usr/lib/cracklib
+    cd "$name-$version"
+    PYTHON=python3 ./configure --prefix=/usr \
+        --disable-static \
+        --with-python \
+        --with-default-dict=/usr/lib/cracklib/pw_dict
+    make
+    make DESTDIR="$PKG" install
+    install -dm755 "$PKG/usr/share/dict" "$PKG/usr/lib/cracklib"
+    xzcat "$SRC/${name}-words-$version.xz" \
+        > "$PKG/usr/share/dict/cracklib-words"
+    ln -sfn cracklib-words "$PKG/usr/share/dict/words"
+    # Local additions are configuration. The hook incorporates the target
+    # machine's hostname without embedding the build host's name.
+    : > "$PKG/usr/share/dict/cracklib-extra-words"
 }

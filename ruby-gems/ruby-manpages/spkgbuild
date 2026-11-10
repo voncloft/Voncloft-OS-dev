@@ -1,10 +1,10 @@
-# description : manages terminal colors and effects in ruby
-# depends : ruby ruby-rainbow ruby-rspec ruby-term-ansicolor ruby-rake
+# description : Installs manual pages supplied by Ruby gems
+# depends : ruby
 
 _gemname=manpages
 name=ruby-manpages
 version=0.7.0
-release=1
+release=2
 
 source="https://rubygems.org/downloads/$_gemname-$version.gem"
 options="!checksum"

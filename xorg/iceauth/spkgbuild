@@ -3,8 +3,8 @@
 
 name=iceauth
 version=1.0.11
-release=1
-source="http://ftp.x.org/pub/individual/app/${name}-$version.tar.xz"
+release=2
+source="https://www.x.org/pub/individual/app/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

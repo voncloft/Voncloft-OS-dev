@@ -1,0 +1,17 @@
+# Follow the official release directory rather than a fixed source series.
+source="https://download.videolan.org/pub/videolan/dav1d/"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re
+versions=re.findall(r'href="([0-9]+(?:\.[0-9]+)*)/"',pathlib.Path('index.html').read_text())
+if not versions: raise SystemExit('No stable release directories found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

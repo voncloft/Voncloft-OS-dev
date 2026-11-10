@@ -5,6 +5,7 @@ name=grub-efi
 version=2.14
 unifontverzion=13.0.03
 release=2
+backup="etc/grub.d/20_linux_xen etc/grub.d/README etc/grub.d/25_bli etc/grub.d/10_linux etc/grub.d/40_custom etc/grub.d/00_header etc/grub.d/30_os-prober etc/grub.d/41_custom etc/grub.d/30_uefi-firmware etc/bash_completion.d/grub"
 _name=grub
 source="https://ftp.gnu.org/gnu/${_name}/${_name}-${version}.tar.gz
 	https://ftp.gnu.org/gnu/unifont/unifont-$unifontverzion/unifont-$unifontverzion.bdf.gz

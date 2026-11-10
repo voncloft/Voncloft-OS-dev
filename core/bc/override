@@ -1,0 +1,23 @@
+# Match the installed upstream project and exclude alpha/beta/RC tags.
+source="https://api.github.com/repos/gavinhoward/bc/releases/latest"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+data=json.loads(pathlib.Path('index.html').read_text())
+releases=data if isinstance(data,list) else [data]
+versions=[]
+for item in releases:
+    if item.get('draft') or item.get('prerelease'):continue
+    match=re.fullmatch('([0-9]+(?:\\.[0-9]+)*)',item['tag_name'])
+    if match:versions.append(match[1])
+if not versions:raise SystemExit('No final stable release')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

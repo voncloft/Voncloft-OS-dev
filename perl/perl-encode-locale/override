@@ -1,0 +1,21 @@
+# Use the package registry's own release metadata.
+source="https://fastapi.metacpan.org/v1/release/Encode-Locale"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+data=json.loads(pathlib.Path('index.html').read_text())
+project='Encode-Locale'
+if data['distribution']!=project or data['maturity']!='released': raise SystemExit('Not a stable CPAN distribution')
+version=str(data['version'])
+if not re.fullmatch(r'[0-9]+(?:\.[0-9]+)*',version): raise SystemExit('Unsupported CPAN version')
+print(version)
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

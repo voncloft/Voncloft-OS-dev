@@ -1,5 +1,5 @@
 # description : A new approach to API documentation in Sphinx.
-# depends : python-astroid python-jinja python-sphinx python-unidecode
+# depends : python-astroid jinja2 python-sphinx python-unidecode
 
 name=python-sphinx-autoapi
 version=2.1.0

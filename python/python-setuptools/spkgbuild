@@ -2,9 +2,9 @@
 # depends : python python-packaging
 
 name=python-setuptools
-version=67.7.0
+version=84.2.1
 release=1
-_name=${name#python-}
+_name=setuptools
 source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

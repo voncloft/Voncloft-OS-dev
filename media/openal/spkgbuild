@@ -3,10 +3,10 @@
 
 name=openal
 version=1.25.2
-release=1
+release=2
 
 _name=openal-soft
-source="https://github.com/kcat/${_name}/archive/refs/tags/$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/kcat/${_name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"
 
 build() {

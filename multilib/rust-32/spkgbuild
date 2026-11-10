@@ -1,115 +1,69 @@
-# description   : Rust std libs for 32-bit (i686-unknown-linux-gnu), multilib addon
-# depends       : curl cmake python3 llvm libssh2
+# description : Rust standard libraries for i686-unknown-linux-gnu
+# depends : rust llvm cmake python curl libssh2
 
 name=rust-32
 version=1.99.1
 release=1
-
 _name=rustc
 source="https://static.rust-lang.org/dist/${_name}-${version}-src.tar.xz"
 options="!checksum"
 
-build()
-{
-    cd "$SRC"/rustc*/
-cat > bootstrap.toml << "EOF" &&
-# See bootstrap.toml.example for more possible options,
-# and see src/bootstrap/defaults/bootstrap.dist.toml for a few options
-# automatically set when building from a release tarball.
-# We have to override a decent number of them.
-
-# Tell x.py the editors have reviewed the content of this file
-# and updated it to follow the major changes of the building system,
-# so x.py will not warn us to do such a review.
+build() {
+    cd "${_name}-${version}-src"
+    # Rust checks the full compiler identity in crate metadata. Use the same
+    # distribution description as the matching native package, including when
+    # that description changes in a future native Rust recipe.
+    local _description
+    _description=$(python3 - "$version" "/opt/${_name}-${version}/bin/rustc" <<'PYIDENTITY'
+import json, re, subprocess, sys
+identity = subprocess.check_output([sys.argv[2], '--version'], text=True).strip()
+match = re.fullmatch(r'rustc ' + re.escape(sys.argv[1]) + r' \([^)]+\) \(([^)]+)\)', identity)
+if not match:
+    raise SystemExit('The matching native Rust compiler must be installed first: ' + identity)
+print(json.dumps(match[1]))
+PYIDENTITY
+    ) || return 1
+    cat > bootstrap.toml << EOF
 change-id = 140732
 
 [llvm]
-# When using system llvm prefer shared libraries
 link-shared = true
 
-EOF
-if [ ! -f /usr/lib32/libc.so.6 ]; then
-cat >> bootstrap.toml << "EOF"
-# If building the shipped LLVM source, only enable the x86 target
-# instead of all the targets supported by LLVM.
-targets = "X86"
-
-EOF
-fi
-cat >> bootstrap.toml << "EOF"
 [build]
-description = "for GLFS #a12e"
-EOF
-if [ -f /usr/lib32/libc.so.6 ]; then
-cat >> bootstrap.toml << "EOF"
-target = [
-  "x86_64-unknown-linux-gnu",
-  "i686-unknown-linux-gnu",
-]
-EOF
-fi &&
-cat >> bootstrap.toml << "EOF" &&
-
-# omit docs to save time and space (default is to build them)
+description = ${_description}
 docs = false
-
-# Do not query new versions of dependencies online.
+extended = false
 locked-deps = true
-
-# Specify which extended tools (those from the default install).
-tools = ["cargo", "clippy", "rustdoc", "rustfmt"]
+target = ["i686-unknown-linux-gnu"]
 
 [install]
-prefix = "/opt/rustc-1.88.0"
-docdir = "share/doc/rustc-1.88.0"
+prefix = "/opt/${_name}-${version}"
+docdir = "share/doc/${_name}-${version}"
 
 [rust]
 channel = "stable"
-
-# Uncomment if FileCheck has been installed.
-#codegen-tests = false
-
-# Disable the need for lld.
-lld = false
-
-# If you didn't build in NVPTX support, you can uncomment this.
-#llvm-bitcode-linker = false
-
-# Enable the same optimizations as the official upstream build.
 lto = "thin"
 codegen-units = 1
+lld = false
+llvm-bitcode-linker = false
 
-EOF
-if [ -f /usr/lib32/libc.so.6 ]; then
-cat >> bootstrap.toml << "EOF"
 [target.x86_64-unknown-linux-gnu]
+llvm-config = "/usr/bin/llvm-config"
+
+[target.i686-unknown-linux-gnu]
 cc = "/usr/bin/gcc"
 cxx = "/usr/bin/g++"
 ar = "/usr/bin/gcc-ar"
 ranlib = "/usr/bin/gcc-ranlib"
 llvm-config = "/usr/bin/llvm-config"
-
-[target.i686-unknown-linux-gnu]
-cc = "/usr/bin/gcc"
-cxx = "/usr/bin/g++"
-ar = "/usr/bin/gcc-ar"
-ranlib = "/usr/bin/gcc-ranlib"
 EOF
-else
-cat >> bootstrap.toml << "EOF"
-[target.x86_64-unknown-linux-gnu]
-llvm-config = "/usr/bin/llvm-config"
+    ./x.py build -j"${NINJAJOBS:-6}" --target i686-unknown-linux-gnu library/std
+    DESTDIR="$SRC/rust32-dest" ./x.py install -j"${NINJAJOBS:-6}" \
+        --target i686-unknown-linux-gnu library/std
 
-[target.i686-unknown-linux-gnu]
-llvm-config = "/usr/bin/llvm-config"
-EOF
-fi
-
-
-
-    # Build only 32-bit target libraries (standard libs)
-    ./x.py build
-
-    # Install only the 32-bit target standard libraries
-    DESTDIR=$PKG ./x.py install
+    # This addon owns only its target libraries; the native package owns tools
+    # and the shared Rust installer metadata.
+    install -dm755 "$PKG/opt/${_name}-${version}/lib/rustlib"
+    cp -a "$SRC/rust32-dest/opt/${_name}-${version}/lib/rustlib/i686-unknown-linux-gnu" \
+        "$PKG/opt/${_name}-${version}/lib/rustlib/"
 }

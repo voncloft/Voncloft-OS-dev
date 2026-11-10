@@ -2,15 +2,20 @@
 # depends : python python-flit
 
 name=python-pip
-version=23.1.2
-release=2
+version=26.3
+release=1
 options="!checksum"
-_name=${name#python-}
+_name=pip
 source="${name}-${version}.tar.gz::https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 
 build() {
     cd "${_name}-${version}"
-    pip3 wheel --no-build-isolation --no-deps --no-cache-dir -w dist .
-    pip3 install --no-index --no-deps --ignore-installed --no-user \
+    export PYTHONNOUSERSITE=1
+    # Run this release's vendored pip from source, so an interpreter upgrade
+    # does not require a pip installation for the previous Python version.
+    PYTHONPATH="$PWD/src" python3 -m pip wheel \
+        --no-index --no-build-isolation --no-deps --no-cache-dir -w dist .
+    PYTHONPATH="$PWD/src" python3 -m pip install \
+        --no-index --no-deps --ignore-installed --no-user \
         --prefix=/usr --root="$PKG" dist/*.whl
 }

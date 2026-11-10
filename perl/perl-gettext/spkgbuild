@@ -1,8 +1,8 @@
 # description : Perl/CPAN Module Gettext
 
 name=perl-gettext
-version=0.01
-release=10
+version=1.07
+release=1
 
 _name=Locale-gettext
 source="https://cpan.metacpan.org/authors/id/P/PV/PVANDRY/${_name}-${version}.tar.gz"

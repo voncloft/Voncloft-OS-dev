@@ -1,5 +1,5 @@
 # description : libheif
-# depends : cmake dav1d libjpeg-turbo libpng libwebp make x265
+# depends : cmake dav1d libaom libjpeg-turbo libpng libwebp make x265
 
 name=libheif
 version=1.23.7
@@ -8,10 +8,10 @@ options="!checksum"
 source="${name}-${version}.tar.gz::https://github.com/strukturag/${name}/releases/download/v${version}/${name}-${version}.tar.gz"
 
 build() {
-    cd "libheif-1.23.6"
+    cd "$name-$version"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DBUILD_TESTING=OFF \
         -DWITH_EXAMPLES=OFF \

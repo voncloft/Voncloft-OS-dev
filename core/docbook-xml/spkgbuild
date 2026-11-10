@@ -3,8 +3,9 @@
 
 name=docbook-xml
 version=4.5
-release=5
-noextract="docbook-xml-4.5.zip
+release=1
+backup="etc/xml/docbook"
+noextract="${name}-${version}.zip
 	docbook-xml-4.4.zip
 	docbook-xml-4.3.zip
 	docbook-xml-4.2.zip
@@ -20,7 +21,7 @@ source="https://www.oasis-open.org/docbook/xml/${version}/${name}-${version}.zip
 	https://www.oasis-open.org/docbook/xml/${_source5_version}/docbkx412.zip"
 
 build() {
-	for ver in 4.5 4.4 4.3 4.2; do
+	for ver in "$version" 4.4 4.3 4.2; do
 		mkdir docbook-xml-$ver
 		cd docbook-xml-$ver
 		bsdtar -xf $SRC/docbook-xml-$ver.zip

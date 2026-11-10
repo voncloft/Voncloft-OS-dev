@@ -1,14 +1,18 @@
 # description	: Free version of the SSH connectivity tools
-# depends	: 
+# depends	: openssl zlib libxcrypt util-linux
 
 name=openssh
 version=10.6p2
-release=1
+release=3
 
 #backup="etc/ssh/sshd_config"
 source="https://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz
 	sshd"
 options="!checksum"
+
+backup="etc/ssh/moduli
+        etc/ssh/ssh_config
+        etc/ssh/sshd_config"
 
 build() {
 	cd $name-$version
@@ -19,8 +23,8 @@ build() {
             --with-default-path=/usr/bin             \
             --with-superuser-path=/usr/sbin:/usr/bin \
             --with-pid-dir=/run 
-      make 
-      make DESTDIR=$PKG install
+      make
+      make DESTDIR=$PKG install-nokeys
       #mkdir $PKG/usr/bin
       install -v -m755    contrib/ssh-copy-id $PKG/usr/bin
 #      create_startup_directories sshd K30sshd S30sshd $SRC $PKG

@@ -1,0 +1,29 @@
+--- a/pkgbuild
++++ b/pkgbuild
+@@ -113,11 +113,24 @@
+ 			continue
+ 		}
+ 		msg "Fetching: $i"
+-		curl -C - -L --fail --retry 3 --retry-delay 3 -o $filepath.partial $CURL_OPTS $url || {
++		http_status=$(curl -C - -L --fail --retry 3 --retry-delay 3 \
++			-o "$filepath.partial" $CURL_OPTS --write-out '%{http_code}' "$url") || {
+ 			msgerr "Fetching failed: $i"
+ 			abort 1
+ 		}
+-		mv $filepath.partial $filepath
++		# Some curl versions incorrectly return success for HTTP errors with
++		# retries enabled. Never publish that response as a cached source.
++		case "$http_status" in
++			4??|5??) msgerr "Fetching failed (HTTP $http_status): $i"; abort 1;;
++		esac
++		[ -f "$filepath.partial" ] || {
++			msgerr "Fetching produced no source file: $i"
++			abort 1
++		}
++		mv -T -- "$filepath.partial" "$filepath" || {
++			msgerr "Cannot store downloaded source: $filepath"
++			abort 1
++		}
+ 	done
+ }
+ 

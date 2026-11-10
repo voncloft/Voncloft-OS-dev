@@ -2,7 +2,7 @@
 # depends	: popt
 
 name=efivar
-version=38
+version=39
 release=1
 source="https://github.com/rhboot/${name}/releases/download/$version/$name-$version.tar.bz2"
 

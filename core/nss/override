@@ -1,0 +1,20 @@
+# Mozilla's stable release directories use underscores in their version tags.
+source="https://archive.mozilla.org/pub/security/${name}/releases/"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib, re
+text = pathlib.Path('index.html').read_text()
+versions = {v.replace('_', '.') for v in re.findall(r'NSS_([0-9]+(?:_[0-9]+)+)_RTM/', text)}
+if not versions:
+    raise SystemExit('No stable NSS release found')
+print(max(versions, key=lambda value: tuple(map(int, value.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

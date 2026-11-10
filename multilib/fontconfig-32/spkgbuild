@@ -3,7 +3,7 @@
 
 name=fontconfig-32
 version=2.18.3
-release=1
+release=2
 _name=${name%-32}
 source="https://gitlab.freedesktop.org/api/v4/projects/890/packages/generic/${_name}/${version}/${_name}-${version}.tar.xz"
 

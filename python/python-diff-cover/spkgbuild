@@ -1,5 +1,5 @@
 # description : Automatically find diff lines that need test coverage
-# depends : python-jinja python-jinja2_pluralize python-pluggy
+# depends : jinja2 python-jinja2_pluralize python-pluggy
 
 name=python-diff-cover
 version=7.5.0

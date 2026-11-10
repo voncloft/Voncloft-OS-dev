@@ -2,8 +2,8 @@
 # description : wayland - KDE dependency
 
 name=wayland
-version=1.22.0
-release=2
+version=1.26.0
+release=1
 
 source="$name-$version.tar.xz::https://gitlab.freedesktop.org/${name}/${name}/-/releases/$version/downloads/${name}-$version.tar.xz"
 options="!checksum"

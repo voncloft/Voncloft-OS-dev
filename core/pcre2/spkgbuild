@@ -2,13 +2,13 @@
 
 name=pcre2
 version=10.49
-release=1
+release=2
 source="https://github.com/PCRE2Project/${name}/releases/download/${name}-$version/${name}-$version.tar.bz2"
 
 build() {
 	cd $name-$version
 	./configure --prefix=/usr                       \
-            --docdir=/usr/share/doc/pcre2-10.45 \
+            --docdir=/usr/share/doc/pcre2-$version \
             --enable-unicode                    \
             --enable-jit                        \
             --enable-pcre2-16                   \

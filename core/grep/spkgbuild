@@ -3,14 +3,14 @@
 
 name=grep
 version=3.12
-release=2
+release=3
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
 options="!checksum"
 
 build() {
 	cd $name-$version
 
-	./configure --prefix=/usr --bindir=/bin --disable-nls \
+	./configure --prefix=/usr --disable-nls \
 	            --enable-perl-regexp
 	make
 

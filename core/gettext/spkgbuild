@@ -3,15 +3,16 @@
 
 name=gettext
 version=1.0
-release=1
+release=4
 source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version
 
-./configure --prefix=/usr    \
+# Keep the bundled Unicode tables and their generated tests on one version.
+./configure --prefix=/usr --with-included-libunistring \
             --disable-static \
-            --docdir=/usr/share/doc/gettext-0.25
+            --docdir=/usr/share/doc/gettext-$version
 	make
 	make DESTDIR=$PKG install
 	chmod -v 0755 $PKG/usr/lib/preloadable_libintl.so

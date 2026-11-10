@@ -3,8 +3,10 @@
 
 name=groff
 version=1.25.0
-release=1
-source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz"
+release=2
+_pdfmark_version=20260428.1
+source="https://ftp.gnu.org/gnu/$name/$name-$version.tar.gz
+        https://download.savannah.nongnu.org/releases/groff-pdfmark/groff-pdfmark-${_pdfmark_version}-src.tar.xz"
 
 build() {
 	cd $name-$version
@@ -15,4 +17,17 @@ build() {
 
 	rm -r $PKG/usr/share/info \
 	      $PKG/usr/share/doc
+
+	# pdfmark is maintained separately since groff 1.24. Preserve pdfroff
+	# and its macros as part of this package, built from the upstream source.
+	cd "$SRC/groff-pdfmark-26.04"
+	./configure --prefix=/usr
+	make pdfroff all-manpages
+	install -m755 pdfroff "$PKG/usr/bin/pdfroff"
+	for macro in tmac/*.tmac; do
+		[ "$macro" = tmac/s.tmac ] && continue
+		install -m644 "$macro" "$PKG/usr/share/groff/$version/tmac/"
+	done
+	install -m644 pdfroff.1 "$PKG/usr/share/man/man1/"
+	install -m644 ./*.7 "$PKG/usr/share/man/man7/"
 }

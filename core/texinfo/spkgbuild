@@ -3,14 +3,12 @@
 
 name=texinfo
 version=7.3
-release=1
+release=2
 source="https://ftp.gnu.org/gnu/${name}/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version
 
-	# Fix a file that creates a lot of failures in the regression checks
-	sed -i '5481,5485 s/({/(\\{/' tp/Texinfo/Parser.pm
 
 	./configure --prefix=/usr --disable-static --disable-nls
 	make

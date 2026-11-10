@@ -1,0 +1,118 @@
+--- a/screenfetch-dev
++++ b/screenfetch-dev
+@@ -214,6 +214,23 @@
+ #
+ # Web terminal interface: http://10.1.1.10
+ 
++# Voncloft defaults, kept separate from upstream's -C custom-line support.
++use_customlines=1
++voncloftlines () {
++	local interface address
++	interface=$(ip -4 route show default 2>/dev/null | "${AWK}" '{for (i=1;i<NF;i++) if ($i=="dev") {print $(i+1); exit}}')
++	address="Not connected"
++	if [[ -n "$interface" ]]; then
++		address=$(ip -o -4 addr show dev "$interface" scope global 2>/dev/null | "${AWK}" '{split($4,a,"/"); print a[1]; exit}')
++		address=${address:-Not connected}
++	fi
++	out_array+=("$(printf '%b' "$labelcolor   \x60->$textcolor power supply plugged in")")
++	# Preserve the original label; this is the default interface's local address.
++	out_array+=("$(printf '%b' "$labelcolor WAN Address:$textcolor $address")")
++	out_array+=("$(printf '%b' "$labelcolor Domain:$textcolor voncloft.dnsfor.me")")
++	((display_index+=3))
++}
++
+ customlines () {
+ 	OLD_IFS="${IFS}"
+ 	IFS=,
+@@ -363,7 +380,7 @@
+ 	my_hcolor=$(colorNumberToCode "${my_hcolor}")
+ }
+ 
+-supported_distros="ALDOS, Alpine Linux, AlmaLinux, Alter Linux, Amazon Linux, Antergos, Arch Linux (Old and Current Logos), Arch Linux 32, ArcoLinux, Artix Linux, \
++supported_distros="Voncloft OS, ALDOS, Alpine Linux, AlmaLinux, Alter Linux, Amazon Linux, Antergos, Arch Linux (Old and Current Logos), Arch Linux 32, ArcoLinux, Artix Linux, \
+ blackPanther OS, BLAG, BunsenLabs, CentOS, Chakra, Chapeau, Chrome OS, Chromium OS, CrunchBang, CRUX, \
+ Debian, Deepin, DesaOS,Devuan, Dragora, DraugerOS, elementary OS, EuroLinux, Evolve OS, Sulin, Exherbo, Fedora(Old and Current Logos), Frugalware, Fuduntu, Funtoo, \
+ Fux, Gentoo, gNewSense, Guix System, Hyperbola GNU/Linux-libre, januslinux, Jiyuu Linux, Kali Linux, KaOS, KDE neon, Kogaion, Korora, \
+@@ -1319,6 +1336,13 @@
+ 		grombyangos) distro="GrombyangOS" ;;
+ 		ubuntu) distro="Ubuntu";;
+ 		viperr) distro="Viperr" ;;
++		voncloft|voncloft*os|vonos)
++			distro="Voncloft OS"
++			distro_more=""
++			if [[ -n "$distro_release" && "$distro_release" != "n/a" ]]; then
++				distro_more="$distro $distro_release"
++			fi
++		;;
+ 		void*linux) distro="Void Linux" ;;
+ 		zorin*) distro="Zorin OS" ;;
+ 		endeavour*) distro="EndeavourOS" ;;
+@@ -1443,6 +1467,13 @@
+ 		'ROSA'|'Oracle Linux'|'Scientific Linux'|'EuroLinux'|'CentOS'|'CentOS Stream'|'Mandriva'|'Mandrake'|'Mageia'|'Mer'|'Rocky Linux'|'SailfishOS'|'PCLinuxOS'|'Viperr'|'Qubes OS'|'AlmaLinux'| \
+ 		'Red Star OS'|'blackPanther OS'|'Amazon Linux')
+ 			pkgs=$(rpm -qa | wc -l) ;;
++		'Voncloft OS')
++			local package
++			pkgs=0
++			for package in /var/lib/scratchpkg/db/*; do
++				[[ -f "$package" ]] && ((pkgs+=1))
++			done
++		;;
+ 		'Void Linux')
+ 			pkgs=$(xbps-query -l | wc -l) ;;
+ 		'Evolve OS')
+@@ -6101,6 +6132,33 @@
+ "${c1}      \|______________|  %s"
+ "                         %s")
+ 		;;
++		"Voncloft OS"|"voncloft"|"Voncloft"|"vonos"|"VonOS")
++			if [[ "$no_color" != "1" ]]; then
++				c1=$(getColor 'light blue')
++				c2=$(getColor 'light purple')
++			fi
++			if [ -n "${my_lcolor}" ]; then c1="${my_lcolor}"; c2="${my_lcolor}"; fi
++			startline="1"
++			logowidth="32"
++			fulloutput=(""
++"${c2}      .-----------------.       %s"
++"${c2}     | .---------------. |      %s"
++"${c2}     | |  ____   ____  | |      %s"
++"${c2}     | | |_  _| |_  _| | |      %s"
++"${c2}     | |   \ \   / /   | |      %s"
++"${c2}     | |    \ \ / /    | |      %s"
++"${c2}     | |     \ ' /     | |      %s"
++"${c2}     | |      \_/      | |      %s"
++"${c2}     | |  Voncloft OS  | |      %s"
++"${c2}     | |               | |      %s"
++"${c2}     | '---------------' |      %s"
++"${c2}      '-----------------'       %s"
++"${c2}                                %s"
++"${c2}                                %s"
++"${c2}                                %s"
++"                                %s")
++		;;
++
+ 		"EndeavourOS")
+ 			if [[ "$no_color" != "1" ]]; then
+ 				c1=$(getColor 'yellow')
+@@ -6446,6 +6504,10 @@
+ 		"CentOS"|"CentOS Stream")
+ 			labelcolor=$(getColor 'yellow')
+ 		;;
++		"Voncloft OS"|"voncloft"|"Voncloft"|"vonos"|"VonOS")
++			labelcolor=$(getColor 'green')
++			textcolor=${my_hcolor:-$(getColor 'light purple')}
++		;;
+ 		"Hyperbola GNU/Linux-libre"|"PureOS"|*)
+ 			labelcolor=$(getColor 'light grey')
+ 		;;
+@@ -6667,6 +6729,9 @@
+ 			out_array=( "${out_array[@]}" "$mymem" )
+ 			((display_index++))
+ 		fi
++		if [[ "$distro" == "Voncloft OS" && "$use_customlines" == 1 ]]; then
++			voncloftlines
++		fi
+ 		if [[ -n "$custom_lines_string" ]]; then
+ 			customlines
+ 		fi

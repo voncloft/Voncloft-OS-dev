@@ -2,11 +2,11 @@
 
 name=nspr
 version=4.40
-release=1
+release=2
 source="https://archive.mozilla.org/pub/$name/releases/v$version/src/$name-$version.tar.gz"
 options="!checksum"
 build() {
-	cd "$SRC"/nspr*/
+	cd "$SRC/nspr-$version/nspr"
 
 	# disables installing two unneeded scripts
 	sed -ri 's#^(RELEASE_BINS =).*#\1#' pr/src/misc/Makefile.in

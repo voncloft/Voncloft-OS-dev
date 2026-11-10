@@ -14,6 +14,6 @@ f:8dc3101141384120209fd07e4a9793d4:kde-deps/spkgbuild
 f:d435698b42ba03a63ccda272e1d6bd10:kde-deps-installer/.pkgfiles
 f:649751f553cc95d70315f7bf0e25bd1b:kde-deps-installer/plasma-package-installer
 f:abb32f36bc8a072459062495ccb16d66:kde-deps-installer/kf-package-installer
-f:a1312b8957d97084c259fe8a30e6d72a:kde-deps-installer/spkgbuild
+f:ea16620e20947345ed060a0a7fcfbd11:kde-deps-installer/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:kde-deps-installer/override
 f:0d1db0afd7fd666ee324d40ce69b59d2:.httpup-repo.current

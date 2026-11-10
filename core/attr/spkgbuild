@@ -2,25 +2,14 @@
 
 name=attr
 version=2.6.0
-release=1
+release=3
 source="https://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz"
 
+backup="etc/xattr.conf"
+
 build() {
-	cd $name-$version
-
-	./configure --prefix=/usr \
-	            --bindir=/bin \
-	            --disable-static \
-            	    --sysconfdir=/etc \
-		    --disable-nls
-	make
-	make DESTDIR=$PKG install
-
-	chmod -v 755 $PKG/usr/lib/libattr.so
-
-	mkdir -p $PKG/lib
-	mv -v $PKG/usr/lib/libattr.so.* $PKG/lib
-	ln -sfv ../../lib/$(readlink $PKG/usr/lib/libattr.so) $PKG/usr/lib/libattr.so
-
-	rm -fr $PKG/usr/share/doc
+    cd "$name-$version"
+    ./configure --prefix=/usr --sysconfdir=/etc --disable-static --disable-nls
+    make
+    make DESTDIR="$PKG" install
 }

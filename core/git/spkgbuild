@@ -1,12 +1,16 @@
 # description	: Version control system designed to handle everything from small to very large projects with speed and efficiency
-# depends	: perl curl openssl python
+# depends	: perl curl openssl python rust
 
 name=git
 version=2.56.0
-release=1
+release=2
 source="https://github.com/git/${name}/archive/v${version}.tar.gz"
 options="!checksum"
 build() {
+	# Scratch does not source the interactive Rust profile.
+	export PATH="/opt/rustc/bin:$PATH"
+	export CARGO_HOME="$SRC/cargo-home"
+	export CARGO_BUILD_JOBS="${NINJAJOBS:-6}"
 	cd $name-$version
 	autoreconf -ifv
 	./configure --prefix=/usr \

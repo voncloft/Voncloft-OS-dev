@@ -5,17 +5,13 @@ name=mitkrb
 version=1.22.2    
 release=1
 _name=krb5
-_source2_version=1.21.3
-source="https://kerberos.org/dist/${_name}/${version%.*}/${_name}-${version}.tar.gz
-https://www.linuxfromscratch.org/patches/blfs/svn/${name}-${_source2_version}-gcc15_fixes-1.patch"
+source="https://kerberos.org/dist/${_name}/${version%.*}/${_name}-${version}.tar.gz"
 
 options="!checksum"
 
 build() {
-        cd "$SRC"/krb5*/
-patch -Np1 -i $SRC/mitkrb-1.21.3-gcc15_fixes-1.patch
+        cd "$SRC/${_name}-${version}"
 cd src 
-sed -i -e '/eq 0/{N;s/12 //}' plugins/kdb/db2/libdb2/test/run.test 
 ./configure --prefix=/usr            \
 --sysconfdir=/etc        \
 --localstatedir=/var/lib \

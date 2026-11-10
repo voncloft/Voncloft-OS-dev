@@ -1,16 +1,14 @@
-# description	: Bootscripts for SysV init
-# depends	: sysvinit
+# description : System V init and shutdown utilities
 
 name=sysvinit
 version=3.15
 release=1
-lfs_version=11.3
-source="https://github.com/slicer69/${name}/releases/download/$version/$name-$version.tar.xz
-	http://www.linuxfromscratch.org/patches/lfs/$lfs_version/$name-$version-consolidated-1.patch"
+source="${name}-${version}.tar.gz::https://github.com/slicer69/${name}/archive/refs/tags/${version}.tar.gz
+        ${name}-consolidated.patch"
 
 build() {
 	cd $name-$version
-	patch -Np1 -i $SRC/$name-$version-consolidated-1.patch
+	patch --fuzz=0 -Np1 -i "$SRC/${name}-consolidated.patch"
 	make
 	make DESTDIR=$PKG install	
 }

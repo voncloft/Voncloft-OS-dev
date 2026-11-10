@@ -4,17 +4,19 @@
 name=udisks2
 version=2.11.2    
 release=1
+backup="etc/udisks2/mount_options.conf.example etc/udisks2/udisks2.conf"
 _name=udisks
 source="https://github.com/storaged-project/${_name}/releases/download/${_name}-${version}/${_name}-${version}.tar.bz2"
 
 options="!checksum"
 
 build() {
-	cd *
+	cd "$SRC/$_name-$version" || return 1
         sed -i 's/fstype, NULL/fstype, "nodev,nosuid"/' src/udiskslinuxfilesystemhelpers.c
 ./configure --prefix=/usr        \
 --sysconfdir=/etc    \
 --localstatedir=/var \
+--with-udevdir=/usr/lib/udev \
 --disable-static     \
 --enable-available-modules 
 make

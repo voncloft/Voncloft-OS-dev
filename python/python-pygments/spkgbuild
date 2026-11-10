@@ -2,10 +2,10 @@
 # depends : python hatchling python-wheel
 
 name=python-pygments
-version=2.15.1
-release=2
+version=2.21.0
+release=1
 
-_name=${name#python-}
+_name=pygments
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

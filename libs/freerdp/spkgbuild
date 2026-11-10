@@ -3,7 +3,7 @@
 
 name=freerdp
 version=3.33.0
-release=2
+release=3
 
 _name=FreeRDP
 source="$name-$version.tar.gz::https://github.com/FreeRDP/${_name}/releases/download/$version/${name}-$version.tar.gz"

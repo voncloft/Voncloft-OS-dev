@@ -1,17 +1,24 @@
-# Only report uversion; update-repo owns the version= edit.
-source='https://gitlab.com/api/v4/projects/accounts-sso%2Fsignond/repository/commits?per_page=1'
+# Track the newest upstream commit and its own PROJECT_VERSION.
+# Never inherit a stale base version from the installed recipe.
+source="https://gitlab.com/api/v4/projects/accounts-sso%2F${name}/repository/commits?per_page=1"
 url=$source
 get_generic() {
     unset uversion
-    uversion=$(python3 - "$version" <<'PYCOMMIT'
-import datetime,json,pathlib,re,sys
-data=json.loads(pathlib.Path('index.html').read_text())[0]
-sha=data['id']
-if not re.fullmatch('[a-f0-9]{40}',sha):raise ValueError('invalid GitLab commit')
-stamp=datetime.datetime.fromisoformat(data['committed_date'].replace('Z','+00:00')).astimezone(datetime.timezone.utc).strftime('%Y%m%d%H%M%S')
-current=sys.argv[1]
-base=current.split('.git')[0].split('+')[0].split('.g')[0]
-print(base+'.git'+stamp+'.g'+sha)
+    uversion=$(python3 - "$name" <<'PYCOMMIT'
+import datetime, json, pathlib, re, sys, urllib.parse, urllib.request
+data = json.loads(pathlib.Path('index.html').read_text())[0]
+sha = data['id']
+if not re.fullmatch('[a-f0-9]{40}', sha):
+    raise ValueError('invalid GitLab commit')
+project = urllib.parse.quote('accounts-sso/' + sys.argv[1], safe='')
+url = 'https://gitlab.com/api/v4/projects/' + project + '/repository/files/common-vars.pri/raw?ref=' + sha
+with urllib.request.urlopen(url, timeout=25) as response:
+    text = response.read().decode()
+match = re.search(r'^PROJECT_VERSION\s*=\s*([0-9]+(?:\.[0-9]+)+)\s*$', text, re.M)
+if not match:
+    raise ValueError('upstream PROJECT_VERSION not found')
+stamp = datetime.datetime.fromisoformat(data['committed_date'].replace('Z', '+00:00')).astimezone(datetime.timezone.utc).strftime('%Y%m%d.%H%M%S')
+print(match[1] + '+' + stamp + '.g' + sha)
 PYCOMMIT
     ) || return 1
     [ -n "$uversion" ]

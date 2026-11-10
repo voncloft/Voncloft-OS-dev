@@ -1,0 +1,23 @@
+# Include official patch releases, not only the original GNU tarball.
+source="https://ftp.gnu.org/gnu/bash/"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re,subprocess
+name='bash'
+versions=re.findall(re.escape(name)+r'-([0-9]+\.[0-9]+)\.tar\.',pathlib.Path('index.html').read_text())
+base=max(versions,key=lambda v:tuple(map(int,v.split('.'))))
+url='https://ftp.gnu.org/gnu/'+name+'/'+name+'-'+base+'-patches/'
+data=subprocess.run(['curl','-fLsS','--retry','2','--max-time','25',url],capture_output=True,text=True,check=True).stdout
+patches=sorted(set(map(int,re.findall(re.escape(name+base.replace('.',''))+r'-([0-9]{3})',data))))
+if patches and patches!=list(range(1,patches[-1]+1)):raise SystemExit('Incomplete upstream patch series')
+print(base+'.'+str(patches[-1] if patches else 0))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

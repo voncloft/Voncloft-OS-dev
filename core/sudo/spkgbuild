@@ -2,8 +2,10 @@
 # depends	: linux-pam
 
 name=sudo
-version=1.9.17
+version=1.9.17p2
 release=1
+# Preserve active policy and retain new defaults as .spkgnew for review.
+backup="etc/sudoers.dist etc/sudoers etc/sudoers.d/00-sudo etc/sudo_logsrvd.conf etc/sudo.conf etc/pam.d/sudo"
 
 source="https://www.sudo.ws/dist/${name}-$version.tar.gz"
 
@@ -16,7 +18,7 @@ build() {
             --libexecdir=/usr/lib \
             --with-secure-path    \
             --with-env-editor     \
-            --docdir=/usr/share/doc/sudo-1.9.17p1 \
+            --docdir=/usr/share/doc/$name-$version \
             --with-passprompt="[sudo] password for %p: "
 	make
 	make DESTDIR=$PKG install

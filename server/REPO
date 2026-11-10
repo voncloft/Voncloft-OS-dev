@@ -46,7 +46,7 @@ f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
 f:85cde5e2e3c18e949590ffb2e0bd543e:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
 f:1360cfbaac7d9d561eaebd186dc0d45e:homeassistant/CHANGELOG
-f:05515e2e4f2d382e9050cee738f3cc5e:homeassistant/spkgbuild
+f:6689ab0db78e5d2f44b22b80aa11b583:homeassistant/spkgbuild
 f:901281fc384dea63a384ef8af2777efc:samba/.pkgfiles
 f:98abcdacd06a8e4210d34c58b93464d4:samba/samba
 f:c65f2e42ce19954986906299c2b8851f:samba/post-upgrade.sh
@@ -95,7 +95,7 @@ f:dac19cbb851369a362741200d11ac3a3:deluge/CHANGELOG
 f:56ce018481a850d52eb27b5497e83df5:deluge/post-install.sh
 f:d759cc2a9d8620c6636fe3cc44c073ec:deluge/deluge-web
 f:aa553979484ceb8230f1d02bee7d95bb:deluge/test
-f:d074d1f86d5bae05ff107d26305f2f44:deluge/spkgbuild
+f:69a78ff179aaa785ba27c3d4b1b58187:deluge/spkgbuild
 f:aa553979484ceb8230f1d02bee7d95bb:deluge/deluged
 f:c0ee45b0efeb6110a3682cacac16eeb8:monitor_process/.pkgfiles
 f:2c03c0565ef7fac1861fbeca31883d5a:monitor_process/process_monitor.sh

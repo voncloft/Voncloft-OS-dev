@@ -5,6 +5,7 @@ name=llvm
 version=23.1.5
 release=2
 options="!checksum"
+backup="etc/clang/clang.cfg etc/clang/clang++.cfg"
 _name=llvm-project
 source="https://github.com/llvm/${_name}/releases/download/llvmorg-${version}/${_name}-${version}.src.tar.xz"
 
@@ -28,12 +29,13 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr           \
       -D LLVM_ENABLE_RTTI=ON                 \
       -D LLVM_TARGETS_TO_BUILD="host;AMDGPU" \
       -D LLVM_BINUTILS_INCDIR=/usr/include   \
+      -D LLVM_PARALLEL_LINK_JOBS=1           \
       -D LLVM_INCLUDE_BENCHMARKS=OFF         \
       -D CLANG_DEFAULT_PIE_ON_LINUX=ON       \
       -D CLANG_CONFIG_FILE_SYSTEM_DIR=/etc/clang \
       -W no-dev -G Ninja ..
-      ninja
-      DESTDIR=$PKG ninja install
+      ninja -j"${NINJAJOBS:-6}"
+      DESTDIR=$PKG ninja -j"${NINJAJOBS:-6}" install
 	mkdir -pv $PKG/etc/clang
 	for i in clang clang++; do
   echo -fstack-protector-strong > $PKG/etc/clang/$i.cfg

@@ -2,8 +2,9 @@
 # depends	: dbus glib libxtst glib meson
 
 name=at-spi2-core
-version=2.48.2
+version=2.62.1
 release=1
+backup="etc/xdg/Xwayland-session.d/00-at-spi etc/xdg/autostart/at-spi-dbus-bus.desktop"
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
 
 build() {

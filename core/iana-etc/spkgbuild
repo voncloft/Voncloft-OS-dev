@@ -1,9 +1,12 @@
 # description	: Provides data for network services and protocols
 
 name=iana-etc
-version=20261027
-release=2
+version=20261106
+release=1
 source="https://github.com/Mic92/${name}/releases/download/${version}/${name}-${version}.tar.gz"
+
+# Preserve local service and protocol mappings on upgrade.
+backup="etc/services etc/protocols"
 
 build() {
 	cd "$SRC"/iana-etc*/

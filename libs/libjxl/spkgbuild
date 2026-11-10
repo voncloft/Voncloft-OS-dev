@@ -11,7 +11,7 @@ build() {
     cd "libjxl-${version}"
     cmake -S . -B build \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib64 \
+        -DCMAKE_INSTALL_LIBDIR=lib \
         -DCMAKE_BUILD_TYPE=Release \
         -DBUILD_TESTING=OFF \
         -DBUILD_SHARED_LIBS=ON \

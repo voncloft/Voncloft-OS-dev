@@ -1,5 +1,18 @@
-# This package has no independent, automatically applicable upstream release.
-source="https://www.oasis-open.org/docbook/xml/${version}/"
+# This is the legacy 4.x DTD bundle; DocBook 5 is a different schema family.
+# Verify final releases using the actual upstream project.
+source="https://archive.docbook.org/xml/"
 url=$source
-update_repo_skip='Compatibility bundle of fixed DocBook 4.x DTD releases; not a single rolling upstream version.'
-update_repo_skip_status='Manual update'
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib,re
+versions=re.findall(r'href="(4\.[0-9]+(?:\.[0-9]+)*)"',pathlib.Path('index.html').read_text())
+if not versions:raise SystemExit('No final DocBook 4 XML DTD release found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

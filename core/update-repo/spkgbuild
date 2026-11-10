@@ -11,14 +11,5 @@ build() {
     install -Dm755 "$SRC/changelog" "$PKG/usr/libexec/update-repo/changelog"
     install -Dm755 "$SRC/update-rep" "$PKG/usr/bin/update-rep"
     
-    # All directories are staged in the package, never created on the host.
-    local logroot="$PKG/sources/Voncloft-OS-dev/logs"
-    local logdate
-    logdate=$(date +%Y/%b)
-    install -dm755 "$PKG/var/log/old" \
-        "$logroot/$logdate/changes" \
-        "$logroot/$logdate/reports" \
-        "$logroot/$logdate/over_updated" \
-        "$logroot/$logdate/missing" \
-        "$logroot/old-test-updates/$logdate"
+    # Runtime log directories are created by update-repo for the active repository.
 }

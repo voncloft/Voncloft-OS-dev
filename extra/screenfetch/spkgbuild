@@ -1,16 +1,23 @@
-# description	: Fetches system/theme information in terminal for Linux desktop screenshots
-# depends	: 
+# description : Fetches system/theme information with Voncloft OS branding
+# depends : bash patch iproute2
+
 name=screenfetch
 version=3.9.9
-release=1
-#source="$name-$version.tar.gz::https://github.com/KittyKatt/screenFetch/archive/v$version.tar.gz"
+release=2
 _name=screenFetch
-source="https://github.com/KittyKatt/${_name}/archive/refs/tags/v${version}.tar.gz"
+source="https://github.com/KittyKatt/${_name}/archive/refs/tags/v${version}.tar.gz
+        voncloft-branding.patch"
 options="!checksum"
-build() {
-	cd "$SRC"/screenFetch*/
 
-	install -Dm755 $name-dev $PKG/usr/bin/$name
-	install -Dm644 $name.1   $PKG/usr/share/man/man1/$name.1 
-	#test
+build() {
+	cd "${_name}-${version}"
+
+	patch -Np1 --fuzz=0 -i "$SRC/voncloft-branding.patch" || return 1
+	bash -n screenfetch-dev || return 1
+
+	# Keep the distro logo from silently disappearing in an upstream update.
+	bash screenfetch-dev -N -L -D voncloft | grep -Fq 'Voncloft OS' || return 1
+
+	install -Dm755 screenfetch-dev "$PKG/usr/bin/$name"
+	install -Dm644 "$name.1" "$PKG/usr/share/man/man1/$name.1"
 }

@@ -1,0 +1,19 @@
+# description : Sandboxed image loaders and image loading library
+# depends : bubblewrap fontconfig glib lcms2 libseccomp rust libheif libjxl librsvg vala meson ninja pkgconf
+
+name=glycin
+version=2.2.6
+release=1
+source="https://download.gnome.org/sources/${name}/${version%.*}/${name}-${version}.tar.xz"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    export PATH="/opt/rustc/bin:$PATH"
+    export CARGO_BUILD_JOBS="${NINJAJOBS:-6}"
+    meson setup build --prefix=/usr --libdir=lib --buildtype=release \
+        -Dlibglycin-gtk4=false -Dtests=false
+    # Each Meson target starts Cargo; serialize targets while Cargo uses six jobs.
+    ninja -C build -j1
+    DESTDIR="$PKG" ninja -C build -j1 install
+}

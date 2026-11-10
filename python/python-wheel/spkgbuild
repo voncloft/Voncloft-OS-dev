@@ -2,9 +2,9 @@
 # depends : python python-flit python-packaging
 
 name=python-wheel
-version=0.40.0
+version=0.48.0
 release=1
-_name=${name#python-}
+_name=wheel
 source="https://files.pythonhosted.org/packages/source/w/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

@@ -16,7 +16,7 @@ d:lxqt-policykit
 d:lxqt-admin
 d:lxqt-panel
 f:78dd173d0e26668ea02e208b1f9ab073:lxqt-config/CHANGELOG
-f:b9fd538ef734b49da5e1cbcef9113fab:lxqt-config/spkgbuild
+f:c43fc4933a2d2ed7a3b7cd81c35c3c15:lxqt-config/spkgbuild
 f:e5a7aaa1423b57d8601a8c7d92990f64:lxqt-about/CHANGELOG
 f:639a849341e64b769a5e98cb712480d9:lxqt-about/spkgbuild
 f:f6af12fffaf97c5bc60142d85fcfcefe:lxqt-powermanagement/CHANGELOG

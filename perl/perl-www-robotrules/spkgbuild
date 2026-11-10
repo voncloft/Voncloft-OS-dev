@@ -2,8 +2,8 @@
 # depends : perl perl-uri
 
 name=perl-www-robotrules
-version=6.02
-release=8
+version=6.03
+release=1
 
 _name=WWW-RobotRules
 source="https://cpan.metacpan.org/authors/id/O/OA/OALDERS/${_name}-${version}.tar.gz"

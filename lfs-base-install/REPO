@@ -220,7 +220,7 @@ f:6fef1724f9ee5abc917f77dd38932867:udev-lfs/override
 f:cadcb63b9bc269a457a70c58f0d97367:zstd/.pkgfiles
 f:0d5be0c2825343f377c4f94556807964:zstd/CHANGELOG
 f:1d3b2a995d0bfe06d7b7c74f6b5c1d62:zstd/spkgbuild
-f:f52ad4744649b1d6ea08adba4ab9e5e7:lfs-base/spkgbuild
+f:eb73737a9b5c135e4ffa1c06768bcadc:lfs-base/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:lfs-base/override
 f:664b2c752dd6a57663aa6a11e9b01614:groff/.pkgfiles
 f:7facf687440497ef625f6ed56e72213f:groff/CHANGELOG

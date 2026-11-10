@@ -1,5 +1,5 @@
 # description : Jinja2 Extension for Dates and Times
-# depends : python-arrow python-jinja
+# depends : python-arrow jinja2
 
 name=python-jinja-time
 version=0.2.0

@@ -3,7 +3,7 @@
 
 name=libqalculate
 version=5.13.2
-release=1
+release=2
 
 source="https://github.com/Qalculate/${name}/releases/download/v$version/$name-$version.tar.gz"
 options="!checksum"

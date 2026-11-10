@@ -1,18 +1,17 @@
-# note : CPAN::Meta::Requirements is supplied by the core perl package.
 # description : the distribution metadata for a CPAN dist
-# depends : perl perl
+# depends : perl perl-cpan-meta-requirements
 
 name=perl-cpan-meta
-version=2.150010
-release=10
+version=2.150015
+release=1
 
 _name=CPAN-Meta
-source="https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/${_name}-${version}.tar.gz"
+source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
    cd *
-   perl Makefile.PL
+   perl Makefile.PL MAN3EXT=3pm
    make
    make DESTDIR=$PKG install
 }

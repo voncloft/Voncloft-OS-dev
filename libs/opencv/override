@@ -1,5 +1,5 @@
 # Report only uversion. update-repo owns the recipe's version= edit.
-# OpenCV and opencv_contrib must publish matching stable OpenCV 5 tags.
+# OpenCV and opencv_contrib must publish matching stable OpenCV tags.
 source=https://github.com/opencv/opencv.git
 url=$source
 update_repo_fetch_kind=git-tags
@@ -19,20 +19,20 @@ def versions(text):
         fields = line.split()
         if len(fields) != 2 or not re.fullmatch(r'[0-9a-f]{40,64}', fields[0]):
             continue
-        match = re.fullmatch(r'refs/tags/(5\.[0-9]+\.[0-9]+)', fields[1])
+        match = re.fullmatch(r'refs/tags/([0-9]+\.[0-9]+\.[0-9]+)', fields[1])
         if match:
             found.add(match[1])
     return found
 
 core = versions(Path('index.html').read_text())
 if not core:
-    raise SystemExit('ERROR: No stable OpenCV 5 tags found')
+    raise SystemExit('ERROR: No stable OpenCV tags found')
 contrib = subprocess.run(
     ['git', 'ls-remote', '--tags', '--refs', 'https://github.com/opencv/opencv_contrib.git'],
     check=True, capture_output=True, text=True, timeout=30)
 matching = core & versions(contrib.stdout)
 if not matching:
-    raise SystemExit('ERROR: No matching stable OpenCV 5 and opencv_contrib release')
+    raise SystemExit('ERROR: No matching stable OpenCV and opencv_contrib release')
 print(max(matching, key=lambda value: tuple(map(int, value.split('.')))))
 PYVERSION
     ) || return 1

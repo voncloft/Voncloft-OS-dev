@@ -1,16 +1,17 @@
 # description : Python module for character encoding auto-detection
-# depends : python python-setuptools python-wheel
+# depends : python hatchling hatch-vcs
 
 name=python-chardet
-version=5.1.0
-release=2
+version=7.7.0
+release=1
 
-_name=${name#python-}
+_name=chardet
 source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
     cd "chardet-$version"
+    export PYTHONNOUSERSITE=1
 
     # pip is supplied by this repository's Python package through ensurepip.
     python3 -m pip wheel --no-cache-dir --no-index --no-deps \

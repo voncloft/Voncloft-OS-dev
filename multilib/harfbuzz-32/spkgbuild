@@ -2,7 +2,7 @@
 
 name=harfbuzz-32
 version=15.1.0
-release=1
+release=2
 _name=${name%-32}
 source="https://github.com/harfbuzz/${_name}/releases/download/${version}/${_name}-${version}.tar.xz"
 

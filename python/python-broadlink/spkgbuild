@@ -4,7 +4,7 @@
 name=python-broadlink
 version=0.19.0
 release=1
-_name=${name#python-}
+_name=broadlink
 source="https://files.pythonhosted.org/packages/source/b/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

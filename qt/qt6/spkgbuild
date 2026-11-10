@@ -2,15 +2,36 @@
 # depends	: sqlite make-ca dbus harfbuzz glib icu jasper libjpeg-turbo libmng libpng libinput
 # depends	: libxrender libsm libxi libtiff libxkbcommon mesa mtdev openssl pcre2 wayland
 # depends	: xcb-util-image xcb-util-keysyms xcb-util-renderutil xcb-util-wm alsa-lib python
-# depends	: gst-plugins-base libwebp xorg-libraries vulkan-headers
-# depends	: cmake ninja llvm nodejs nss python-html5lib gperf bison flex flite
+# depends	: gst-plugins-base ffmpeg libwebp xorg-libraries vulkan-headers
+# depends	: cmake ninja llvm nodejs nss python-html5lib gperf bison flex flite protobuf
 # depends	: maven openapi-generator speech-dispatcher pipewire ccache
 
 name=qt6
-version=6.12.0
-release=6
+# Qt + WebEngine are independently versioned upstream, shipped as one package.
+version=6.12.0+6.11.3
+release=1
+_qt_version=${version%%+*}
+_webengine_version=${version##*+}
 _name=qt-everywhere-src
-source="https://download.qt.io/archive/qt/${version%.*}/$version/single/${_name}-$version.tar.xz
+_webengine_name=qtwebengine-everywhere-src
+# Before the independent Chromium-numbered series, WebEngine was published
+# under the matching Qt release. New standalone releases use their own tree.
+if [ "${_webengine_version#6.}" != "$_webengine_version" ] &&
+   [ "${_webengine_version#*.}" != "${_webengine_version##*.}" ] &&
+   [ "${_webengine_version#*.}" != "" ]; then
+    _webengine_minor=${_webengine_version#*.}
+    _webengine_minor=${_webengine_minor%%.*}
+else
+    printf '%s\n' 'Unsupported WebEngine version format' >&2
+    return 1
+fi
+if [ "$_webengine_minor" -ge 100 ]; then
+    _webengine_url=https://download.qt.io/official_releases/qtwebengine/$_webengine_version
+else
+    _webengine_url=https://download.qt.io/archive/qt/${_webengine_version%.*}/$_webengine_version/submodules
+fi
+source="https://download.qt.io/archive/qt/${_qt_version%.*}/$_qt_version/single/${_name}-$_qt_version.tar.xz
+$_webengine_url/${_webengine_name}-$_webengine_version.tar.xz
 qt6-examples.cmake"
 options="!checksum"
 
@@ -74,6 +95,10 @@ CPP
 build() {
 	local build_jobs="${NINJAJOBS:-$(nproc)}"
 	prepare_openapi_java
+	# Java derives user.home from passwd, not HOME. Keep Maven artifacts and
+	# locks in the writable package build tree, including sandboxed builds.
+	mkdir -p "$SRC/.m2/repository"
+	export MAVEN_OPTS="${MAVEN_OPTS:-} -Dmaven.repo.local=$SRC/.m2/repository -Xmx2g"
 	# Keep the compiler cache off the root filesystem and bound its disk use.
 	export CCACHE_DIR="${CCACHE_DIR:-/mnt/Storage/scratchpkg/ccache}"
 	export CCACHE_MAXSIZE="${CCACHE_MAXSIZE:-50G}"
@@ -81,7 +106,13 @@ build() {
 	# WebEngine reads NINJAFLAGS at configure time for its nested Ninja builds.
 	export NINJAFLAGS="${NINJAFLAGS:+$NINJAFLAGS }-j$build_jobs"
 
-	cd "qt-everywhere-src-$version"
+	# Restore WebEngine as a source module. Qt's top-level build discovers it
+	# and orders WebEngine/WebView using their upstream dependencies.yaml.
+	cd "${_name}-$_qt_version"
+	if [ ! -d qtwebengine ]; then
+		mv "$SRC/${_webengine_name}-$_webengine_version" qtwebengine
+	fi
+	[ -f qtwebengine/CMakeLists.txt ] || return 1
 	check_flite_link
 	QT6PREFIX=/usr
 	export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:$PKG_CONFIG_PATH
@@ -97,6 +128,7 @@ build() {
             -plugindir /usr/lib64/qt6/plugins \
             -openssl-linked         \
             -system-sqlite          \
+            -feature-icu            \
             -make examples          \
             -examplesdir /usr/lib64/qt6/examples \
             -no-rpath               \
@@ -195,8 +227,5 @@ Type=Application
 Categories=Qt;Development;Debugger;
 EOF
 
-mkdir -pv $PKG/etc/sudoers.d
-cat > $PKG/etc/sudoers.d/qt << "EOF"
-Defaults env_keep += QT6DIR
-EOF
+# The Qt environment sudoers policy is owned by kf-depends.
 }

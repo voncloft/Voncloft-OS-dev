@@ -1,0 +1,16 @@
+Description: Use the installed bzip2 SONAME
+
+--- a/src/libkbdfile/kbdfile-bzip2.c
++++ b/src/libkbdfile/kbdfile-bzip2.c
+@@ -29,9 +29,9 @@
+ 	ELF_NOTE_DLOPEN("bzip2",
+ 			"Support for uncompressing bzip2-compressed files",
+ 			ELF_NOTE_DLOPEN_PRIORITY_RECOMMENDED,
+-			"libbz2.so.1");
++			"libbz2.so.1.0");
+ 
+-	return dlsym_many(&dl, "libbz2.so.1", DL_SYMBOL_TABLE(DLSYM_ARG) NULL);
++	return dlsym_many(&dl, "libbz2.so.1.0", DL_SYMBOL_TABLE(DLSYM_ARG) NULL);
+ }
+ 
+ FILE *kbdfile_decompressor_bzip2(struct kbdfile *file)

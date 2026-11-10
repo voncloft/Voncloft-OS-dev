@@ -3,7 +3,8 @@
 
 name=plasma-workspace
 version=6.8.2
-release=3
+release=1
+backup="etc/xdg/plasmanotifyrc etc/xdg/autostart/org.kde.plasma-fallback-session-restore.desktop etc/xdg/autostart/gmenudbusmenuproxy.desktop etc/xdg/autostart/org.kde.plasmashell.desktop etc/xdg/autostart/xembedsniproxy.desktop etc/xdg/menus/plasma-applications.menu"
 
 source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz
         taskmanager-tab-launchers.patch"

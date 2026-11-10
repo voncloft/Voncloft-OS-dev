@@ -3,10 +3,40 @@
 
 name=lfs-bootscripts
 version=20250827
-release=1
+release=2
 source="https://www.linuxfromscratch.org/lfs/downloads/development/${name}-${version}.tar.xz"
 options="!checksum"
+backup="etc/rc.d/init.d/checkfs
+        etc/rc.d/init.d/cleanfs
+        etc/rc.d/init.d/console
+        etc/rc.d/init.d/halt
+        etc/rc.d/init.d/localnet
+        etc/rc.d/init.d/modules
+        etc/rc.d/init.d/mountfs
+        etc/rc.d/init.d/mountvirtfs
+        etc/rc.d/init.d/network
+        etc/rc.d/init.d/rc
+        etc/rc.d/init.d/reboot
+        etc/rc.d/init.d/sendsignals
+        etc/rc.d/init.d/setclock
+        etc/rc.d/init.d/swap
+        etc/rc.d/init.d/sysctl
+        etc/rc.d/init.d/sysklogd
+        etc/rc.d/init.d/template
+        etc/rc.d/init.d/udev
+        etc/rc.d/init.d/udev_retry
+        etc/sysconfig/createfiles
+        etc/sysconfig/modules
+        etc/sysconfig/rc.site
+        etc/sysconfig/udev_retry"
+
 build() {
 	cd $name-$version
-	make DESTDIR=$PKG install
+	make DESTDIR="$PKG" LIBDIR="$PKG/usr/lib" SBIN="$PKG/usr/sbin" install || return 1
+        # This package owns the shared boot-time creation configuration.
+        # Keep X/ICE socket directories available after cleanfs clears /tmp.
+        cat >> "$PKG/etc/sysconfig/createfiles" <<'EOF'
+/tmp/.ICE-unix dir 1777 root root
+/tmp/.X11-unix dir 1777 root root
+EOF
 }

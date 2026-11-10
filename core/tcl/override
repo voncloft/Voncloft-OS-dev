@@ -1,0 +1,19 @@
+# Read project-specific upstream release metadata; reject prerelease tags.
+source="https://sourceforge.net/projects/tcl/rss?path=/Tcl"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+pattern='tcl([0-9]+(?:\\.[0-9]+)*)-src\\.tar\\.'
+text=pathlib.Path('index.html').read_text()
+versions=re.findall(pattern,text)
+if not versions:raise SystemExit('No matching final upstream release')
+print(max(set(versions),key=lambda v:tuple(map(int,re.findall(r'[0-9]+',v)))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

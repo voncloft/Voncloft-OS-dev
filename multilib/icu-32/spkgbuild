@@ -1,22 +1,26 @@
-# description	: International Components for Unicode library
-# depends	: icu
-
+# description : International Components for Unicode libraries (32-bit)
+# depends : icu
 name=icu-32
 version=79.1
-release=1
-_name=${name%-32}
-source="https://github.com/unicode-org/icu/releases/download/release-${version}/icu4c-${version}-sources.tgz"
+release=5
+_name=icu
+_source_name=icu4c
+source="https://github.com/unicode-org/${_name}/releases/download/release-${version}/${_source_name}-${version}-sources.tgz
+        bidi-array-overflow.patch"
 
 build() {
-	cd icu/source
-
-	export CC="gcc -m32"
-	export CXX="g++ -m32"
-	export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
-
-	./configure --prefix=/usr --libdir=/usr/lib32
-	make
-	make DESTDIR=$PWD/DESTDIR install
-	mkdir -p $PKG/usr/lib32
-	cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    # Avoid x87 extended intermediates in ICU floating-point computations.
+    export CFLAGS="${CFLAGS} -msse2 -mfpmath=sse"
+    export CXXFLAGS="${CXXFLAGS} -msse2 -mfpmath=sse"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig
+    export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
+    cd "$SRC/icu/source"
+    patch --fuzz=0 -p1 < "$SRC/bidi-array-overflow.patch"
+    ./configure --prefix=/usr --libdir=/usr/lib32 --disable-static
+    make
+    make DESTDIR="$SRC/stage" install
+    install -dm755 "$PKG/usr/lib32"
+    cp -a "$SRC/stage/usr/lib32/." "$PKG/usr/lib32/"
 }

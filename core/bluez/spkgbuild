@@ -3,10 +3,18 @@
 
 name=bluez
 version=5.88
-release=1
+release=3
 source="https://www.kernel.org/pub/linux/bluetooth/$name-$version.tar.xz
 	rc.bluetoothd
 	run"
+
+backup="etc/bluetooth/input.conf
+        etc/bluetooth/main.conf
+        etc/bluetooth/network.conf
+        etc/bluetooth/rfcomm.conf
+        etc/bluetooth/uart.conf
+        etc/rc.d/bluetoothd
+        etc/sv/bluetoothd/run"
 
 build() {
 	cd $name-$version

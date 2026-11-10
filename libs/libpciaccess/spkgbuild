@@ -2,7 +2,7 @@
 
 name=libpciaccess
 version=0.19
-release=1
+release=2
 source="http://ftp.x.org/pub/individual/lib/${name}-$version.tar.xz"
 
 build() {
@@ -12,6 +12,5 @@ build() {
       cd    build
         meson setup --prefix=/usr --buildtype=release ..
         ninja
-        #ninja test
         DESTDIR=$PKG ninja install
 }

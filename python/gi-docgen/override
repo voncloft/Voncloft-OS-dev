@@ -1,0 +1,22 @@
+# Use the package registry's own release metadata.
+source="https://pypi.org/pypi/gi_docgen/json"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+data=json.loads(pathlib.Path('index.html').read_text())
+project='gi_docgen'
+norm=lambda s:re.sub('[-_.]+','-',s).lower()
+if norm(data['info']['name'])!=norm(project): raise SystemExit('PyPI project mismatch')
+versions=[v for v,files in data['releases'].items() if re.fullmatch(r'[0-9]+(?:\.[0-9]+)*',v) and any(f['packagetype']=='sdist' and not f.get('yanked') for f in files)]
+if not versions: raise SystemExit('No stable source release')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

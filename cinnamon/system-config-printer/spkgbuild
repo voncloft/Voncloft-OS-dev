@@ -1,5 +1,5 @@
 # description : cups printer configuration tool
-# depends : gtk3 libnotify python-cairo python-dbus python-gobject3 python-pycups python-pycurl python-requests libsecret python-pysmbc desktop-file-utils docbook-xsl intltool xmlto
+# depends : gtk3 libnotify pycairo python-dbus python-gobject3 python-pycups python-pycurl python-requests libsecret python-pysmbc desktop-file-utils docbook-xsl intltool xmlto
 
 name=system-config-printer
 version=1.5.18

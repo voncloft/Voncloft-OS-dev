@@ -2,11 +2,13 @@
 # depends : xorg-libraries libpciaccess-32
 name=libdrm-32
 version=2.4.134
-release=1
+release=3
 _name=${name%-32}
 source="https://dri.freedesktop.org/${_name}/${_name}-${version}.tar.xz"
 
 build() {
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig
+    export PKG_CONFIG_PATH=/usr/lib32/pkgconfig
 	cd libdrm-$version
 
 	export CC="gcc -m32"
@@ -15,7 +17,7 @@ build() {
 
 	mkdir build
 	cd build
-	meson --prefix=/usr \
+	meson setup --prefix=/usr \
 	      --libdir=/usr/lib32 \
 	      -D udev=true \
 	      -D valgrind=disabled 

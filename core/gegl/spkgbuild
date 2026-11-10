@@ -1,5 +1,5 @@
 # description	: GEneric Graphics Library, a graph based image processing format
-# depends	: babl json-glib poppler-glib meson
+# depends	: babl json-glib poppler-glib meson ffmpeg
 
 name=gegl
 version=0.4.72

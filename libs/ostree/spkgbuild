@@ -7,6 +7,7 @@ release=1
 
 source="$name-$version.tar.xz::https://github.com/ostreedev/${name}/releases/download/v$version/libostree-$version.tar.xz"
 options="!checksum"
+backup="etc/grub.d/15_ostree"
 
 build() {
     cd "libostree-$version"

@@ -1,9 +1,11 @@
 # description   : qemu is a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V)
-# depends       : glib pixman alsa-lib dtc libslirp sdl2-compat
+# depends       : glib pixman alsa-lib sdl2
+# QEMU supplies pinned dtc/libslirp Meson subprojects when system copies are absent.
+# Their bundled files belong to qemu; neither is a separate Scratch package here.
 
 name=qemu
 version=11.1.3
-release=1
+release=2
 source=" https://download.qemu.org/${name}-${version}.tar.xz"
 options="!checksum"
 
@@ -14,8 +16,8 @@ QEMU_ARCH=i386-softmmu
 else
 QEMU_ARCH=x86_64-softmmu
 fi
-mkdir -vp build 
-cd        build 
+mkdir -vp build
+cd        build
 ../configure --prefix=/usr            \
 --sysconfdir=/etc        \
 --localstatedir=/var     \
@@ -23,10 +25,12 @@ cd        build
 --audio-drv-list=alsa    \
 --disable-pa             \
 --enable-slirp           \
---docdir=/usr/share/doc/qemu-10.2.1 
-unset QEMU_ARCH 
+--docdir=/usr/share/doc/qemu-$version
+unset QEMU_ARCH
 make
-sudo DESTDIR=$PKG make install
+DESTDIR=$PKG make install
+# The base filesystem owns /var/run and its /run alias, not QEMU.
+rmdir "$PKG/var/run" "$PKG/var"
 chgrp kvm  $PKG/usr/libexec/qemu-bridge-helper &&
 chmod 4750 $PKG/usr/libexec/qemu-bridge-helper
 }

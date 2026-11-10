@@ -1,0 +1,15 @@
+# description : Ruby memoization library used by Tins
+# depends : ruby
+
+name=ruby-mize
+_gemname=mize
+version=0.7.0
+release=1
+source="https://rubygems.org/downloads/${_gemname}-${version}.gem"
+options="!checksum"
+
+build() {
+    _gemdir="$(gem env gemdir)"
+    gem install --local --ignore-dependencies --no-user-install --no-document \
+        -i "$PKG/$_gemdir" -n "$PKG/usr/bin" "$_gemname-$version.gem"
+}

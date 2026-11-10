@@ -1,0 +1,127 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -60,6 +60,7 @@
+       --no-postupgrade       skip postupgrade script after upgrade package
+       --no-backup            skip backup when upgrading package
+       --print-dbdir          print package database path
++      --transaction-plan=<file>  verify planned ownership handoffs
+       --root=<path>          install to custom root directory
+       
+ EOF
+@@ -98,6 +99,7 @@
+ 			        --no-postupgrade) NO_POSTUPGRADE=yes ;;
+ 			             --no-backup) NO_BACKUP=yes ;;
+ 			           --print-dbdir) PRINTDBDIR=yes ;;
++			    --transaction-plan=*) TRANSACTION_PLAN="${1#*=}" ;;
+ 			                --root=*) ROOT_DIR="${1#*=}" ;;
+ 			            *.spkg.tar.*) PKGNAME="$(realpath $1)" ;;
+ 			                       *) msg "Invalid option! ($1)"; exit 1 ;;
+@@ -113,7 +115,7 @@
+ ret() {
+ 	# remove lock and all tmp files on exit
+ 	[ "${PKGADD_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
+-	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES" "$TMP_ADOPTED_SYMLINKS" "$TMP_EXTRACTED_FILES"
++	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES" "$TMP_ADOPTED_SYMLINKS" "$TMP_EXTRACTED_FILES" "$TMP_HANDOFF_FILES"
+     if [ -n "${TMP_RECORD_DIR:-}" ]; then
+         rm -f "$TMP_RECORD_DIR/record"
+         rmdir "$TMP_RECORD_DIR"
+@@ -244,6 +246,16 @@
+ TMP_ADOPTED_SYMLINKS="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_adopted_symlinks"
+ python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
+     --adoptable-symlinks "$PKGNAME" > "$TMP_ADOPTED_SYMLINKS" || ret 1
++
++# A prepared transaction may transfer paths only when each old owner's
++# exact replacement archive drops them. No ownership records are edited here.
++TMP_HANDOFF_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_handoff_files"
++: > "$TMP_HANDOFF_FILES" || ret 1
++if [ "$TRANSACTION_PLAN" ]; then
++    python3 "$(dirname "$OWNERSHIP_TOOL")/transaction.py" \
++        --root "$ROOT_DIR" --database "$PKGDB_DIR" handoffs \
++        --plan "$TRANSACTION_PLAN" "$PKGNAME" > "$TMP_HANDOFF_FILES" || ret 1
++fi
+ 
+ # check for file conflict
+ if [ ! "$IGNORE_CONFLICT" ]; then
+@@ -264,6 +276,7 @@
+ 			line=${line%.*}
+             config_backup=1
+ 		fi
++        grep -Fqx -- "$line" "$TMP_HANDOFF_FILES" && continue
+         if grep -Fqx -- "$line" "$TMP_SHARED_FILES"; then
+             echo "$line (also owned by another installed package)"
+             touch "$TMP_CONFLICT"
+--- a/pkgbuild
++++ b/pkgbuild
+@@ -440,6 +440,7 @@
+ 		-h |              --help) SHOWHELP=yes ;;
+ 		                 --clean) CLEANUP=yes ;;
+ 		             --no-backup) OPTS="$OPTS $1" ;;
++		    --transaction-plan=*) OPTS="$OPTS $1" ;;
+ 		                --root=*) OPTS="$OPTS $1" ;;
+ 		              --config=*) PKGBUILD_CONF="${1#*=}" ;;
+ 		              --srcdir=*) CUSTOM_SOURCE_DIR="${1#*=}" ;;
+--- a/scratch
++++ b/scratch
+@@ -839,6 +839,45 @@
+ 	return "$error"
+ }
+ 
++# Prepare checked ownership handoffs from already-built package archives.
++# This does not install packages. Pass the resulting plan to install/upgrade
++# with --transaction-plan=FILE; ordinary unplanned conflicts remain errors.
++scratch_transaction() {
++    needroot "Preparing package transaction"
++    transaction_output=
++    transaction_root=/
++    transaction_config=/etc/scratchpkg.conf
++    transaction_packages=
++    while [ "$1" ]; do
++        case $1 in
++            --output=*) transaction_output=${1#*=} ;;
++            --root=*) transaction_root=${1#*=} ;;
++            --config=*) transaction_config=${1#*=} ;;
++            --*) msgerr "Invalid transaction option: $1"; return 1 ;;
++            *) transaction_packages="$transaction_packages $1" ;;
++        esac
++        shift
++    done
++    [ "$transaction_output" ] && [ "$transaction_packages" ] || {
++        msgerr "Usage: scratch transaction --output=FILE PACKAGE... [--config=FILE] [--root=DIR]"
++        return 1
++    }
++    [ ! -f "$transaction_config" ] || . "$transaction_config"
++    set --
++    for transaction_package in $transaction_packages; do
++        transaction_port=$(getportpath "$transaction_package") || return 1
++        transaction_archive=$(
++            . "$transaction_port/$BUILD_SCRIPT"
++            [ "$name" = "$transaction_package" ] || exit 1
++            printf '%s/%s-%s-%s.spkg.tar.%s' "$PACKAGE_DIR" "$name" "$version" "$release" "$COMPRESSION_MODE"
++        ) || return 1
++        set -- "$@" "$transaction_archive"
++    done
++    python3 "$(dirname "$(readlink -f "$0")")/../lib/scratchpkg/transaction.py" \
++        --root "$transaction_root" --database "$PKGDB_DIR" prepare \
++        --output "$transaction_output" "$@"
++}
++
+ scratch_upgrade() {
+ 	needroot "Upgrading package"	
+ 	while [ "$1" ]; do
+@@ -1489,6 +1528,8 @@
+     info      <port>         print information
+     locate    <files>        print location of files in ports repo
+     sync                     update ports database
++    transaction <packages> --output=FILE
++                             prepare ownership handoffs from built archives
+     outdate                  print outdated ports
+     cache                    print and clear old pkg and src caches
+     integrity                check installed port integrity
+@@ -1503,6 +1544,7 @@
+     --append-repo=<repo path>       append custom repo path
+     --prepend-repo=<repo path>      prepend custom repo path
+     --repo-file=<repo file>         use custom repo file (default: $REPO_FILE)
++    --transaction-plan=<file>      verify handoffs during install/upgrade
+     --nocolor                       disable colour for output
+ 
+ EOF

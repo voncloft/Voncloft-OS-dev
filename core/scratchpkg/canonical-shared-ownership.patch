@@ -1,0 +1,114 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -107,10 +107,13 @@
+ 	fi
+ }
+ 
++# Use the manager's helper, including when --root targets another system.
++OWNERSHIP_TOOL="$(dirname "$(readlink -f "$0")")/../lib/scratchpkg/ownership.py"
++
+ ret() {
+ 	# remove lock and all tmp files on exit
+ 	[ "${PKGADD_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
+-	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES"
++	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES"
+ 	exit $1
+ }
+ 
+@@ -238,16 +241,18 @@
+     # package's payload during upgrade or reinstall. Check database ownership
+     # even when the corresponding file has gone missing from the filesystem.
+     TMP_SHARED_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_shared_files"
+-    set -- "$ROOT_DIR/$PKGDB_DIR"/*
+-    if [ -f "$1" ]; then
+-        awk -v own="$ROOT_DIR/$PKGDB_DIR/$name" \
+-            'FILENAME != own && FNR > 1 { print }' "$@" > "$TMP_SHARED_FILES" || ret 1
+-    else
+-        : > "$TMP_SHARED_FILES" || ret 1
+-    fi
++    grep -v '/$' "$TMP_PKGADD" | awk '{print $6}' | sed 's/\.spkgnew$//' |
++        python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
++            --exclude "$name" > "$TMP_SHARED_FILES" || ret 1
++    TMP_OWN_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_owned_files"
++    grep -v '/$' "$TMP_PKGADD" | awk '{print $6}' | sed 's/\.spkgnew$//' |
++        python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
++            --owner "$name" > "$TMP_OWN_FILES" || ret 1
+ 	grep -v '/$' "$TMP_PKGADD" | awk '{print $6}' | while read -r line; do
++        config_backup=
+ 		if [ "$line" = "${line%.*}.spkgnew" ]; then
+ 			line=${line%.*}
++            config_backup=1
+ 		fi
+         if grep -Fqx -- "$line" "$TMP_SHARED_FILES"; then
+             echo "$line (also owned by another installed package)"
+@@ -255,8 +260,11 @@
+             continue
+         fi
+ 		if [ -e "$ROOT_DIR/$line" ] || [ -L "$ROOT_DIR/$line" ]; then
++            # A backup payload writes a .spkgnew sibling and preserves the
++            # existing configuration, including an unowned local config.
++            [ "$config_backup" = 1 ] && continue
+ 			if [ "$UPGRADE_PKG" ] || [ "$REINSTALL_PKG" ]; then
+-				if ! grep -Fqx "$line" "$ROOT_DIR/$PKGDB_DIR/$name"; then
++				if ! grep -Fqx -- "$line" "$TMP_OWN_FILES"; then
+ 					echo "$line"
+ 					touch "$TMP_CONFLICT"
+ 				fi
+@@ -279,13 +287,9 @@
+ tar -xvhpf "$PKGNAME" -C "$ROOT_DIR"/ | while read -r line; do
+ 	if [ "$line" = "${line%.*}.spkgnew" ]; then
+ 		line=${line%.*}
+-		if [ "$UPGRADE_PKG" ] || [ "$REINSTALL_PKG" ]; then
+-			if [ ! -e "$ROOT_DIR/$line" ] || [ "$NO_BACKUP" = yes ]; then
+-				mv "$ROOT_DIR/$line".spkgnew "$ROOT_DIR/$line"
+-			fi
+-		else
+-			mv "$ROOT_DIR/$line".spkgnew "$ROOT_DIR/$line"
+-		fi
++        if { [ ! -e "$ROOT_DIR/$line" ] && [ ! -L "$ROOT_DIR/$line" ]; } || [ "$NO_BACKUP" = yes ]; then
++            mv "$ROOT_DIR/$line".spkgnew "$ROOT_DIR/$line"
++        fi
+ 	fi
+ 	[ "$VERBOSE_INSTALL" ] && echo "extracted '$line'"
+ 	echo "$line" >> $TMP_PKGINSTALL
+@@ -294,8 +298,14 @@
+ # Remove obsolete payload only when no other package still owns the path.
+ if [ "$UPGRADE_PKG" ] || [ "$REINSTALL_PKG" ]; then
+     TMP_SHARED_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_shared_files"
+-    awk -v own="$ROOT_DIR/$PKGDB_DIR/$name" \
+-        'FILENAME != own && FNR > 1 { print }' "$ROOT_DIR/$PKGDB_DIR"/* > "$TMP_SHARED_FILES" || ret 1
++    tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" |
++        python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
++            --exclude "$name" > "$TMP_SHARED_FILES" || ret 1
++    # An old spelling must not delete a newly installed path through the
++    # same directory symlink (for example sbin/tool -> usr/sbin/tool).
++    tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" |
++        python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
++            --paths "$TMP_PKGINSTALL" >> "$TMP_SHARED_FILES" || ret 1
+     tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" | tac | while IFS= read -r line; do
+         grep -Fqx -- "$line" "$TMP_PKGINSTALL" && continue
+         grep -Fqx -- "$line" "$TMP_SHARED_FILES" && continue
+--- a/pkgdel
++++ b/pkgdel
+@@ -89,6 +89,9 @@
+ 	fi
+ }
+ 
++# Use the manager's helper, including when --root targets another system.
++OWNERSHIP_TOOL="$(dirname "$(readlink -f "$0")")/../lib/scratchpkg/ownership.py"
++
+ ret() {
+ 	# remove lock file on exit
+ 	[ "${PKGDEL_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
+@@ -158,8 +161,9 @@
+ 
+ # Keep paths still owned by another package, including ordinary files.
+ TMP_SHARED_FILES="$ROOT_DIR/var/lib/scratchpkg/.tmp_pkgdel_shared_files"
+-awk -v own="$ROOT_DIR/$PKGDB_DIR/$name" \
+-    'FILENAME != own && FNR > 1 { print }' "$ROOT_DIR/$PKGDB_DIR"/* > "$TMP_SHARED_FILES" || ret 1
++tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" |
++    python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
++        --exclude "$name" > "$TMP_SHARED_FILES" || ret 1
+ tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" | tac | while IFS= read -r line; do
+     grep -Fqx -- "$line" "$TMP_SHARED_FILES" && continue
+     case $line in

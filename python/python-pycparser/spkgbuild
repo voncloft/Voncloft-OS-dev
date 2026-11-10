@@ -4,7 +4,7 @@
 name=python-pycparser
 version=3.12
 release=4
-_name=${name#python-}
+_name=pycparser
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

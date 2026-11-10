@@ -3,9 +3,9 @@
 
 name=curl-32
 version=8.23.0
-release=1
+release=2
 _name=${name%-32}
-source="https://curl.haxx.se/download/${_name}-$version.tar.xz"
+source="https://curl.se/download/${_name}-$version.tar.xz"
 options="!checksum"
 build() {
 	cd *
@@ -16,7 +16,8 @@ build() {
         --enable-threaded-resolver \
         --with-openssl \
         --without-libssh2 \
-        --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
+        --with-ca-bundle=/etc/pki/tls/certs/ca-bundle.crt \
+        --with-ca-path=/etc/ssl/certs
                     
 	make
         make DESTDIR=$PWD/DESTDIR install

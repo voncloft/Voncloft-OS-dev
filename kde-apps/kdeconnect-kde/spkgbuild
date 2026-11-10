@@ -3,14 +3,17 @@
 
 name=kdeconnect-kde
 version=26.08.3
-release=2
+release=1
+backup="etc/ufw/applications.d/kdeconnect etc/xdg/autostart/org.kde.kdeconnect.daemon.desktop"
 
-source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz
+        configurable-udev-directory.patch"
 options="!checksum"
 
 build() {
     cd "kdeconnect-kde-$version"
-    plasma-package-installer
+    patch --fuzz=0 -p1 < "$SRC/configurable-udev-directory.patch"
+    plasma-package-installer -DUDEVDIR=/usr/lib/udev
     cd build
     make DESTDIR="$PKG" install
 }

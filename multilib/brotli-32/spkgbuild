@@ -3,10 +3,10 @@
 
 name=brotli-32
 version=1.2.1
-release=4
+release=5
 
 _name=${name%-32}
-source="https://github.com/google/${_name}/archive/v$version.tar.gz"
+source="brotli-32-$version.tar.gz::https://github.com/google/${_name}/archive/v$version.tar.gz"
 options="!checksum"
 
 build() {

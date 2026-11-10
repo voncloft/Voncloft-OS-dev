@@ -1,9 +1,9 @@
 # description : commandline option parser for ruby
-# depends : ruby ruby-bundler
+# depends : ruby
 
 name=ruby-optimist
 version=3.2.1
-release=2
+release=3
 _gemname=optimist
 
 source="https://rubygems.org/downloads/$_gemname-$version.gem"

@@ -1,5 +1,5 @@
 # description : A command-line utility that creates projects from project templates
-# depends : python-binaryornot python-click python-future python-jinja
+# depends : python-binaryornot python-click python-future jinja2
 
 name=python-cookiecutter
 version=2.1.1

@@ -5,7 +5,7 @@ name=cython3
 version=3.3.1
 release=2
 _name=cython
-source="https://files.pythonhosted.org/packages/a9/d8/4981ef716ad0e3ff0d3ef383aefc6b03c4a88dee33b272bf8e0d833001ca/${_name}-${version}.tar.gz"
+source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

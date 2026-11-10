@@ -1,0 +1,20 @@
+# Read current upstream release metadata, excluding prereleases.
+source="https://api.launchpad.net/1.0/python-distutils-extra/releases"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re,subprocess
+text=pathlib.Path("index.html").read_text()
+data=json.loads(text)
+assert len(data["entries"])==data["total_size"],"Release pagination needs review"
+versions=[e["version"] for e in data["entries"] if re.fullmatch(r"[0-9]+(?:\.[0-9]+)*",e["version"]) and e.get("date_released")]
+if not versions:raise SystemExit("No final upstream release found")
+print(max(set(versions),key=lambda v:tuple(map(int,v.split(".")))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

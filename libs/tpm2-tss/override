@@ -1,0 +1,6 @@
+source=https://api.github.com/repos/tpm2-software/tpm2-tss/releases/latest
+url=$source
+get_generic() {
+    uversion=$(python3 -c 'import json; print(json.load(open("index.html"))["tag_name"])') || return 1
+    case "$uversion" in *[!0-9.]*|"") return 1;; esac
+}

@@ -1,2 +1,2 @@
-sh /var/lib/dkms/buildmodules-vboxhost.sh
-depmod -a
+#!/bin/sh
+exec sh ./post-install.sh

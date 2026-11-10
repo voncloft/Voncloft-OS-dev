@@ -1,0 +1,22 @@
+# Use the upstream stable release and reject unexpected tag formats.
+source="https://api.github.com/repos/haasn/${name}/releases/latest"
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json, pathlib, re
+data = json.loads(pathlib.Path('index.html').read_text())
+if data.get('draft') or data.get('prerelease'):
+    raise SystemExit('Not a stable release')
+match = re.fullmatch(r'v([0-9]+(?:\.[0-9]+)*)', data['tag_name'])
+if not match:
+    raise SystemExit('Unexpected upstream tag format')
+print(match[1])
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

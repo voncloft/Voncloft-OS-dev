@@ -3,8 +3,8 @@
 
 name=pkgconf
 version=3.0.10
-release=1
-source="http://distfiles.dereferenced.org/$name/$name-$version.tar.xz"
+release=3
+source="https://distfiles.dereferenced.org/$name/$name-$version.tar.xz"
 
 build() {
 	cd $name-$version

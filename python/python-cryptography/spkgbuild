@@ -4,7 +4,7 @@
 name=python-cryptography
 version=50.0.2
 release=1
-_name=${name#python-}
+_name=cryptography
 source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

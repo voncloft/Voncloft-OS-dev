@@ -3,8 +3,8 @@
 
 _gemname=rspec-mocks
 name=ruby-rspec-mocks
-version=4.0.0
-release=4
+version=3.13.9
+release=1
 
 source="https://rubygems.org/downloads/${_gemname}-${version}.gem"
 options="!checksum"

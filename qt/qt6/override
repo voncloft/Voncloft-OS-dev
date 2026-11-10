@@ -1,19 +1,55 @@
-url="https://download.qt.io/archive/qt/"
+# Qt and WebEngine now release independently. The composite package version
+# makes an update to either component visible to Scratch and update-repo.
+source="https://download.qt.io/official_releases/qt/"
+url=$source
+
 get_generic()
 {
-	fetch
-        uversion=$(grep -i "href" index.html \
-        | grep -Po '(?<=href=")[^"]*' \
-        | egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
-        | sort -V -r \
-        | head -n1)
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import pathlib, re, urllib.request
 
-	url=$(echo $url$uversion/)
-	fetch
-	uversion=$(grep -i "href" index.html \
-        | grep -Po '(?<=href=")[^"]*' \
-        | egrep -o "([0-9]{1,}\.)+[0-9]{1,}" \
-        | sort -V -r \
-        | head -n1)
+root = 'https://download.qt.io/official_releases/'
+base = root + 'qt/'
+key = lambda version: tuple(map(int, version.split('.')))
+def listing(url):
+    with urllib.request.urlopen(url, timeout=30) as response:
+        return response.read().decode()
+def versions(text):
+    return sorted(set(re.findall(r'href="([0-9]+\.[0-9]+\.[0-9]+)/"', text)), key=key, reverse=True)
+def has_source(text, component, version):
+    return f'href="{component}-everywhere-src-{version}.tar.xz"' in text
 
+series = sorted(set(re.findall(r'href="([0-9]+\.[0-9]+)/"',
+                              pathlib.Path('index.html').read_text())), key=key, reverse=True)
+if not series:
+    raise SystemExit('No stable Qt series found')
+qt_version = None
+webengine_version = None
+# Only consider published stable source archives, never beta/RC tags.
+root_listing = listing(root)
+if 'href="qtwebengine/"' in root_listing:
+    engine_base = root + 'qtwebengine/'
+    for candidate in versions(listing(engine_base)):
+        if has_source(listing(engine_base + candidate + '/'), 'qtwebengine', candidate):
+            webengine_version = candidate
+            break
+for branch in series:
+    for candidate in versions(listing(base + branch + '/')):
+        if not candidate.startswith(branch + '.'):
+            continue
+        release_base = base + branch + '/' + candidate + '/'
+        if qt_version is None and has_source(listing(release_base + 'single/'), 'qt', candidate):
+            qt_version = candidate
+        if webengine_version is None and has_source(listing(release_base + 'submodules/'), 'qtwebengine', candidate):
+            webengine_version = candidate
+        if qt_version and webengine_version:
+            print(qt_version + '+' + webengine_version)
+            raise SystemExit(0)
+raise SystemExit('No complete stable Qt/WebEngine source combination found')
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
 }

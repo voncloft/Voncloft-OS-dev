@@ -1,9 +1,9 @@
 # description	: Fast, compact, key-value embedded data store
 
 name=lmdb
-version=0.9.30
+version=1.0.3
 release=1
-source="https://git.openldap.org/openldap/openldap/-/archive/LMDB_$version.tar.bz2"
+source="${name}-${version}.tar.bz2::https://git.openldap.org/openldap/openldap/-/archive/LMDB_${version}/openldap-LMDB_${version}.tar.bz2"
 
 build() {
 	cd *

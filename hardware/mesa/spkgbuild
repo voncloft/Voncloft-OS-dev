@@ -1,4 +1,4 @@
-# depends : bison cbindgen flex gslang libclc libdrm libglvnd libva libvdpau llvm make-ca meson ninja pkgconf python-mako python-packaging python-yaml rust rust-bindgen wayland-protocols xorg-libraries
+# depends : bison cbindgen elfutils flex glslang libclc libdrm libglvnd libva libvdpau llvm make-ca meson ninja pkgconf python-mako python-packaging python-yaml rust rust-bindgen wayland-protocols xorg-libraries
 # description : OpenGL compatible 3D graphics library
 
 name=mesa
@@ -11,6 +11,10 @@ build() {
     cd "$name-$version"
     # Scratch runs under sudo's restricted PATH; Rust is installed under /opt/rustc.
     export PATH="/opt/rustc/bin:$PATH"
+    # Native builds must not fall back to 32-bit pkg-config metadata.
+    export PKG_CONFIG_LIBDIR="/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig"
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH
     rustc --version
     bindgen --version
 

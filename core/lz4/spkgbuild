@@ -2,11 +2,19 @@
 
 name=lz4
 version=1.11.0
-release=1
+release=2
 source="$name-$version.tar.gz::https://github.com/lz4/${name}/archive/v$version.tar.gz"
 
 build() {
 	cd $name-$version
 	make PREFIX=/usr
 	make DESTDIR=$PKG PREFIX=/usr install
+
+	# Preserve the existing package's 32-bit compression library.
+	make -C lib clean
+	make -C lib CC="gcc -m32" PREFIX=/usr LIBDIR=/usr/lib32
+	make -C lib CC="gcc -m32" PREFIX=/usr LIBDIR=/usr/lib32 \
+		DESTDIR="$PWD/DESTDIR32" install
+	install -d "$PKG/usr/lib32"
+	cp -a DESTDIR32/usr/lib32/. "$PKG/usr/lib32/"
 }

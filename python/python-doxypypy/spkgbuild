@@ -4,7 +4,7 @@
 name=python-doxypypy
 version=0.8.8.7
 release=1
-_name=${name#python-}
+_name=doxypypy
 source="https://files.pythonhosted.org/packages/source/d/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

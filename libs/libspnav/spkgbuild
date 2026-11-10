@@ -1,0 +1,14 @@
+# description : Client library for SpaceNavigator and other 3D input devices
+# depends : glibc libx11
+
+name=libspnav
+version=1.2
+release=1
+source="https://github.com/FreeSpacenav/${name}/releases/download/v$version/$name-$version.tar.gz"
+
+build() {
+    cd "$SRC/$name-$version" || return 1
+    ./configure --prefix=/usr --disable-debug || return 1
+    make || return 1
+    make DESTDIR="$PKG" install
+}

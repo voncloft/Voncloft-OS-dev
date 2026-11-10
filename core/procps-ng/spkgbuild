@@ -3,12 +3,13 @@
 
 name=procps-ng
 version=4.0.7
-release=1
+release=3
 source="https://sourceforge.net/projects/${name}/files/Production/$name-$version.tar.xz"
 
+# Sysvinit owns pidof on VonOS; do not install a second provider.
 build() {
-	cd procps-$version
-	sed 's:<ncursesw/:<:g' -i watch.c
+	cd "$name-$version"
+	sed 's:<ncursesw/:<:g' -i src/watch.c
 	./configure \
     	--prefix=/usr \
     	--exec-prefix=/ \
@@ -17,7 +18,8 @@ build() {
     	--bindir=/usr/bin \
     	--sbindir=/usr/bin \
     	--enable-watch8bit \
-    	--disable-kill
+        --disable-kill \
+        --disable-pidof
 	make
 	make DESTDIR=$PKG install
 

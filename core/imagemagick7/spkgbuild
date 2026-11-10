@@ -1,11 +1,26 @@
 # description : Tools and libraries for reading, writing, and manipulating images
-# depends : bzip2 fontconfig freetype2 graphviz lcms2 libjpeg-turbo libpng libraw librsvg libtiff libtool libwebp libxext libxml2 libxt openjpeg pango perl pkgconf xz zlib zstd
+# depends : bzip2 fontconfig freetype2 graphviz lcms2 libjpeg-turbo libpng libraw librsvg libtiff libtool libwebp libxext libxml2 libxt openjpeg2 pango perl pkgconf xz zlib zstd
 
 name=imagemagick7
 version=7.1.2.35
-release=1
-options="libtool !checksum"
+release=2
+KEEP_LIBTOOL="yes"
 source="https://download.imagemagick.org/releases/ImageMagick-${version%.*}-${version##*.}.tar.xz"
+
+backup="etc/ImageMagick-7/quantization-table.xml
+        etc/ImageMagick-7/delegates.xml
+        etc/ImageMagick-7/thresholds.xml
+        etc/ImageMagick-7/type.xml
+        etc/ImageMagick-7/type-urw-base35.xml
+        etc/ImageMagick-7/type-windows.xml
+        etc/ImageMagick-7/type-dejavu.xml
+        etc/ImageMagick-7/policy.xml
+        etc/ImageMagick-7/log.xml
+        etc/ImageMagick-7/type-urw-base35-type1.xml
+        etc/ImageMagick-7/colors.xml
+        etc/ImageMagick-7/mime.xml
+        etc/ImageMagick-7/type-ghostscript.xml
+        etc/ImageMagick-7/type-apple.xml"
 
 build() {
     cd "$SRC"/ImageMagick*/

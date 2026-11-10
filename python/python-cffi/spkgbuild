@@ -4,7 +4,7 @@
 name=python-cffi
 version=2.1.1
 release=2
-_name=${name#python-}
+_name=cffi
 source="https://files.pythonhosted.org/packages/source/c/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

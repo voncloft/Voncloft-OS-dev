@@ -1,0 +1,55 @@
+Description: Reject oversized bidi arrays before size_t multiplication
+ ICU-23397 checks the byte count after multiplication. On 32-bit hosts
+ a large run count can already have wrapped by that point. Bound the
+ element count first for every bidi array-allocation macro. This also
+ guards the older compatibility runtime's signed allocation sizes.
+ The upstream getRunsBufferOverflow test reproduces SIGSEGV without this
+ patch. No test is disabled or weakened by this allocation guard.
+Reference: https://github.com/unicode-org/icu/blob/release-79.1/icu4c/source/common/ubidiimp.h
+
+--- a/common/ubidiimp.h
++++ b/common/ubidiimp.h
+@@ -467,8 +467,9 @@
+                         (pBiDi)->mayAllocateText, (length))
+ 
+ #define getRunsMemory(pBiDi, length) \
+-        ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->runsMemory, &(pBiDi)->runsSize, \
+-                        (pBiDi)->mayAllocateRuns, (length)*sizeof(Run))
++        ((uint64_t)(length) <= INT32_MAX / sizeof(Run) && \
++         ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->runsMemory, &(pBiDi)->runsSize, \
++                        (pBiDi)->mayAllocateRuns, (length)*sizeof(Run)))
+ 
+ /* additional macros used by ubidi_open() - always allow allocation */
+ #define getInitialDirPropsMemory(pBiDi, length) \
+@@ -480,19 +481,23 @@
+                         true, (length))
+ 
+ #define getInitialOpeningsMemory(pBiDi, length) \
+-        ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->openingsMemory, &(pBiDi)->openingsSize, \
+-                        true, (length)*sizeof(Opening))
++        ((uint64_t)(length) <= INT32_MAX / sizeof(Opening) && \
++         ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->openingsMemory, &(pBiDi)->openingsSize, \
++                        true, (length)*sizeof(Opening)))
+ 
+ #define getInitialParasMemory(pBiDi, length) \
+-        ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->parasMemory, &(pBiDi)->parasSize, \
+-                        true, (length)*sizeof(Para))
++        ((uint64_t)(length) <= INT32_MAX / sizeof(Para) && \
++         ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->parasMemory, &(pBiDi)->parasSize, \
++                        true, (length)*sizeof(Para)))
+ 
+ #define getInitialRunsMemory(pBiDi, length) \
+-        ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->runsMemory, &(pBiDi)->runsSize, \
+-                        true, (length)*sizeof(Run))
++        ((uint64_t)(length) <= INT32_MAX / sizeof(Run) && \
++         ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->runsMemory, &(pBiDi)->runsSize, \
++                        true, (length)*sizeof(Run)))
+ 
+ #define getInitialIsolatesMemory(pBiDi, length) \
+-        ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->isolatesMemory, &(pBiDi)->isolatesSize, \
+-                        true, (length)*sizeof(Isolate))
++        ((uint64_t)(length) <= INT32_MAX / sizeof(Isolate) && \
++         ubidi_getMemory((BidiMemoryForAllocation *)&(pBiDi)->isolatesMemory, &(pBiDi)->isolatesSize, \
++                        true, (length)*sizeof(Isolate)))
+ 
+ #endif

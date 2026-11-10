@@ -2,7 +2,7 @@
 
 name=sbc
 version=2.2
-release=1
+release=2
 source="https://mirrors.edge.kernel.org/pub/linux/bluetooth/$name-$version.tar.xz"
 
 build() {

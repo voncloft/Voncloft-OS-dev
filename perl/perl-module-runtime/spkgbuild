@@ -2,11 +2,11 @@
 # depends : perl perl-module-build
 
 name=perl-module-runtime
-version=0.016
-release=2
+version=0.018
+release=1
 
 _name=Module-Runtime
-source="https://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/${_name}-${version}.tar.gz"
+source="https://cpan.metacpan.org/authors/id/H/HA/HAARG/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

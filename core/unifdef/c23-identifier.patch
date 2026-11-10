@@ -1,0 +1,53 @@
+# Rename an identifier reserved by C23 (GCC 15 default).
+# See https://www.linuxfromscratch.org/blfs/view/svn/general/unifdef.html
+--- a/unifdef.c
++++ b/unifdef.c
+@@ -202,7 +202,7 @@
+ static int              delcount;		/* count of deleted lines */
+ static unsigned         blankcount;		/* count of blank lines */
+ static unsigned         blankmax;		/* maximum recent blankcount */
+-static bool             constexpr;		/* constant #if expression */
++static bool             unifdef_constexpr;		/* constant #if expression */
+ static bool             zerosyms;		/* to format symdepth output */
+ static bool             firstsym;		/* ditto */
+ 
+@@ -1006,7 +1006,7 @@
+ /*
+  * Function for evaluating the innermost parts of expressions,
+  * viz. !expr (expr) number defined(symbol) symbol
+- * We reset the constexpr flag in the last two cases.
++ * We reset the unifdef_constexpr flag in the last two cases.
+  */
+ static Linetype
+ eval_unary(const struct ops *ops, long *valp, const char **cpp)
+@@ -1086,7 +1086,7 @@
+ 			*valp = (value[sym] != NULL);
+ 			lt = *valp ? LT_TRUE : LT_FALSE;
+ 		}
+-		constexpr = false;
++		unifdef_constexpr = false;
+ 	} else if (!endsym(*cp)) {
+ 		debug("eval%d symbol", prec(ops));
+ 		sym = findsym(&cp);
+@@ -1103,7 +1103,7 @@
+ 			lt = *valp ? LT_TRUE : LT_FALSE;
+ 			cp = skipargs(cp);
+ 		}
+-		constexpr = false;
++		unifdef_constexpr = false;
+ 	} else {
+ 		debug("eval%d bad expr", prec(ops));
+ 		return (LT_ERROR);
+@@ -1170,10 +1170,10 @@
+ 	long val = 0;
+ 
+ 	debug("eval %s", *cpp);
+-	constexpr = killconsts ? false : true;
++	unifdef_constexpr = killconsts ? false : true;
+ 	ret = eval_table(eval_ops, &val, cpp);
+ 	debug("eval = %d", val);
+-	return (constexpr ? LT_IF : ret == LT_ERROR ? LT_IF : ret);
++	return (unifdef_constexpr ? LT_IF : ret == LT_ERROR ? LT_IF : ret);
+ }
+ 
+ /*

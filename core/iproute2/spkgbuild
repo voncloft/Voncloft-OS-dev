@@ -13,6 +13,6 @@ build() {
 	
 	[ -e /usr/lib/pkgconfig/xtables.pc ] || sed -i 's/m_ipt.o//' tc/Makefile
 
-	make
-	make DESTDIR=$PKG install
+	make SBINDIR=/usr/sbin
+	make SBINDIR=/usr/sbin DESTDIR=$PKG install
 }

@@ -1,22 +1,24 @@
 # description	: Library and tools used to manipulate, convert and view Scalable Vector Graphic (SVG) images
-# depends	: cairo cargo-c gdk-pixbuf pango glib vala
+# depends	: cairo cargo-c gdk-pixbuf pango glib vala rust
 
 name=librsvg
-version=2.56.0
+version=2.63.4
 release=1
 source="https://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.xz"
 options="!checksum"
 build() {
 	cd $name-$version
-	sed -e "/OUTDIR/s|,| / 'librsvg-2.60.0', '--no-namespace-dir',|" \
-    -e '/output/s|Rsvg-2.0|librsvg-2.60.0|'                      \
+	export PATH="/opt/rustc/bin:$PATH"
+	export CARGO_BUILD_JOBS="${NINJAJOBS:-6}"
+	sed -e "/OUTDIR/s|,| / 'librsvg-$version', '--no-namespace-dir',|" \
+    -e "/output/s|Rsvg-2.0|librsvg-$version|"                      \
     -i doc/meson.build
 
     	mkdir build &&
 	cd    build &&
 
-	meson setup --prefix=/usr --buildtype=release .. &&
-	ninja
+	meson setup --prefix=/usr --buildtype=release -Dtests=false -Dpixbuf=enabled -Dpixbuf-loader=enabled .. &&
+	ninja -j1
 
-	DESTDIR=$PKG ninja install
+	DESTDIR=$PKG ninja -j1 install
 }

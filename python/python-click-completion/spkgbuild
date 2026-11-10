@@ -1,5 +1,5 @@
 # description : Add or enhance bash, fish, zsh and powershell completion in Click
-# depends : python-click python-jinja python-six python-shellingham
+# depends : python-click jinja2 python-six python-shellingham
 
 name=python-click-completion
 version=0.5.2

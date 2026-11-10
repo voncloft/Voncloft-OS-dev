@@ -1,22 +1,37 @@
 # description	: Powerful x86 virtualization for enterprise as well as home use
-# depends	:  qt6 vboxdrv-boot
+# depends : qt6 vboxdrv-boot kmod make gcc
 
 name=virtualbox
 _name=${name%-*}
 version=7.2.22.175245
 _version=${version%.*}
 _build=${version##*.}
-release=1
-source="http://download.virtualbox.org/virtualbox/$_version/VirtualBox-${_version}-${_build}-Linux_amd64.run
+release=2
+backup="etc/vbox/vbox.cfg etc/revdep.d/virtualbox.conf etc/ld.so.conf.d/virtualbox.conf etc/modules-load.d/virtualbox.conf etc/revdep.d/virtualbox.paths"
+NO_STRIP=yes
+source="https://download.virtualbox.org/virtualbox/$_version/VirtualBox-${_version}-${_build}-Linux_amd64.run
 	virtualbox.60-vboxdrv.rules
-	dkms.conf
-	buildmodules-vboxhost.sh"
+	dkms.conf"
+
+# Cached modules must match the kernel selected for this installation.
+if [ -n "${INSTALL_PKG:-}${UPGRADE_PKG:-}${REINSTALL_PKG:-}" ]; then
+    _vbox_kernel=${VBOX_KERNEL_RELEASE:-$(uname -r)}
+    _vbox_package="$PACKAGE_DIR/$name-$version-$release.spkg.tar.$COMPRESSION_MODE"
+    if [ -f "$_vbox_package" ] && [ -z "${FORCE_REBUILD:-}" ]; then
+        _vbox_cached=$(tar -xOf "$_vbox_package" usr/share/virtualbox/kernel-release) || exit 1
+        [ "$_vbox_cached" = "$_vbox_kernel" ] || {
+            echo "ERROR: VirtualBox modules target $_vbox_cached; rebuild for $_vbox_kernel with -f." >&2
+            exit 1
+        }
+    fi
+    unset _vbox_kernel _vbox_package _vbox_cached
+fi
 
 build() {
 	_installdir=/opt/VirtualBox
 
 	# extract source file
-	sh VirtualBox-${_version}-${_build}-Linux_amd64.run --keep --noexec --target $SRC/
+	sh VirtualBox-${_version}-${_build}-Linux_amd64.run --nox11 --keep --noexec --target $SRC/
 
 	# creating directories
 	mkdir -p $PKG/opt/VirtualBox $PKG/etc/vbox $PKG/usr/bin $PKG/lib/udev/rules.d/ \
@@ -24,15 +39,18 @@ build() {
 	    $PKG/etc/ld.so.conf.d
 
 	cd $PKG/opt/VirtualBox
-	tar xfj $SRC/VirtualBox.tar.bz2
+	tar --no-same-owner -xjf "$SRC/VirtualBox.tar.bz2"
+	# Qt6 is bundled; obsolete Python2 and GTK2 integrations are optional.
+	rm -f VBoxPython2*.so plugins/platformthemes/libqgtk2VBox.so plugins/styles/libqgtk2styleVBox.so
+	install -m755 "$SRC/vboxdrv.sh" "$PKG/opt/VirtualBox/vboxdrv.sh"
 	rm -Rf $PKG/opt/VirtualBox/sdk
-	for i in VirtualBox VBoxManage VBoxSDl VBoxHeadless; do
+	for i in VirtualBox VBoxManage VBoxSDL VBoxHeadless; do
 	    ln -s /opt/VirtualBox/VBox.sh $PKG/usr/bin/$i
 	done
 
 	cd components
 	for i in VBoxDDU.so VBoxREM.so VBoxRT.so VBoxVMM.so VBoxXPCOM.so; do
-	    ln -s ../$i .
+	    [ ! -f "../$i" ] || ln -s "../$i" .
 	done
 	cd -
 
@@ -75,22 +93,30 @@ build() {
 	chmod g-w $PKG/opt/VirtualBox
 	chmod g-w $PKG/opt/VirtualBox/components
 
-	# exclude library for revdep
-	mkdir -p $PKG/etc/revdep.d/
-	echo VBoxRT.so > $PKG/etc/revdep.d/$_name.conf
-	echo libpython2.6.so.1.0 >> $PKG/etc/revdep.d/$_name.conf
+	# Extension packs inherit these private libraries from their host process.
+	mkdir -p "$PKG/etc/revdep.d" "$PKG/opt/VirtualBox/ExtensionPacks"
+	printf '%s\n' '/opt/VirtualBox/ /opt/VirtualBox' > "$PKG/etc/revdep.d/virtualbox.paths"
+	printf '%s\n' '# Private libraries are checked using virtualbox.paths; no exclusions.' > "$PKG/etc/revdep.d/virtualbox.conf"
 
-	# dkms
-	install -d $PKG/usr/src/
-	mv $PKG/opt/VirtualBox/src/vboxhost $PKG/usr/src/vboxhost-$_version
-	sed "s,@VERSION@,$_version," $SRC/dkms.conf > $PKG/usr/src/vboxhost-$_version/dkms.conf
-	rm -fr $PKG/opt/VirtualBox/src/
-
-	# dkms build modules script
-	mkdir -p $PKG/var/lib/dkms
-	sed -e "s/@name@/vboxhost/g" \
-	    -e "s/@version@/$_version/g" \
-	$SRC/buildmodules-vboxhost.sh > $PKG/var/lib/dkms/buildmodules-vboxhost.sh
+	# Compile and package modules BEFORE installation; failures cannot affect
+	# the running host. Retain source for later kernel rebuilds.
+	kernver=${VBOX_KERNEL_RELEASE:-$(uname -r)}
+	kernel_build="/lib/modules/$kernver/build"
+	test "$(cat "$kernel_build/include/config/kernel.release")" = "$kernver"
+	make -C "$PKG/opt/VirtualBox/src/vboxhost" KERN_VER="$kernver" KERN_DIR="$kernel_build"
+	for module in vboxdrv vboxnetadp vboxnetflt; do
+	    module_file="$PKG/opt/VirtualBox/src/vboxhost/$module.ko"
+	    case "$(modinfo -F version "$module_file")" in "$_version "*) ;; *) return 1 ;; esac
+	    case "$(modinfo -F vermagic "$module_file")" in "$kernver "*) ;; *) return 1 ;; esac
+	    install -Dm644 "$module_file" "$PKG/usr/lib/modules/$kernver/misc/$module.ko"
+	done
+	make -C "$PKG/opt/VirtualBox/src/vboxhost" KERN_VER="$kernver" KERN_DIR="$kernel_build" clean
+	install -d "$PKG/usr/src" "$PKG/usr/share/virtualbox"
+	mv "$PKG/opt/VirtualBox/src/vboxhost" "$PKG/usr/src/vboxhost-$_version"
+	sed "s,@VERSION@,$_version," "$SRC/dkms.conf" > "$PKG/usr/src/vboxhost-$_version/dkms.conf"
+	ln -s "/usr/src/vboxhost-$_version" "$PKG/opt/VirtualBox/src/vboxhost"
+	printf '%s\n' "$kernver" > "$PKG/usr/share/virtualbox/kernel-release"
+	printf '%s %s\n' "$_version" "$_build" > "$PKG/usr/share/virtualbox/package-version"
 
 	# load modules on boot
 	install -d $PKG/etc/modules-load.d/

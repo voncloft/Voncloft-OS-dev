@@ -2,10 +2,10 @@
 # depends : python python-smartypants hatchling python-wheel
 
 name=python-typogrify
-version=2.0.7
+version=2.1.0
 release=1
 
-_name=${name#python-}
+_name=typogrify
 source="https://files.pythonhosted.org/packages/source/t/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

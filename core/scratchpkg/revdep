@@ -1,18 +1,47 @@
 #!/bin/sh
 #
-# script to fix broken binaries/libraries
+#  scratchpkg
 #
+#  Copyright (c) 2018 by Emmett1  (emmett1.2miligrams@gmail.com)
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+
+interrupted() {
+	cleanup
+	echo
+	exit 1
+}
+
+cleanup() {
+	rm -f $FILE_LIST
+}
 
 usage() {
 	cat << EOF
 Usage:
   $(basename $0) [option] [arg]
-  
+
 Options:
-  -r, --rebuild     rebuild & reinstall broken package
-  -y, --yes         dont ask user confirmation to rebuild package (use with -r/--rebuild)
-  -h, --help        print this help message
-  
+  -a, --all                         print all affected files
+  -r, --rebuild                     rebuild & reinstall broken package
+  -p, --package <pkg>               check for certain package
+  -f, --no-filter                   skip filter (exclude) dirs, files and libraries
+  -e, --exclude <pkg1 pkg2 pkgN>    exclude package when rebuild (use with -r/--rebuild)
+  -y, --yes                         dont ask user confirmation to rebuild package (use with -r/--rebuild)
+  -h, --help                        print this help message
+
 EOF
 }
 
@@ -29,12 +58,12 @@ extract_opts() {
 	while [ "$1" ]; do
 		case $1 in
 			--*) opts="$opts $1";;
-			 -*) char=${#1}; count=1
-			     while [ "$count" != "$char" ]; do
-			         count=$((count+1))
-			         opts="$opts -$(echo $1 | cut -c $count)"
-			     done;;
-			  *) opts="$opts $1"
+			-*) char=${#1}; count=1
+			    while [ "$count" != "$char" ]; do
+					count=$((count+1))
+					opts="$opts -$(echo $1 | cut -c $count)"
+				done;;
+			*) opts="$opts $1"
 		esac
 		shift
 	done
@@ -44,91 +73,294 @@ extract_opts() {
 parse_opt() {
 	while [ $1 ]; do
 		case $1 in
-			-r|--rebuild) REBUILD=1 ;;
-			    -y|--yes) NOCONFIRM=1 ;;
-			   -h|--help) usage; exit 0 ;;
-			           *) echo "Invalid option ($1)"; exit 1 ;;
+			-a|--all)       PRINTALL=1 ;;
+			-r|--rebuild)   REBUILD=1 ;;
+			-y|--yes)       NOCONFIRM=1 ;;
+			-f|--no-filter) NO_FILTER=1 ;;
+			-e|--exclude)	while [ "$2" ]; do
+								case $2 in
+									-*) break ;;
+									*) [ -z "$expkg" ] && expkg="$2" || expkg="$expkg $2"
+								esac
+								shift
+							done ;;
+			-p|--package)   [ -n "${2-}" ] || { echo "Missing package name" >&2; exit 1; }; PKG=$2; shift ;;
+			-h|--help)		usage; exit 0 ;;
+			*)				echo "Invalid option ($1)"; exit 1 ;;
 		esac
 		shift
 	done
 }
 
-rebuild() {	
-	printf "Calculating rebuild order...\033[0K\r"
-	for allpkg in $(scratch deplist $pkgdone | awk '{print $2}'); do
-		for pkg in $pkgdone; do
+rebuild() {
+	for allpkg in $(scratch deplist $ALLPKG | awk '{print $2}'); do
+		for pkg in $ALLPKG; do
 			if [ "$pkg" = "$allpkg" ]; then
-				order="$order $allpkg"
+					if grep -v '^[[:space:]]*#' /etc/scratchpkg.mask 2>/dev/null | grep -Fxq -- "$pkg"; then
+						printf 'Skipping masked package: %s\n' "$pkg"
+						break
+					fi
+				if [ -z "$order" ]; then
+					order="$allpkg"
+				else
+					order="$order $allpkg"
+				fi
 				break
 			fi
 		done
 	done
-	if [ "$order" ]; then
+	if [ -n "$order" ]; then
 		if [ "$NOCONFIRM" = "" ]; then
+			echo
 			echo "Package will be rebuild & reinstall by this order:"
-			echo "$order"
+			echo " $order"
 			echo
 			confirm "Continue rebuild & reinstall broken packages?" "Operation cancelled."
 		fi
 		for p in $order; do
-			scratch build -f $p && scratch install -r $p || exit 1
+			scratch build -f $p   || { cleanup; exit 1; }
+			scratch install -r $p || { cleanup; exit 1; }
 		done
 	fi
 }
 
-scan_files() {
-	echo "Checking for broken linkage..."
-	for i in /lib/* /usr/lib/* /bin/* /sbin/* /usr/bin/* /usr/sbin/*; do
-		case "$(file $i)" in
-			*executable*statically\ linked*|*symbolic\ link*) continue;;
-		esac
-		case "$(file -bi $i)" in
-			*application/x-sharedlib* | *application/x-executable* | *application/x-pie-executable*)
-				printf " $i\033[0K\r"
-				for f in $(ldd $i 2>&1 | grep "Error loading shared library" | sed "s/.*needed by //;s/)//" | sort | uniq); do
-					[ "$f" ] || continue
-					case "$(file $f)" in
-						*symbolic\ link*) continue;;
-					esac
-					if ! echo $done | grep -wq $f; then
-						pkg=$(scratch provide $f$ | awk '{print $1}' | head -n1)
-						[ "$pkg" ] || continue
-						req=$(ldd $f 2>&1 | grep "needed by $f" | awk '{print $5}' | sed 's/://')
-						echo " $pkg -> $f (required $req)"
-						if ! echo $pkgdone | grep -wq $pkg; then
-							pkgdone="$pkgdone $pkg"
-							unset pkg
-						fi
-						done="$done $f"
-						unset f
-					fi
-				done
-		esac
+rev_exclude() {
+	# excluded dirs
+	EXCLUDE_DIRS="$(grep -v ^# /etc/revdep.conf 2>/dev/null | grep /$ | uniq | sed 's/\/*$//g')"
+	EXCLUDE_DIRS="$EXCLUDE_DIRS $(grep -v ^# /etc/revdep.d/*.conf 2>/dev/null | cut -d : -f2 | grep /$ | uniq | sed 's/\/*$//g')"
+
+	for dd in $EXCLUDE_DIRS; do
+		if [ -d $dd ]; then
+			_DIRS="$_DIRS $dd"
+			ged="$ged -e ^$dd"
+		fi
 	done
-	printf "\033[0K"
+
+	EXCLUDE_DIRS=$(echo $_DIRS | tr ' ' '\n' | sort | uniq)
+
+	for d in $EXCLUDE_DIRS; do
+		EXCLUDED_DIRS="$EXCLUDED_DIRS -path $d -prune -o "
+	done
+
+	# excluded files
+	EXCLUDE_FILES="$(grep -v ^# /etc/revdep.conf 2>/dev/null | grep -v /$ | grep ^/)"
+	EXCLUDE_FILES="$EXCLUDE_FILES $(grep -v ^# /etc/revdep.d/*.conf 2>/dev/null | cut -d : -f2 | grep -v /$ | grep ^/)"
+
+	for ff in $EXCLUDE_FILES; do
+		if [ -f $ff ]; then
+			_FILES="$_FILES $ff"
+			gef="$gef -e ^$ff$"
+		fi
+	done
+
+	EXCLUDE_FILES=$(echo $_FILES | tr ' ' '\n' | sort | uniq)
+
+	for f in $EXCLUDE_FILES; do
+		EXCLUDED_FILES="$EXCLUDED_FILES ! -path $f "
+	done
+
+	# excluded libraries
+	EXCLUDE_LIBS="$(grep -v ^# /etc/revdep.conf 2>/dev/null | grep -v ^/ | uniq | grep ".*.so.*")"
+	EXCLUDE_LIBS="$EXCLUDE_LIBS $(grep -v ^# /etc/revdep.d/*.conf 2>/dev/null  | cut -d : -f2 | grep -v ^/ | uniq | grep ".*.so.*")"
+
+	EXCLUDED_LIBS=$(echo $EXCLUDE_LIBS | tr ' ' '\n' | sort | uniq)
 }
 
+trap "interrupted" 1 2 3 15
+
+command -v pkgadd >/dev/null 2>&1 || {
+	echo "'pkgadd' not found in \$PATH!"
+	exit 1
+}
+
+# package database directory
+PKGDB_DIR="$(pkgadd --print-dbdir)"
+SEARCH_DIRS="/bin /usr/bin /sbin /usr/sbin /lib /usr/lib /lib32 /usr/lib32 /lib64 /usr/lib64 /usr/libexec"
+
 parse_opt $(extract_opts "$@")
+
+. /usr/lib/scratchpkg/revdep-runtime-paths.sh
+revdep_load_runtime_paths /etc/revdep.d || exit 1
 
 if [ "$(id -u)" != 0 ] && [ "$REBUILD" = 1 ]; then
 	echo "$(basename $0) need to run as root to rebuild & reinstall package"
 	exit 1
 fi
 
-scan_files
+if [ "$PKG" ] && [ ! -s "$PKGDB_DIR/$PKG" ]; then
+	echo "ERROR: Package '$PKG' not installed"
+	cleanup
+	exit 1
+fi
 
-if [ "$pkgdone" ]; then
+# get search extra dirs
+while read -r line; do
+	if [ "$(echo $line | cut -c 1)" = "/" ]; then
+		EXTRA_SEARCH_DIRS="$EXTRA_SEARCH_DIRS $line "
+	fi
+done < /etc/ld.so.conf
+
+if [ -d /etc/ld.so.conf.d/ ]; then
+	for dir in /etc/ld.so.conf.d/*.conf; do
+		while read -r line; do
+			if [ "$(echo $line | cut -c 1)" = "/" ]; then
+				EXTRA_SEARCH_DIRS="$EXTRA_SEARCH_DIRS $line "
+			fi
+		done < $dir
+	done
+fi
+
+if [ "$NO_FILTER" != 1 ]; then
+	rev_exclude
+fi
+
+# search dirs
+TARGET_SEARCH_DIRS="$SEARCH_DIRS $EXTRA_SEARCH_DIRS"
+
+FILE_LIST="/tmp/.revdep.$$"
+
+echo "SEARCH DIRS:"
+for d in $TARGET_SEARCH_DIRS; do
+	if [ -d $d ]; then
+		SEARCH_DIRS="$SEARCH_DIRS $d"
+		echo " $d"
+	fi
+done
+echo
+
+echo "APPLICATION LIBRARY PATHS:"
+for mapping in $REVDEP_RUNTIME_PATHS; do
+    printf " %s -> %s\n" "${mapping%%=*}" "${mapping#*=}"
+done
+echo
+
+echo "EXCLUDED DIRS:"
+for dd in $EXCLUDE_DIRS; do
+	echo " $dd"
+done
+echo
+
+echo "EXCLUDED FILES:"
+for ff in $EXCLUDE_FILES; do
+	echo " $ff"
+done
+echo
+
+echo "EXCLUDED LIBS:"
+for ll in $EXCLUDED_LIBS; do
+	echo " $ll"
+done
+echo
+
+if [ "$PKG" ]; then
+	for D in $TARGET_SEARCH_DIRS; do
+		gx="$gx -e ^$D"
+	done
+	gx="$gx -e *\.so -e *\.so\.*"
+	if [ -n "$gef" ]; then
+		filterfile="grep -v $gef"
+	else
+		filterfile=cat
+	fi
+	if [ -n "$ged" ]; then
+		filterdir="grep -v $ged"
+	else
+		filterdir=cat
+	fi
+	printf "Find '$PKG' files... "
+	# Flat Scratch records contain version/release first, then payload paths.
+	sed '1d; s,^,/,' "$PKGDB_DIR/$PKG" | $filterfile | $filterdir > "$FILE_LIST"
+else
+	printf "Find all files... "
+	find $SEARCH_DIRS $EXCLUDED_DIRS $EXCLUDED_FILES -type f \( -perm /+u+x -o -name '*.so' -o -name '*.so.*' \) -print 2> /dev/null | sort -u > $FILE_LIST
+fi
+
+total=$(wc -l $FILE_LIST | awk '{print $1}')
+count=0
+
+echo "$total files found"
+
+echo "Checking for broken linkage..."
+
+while IFS= read -r line; do
+	NEW_LIB_NAME=
+	count=$(( count + 1 ))
+	libname=${line##*/}
+	printf " $(( 100*count/total ))%% $libname\033[0K\r"
+	case "$(file -bi "$line")" in
+		*application/x-sharedlib* | *application/x-executable* | *application/x-pie-executable*)
+			LINK_REPORT=$(revdep_link_report "$line" 2>&1)
+			if printf '%s\n' "$LINK_REPORT" | grep -q "not found"; then
+				LIB_NAME=$(printf '%s\n' "$LINK_REPORT" | awk '/=> not found/ {print $1}' | sort -u)
+				VERSION_ERROR=$(printf '%s\n' "$LINK_REPORT" | grep 'version .*not found')
+				for l in $LIB_NAME; do
+					if ! echo $EXCLUDED_LIBS | grep -qw $l; then
+						NEW_LIB_NAME="$NEW_LIB_NAME $l"
+					fi
+				done
+				[ "$NEW_LIB_NAME$VERSION_ERROR" ] || continue
+				LIB_NAME=$NEW_LIB_NAME
+				OWNER_NAMES=$(python3 /usr/lib/scratchpkg/ownership.py --root / \
+					--database "$PKGDB_DIR" --owners-of "${line#/}") || {
+					printf 'ERROR: Cannot resolve package ownership for %s\n' "$line" >&2
+					cleanup
+					exit 1
+				}
+				if [ -z "$OWNER_NAMES" ]; then
+					UNOWNED_BROKEN=$(( ${UNOWNED_BROKEN:-0} + 1 ))
+					if [ -n "$VERSION_ERROR" ]; then
+						printf ' unowned -> %s (required symbol version unavailable)\n' "$line"
+					fi
+					for missing in $LIB_NAME; do
+						printf ' unowned -> %s (requires %s)\n' "$line" "$missing"
+					done
+					continue
+				fi
+				for PKG_NAME in $OWNER_NAMES; do
+				echo "$expkg" | tr ' ' '\n' | grep -Fxq -- "$PKG_NAME" && continue
+				if [ -n "$VERSION_ERROR" ]; then
+					printf ' %s -> %s (required symbol version unavailable)\n' "$PKG_NAME" "$line"
+					echo "$ALLPKG" | tr ' ' '\n' | grep -Fxq -- "$PKG_NAME" || ALLPKG="$ALLPKG $PKG_NAME"
+				fi
+				REQ_LIB=$(objdump -p $line 2>/dev/null | grep NEEDED | awk '{print $2}' | tr '\n' ' ')
+				for i in $LIB_NAME; do
+					[ "$PRINTALL" = 1 ] && echo " $PKG_NAME -> $line (requires $i)"
+					if echo $REQ_LIB | tr ' ' '\n' | grep -qx $i; then
+						[ "$PRINTALL" = 1 ] || echo " $PKG_NAME -> $line (requires $i)"
+						if echo "$ALLPKG" | tr ' ' '\n' | grep -qx "$PKG_NAME"; then
+							continue
+						else
+							ALLPKG="$ALLPKG $PKG_NAME"
+						fi
+					fi
+				done
+				done
+			fi
+			;;
+	esac
+	unset NEW_LIB_NAME
+done < $FILE_LIST
+
+printf "\033[0K"
+
+if [ "$ALLPKG" ]; then
 	echo
 	echo "Broken package(s):"
-	for rebuild in $pkgdone; do
+	for rebuild in $ALLPKG; do
 		echo " $rebuild"
 	done
-	echo
 	if [ "$REBUILD" = 1 ]; then
 		rebuild
 	fi
-else
-	echo "All packages is doing fine."
+elif [ "${UNOWNED_BROKEN:-0}" -eq 0 ]; then
+	echo "All packages are doing fine."
 fi
+
+if [ "${UNOWNED_BROKEN:-0}" -gt 0 ]; then
+	printf '\nUnowned files with broken linkage: %s\n' "$UNOWNED_BROKEN"
+	printf '%s\n' 'These files have no package to rebuild automatically; repair their provider.'
+fi
+
+cleanup
 
 exit 0

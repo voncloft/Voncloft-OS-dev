@@ -2,9 +2,9 @@
 # depends : python ninja python-setuptools python-wheel
 
 name=meson
-version=1.1.0
-release=2
-source="https://files.pythonhosted.org/packages/source/m/${name}/${name}-$version.tar.gz"
+version=1.12.1
+release=1
+source="https://files.pythonhosted.org/packages/source/m/${name}/${name}-${version}.tar.gz"
 options="!checksum"
 
 build() {

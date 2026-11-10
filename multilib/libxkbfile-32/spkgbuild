@@ -1,27 +1,20 @@
-# description	: X11 keyboard file manipulation library
-# depends	: libxkbfile
+# description : X11 keyboard file manipulation library
+# depends : libxkbfile libx11-32 meson ninja
 
 name=libxkbfile-32
 version=1.2.0
-release=1
-_name=${name%-32}
-source="https://www.x.org/pub/individual/lib/${_name}-${version}.tar.xz"
+release=2
+source="https://www.x.org/pub/individual/lib/libxkbfile-$version.tar.xz"
 
 build() {
-	cd libxkbfile-$version
-
-	export CC="gcc -m32"
-	export CXX="g++ -m32"
-	export PKG_CONFIG_PATH="/usr/lib32/pkgconfig"
-
-	./configure \
-		--prefix=/usr \
-                --sysconfdir=/etc \
-		--libdir=/usr/lib32 \
-                --localstatedir=/var \
-                --disable-static
-	make
-	make DESTDIR=$PWD/DESTDIR install
-	mkdir -p $PKG/usr/lib32
-	cp -Rv DESTDIR/usr/lib32/* $PKG/usr/lib32
+    cd "libxkbfile-$version"
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export PKG_CONFIG_PATH="/usr/lib32/pkgconfig:/usr/share/pkgconfig"
+    export PKG_CONFIG_LIBDIR="$PKG_CONFIG_PATH"
+    meson setup build --prefix=/usr --libdir=lib32 --buildtype=release
+    meson compile -C build
+    DESTDIR="$PWD/DESTDIR" meson install -C build
+    install -d "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

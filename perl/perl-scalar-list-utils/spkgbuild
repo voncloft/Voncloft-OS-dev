@@ -2,8 +2,8 @@
 # depends : perl
 
 name=perl-scalar-list-utils
-version=1.63
-release=2
+version=1.70
+release=1
 
 _name=Scalar-List-Utils
 source="https://cpan.metacpan.org/authors/id/P/PE/PEVANS/${_name}-${version}.tar.gz"
@@ -11,7 +11,9 @@ options="!checksum"
 
 build() {
    cd *
-   perl Makefile.PL
+   # Perl itself owns the core-module .3 manuals. Keep this separately
+   # packaged release documented in the standard Perl-module section.
+   perl Makefile.PL MAN3EXT=3pm
    make
    make DESTDIR=$PKG install
 }

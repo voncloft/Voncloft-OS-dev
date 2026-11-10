@@ -3,8 +3,8 @@
 
 name=xkeyboard-config
 version=2.48
-release=1
-source="http://xorg.freedesktop.org/archive/individual/data/${name}/${name}-$version.tar.xz"
+release=2
+source="https://xorg.freedesktop.org/archive/individual/data/${name}/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

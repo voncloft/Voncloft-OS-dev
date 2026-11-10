@@ -2,8 +2,8 @@
 # depends : openssl
 
 name=perl-net-ssleay
-version=1.92
-release=2
+version=1.96
+release=3
 
 _name=Net-SSLeay
 source="https://cpan.metacpan.org/authors/id/C/CH/CHRISN/${_name}-${version}.tar.gz"

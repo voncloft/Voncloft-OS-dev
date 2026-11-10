@@ -1,5 +1,5 @@
 # description	: Implements the user-space interfaces to the POSIX 1003.1e capabilities available in Linux kernels
-# depends	: attr linux-api-headers
+# depends	: attr linux-api-headers linux-pam
 
 name=libcap
 version=2.78
@@ -7,19 +7,19 @@ release=1
 source="https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/$name-$version.tar.xz"
 
 build() {
-	cd $name-$version
+    cd "$name-$version"
+    make GOLANG=no RAISE_SETFCAP=no lib=lib prefix=/usr
+    make GOLANG=no PAM_CAP=no RAISE_SETFCAP=no lib=lib prefix=/usr DESTDIR="$PKG" install
+    # Install the native PAM module beside the modules provided by Linux-PAM.
+    make -C pam_cap GOLANG=no RAISE_SETFCAP=no prefix=/usr \
+        LIBDIR="$(pkg-config --variable=libdir pam)" DESTDIR="$PKG" install
+    chmod 755 "$PKG/usr/lib/libcap.so"
 
-	# use our buildflags
-	sed -i "s/CFLAGS :=/CFLAGS += \$(CPPFLAGS) /" Make.Rules
-	sed -i "s/LDFLAGS :=/LDFLAGS +=/" Make.Rules
-
-	# Disable tests, as they cause cross-build failure
-	sed -e '/test:/,/.sh/d' -e '/tests/d' -i Makefile
-
-	make GOLANG=no RAISE_SETFCAP=no lib=lib prefix=/usr DESTDIR=$PKG install
-	chmod -v 755 $PKG/usr/lib/libcap.so
-
-	mkdir -p $PKG/lib
-	mv -v $PKG/usr/lib/libcap.so.* $PKG/lib
-	ln -sfv ../../lib/$(readlink $PKG/usr/lib/libcap.so) $PKG/usr/lib/libcap.so
+    make clean
+    # Only the compatibility libraries are packaged for 32-bit consumers.
+    make -C libcap CC="gcc -m32" GOLANG=no RAISE_SETFCAP=no lib=lib32 prefix=/usr
+    make -C libcap CC="gcc -m32" GOLANG=no RAISE_SETFCAP=no lib=lib32 prefix=/usr DESTDIR="$SRC/stage32" install
+    install -dm755 "$PKG/usr/lib32"
+    cp -a "$SRC/stage32/usr/lib32/." "$PKG/usr/lib32/"
+    chmod 755 "$PKG/usr/lib32/libcap.so"
 }

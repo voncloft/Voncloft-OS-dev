@@ -2,8 +2,8 @@
 # depends : perl
 
 name=perl-try-tiny
-version=0.31
-release=5
+version=0.32
+release=6
 
 _name=Try-Tiny
 source="https://cpan.metacpan.org/authors/id/E/ET/ETHER/${_name}-${version}.tar.gz"

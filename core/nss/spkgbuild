@@ -1,35 +1,40 @@
-# description   : The Network Security Services (NSS) package is a set of libraries designed to support cross-platform development of security-enabled client and server applications
+# description   : Network Security Services libraries and certificate tools
 # depends       : nspr sqlite p11-kit
 
 name=nss
-version=3.113.1    
+version=3.133
 release=1
-source="https://archive.mozilla.org/pub/security/${name}/releases/NSS_3_113_1_RTM/src/${name}-${version}.tar.gz
+source="https://archive.mozilla.org/pub/security/${name}/releases/NSS_${version//./_}_RTM/src/${name}-${version}.tar.gz
 https://www.linuxfromscratch.org/patches/blfs/svn/${name}-standalone-1.patch"
 
 options="!checksum"
 
 build() {
-        cd $name-$version
-patch -Np1 -i $SRC/nss-standalone-1.patch 
-cd nss 
-make DESTDIR=$PKG BUILD_OPT=1                      \
-NSPR_INCLUDE_DIR=/usr/include/nspr  \
-USE_SYSTEM_ZLIB=1                   \
-ZLIB_LIBS=-lz                       \
-NSS_ENABLE_WERROR=0                 \
-$([ $(uname -m) = x86_64 ]  echo USE_64=1) \
-$([ -f /usr/include/sqlite3.h ]  echo NSS_USE_SYSTEM_SQLITE=1)
-mkdir -pv $PKG/usr/lib
-mkdir -pv $PKG/usr/include
-mkdir -pv $PKG/usr/bin
+    cd "$name-$version"
+    patch -Np1 -i "$SRC/$name-standalone-1.patch"
+    cd nss
 
-cd ../dist                                                          
-install -v -m755 Linux*/lib/*.so              $PKG/usr/lib              
-install -v -m644 Linux*/lib/{*.chk,libcrmf.a} $PKG/usr/lib              
-install -v -m755 -d                           $PKG/usr/include/nss      
-cp -v -RL {public,private}/nss/*              $PKG/usr/include/nss      
-install -v -m755 Linux*/bin/{certutil,nss-config,pk12util} $PKG/usr/bin 
-install -v -m644 Linux*/lib/pkgconfig/nss.pc  $PKG/usr/lib/pkgconfig
-ln -sfv ./pkcs11/p11-kit-trust.so $PKG/usr/lib/libnssckbi.so
+    local build_options=(
+        BUILD_OPT=1
+        NSPR_INCLUDE_DIR=/usr/include/nspr
+        USE_SYSTEM_ZLIB=1
+        ZLIB_LIBS=-lz
+        NSS_ENABLE_WERROR=0
+        NSS_USE_SYSTEM_SQLITE=1
+        NSS_DISABLE_GTESTS=1
+    )
+    if [ "$(uname -m)" = x86_64 ]; then
+        build_options+=(USE_64=1)
+    fi
+    make "${build_options[@]}"
+
+    cd ../dist
+    install -d "$PKG/usr/lib/pkgconfig" "$PKG/usr/include/nss" "$PKG/usr/bin"
+    install -m755 Linux*/lib/*.so "$PKG/usr/lib"
+    install -m644 Linux*/lib/*.chk "$PKG/usr/lib"
+    cp -RL {public,private}/nss/* "$PKG/usr/include/nss"
+    install -m755 Linux*/bin/{certutil,nss-config,pk12util} "$PKG/usr/bin"
+    install -m644 Linux*/lib/pkgconfig/nss.pc "$PKG/usr/lib/pkgconfig"
+    # Keep ownership of NSS's trust entry point in this package.
+    ln -sf ./pkcs11/p11-kit-trust.so "$PKG/usr/lib/libnssckbi.so"
 }

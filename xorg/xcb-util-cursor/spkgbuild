@@ -3,8 +3,8 @@
 
 name=xcb-util-cursor
 version=0.1.6
-release=1
-source="http://xcb.freedesktop.org/dist/${name}-$version.tar.xz"
+release=3
+source="https://xcb.freedesktop.org/dist/${name}-$version.tar.xz"
 
 build() {
 	cd $name-$version

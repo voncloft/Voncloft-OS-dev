@@ -1,9 +1,28 @@
-source="https://github.com/voncloft/scratchpkg/tags"
+# The fork uses date-based release tags. Ignore malformed legacy tags.
+source="https://api.github.com/repos/voncloft/scratchpkg/tags?per_page=100"
+url=$source
 
 get_generic()
 {
-	uversion=$(grep -Eio [0-9a-z.]+.tar.[bgx]z2? index.html \
-	| sed "s/.tar.gz//g" \
-	| sort -V -r \
-	| head -n1)
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import datetime,json,pathlib,re
+versions=[]
+for entry in json.loads(pathlib.Path('index.html').read_text()):
+    tag=entry.get('name','')
+    if not re.fullmatch(r'[0-9]{8}',tag):
+        continue
+    try:
+        datetime.datetime.strptime(tag,'%Y%m%d')
+    except ValueError:
+        continue
+    versions.append(tag)
+if not versions:
+    raise SystemExit('No valid Scratch release tags found')
+print(max(versions))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
 }

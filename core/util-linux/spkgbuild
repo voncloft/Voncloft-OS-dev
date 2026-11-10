@@ -3,8 +3,8 @@
 
 name=util-linux
 version=2.42.4
-release=1
-source="https://mirrors.edge.kernel.org/pub/linux/utils/${name}/v$version/${name}-$version.tar.gz"
+release=3
+source="https://mirrors.edge.kernel.org/pub/linux/utils/${name}/v${version%.*}/${name}-$version.tar.gz"
 #source="https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v${version%.*}/util-linux-${version%.*}.tar.gz"
 options="!checksum"
 build() {
@@ -12,7 +12,14 @@ build() {
 
 	mkdir -pv $PKG/var/lib/hwclock
 
-	./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   \
+	# SysVinit provides sulogin, last/lastb, utmpdump, mesg and wall.
+	./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin \
+	            --libdir=/usr/lib ADJTIME_PATH=/var/lib/hwclock/adjtime \
+	            --disable-sulogin    \
+	            --disable-last       \
+	            --disable-utmpdump   \
+	            --disable-mesg       \
+	            --disable-wall       \
 	            --disable-chfn-chsh  \
 	            --disable-login      \
 	            --disable-nologin    \
@@ -27,4 +34,18 @@ build() {
 	            --without-systemdsystemunitdir
 	make
 	make DESTDIR=$PKG install
+
+    # Preserve the five installed multilib runtime libraries without replacing
+    # the native tools or architecture-independent development headers.
+    make distclean
+    CC="gcc -m32" CXX="g++ -m32" \
+        PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
+        ./configure --prefix=/usr --libdir=/usr/lib32 \
+        --disable-all-programs --enable-libblkid --enable-libmount \
+        --enable-libuuid --enable-libfdisk --enable-libsmartcols \
+        --disable-static --disable-nls --without-python --without-systemd
+    make
+    make DESTDIR="$SRC/stage32" install
+    install -dm755 "$PKG/usr/lib32"
+    cp -a "$SRC/stage32/usr/lib32/." "$PKG/usr/lib32/"
 }

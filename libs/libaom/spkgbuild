@@ -18,10 +18,11 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
       -D BUILD_SHARED_LIBS=1       \
       -D ENABLE_DOCS=no            \
+      -D ENABLE_TESTS=OFF          \
       -G Ninja ..
       ninja
       DESTDIR=$PKG ninja install
 
-	rm $PKG/usr/lib/libaom.a
+	# Keep the static archive exported by the upstream AOM CMake package.
 }
 

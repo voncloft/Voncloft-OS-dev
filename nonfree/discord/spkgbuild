@@ -4,7 +4,7 @@
 name=discord
 version=1.0.168
 release=1
-source="https://dl.discordapp.net/apps/linux/$version/${name}-$version.tar.gz"
+source="${name}-${version}.tar.gz::https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/${version}/Discord.tar.gz"
 
 build() {
 	#note use GTK_USE_PORTAL=1 when running

@@ -3,11 +3,13 @@
 
 name=java-headless
 version=27.0.1.0.2
-release=10
+release=11
 
 source="${name}-${version}-archive.html::https://jdk.java.net/archive/
     fetch-source.py"
 options="!checksum !strip"
+
+backup="etc/profile.d/openjdk.sh etc/sudoers.d/java"
 
 build() {
     local archive="$SRC/${name}-${version}.tar.gz" unpack="$SRC/java-unpack" java_root

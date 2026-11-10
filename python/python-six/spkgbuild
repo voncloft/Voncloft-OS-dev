@@ -2,9 +2,9 @@
 # depends : python python-setuptools
 
 name=python-six
-version=1.16.0
+version=1.17.0
 release=1
-_name=${name#python-}
+_name=six
 source="https://files.pythonhosted.org/packages/source/s/${_name}/${_name}-${version}.tar.gz"
 options="!checksum"
 

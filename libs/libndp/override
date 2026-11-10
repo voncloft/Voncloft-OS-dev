@@ -1,0 +1,19 @@
+# Verify final releases using the actual upstream project.
+source="https://api.github.com/repos/jpirko/libndp/git/matching-refs/tags/"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re
+pattern='refs/tags/v([0-9]+(?:\\.[0-9]+)*)'
+refs=json.loads(pathlib.Path('index.html').read_text())
+versions=[re.fullmatch(pattern,d['ref'])[1].replace('_','.') for d in refs if re.fullmatch(pattern,d['ref'])]
+if not versions:raise SystemExit('No final release tags found')
+print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

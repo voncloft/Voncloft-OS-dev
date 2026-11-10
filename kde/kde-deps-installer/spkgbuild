@@ -3,7 +3,7 @@
 
 name=kde-deps-installer
 version=6
-release=2
+release=1
 
 source="kf-package-installer
 	plasma-package-installer"

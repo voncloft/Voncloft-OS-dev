@@ -2,9 +2,9 @@
 # depends	: perl-io-socket-ssl
 
 name=ntp
-version=4.2.8.p15
+version=4.2.8p18
 release=1
-source="https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${name}-${version%.*}/$name-$version.tar.gz"
+source="https://downloads.nwtime.org/${name}/${version%p*}/${name}-${version}.tar.gz"
 
 build() {
 	cd $name-$version

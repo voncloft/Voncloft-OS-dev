@@ -1,0 +1,15 @@
+# description : BSD utility functions for non-BSD systems
+# depends : glibc libmd
+
+name=libbsd
+version=0.12.2
+release=1
+source="https://libbsd.freedesktop.org/releases/${name}-${version}.tar.xz"
+options="!checksum"
+
+build() {
+    cd "$name-$version"
+    ./configure --prefix=/usr --libdir=/usr/lib --disable-static
+    make
+    make DESTDIR="$PKG" install
+}

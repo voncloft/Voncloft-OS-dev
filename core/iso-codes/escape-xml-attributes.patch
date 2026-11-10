@@ -1,0 +1,26 @@
+--- a/scripts/xml_from_json.py
++++ b/scripts/xml_from_json.py
+@@ -10,6 +10,7 @@
+ 
+ import json
+ import sys
++from xml.sax.saxutils import escape
+ 
+ # Get the current ISO code domain, the path to the JSON data dir, and the XML output file
+ if len(sys.argv) != 4:
+@@ -386,7 +387,14 @@
+     """Return all entries from the given standard"""
+     with open(datapath + "/iso_" + standard + ".json", encoding="utf-8") as input_file:
+         iso = json.load(input_file)
+-        return iso[standard]
++        # JSON values become double-quoted XML attributes below.
++        return [
++            {
++                key: escape(value, {'"': "&quot;"}) if isinstance(value, str) else value
++                for key, value in entry.items()
++            }
++            for entry in iso[standard]
++        ]
+ 
+ 
+ # Create the output file

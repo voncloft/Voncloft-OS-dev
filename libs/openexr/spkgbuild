@@ -1,11 +1,11 @@
 # description : An high dynamic-range image file format library 
-# depends : zlib
+# depends : zlib imath
 
 name=openexr
 version=3.5.3
-release=1
+release=3
 
-source="https://github.com/openexr/${name}/archive/v$version.tar.gz"
+source="${name}-${version}.tar.gz::https://github.com/openexr/${name}/archive/v$version.tar.gz"
 options="!checksum"
 
 build() {
@@ -16,5 +16,6 @@ build() {
 	-DCMAKE_INSTALL_PREFIX=/usr
 
 	make
+
 	make DESTDIR=$PKG install
 }

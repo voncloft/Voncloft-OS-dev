@@ -3,8 +3,8 @@
 
 _gemname=rspec-core
 name=ruby-rspec-core
-version=4.0.0
-release=4
+version=3.13.7
+release=1
 
 source="https://rubygems.org/downloads/${_gemname}-${version}.gem"
 options="!checksum"

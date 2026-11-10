@@ -4,14 +4,15 @@
 name=cifs-utils
 version=7.9    
 release=1
-source="https://www.samba.org/ftp/linux-cifs/${name}/${name}-${version}.tar.bz2"
+# Debian mirrors the original upstream archive without the packaging patches.
+source="${name}-${version}.tar.bz2::https://deb.debian.org/debian/pool/main/c/${name}/${name}_${version}.orig.tar.bz2"
 
 options="!checksum"
 
 build() {
         cd $name-$version
         autoreconf -fiv
-./configure --prefix=/usr \
+ROOTSBINDIR=/usr/sbin ./configure --prefix=/usr \
 --disable-pam \
 --disable-systemd 
 make

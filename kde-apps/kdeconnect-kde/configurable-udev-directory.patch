@@ -1,0 +1,13 @@
+--- a/plugins/digitizer/CMakeLists.txt
++++ b/plugins/digitizer/CMakeLists.txt
+@@ -24,7 +24,9 @@
+         target_sources(kdeconnect_digitizer PUBLIC linuxdigitizerimpl.cpp)
+     endif()
+ 
+-    pkg_get_variable(UDEVDIR udev udevdir)
++    if(NOT DEFINED UDEVDIR)
++        pkg_get_variable(UDEVDIR udev udevdir)
++    endif()
+     if (NOT UDEVDIR) # happens on FreeBSD
+         set(UDEVDIR "${KDE_INSTALL_LIBDIR}/udev")
+     endif()

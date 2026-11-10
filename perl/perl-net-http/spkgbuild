@@ -1,8 +1,8 @@
 # description : Low-level HTTP connection client
-# depends : perl
+# depends : perl perl-uri
 
 name=perl-net-http
-version=6.22
+version=6.24
 release=1
 
 _name=Net-HTTP

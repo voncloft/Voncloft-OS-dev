@@ -1,5 +1,5 @@
 # description : OpenGL loader generator
-# depends : python python-jinja python-pip python-setuptools python-wheel
+# depends : python jinja2 python-pip python-setuptools python-wheel
 
 name=python-glad
 version=2.0.8

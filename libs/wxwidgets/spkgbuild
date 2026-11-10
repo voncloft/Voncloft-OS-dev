@@ -1,16 +1,17 @@
 # description : widget library
-# depends :
+# depends : gtk3 webkitgtk libsoup expat libjpeg-turbo libpng libtiff xz pcre2 zlib
 
 name=wxwidgets
 version=3.3.4
-release=1
+release=2
 
 _name=wxWidgets
 source="https://github.com/wxWidgets/${_name}/releases/download/v$version/${_name}-$version.tar.bz2"
 
 build()
 {
-	cd *
+	cd "$_name-$version" || return 1
+	pkg-config --exists webkit2gtk-4.1 || return 1
 	cd build
 	cmake .. -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_BUILD_TYPE=Release \

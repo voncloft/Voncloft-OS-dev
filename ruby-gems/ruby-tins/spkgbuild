@@ -1,9 +1,9 @@
 # description : real big library
-# depends : ruby
+# depends : ruby ruby-sync ruby-mize
 _name=tins
 name=ruby-tins
 version=1.62.0
-release=2
+release=3
 
 source="https://rubygems.org/downloads/tins-${version}.gem"
 options="!checksum"

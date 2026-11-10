@@ -1,0 +1,78 @@
+diff --git a/pkgbuild b/pkgbuild
+--- a/pkgbuild
++++ b/pkgbuild
+@@ -113,7 +113,7 @@
+ 			continue
+ 		}
+ 		msg "Fetching: $i"
+-		curl -C - -L --fail --ftp-pasv --retry 3 --retry-delay 3 -o $filepath.partial $CURL_OPTS $url || {
++		curl -C - -L --fail --retry 3 --retry-delay 3 -o $filepath.partial $CURL_OPTS $url || {
+ 			msgerr "Fetching failed: $i"
+ 			abort 1
+ 		}
+@@ -132,7 +132,7 @@
+ 	mkdir -p $SRC $PKG
+ 	
+ 	TAR=tar
+-	[ $(command -v bsdtar) ] && TAR=bsdtar
++	#[ $(command -v bsdtar) ] && TAR=bsdtar
+ 	
+ 	for i in $(get_filepath); do
+ 		if [ ! -f "$i" ]; then
+@@ -602,7 +602,7 @@
+ 
+ trap "interrupted" 1 2 3 15
+ 
+-export LC_ALL=C
++export LC_ALL=en_US.UTF-8
+ 
+ PKGBUILD_CONF="/etc/scratchpkg.conf"
+ PKGBUILD_BSCRIPT="spkgbuild"
+diff --git a/pkgadd b/pkgadd
+--- a/pkgadd
++++ b/pkgadd
+@@ -20,7 +20,7 @@
+ 
+ trap "interrupted" 1 2 3 15
+ 
+-export LC_ALL=C
++export LC_ALL=en_US.UTF-8
+ 
+ interrupted() {
+ 	echo
+diff --git a/pkgdel b/pkgdel
+--- a/pkgdel
++++ b/pkgdel
+@@ -20,7 +20,7 @@
+ 
+ trap "interrupted" 1 2 3 15
+ 
+-export LC_ALL=C
++export LC_ALL=en_US.UTF-8
+ 
+ interrupted() {
+ 	echo
+diff --git a/pkgfix b/pkgfix
+--- a/pkgfix
++++ b/pkgfix
+@@ -20,7 +20,7 @@
+ #  need to use with 'scratchpkg'
+ #
+ 
+-export LANG=C
++export LANG=en_US.UTF-8
+ 
+ get_pythonmodules() {
+ 	command -v python3 >/dev/null || return
+diff --git a/create_startup_directories b/create_startup_directories
+--- a/create_startup_directories
++++ b/create_startup_directories
+@@ -9,7 +9,7 @@
+ install -d -m 755 $PKG/etc/rc.d/rc{0,1,2,3,4,5,6,S}.d
+ install -d -m 755 $PKG/etc/rc.d/init.d
+ install -d -m 755 $PKG/etc/init.d
+-echo "HERE" $PKG
++#echo "HERE" $PKG
+ install -m 754 $SRC/$1 $PKG/etc/rc.d/init.d/$1
+ ln -sfv "$PKG/etc/rc.d/init.d/$1 $PKG/etc/init.d/$1"
+ ln -sfv ../init.d/$1 $PKG/etc/rc.d/rc0.d/$2

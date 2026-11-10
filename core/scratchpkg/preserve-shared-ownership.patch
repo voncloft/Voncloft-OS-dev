@@ -1,0 +1,81 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -110,7 +110,7 @@
+ ret() {
+ 	# remove lock and all tmp files on exit
+ 	[ "${PKGADD_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
+-	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT"
++	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES"
+ 	exit $1
+ }
+ 
+@@ -275,14 +275,19 @@
+ 	echo "$line" >> $TMP_PKGINSTALL
+ done
+ 
+-# remove old files from old package that not exist in new package
++# Remove obsolete payload only when no other package still owns the path.
+ if [ "$UPGRADE_PKG" ] || [ "$REINSTALL_PKG" ]; then
+-	tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" | tac | while read -r line; do
+-		case $line in
+-			*/) grep "^$line$" $ROOT_DIR/$PKGDB_DIR/* "$TMP_PKGINSTALL" 2>/dev/null | grep -qv "$ROOT_DIR/$PKGDB_DIR/$name" || rmdir $([ "$VERBOSE_INSTALL" ] && echo -v) "$ROOT_DIR/$line";;
+-			 *) grep -q "^$line$" "$TMP_PKGINSTALL" || rm $([ "$VERBOSE_INSTALL" ] && echo -v) "$ROOT_DIR/$line";;
+-		esac
+-	done
++    TMP_SHARED_FILES="$ROOT_DIR/$SCRATCHPKG_DIR/.tmp_shared_files"
++    awk -v own="$ROOT_DIR/$PKGDB_DIR/$name" \
++        'FILENAME != own && FNR > 1 { print }' "$ROOT_DIR/$PKGDB_DIR"/* > "$TMP_SHARED_FILES" || ret 1
++    tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" | tac | while IFS= read -r line; do
++        grep -Fqx -- "$line" "$TMP_PKGINSTALL" && continue
++        grep -Fqx -- "$line" "$TMP_SHARED_FILES" && continue
++        case $line in
++            */) rmdir $([ "$VERBOSE_INSTALL" ] && echo -v) "$ROOT_DIR/$line";;
++             *) rm $([ "$VERBOSE_INSTALL" ] && echo -v) "$ROOT_DIR/$line";;
++        esac
++    done
+ fi
+ 
+ # register package into database
+--- a/pkgdel
++++ b/pkgdel
+@@ -91,7 +91,8 @@
+ 
+ ret() {
+ 	# remove lock file on exit
+-	rm -f "$ROOT_DIR/$LOCK_FILE"
++	[ "${PKGDEL_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
++	rm -f "$TMP_SHARED_FILES"
+ 	exit $1
+ }
+ 
+@@ -139,6 +140,8 @@
+ 	exit 1
+ }
+ 
++PKGDEL_LOCK_OWNED=1
++
+ if ! isinstalled "$RMNAME"; then
+ 	msgerr "Package '$RMNAME' not installed."
+ 	ret 1
+@@ -153,11 +156,16 @@
+ 	ret 1
+ fi
+ 
+-tail -n+2 "$ROOT_DIR/$PKGDB_DIR"/$name | tac | while read -r line; do
+-	case $line in
+-		*/) grep "^$line$" "$ROOT_DIR/$PKGDB_DIR"/* 2>/dev/null | grep -qv "$ROOT_DIR/$PKGDB_DIR"/$name: || rmdir $([ "$VERBOSE_REMOVE" ] && echo -v) "$ROOT_DIR/$line";;
+-		 *) rm $([ "$VERBOSE_REMOVE" ] && echo -v) "$ROOT_DIR/$line";;
+-	esac
++# Keep paths still owned by another package, including ordinary files.
++TMP_SHARED_FILES="$ROOT_DIR/var/lib/scratchpkg/.tmp_pkgdel_shared_files"
++awk -v own="$ROOT_DIR/$PKGDB_DIR/$name" \
++    'FILENAME != own && FNR > 1 { print }' "$ROOT_DIR/$PKGDB_DIR"/* > "$TMP_SHARED_FILES" || ret 1
++tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" | tac | while IFS= read -r line; do
++    grep -Fqx -- "$line" "$TMP_SHARED_FILES" && continue
++    case $line in
++        */) rmdir $([ "$VERBOSE_REMOVE" ] && echo -v) "$ROOT_DIR/$line";;
++         *) rm $([ "$VERBOSE_REMOVE" ] && echo -v) "$ROOT_DIR/$line";;
++    esac
+ done
+ 
+ # remove from database

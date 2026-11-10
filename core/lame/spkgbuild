@@ -1,13 +1,17 @@
 # description	: An MP3 encoder and optionally, an MP3 frame analyzer
-# depends	: 
+# depends	: mpg123 ncurses libiconv
 
 name=lame
 version=4.0
-release=1
-source="https://downloads.sourceforge.net/$name/$name-$version.tar.gz"
+release=3
+source="https://downloads.sourceforge.net/$name/$name-$version.tar.gz
+        utf8-tag-handlers.patch
+        hip-analysis-exports.patch"
 
 build() {
-	cd $name-$version
+	cd "$name-$version"
+    patch --batch --forward --fuzz=0 -p1 < "$SRC/utf8-tag-handlers.patch"
+    patch --batch --forward --fuzz=0 -p1 < "$SRC/hip-analysis-exports.patch"
 	sed -i -e 's/^\(\s*hardcode_libdir_flag_spec\s*=\).*/\1/' configure
 	./configure \
 		--prefix=/usr \

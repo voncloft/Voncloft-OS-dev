@@ -1,0 +1,53 @@
+--- a/pkgadd
++++ b/pkgadd
+@@ -117,7 +117,7 @@
+ 	[ "${PKGADD_LOCK_OWNED:-}" != 1 ] || rm -f "$ROOT_DIR/$LOCK_FILE"
+ 	rm -f "$TMP_PKGADD" "$TMP_PKGINSTALL" "$TMP_CONFLICT" "$TMP_SHARED_FILES" "$TMP_OWN_FILES" "$TMP_ADOPTED_SYMLINKS" "$TMP_EXTRACTED_FILES" "$TMP_HANDOFF_FILES"
+     if [ -n "${TMP_RECORD_DIR:-}" ]; then
+-        rm -f "$TMP_RECORD_DIR/record"
++        rm -f "$TMP_RECORD_DIR/record" "$TMP_RECORD_DIR/old-files" "$TMP_RECORD_DIR/obsolete" "$TMP_RECORD_DIR/recovery"
+         rmdir "$TMP_RECORD_DIR"
+     fi
+ 	exit $1
+@@ -351,14 +351,37 @@
+     tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" |
+         python3 "$OWNERSHIP_TOOL" --root "$ROOT_DIR" --database "$PKGDB_DIR" \
+             --paths "$TMP_PKGINSTALL" >> "$TMP_SHARED_FILES" || ret 1
+-    tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" | tac | while IFS= read -r line; do
++    tail -n+2 "$ROOT_DIR/$PKGDB_DIR/$name" > "$TMP_RECORD_DIR/old-files" || ret 1
++    tac "$TMP_RECORD_DIR/old-files" > "$TMP_RECORD_DIR/obsolete" || ret 1
++    # If cleanup fails, keep the old version and account for both old and
++    # already extracted paths. This is an incomplete upgrade, not a rollback;
++    # retaining the added paths also allows an ordinary upgrade retry.
++    head -n1 "$ROOT_DIR/$PKGDB_DIR/$name" > "$TMP_RECORD_DIR/recovery" || ret 1
++    awk '!seen[$0]++' "$TMP_RECORD_DIR/old-files" "$TMP_PKGINSTALL" >> "$TMP_RECORD_DIR/recovery" || ret 1
++    cleanup_failed=
++    # Use redirected input: a pipeline would hide cleanup_failed in a subshell.
++    while IFS= read -r line; do
+         grep -Fqx -- "$line" "$TMP_PKGINSTALL" && continue
+         grep -Fqx -- "$line" "$TMP_SHARED_FILES" && continue
++        [ -e "$ROOT_DIR/$line" ] || [ -L "$ROOT_DIR/$line" ] || continue
+         case $line in
+-            */) rmdir $([ "$VERBOSE_INSTALL" ] && echo -v) "$ROOT_DIR/$line";;
+-             *) rm $([ "$VERBOSE_INSTALL" ] && echo -v) "$ROOT_DIR/$line";;
++            */) # Nonempty directories may contain another package or local data.
++                rmdir --ignore-fail-on-non-empty $([ "$VERBOSE_INSTALL" ] && echo -v) -- "$ROOT_DIR/$line" && continue;;
++             *) rm -f $([ "$VERBOSE_INSTALL" ] && echo -v) -- "$ROOT_DIR/$line" && continue;;
+         esac
+-    done
++        msgerr "Cannot remove obsolete path: $line"
++        cleanup_failed=1
++    done < "$TMP_RECORD_DIR/obsolete"
++    if [ "$cleanup_failed" ]; then
++        mv -f "$TMP_RECORD_DIR/recovery" "$ROOT_DIR/$PKGDB_DIR/$name" || {
++            msgerr "Cannot preserve ownership after cleanup failed for $name."
++            ret 1
++        }
++        msgerr "Cleanup failed for $name; upgrade is incomplete. Old and extracted paths remain tracked."
++        msgerr "Resolve the removal error and retry the upgrade (or reinstall)."
++        ret 1
++    fi
++    rm -f "$TMP_RECORD_DIR/old-files" "$TMP_RECORD_DIR/obsolete" "$TMP_RECORD_DIR/recovery" || ret 1
+ fi
+ 
+ mv -f "$TMP_RECORD_DIR/record" "$ROOT_DIR/$PKGDB_DIR/$name" || ret 1

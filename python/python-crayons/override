@@ -1,0 +1,20 @@
+# Read current upstream release metadata, excluding prereleases.
+source="https://pypi.org/pypi/crayons/json"
+url=$source
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PYUPSTREAM'
+import json,pathlib,re,subprocess
+text=pathlib.Path("index.html").read_text()
+data=json.loads(text)
+assert data["info"]["name"].lower()=='crayons'
+versions=[v for v,files in data["releases"].items() if re.fullmatch(r"[0-9]+(?:\.[0-9]+)*",v) and any(f["packagetype"]=="sdist" and not f.get("yanked") for f in files)]
+if not versions:raise SystemExit("No final upstream release found")
+print(max(set(versions),key=lambda v:tuple(map(int,v.split(".")))))
+PYUPSTREAM
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}

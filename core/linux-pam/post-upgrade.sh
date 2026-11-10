@@ -1,1 +1,0 @@
-scratch install -rcy shadow

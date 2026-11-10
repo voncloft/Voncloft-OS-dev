@@ -1,35 +1,38 @@
 # description   : Mesa is an OpenGL compatible 3D graphics library
-# depends       : xorg-libraries libdrm-32
+# depends       : elfutils mesa llvm-32 spirv-llvm-translator-32 rust-32 rust-bindgen cbindgen libdrm-32 libglvnd-32 libx11-32 libxext-32 libxcb-32 libxshmfence-32 wayland-32 xorg-libraries
 
 name=mesa-32
 version=26.2.6
 release=1
 
 _name=${name%-32}
-source="https://mesa.freedesktop.org/archive/${_name}-${version}.tar.xz"
+source="https://archive.mesa3d.org/${_name}-${version}.tar.xz
+        ${name}.ini"
 
 options="!checksum"
 
 build() {
-    cd mesa-*
-mkdir build
-cd build
-meson setup                    \
-      --cross-file=lib32       \
-      --prefix=/usr            \
-      --libdir=/usr/lib32      \
-      --buildtype=release      \
-      -D platforms=x11,wayland \
-      -D gallium-drivers=auto  \
-      -D vulkan-drivers=auto   \
-      -D gles1=disabled        \
-      -D video-codecs=all      \
-      -D valgrind=disabled     \
-      -D libunwind=disabled    \
-      .. &&
-      sed -i 's/\/usr\/lib\//\/usr\/lib32\//g' ./build.ninja
-BINDGEN_EXTRA_CLANG_ARGS="-m32" ninja
-    mkdir -pv $PKG/usr/lib32
-    DESTDIR=$PWD/DESTDIR ninja install
-    cp -vr DESTDIR/usr/lib32/* $PKG/usr/lib32
+    cd "${_name}-${version}"
+    export PATH="/opt/rustc/bin:$PATH"
+    # Select host libraries through the cross file; native generators keep
+    # their own dependency search paths. Never rewrite generated build files.
+    unset PKG_CONFIG_PATH PKG_CONFIG_LIBDIR LIBRARY_PATH
+    export BINDGEN_EXTRA_CLANG_ARGS="-m32"
+
+    meson setup build \
+        --cross-file="$SRC/${name}.ini" \
+        --prefix=/usr \
+        --libdir=lib32 \
+        --buildtype=release \
+        -Dplatforms=x11,wayland \
+        -Dgallium-drivers=auto \
+        -Dvulkan-drivers=auto \
+        -Dgles1=disabled \
+        -Dvideo-codecs=all \
+        -Dvalgrind=disabled \
+        -Dlibunwind=disabled
+    ninja -C build
+    DESTDIR="$PWD/DESTDIR" ninja -C build install
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
 }

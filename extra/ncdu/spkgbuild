@@ -1,15 +1,22 @@
 # description	: Disk usage analyzer with an ncurses interface
-# depends	: ncurses
+# depends	: ncurses zstd
 
 name=ncdu
 version=2.9.2
 release=1
-source="https://dev.yorhel.nl/download/${name}-$version-linux-x86_64.tar.gz"
+_zig_version=0.15.2
+source="https://dev.yorhel.nl/download/${name}-$version.tar.gz
+        https://ziglang.org/download/$_zig_version/zig-x86_64-linux-$_zig_version.tar.xz"
 
 build() {
-
-	mkdir -p $PKG/usr/bin
-
-	install -m 0755 ncdu $PKG/usr/bin
-        
+    # Upstream publishes 2.9.2 as source only. Keep its compiler build-local.
+    printf '%s  %s\n' \
+        02aa270f183da276e5b5920b1dac44a63f1a49e55050ebde3aecc9eb82f93239 \
+        "$SOURCE_DIR/zig-x86_64-linux-$_zig_version.tar.xz" | sha256sum -c -
+    cd "$name-$version"
+    export ZIG_GLOBAL_CACHE_DIR="$SRC/zig-global-cache"
+    "$SRC/zig-x86_64-linux-$_zig_version/zig" build -Doptimize=ReleaseFast -Dstrip
+    "$SRC/zig-x86_64-linux-$_zig_version/zig" build test -Doptimize=ReleaseFast
+    install -Dm755 zig-out/bin/ncdu "$PKG/usr/bin/ncdu"
+    install -Dm644 ncdu.1 "$PKG/usr/share/man/man1/ncdu.1"
 }

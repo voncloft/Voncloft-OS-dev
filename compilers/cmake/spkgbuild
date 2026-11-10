@@ -3,7 +3,7 @@
 
 name=cmake
 version=4.4.5
-release=1
+release=2
 _name=CMake
 source="https://github.com/Kitware/${_name}/releases/download/v$version/$name-$version.tar.gz"
 options="!checksum"
@@ -12,7 +12,7 @@ build() {
 
 	sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
 
-	./bootstrap --prefix=/usr        \
+	./bootstrap --parallel="${CMAKE_BUILD_PARALLEL_LEVEL:-4}" --prefix=/usr        \
             --system-libs        \
             --mandir=/share/man  \
             --no-system-jsoncpp  \

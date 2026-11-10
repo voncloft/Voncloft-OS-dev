@@ -1,0 +1,17 @@
+# description : Oracle VirtualBox Extension Pack matching the installed VirtualBox release
+# depends : virtualbox
+
+name=virtualbox-extpack
+version=7.2.22
+release=1
+_name=Oracle_VirtualBox_Extension_Pack
+source="https://download.virtualbox.org/virtualbox/$version/$_name-$version.vbox-extpack"
+NO_STRIP=yes
+
+build() {
+    install -d "$PKG/opt/VirtualBox/ExtensionPacks/$_name"
+    bsdtar -xpf "$SRC/$_name-$version.vbox-extpack" -o \
+        -C "$PKG/opt/VirtualBox/ExtensionPacks/$_name"
+    test -f "$PKG/opt/VirtualBox/ExtensionPacks/$_name/ExtPack.manifest"
+    # Preserve Oracle's signed manifest and binaries byte-for-byte.
+}
