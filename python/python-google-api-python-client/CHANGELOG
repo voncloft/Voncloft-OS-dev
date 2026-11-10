@@ -1187,3 +1187,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 2.175.0 to version 2.201.0
+
+----------------------------------------------------------------
+
+Date: Tue Nov 10 01:42:54 PM EST 2026
+
+Version=2.202.0
+Release=1
+
+Synopsis:
+Changed from version 2.201.0 to version 2.202.0

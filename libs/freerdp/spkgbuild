@@ -2,7 +2,7 @@
 # depends : alsa-lib cairo cmake ffmpeg icu jansson kde-deps-installer libusb libx11 libxcursor libxdamage libxext libxfixes libxi libxinerama libxkbcommon libxrandr libxrender libxtst openssl pkgconf pulseaudio udev wayland zlib
 
 name=freerdp
-version=3.33.0
+version=3.33.1
 release=3
 
 _name=FreeRDP

@@ -3,7 +3,7 @@
 # platform : Requires systemd; excluded from the SysVinit desktop aggregate.
 
 name=plasma-login-manager
-version=6.8.2
+version=6.8.3
 release=1
 
 source="https://download.kde.org/stable/plasma/$version/${name}-$version.tar.xz"

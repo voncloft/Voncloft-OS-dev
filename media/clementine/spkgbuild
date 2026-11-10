@@ -2,7 +2,7 @@
 # depends : cmake pkgconf qt6 boost gettext alsa-lib chromaprint glib gstreamer gst-plugins-base gst-plugins-bad gst-plugins-good gst-plugins-ugly gst-libav hicolor-icon-theme libcdio libmtp libglvnd libxml2 pulseaudio protobuf sqlite taglib zlib projectm-presets
 
 name=clementine
-version=1.4.4
+version=1.4.5
 release=3
 
 _name=Clementine

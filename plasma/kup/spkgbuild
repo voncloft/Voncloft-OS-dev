@@ -2,7 +2,7 @@
 # description : Backup scheduler with Plasma integration for copying files or keeping versioned backups
 
 name=kup
-version=6.8.2
+version=6.8.3
 release=1
 backup="etc/xdg/autostart/kup-daemon.desktop"
 

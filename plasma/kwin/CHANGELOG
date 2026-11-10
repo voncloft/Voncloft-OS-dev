@@ -699,3 +699,13 @@ order without launching other applications. Preserve closed members when merging
 groups and pruning window history. Keep all changes in the separate layout-memory
 patch, with the window-tabs patch unchanged. Add lifecycle integration regressions
 and verify close/reopen plus logout/login using isolated production compositors.
+
+----------------------------------------------------------------
+
+Date: Tue Nov 10 01:42:54 PM EST 2026
+
+Version=6.8.3
+Release=1
+
+Synopsis:
+Changed from version 6.8.2 to version 6.8.3

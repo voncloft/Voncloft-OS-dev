@@ -147,3 +147,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 0.4.2 to version 0.6.1
+
+----------------------------------------------------------------
+
+Date: Tue Nov 10 01:42:54 PM EST 2026
+
+Version=0.7.0
+Release=1
+
+Synopsis:
+Changed from version 0.6.1 to version 0.7.0

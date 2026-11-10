@@ -2,7 +2,7 @@
 # description : Plasma power management service for brightness, battery settings, suspend, and energy-saving actions
 
 name=powerdevil
-version=6.8.2
+version=6.8.3
 release=1
 backup="etc/xdg/autostart/powerdevil.desktop"
 

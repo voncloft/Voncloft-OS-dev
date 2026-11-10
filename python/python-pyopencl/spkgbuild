@@ -2,7 +2,7 @@
 # depends : opencl-icd-loader opencl-headers mesa boost-libs
 
 name=python-pyopencl
-version=2026.1.4
+version=2026.1.5
 release=2
 
 _name=${name#python-}

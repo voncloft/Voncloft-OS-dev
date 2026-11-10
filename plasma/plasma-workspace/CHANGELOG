@@ -599,3 +599,13 @@ Refresh matching pinned launchers when a window's SkipTaskbar state changes.
 Fix duplicate or missing taskbar icons when switching KWin window tabs.
 Include regression coverage for repeated switches, multiple applications,
 multiple windows of one application, detaching tabs, and optional filtering.
+
+----------------------------------------------------------------
+
+Date: Tue Nov 10 01:42:54 PM EST 2026
+
+Version=6.8.3
+Release=1
+
+Synopsis:
+Changed from version 6.8.2 to version 6.8.3

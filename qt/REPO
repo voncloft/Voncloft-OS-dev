@@ -72,8 +72,8 @@ f:84071d793ad81f38cbc5934e1223295d:signon-plugin-oauth2/CHANGELOG
 f:a33cff97c1c050a1a014382ea22c8d27:signon-plugin-oauth2/spkgbuild
 f:de1e74406feec668241431ba6a93bbc2:signon-plugin-oauth2/override
 f:542f017f53ddccbe40640aabb66fb958:layer-shell-qt/.pkgfiles
-f:41762c655d65c224229dc1ce0c0bbc59:layer-shell-qt/CHANGELOG
-f:c9efc3381280dcfbf1ef95609dfe90b3:layer-shell-qt/spkgbuild
+f:ff17abf6a191eb6e313bd84d5e33d30a:layer-shell-qt/CHANGELOG
+f:94954aeb12e27a7b3d29bb7e9199e379:layer-shell-qt/spkgbuild
 f:2ae80f35632fea04f6b3b138b11c1b87:mauikit-texteditor/spkgbuild
 f:91310743cb79d73e7ddd7771d2974713:bluez-qt/.pkgfiles
 f:2b08e0c28c0c602a27153fc4616ec30d:bluez-qt/CHANGELOG

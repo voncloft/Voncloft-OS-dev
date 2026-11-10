@@ -770,7 +770,8 @@ f:affc7c820092dba1118d199a72f71a6d:shapelib/CHANGELOG
 f:f057713d0756fd3d1b13d96e2b838911:shapelib/spkgbuild
 f:5577b567527eb0c29a147b1bb685303d:shapelib/override
 f:8c73753408f743d34840968af4dec384:libxmlb/.pkgfiles
-f:9c4960d70bdfa13011cc26c187010b9e:libxmlb/spkgbuild
+f:e5d064c1b446f1930c2be2c0e0e7c8e6:libxmlb/CHANGELOG
+f:9a848e684eb65fb5bcec309d833fc913:libxmlb/spkgbuild
 f:708182795904ad2d14b0a9cefaee6688:libmypaint/spkgbuild
 f:e14a39c14f4238a339b75beddcc32ada:minizip-ng/spkgbuild
 f:811aa0ddaf36c7c78bc8fb34b9098bea:libquotient/spkgbuild
@@ -880,8 +881,9 @@ f:1a78f7ed1d8a424276ff3e3ade246f48:libburn/.pkgfiles
 f:9441b3403d4a75ed1eb60913fb1c5713:libburn/CHANGELOG
 f:57161161e9bb6c74279d3fec1bdb2e88:libburn/spkgbuild
 f:64e7cb299621271393dc53af9d13a21a:tpm2-tss/.pkgfiles
+f:0a748e5cd1a0a73dd5331258a4409345:tpm2-tss/CHANGELOG
 f:10486f8a16f3ba55548d900685dff012:tpm2-tss/post-install.sh
-f:98a46fd680077b0529fb59abbd5389c9:tpm2-tss/spkgbuild
+f:1cfcabdf2328a6c6d9f9e7a1af6ba62d:tpm2-tss/spkgbuild
 f:f24e9f276b9f2bf70976b2f3d83f67e9:tpm2-tss/override
 f:2884994e6e4d13108f639a791a36e350:libidn/.pkgfiles
 f:b35c91375840c6c805086d6995736c7e:libidn/CHANGELOG
@@ -1126,8 +1128,8 @@ f:6e54d485422fa42d105fbf620505f15a:libzip/spkgbuild
 f:c770e59ff0a87e16af797b578d094a75:kquickimageeditor/.pkgfiles
 f:dde8b5377e58d7c3b403538b40df94a4:kquickimageeditor/spkgbuild
 f:1a005716a0c1a0280af8563c1879ae5d:freerdp/.pkgfiles
-f:a61061c7d1de7660f0524273ad18486d:freerdp/CHANGELOG
-f:4de51f6d6ec3bfb031e33b9d3cb88023:freerdp/spkgbuild
+f:7c1bd12d5b1e4dddc2f036c13f0418d8:freerdp/CHANGELOG
+f:af8097cdda0eef589a958952ad83fcb1:freerdp/spkgbuild
 f:d3bc387c2a903a457373c2d0eea4ef16:freerdp/override
 f:af726e977eed101a30b847d222acd9f6:poppler/.pkgfiles
 f:8877aef84fd4670e61daf8720b8436e3:poppler/CHANGELOG
@@ -1352,8 +1354,8 @@ f:6a47c4b7b826b3ae2a93cebd0c3a12ea:libxt/spkgbuild
 f:49742d5faaeb7693099c3cf0a43c79ec:libxt/override
 f:c484bb48b80bcf5872b157b640de3e0b:.httpup-repo.current
 f:4f08410bb28b734e91a065457c36de8e:xwayland/.pkgfiles
-f:58e2799b1398f35f469a586a1128bb31:xwayland/CHANGELOG
-f:741e585a01dffafa8dcbb4f217ad923f:xwayland/spkgbuild
+f:55287ed702d725e9aef31ef209bc7e0b:xwayland/CHANGELOG
+f:cca929caae56f93cd735134f24342a2a:xwayland/spkgbuild
 f:8e3029a913755df66933cf6beeb9f597:xwayland/override
 f:2b63c64a173de64712a76813c492955a:libxrandr/.pkgfiles
 f:2aaee9ea03c7442460479fda1ae5eba3:libxrandr/CHANGELOG

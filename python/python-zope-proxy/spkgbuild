@@ -2,7 +2,7 @@
 # depends : python-setuptools python-zope-interface
 
 name=python-zope-proxy
-version=7.3
+version=7.4
 release=3
 
 _name=zope.proxy

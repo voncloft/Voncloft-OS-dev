@@ -730,8 +730,8 @@ f:95bd9edb8ffdbdf62b866705e89c1513:kgeotag/spkgbuild
 f:4f63460de36423d3f9d3113c2a02eda6:kopeninghours/CHANGELOG
 f:4c0d261480010ed99cc1fae49e68c623:kopeninghours/spkgbuild
 f:83422b491bbcbbae903e59f2e8bf08fd:print-manager/.pkgfiles
-f:c0323d03bc809c1b4fb4e3f5d0579412:print-manager/CHANGELOG
-f:b122a8cf44a48113d42d0008777f1119:print-manager/spkgbuild
+f:c1ae46fd553f5da03b1c10c7fa049333:print-manager/CHANGELOG
+f:112296d615c52c599daf4af195b59469:print-manager/spkgbuild
 f:91cd5bb0bd1ae69cad0de2104818c262:kiten/CHANGELOG
 f:77f2474d1862cb2417f37f4cb601a73d:kiten/spkgbuild
 f:f2146a59c5c359a76dbe50e7b45fb676:parley/CHANGELOG
@@ -1048,8 +1048,8 @@ f:f983d4adcdad87fa4669a5af5b6f3668:skrooge/spkgbuild
 f:bc13b71adf96f93e72ccbf02faa24fff:analitza/CHANGELOG
 f:21083236a37b4ef743454d507e55ca10:analitza/spkgbuild
 f:1a716a319566d9f1f2d52f0a29ed6bda:spectacle/.pkgfiles
-f:203ea36cf168f973ee84e70e42133233:spectacle/CHANGELOG
-f:31f812aa8d94cdbcbad65b457abf6b7e:spectacle/spkgbuild
+f:7170d28ea39a1270cc275487cca7066e:spectacle/CHANGELOG
+f:8fc008177bef00d830885e8b8b69cc08:spectacle/spkgbuild
 f:0361c51040fd91cbf66c6317fd78cc2f:pim-data-exporter/CHANGELOG
 f:8e4da66760fe9157ffe6f385398fda5c:pim-data-exporter/spkgbuild
 f:1543c167e5485595b2e29b972dd1a362:mbox-importer/CHANGELOG

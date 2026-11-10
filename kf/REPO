@@ -134,8 +134,8 @@ f:c788ab13ee13dc8d2d047d06c862a747:ki18n/spkgbuild
 f:9420278fb010065511b6f85e990741ff:plasma-framework/CHANGELOG
 f:b25d133bb4ad9e70a42606b16a22dead:plasma-framework/spkgbuild
 f:8ad1f00807738f3f6e8bef9a34895bb8:kwayland/.pkgfiles
-f:79e0701f5efa5215d2970e95e495e54d:kwayland/CHANGELOG
-f:bc54cb6be12f3b1157fbe441d34c9f21:kwayland/spkgbuild
+f:5e5cd73d2926b1f5f8ec5709f272f279:kwayland/CHANGELOG
+f:e75babbf51c9f16461a217b70122c1b4:kwayland/spkgbuild
 f:9e6fbc42cdcb59d6c525d37650ef4dac:kpackage/.pkgfiles
 f:56d6dd9a052d0a7869ac6e55fd188549:kpackage/CHANGELOG
 f:03abda51c12561b3960aca87eba51629:kpackage/spkgbuild
