@@ -3,7 +3,7 @@
 
 name=java-headless
 version=27.0.1.0.2
-release=11
+release=12
 
 source="${name}-${version}-archive.html::https://jdk.java.net/archive/
     fetch-source.py"
@@ -39,4 +39,10 @@ Defaults env_keep += JAVA_HOME
 Defaults env_keep += CLASSPATH
 EOF
     chmod 440 "$PKG/etc/sudoers.d/java"
+    # The JVM loads these libraries from its own installation at runtime.
+    # Regenerate this metadata on upgrades so no obsolete version path remains.
+    install -dm755 "$PKG/etc/revdep.d"
+    printf '/opt/OpenJDK-%s-bin/ /opt/OpenJDK-%s-bin/lib:/opt/OpenJDK-%s-bin/lib/server\n' \
+        "$version" "$version" "$version" > "$PKG/etc/revdep.d/$name.paths"
+
 }

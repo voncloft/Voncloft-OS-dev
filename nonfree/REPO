@@ -33,7 +33,7 @@ f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
 f:7992578d63f31fdb60d72867d6d34124:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:0913f738bc16be663e97f9b364513267:firefox-bin/spkgbuild
+f:867531d9ef37153f0468c00022e64f3d:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -60,7 +60,7 @@ f:4d25a8cc8d59b0df7c1c57ae13f36b40:nvidia/override
 f:6aa20791a6558136a3e7f3578ccd7a0b:nvidia/.checksums
 f:43cfbf82694715f2d13e458eaad32f46:libreoffice/.pkgfiles
 f:5046afe8ca54c766744625a7b3c42bc2:libreoffice/CHANGELOG
-f:d9ca98c45cb198f8246d0c4b17e7a3d3:libreoffice/spkgbuild
+f:2c1391eb90738236fd5dfe4fbf6548be:libreoffice/spkgbuild
 f:3fd61ad592ad34bd4c80583f54c6acd2:libreoffice/override
 f:6741a741a6f31be3a680a63359d0f650:virtualbox-extpack/.pkgfiles
 f:4fc1e5d7645cf5cba6c878e6951ae555:virtualbox-extpack/pre-upgrade.sh
@@ -113,7 +113,7 @@ f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.des
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
 f:73c0869bcfae9649c7bf7678921b0d89:thunderbird-bin/CHANGELOG
-f:73516a267828bb0dba0b2a9981b80d25:thunderbird-bin/spkgbuild
+f:d9ccc5e37cd5ca4c81c72f41ffd88485:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
 f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop

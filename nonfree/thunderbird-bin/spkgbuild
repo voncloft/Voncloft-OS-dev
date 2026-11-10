@@ -4,7 +4,7 @@
 name=thunderbird-bin
 # Include the build ID so daily Nightlies are distinct package/cache versions.
 version=162.0a1.20261109100349
-release=1
+release=2
 _name=${name%-bin}
 _version=${version%.*}
 _buildid=${version##*.}
@@ -39,4 +39,8 @@ build() {
         ln -Ts /usr/share/hyphen "$PKG"/opt/$name/hyphenation
         ln -sf /usr/lib/libnssckbi.so "$PKG"/opt/$name/libnssckbi.so
         
+    # Package-scoped library lookup for modules loaded by the browser.
+    install -dm755 "$PKG/etc/revdep.d"
+    printf '/opt/%s/ /opt/%s\n' "$name" "$name" > "$PKG/etc/revdep.d/$name.paths"
+
 }

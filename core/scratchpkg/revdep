@@ -166,6 +166,46 @@ rev_exclude() {
 	EXCLUDED_LIBS=$(echo $EXCLUDE_LIBS | tr ' ' '\n' | sort | uniq)
 }
 
+# Keep each recursive search root once. An ordinary child is already
+# covered by its parent; retain aliases and explicitly selected paths below
+# exclusions because find does not traverse those through the parent.
+revdep_search_dirs() {
+    roots=
+    for candidate in "$@"; do
+        while [ "$candidate" != / ] && [ "${candidate%/}" != "$candidate" ]; do
+            candidate=${candidate%/}
+        done
+        [ -d "$candidate" ] || continue
+        case " $roots " in *" $candidate "*) continue ;; esac
+        roots="${roots:+$roots }$candidate"
+    done
+    for candidate in $roots; do
+        covered=
+        if [ "$(readlink -f -- "$candidate")" = "$candidate" ]; then
+            for parent in $roots; do
+                [ "$candidate" != "$parent" ] || continue
+                case "$candidate" in
+                    "${parent%/}/"*)
+                        [ "$(readlink -f -- "$parent")" = "$parent" ] || continue
+                        pruned=
+                        for excluded in $EXCLUDE_DIRS; do
+                            case "$excluded" in
+                                "$parent"|"${parent%/}/"*)
+                                    case "$candidate" in
+                                        "$excluded"|"${excluded%/}/"*) pruned=1; break ;;
+                                    esac
+                                    ;;
+                            esac
+                        done
+                        [ -n "$pruned" ] || { covered=1; break; }
+                        ;;
+                esac
+            done
+        fi
+        [ -n "$covered" ] || printf '%s\n' "$candidate"
+    done
+}
+
 trap "interrupted" 1 2 3 15
 
 command -v pkgadd >/dev/null 2>&1 || {
@@ -175,7 +215,7 @@ command -v pkgadd >/dev/null 2>&1 || {
 
 # package database directory
 PKGDB_DIR="$(pkgadd --print-dbdir)"
-SEARCH_DIRS="/bin /usr/bin /sbin /usr/sbin /lib /usr/lib /lib32 /usr/lib32 /lib64 /usr/lib64 /usr/libexec"
+SEARCH_DIRS="/bin /usr/bin /sbin /usr/sbin /lib /usr/lib /lib32 /usr/lib32 /lib64 /usr/lib64 /usr/libexec /opt"
 
 parse_opt $(extract_opts "$@")
 
@@ -219,12 +259,12 @@ TARGET_SEARCH_DIRS="$SEARCH_DIRS $EXTRA_SEARCH_DIRS"
 
 FILE_LIST="/tmp/.revdep.$$"
 
+SEARCH_DIRS=$(revdep_search_dirs $TARGET_SEARCH_DIRS)
+TARGET_SEARCH_DIRS=$SEARCH_DIRS
+
 echo "SEARCH DIRS:"
-for d in $TARGET_SEARCH_DIRS; do
-	if [ -d $d ]; then
-		SEARCH_DIRS="$SEARCH_DIRS $d"
-		echo " $d"
-	fi
+for d in $SEARCH_DIRS; do
+    printf ' %s\n' "$d"
 done
 echo
 

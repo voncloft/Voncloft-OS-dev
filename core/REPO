@@ -1550,7 +1550,7 @@ f:da3acd3a32c6f5ce2a4333dbf3a6a2b5:at-spi2-atk/spkgbuild
 f:c7db3fdbc4b95dcf2ad833478600c91c:java-headless/.pkgfiles
 f:97eb0cd29d0b4cd954294be20459414c:java-headless/CHANGELOG
 f:ecc63553466d7d6321650763d35c9cfe:java-headless/fetch-source.py
-f:d5b6d136a5bfb036976d1397e2f4fa7f:java-headless/spkgbuild
+f:fb5adbc3b1fd470e1d5c8822c8fdb305:java-headless/spkgbuild
 f:c2df983d6a22e450c49e085587aa6424:java-headless/override
 f:b0c5bfffc94b3566af98396753f0cc62:zxing-cpp/.pkgfiles
 f:85ba664f389cb926d80dfb573cc3d5af:zxing-cpp/CHANGELOG
@@ -1931,10 +1931,10 @@ f:7548f0e711524ad7028b103a96a6207c:scratchpkg/CHANGELOG
 f:81ff3c48e9eb677dccb3d6d7a8ee60b4:scratchpkg/preserve-existing-directories.patch
 f:6683b186a4a66002f53bae37b594c357:scratchpkg/ownership.py
 f:ee57c17c776153be26674dafd42cb983:scratchpkg/scratchpkg.mask
-f:b99c1c8455b6385c533b5473dc1c8e63:scratchpkg/revdep
+f:dcd93abe4f65d4768c618dc6acd4ca1f:scratchpkg/revdep
 f:83d69ada1d9248ce1c157a38b76a0804:scratchpkg/canonical-hwdb-trigger.patch
 f:a1de098fb848a6934d74f507727264b1:scratchpkg/reject-shared-payload.patch
-f:254dc9c4cdf3d3f92938a2e72bf5704b:scratchpkg/spkgbuild
+f:2df6aba49b5f4b28d65048cad35c51d4:scratchpkg/spkgbuild
 f:ef535b90b72e0491c0941229a8eefee8:scratchpkg/pkgadd-lock-ownership.patch
 f:2c2026e92104bb51cf8e13b8cee4cd9b:scratchpkg/abort-extraction-errors.patch
 f:9dd2f55040469bcd522e2e6f17abca71:scratchpkg/vonos-tool-defaults.patch

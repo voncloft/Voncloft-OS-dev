@@ -1,9 +1,9 @@
 # description : Full featured cross platform office suite (binary)
-# depends : libarchive
+# depends : libarchive java-headless
 
 name=libreoffice
 version=26.8.2
-release=2
+release=3
 source="http://download.documentfoundation.org/$name/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz"
 options="!checksum"
 
@@ -18,4 +18,19 @@ build() {
 	rm -f "$PKG"/opt/libreoffice*/CREDITS* \
 	      "$PKG"/opt/libreoffice*/LICENSE* \
 	      "$PKG"/opt/libreoffice*/NOTICE
+    # Keep the Qt6 and GTK backends; this system does not ship Qt5/KF5.
+    local program="$PKG/opt/libreoffice${version%.*}/program"
+    [ -d "$program" ] || return 1
+    rm -f "$program/libkf5be1lo.so" \
+        "$program/libvclplug_gtk3_kde5lo.so" \
+        "$program/libvclplug_kf5lo.so" \
+        "$program/libvclplug_qt5lo.so" \
+        "$program/lo_kde5filepicker"
+
+    # Firebird modules inherit program libraries; Java loads its own VM/AWT.
+    # This is generated metadata, updated together with the application.
+    install -dm755 "$PKG/etc/revdep.d"
+    printf '/opt/libreoffice%s/ /opt/libreoffice%s/program:/opt/jdk/lib:/opt/jdk/lib/server\n' \
+        "${version%.*}" "${version%.*}" > "$PKG/etc/revdep.d/$name.paths"
+
 }
