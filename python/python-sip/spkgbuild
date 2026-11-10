@@ -1,5 +1,5 @@
 # description : Generate Python bindings for C and C++ libraries
-# depends : python python-pip python-packaging python-setuptools python-setuptools-scm
+# depends : python python-packaging python-setuptools python-setuptools-scm
 
 name=python-sip
 version=6.17.2

@@ -1,5 +1,5 @@
 # description : Sacred Marriage of Pipfile, Pip, & Virtualenv.
-# depends : python python-pip python-certifi
+# depends : python python-certifi
 
 name=python-pipenv
 version=2026.11.0

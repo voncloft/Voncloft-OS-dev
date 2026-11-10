@@ -1,5 +1,5 @@
 # description : Convert text with ANSI color codes to HTML
-# depends : python-six python-setuptools python-wheel python-pip
+# depends : python-six python-setuptools python-wheel python
 
 name=python-ansi2html
 version=1.8.0

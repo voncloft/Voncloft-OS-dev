@@ -1,5 +1,5 @@
 # description : An extensible, easy to use continuous build tool for Python
-# depends : python-pip python-pypandoc python-tailer python-tblib python-twine python-wheel
+# depends : python python-pypandoc python-tailer python-tblib python-twine python-wheel
 
 name=python-pybuilder
 version=0.13.25

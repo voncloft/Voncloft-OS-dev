@@ -1,5 +1,5 @@
 # description : SVG optimizer
-# depends : python python-pip python-setuptools python-six python-wheel
+# depends : python python-setuptools python-six python-wheel
 
 name=python-scour
 version=0.38.2

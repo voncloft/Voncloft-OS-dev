@@ -1,5 +1,5 @@
 # description : Compatibility shims for pip versions 8 thru current
-# depends : python-pip python-wheel python-setuptools
+# depends : python python-wheel python-setuptools
 
 name=python-pip-shims
 version=0.7.3

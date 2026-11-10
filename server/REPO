@@ -46,7 +46,7 @@ f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
 f:34d56f3561bf04eadfd601b647fe0a91:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
 f:f2d3339f01a14de76126293501626eb1:homeassistant/CHANGELOG
-f:bbf222939b4e33537b0f22d48f32fa53:homeassistant/spkgbuild
+f:ef92b27218babee983720b04653b7440:homeassistant/spkgbuild
 f:901281fc384dea63a384ef8af2777efc:samba/.pkgfiles
 f:98abcdacd06a8e4210d34c58b93464d4:samba/samba
 f:c65f2e42ce19954986906299c2b8851f:samba/post-upgrade.sh

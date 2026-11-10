@@ -11,7 +11,7 @@ source="https://www.python.org/ftp/python/$version/${_name}-$version.tar.xz
 
 options="!checksum"
 
-# Pip is owned and bootstrapped by python-pip, not by the interpreter package.
+# Bundle pip with Python through ensurepip; the interpreter package owns its files.
 
 build() {
 	cd Python-$version
@@ -20,7 +20,7 @@ build() {
 	./configure --prefix=/usr        \
             --enable-shared      \
             --with-system-expat  \
-            --with-ensurepip=no \
+            --with-ensurepip=upgrade \
             --enable-optimizations
 	make
 	make DESTDIR=$PKG install

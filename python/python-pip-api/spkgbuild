@@ -1,5 +1,5 @@
 # description : An unofficial, importable pip API
-# depends : python-packaging python-pyparsing python-pip
+# depends : python-packaging python-pyparsing python
 
 name=python-pip-api
 version=0.0.35
