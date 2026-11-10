@@ -1,5 +1,75 @@
-# This package has no independent, automatically applicable upstream release.
-source="https://archive.mozilla.org/pub/${name%-bin}/nightly/"
+# Track the en-US Linux x86-64 Nightly, including its immutable build timestamp.
+# update-repo edits only version=; spkgbuild derives the archive path from it.
+source="https://archive.mozilla.org/pub/${name%-bin}/nightly/latest-mozilla-central/"
 url=$source
-update_repo_skip='Firefox nightly is maintained manually as requested.'
-update_repo_skip_status='Manual update'
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - "$url" "${name%-bin}" <<'PY'
+import datetime
+import json
+import pathlib
+import re
+import sys
+import urllib.request
+from html.parser import HTMLParser
+from urllib.parse import urljoin
+
+base, product = sys.argv[1:]
+
+class Listing(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.links = set()
+
+    def handle_starttag(self, tag, attrs):
+        if tag == 'a':
+            for key, value in attrs:
+                if key == 'href' and value:
+                    self.links.add(urljoin(base, value))
+
+try:
+    listing = Listing()
+    listing.feed(pathlib.Path('index.html').read_text(encoding='utf-8'))
+    pattern = re.compile(re.escape(base + product) +
+                         r'-([0-9]+\.0a1)\.en-US\.linux-x86_64\.buildhub\.json')
+    candidates = []
+    for link in listing.links:
+        match = pattern.fullmatch(link)
+        if match and link.removesuffix('.buildhub.json') + '.tar.xz' in listing.links:
+            candidates.append((int(match[1].split('.')[0]), match[1], link))
+    if not candidates:
+        raise ValueError('no complete Linux x86-64 Nightly listing')
+    _, upstream_version, metadata_url = max(candidates)
+    with urllib.request.urlopen(metadata_url, timeout=20) as response:
+        metadata = json.load(response)
+    target = metadata['target']
+    expected = {'channel': 'nightly', 'locale': 'en-US', 'os': 'linux',
+                'platform': 'linux-x86_64', 'version': upstream_version}
+    if any(target.get(key) != value for key, value in expected.items()):
+        raise ValueError('Nightly target metadata mismatch')
+    if metadata['source']['product'] != product or metadata['source']['tree'] != 'mozilla-central':
+        raise ValueError('unexpected upstream product or source tree')
+    build_id = metadata['build']['id']
+    if not isinstance(build_id, str) or not re.fullmatch(r'[0-9]{14}', build_id):
+        raise ValueError('invalid Nightly build timestamp')
+    date = datetime.datetime.strptime(build_id, '%Y%m%d%H%M%S')
+    archive = (f'https://archive.mozilla.org/pub/{product}/nightly/'
+               f'{date:%Y/%m/%Y-%m-%d-%H-%M-%S}-mozilla-central/'
+               f'{product}-{upstream_version}.en-US.linux-x86_64.tar.xz')
+    if metadata['download']['url'] != archive:
+        raise ValueError('dated archive does not match the Nightly build metadata')
+    # Check the actual dated artifact, without downloading the browser.
+    with urllib.request.urlopen(urllib.request.Request(archive, method='HEAD'), timeout=20):
+        pass
+    print(f'{upstream_version}.{build_id}')
+except (OSError, ValueError, KeyError, TypeError) as error:
+    print(f'ERROR: Unable to resolve Firefox Nightly: {error}', file=sys.stderr)
+    sys.exit(1)
+PY
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
+}
