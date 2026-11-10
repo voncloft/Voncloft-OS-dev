@@ -2,7 +2,7 @@
 # depends : gnutls libgcrypt openssl qt6
 
 name=gwenhywfar
-version=5.14.1
+version=5.14.2
 release=1
 
 source="https://www.aquamaniac.de/rdm/attachments/download/630/${name}-${version}.tar.gz"

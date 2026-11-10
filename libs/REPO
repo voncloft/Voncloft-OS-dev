@@ -1167,8 +1167,8 @@ f:57d3dad8d1760b7727260f9ad4ea8d5d:libusb-compat/spkgbuild
 f:e8064ea3d5b724b00acc51d4a46095e3:libfakekey/.pkgfiles
 f:abc437d325fcf8622622be281c0aeb03:libfakekey/spkgbuild
 f:683dcf29ffc4429549d5d6cb056f0886:stemmer/.pkgfiles
-f:5b4efa4be87fc7ac7a05ca1f7fb2a521:stemmer/CHANGELOG
-f:1d635796ff2e6bed8a3594dc3c57ae79:stemmer/spkgbuild
+f:3840725d48135f18bfeed41e142ce3d7:stemmer/CHANGELOG
+f:d9b0f5a9ad644bf2e9c8ba6043384c0b:stemmer/spkgbuild
 f:681ddd8d4fc9768471c11e6988c170b3:libfyaml/.pkgfiles
 f:c42fc666403368a494a1697551d0af73:libfyaml/spkgbuild
 f:f2d799f9df27b6c25eca5916d6061b26:libfyaml/override

@@ -1,7 +1,7 @@
 # description	: Stemming library supporting several languages
 
 name=stemmer
-version=3.1.1
+version=3.2.0
 release=1
 _name=snowball
 source="$name-$version.tar.gz::https://github.com/snowballstem/${_name}/archive/v$version.tar.gz

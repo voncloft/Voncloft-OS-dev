@@ -125,8 +125,8 @@ f:19c3fcc752ca552f22cba6b495fbedc9:iasl/spkgbuild
 f:457f8f9f0760c139a5e532e288e60e91:iasl/override
 f:05270afc9b5aa02ee314a204f4500f9b:ccache/.pkgfiles
 f:c506bd8e562bc26fe21e8091937552cc:ccache/readme
-f:66f2eebca1c26022e4b893a906bf1228:ccache/CHANGELOG
-f:022254cda10698fca514e763c9bee7bf:ccache/spkgbuild
+f:a9efd055f3f45ba4f0fe1a8314abd7b7:ccache/CHANGELOG
+f:bab3651492441479deb4705e8eadc737:ccache/spkgbuild
 f:14f85ae383e4200af2132682e33ab6ff:ccache/ccache.conf
 f:168a474af7ca2e0b08d990552c4879ba:automake/.pkgfiles
 f:8ace17af17ea4bba59c69d616c0319c8:automake/CHANGELOG
@@ -138,7 +138,7 @@ f:e491b569d9ca58d41c22c11bcc60393b:cmake/spkgbuild
 f:4f6f8e00ae4fe46df19791b5183c3c11:cmake/override
 f:cea1e92da5e154b5f073e610a3ee238a:.httpup-repo.current
 f:277b0ccff30b904ac06222a46022afeb:luajit/.pkgfiles
-f:ef3dc90d9b2fe56edb747e9aee385703:luajit/CHANGELOG
-f:bb9362a11736e866d4a3a2f485cf09b3:luajit/spkgbuild
+f:ead7afe9a867edc7a9a31c882ff35a6e:luajit/CHANGELOG
+f:7a1d01d6fe5f15caefb4b9b9e01c202b:luajit/spkgbuild
 f:81b617dd0290cebc4ebbbf2eaad8faf3:luajit/override
 f:0af6e871d68b3e9318d7e7cd6c905ad6:luajit/.checksums

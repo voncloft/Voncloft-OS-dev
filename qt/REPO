@@ -78,8 +78,8 @@ f:2ae80f35632fea04f6b3b138b11c1b87:mauikit-texteditor/spkgbuild
 f:91310743cb79d73e7ddd7771d2974713:bluez-qt/.pkgfiles
 f:2b08e0c28c0c602a27153fc4616ec30d:bluez-qt/CHANGELOG
 f:3c277fc4e6b69bfe78b0c06511cd5002:bluez-qt/spkgbuild
-f:0f7986df42161145abfd07550de5b263:qxmpp/CHANGELOG
-f:4a44eb0667556b437bf15fbda7488b65:qxmpp/spkgbuild
+f:a1233bdd5f4c6a12547e3526ca2f6ede:qxmpp/CHANGELOG
+f:0d14afa1e402d81968fc4cdd043aa6f4:qxmpp/spkgbuild
 f:746106f73ca5c841800ab998b915a23a:qxmpp/override
 f:9145de8405ebc6613fdaca31ed24adc0:mauikit/spkgbuild
 f:5411be55c5d3b1854ace075eaf9713b6:appstream-qt/.pkgfiles
@@ -98,7 +98,8 @@ f:8e5adcfa92eec7a13f4fbab425a50617:libaccounts-qt/CHANGELOG
 f:7a0539bf6a0caaf07ffc9decbc00ca28:libaccounts-qt/spkgbuild
 f:31ad59b82d49a9c601f654b1e0c8abcc:libaccounts-qt/override
 f:0ba9564f4b412e926ffc3547abb6b946:libalkimia/spkgbuild
-f:7c5fad80bc4683dec7548eeec79bb3aa:stellarsolver/spkgbuild
+f:e57378883f427e7e75ce534c91021670:stellarsolver/CHANGELOG
+f:0873f89e9b4efea759c159b453531857:stellarsolver/spkgbuild
 f:2902ee02380bb8e61d57f983669b923f:pcmanfm-qt/CHANGELOG
 f:e01e89ef08b3b1c7be8986c48585a24c:pcmanfm-qt/spkgbuild
 f:eafc5638a3310c30a593188d63e2db55:qbittorrent-nox/CHANGELOG

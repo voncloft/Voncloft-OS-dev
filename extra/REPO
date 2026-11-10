@@ -179,8 +179,8 @@ f:c0dd249c01ef3729e2317bd5244c2b9b:openjdk/CHANGELOG
 f:ec42fae2cd9c4afedeab617315cd4f55:openjdk/post-install.sh
 f:2bc6b4a036e1d4285cc61e4c79806f6c:openjdk/spkgbuild
 f:ee6652416ff54d5714d6ac79418ec2c1:openjdk/override
-f:466d69a90f3ce8ec6e7a93bd0636abc5:flexget/CHANGELOG
-f:1cc1854fa9cc9fd5636e317df12d2f90:flexget/spkgbuild
+f:d57b76adf1df7b2613e951c8ad6244ab:flexget/CHANGELOG
+f:9534c32efce07f728798a301764ce154:flexget/spkgbuild
 f:9a0e38db754c2c694d32d1da60f925a9:chessx/CHANGELOG
 f:f2a11913ac7171735704aee73ea0607e:chessx/spkgbuild
 f:5ace2e28de51f7029e4750af377bded3:chessx/override
@@ -203,9 +203,9 @@ f:da1b5902f72a6c090245f59a03f70cc0:ncdu/.pkgfiles
 f:002e9e75bec3c438a483188239234c4d:ncdu/CHANGELOG
 f:4976ceaca0aba4697c0460f2955d0a95:ncdu/spkgbuild
 f:955fe04a643d009e711c09e943166854:chatgpt-desktop/.pkgfiles
-f:d642c7e3b7c96d87990c00710ddb881a:chatgpt-desktop/CHANGELOG
+f:c838fd82fe84e2459de85126771fb265:chatgpt-desktop/CHANGELOG
 f:ecc63553466d7d6321650763d35c9cfe:chatgpt-desktop/fetch-source.py
-f:409f55b4aca132aa38d18ddccf980f4f:chatgpt-desktop/spkgbuild
+f:2150bfc5b1afa109c504e41f603422c8:chatgpt-desktop/spkgbuild
 f:564b761682562cfcdf0e3c62c8d2b870:chatgpt-desktop/override
 f:64040a51058c820808dc5643c166221a:qemu/.pkgfiles
 f:c513ed180d302664da7897bf6ce0cf0a:qemu/CHANGELOG
@@ -228,8 +228,8 @@ f:9b78eec6d1cb62daf7568840b1fd4883:htmlq/spkgbuild
 f:24ea8b83792054dfcc6e59ffffe07b0d:htmlq/override
 f:f6e45406ddf40ea37185fa47512a71e4:djvulibre/CHANGELOG
 f:570ff5628e5dded743b45409c9f860da:djvulibre/spkgbuild
-f:6424d2da922e2287639ed844a8eefdc7:inotify-tools/CHANGELOG
-f:71b9faae5feeba30300aba62c7a17e22:inotify-tools/spkgbuild
+f:cc834378a1e06fba940467f0082f5a35:inotify-tools/CHANGELOG
+f:eae6a7f9738c800866d4052db21e5811:inotify-tools/spkgbuild
 f:e10125f78449ccedbf2b06f976ed31c0:clazy/CHANGELOG
 f:36bdf7180586d2e28d35d6f424c3fe11:clazy/spkgbuild
 f:5f0d9b274c7362384367a6199d32b199:session-desktop/.pkgfiles

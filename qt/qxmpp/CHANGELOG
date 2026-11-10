@@ -7,3 +7,13 @@ Release=2
 Synopsis:
 Added Changelog to package
 Changed from version 1.17.0 to version 1.17.1
+
+----------------------------------------------------------------
+
+Date: Mon Nov  9 11:20:06 PM EST 2026
+
+Version=1.17.2
+Release=2
+
+Synopsis:
+Changed from version 1.17.1 to version 1.17.2

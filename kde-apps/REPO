@@ -1069,7 +1069,8 @@ f:820267dcaa719d36074d51d8f2163c68:kmail-account-wizard/spkgbuild
 f:85ade0f1911937e904f2fdb61bb954eb:granatier/CHANGELOG
 f:4c7edb011346eebfbdd870dafcd286e8:granatier/spkgbuild
 f:002efc0681557ad624b8d8b81553540e:kvantum/.pkgfiles
-f:836cd33af779fb366c0b2caa5e4f1cb6:kvantum/spkgbuild
+f:e8e0c2154893be8dcc1fde177b40c3d2:kvantum/CHANGELOG
+f:99116416855393984aa9e7af0be45f97:kvantum/spkgbuild
 f:3060a1b2b9c0a1c9c753dbfbcd155776:akonadi-contacts/.pkgfiles
 f:7dcb4ddc8ef4ea0f35e9bc9a974b0a61:akonadi-contacts/CHANGELOG
 f:38574f20686bd27c7eb639e0f111bf44:akonadi-contacts/spkgbuild

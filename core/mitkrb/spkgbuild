@@ -2,7 +2,7 @@
 # depends       : 
 
 name=mitkrb
-version=1.22.2    
+version=1.22.3
 release=1
 _name=krb5
 source="https://kerberos.org/dist/${_name}/${version%.*}/${_name}-${version}.tar.gz"

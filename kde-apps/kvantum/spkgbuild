@@ -2,7 +2,7 @@
 # depends : kde-deps-installer kwindowsystem qt6
 
 name=kvantum
-version=1.1.8
+version=1.1.9
 release=1
 
 _name=Kvantum

@@ -2,7 +2,7 @@
 # depends       : elfutils mesa llvm-32 spirv-llvm-translator-32 rust-32 rust-bindgen cbindgen libdrm-32 libglvnd-32 libx11-32 libxext-32 libxcb-32 libxshmfence-32 wayland-32 xorg-libraries
 
 name=mesa-32
-version=26.2.6
+version=26.3.0
 release=1
 
 _name=${name%-32}

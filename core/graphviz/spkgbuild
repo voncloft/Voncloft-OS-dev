@@ -3,7 +3,7 @@
 # depends : pango cairo xorg-libraries fontconfig libpng cmake ruby swig java-headless perl
 
 name=graphviz
-version=16.1.0
+version=16.1.1
 release=3
 source="https://gitlab.com/graphviz/${name}/-/archive/$version/${name}-$version.tar.bz2"
 

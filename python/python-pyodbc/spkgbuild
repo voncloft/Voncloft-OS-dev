@@ -2,7 +2,7 @@
 # depends : python unixodbc
 
 name=python-pyodbc
-version=5.4.0
+version=5.5.0
 release=3
 
 _name=${name#python-}

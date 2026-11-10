@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-ciso8601
-version=2.3.3
+version=2.4.1
 release=3
 
 _name=${name#python-}

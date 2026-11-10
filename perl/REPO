@@ -1134,8 +1134,8 @@ f:77d3defe770e8d481dfd154b6f911025:perl-test-mock-guard/spkgbuild
 f:17e86532dbe93af942aeaede866146de:perl-string-format/CHANGELOG
 f:5fa5c332cda8e0a468f37676c42c47e0:perl-string-format/spkgbuild
 f:1ac196c77e4e2b48732f33217f55054d:perl-djabberd-rosterstorage-sqlite/spkgbuild
-f:b2480b4ff5f87fb39522940edbecc4c1:perl-net-upnp/CHANGELOG
-f:8240bdf9781653153d23eef9c64f2b39:perl-net-upnp/spkgbuild
+f:829bea71dced276bc2dc6ff2caa132b3:perl-net-upnp/CHANGELOG
+f:b5975c687ff9a0aee7f58752603252dc:perl-net-upnp/spkgbuild
 f:82ee5e0ddeeb8fc358ce927046e6c049:perl-net-upnp/override
 f:e43e4786416a7ec85e36de7ae6bc0cb1:perl-io-bufferedselect/CHANGELOG
 f:8340b19e0de8fdf8b524eea8f49d61fa:perl-io-bufferedselect/spkgbuild

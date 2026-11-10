@@ -69,8 +69,8 @@ f:8e3e55061c94c08c868ea45ebe082444:xf86-input-synaptics/50-synaptics.conf
 f:8b8e01ae1d50726314fbcb7bdb11f389:xf86-input-synaptics/CHANGELOG
 f:3bdbfd1fa424ed8ba948656152d7bef1:xf86-input-synaptics/spkgbuild
 f:fb0178f87ba14f028e85701026323583:mesa/.pkgfiles
-f:517b8b16049cc0d44401d6dd1e60785d:mesa/CHANGELOG
-f:338aae345f2d48de82c1f1569d697721:mesa/spkgbuild
+f:495117e52b445e33d257c7dc38bfc836:mesa/CHANGELOG
+f:4fd2a67cd3fa6c92930a3bd519e6b9de:mesa/spkgbuild
 f:18f216f3c33a289fca41654ade1b37bf:glu/.pkgfiles
 f:a6f6e602e353b262daffe05dd3160bae:glu/CHANGELOG
 f:6380ca3fb0683b4ab1f218eeb68ede49:glu/spkgbuild

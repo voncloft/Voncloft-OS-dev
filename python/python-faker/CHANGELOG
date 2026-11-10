@@ -1477,3 +1477,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 40.43.0 to version 40.44.0
+
+----------------------------------------------------------------
+
+Date: Mon Nov  9 11:20:06 PM EST 2026
+
+Version=40.52.0
+Release=1
+
+Synopsis:
+Changed from version 40.44.0 to version 40.52.0

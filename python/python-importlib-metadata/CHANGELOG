@@ -407,3 +407,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 8.7.0 to version 10.1.0
+
+----------------------------------------------------------------
+
+Date: Mon Nov  9 11:20:06 PM EST 2026
+
+Version=10.2.0
+Release=1
+
+Synopsis:
+Changed from version 10.1.0 to version 10.2.0

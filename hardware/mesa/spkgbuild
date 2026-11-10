@@ -2,7 +2,7 @@
 # description : OpenGL compatible 3D graphics library
 
 name=mesa
-version=26.2.6
+version=26.3.0
 release=3
 source="https://mesa.freedesktop.org/archive/$name-$version.tar.xz"
 options="!checksum"

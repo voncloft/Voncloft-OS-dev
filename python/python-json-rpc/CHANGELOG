@@ -57,3 +57,13 @@ release=1
 
 Synopsis:
 Fixed URL and directory install
+
+----------------------------------------------------------------
+
+Date: Mon Nov  9 11:20:06 PM EST 2026
+
+Version=1.15.0
+Release=1
+
+Synopsis:
+Changed from version 1.13.0 to version 1.15.0

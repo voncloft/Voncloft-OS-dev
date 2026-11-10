@@ -2,7 +2,7 @@
 # depends	: alsa-lib gtk2 glib nss libxtst libx11 openssl libcurl-gnutls gconf libarchive
 
 name=spotify
-version=1.2.95.453.g0eeebbed
+version=1.3.4.258.gc60b10b0946a
 verzion=${version%.*}-${version##*.}
 release=1
 options="!strip"

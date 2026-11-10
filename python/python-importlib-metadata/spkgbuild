@@ -2,7 +2,7 @@
 # depends : python-zipp
 
 name=python-importlib-metadata
-version=10.1.0
+version=10.2.0
 release=1
 
 _name=importlib_metadata
