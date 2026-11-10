@@ -1,17 +1,20 @@
-# description : Official firefox bin
+# description : Official Thunderbird binary
 # depends : 
 
 name=thunderbird-bin
-version=145
-release=0a1
-month=09
-year=2025
-day=24
-hour=10
-min=23
-sec=40
+# Include the build ID so daily Nightlies are distinct package/cache versions.
+version=162.0a1.20261109100349
+release=1
 _name=${name%-bin}
-source="https://archive.mozilla.org/pub/${_name}/nightly/$year/$month/$year-$month-$day-$hour-$min-$sec-comm-central/${_name}-$version.$release.en-US.linux-x86_64.tar.xz
+_version=${version%.*}
+_buildid=${version##*.}
+year=${_buildid:0:4}
+month=${_buildid:4:2}
+day=${_buildid:6:2}
+hour=${_buildid:8:2}
+min=${_buildid:10:2}
+sec=${_buildid:12:2}
+source="$name-$version.tar.xz::https://archive.mozilla.org/pub/${_name}/nightly/$year/$month/$year-$month-$day-$hour-$min-$sec-comm-central/${_name}-${_version}.en-US.linux-x86_64.tar.xz
 	thunderbird.sh
 	thunderbird.desktop"
 

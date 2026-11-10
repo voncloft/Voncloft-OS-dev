@@ -112,10 +112,10 @@ f:f1cbcac961f006f8442e698de30f32bc:webtorrent-desktop-bin/spkgbuild
 f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.desktop
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
-f:58d43b27b1195030c8875239e92efea9:thunderbird-bin/CHANGELOG
-f:3063c0b1adeabc9692f4cb25576afbbc:thunderbird-bin/spkgbuild
+f:73c0869bcfae9649c7bf7678921b0d89:thunderbird-bin/CHANGELOG
+f:73516a267828bb0dba0b2a9981b80d25:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
-f:5c8a75b938991a6906426023a4ad1617:thunderbird-bin/override
+f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop
 f:06052efcc9885908011feaf24993b410:wps-office/CHANGELOG
 f:265189b536a02560006480fa28008b72:wps-office/spkgbuild
