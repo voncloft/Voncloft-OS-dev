@@ -1,4 +1,4 @@
-# Automatic window layout memory for KWin 6.8.2
+# Automatic window layout memory for KWin 6.8.3
 
 This feature is implemented by `kwin-window-layout-memory.patch`. It is a
 Voncloft patch built directly into KWin and enabled automatically.
@@ -32,6 +32,18 @@ identity or window class, window role, and title. Distinct document titles get
 separate slots; indistinguishable windows of the same application use launch
 order, since they do not provide an identity that distinguishes them.
 
+KWin 6.8.3 release 3 fixes slow browser session restoration. When the initial
+two-second match times out, the window's temporary record remains eligible for
+an exact saved-title match for another 60 seconds. Title or application-identity
+changes trigger retries without polling. A successful match reuses the saved
+record and removes the temporary duplicate; subsequent page changes do not
+move the window again. If several saved records have the same identity and
+title, the most recently recorded placement wins.
+
+Moving or resizing the window interactively, changing its monitor or virtual
+desktop, or grouping it manually cancels the late retry. These actions keep the
+placement you selected. The startup grace period also ends on logout.
+
 The state is saved atomically, readable only by the user, in
 `$XDG_STATE_HOME/kwin/kwin-window-layout.json` (normally
 `~/.local/state/kwin/kwin-window-layout.json`). Closed-window history is bounded; saved group members are retained even while
@@ -55,7 +67,8 @@ the layout-memory patch; the base window-tabs patch is unchanged.
 Both patches apply with zero fuzz. Integration coverage exercises Plasma's real
 saving/quitting sequence, cancellation, closing and reopening all members,
 partial groups, merging groups with absent members, explicit detach, and history
-pruning. Separate production KWin processes with Qt test clients validate
+pruning. Release 3 additionally covers browser titles arriving after the initial
+cutoff, stale duplicate history, and manual placement taking precedence. Separate production KWin processes with Qt test clients validate
 close/reopen behavior and logout/login restoration without touching the desktop.
 
 A group already erased by an older build cannot be recovered automatically.

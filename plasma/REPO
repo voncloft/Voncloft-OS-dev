@@ -127,12 +127,12 @@ f:d910b3a899c9e4f2410614556c93c448:powerdevil/.pkgfiles
 f:55be3ed4fbf4ac2cfd39dfd39da18279:powerdevil/CHANGELOG
 f:40b64a9290c61b8bf04bec403ac9b1e2:powerdevil/spkgbuild
 f:fd81cc03d57ce4d6975104ae2f266447:kwin/.pkgfiles
-f:80f88845432b3cd750e98b2d3acfaa69:kwin/kwin-window-layout-memory.patch
-f:cb8b3a3526c2eec5bdc0a25f1bb99f1f:kwin/WINDOW-LAYOUT-MEMORY.md
+f:626a10632a40f0e2278e9a1986ecb72f:kwin/kwin-window-layout-memory.patch
+f:595a47cfc81ec17c107b7541c704f8da:kwin/WINDOW-LAYOUT-MEMORY.md
 f:dc83200efde5c5047c50da26b3723a9e:kwin/vulkan-raii-check.cpp
-f:34de5fa926c6997bd1a8df46ac437a30:kwin/CHANGELOG
+f:dac934f268f69f55920678354b76f524:kwin/CHANGELOG
 f:56b6f7dc39bd9b8b2e84ef0f5be7f6c2:kwin/kwin-window-tabs.patch
-f:94b84d1d2874d7f3a4ccf5b28b43fab1:kwin/spkgbuild
+f:67ced69ed35d5dda3d10f668ed55d7cf:kwin/spkgbuild
 f:1f0a2d0823ed9072293dd52fb235529e:kwin/WINDOW-TABS.md
 f:09efe660ff517c2ea7b498154d83ed2f:plasma-nm/.pkgfiles
 f:6ff721e074a121219f83216666e1d508:plasma-nm/CHANGELOG

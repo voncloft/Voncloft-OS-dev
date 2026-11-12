@@ -187,13 +187,14 @@
  find_package(LibTaskManager CONFIG QUIET)
 --- /dev/null
 +++ b/src/windowlayoutmemory.h
-@@ -0,0 +1,84 @@
+@@ -0,0 +1,87 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#pragma once
 +
 +#include "core/rect.h"
 +#include "kwin_export.h"
 +
++#include <QDeadlineTimer>
 +#include <QHash>
 +#include <QMap>
 +#include <QObject>
@@ -246,6 +247,7 @@
 +    void bind(Window *window, int record);
 +    int match(Window *window, bool allowUniqueFallback) const;
 +    int newRecord(Window *window);
++    void retryLateRestore(Window *window);
 +    void capture(Window *window);
 +    void restore(Window *window, const Record &record);
 +    void finishDeferredRestores();
@@ -262,6 +264,7 @@
 +    QMap<QString, Group> m_groups;
 +    QHash<Window *, QString> m_bindings;
 +    QHash<Window *, int> m_pending;
++    QHash<Window *, QDeadlineTimer> m_lateMatches;
 +    QList<Window *> m_windowOrder;
 +    QHash<Window *, Record> m_deferredRestores;
 +    QHash<WindowTabGroup *, QString> m_liveGroups;
@@ -274,7 +277,7 @@
 +}
 --- /dev/null
 +++ b/src/windowlayoutmemory.cpp
-@@ -0,0 +1,541 @@
+@@ -0,0 +1,590 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#include "windowlayoutmemory.h"
 +
@@ -338,6 +341,7 @@
 +        // Grouping by hand is already a placement decision; do not undo it
 +        // while waiting for a newly opened window's identity to settle.
 +        for (Window *window : std::as_const(m_windowOrder)) {
++            if (window->tabGroup()) m_lateMatches.remove(window);
 +            if (m_pending.contains(window) && window->tabGroup() && !application(window).isEmpty()) {
 +                const int found = match(window, true);
 +                bind(window, found >= 0 ? found : newRecord(window));
@@ -452,22 +456,34 @@
 +    connect(window, &Window::maximizedChanged, this, changed);
 +    connect(window, &Window::desktopsChanged, this, changed);
 +    connect(window, &Window::desktopsChanged, this, [this, window] {
-+        if (!m_applying && !m_frozen) m_deferredRestores.remove(window);
++        if (!m_applying && !m_frozen) {
++            m_deferredRestores.remove(window);
++            m_lateMatches.remove(window);
++        }
 +    });
 +    connect(window, &Window::outputChanged, this, changed);
-+    connect(window, &Window::captionNormalChanged, this, changed);
-+    connect(window, &Window::desktopFileNameChanged, this, changed);
-+    connect(window, &Window::windowClassChanged, this, changed);
-+    connect(window, &Window::windowRoleChanged, this, changed);
++    connect(window, &Window::outputChanged, this, [this, window] {
++        if (!m_applying && !m_frozen) m_lateMatches.remove(window);
++    });
++    const auto identityChanged = [this, window, changed] {
++        retryLateRestore(window);
++        changed();
++    };
++    connect(window, &Window::captionNormalChanged, this, identityChanged);
++    connect(window, &Window::desktopFileNameChanged, this, identityChanged);
++    connect(window, &Window::windowClassChanged, this, identityChanged);
++    connect(window, &Window::windowRoleChanged, this, identityChanged);
 +    connect(window, &Window::decorationChanged, this, [this] {
 +        QTimer::singleShot(0, this, &WindowLayoutMemory::restoreGroups);
 +    });
 +    connect(window, &Window::interactiveMoveResizeStarted, this, [this, window] {
++        m_lateMatches.remove(window);
 +        m_deferredRestores.remove(window);
 +        if (!m_frozen && m_pending.remove(window) && !application(window).isEmpty()) bind(window, newRecord(window));
 +    });
 +    connect(window, &Window::interactiveMoveResizeFinished, this, [this, window] {
 +        // Never snap a window back after the user has already positioned it.
++        m_lateMatches.remove(window);
 +        m_deferredRestores.remove(window);
 +        if (!m_frozen && m_pending.remove(window) && !application(window).isEmpty()) bind(window, newRecord(window));
 +        capture(window);
@@ -485,9 +501,12 @@
 +        const auto &record = m_records[i];
 +        if (record.app == app && record.role == window->windowRole() && !claimed.contains(record.id)) candidates.append(i);
 +    }
++    int newest = -1;
 +    for (int i : candidates) {
-+        if (m_records[i].title == window->captionNormal()) return i;
++        if (m_records[i].title == window->captionNormal()
++            && (newest < 0 || m_records[i].touched > m_records[newest].touched)) newest = i;
 +    }
++    if (newest >= 0) return newest;
 +    // Ambiguous windows with different titles must not steal each other's slot.
 +    return allowUniqueFallback && candidates.size() == 1 ? candidates.first() : -1;
 +}
@@ -504,6 +523,7 @@
 +
 +void WindowLayoutMemory::bind(Window *window, int record)
 +{
++    m_lateMatches.remove(window);
 +    m_bindings.insert(window, m_records[record].id);
 +    m_pending.remove(window);
 +    for (auto it = m_groups.cbegin(); it != m_groups.cend(); ++it) {
@@ -531,6 +551,10 @@
 +            restore(window, record);
 +        } else if (attempt >= 20) {
 +            bind(window, newRecord(window));
++            // Record unmatched windows normally, but let slow session restore
++            // supply its real identity/title later. No timer polls this grace
++            // period; only identity changes retry an exact saved-title match.
++            m_lateMatches.insert(window, QDeadlineTimer(60000));
 +        } else {
 +            continue;
 +        }
@@ -539,6 +563,32 @@
 +    }
 +    restoreGroups();
 +    if (m_pending.isEmpty()) m_restoreTimer.stop();
++}
++
++void WindowLayoutMemory::retryLateRestore(Window *window)
++{
++    if (m_frozen || m_applying || !m_lateMatches.contains(window)) return;
++    if (m_lateMatches.value(window).hasExpired() || !eligible(window) || window->tabGroup()) {
++        m_lateMatches.remove(window);
++        return;
++    }
++    // A generic browser title is not enough to choose among several windows.
++    // Do not apply the unique-app fallback after the initial matching phase.
++    const int found = match(window, false);
++    if (found < 0) return;
++    const Record record = m_records[found];
++    const QString provisional = m_bindings.value(window);
++    bind(window, found);
++    // This ungrouped startup slot has been replaced by the existing record;
++    // retaining it would accumulate duplicate, increasingly recent history.
++    m_records.removeIf([&](const Record &entry) { return entry.id == provisional; });
++    {
++        QScopedValueRollback applying(m_applying, true);
++        restore(window, record);
++    }
++    capture(window);
++    restoreGroups();
++    scheduleSave();
 +}
 +
 +void WindowLayoutMemory::capture(Window *window)
@@ -739,6 +789,7 @@
 +    const QString id = m_bindings.take(window);
 +    m_pending.remove(window);
 +    m_windowOrder.removeAll(window);
++    m_lateMatches.remove(window);
 +    m_deferredRestores.remove(window);
 +    if (m_frozen) return;
 +    for (auto it = m_groups.cbegin(); it != m_groups.cend(); ++it) {
@@ -800,6 +851,7 @@
 +    if (m_frozen) return;
 +    for (auto it = m_pending.begin(); it != m_pending.end(); ++it) it.value() = 30;
 +    processPending();
++    m_lateMatches.clear();
 +    save();
 +    m_frozen = true;
 +    m_saveTimer.stop();
@@ -818,7 +870,7 @@
 +#include "moc_windowlayoutmemory.cpp"
 --- /dev/null
 +++ b/autotests/integration/window_layout_memory_test.cpp
-@@ -0,0 +1,553 @@
+@@ -0,0 +1,672 @@
 +/* SPDX-License-Identifier: GPL-2.0-or-later */
 +#include "kwin_wayland_test.h"
 +#include "core/output.h"
@@ -1018,6 +1070,125 @@
 +                    || (a->window->frameGeometry() == right && b->window->frameGeometry() == left));
 +        m_memory->save();
 +        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 2);
++    }
++    void browserTitlesAfterInitialDeadline_data()
++    {
++        QTest::addColumn<bool>("lateAppId");
++        QTest::newRow("late-title") << false;
++        QTest::newRow("late-title-and-app-id") << true;
++    }
++    void browserTitlesAfterInitialDeadline()
++    {
++        QFETCH(bool, lateAppId);
++        const RectF left(100, 100, 600, 420), right(1460, 180, 640, 450);
++        auto a = client(QStringLiteral("firefox-nightly"), QStringLiteral("Page A - Nightly"));
++        auto b = client(QStringLiteral("firefox-nightly"), QStringLiteral("Page B - Nightly"));
++        QVERIFY(a && b);
++        position(a.get(), right);
++        position(b.get(), left);
++        stopMemory(); a.reset(); b.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        const auto initialApp = lateAppId ? QStringLiteral("starting-browser") : QStringLiteral("firefox-nightly");
++        b = client(initialApp, QStringLiteral("Nightly"));
++        a = client(initialApp, QStringLiteral("Nightly"));
++        QVERIFY(a && b);
++        // Firefox can restore page titles only after KWin's initial two-second
++        // matching window. Both previous records must remain available then.
++        QTest::qWait(2300);
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 4);
++        b->shell->set_title(QStringLiteral("Page B - Nightly"));
++        a->shell->set_title(QStringLiteral("Page A - Nightly"));
++        if (lateAppId) {
++            b->shell->set_app_id(QStringLiteral("firefox-nightly"));
++            a->shell->set_app_id(QStringLiteral("firefox-nightly"));
++        }
++        QTRY_COMPARE(a->window->frameGeometry(), right);
++        QTRY_COMPARE(b->window->frameGeometry(), left);
++        m_memory->save();
++        QCOMPARE(state().value(QStringLiteral("windows")).toArray().size(), 2);
++        // The matched record is used once, not on every subsequent page change.
++        a->shell->set_title(QStringLiteral("Page B - Nightly"));
++        QTest::qWait(150);
++        QCOMPARE(a->window->frameGeometry(), right);
++    }
++    void lateTitleRespectsManualPlacement_data()
++    {
++        QTest::addColumn<QString>("action");
++        QTest::newRow("interactive-move") << QStringLiteral("move");
++        QTest::newRow("screen-shortcut") << QStringLiteral("screen");
++        QTest::newRow("desktop-shortcut") << QStringLiteral("desktop");
++        QTest::newRow("manual-group") << QStringLiteral("group");
++    }
++    void lateTitleRespectsManualPlacement()
++    {
++        QFETCH(QString, action);
++        auto a = client(QStringLiteral("firefox-nightly"), QStringLiteral("Page A - Nightly"));
++        auto b = client(QStringLiteral("firefox-nightly"), QStringLiteral("Page B - Nightly"));
++        QVERIFY(a && b);
++        position(a.get(), RectF(100, 100, 600, 420));
++        position(b.get(), RectF(1460, 180, 640, 450));
++        stopMemory(); a.reset(); b.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        startMemory();
++        a = client(QStringLiteral("firefox-nightly"), QStringLiteral("Nightly")); QVERIFY(a);
++        QTest::qWait(2300);
++        std::unique_ptr<Client> peer;
++        if (action == QStringLiteral("move")) {
++            workspace()->activateWindow(a->window, true);
++            workspace()->slotWindowMove();
++            QVERIFY(a->window->isInteractiveMove());
++            a->window->keyPressEvent(Qt::Key_Enter);
++            QVERIFY(!a->window->isInteractiveMove());
++            position(a.get(), RectF(300, 250, 620, 440));
++        } else if (action == QStringLiteral("screen")) {
++            a->window->sendToOutput(workspace()->outputs()[1]);
++            QTRY_COMPARE(a->window->output(), workspace()->outputs()[1]);
++        } else if (action == QStringLiteral("desktop")) {
++            a->window->setDesktops({VirtualDesktopManager::self()->desktops()[1]});
++        } else {
++            peer = client(QStringLiteral("editor"), QStringLiteral("Editor")); QVERIFY(peer);
++            position(peer.get(), RectF(1460, 180, 640, 450));
++            QVERIFY(workspace()->windowTabManager()->groupWindows(a->window, peer->window));
++            QTRY_COMPARE(a->window->frameGeometry(), peer->window->frameGeometry());
++        }
++        const auto chosenGeometry = a->window->moveResizeGeometry();
++        const auto chosenDesktops = a->window->desktops();
++        a->shell->set_title(QStringLiteral("Page A - Nightly"));
++        QTRY_COMPARE(a->window->captionNormal(), QStringLiteral("Page A - Nightly"));
++        QTest::qWait(150);
++        QCOMPARE(a->window->moveResizeGeometry(), chosenGeometry);
++        QCOMPARE(a->window->desktops(), chosenDesktops);
++    }
++    void newestDuplicateTitleWins()
++    {
++        const RectF oldPosition(100, 100, 600, 420), lastPosition(1460, 180, 640, 450);
++        auto a = client(QStringLiteral("firefox-nightly"), QStringLiteral("Page - Nightly")); QVERIFY(a);
++        position(a.get(), oldPosition);
++        stopMemory(); a.reset();
++        QTRY_VERIFY(waylandServer()->windows().isEmpty());
++        auto root = state();
++        auto records = root.value(QStringLiteral("windows")).toArray();
++        QCOMPARE(records.size(), 1);
++        auto old = records[0].toObject();
++        old.insert(QStringLiteral("touched"), 1);
++        records[0] = old;
++        auto latest = old;
++        latest.insert(QStringLiteral("id"), QStringLiteral("newer-firefox-record"));
++        latest.insert(QStringLiteral("touched"), 2);
++        auto output = workspace()->outputs()[1];
++        latest.insert(QStringLiteral("output"), output->uuid());
++        latest.insert(QStringLiteral("outputName"), output->name());
++        latest.insert(QStringLiteral("outputGeometry"), QJsonArray{1280, 0, 1280, 1024});
++        latest.insert(QStringLiteral("geometry"), QJsonArray{lastPosition.x(), lastPosition.y(), lastPosition.width(), lastPosition.height()});
++        records.append(latest);
++        root.insert(QStringLiteral("windows"), records);
++        QFile file(path()); QVERIFY(file.open(QIODevice::WriteOnly));
++        file.write(QJsonDocument(root).toJson()); file.close();
++        startMemory();
++        a = client(QStringLiteral("firefox-nightly"), QStringLiteral("Page - Nightly")); QVERIFY(a);
++        QTRY_COMPARE(a->window->frameGeometry(), lastPosition);
 +    }
 +    void restoreThreeTabsInDifferentLaunchOrder()
 +    {

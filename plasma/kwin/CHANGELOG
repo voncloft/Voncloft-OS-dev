@@ -709,3 +709,18 @@ Release=1
 
 Synopsis:
 Changed from version 6.8.2 to version 6.8.3
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 2026
+
+Version=6.8.3
+Release=3
+
+Synopsis:
+Fix Firefox window placement when restored page titles arrive after the initial
+matching timeout. Retry exact title/identity matches during a bounded startup
+grace period, reuse the latest saved placement, and discard temporary duplicate
+records after matching. Respect manual moves, monitor/desktop changes and tab
+grouping. Add delayed-title, duplicate-history and manual-placement regressions
+to the separate layout-memory patch.
