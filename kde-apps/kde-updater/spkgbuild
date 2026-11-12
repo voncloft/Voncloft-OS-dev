@@ -1,0 +1,11 @@
+# description : Interactive Scratch upgrades for KDE applications, Plasma, or Frameworks
+# depends : bash scratchpkg sudo
+
+name=kde-updater
+version=1.0.0
+release=1
+source="$name"
+
+build() {
+    install -Dm755 "$SRC/$name" "$PKG/usr/bin/$name"
+}

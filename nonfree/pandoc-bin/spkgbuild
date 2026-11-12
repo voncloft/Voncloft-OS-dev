@@ -2,7 +2,7 @@
 # depends	: cmark
 
 name=pandoc-bin
-version=3.13
+version=3.14
 release=1
 _name=${name%-bin}
 source="https://github.com/jgm/${_name}/releases/download/$version/${_name}-$version-linux-amd64.tar.gz

@@ -3,7 +3,7 @@
 
 name=python-sip-pyqt5
 _upstream_name=python-sip-pyqt6
-version=13.13.0
+version=13.13.1
 release=2
 _name=pyqt6_sip
 source="https://files.pythonhosted.org/packages/source/p/${_name}/${_name}-${version}.tar.gz"

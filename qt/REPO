@@ -83,8 +83,8 @@ f:0d14afa1e402d81968fc4cdd043aa6f4:qxmpp/spkgbuild
 f:746106f73ca5c841800ab998b915a23a:qxmpp/override
 f:9145de8405ebc6613fdaca31ed24adc0:mauikit/spkgbuild
 f:5411be55c5d3b1854ace075eaf9713b6:appstream-qt/.pkgfiles
-f:5483d7059d5cce8bf2b519b8e3ec6bbf:appstream-qt/CHANGELOG
-f:1a225d97be788970d93e2ac0032a4416:appstream-qt/spkgbuild
+f:0c18b022223f95dd9e9c7d6c53d837cf:appstream-qt/CHANGELOG
+f:1fbd4ccddb137b4f26732f4f1810ea0d:appstream-qt/spkgbuild
 f:317299c198930001b9810785efccb2d0:appstream-qt/override
 f:9aea1b15a7061ca7fc504dec279b3f62:qtwebengine/pre-upgrade.sh
 f:d8e3650dd0fca51128187d8bd8504786:qtwebengine/post-upgrade.sh
@@ -122,8 +122,8 @@ f:422d95f2fe902632d2ef21772303fdb9:qgpgme-qt/override
 f:7de355a1845458223351a46391c68717:packagekit-qt/.pkgfiles
 f:171cb1b3ba6a2c87f4cde2453c01c6b7:packagekit-qt/spkgbuild
 f:cf657e78267e08eb2db240c1d07e79c7:qtkeychain/.pkgfiles
-f:39abb4ee44fbe3e07564ef0447d004f9:qtkeychain/CHANGELOG
-f:878ebc72e7850c9e8aa160dcfa4bc14d:qtkeychain/spkgbuild
+f:8f9286346ddcf9b5ebf117267ce824e4:qtkeychain/CHANGELOG
+f:2ad91aafe9567184bd753045d75f420f:qtkeychain/spkgbuild
 f:e152f8345851d61f973e958fe563bc4f:qtkeychain/override
 f:6e41513f2d8f9dc6b8c0b1f80e5f5129:qterminal/CHANGELOG
 f:7dbd2df68a0e7aa7749d218d3161ea67:qterminal/spkgbuild

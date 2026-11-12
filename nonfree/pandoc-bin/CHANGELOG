@@ -397,3 +397,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 3.7.0.2 to version 3.13
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:17 AM EST 2026
+
+Version=3.14
+Release=1
+
+Synopsis:
+Changed from version 3.13 to version 3.14

@@ -1,0 +1,127 @@
+#!/bin/bash
+# Upgrade installed KDE packages using the selected local Scratch repository.
+set -euo pipefail
+
+usage() {
+    cat <<'EOF'
+Usage: kde-updater [--list]
+
+Choose 1. kde-apps, 2. plasma, 3. kf, or 4. ALL (all three folders).
+The selection starts Scratch upgrades without a second confirmation.
+Only installed packages with newer recipes are targeted. Masked packages and
+newer installed versions are skipped. Required new dependencies may be
+installed by Scratch; other installed packages are not upgrade targets.
+
+  --list        Show eligible upgrades without installing anything.
+  -h, --help    Show this help.
+
+Uses the existing checkout; it does not sync or rewrite package versions.
+KDE_UPDATER_REPO_ROOT defaults to /sources/Voncloft-OS-dev.
+MASK_FILE defaults to /etc/scratchpkg.mask.
+EOF
+}
+
+die() { printf 'kde-updater: %s\n' "$*" >&2; exit 1; }
+
+list_only=0
+case $# in
+    0) ;;
+    1)
+        case $1 in
+            --list) list_only=1 ;;
+            -h|--help) usage; exit 0 ;;
+            *) usage >&2; exit 2 ;;
+        esac
+        ;;
+    *) usage >&2; exit 2 ;;
+esac
+
+command -v scratch >/dev/null 2>&1 || die 'Scratch is not installed.'
+printf '1. kde-apps\n2. plasma\n3. kf\n4. ALL\nq. Quit\n'
+while :; do
+    printf 'Choose [1-4]: '
+    IFS= read -r choice || { printf '\nCancelled.\n'; exit 0; }
+    case $choice in
+        1) group=kde-apps; groups=(kde-apps); break ;;
+        2) group=plasma; groups=(plasma); break ;;
+        3) group=kf; groups=(kf); break ;;
+        4) group=ALL; groups=(kde-apps plasma kf); break ;;
+        q|Q) exit 0 ;;
+        *) printf 'Enter 1, 2, 3, 4, or q.\n' ;;
+    esac
+done
+
+repo_root=${KDE_UPDATER_REPO_ROOT:-/sources/Voncloft-OS-dev}
+repos=() repo_options=()
+for directory in "${groups[@]}"; do
+    repo=${repo_root%/}/$directory
+    [[ -d $repo ]] || die "Repository folder does not exist: $repo"
+    repos+=("$repo")
+    repo_options+=("--repo=$repo")
+done
+
+declare -A masked=() seen=()
+masked_names=() packages=()
+mask_file=${MASK_FILE:-/etc/scratchpkg.mask}
+if [[ -e $mask_file ]]; then
+    [[ -r $mask_file ]] || die "Cannot read mask file: $mask_file"
+    while IFS= read -r line || [[ -n $line ]]; do
+        read -r name extra <<< "${line%%#*}"
+        [[ -n $name ]] || continue
+        [[ $name =~ ^[a-zA-Z0-9][a-zA-Z0-9+_.-]*$ && -z $extra ]] ||
+            die "Invalid package mask: $line"
+        if [[ ! ${masked[$name]+present} ]]; then
+            masked[$name]=1
+            masked_names+=("$name")
+        fi
+    done < "$mask_file"
+fi
+
+printf '\nChecking installed packages in %s...\n' "$group"
+status=0
+# Pin selected folders ahead of other repositories, including duplicate names.
+outdated=$(scratch outdate --nocolor "${repo_options[@]}") || status=$?
+# Scratch returns 1 when updates exist; other failures must not start upgrades.
+(( status <= 1 )) || die "Scratch could not check updates (exit $status)."
+saw_record=0
+while read -r name installed arrow available notes; do
+    [[ $arrow == '=>' && -n $installed && -n $available ]] || continue
+    saw_record=1
+    [[ $name =~ ^[a-zA-Z0-9][a-zA-Z0-9+_.-]*$ ]] || continue
+    [[ $notes != *'[masked]'* && $notes != *'[newer installed]'* ]] || continue
+    [[ ! ${masked[$name]+present} && ! ${seen[$name]+present} ]] || continue
+    in_group=0
+    for repo in "${repos[@]}"; do
+        if [[ -f $repo/$name/spkgbuild ]]; then
+            in_group=1
+            break
+        fi
+    done
+    (( in_group == 1 )) || continue
+    seen[$name]=1
+    packages+=("$name")
+    printf '  %s  %s => %s\n' "$name" "$installed" "$available"
+done <<< "$outdated"
+if (( status == 1 && saw_record == 0 )); then
+    die 'Scratch returned an error without a valid update list.'
+fi
+if (( ${#packages[@]} == 0 )); then
+    printf 'No eligible upgrades in %s.\n' "$group"
+    exit 0
+fi
+printf '\n%d package(s) selected from %s.\n' "${#packages[@]}" "$group"
+(( list_only == 0 )) || exit 0
+
+command=(scratch upgrade -y "${repo_options[@]}")
+# Explicit upgrade targets bypass Scratch's sysup mask handling. Keep masks
+# out of both our selected targets and Scratch's dependency traversal.
+if (( ${#masked_names[@]} )); then
+    exclude=$(IFS=,; printf '%s' "${masked_names[*]}")
+    command+=("--exclude=$exclude")
+fi
+command+=("${packages[@]}")
+if (( EUID == 0 )); then
+    exec "${command[@]}"
+fi
+command -v sudo >/dev/null 2>&1 || die 'Run this program as root or install sudo.'
+exec sudo "${command[@]}"

@@ -2,7 +2,7 @@
 # depends       : which brotli c-ares icu libuv nghttp2 openssl simdutf zlib python pkgconf
 
 name=nodejs
-version=26.13.0
+version=26.13.1
 release=1
 _name=node
 source="https://nodejs.org/dist/v${version}/${_name}-v${version}.tar.xz

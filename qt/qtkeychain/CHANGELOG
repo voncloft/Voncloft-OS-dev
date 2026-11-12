@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Changed from version 0.17.0 to version 0.14.0
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:17 AM EST 2026
+
+Version=0.18.0
+Release=1
+
+Synopsis:
+Changed from version 0.17.0 to version 0.18.0

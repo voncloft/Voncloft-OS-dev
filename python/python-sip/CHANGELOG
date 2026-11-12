@@ -67,3 +67,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 6.1.1 to version 6.17.2
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:17 AM EST 2026
+
+Version=6.17.3
+Release=1
+
+Synopsis:
+Changed from version 6.17.2 to version 6.17.3

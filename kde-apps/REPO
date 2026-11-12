@@ -34,6 +34,8 @@ d:drawy
 d:kclock
 d:akonadi-calendar
 d:todolist
+d:kde-updater
+d:kde-updater/tests
 d:kcolorchooser
 d:akonadi-calendar-tools
 d:krfb
@@ -426,6 +428,11 @@ f:6b1003911152a0a715b9eee535ed3bc6:todolist/CHANGELOG
 f:602e3fa0aff0bf4bb42c64fb95356437:todolist/spkgbuild
 f:56ca55e87c86937a94b6289b682fcc92:todolist/override
 f:73e7ac834d461f74090e5886059a9e76:todolist/.checksums
+f:8526ebfb913489c7ffb498a19bc6883b:kde-updater/.pkgfiles
+f:1ffc4b564025e801885e0f03b18b6225:kde-updater/kde-updater
+f:605f7af910335ca9ef03a3699c0ca33f:kde-updater/tests/test-kde-updater.py
+f:8eb7960f79324ad9d6dae79f2697e40f:kde-updater/spkgbuild
+f:c3083e0fa08e8ed9a974e89c7d93030d:kde-updater/override
 f:dba867befc5cee6d0efdcbbebd60ad3d:kcolorchooser/CHANGELOG
 f:ce7cb464ba927ea0f93f5a22372f4912:kcolorchooser/spkgbuild
 f:4e76ff187cfccddc889a9d7a441827c7:akonadi-calendar-tools/CHANGELOG

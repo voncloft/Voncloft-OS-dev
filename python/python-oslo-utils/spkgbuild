@@ -2,7 +2,7 @@
 # depends : python-six python-pbr python-iso8601 python-oslo-i18n python-pytz
 
 name=python-oslo-utils
-version=10.2.0
+version=10.3.0
 release=3
 
 _name=oslo.utils

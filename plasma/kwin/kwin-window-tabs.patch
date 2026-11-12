@@ -200,10 +200,10 @@
      Outline *outline() const;
      Placement *placement() const;
      RuleBook *rulebook() const;
-@@ -757,6 +759,7 @@
-     QList<QString> m_recentlyRemovedDpmsOffOutputs;
+@@ -758,6 +760,7 @@
      QTimer m_dpmsTimer;
      std::shared_ptr<FileDescriptor> m_sleepInhibitor;
+     bool m_sleepPending = false;
 +    std::unique_ptr<WindowTabManager> m_windowTabManager;
 
  private:
@@ -226,7 +226,7 @@
      initShortcuts();
 
      init();
-@@ -3117,6 +3119,11 @@
+@@ -3125,6 +3127,11 @@
      return m_applicationMenu.get();
  }
 

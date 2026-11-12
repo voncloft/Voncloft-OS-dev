@@ -2,7 +2,7 @@
 # depends	: libxslt libsm libxmu glib xdg-utils
 
 name=dropbox
-version=276.4.5325
+version=278.4.4020
 release=1
 options="!strip"
 _name=dropbox-lnx.x86_64

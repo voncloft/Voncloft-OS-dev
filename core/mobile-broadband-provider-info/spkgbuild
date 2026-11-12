@@ -2,7 +2,7 @@
 # depends : libxml2 libxslt meson ninja
 
 name=mobile-broadband-provider-info
-version=20251101
+version=20261111
 release=1
 source="$name-$version.tar.gz::https://github.com/GNOME/${name}/archive/refs/tags/$version.tar.gz"
 options="!checksum"

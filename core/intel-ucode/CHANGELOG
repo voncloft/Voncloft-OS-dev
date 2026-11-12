@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 20200616 to version 20260925
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:16 AM EST 2026
+
+Version=20261110
+Release=2
+
+Synopsis:
+Changed from version 20260925 to version 20261110

@@ -1,0 +1,22 @@
+#!/bin/sh
+set -eu
+
+# Reuse GRUB's own Linux generator so kernel arguments, boot devices and any
+# normal initramfs stay identical. Only early microcode images are omitted.
+[ -s /boot/intel-ucode.img ] || exit 0
+[ -x /etc/grub.d/10_linux ] || exit 0
+GRUB_EARLY_INITRD_LINUX_STOCK=
+GRUB_EARLY_INITRD_LINUX_CUSTOM=
+GRUB_DISABLE_SUBMENU=true
+GRUB_DISABLE_RECOVERY=true
+GRUB_SAVEDEFAULT=false
+GRUB_DEFAULT=0
+GRUB_ACTUAL_DEFAULT=0
+export GRUB_EARLY_INITRD_LINUX_STOCK GRUB_EARLY_INITRD_LINUX_CUSTOM \
+    GRUB_DISABLE_SUBMENU GRUB_DISABLE_RECOVERY GRUB_SAVEDEFAULT \
+    GRUB_DEFAULT GRUB_ACTUAL_DEFAULT
+
+entries=$(/etc/grub.d/10_linux)
+printf '%s\n' "$entries" | sed \
+    -e "/^[[:space:]]*menuentry /s/' / (without Intel microcode)' /" \
+    -e "s/'gnulinux-/'gnulinux-no-intel-ucode-/g"

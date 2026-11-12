@@ -1,21 +1,25 @@
-# description    : microcode update files for intel CPUs'
-# depends        : iucode-tool
+# description : Intel CPU microcode updates loaded early during boot through GRUB
+# depends : iucode-tool
 
 name=intel-ucode
-version=20260925
-release=1
+version=20261110
+release=2
 _name=Intel-Linux-Processor-Microcode-Data-Files
-source="https://github.com/intel/${_name}/archive/refs/tags/microcode-${version}.tar.gz
-        intel-ucode-06-55-04::https://github.com/intel/${_name}/blob/5ada2f32ed7d216e38823f1320358e4679941990/${name}/06-55-04?raw=true"
+source="${name}-${version}.tar.gz::https://github.com/intel/${_name}/archive/refs/tags/microcode-${version}.tar.gz
+        update-grub
+        42_intel_ucode_fallback"
 
 build() {
-        
-	install -m0644 intel-ucode-06-55-04 Intel-Linux-Processor-Microcode-Data-Files-microcode-${version/./}/intel-ucode/06-55-04
-	cd "$SRC"/Intel-Linux-Processor-Microcode-Data-Files-microcode*/
+    cd "$SRC/${_name}-microcode-${version}"
 
-	rm -f intel-ucode/list intel-ucode-with-caveats/list
-	mkdir -p kernel/x86/microcode
-	iucode_tool --write-earlyfw=intel-ucode.img intel-ucode/ intel-ucode-with-caveats/
+    # Use the release's regular microcode without historical replacements or
+    # the separately documented updates requiring special platform handling.
+    rm -f intel-ucode/list
+    iucode_tool --write-earlyfw=intel-ucode.img intel-ucode/
 
-	install -D -m0644 intel-ucode.img "${PKG}"/boot/intel-ucode.img
+    install -Dm644 intel-ucode.img "$PKG/boot/intel-ucode.img"
+    install -Dm644 license "$PKG/usr/share/licenses/$name/LICENSE"
+    install -Dm755 "$SRC/update-grub" "$PKG/usr/libexec/$name/update-grub"
+    install -Dm755 "$SRC/42_intel_ucode_fallback" \
+        "$PKG/etc/grub.d/42_intel_ucode_fallback"
 }

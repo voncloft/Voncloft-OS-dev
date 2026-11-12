@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 3.7.3 to version 3.7.6
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:16 AM EST 2026
+
+Version=3.7.7
+Release=1
+
+Synopsis:
+Changed from version 3.7.6 to version 3.7.7

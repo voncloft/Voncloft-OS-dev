@@ -147,3 +147,13 @@ Release=6
 
 Synopsis:
 Upgraded from version 0.12.2 to version 0.13.0
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:17 AM EST 2026
+
+Version=0.14.0
+Release=6
+
+Synopsis:
+Changed from version 0.13.0 to version 0.14.0

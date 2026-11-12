@@ -1,0 +1,40 @@
+#!/bin/sh
+set -eu
+
+config=/boot/grub/grub.cfg
+image=/boot/intel-ucode.img
+
+# Package builds only stage files. Scratch runs this after install or upgrade.
+for command in grub-mkconfig grub-script-check; do
+    command -v "$command" >/dev/null 2>&1 || {
+        echo "intel-ucode: $command is required to update the GRUB menu." >&2
+        exit 1
+    }
+done
+[ -s "$config" ] && [ -s "$image" ] || {
+    echo "intel-ucode: existing $config and $image are required." >&2
+    exit 1
+}
+
+# Retain the original menu, and validate a replacement before activating it.
+backup="$config.before-intel-ucode"
+[ -e "$backup" ] || cp -p "$config" "$backup"
+new_config=$(mktemp "$config.intel-ucode.XXXXXX")
+trap 'rm -f "$new_config" "$new_config.new"' EXIT
+trap 'exit 1' HUP INT TERM
+
+grub-mkconfig -o "$new_config"
+grub-script-check "$new_config"
+grep -Eq '^[[:space:]]*initrd(efi)?[[:space:]]+.*intel-ucode[.]img([[:space:]]|$)' "$new_config" || {
+    echo 'intel-ucode: GRUB did not include the microcode image; original menu retained.' >&2
+    exit 1
+}
+grep -Eq "^[[:space:]]*menuentry .*without Intel microcode" "$new_config" || {
+    echo 'intel-ucode: GRUB fallback entry is missing; original menu retained.' >&2
+    exit 1
+}
+chmod --reference="$config" "$new_config"
+chown --reference="$config" "$new_config"
+mv -f "$new_config" "$config"
+printf '%s\n' 'Intel microcode is configured for the next boot. Reboot to activate it.' \
+    'GRUB also provides entries marked "without Intel microcode" as a fallback.'

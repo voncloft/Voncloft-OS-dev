@@ -203,9 +203,9 @@ f:da1b5902f72a6c090245f59a03f70cc0:ncdu/.pkgfiles
 f:002e9e75bec3c438a483188239234c4d:ncdu/CHANGELOG
 f:4976ceaca0aba4697c0460f2955d0a95:ncdu/spkgbuild
 f:955fe04a643d009e711c09e943166854:chatgpt-desktop/.pkgfiles
-f:c838fd82fe84e2459de85126771fb265:chatgpt-desktop/CHANGELOG
+f:4a3337ef72f691928dcf5bdb6e6f8c2e:chatgpt-desktop/CHANGELOG
 f:ecc63553466d7d6321650763d35c9cfe:chatgpt-desktop/fetch-source.py
-f:2150bfc5b1afa109c504e41f603422c8:chatgpt-desktop/spkgbuild
+f:25eb9e02302a33b6486aa941b5ee705c:chatgpt-desktop/spkgbuild
 f:564b761682562cfcdf0e3c62c8d2b870:chatgpt-desktop/override
 f:64040a51058c820808dc5643c166221a:qemu/.pkgfiles
 f:c513ed180d302664da7897bf6ce0cf0a:qemu/CHANGELOG
@@ -214,8 +214,8 @@ f:6b54946d53e16a6f2f7daece1c1c6bf7:scid_vs_pc/CHANGELOG
 f:14722c7b828204759e89ab59f6974e5f:scid_vs_pc/spkgbuild
 f:42d81c63296e26e3616676455fba3808:scid_vs_pc/override
 f:f133302d3d8e080cdc76f4634c830b94:nodejs/.pkgfiles
-f:0324d4ec0b4d03afcf3b6b73cdca5986:nodejs/CHANGELOG
-f:a5b806452c8d6254973a6067a149b389:nodejs/spkgbuild
+f:7619f31323cddace44c083beee393430:nodejs/CHANGELOG
+f:fdf885848aac0b0e40d55c92448450c9:nodejs/spkgbuild
 f:924dd0eaf8881f954403942d117c55cb:nodejs/override
 f:20ce5c111d109d15137c951709b5f6c9:r/CHANGELOG
 f:054a7029d1f517d31f65a76de5918874:r/spkgbuild

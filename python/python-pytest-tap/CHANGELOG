@@ -97,3 +97,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 3.3 to version 3.5
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:17 AM EST 2026
+
+Version=3.6
+Release=1
+
+Synopsis:
+Changed from version 3.5 to version 3.6

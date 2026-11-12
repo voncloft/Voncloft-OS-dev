@@ -1,0 +1,5 @@
+# This program is maintained directly in this repository.
+source=local
+url=$source
+update_repo_skip='Local KDE upgrade helper; no separate upstream release.'
+update_repo_skip_status='Local package'

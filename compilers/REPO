@@ -82,8 +82,8 @@ f:bcb9754c03aa84e845ca0e091b5cb3b5:gdb/.pkgfiles
 f:5e994d64d6d6e68d4a3acc412a7414a4:gdb/CHANGELOG
 f:457bb0590eb8ddf864d006706c0f2098:gdb/spkgbuild
 f:1c7a10029f94062f0ef3b0da13132afc:autoconf-archive/.pkgfiles
-f:18314e042c02e7ffaa40d5ed79e7eb29:autoconf-archive/CHANGELOG
-f:c3fb7835399360e2ff9db4bb3fc2e330:autoconf-archive/spkgbuild
+f:6e4b2778397cdd3d3ceb263f4d6d1795:autoconf-archive/CHANGELOG
+f:99a249a0bbbfe499d4893c107fc27ded:autoconf-archive/spkgbuild
 f:f9db8376de6c878b15963901bb125399:rust/.pkgfiles
 f:efc0440e5ca259e93bcd80f291c0fe25:rust/spkgbuild.1
 f:29f5be29852ef45a9cc2e52fc3f77df9:rust/0001-bootstrap-Change-libexec-dir.patch
@@ -138,7 +138,7 @@ f:e491b569d9ca58d41c22c11bcc60393b:cmake/spkgbuild
 f:4f6f8e00ae4fe46df19791b5183c3c11:cmake/override
 f:cea1e92da5e154b5f073e610a3ee238a:.httpup-repo.current
 f:277b0ccff30b904ac06222a46022afeb:luajit/.pkgfiles
-f:ead7afe9a867edc7a9a31c882ff35a6e:luajit/CHANGELOG
-f:7a1d01d6fe5f15caefb4b9b9e01c202b:luajit/spkgbuild
+f:749689748588add5da8b02b304590864:luajit/CHANGELOG
+f:2e58d09c0595ba51b03584a44fc92edd:luajit/spkgbuild
 f:81b617dd0290cebc4ebbbf2eaad8faf3:luajit/override
 f:0af6e871d68b3e9318d7e7cd6c905ad6:luajit/.checksums

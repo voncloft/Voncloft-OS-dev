@@ -18,9 +18,9 @@
 
  namespace Decoration
  {
-@@ -760,6 +761,7 @@
-     QTimer m_dpmsTimer;
+@@ -761,6 +762,7 @@
      std::shared_ptr<FileDescriptor> m_sleepInhibitor;
+     bool m_sleepPending = false;
      std::unique_ptr<WindowTabManager> m_windowTabManager;
 +    std::unique_ptr<WindowLayoutMemory> m_windowLayoutMemory;
 
@@ -47,7 +47,7 @@
      initShortcuts();
 
      init();
-@@ -489,6 +494,7 @@
+@@ -495,6 +500,7 @@
 
  Workspace::~Workspace()
  {

@@ -2,7 +2,7 @@
 # depends : python-markdown-it-py python-mdit_py_plugins python-yaml python-docutils python-sphinx jinja2
 
 name=python-myst-parser
-version=5.1.0
+version=5.2.0
 release=1
 
 _name=MyST-Parser

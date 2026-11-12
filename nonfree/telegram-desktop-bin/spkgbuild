@@ -2,7 +2,7 @@
 # depends	: glib hicolor-icon-theme dbus libx11 chrpath
 
 name=telegram-desktop-bin
-version=7.4.1
+version=7.4.2
 release=1
 _name=tdesktop
 source="https://github.com/telegramdesktop/${_name}/releases/download/v${version}/td-setup-linux-x64-${version}.tar.xz

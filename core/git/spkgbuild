@@ -2,7 +2,7 @@
 # depends	: perl curl openssl python rust
 
 name=git
-version=2.56.0
+version=2.56.1
 release=2
 source="https://github.com/git/${name}/archive/v${version}.tar.gz"
 options="!checksum"

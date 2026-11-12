@@ -187,3 +187,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 10.7.0 to version 10.8.0
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 02:24:17 AM EST 2026
+
+Version=10.8.1
+Release=3
+
+Synopsis:
+Changed from version 10.8.0 to version 10.8.1
