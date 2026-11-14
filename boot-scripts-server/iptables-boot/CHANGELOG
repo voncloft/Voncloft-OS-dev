@@ -1,0 +1,9 @@
+Date: Sat Nov 14 04:27:06 AM EST 2026
+
+iptables-boot
+Version=20251220
+Release=1
+
+Synopsis:
+Added Changelog to package
+Changed from version 20201002 to version 20251220

@@ -1093,8 +1093,8 @@ f:6d835e6beaf7ece8d041b5a651fe2b88:cowsay/.pkgfiles
 f:9152af24dad0cfee15da3094da963614:cowsay/CHANGELOG
 f:ef8003796a1ede4b0a100af932089017:cowsay/spkgbuild
 f:7091f9a6d97006299a1f27a665b638b6:cowsay/cowsay.patch
-f:f8dd3ed29ddd8bb1258381faf892a5ef:terminator/CHANGELOG
-f:b2cbfaf3cf121c59943b6b2f0a393564:terminator/spkgbuild
+f:9934f245a04686416a496a42340c93ee:terminator/CHANGELOG
+f:c8377d21bc349c5c08909b45874eb6ab:terminator/spkgbuild
 f:c34e67d0e10d234583e06a8b73d77430:terminator/override
 f:3d60f0ab64d8f7cd35c5694969ebd80f:weechat/CHANGELOG
 f:8a021662a30ebf8723411d9b68e66d75:weechat/spkgbuild
@@ -1136,9 +1136,9 @@ f:f0ba4a44abe6e02c3d4bb947fb0a2849:vtclock/override
 f:ff63cefdccc761edd6ee5ff997c05eab:smplayer-themes/CHANGELOG
 f:232228ddc8227ccdf79f76b049322099:smplayer-themes/spkgbuild
 f:d190ad611b34c55e4083c82104256759:dbus/.pkgfiles
-f:228313dd85edd07d13f14b831d7339f6:dbus/CHANGELOG
+f:a344eb5ba6137f8af519b7e005c1368f:dbus/CHANGELOG
 f:f99af9b4c65d7dc5c6d33f8114b92005:dbus/post-install.sh
-f:d95e38610b972ba2306c286defd000d2:dbus/spkgbuild
+f:20b28b571b4ec2668dd03bf7616df669:dbus/spkgbuild
 f:4276b51c9c9d5355149c8de5ee5fa2be:dbus/pre-install.sh
 f:df85ba85cabe27ff6a638b1604e85d2e:desktop-file-utils/.pkgfiles
 f:20352e3212dae735fc13f4a4ac53aed7:desktop-file-utils/CHANGELOG
@@ -1263,8 +1263,8 @@ f:d9d49a1a091356679881f189a73da4c5:dfc/spkgbuild
 f:070fc2c3aca35de5f90d14a09aa8222b:poppler-glib/.pkgfiles
 f:be283282674ca52325008b583eecdd22:poppler-glib/pre-upgrade.sh
 f:dd4dae5f2e99e2a39230b4b557d8ed35:poppler-glib/README
-f:4245409ef039fde56309013aeab96b52:poppler-glib/CHANGELOG
-f:c7989f05695c2fe72e15643be748a6c5:poppler-glib/spkgbuild
+f:1e0e8dc1834849f6e51e9a0b1dcbe93a:poppler-glib/CHANGELOG
+f:03ae9db0b5136601a7809a55761b2905:poppler-glib/spkgbuild
 f:7ae65d151d75cfb3a8c987bd46a19e4d:poppler-glib/override
 f:56301abf908560e49dd2edd051b39dd2:monit/CHANGELOG
 f:75931a3204d9f63944ace164516ff1f1:monit/run
@@ -1516,8 +1516,8 @@ f:eab2fbc5f166168d1769841fef637b54:smartmontools/CHANGELOG
 f:6f65c48412a1c30895aee51e1a7e9528:smartmontools/run
 f:7d14428e62f1a3c871fd93da52b31bfc:smartmontools/rc.smartd
 f:038469f2ec0b5831e2efedb1480139db:smartmontools/spkgbuild
-f:5f3f025c4eec39d3d0e7d9bba060f948:linux-firmware/CHANGELOG
-f:b1056bb104cf5b0195d0af44939021d2:linux-firmware/spkgbuild
+f:8b75ce471f6fc95a5e16fe582c5ec3c5:linux-firmware/CHANGELOG
+f:ed38c5e6544bcf1bdbf37eb503fd6796:linux-firmware/spkgbuild
 f:fe0eeb0ba704ce1957c40afc6ee7a351:linux-firmware/override
 f:8752b8a6df19da513d7e5e0dee1b3299:appstream-glib/CHANGELOG
 f:dd53bc8c1f1dbf0640c761fbd307eb42:appstream-glib/spkgbuild
@@ -1682,8 +1682,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:68d5cf97b62371ff10f0b455879dc216:flex/CHANGELOG
-f:5a56289e202bdf808ecc618ce3648ea7:flex/spkgbuild
+f:1c14f77ad02fe66589adb913a5dec603:flex/CHANGELOG
+f:50e3cd2be82a7d0761d257a58a19ed3a:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch
@@ -1901,8 +1901,8 @@ f:f6493461cd9eecd1e4dc01bcd2d39def:iotop-fukt/override
 f:d4b1ff77ab64e6ab30c26f9337e479ae:potrace/spkgbuild
 f:305cb250d232e8c11d6669aa598adeb8:faad2/CHANGELOG
 f:9e5e2e5599fbec2fb9c8d54451fedb25:faad2/spkgbuild
-f:e6f8a6dca4d77b59c848a6a68127be4e:hugo/CHANGELOG
-f:6e6d2dca667f939fdc4071b1593115ac:hugo/spkgbuild
+f:16fc27aeffbbc80dfb3846797afe29ac:hugo/CHANGELOG
+f:5f38f86fd4df80bb25a563fabda2c4cb:hugo/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:expect/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:expect/.nanorc
 f:49906608eb95e6cfccdd90c49b5880e7:expect/CHANGELOG
@@ -2190,8 +2190,8 @@ f:01cd0e2a3fcbd2a93e583a8249cc1478:openjpeg2/.pkgfiles
 f:f4d435090c83317f446ca409dc31cffc:openjpeg2/CHANGELOG
 f:04419c853aefe36425968a121db8c8a9:openjpeg2/spkgbuild
 f:b2fef3d157ee3c7e5259407cf8cc344b:openjpeg2/override
-f:f252f4466eb44838fd34d11cccc0c61c:refind/CHANGELOG
-f:a9fb34a429815662f43f1bf1e0fe8a21:refind/spkgbuild
+f:19e9ddcd992803424298a17999c5b954:refind/CHANGELOG
+f:90b7a68ca275d94edc76ce7a103fe1c9:refind/spkgbuild
 f:14cc8ae4ace91c12c2e5b456b27c2d45:refind/override
 f:9df734d8a4772a6c6354ab4374af4a49:gnustep-make/CHANGELOG
 f:de0cde1e698932382889f17cd9c00dac:gnustep-make/spkgbuild

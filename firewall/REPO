@@ -4,8 +4,8 @@ f:61d225724173c604aa9b81ce28b6120d:.httpup-urlinfo
 f:cdae0560321b24e3b9f82764e82697cf:psad/psad.conf
 f:40f85d639eafae33b875f3e03812e605:psad/hosts-ip
 f:2f6248fe6d1c239aa019adb684492c8c:psad/spkgbuild
-f:629efd035338242a46e670032e6b1802:sshguard/CHANGELOG
-f:df8998d3d48f5b70cbc805ead9a47071:sshguard/spkgbuild
+f:697a193b1e2e8c4ed1ab42c8280c91df:sshguard/CHANGELOG
+f:631a2365d0dce470c1aa78f5e2a209b5:sshguard/spkgbuild
 f:f0a98f79850b63deb3c3140e46f5ac65:sshguard/override
 f:14dcc5737c72a7d24f6fca09df0aef7a:sshguard/sshguard.conf
 f:903f329db279c92791e9b3ee7e0a68ea:.httpup-repo.current

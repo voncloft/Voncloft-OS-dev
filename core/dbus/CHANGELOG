@@ -147,3 +147,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.16.0 to version 1.16.2
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 04:27:06 AM EST 2026
+
+Version=1.16.4
+Release=1
+
+Synopsis:
+Changed from version 1.16.2 to version 1.16.4

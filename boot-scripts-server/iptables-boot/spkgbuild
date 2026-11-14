@@ -2,7 +2,7 @@
 # depends : 
 
 name=iptables-boot
-version=20201002
+version=20251220
 release=1
 
 source="http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-$version.tar.xz"

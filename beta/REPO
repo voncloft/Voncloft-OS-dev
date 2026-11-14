@@ -17,9 +17,9 @@ f:6f288274a72ba8aab31c1c2c9598973e:sonaar/spkgbuild
 f:920e2d8dde47e41a024d20389054277d:collabora-online-server/service.patch
 f:37da350bb8cf3da7c298e4227e5bf7fc:collabora-online-server/coolwsd.patch
 f:d75784cd2d6011872f13c2af06c16568:collabora-online-server/post-upgrade.sh
-f:53f8cc00331729d1df8ea7257fd9b89f:collabora-online-server/CHANGELOG
+f:24daafc527594a527199e3654b215b3e:collabora-online-server/CHANGELOG
 f:f21afa63615261799be1e1ca6a752df0:collabora-online-server/post-install.sh
-f:03d7cf12c90c562d2173f5c792e90eff:collabora-online-server/spkgbuild
+f:6f9b306f3c2d1d3464b2ab4c7e09c31a:collabora-online-server/spkgbuild
 f:b51adb17a95d27fc1217936187958ebf:collabora-online-server/override
 f:7c8dd44e792508c9630f223d987a7b65:texlive/CHANGELOG
 f:344826091b93b4a9a42f289a92d584f2:texlive/spkgbuild
@@ -58,8 +58,8 @@ f:b7cdb23237003a67a22a1bea0b1c6920:ansible-core/spkgbuild
 f:0b1cca0c63bb5f782c0cb096867457f9:ansible/CHANGELOG
 f:53f26bbe2ad1b29c52db03e18627248c:ansible/spkgbuild
 f:1d49537e83959b4d7120bb94589e2a37:.httpup-repo.current
-f:300ccaa4bda44f4848326dcf02bc2891:tl-unx/CHANGELOG
+f:ee99c49e514c7499b7940799dc51011f:tl-unx/CHANGELOG
 f:9d5d7cfcae9a0502d6fcabb70d077dd2:tl-unx/post-install.sh
-f:3d498834d00314b9206c6f32a2c6b180:tl-unx/spkgbuild
+f:de32ee90be7cb22c877170fcb2f5d969:tl-unx/spkgbuild
 f:0afc2f61f95d00e5739a045b92032343:tl-unx/override
 f:a94094d5197fccb109c9697d7c1ebae5:tl-unx/pre-install.sh

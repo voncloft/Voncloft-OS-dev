@@ -2,7 +2,7 @@
 # depends : libcap libcap-ng lib32-libcap libpng poco cpuunit nodejs npm python-lxml python-polib cpio
 
 name=collabora-online-server
-version=23.05.0.1
+version=25.04.9.5
 release=1
 
 _name=online

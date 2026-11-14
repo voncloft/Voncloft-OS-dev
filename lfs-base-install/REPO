@@ -226,7 +226,8 @@ f:664b2c752dd6a57663aa6a11e9b01614:groff/.pkgfiles
 f:7facf687440497ef625f6ed56e72213f:groff/CHANGELOG
 f:432b86c8a84a5079cd4c5e6fea8b33f0:groff/spkgbuild
 f:375f8aba31a5949b2d2e60acfed6dcc7:tzdata/.pkgfiles
-f:c36968b65461fb7006916e3527fbe309:tzdata/spkgbuild
+f:a707f184330350d68c11438b3bd65159:tzdata/CHANGELOG
+f:8b5b635cde63cbf8e75453bd0cbb9dfa:tzdata/spkgbuild
 f:fe0ca5351baeb0f34fbe82c9175dde1d:tzdata/override
 f:2eb55a1e6a882c0527bec9519f5a709b:glibc/.pkgfiles
 f:9a5997c3452909b1769918c759eff8a2:glibc/glibc-fhs-1.patch
@@ -280,8 +281,8 @@ f:1b5599b8522571ed5c331cbd4b316be4:sed/spkgbuild
 f:2218eb3541c6a8c1241db5707f7760cd:bison/.pkgfiles
 f:347a8b013464979f21063b02edd4ccfb:bison/CHANGELOG
 f:861adcc637b52e9fa0aa9dac2e935be2:bison/spkgbuild
-f:37f5955c1dc37d7ec570aa0d0d29214f:linux-firmware/CHANGELOG
-f:b1056bb104cf5b0195d0af44939021d2:linux-firmware/spkgbuild
+f:af749e965c9a1ab3b7b8b23ab27bd127:linux-firmware/CHANGELOG
+f:ed38c5e6544bcf1bdbf37eb503fd6796:linux-firmware/spkgbuild
 f:fe0eeb0ba704ce1957c40afc6ee7a351:linux-firmware/override
 f:49d4baf3ac49ec0acc58b22ec983401c:bzip2/.pkgfiles
 f:2272e10938ebe8acb6888e7956590842:bzip2/spkgbuild
@@ -298,8 +299,8 @@ f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
 f:28acf778d3f8f79a92cebaa026355b44:grep/spkgbuild
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:68d5cf97b62371ff10f0b455879dc216:flex/CHANGELOG
-f:9b5c8de11483930a333f94c518e59799:flex/spkgbuild
+f:2f03c221abedd09526d2ebe327d54470:flex/CHANGELOG
+f:20b57870ec8d5f30989e4190ab68a4ee:flex/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
 f:f7a299fd4fb7730bedb88cab80474a43:python-wheel/CHANGELOG
 f:4ecf94fde225a9ec2c615d040b270de9:python-wheel/spkgbuild
@@ -323,7 +324,8 @@ f:39b8c34dd6e96414798e78540bc5396f:tuner-firmware/v4l-saa7164-1.0.2.fw
 f:bc0eb9536e58d3d6fe6343eb194ede82:tuner-firmware/override
 f:ba8194afd8105969a536cb881899200b:tuner-firmware/v4l-saa7164-1.0.3.fw
 f:82487e43d74d33bd68582f7fede63421:tcl/.pkgfiles
-f:405358ce61b3b13f13749e8b8073da66:tcl/spkgbuild
+f:6f9df4f72bbef5541426a2166a199c0b:tcl/CHANGELOG
+f:6ff9e4cef86de46dd8258a855a64a02e:tcl/spkgbuild
 f:b706e00e6b0a3210feb2c6b575a8d4ab:tcl/override
 f:fa1ab5f5a8003c1b0e1faeada8560d8f:libffi/.pkgfiles
 f:2ff21a0529a9906519b68bdc9f417131:libffi/CHANGELOG

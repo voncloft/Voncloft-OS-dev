@@ -87,8 +87,8 @@ f:f1abae00763d230c69a14ff9836c423d:xfce4-embed-plugin/spkgbuild
 f:f0954471914482fb7b489382d4ba5232:xfce4-embed-plugin/override
 f:7fa7561144ee640a9d89acc34e39e27d:xfce4-whiskermenu-plugin/CHANGELOG
 f:aeede1e4ce756d4fb61d78584d72a2f1:xfce4-whiskermenu-plugin/spkgbuild
-f:47389643d95b4f6b0332d37cf2ef0fd0:xfsprogs/CHANGELOG
-f:f73115761b9610d8b104fec4d43d9048:xfsprogs/spkgbuild
+f:81ce38cf1dc4986c84b01c63605f767e:xfsprogs/CHANGELOG
+f:72469b7cb7dfab31ca8e08643348e701:xfsprogs/spkgbuild
 f:2d60113b2ca7990cd834c7a863cc3174:xfce4-battery-plugin/CHANGELOG
 f:a9f01dcee59ba1a3d6641b9acc559154:xfce4-battery-plugin/spkgbuild
 f:955ff5ca3b1d4a2cd3a42564ada35758:xfce4-panel/CHANGELOG

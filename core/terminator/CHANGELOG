@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.91 to version 2.1.3
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 04:27:06 AM EST 2026
+
+Version=2.1.6
+Release=1
+
+Synopsis:
+Changed from version 2.1.3 to version 2.1.6

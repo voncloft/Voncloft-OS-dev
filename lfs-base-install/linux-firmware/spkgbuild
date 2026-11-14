@@ -1,7 +1,7 @@
 # description	: Firmware files for Linux
 
 name=linux-firmware
-version=20230404.2e92a49f
+version=20261019.a2dcb924
 release=1
 options="!strip"
 source="${name}-${version}.tar.gz::https://gitlab.com/kernel-firmware/${name}/-/archive/${version##*.}/${name}-${version##*.}.tar.gz"

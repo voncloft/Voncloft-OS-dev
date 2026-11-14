@@ -113,10 +113,10 @@ f:4f96f4854a82cea84fe2b0ce92c795dc:mariadb/override
 f:7b305ff4127525649f08eac0e370e1a8:mariadb/pre-install.sh
 f:21d0ea24068e51fef54c4f51a1f3f37d:blacklist-hosts/.pkgfiles
 f:d36d8c1ca1e0fc10e6bc24714ac963bf:blacklist-hosts/post-upgrade.sh
-f:50709fe3551bcc930153a5421a4fc184:blacklist-hosts/CHANGELOG
+f:4c0aa2048e8ac8c5b080ec5a1df53aad:blacklist-hosts/CHANGELOG
 f:d36d8c1ca1e0fc10e6bc24714ac963bf:blacklist-hosts/post-install.sh
 f:3b365d0e52f2510a3e6f60ae04ec45af:blacklist-hosts/test
-f:3369202ad26c517fd93eaf77e421b9cc:blacklist-hosts/spkgbuild
+f:2ec1c919ae4a6241c262ab24daf097ea:blacklist-hosts/spkgbuild
 f:915ed49eb11eeccfcc4e8b87a5b9c7e2:httpd/post-upgrade.sh
 f:96e267dcf2b286f0e043887315bdf941:httpd/CHANGELOG
 f:01b882c49d81d4f9a48106834fe88e54:httpd/httpd

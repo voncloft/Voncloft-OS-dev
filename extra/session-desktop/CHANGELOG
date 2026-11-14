@@ -7,3 +7,13 @@ Release=2
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.18.2 to version 1.18.3
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 04:27:06 AM EST 2026
+
+Version=1.18.4
+Release=2
+
+Synopsis:
+Changed from version 1.18.3 to version 1.18.4

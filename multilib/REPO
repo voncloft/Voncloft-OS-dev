@@ -166,8 +166,8 @@ f:4af3c6fc4b27993b674771002de3b20b:rust-32/.pkgfiles
 f:5c11ff1def313f2a87eabf3a30f130ad:rust-32/test.c
 f:4781395c95ef54de12b1e76736834d24:rust-32/test32
 f:85982e080c791851e0f278fc15397a15:rust-32/spkgbuild-old
-f:7c81a7e201d7dc5fd97e359dd8eb6d7e:rust-32/CHANGELOG
-f:ffe554b06edb0dcf3f6a87fc84b56ed1:rust-32/spkgbuild
+f:041c97fcae18a20ec40233a00820b383:rust-32/CHANGELOG
+f:c22ef6d61b3fbe0a9cb2ee2956efe8f6:rust-32/spkgbuild
 f:9e2fad33a490d0cfd0d7a21ad752afca:rust-32/override
 f:a1e94c29730ab217664089670b0eca16:alsa-plugins-32/CHANGELOG
 f:f1486af2d2b71fe754df186397351cfa:alsa-plugins-32/spkgbuild
@@ -251,7 +251,8 @@ f:3c0170ddcd7b4d2206facaf6813ed762:lcms2-32/CHANGELOG
 f:719bed0febdc8bba6aeb1738d6cc84c1:lcms2-32/spkgbuild
 f:d1aeb95464e26c27b18375b926faccf2:lcms2-32/override
 f:df94060a008619ac47075fd4e986de66:dbus-32/.pkgfiles
-f:1495b44881b74d85edea3bcc9e15d143:dbus-32/spkgbuild
+f:aba9fb91f93cd54ae810a44106fa556f:dbus-32/CHANGELOG
+f:2e4f43f9746c093984a25b0a792c6c79:dbus-32/spkgbuild
 f:69eb5d9d0a91888d46d24aa0e982759b:dbus-32/override
 f:a9973e349f901a2d207188202aef2f94:virtualbox-ose/005-gsoap-build.patch
 f:05784940fcc8f72c1021b3d9bf7202f0:virtualbox-ose/008-no-vboxvideo.patch
@@ -282,7 +283,8 @@ f:38724c23585682797bc8762d3991ab35:readline-32/override
 f:9afa707689571d328dc9682a92ec722a:gstreamer-32/CHANGELOG
 f:ee21a7073608f977a1634990b55d2aa3:gstreamer-32/spkgbuild
 f:0178ea1bb4f67d9326bafef037e7dfe5:gstreamer-32/override
-f:a92888a64b84bb2f810e7971c06ab82b:pcre-32/spkgbuild
+f:0cf0db29970fae2f84285adc5be72d44:pcre-32/CHANGELOG
+f:245232770d4626e239a39978d4b20cf5:pcre-32/spkgbuild
 f:a2638e799f92de077d2dfc3258a52530:pcre-32/override
 f:39fbf9d789f91f9ad2998ec4cbf840e9:bzip2-32/spkgbuild
 f:164bf0088a9f44b93075408e282dff44:bzip2-32/override

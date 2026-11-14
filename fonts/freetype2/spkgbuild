@@ -3,7 +3,7 @@
 # depends : libpng which
 
 name=freetype2
-version=2.13.3
+version=2.15.0
 release=2
 _name=freetype
 source="https://downloads.sourceforge.net/${_name}/${_name}-$version.tar.xz"

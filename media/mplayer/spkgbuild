@@ -2,7 +2,7 @@
 # depends	: yasm subversion
 
 name=mplayer
-version=38412
+version=38701
 release=1
 _source2_version=12.1
 _source2_version2=6.0

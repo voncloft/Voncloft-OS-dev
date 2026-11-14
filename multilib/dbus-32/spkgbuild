@@ -2,7 +2,7 @@
 # depends       : xorglibraries
 
 name=dbus-32
-version=1.16.2    
+version=1.16.4
 release=1
 _name=${name%-32}
 source="https://dbus.freedesktop.org/releases/${_name}/${_name}-${version}.tar.xz"

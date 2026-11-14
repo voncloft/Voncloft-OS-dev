@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-texttable
-version=1.7.2
+version=1.7.3
 release=3
 
 _name=${name#python-}

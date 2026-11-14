@@ -2,7 +2,7 @@
 # depends : brotli cmake highway lcms2 libjpeg-turbo libpng make
 
 name=libjxl
-version=0.12.0
+version=0.13.0
 release=2
 options="!checksum"
 source="${name}-${version}.tar.gz::https://github.com/libjxl/${name}/archive/refs/tags/v${version}.tar.gz"

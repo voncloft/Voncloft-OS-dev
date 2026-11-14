@@ -31,9 +31,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:2da414e2fbc499e88e33d99748d0e2e6:firefox-bin/CHANGELOG
+f:42f457f68f847bbee43b659ead9a5f36:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:418383c04e5fe80d75b85689c8813e55:firefox-bin/spkgbuild
+f:079a36f9164392c377d4283f0a57d9e0:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -68,8 +68,8 @@ f:0cd132121d49f59b13b6c0e31f356950:virtualbox-extpack/spkgbuild
 f:c4f42c28ce27f98b4dc9b32e21657882:virtualbox-extpack/override
 f:3b71d64afb426ccbefd0d66d06279c4a:virtualbox-extpack/pre-install.sh
 f:76e5fb76ed1bb9e020a82fe5cbe3ba97:discord/.pkgfiles
-f:72acf36cb4e8d22c186908b13236db0f:discord/CHANGELOG
-f:3fb08ec88727499d8f9b1b787b009c7f:discord/spkgbuild
+f:96c26786748aa67728f74f4649eea3f7:discord/CHANGELOG
+f:104c4c122845eae04599e581771ac25d:discord/spkgbuild
 f:9a4184349c8a0766d970edd695eebc78:discord/override
 f:05c708d759c1059ebec598477e4bf2b3:virtualbox-guest-utils/CHANGELOG
 f:9710904e9e86ec3da272cbe9fe48dbf8:virtualbox-guest-utils/60-vboxguest.rules
@@ -77,9 +77,9 @@ f:9157026032cfa499d823b55b258c8fce:virtualbox-guest-utils/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-utils/override
 f:119f437d4911f637fa586b5eda9aab29:virtualbox-guest-utils/pre-install.sh
 f:89fb28a484e7f5126839e83f10de377a:firefox/pre-upgrade.sh
-f:c8bcda08e40cb93d232e06a07344bc67:firefox/CHANGELOG
+f:e8b11a0178c9958e07387894b71d1b42:firefox/CHANGELOG
 f:37db9ec3cc336d3a09ede8becec2ad69:firefox/fix-ftbfs-newer-cbindgen.patch
-f:bbc17e1a70388b26ce36e1714193e40f:firefox/spkgbuild
+f:da9599c666ae48978121640f920e66a6:firefox/spkgbuild
 f:a4a0f7c9c1e3424463670d031976aa67:firefox/override
 f:971c77648caea312fca2d9340c4382a6:firefox/firefox.desktop
 f:75aae82b7b33d79bcec25c8783f3ed5c:spotify/spotify
@@ -94,9 +94,9 @@ f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-modules/override
 f:501ab7b371ea0ac9bbebc886be9f3027:virtualbox-guest-modules/vboxvideo-upstream.conf
 f:91891835ddaa34a41d7020775b14ede6:iridium/spkgbuild
 f:04aef81e9ba3f11efd4297bac65ef249:iridium/override
-f:ccafa5b4275aece98036278ce88f23e9:telegram-desktop-bin/CHANGELOG
+f:d292f8c025f5632a11028b53871bd325:telegram-desktop-bin/CHANGELOG
 f:fa93a0c669b5f0cd8b9be4c8eecf5cdd:telegram-desktop-bin/telegram-desktop-bin.desktop
-f:60570693cf0909cbdd37337a5946fe20:telegram-desktop-bin/spkgbuild
+f:df8493e2468f5239666ec1b0a417c522:telegram-desktop-bin/spkgbuild
 f:2a9ba90f79c0467d2e20c12555555345:telegram-desktop-bin/override
 f:b21fcafa1d68e138df902ffb40dc81e5:google-chrome/CHANGELOG
 f:32ddeb51e760a9125f5502b96fe1f408:google-chrome/spkgbuild
@@ -112,8 +112,8 @@ f:f1cbcac961f006f8442e698de30f32bc:webtorrent-desktop-bin/spkgbuild
 f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.desktop
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
-f:9f955bd98e9f73b7cba0dd31fcf6c7a5:thunderbird-bin/CHANGELOG
-f:1f30348c08728ed8341f390ccdfc3ae1:thunderbird-bin/spkgbuild
+f:f21f347586a80aa6325d320577604f29:thunderbird-bin/CHANGELOG
+f:b0b0f77295dd81943d240bb0f03e8b70:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
 f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop

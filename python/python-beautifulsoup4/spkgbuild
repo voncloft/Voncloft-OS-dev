@@ -2,7 +2,7 @@
 # depends : python-soupsieve
 
 name=python-beautifulsoup4
-version=4.12.2
+version=4.15.0
 release=3
 
 _name=${name#python-}

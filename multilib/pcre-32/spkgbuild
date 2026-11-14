@@ -2,7 +2,7 @@
 # depends	: pcre bzip2-32 readline-32
 
 name=pcre-32
-version=8.44
+version=8.45
 release=1
 source="https://netix.dl.sourceforge.net/project/pcre/pcre/$version/pcre-$version.tar.bz2"
 

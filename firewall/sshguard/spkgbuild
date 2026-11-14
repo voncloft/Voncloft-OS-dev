@@ -2,7 +2,7 @@
 # depends : sshguard-boot iptables
 
 name=sshguard
-version=2.4.2
+version=2.6.0
 release=1
 options="!checksum"
 

@@ -2,7 +2,7 @@
 # depends	: curl libarchive libuv
 
 name=cmake
-version=4.4.5
+version=4.5.0
 release=2
 _name=CMake
 source="https://github.com/Kitware/${_name}/releases/download/v$version/$name-$version.tar.gz"

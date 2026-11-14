@@ -1,7 +1,7 @@
 # depends : qt6
 # description : Qt 6 profile settings and sudo environment rules for the KDE Frameworks environment
 name=kf-depends
-version=6.31.0
+version=6.32.0
 release=1
 options="!checksum"
 backup="etc/profile.d/qt6.sh etc/sudoers.d/qt etc/sudoers.d/kde"

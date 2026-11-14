@@ -37,7 +37,8 @@ f:ff4537129b9e262068d93ef6d0d8ead8:wireguard-boot/spkgbuild
 f:30b6b3d5ad8122cc0aa6bf6dd700ca72:wireguard-boot/override
 f:40dfe3673a6edd75826ed00b65326cad:hostapd-boot/spkgbuild
 f:30b6b3d5ad8122cc0aa6bf6dd700ca72:hostapd-boot/override
-f:cc32dc368947076a718eabd5a8ca5ed7:iptables-boot/spkgbuild
+f:ccf21063c48e8d7bb13eb4e1d54bbb78:iptables-boot/CHANGELOG
+f:1d18fa71fa69948c67ec448f29842c02:iptables-boot/spkgbuild
 f:c068791f6178544c32145c8f9126d673:iptables-boot/override
 f:e3d472c84d095a62c9dff8fb22096040:plex-boot/CHANGELOG
 f:36c4c7d56f891d3cc8383287ba9191bb:plex-boot/spkgbuild

@@ -41,8 +41,8 @@ f:2947f021255b1f805be133cc945cd7a1:qca/spkgbuild
 f:2b2beb4fb8a3d03438783d1c9aac27e3:qtermwidget/CHANGELOG
 f:9a264d96527919f50975a7c88cd49e62:qtermwidget/spkgbuild
 f:880585e76e1e7f23b9d8732b36e0e864:networkmanager-qt/.pkgfiles
-f:55df71b27f4cda641a2ebd8a82d20500:networkmanager-qt/CHANGELOG
-f:b51c84a492b1873bee1da159499bb0bd:networkmanager-qt/spkgbuild
+f:92053460f7f00e87d65921327fd12ba0:networkmanager-qt/CHANGELOG
+f:1212f58aa9f9cbc973785f1c69b87d3b:networkmanager-qt/spkgbuild
 f:7edd679b0424916ef5e3f8447ed5cf5b:libdbusmenu-qt/CHANGELOG
 f:130acfe0063a090de7b600c7cea67dd1:libdbusmenu-qt/spkgbuild
 f:b82135218e38585467f627bc8f9e3302:libdbusmenu-qt/override
@@ -76,8 +76,8 @@ f:ff17abf6a191eb6e313bd84d5e33d30a:layer-shell-qt/CHANGELOG
 f:94954aeb12e27a7b3d29bb7e9199e379:layer-shell-qt/spkgbuild
 f:2ae80f35632fea04f6b3b138b11c1b87:mauikit-texteditor/spkgbuild
 f:91310743cb79d73e7ddd7771d2974713:bluez-qt/.pkgfiles
-f:2b08e0c28c0c602a27153fc4616ec30d:bluez-qt/CHANGELOG
-f:3c277fc4e6b69bfe78b0c06511cd5002:bluez-qt/spkgbuild
+f:a7ff533d324abfa8e5e11c31196dbfc9:bluez-qt/CHANGELOG
+f:e79bf2066b0c9a9e72bbf04ca8a41d5c:bluez-qt/spkgbuild
 f:a1233bdd5f4c6a12547e3526ca2f6ede:qxmpp/CHANGELOG
 f:0d14afa1e402d81968fc4cdd043aa6f4:qxmpp/spkgbuild
 f:746106f73ca5c841800ab998b915a23a:qxmpp/override
@@ -136,5 +136,5 @@ f:a2ebddef74bf27d41abfc1c9a4142ad3:qcoro/spkgbuild
 f:d2a469bcd23f97f763877e22abddd81b:qcoro/override
 f:d45cb57ce61769a6f66d3d9f5af37622:.httpup-repo.current
 f:b42c9a7dd8088b9bfd220837cffa0ebb:modemmanager-qt/.pkgfiles
-f:117698f706391ac121ae5b46662c48dc:modemmanager-qt/CHANGELOG
-f:543642119e894ffba5b3cd3dbfcf5bb2:modemmanager-qt/spkgbuild
+f:b539021d003ce941d4186a2a8577f6c4:modemmanager-qt/CHANGELOG
+f:0f8435cd2bccbd3c227e7389e9c0d234:modemmanager-qt/spkgbuild

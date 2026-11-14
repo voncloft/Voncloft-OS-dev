@@ -4,7 +4,7 @@
 # description : Legacy Plasma 5 libraries and QML components for desktop shells and widgets
 
 name=plasma-framework
-version=6.31.0
+version=6.32.0
 release=1
 
 source="https://download.kde.org/stable/frameworks/${version%.*}/${name}-$version.tar.xz"

@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.4.1 to version 2.4.2
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 04:27:06 AM EST 2026
+
+Version=2.6.0
+Release=1
+
+Synopsis:
+Changed from version 2.4.2 to version 2.6.0

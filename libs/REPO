@@ -657,7 +657,8 @@ f:d668c5c66d911f2650af6dd34fa93c77:libsm/.pkgfiles
 f:de7b6778e51f5408b4b2d1d22e317d4b:libsm/spkgbuild
 f:a5e4df33ee3c09a24a3657490415c84e:libsm/override
 f:e231b6886a733a7043e89798a1c0e226:sdl/spkgbuild
-f:7c0d454c4d7b332aca4e079b835e2213:libjxl/spkgbuild
+f:b94a891f188b2c48e780f466df488074:libjxl/CHANGELOG
+f:997e6b509bb0a85e47afe0a41bafc73c:libjxl/spkgbuild
 f:dc6880c0b1a8cc2917717e29c9c46151:libjxl/override
 f:079f9c832f587f45f9504e4d3c41a4d3:libftdi/spkgbuild
 f:82c8d8aaec419741cb79a01ea606d9a1:libxpm/.pkgfiles
@@ -713,8 +714,8 @@ f:551f662ce03dc185adc04e2f6d07c5e6:libproxy/override
 f:71fd7a0314a1753c9b180bbd8e11c705:libcurl-gnutls/CHANGELOG
 f:b19c1da6911fb410fb80b82209b09308:libcurl-gnutls/spkgbuild
 f:a2df00a6809d9ee7ac2e9d7b85539c53:libcurl-gnutls/override
-f:1d7a8d0671ca3773c8fe272336fa9fa9:ktoblzcheck/CHANGELOG
-f:a56b801f3e7859936c2652e8ab3a839a:ktoblzcheck/spkgbuild
+f:86d40a4fee388766ec315521b3da76fb:ktoblzcheck/CHANGELOG
+f:8f5748c4c0fc648374ffadcf8cf11f7f:ktoblzcheck/spkgbuild
 f:c5037ccc431d36f9dfbf86f158cd7014:ktoblzcheck/override
 f:394dedb6904c4916aff765c362473f36:confuse/CHANGELOG
 f:6b98075710c16b0d9cf812cbdc90cae4:confuse/spkgbuild
@@ -786,8 +787,8 @@ f:c935abf2e5ab5698befb58b29eded4c5:lapack/spkgbuild
 f:ed82103bffee4dfd7d91ea40fdb6e952:dotconf/.pkgfiles
 f:7f3b88b39798476897c97bf5192b9eba:dotconf/spkgbuild
 f:8572013f0319e0a67f9a104a48fa7df0:libfilezilla/.pkgfiles
-f:a20a2499642b2569ab073e12c8919717:libfilezilla/CHANGELOG
-f:53bf230d882655b1000edc30d790f09e:libfilezilla/spkgbuild
+f:86d9aff2605db4d12d747edf1ddf1225:libfilezilla/CHANGELOG
+f:ca5ca68f6e308d761ef02dccd49b5cc1:libfilezilla/spkgbuild
 f:1cd526d8f40d34e360e2d33092cb7862:libfilezilla/override
 f:5bdf724fe2924f0fb1ad1e9c0e75fe02:libass/.pkgfiles
 f:017666e65953c873c36d0d901242fca4:libass/CHANGELOG
@@ -876,8 +877,8 @@ f:80db08ec6c07f90860bb6f24d4609f51:libaacs/CHANGELOG
 f:4c95bf75a56548f41ea8b11d9342c11d:libaacs/spkgbuild
 f:0c964793e7dfb0fef3b401c6e24b95e1:libaacs/override
 f:29eb8279dd75960df8b7be8d39a1b9d8:libblockdev/.pkgfiles
-f:4bfc115e6851468c6f5778e3ae8c96fc:libblockdev/CHANGELOG
-f:28181be32b41e3d2457a8b0daa723ec0:libblockdev/spkgbuild
+f:56565599045588934b480524462b214e:libblockdev/CHANGELOG
+f:4a845ef17a9e3af5e13c3b71d64c57e0:libblockdev/spkgbuild
 f:22b9d598d7312a3e908332096ca2ddf9:libblockdev/override
 f:1a78f7ed1d8a424276ff3e3ade246f48:libburn/.pkgfiles
 f:9441b3403d4a75ed1eb60913fb1c5713:libburn/CHANGELOG
@@ -981,8 +982,8 @@ f:58ffcea1a165366f89b94a1dedcf8c24:lirc/.pkgfiles
 f:051a6e7add098c4c89f107189f64b1f6:lirc/CHANGELOG
 f:4fd0cc3324e9e62e50dec34822f3fa57:lirc/spkgbuild
 f:d80cd25aa263531f098d0b90bde08056:lirc/lirc-0.10-build-fix.patch
-f:d2ffdfbdef07651a2a9b39d0288f0bfe:libaec/CHANGELOG
-f:d5142fdcfb1a7d885374951f75759ac4:libaec/spkgbuild
+f:f0f79abc09945411e6100b605510dbbb:libaec/CHANGELOG
+f:4bdc0034af158102732fe585adc019d0:libaec/spkgbuild
 f:804c49de0dcb3cb33ea0f71801f4cf93:libaec/override
 f:314eed597b7a7a72f4f19b83e68ce817:nettle/.pkgfiles
 f:7ca622e051ac738fc9df8d4039ab651c:nettle/CHANGELOG
@@ -1044,8 +1045,8 @@ f:4f78776604ab3b626febf605955e632e:libxtst/spkgbuild
 f:7807dd66a0338675a7bdee5ddbf3b17d:libxtst/override
 f:a5e878b8eadbfe9be4350cffa917f858:gcem/spkgbuild
 f:20e65cc9a8f2b5c7260b77d2a2d45a08:ostree/.pkgfiles
-f:d895dca6af45b1a47ba3ae643ff76c85:ostree/CHANGELOG
-f:aa8596c6c71352e83b973b378081b8ae:ostree/spkgbuild
+f:6bb54ad29203613adf4579d12b98d693:ostree/CHANGELOG
+f:e62776c90b2fb0008bc67ecb207998af:ostree/spkgbuild
 f:6d0fc50e6cc7011f44d035c8f1199ac1:ostree/override
 f:b1f8bf0af85ee878adcad019d76642a8:libtorrent/CHANGELOG
 f:e4ea060a5287b6dc181f43ab2f69d503:libtorrent/fix-build-with-boost-1.72.0.patch

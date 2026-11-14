@@ -87,3 +87,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 4.1.0 to version 11.0.1
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 04:27:07 AM EST 2026
+
+Version=11.1.0
+Release=1
+
+Synopsis:
+Changed from version 11.0.1 to version 11.1.0

@@ -32,11 +32,11 @@ f:a3ea60e8ff5b28f54bd1ca2207958b90:nethogs/spkgbuild
 f:e3a6afcad0610342f9f99f207cc25344:pidgin/CHANGELOG
 f:6fe9212a7059b21d96a398b2e924e3a5:pidgin/spkgbuild
 f:4bea0f1cbf40d757526b9ea3ec17ef35:pidgin/override
-f:7d8b1b56d5fb88d86eabd41f66284aed:tor/CHANGELOG
+f:f32554acadf67a3c33c3ea156af0c633:tor/CHANGELOG
 f:9000ad824fd570d43e02e8033dbf2767:tor/rc.tor
 f:c03a74c62be382749b206c13ce5560b0:tor/run
 f:c1dd4004c63edaeaa829e01be5413cfc:tor/torrc
-f:7db81e3817084c285b51ac9e6257ecc2:tor/spkgbuild
+f:79a14d8bde223b6017821e3ec9a9d63f:tor/spkgbuild
 f:f58147f876effca915152f5ca8b60f0f:tor/mkdirs
 f:7d36366889907a378f46922b63e280be:tor/pre-install.sh
 f:66b188862f5d6e4781315da2468e3a6b:wireshark/CHANGELOG
@@ -115,8 +115,8 @@ f:ef06c0c62ef268cb974e7aa5a2adea04:openvpn/post-upgrade.sh
 f:71e68322f2e6f539394eb1df8ba21e59:openvpn/CHANGELOG
 f:d18dce76462cdf0fb6d05986ec9a9985:openvpn/post-install.sh
 f:956174ddff79011a9241f768d18d4c9c:openvpn/spkgbuild
-f:82bf846c7f96266299920d9ede006ab7:filezilla/CHANGELOG
-f:db6edd9138fb8c4bf8cf39bac56da357:filezilla/spkgbuild
+f:2d0906d8d6f272e9dff444c96cc5a644:filezilla/CHANGELOG
+f:4ec68bcfa36cbc9dfc247217de26ed85:filezilla/spkgbuild
 f:adaf50db315d001ee2747db32e66a77c:filezilla/override
 f:6eb2e845fc4cc15794076e14226b25d2:filezilla/missing-list-include.patch
 f:0d9abc4e18522e7da53d956e31c4d1c6:libnftnl/CHANGELOG

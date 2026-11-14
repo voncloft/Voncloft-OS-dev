@@ -2,7 +2,7 @@
 # depends : python-lxml python-pillow qpdf
 
 name=python-pikepdf
-version=10.18.0
+version=10.18.1
 release=1
 
 _name=${name#python-}

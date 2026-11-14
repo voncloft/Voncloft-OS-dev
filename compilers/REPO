@@ -87,9 +87,9 @@ f:99a249a0bbbfe499d4893c107fc27ded:autoconf-archive/spkgbuild
 f:f9db8376de6c878b15963901bb125399:rust/.pkgfiles
 f:efc0440e5ca259e93bcd80f291c0fe25:rust/spkgbuild.1
 f:29f5be29852ef45a9cc2e52fc3f77df9:rust/0001-bootstrap-Change-libexec-dir.patch
-f:403b94ee924b1a8f1031e781f42e6226:rust/CHANGELOG
+f:2f6e848396c21d830e7c55ce9634468c:rust/CHANGELOG
 f:707ef2e3d130fd97ba1769d8a128b008:rust/0001-cargo-Change-libexec-dir.patch
-f:39dde2487c91b81c3afd3b05a9b153e4:rust/spkgbuild
+f:3e6fc6b630959b2ba18292094706b35f:rust/spkgbuild
 f:9e2fad33a490d0cfd0d7a21ad752afca:rust/override
 f:17bce39decd9d28762bec45f22cdb2b8:rust/spkgbuild-broken-dontknowwhy
 f:70861d1e87e9b6477b3c0481d6207885:rust/0002-compiler-Change-LLVM-targets.patch
@@ -132,9 +132,9 @@ f:168a474af7ca2e0b08d990552c4879ba:automake/.pkgfiles
 f:8ace17af17ea4bba59c69d616c0319c8:automake/CHANGELOG
 f:5685d46b96bfd64121fad31152bb5b4e:automake/spkgbuild
 f:e976867c08a51955dbcf2a3a808290dc:cmake/.pkgfiles
-f:3f39b93763b60f790bd49b4212d74a68:cmake/CHANGELOG
+f:b757d8098d85210064819e23c7fc592d:cmake/CHANGELOG
 f:8ba3c9f07f4f88b451083053325a1552:cmake/override-old
-f:e491b569d9ca58d41c22c11bcc60393b:cmake/spkgbuild
+f:4c6e1764041bbe0920e3fa414fb3fabe:cmake/spkgbuild
 f:4f6f8e00ae4fe46df19791b5183c3c11:cmake/override
 f:cea1e92da5e154b5f073e610a3ee238a:.httpup-repo.current
 f:277b0ccff30b904ac06222a46022afeb:luajit/.pkgfiles
