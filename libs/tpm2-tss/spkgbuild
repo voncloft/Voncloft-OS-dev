@@ -2,7 +2,7 @@
 # depends : openssl curl json-c util-linux libusb acl
 
 name=tpm2-tss
-version=4.2.1
+version=4.2.2s
 release=1
 source="https://github.com/tpm2-software/$name/releases/download/$version/$name-$version.tar.gz"
 backup="etc/tpm2-tss/fapi-config.json

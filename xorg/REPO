@@ -140,7 +140,7 @@ f:bc67a9fb2f496eceeb75f2014d66aff0:keybinder3/spkgbuild
 f:f9e4df2066ea548b2a9905ed23771672:xcb-util/.pkgfiles
 f:34798c154169e99f3a2b29188040b5b0:xcb-util/CHANGELOG
 f:74c76dd7df8c54df3c001fd21098232b:xcb-util/spkgbuild
-f:5938ad9252bb5bc4fbba0858fc1a47b8:xcb-util/override
+f:9d0d033e06e6941d9b5efba81ac3d806:xcb-util/override
 f:3f391e714610d5f60d7cec22ff32815e:xhost/.pkgfiles
 f:2012be733c6244bfdfa737e8e01aafe9:xhost/CHANGELOG
 f:fee2edb3260f303a6021f9ae135fc79c:xhost/spkgbuild
@@ -154,9 +154,9 @@ f:fc6c2a77cc57f005937557fae6dc8a48:xlsatoms/spkgbuild
 f:584d0b17a08848b82fe09b141b87f889:nitrogen/spkgbuild
 f:580b14b249f80768bd4a73fea219cd07:xorg-server/.pkgfiles
 f:5e263e1c42bc24fbdc1f9da4b7a62ee9:xorg-server/0001-v2-FS-58644.patch
-f:17e272d80cc6493f25bf4a1721c43e54:xorg-server/CHANGELOG
+f:553a6cb29293cb2c5d16b57c35b10b22:xorg-server/CHANGELOG
 f:295fc2a9cf201d13b9d69044211b99ba:xorg-server/glvnd-arch.patch
-f:588f93e99c5439361ea7610bc59d639a:xorg-server/spkgbuild
+f:a54b258a7c690882b80782b765e4bbb0:xorg-server/spkgbuild
 f:bf9ad45b6fe50b9776b38c4125b3a6fb:xorg-server/0002-fix-libshadow-2.patch
 f:295fc2a9cf201d13b9d69044211b99ba:xorg-server/glvnd.patch
 f:383da1b4a17e168ccf2896c4d6d805b7:xorg-server/override

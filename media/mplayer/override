@@ -1,0 +1,77 @@
+# Query the actual MPlayer SVN revision, never an unrelated tarball version; report only uversion.
+source=https://mplayerhq.hu/design7/dload.html
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - "${version:-}" "${release:-}" <<'PYVERSION'
+import json,pathlib,re,sys
+try:
+    text=pathlib.Path('index.html').read_text(encoding='utf-8')
+    # The upstream HTTPS SVN browser has a broken certificate. Query its public
+    # svn:// service read-only; Python stdlib avoids requiring svn to be installed.
+    # Protocol: https://svn.apache.org/repos/asf/subversion/trunk/subversion/libsvn_ra_svn/protocol
+    import socket,signal
+    signal.signal(signal.SIGALRM,lambda *_: (_ for _ in ()).throw(TimeoutError('SVN check timed out')))
+    signal.alarm(25)
+    with socket.create_connection(('svn.mplayerhq.hu',3690),timeout=10) as connection:
+        stream=connection.makefile('rb')
+        consumed=0
+        def take(n=1):
+            global consumed
+            consumed+=n
+            if consumed>65536: raise ValueError('Oversized SVN response')
+            data=stream.read(n)
+            if len(data)!=n: raise ValueError('Truncated SVN response')
+            return data
+        def item(depth=0):
+            if depth>16: raise ValueError('Invalid SVN nesting')
+            char=take()
+            while char in b' \n\r': char=take()
+            if char==b'(':
+                result=[]
+                while True:
+                    value=item(depth+1)
+                    if value==b')': return result
+                    result.append(value)
+            if char==b')': return char
+            token=char
+            while True:
+                char=take()
+                if char==b':' and token.isdigit(): return take(int(token))
+                if char in b' \n\r': return int(token) if token.isdigit() else token
+                token+=char
+        def success():
+            response=item()
+            if not isinstance(response,list) or len(response)<2 or response[0]!=b'success':
+                raise ValueError('Upstream SVN request failed')
+            return response[1]
+        def authenticate():
+            mechanisms=success()[0]
+            if mechanisms:
+                if b'ANONYMOUS' not in mechanisms: raise ValueError('SVN does not permit anonymous access')
+                connection.sendall(b'( ANONYMOUS ( 0: ) ) ')
+                success()
+        greeting=success()
+        if not greeting[0]<=2<=greeting[1]: raise ValueError('Unsupported SVN protocol')
+        repository=b'svn://svn.mplayerhq.hu/mplayer/trunk'
+        connection.sendall(b'( 2 ( edit-pipeline ) '+str(len(repository)).encode()+b':'+repository+b' ) ')
+        authenticate()
+        info=success()
+        if info[1]!=b'svn://svn.mplayerhq.hu/mplayer': raise ValueError('Wrong SVN repository')
+        connection.sendall(b'( get-latest-rev ( ) ) ')
+        authenticate()
+        revision=success()[0]
+        if not isinstance(revision,int) or revision<=0: raise ValueError('Invalid SVN revision')
+        print(revision)
+    signal.alarm(0)
+except Exception as error:
+    print('ERROR: Unable to read upstream version: '+str(error),file=sys.stderr)
+    sys.exit(1)
+PYVERSION
+    ) || return 1
+    [ -n "$detected" ] || return 1
+    uversion=$detected
+}

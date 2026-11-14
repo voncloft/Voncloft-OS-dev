@@ -31,5 +31,6 @@ f:b5c844ef4572ef9a3f04fffac29bdd77:gnome-keyring/CHANGELOG
 f:3bd3f1ae1d22354a3afc3411503bc2d5:gnome-keyring/spkgbuild
 f:90d4bd271c5e7f83805e30894b368051:gnome-menus/spkgbuild
 f:0ca52048d53ccdbaa7e31cb2984d6b53:gnome-icon-theme/spkgbuild
+f:4fc22102f0a48de9c6925b98902ba74e:gnome-icon-theme/override
 f:8a3a36778609d0cbb05b3cc115985856:gnome-desktop/CHANGELOG
 f:ec9d585be098f756e64066f4fa2d202a:gnome-desktop/spkgbuild

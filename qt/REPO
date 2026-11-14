@@ -48,8 +48,8 @@ f:130acfe0063a090de7b600c7cea67dd1:libdbusmenu-qt/spkgbuild
 f:b82135218e38585467f627bc8f9e3302:libdbusmenu-qt/override
 f:3cf61cac6170341f86e00d7e3bd980bd:qtcreator/.pkgfiles
 f:11a77cfc83cfb4e245cfc6ad74ce77f3:qtcreator/spkgbuild
-f:80bb17fe961f5f6fbd902c82690c29a6:pavucontrol-qt/CHANGELOG
-f:0980009539beac12a590ceeaa49aae5f:pavucontrol-qt/spkgbuild
+f:0bed9b50a54f05729fb72cce6c2f9d5f:pavucontrol-qt/CHANGELOG
+f:6a3ae75b6bfae1ea995995c26b2e395e:pavucontrol-qt/spkgbuild
 f:a5c820fc313a518380b081631bdef9b9:.httpup-urlinfo
 f:7fd78ebfa8f64bb73c84a10193dc3035:mauiman/spkgbuild
 f:8755f2a406e302969bc19568cef0865c:signon-ui/.pkgfiles

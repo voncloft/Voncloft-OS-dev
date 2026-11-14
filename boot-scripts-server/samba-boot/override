@@ -1,0 +1,6 @@
+# No independent upstream version exists for this locally maintained package.
+source=
+url=$source
+update_repo_skip_status="Manual update"
+update_repo_skip='Locally maintained boot script from the fixed blfs-bootscripts-20210110 bundle; its package version is maintained manually.'
+unset uversion

@@ -527,3 +527,18 @@ Release=1
 
 Synopsis:
 Changed from version 6.8.2 to version 6.8.3
+
+
+----------------------------------------------------------------
+
+Date: Thu Nov 12 2026
+
+Version=6.8.3
+Release=2
+
+Synopsis:
+Apply spectacle-ocr-data-path.patch to use /usr/share/tessdata for OCR.
+Honor an existing absolute TESSDATA_PREFIX and retain the selected path when
+changing languages. Reject missing or relative data directories without
+blocking screenshots. Prevent startup scans of the working directory when
+Tesseract has no compiled-in data prefix.

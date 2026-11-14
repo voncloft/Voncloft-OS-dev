@@ -1,0 +1,25 @@
+# Read upstream metadata; only report uversion. update-repo edits version=.
+source='https://gitlab.com/api/v4/projects/kernel-firmware%2Flinux-firmware/repository/tags?per_page=100'
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - "${version:-}" "${release:-}" <<'PYVERSION'
+import json,pathlib,re,sys
+try:
+    text=pathlib.Path('index.html').read_text(encoding='utf-8')
+    data=json.loads(text)
+    releases=[row for row in data if re.fullmatch(r'[0-9]{8}',row['name']) and re.fullmatch(r'[0-9a-f]{40}',row['commit']['id'])]
+    if not releases: raise ValueError('No dated firmware release found')
+    latest=max(releases,key=lambda row:row['name'])
+    print(latest['name']+'.'+latest['commit']['id'][:8])
+except Exception as error:
+    print('ERROR: Unable to read upstream version: '+str(error),file=sys.stderr)
+    sys.exit(1)
+PYVERSION
+    ) || return 1
+    [ -n "$detected" ] || return 1
+    uversion=$detected
+}

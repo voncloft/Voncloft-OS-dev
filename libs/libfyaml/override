@@ -1,17 +1,30 @@
-# Select stable numeric tags; GitHub's latest release may be a beta.
-source="https://api.github.com/repos/pantoniou/libfyaml/git/matching-refs/tags/v"
+# Read final upstream tags without the GitHub API quota; report only uversion.
+source=https://github.com/pantoniou/libfyaml.git
 url=$source
-get_generic() {
+update_repo_fetch_kind=git-tags
+
+get_generic()
+{
     local detected
     unset uversion
-    detected=$(python3 - <<'PYUPSTREAM'
-import json,pathlib,re
-refs=json.loads(pathlib.Path('index.html').read_text())
-versions=[r['ref'].removeprefix('refs/tags/v') for r in refs if re.fullmatch(r'refs/tags/v[0-9]+(?:\.[0-9]+)+',r['ref'])]
-if not versions: raise SystemExit('No stable libfyaml release')
-print(max(versions,key=lambda v:tuple(map(int,v.split('.')))))
-PYUPSTREAM
+    detected=$(python3 - "${version:-}" "${release:-}" <<'PYVERSION'
+import json,pathlib,re,sys
+try:
+    text=pathlib.Path('index.html').read_text(encoding='utf-8')
+    candidates=[line.split('refs/tags/',1)[1].strip() for line in text.splitlines() if 'refs/tags/' in line]
+    values=[]
+    for candidate in candidates:
+        match=re.fullmatch('v([0-9]+(?:\\.[0-9]+)*)',candidate)
+        if match:
+            value=match[1]
+            values.append(value)
+    if not values: raise ValueError('No matching upstream release found')
+    print(max(set(values),key=lambda value:tuple(int(n) if n.isdigit() else n for n in re.findall(r'[0-9]+|[a-z]+',value))))
+except Exception as error:
+    print('ERROR: Unable to read upstream version: '+str(error),file=sys.stderr)
+    sys.exit(1)
+PYVERSION
     ) || return 1
+    [ -n "$detected" ] || return 1
     uversion=$detected
-    [ -n "$uversion" ]
 }

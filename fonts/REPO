@@ -42,6 +42,7 @@ f:dd66e16f6d069a664588f4449cd7ad1b:ghostscript-fonts/spkgbuild
 f:1db3f60925b96e979e3122d2ea8af44f:ghostscript-fonts/override
 f:048d3cf5f26bd458239506ffe9756ee6:freetype2/.pkgfiles
 f:5227dc61555a6b613f0976537d19cf63:freetype2/spkgbuild
+f:e74842efcf637a277452517397a56cec:freetype2/override
 f:b4418eb8bf844fee79ab984742be4ef8:siji-font/CHANGELOG
 f:632cf1fd6c074d2526bc05d9eba7d239:siji-font/spkgbuild
 f:7871aea1af763ad53b75d5f5dc7b5f9a:siji-font/override

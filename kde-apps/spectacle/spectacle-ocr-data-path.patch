@@ -1,0 +1,53 @@
+--- a/src/OcrManager.cpp
++++ b/src/OcrManager.cpp
+@@ -332,10 +332,22 @@
+         }
+     };
+ 
++    // VonOS installs language data here. Do not let a Tesseract build without
++    // a compiled-in prefix recursively enumerate the application's working directory.
++    QString configuredDataPath = qEnvironmentVariable("TESSDATA_PREFIX");
++    if (configuredDataPath.isEmpty()) {
++        configuredDataPath = u"/usr/share/tessdata"_s;
++    }
++    if (!QDir::isAbsolutePath(configuredDataPath) || !QDir(configuredDataPath).exists()) {
++        qCWarning(SPECTACLE_LOG) << "OCR data path must be an existing absolute directory:" << configuredDataPath;
++        setStatus(OcrStatus::Error);
++        return;
++    }
++
+     try {
+         m_tesseract = new TessBaseAPI;
+ 
+-        if (m_tesseract->Init(nullptr, nullptr) != 0) {
++        if (m_tesseract->Init(QFile::encodeName(configuredDataPath).constData(), nullptr) != 0) {
+             qCWarning(SPECTACLE_LOG) << "Failed to initialize Tesseract OCR engine";
+             setStatus(OcrStatus::Error);
+             cleanupTesseract();
+@@ -391,7 +403,7 @@
+         const QString combinedInitLanguages = initLanguages.join(u"+"_s);
+         qCDebug(SPECTACLE_LOG) << "Initializing Tesseract with languages:" << combinedInitLanguages;
+ 
+-        if (m_tesseract->Init(nullptr, combinedInitLanguages.toUtf8().constData()) != 0) {
++        if (m_tesseract->Init(QFile::encodeName(tessdataPath).constData(), combinedInitLanguages.toUtf8().constData()) != 0) {
+             qCWarning(SPECTACLE_LOG) << "Failed to initialize Tesseract with languages:" << combinedInitLanguages;
+             setStatus(OcrStatus::Error);
+             cleanupTesseract();
+@@ -502,7 +514,7 @@
+ 
+         const QString combinedLangs = langCodes.join(u"+"_s);
+ 
+-        if (m_tesseract->Init(nullptr, combinedLangs.toUtf8().constData()) != 0) {
++        if (m_tesseract->Init(QFile::encodeName(tessdataPath).constData(), combinedLangs.toUtf8().constData()) != 0) {
+             // Fallback to first available language
+             QString fallbackLang;
+             if (!m_availableLanguages.isEmpty()) {
+@@ -514,7 +526,7 @@
+                 }
+             }
+ 
+-            if (fallbackLang.isEmpty() || m_tesseract->Init(nullptr, fallbackLang.toUtf8().constData()) != 0) {
++            if (fallbackLang.isEmpty() || m_tesseract->Init(QFile::encodeName(tessdataPath).constData(), fallbackLang.toUtf8().constData()) != 0) {
+                 qCWarning(SPECTACLE_LOG) << "Failed to initialize Tesseract with languages:" << combinedLangs << "and fallback:" << fallbackLang;
+                 return false;
+             }

@@ -6,7 +6,7 @@ version=2.4.2
 release=1
 options="!checksum"
 
-source="https://downloads.sourceforge.net/sourceforge/sshguard/sshguard-2.4.2.tar.gz
+source="https://downloads.sourceforge.net/sourceforge/sshguard/${name}-${version}.tar.gz
 	sshguard.conf"
 
 build()

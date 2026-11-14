@@ -1,0 +1,28 @@
+# Read upstream metadata; only report uversion. update-repo edits version=.
+source=https://www.noip.com/client/linux/noip-duc-linux.tar.gz
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - "${version:-}" "${release:-}" <<'PYVERSION'
+import json,pathlib,re,sys
+try:
+    import io,tarfile
+    with tarfile.open(fileobj=io.BytesIO(pathlib.Path('index.html').read_bytes()),mode='r:gz') as archive:
+        candidates={member.name.split('/')[0] for member in archive}
+    versions=[re.fullmatch(r'noip-(2\.[0-9]+\.[0-9]+)-([0-9]+)',name) for name in candidates]
+    versions=[m for m in versions if m]
+    if not versions: raise ValueError('No legacy No-IP source directory found')
+    match=max(versions,key=lambda m:tuple(map(int,m[1].split('.'))))
+    if match[2] != sys.argv[2]: raise ValueError('No-IP source suffix changed; recipe release needs manual review')
+    print(match[1])
+except Exception as error:
+    print('ERROR: Unable to read upstream version: '+str(error),file=sys.stderr)
+    sys.exit(1)
+PYVERSION
+    ) || return 1
+    [ -n "$detected" ] || return 1
+    uversion=$detected
+}

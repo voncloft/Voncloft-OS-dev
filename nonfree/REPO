@@ -31,9 +31,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:ed60e77d3134f2ba24a08f2344dc795b:firefox-bin/CHANGELOG
+f:2da414e2fbc499e88e33d99748d0e2e6:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:71346262ab6ebb3b8bd0373275901ad3:firefox-bin/spkgbuild
+f:418383c04e5fe80d75b85689c8813e55:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -59,8 +59,8 @@ f:db32be36140b31e24363b1366feeac94:nvidia/spkgbuild
 f:4d25a8cc8d59b0df7c1c57ae13f36b40:nvidia/override
 f:6aa20791a6558136a3e7f3578ccd7a0b:nvidia/.checksums
 f:43cfbf82694715f2d13e458eaad32f46:libreoffice/.pkgfiles
-f:5046afe8ca54c766744625a7b3c42bc2:libreoffice/CHANGELOG
-f:2c1391eb90738236fd5dfe4fbf6548be:libreoffice/spkgbuild
+f:9d29e4a1b5b1e7e35e07617fdc2b1cd3:libreoffice/CHANGELOG
+f:be4bb067e842b105bc2c23b722da1cf9:libreoffice/spkgbuild
 f:3fd61ad592ad34bd4c80583f54c6acd2:libreoffice/override
 f:6741a741a6f31be3a680a63359d0f650:virtualbox-extpack/.pkgfiles
 f:4fc1e5d7645cf5cba6c878e6951ae555:virtualbox-extpack/pre-upgrade.sh
@@ -112,8 +112,8 @@ f:f1cbcac961f006f8442e698de30f32bc:webtorrent-desktop-bin/spkgbuild
 f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.desktop
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
-f:1c50e41cd31b5a382b079b703ff7b2a6:thunderbird-bin/CHANGELOG
-f:893e3821d3d9aaa88cf7ae6baf250648:thunderbird-bin/spkgbuild
+f:9f955bd98e9f73b7cba0dd31fcf6c7a5:thunderbird-bin/CHANGELOG
+f:1f30348c08728ed8341f390ccdfc3ae1:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
 f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop

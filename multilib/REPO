@@ -283,14 +283,15 @@ f:9afa707689571d328dc9682a92ec722a:gstreamer-32/CHANGELOG
 f:ee21a7073608f977a1634990b55d2aa3:gstreamer-32/spkgbuild
 f:0178ea1bb4f67d9326bafef037e7dfe5:gstreamer-32/override
 f:a92888a64b84bb2f810e7971c06ab82b:pcre-32/spkgbuild
+f:a2638e799f92de077d2dfc3258a52530:pcre-32/override
 f:39fbf9d789f91f9ad2998ec4cbf840e9:bzip2-32/spkgbuild
 f:164bf0088a9f44b93075408e282dff44:bzip2-32/override
 f:e1e3e08c8e3a3bd3eed39eb05afa46a7:freetype2-32/.pkgfiles
 f:25f7bf1354d9b0feb1c63973b8af35b4:freetype2-32/CHANGELOG
 f:834b93bfa25adf45949c4f6f8867d25a:freetype2-32/spkgbuild
 f:cabbd5f862191e987fe03f2f244f411c:freetype2-32/override
-f:fcebd9ddb1781863a6ce03d8b5331c92:p11-kit-32/CHANGELOG
-f:d7d51b548b490d0f44fb62b89c8f4456:p11-kit-32/spkgbuild
+f:eb2c2ee4310f325b835dbc1d11096b38:p11-kit-32/CHANGELOG
+f:0b6586483bd17a3e9d9c5939d0be1c47:p11-kit-32/spkgbuild
 f:6984e5b06ee4e5b6b620717a2554b26a:libxdmcp-32/CHANGELOG
 f:af3b828326e412f0f4e823c74e43e28e:libxdmcp-32/spkgbuild
 f:3e38e51d0b482e7ce04e6e47e55ca444:libxdmcp-32/override

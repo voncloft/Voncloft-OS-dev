@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Changed from version 4.2.0 to version 4.2.1
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 03:19:09 AM EST 2026
+
+Version=4.2.2s
+Release=1
+
+Synopsis:
+Changed from version 4.2.1 to version 4.2.2s

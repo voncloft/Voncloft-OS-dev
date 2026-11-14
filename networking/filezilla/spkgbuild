@@ -4,7 +4,12 @@
 name=filezilla
 version=3.59.0
 release=1
-source="https://netix.dl.sourceforge.net/project/portableapps/Source/FileZilla/FileZilla_${version}_src.tar.bz2
+# Upstream changed source compression from bzip2 to xz at 3.64.0.
+_archive_ext=xz
+if [[ "$(printf '%s\n' "$version" 3.64.0 | LC_ALL=C sort -V | head -n1)" != 3.64.0 ]]; then
+    _archive_ext=bz2
+fi
+source="https://downloads.sourceforge.net/project/portableapps/Source/FileZilla/FileZilla_${version}_src.tar.${_archive_ext}
 	missing-list-include.patch"
 options="!checksum"
 build() {

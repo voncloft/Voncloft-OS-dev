@@ -1,21 +1,36 @@
-# Track the upstream-designated stable release, excluding prereleases.
-source="https://api.github.com/repos/libevent/libevent/releases/latest"
+# Follow GitHub latest stable release without the API quota; report only uversion.
+source=https://github.com/libevent/libevent/releases/latest
 url=$source
+update_repo_fetch_kind=headers
 
 get_generic()
 {
     local detected
     unset uversion
-    detected=$(python3 - <<'PYUPSTREAM'
-import json,pathlib,re
-release=json.loads(pathlib.Path('index.html').read_text())
-if release.get('draft') or release.get('prerelease'):
-    raise SystemExit('Upstream response is not a stable release')
-match=re.fullmatch('release\\-([0-9]+(?:\\.[0-9]+)*)\\-stable',release.get('tag_name',''))
-if not match: raise SystemExit('No matching stable release tag found')
-print(match[1].replace('.','.'))
-PYUPSTREAM
+    detected=$(python3 - "${version:-}" "${release:-}" <<'PYVERSION'
+import json,pathlib,re,sys
+try:
+    text=pathlib.Path('index.html').read_text(encoding='utf-8')
+    from urllib.parse import unquote,urlsplit
+    candidates=[]
+    for line in text.splitlines():
+        if line.lower().startswith('location:'):
+            location=line.split(':',1)[1].strip()
+            if location.startswith('https://github.com/libevent/libevent/releases/tag/'):
+                candidates.append(unquote(urlsplit(location).path.rsplit('/tag/',1)[1]))
+    values=[]
+    for candidate in candidates:
+        match=re.fullmatch('release\\-([0-9]+(?:\\.[0-9]+)*)\\-stable',candidate)
+        if match:
+            value=match[1]
+            values.append(value)
+    if not values: raise ValueError('No matching upstream release found')
+    print(max(set(values),key=lambda value:tuple(int(n) if n.isdigit() else n for n in re.findall(r'[0-9]+|[a-z]+',value))))
+except Exception as error:
+    print('ERROR: Unable to read upstream version: '+str(error),file=sys.stderr)
+    sys.exit(1)
+PYVERSION
     ) || return 1
+    [ -n "$detected" ] || return 1
     uversion=$detected
-    [ -n "$uversion" ]
 }

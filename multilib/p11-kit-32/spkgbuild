@@ -2,7 +2,7 @@
 # depends	: p11-kit libffi-32 libtasn1-32
 
 name=p11-kit-32
-version=0.26.5
+version=0.26.6
 release=1
 _name=${name%-32}
 source="https://github.com/p11-glue/${_name}/releases/download/$version/${_name}-$version.tar.xz"

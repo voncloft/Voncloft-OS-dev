@@ -426,7 +426,7 @@ f:89dca1b64dc2ef753f5f4f0f644e2902:akonadi-calendar/spkgbuild
 f:ac086ea97d3f96538eddf311ab679e52:todolist/.pkgfiles
 f:6b1003911152a0a715b9eee535ed3bc6:todolist/CHANGELOG
 f:602e3fa0aff0bf4bb42c64fb95356437:todolist/spkgbuild
-f:56ca55e87c86937a94b6289b682fcc92:todolist/override
+f:6158d0dc5224b53eb8b62efbde204147:todolist/override
 f:73e7ac834d461f74090e5886059a9e76:todolist/.checksums
 f:8526ebfb913489c7ffb498a19bc6883b:kde-updater/.pkgfiles
 f:1ffc4b564025e801885e0f03b18b6225:kde-updater/kde-updater
@@ -573,7 +573,7 @@ f:be4cc4b3a5cb15f6422a94c3cdcdd1f6:smarthome/.pkgfiles
 f:ae348dbe86cb6f16064c771cfdbee6cb:smarthome/unified-diagnostics.patch
 f:a6305e21f1d6e02a0fd12df0dd9f98ec:smarthome/CHANGELOG
 f:eebf6f75b895e41993bf28cbaa0f4671:smarthome/spkgbuild
-f:24d6534e56fa61f9dfb0f46d7088e0c5:smarthome/override
+f:97f6880e943c206fcf87a9d567103d49:smarthome/override
 f:0717f771e977a5da7f018670e536e29e:smarthome/.checksums
 f:5fd0108d95f580bdaa3ee2e113dc7d49:calindori/CHANGELOG
 f:05b501c79cbec57c6f42ac69669a0a84:calindori/spkgbuild
@@ -662,7 +662,7 @@ f:96367b7fb6050d48eb9beaa16ff7cf15:vpacman/.pkgfiles
 f:4dbe48be3964a9dac39b0836feb295ee:vpacman/vpacman-qt6.patch
 f:160e7e3bf1fee7caf35fa4619096181e:vpacman/CHANGELOG
 f:ff1039cce0b3dcfe50c91162007408a9:vpacman/spkgbuild
-f:7e1bce611361ca78e9ac24d3f16a0e85:vpacman/override
+f:324488e7bf52657bb76249b037e5877c:vpacman/override
 f:9266f711e14593511b5fde3a3e555ab7:vpacman/.checksums
 f:ef32019345804ac827d0c42d39289da7:hana/spkgbuild
 f:8e1f9b70fc471545f05c2b411d75ef38:gcompris/spkgbuild
@@ -826,7 +826,7 @@ f:ef89a7efdc64d2c7f09059bead4467fb:kimap/spkgbuild
 f:f28559883daf396af3eb7390ea07405c:voncloft-tv/.pkgfiles
 f:9d427d8b980913f86744159452d6e2a1:voncloft-tv/CHANGELOG
 f:452a4d05f8b06a7d2e3483813f4eea26:voncloft-tv/spkgbuild
-f:c500f78daea4d83d5551be5e701bfe4e:voncloft-tv/override
+f:e79ee657aed11cb637a3ecac2f4bef82:voncloft-tv/override
 f:6892cb3ea74dcf8de711acc234f2cdb6:voncloft-tv/.checksums
 f:0ce3c0f32b7cef951ed0644fccdef43a:ksirk/.pkgfiles
 f:507058adafe7c38307ce9418ebc21d66:ksirk/CHANGELOG
@@ -876,7 +876,7 @@ f:41b1e884c8c83fea12df2142a9bc5971:khtml/spkgbuild
 f:0d32ea0cf1cff88a4c70c73d1af5eede:voncloft-casino/.pkgfiles
 f:85854d66a54556d97add0ef01609aa1a:voncloft-casino/CHANGELOG
 f:6368478674ff507486ca479bee006ead:voncloft-casino/spkgbuild
-f:a200f19fdb7ee627240ae94c360cae97:voncloft-casino/override
+f:2adfcbd3123285b48bccd89c48df66d1:voncloft-casino/override
 f:46e610dfad2e20d8c42b2a5e46dd7524:ksudoku/.pkgfiles
 f:1155d863106f1ef0dfd2115596d2e9ed:ksudoku/CHANGELOG
 f:be2fbbbb2ebc82ab676b3c005ea14762:ksudoku/spkgbuild
@@ -902,7 +902,7 @@ f:855ff65f7f791185091f297719ed4475:kleopatra/spkgbuild
 f:f7086eb6e959d78b31c74b4dd2520a68:turnover-golf/.pkgfiles
 f:e117b75824c039c1478ea5b854d8b784:turnover-golf/CHANGELOG
 f:eded768ec014f0b46f0b2c3bace218b4:turnover-golf/spkgbuild
-f:3163cd6c0c03bfc51137b0ed94bda97d:turnover-golf/override
+f:3b82f0f16d005ab06745a52e4bdd108b:turnover-golf/override
 f:7d4ef9693e8db412de330a44ff8a5390:turnover-golf/.checksums
 f:fd1f5a5e3dbd8fd49415637696da4762:qrca/CHANGELOG
 f:349c8b012ede98dc0403473ae0056174:qrca/spkgbuild
@@ -1055,8 +1055,9 @@ f:f983d4adcdad87fa4669a5af5b6f3668:skrooge/spkgbuild
 f:bc13b71adf96f93e72ccbf02faa24fff:analitza/CHANGELOG
 f:21083236a37b4ef743454d507e55ca10:analitza/spkgbuild
 f:1a716a319566d9f1f2d52f0a29ed6bda:spectacle/.pkgfiles
-f:7170d28ea39a1270cc275487cca7066e:spectacle/CHANGELOG
-f:8fc008177bef00d830885e8b8b69cc08:spectacle/spkgbuild
+f:b6b7bdfeb72a25790975fa57c817e982:spectacle/CHANGELOG
+f:62779875401ce216bca772acff2758c6:spectacle/spectacle-ocr-data-path.patch
+f:f315a15edc838f623ab597d939bfa441:spectacle/spkgbuild
 f:0361c51040fd91cbf66c6317fd78cc2f:pim-data-exporter/CHANGELOG
 f:8e4da66760fe9157ffe6f385398fda5c:pim-data-exporter/spkgbuild
 f:1543c167e5485595b2e29b972dd1a362:mbox-importer/CHANGELOG

@@ -6,7 +6,7 @@ version=2.10.0
 release=1
 
 _name=libexpat
-source="https://github.com/libexpat/${_name}/releases/download/R_2_9_0/${name}-${version}.tar.bz2"
+source="https://github.com/libexpat/${_name}/releases/download/R_${version//./_}/${name}-${version}.tar.bz2"
 
 build()
 {

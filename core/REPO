@@ -734,8 +734,8 @@ f:d731d70650de05aae4d55e20e641ba5f:xz/override
 f:bdcc270d8d14a1878f6926039d783fac:gdl/CHANGELOG
 f:43df4ecad7e3facd0e987f9dd7ba20a6:gdl/spkgbuild
 f:830520b0120631bf8a76c31785611dd1:p11-kit/.pkgfiles
-f:b33ff2aeede6fd67e963c95bf6a1e183:p11-kit/CHANGELOG
-f:207bb9057040a40b53a502b8efcaed6d:p11-kit/spkgbuild
+f:01b4ad0dfb66865c4bfe6131904addbb:p11-kit/CHANGELOG
+f:ad201e38d5f0a98f77b66e69aba65e1d:p11-kit/spkgbuild
 f:b6116517eb31b3c6835e1df85b98b1f4:p11-kit/override
 f:9a0031cab0e772ca6e487d161667241e:bamf/CHANGELOG
 f:2c90627e1b5f5df392ad1712060b991f:bamf/spkgbuild
@@ -809,6 +809,7 @@ f:f624dc195ff8a82ef0c12cf6b6d08063:yelp-xsl/.pkgfiles
 f:9142d7559f2bb71eed6ae44b31ac37cf:yelp-xsl/CHANGELOG
 f:786958ebc13475ff2be50c29c64ac71a:yelp-xsl/spkgbuild
 f:2d942f863fdaec04a0bc3da264096b9a:base/spkgbuild
+f:eb8251ee1afe036e58e30dffa9f33954:base/override
 f:47be2d34daff1ea3291d148b030a8c9d:celt/.pkgfiles
 f:9aa57b5fe52d10eef0a50e25c11407b2:celt/spkgbuild
 f:27dd07e32659d7a127aa71a348fb9194:geos/.pkgfiles
@@ -987,8 +988,8 @@ f:12be4755290018952dab1e614034f345:mitkrb/.pkgfiles
 f:1f3ca4461ef2ac6fc1b768abe8955b66:mitkrb/CHANGELOG
 f:867099004e9da906d4b8e1ec12feab1a:mitkrb/spkgbuild
 f:f453652cba479b4303e440cdd8ac7f25:mitkrb/override
-f:f2bb16c9af3dcc9c670c0f73055d0d07:cabextract/CHANGELOG
-f:c5568671417c628138a3c1e26452f983:cabextract/spkgbuild
+f:135d8497f69cc9b5d0b3bccbe545e295:cabextract/CHANGELOG
+f:4034db4379f7f52b0b7b82773b8faf5a:cabextract/spkgbuild
 f:8eab309eb10b3f57a8c87da88cb74daf:gwenhywfar/CHANGELOG
 f:8a9709581136fd3b4193aa40d94fe000:gwenhywfar/spkgbuild
 f:86b481048b8e04feb35b10bef941b023:gwenhywfar/override
@@ -1093,7 +1094,8 @@ f:9152af24dad0cfee15da3094da963614:cowsay/CHANGELOG
 f:ef8003796a1ede4b0a100af932089017:cowsay/spkgbuild
 f:7091f9a6d97006299a1f27a665b638b6:cowsay/cowsay.patch
 f:f8dd3ed29ddd8bb1258381faf892a5ef:terminator/CHANGELOG
-f:c311b67165eb08913618b1dc87980326:terminator/spkgbuild
+f:b2cbfaf3cf121c59943b6b2f0a393564:terminator/spkgbuild
+f:c34e67d0e10d234583e06a8b73d77430:terminator/override
 f:3d60f0ab64d8f7cd35c5694969ebd80f:weechat/CHANGELOG
 f:8a021662a30ebf8723411d9b68e66d75:weechat/spkgbuild
 f:facdd75441705344c13b69d57749054a:transmission-gtk/CHANGELOG
@@ -1169,7 +1171,7 @@ f:c0510a6a3f34e8ad106cfbbea5e46346:poppler-data/spkgbuild
 f:289b60c7f1efcd1383626d7db31f812e:boost/.pkgfiles
 f:473a5218938895558ef90d6f420f36af:boost/CHANGELOG
 f:c0a56321b48642da8138d9f5c76ac504:boost/spkgbuild
-f:f567ac9b7dc201d50d43423486d9fafd:boost/override
+f:3fb4e49b3cdcfd582f66518f6f1a1060:boost/override
 f:782559ddc05a71495dd0286b92312ad7:conky/.pkgfiles
 f:c248ee002051b999c375c9a9bce1b809:conky/CHANGELOG
 f:6e3296f36869d8956420211b61305142:conky/spkgbuild
@@ -1263,7 +1265,7 @@ f:be283282674ca52325008b583eecdd22:poppler-glib/pre-upgrade.sh
 f:dd4dae5f2e99e2a39230b4b557d8ed35:poppler-glib/README
 f:4245409ef039fde56309013aeab96b52:poppler-glib/CHANGELOG
 f:c7989f05695c2fe72e15643be748a6c5:poppler-glib/spkgbuild
-f:1719d3b604fcb1febb92b4078af55974:poppler-glib/override
+f:7ae65d151d75cfb3a8c987bd46a19e4d:poppler-glib/override
 f:56301abf908560e49dd2edd051b39dd2:monit/CHANGELOG
 f:75931a3204d9f63944ace164516ff1f1:monit/run
 f:0c4768d24e57f27e0bb06d68d4d4d5d4:monit/spkgbuild
@@ -1455,6 +1457,7 @@ f:8c8b6d8f3bb968eebb26befb04b7c0c7:polkit/mkdirs
 f:f4d1b90979fa1c3b424798949a5fdb6f:polkit/pre-install.sh
 f:024ae1f626a2e1f0b7ed3f72073d2019:glew/.pkgfiles
 f:0f1dbe7ed71891a2f5fff5832561f0a5:glew/spkgbuild
+f:99938597152b82ee75f29a5f1a09ad24:glew/override
 f:81521bf0fe7bbabb202e516d8538dd11:gmrun/CHANGELOG
 f:a8fd3421b163421ea7990668c634d406:gmrun/gcc43.patch
 f:8e38ad46a1ffc313086e14e19f383792:gmrun/spkgbuild
@@ -1515,6 +1518,7 @@ f:7d14428e62f1a3c871fd93da52b31bfc:smartmontools/rc.smartd
 f:038469f2ec0b5831e2efedb1480139db:smartmontools/spkgbuild
 f:5f3f025c4eec39d3d0e7d9bba060f948:linux-firmware/CHANGELOG
 f:b1056bb104cf5b0195d0af44939021d2:linux-firmware/spkgbuild
+f:fe0eeb0ba704ce1957c40afc6ee7a351:linux-firmware/override
 f:8752b8a6df19da513d7e5e0dee1b3299:appstream-glib/CHANGELOG
 f:dd53bc8c1f1dbf0640c761fbd307eb42:appstream-glib/spkgbuild
 f:cd8ce51a1f2484119383b04e5a7c83e1:appstream-glib/override
@@ -1541,7 +1545,7 @@ f:b3ba2c04dae84b84ebc7729b2e686d7f:lua52/.pkgfiles
 f:843eebd3e7a2190fe6c80fa9bb16a533:lua52/CHANGELOG
 f:7726dcf62d4b96f59fac3118b209a305:lua52/lua52.pc
 f:108c4da04d48e9c9e29113c18692e6cc:lua52/spkgbuild
-f:f092b6fac86639cfa2c3fe32daec6878:lua52/override
+f:fe99f324f64eafc1e10a51e16d9eb8d4:lua52/override
 f:1d67f08457c8f49de7d9958849159520:fop/.pkgfiles
 f:c9cc14eb3c6e29fef7d050ce8d47f304:fop/CHANGELOG
 f:e12cff98015a4ffeffb14d32d1032268:fop/post-install.sh
@@ -1678,8 +1682,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:c03849b945944fadd5ebaa69cd0583e4:flex/CHANGELOG
-f:0720cdc8172b3431c798b1f0a8fb179e:flex/spkgbuild
+f:68d5cf97b62371ff10f0b455879dc216:flex/CHANGELOG
+f:5a56289e202bdf808ecc618ce3648ea7:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch
@@ -1829,7 +1833,7 @@ f:983f8f4fa25fd43daa5b19a18b295b90:faenza-icon-theme/override
 f:ab4eeba8ee12c339f1338c1db2421725:scrot/.pkgfiles
 f:b7cb6662ca7ec288fc3e1279f3d0c1e4:scrot/CHANGELOG
 f:3f2c597ffee48184fafd42f3e32eec0f:scrot/spkgbuild
-f:812a2ec1f117191b11bd227e5fa8e29e:scrot/override
+f:eb27311f1b830305bae92a347db9973d:scrot/override
 f:7cb22d496b45e25c550a914a586ec3f6:gmp/.pkgfiles
 f:98a6d8e81d5bc1c721c7782ed473962b:gmp/CHANGELOG
 f:0870efd6566f4e5d18abe522e2574900:gmp/spkgbuild
@@ -1893,6 +1897,7 @@ f:97a9142ca38493ad211d25cb66f40257:makeself/spkgbuild
 f:c9695ad50deb49c92aa332e830ccb83f:startup-notification/spkgbuild
 f:19f7c192d0099452972860c2ccea0410:icon-naming-utils/spkgbuild
 f:555b0ff8eaa8fe0af5b96cd26d4409b9:iotop-fukt/spkgbuild
+f:f6493461cd9eecd1e4dc01bcd2d39def:iotop-fukt/override
 f:d4b1ff77ab64e6ab30c26f9337e479ae:potrace/spkgbuild
 f:305cb250d232e8c11d6669aa598adeb8:faad2/CHANGELOG
 f:9e5e2e5599fbec2fb9c8d54451fedb25:faad2/spkgbuild
@@ -1966,9 +1971,9 @@ f:a510a455224cfd1f49607915aa339203:iproute2/spkgbuild
 f:11d060e6c509938198594f0c3ec038ab:irssi/CHANGELOG
 f:2851b9e442503e849e4938bcd02c1463:irssi/spkgbuild
 f:62ffd45bedc6455ee77ece6339442dc2:frei0r-plugins/.pkgfiles
-f:80d6265d9c805c5c61c0415253184dab:frei0r-plugins/CHANGELOG
+f:196e66bbfc5119be2da8cfeb7db8eb9e:frei0r-plugins/CHANGELOG
 f:09e301dde315d24bea0e9be968cd544c:frei0r-plugins/opencv5.patch
-f:2c7f1bfe7f2f2155b739e2cddee52d2b:frei0r-plugins/spkgbuild
+f:46037fe31912193cd2569447c055ca27:frei0r-plugins/spkgbuild
 f:d779c65c4ff649530acc5873dc731bf0:frei0r-plugins/override
 f:fe07c432c464e42b023caa057cafb410:dejagnu/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:dejagnu/.nanorc
@@ -2015,6 +2020,7 @@ f:f611f1cbf4bdddef06baa730789855e9:colorcodes/colorcodes
 f:bc0eb9536e58d3d6fe6343eb194ede82:colorcodes/override
 f:6ffbaa4687ca85b02692401dafb2ea3c:zip/.pkgfiles
 f:811963fbafaf069596ca68e763ede4ff:zip/spkgbuild
+f:6999f297a0251d74ac3eb9319100ee66:zip/override
 f:e34ff1923abdc0e21d92b252bed9df10:gettext/.pkgfiles
 f:cb718c8056c2f89924442bf545295a8a:gettext/CHANGELOG
 f:17d97cda8c0e6233c704e4bc61e84a14:gettext/spkgbuild
@@ -2186,6 +2192,7 @@ f:04419c853aefe36425968a121db8c8a9:openjpeg2/spkgbuild
 f:b2fef3d157ee3c7e5259407cf8cc344b:openjpeg2/override
 f:f252f4466eb44838fd34d11cccc0c61c:refind/CHANGELOG
 f:a9fb34a429815662f43f1bf1e0fe8a21:refind/spkgbuild
+f:14cc8ae4ace91c12c2e5b456b27c2d45:refind/override
 f:9df734d8a4772a6c6354ab4374af4a49:gnustep-make/CHANGELOG
 f:de0cde1e698932382889f17cd9c00dac:gnustep-make/spkgbuild
 f:9347bd50fd10e00ca0d122d35a95fdee:spectrwm/baraction.sh
@@ -2205,6 +2212,7 @@ f:fd24b601fe2cf5779778da5f7521c917:kernel-prereq/NXP7164-2010-03-10.1.fw
 f:b9fa8f284483480675d29d19e704f62c:kernel-prereq/dvb-fe-tda10048-1.0.fw
 f:766e8169b048498f690be18569bc18a4:kernel-prereq/spkgbuild
 f:39b8c34dd6e96414798e78540bc5396f:kernel-prereq/v4l-saa7164-1.0.2.fw
+f:eb8251ee1afe036e58e30dffa9f33954:kernel-prereq/override
 f:ba8194afd8105969a536cb881899200b:kernel-prereq/v4l-saa7164-1.0.3.fw
 f:2d95520c2bc0ebc0435ca5a455311b24:pinentry/.pkgfiles
 f:69cfd167248c5b55e7674ed70af9c589:pinentry/CHANGELOG
@@ -2224,12 +2232,13 @@ f:a647a87ebd460912bf80a62a8c66d2ac:shadow/chpasswd
 f:e83f5a3fbfaa8c46714a6469db84bb61:shadow/CHANGELOG
 f:23946510d702e1af072a2ac15ce41e28:shadow/spkgbuild
 f:67bfdee60d1f31efc42ea724c5da9cad:shadow/su
-f:e3c38c6903191b03c6f2ee3ae04b383d:shadow/override
+f:428a8549a687546f5520be7ecc560507:shadow/override
 f:5ce8418cdf6429b3e73601e6f8cb7ebb:.httpup-repo.current
 f:969a61c5436fd96104c8bb6505d83315:yetris/spkgbuild
 f:b86bf7292e3af00f9119c16d22795139:icoutils/.pkgfiles
 f:fdc10a12728c4c995cd9135da5e1be51:icoutils/spkgbuild
 f:54172c23c9f610535096a8cdca90f033:icoutils/override
 f:f9ec18691ed931e7cba14b4ca56e0324:gnu-netcat/spkgbuild
+f:f24b7b38e1a0e1d70fa1c762ae14931f:gnu-netcat/override
 f:2292711f458f17d7998968c44b9e33cf:audacious-plugins/CHANGELOG
 f:3367f2c81d83ed784957cde1e8c0caf8:audacious-plugins/spkgbuild

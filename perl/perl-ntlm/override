@@ -1,0 +1,25 @@
+# Read upstream metadata; only report uversion. update-repo edits version=.
+source=https://fastapi.metacpan.org/v1/release/NTLM
+url=$source
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - "${version:-}" "${release:-}" <<'PYVERSION'
+import json,pathlib,re,sys
+try:
+    text=pathlib.Path('index.html').read_text(encoding='utf-8')
+    data=json.loads(text)
+    if data['distribution']!='NTLM' or data.get('maturity')!='released': raise ValueError('Wrong CPAN distribution or development release')
+    value=str(data['version'])
+    if not re.fullmatch(r'[0-9]+(?:\.[0-9]+)*',value): raise ValueError('Invalid CPAN version')
+    print(value)
+except Exception as error:
+    print('ERROR: Unable to read upstream version: '+str(error),file=sys.stderr)
+    sys.exit(1)
+PYVERSION
+    ) || return 1
+    [ -n "$detected" ] || return 1
+    uversion=$detected
+}

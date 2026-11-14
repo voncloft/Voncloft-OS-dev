@@ -41,6 +41,7 @@ f:89afb40eb2bc610ee8f2e6a386a4d922:libsamplerate/CHANGELOG
 f:4277f0c92c78746c9e9768c8074bda58:libsamplerate/spkgbuild
 f:1a88575c4165813deac883c842137aad:mplayer/CHANGELOG
 f:0585fb6ec5cd8fd09f4b9cddd3a7dbd9:mplayer/spkgbuild
+f:b1911c573bd684b4ca95c154dd77091d:mplayer/override
 f:4703dc0019932e442486942adb6c90a4:pulseaudio-alsa/asound.conf
 f:4d1860ef3d37b45aaa133384d5c2b8ff:pulseaudio-alsa/CHANGELOG
 f:d417165c676338af1bbebb546ac6ac2b:pulseaudio-alsa/spkgbuild
@@ -119,6 +120,7 @@ f:a7cff0c4e2d6a9f4662116ebfd670e96:x265/CHANGELOG
 f:01687e023597864fdc4a7f604933a63a:x265/spkgbuild
 f:ec0e6fdab32df34b4a59f458fa50b01f:x265/override
 f:c03f28cbb404b2dae12022d6257fe8eb:libavc1394/spkgbuild
+f:d5b35acf56c4482b5092e11bd2761fdd:libavc1394/override
 f:a0af1559a01117bbb561ab8f89f2e925:dav1d/CHANGELOG
 f:10e3b09bd16e20d296bf0730ad57b8de:dav1d/spkgbuild
 f:92d50732a168d922ef043cdbb3817765:dav1d/override

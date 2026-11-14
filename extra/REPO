@@ -109,6 +109,7 @@ f:eea4a26c80688036f3343630b5c22d77:waterfox/spkgbuild
 f:6a3bdb8e7b3b0df3be135c666c24525b:waterfox/override
 f:da86052816c68ee971245289d6a5cda8:convertlit/CHANGELOG
 f:60a00b9be840b28d17e119087e5d4a35:convertlit/spkgbuild
+f:1ace8e197cd9fdfd3e95c69e93334c28:convertlit/override
 f:f9df5aad2829a33047900a93b07b61e2:anki/.pkgfiles
 f:8e5bf692b409433323d87e7705a5ad41:anki/CHANGELOG
 f:14eb809ffbac8f51e4d87b4b79f544d8:anki/spkgbuild
@@ -317,6 +318,7 @@ f:b6cc2d9330707373d920f760793c6311:tinyxml/entity.patch
 f:6db8334398e0cdad7e3c6406206ff42a:tinyxml/tinyxml-2.5.3-stl.patch
 f:9c6788d9e2e8485ffbd7d8e0e8da940d:tinyxml/tinyxml.pc
 f:ba4c715fc7d466eae98697cd065ce3f9:tinyxml/spkgbuild
+f:fed5735f61c16d143d3812ec39c96957:tinyxml/override
 f:779f016e071e4d06f37202e1d0e7dcf9:gpgmepp/.pkgfiles
 f:2972ead2482c534ca19db45c30207d1e:gpgmepp/spkgbuild
 f:a50f000a5713eaa8c8a891e69a7f5120:onboard-launcher/.pkgfiles

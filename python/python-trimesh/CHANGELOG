@@ -1117,3 +1117,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 4.6.13 to version 5.2.0
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 03:19:09 AM EST 2026
+
+Version=5.2.1
+Release=1
+
+Synopsis:
+Changed from version 5.2.0 to version 5.2.1

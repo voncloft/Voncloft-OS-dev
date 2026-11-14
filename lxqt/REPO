@@ -24,6 +24,7 @@ f:d824d06743ecf7975580a995ca589203:lxqt-powermanagement/spkgbuild
 f:621bdbf2d918eb6286d5952ca4d5ab14:lxqt-sudo/CHANGELOG
 f:adc1f364f48c010b55447ddb9124359e:lxqt-sudo/spkgbuild
 f:f6cbb0fe852b5c886ed799a146276bfa:lxqt/spkgbuild
+f:eb8251ee1afe036e58e30dffa9f33954:lxqt/override
 f:1463fdc04c5dc0d0c3abcfbad25afd36:lxqt-globalkeys/CHANGELOG
 f:e4bd94e64887451c1ec7357a5f4a75fb:lxqt-globalkeys/spkgbuild
 f:07aab037049e0cac161175e6d3e98f7a:lxqt-notificationd/CHANGELOG

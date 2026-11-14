@@ -437,3 +437,13 @@ Release=2
 
 Synopsis:
 Upgraded from version 26.8.1 to version 26.8.2
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 03:19:09 AM EST 2026
+
+Version=26.8.3
+Release=3
+
+Synopsis:
+Changed from version 26.8.2 to version 26.8.3

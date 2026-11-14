@@ -1,0 +1,30 @@
+# Read final upstream tags without the GitHub API quota; report only uversion.
+source=https://github.com/gnome-terminator/terminator.git
+url=$source
+update_repo_fetch_kind=git-tags
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - "${version:-}" "${release:-}" <<'PYVERSION'
+import json,pathlib,re,sys
+try:
+    text=pathlib.Path('index.html').read_text(encoding='utf-8')
+    candidates=[line.split('refs/tags/',1)[1].strip() for line in text.splitlines() if 'refs/tags/' in line]
+    values=[]
+    for candidate in candidates:
+        match=re.fullmatch('v([0-9]+(?:\\.[0-9]+)*)',candidate)
+        if match:
+            value=match[1]
+            values.append(value)
+    if not values: raise ValueError('No matching upstream release found')
+    print(max(set(values),key=lambda value:tuple(int(n) if n.isdigit() else n for n in re.findall(r'[0-9]+|[a-z]+',value))))
+except Exception as error:
+    print('ERROR: Unable to read upstream version: '+str(error),file=sys.stderr)
+    sys.exit(1)
+PYVERSION
+    ) || return 1
+    [ -n "$detected" ] || return 1
+    uversion=$detected
+}

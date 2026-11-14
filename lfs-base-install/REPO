@@ -227,6 +227,7 @@ f:7facf687440497ef625f6ed56e72213f:groff/CHANGELOG
 f:432b86c8a84a5079cd4c5e6fea8b33f0:groff/spkgbuild
 f:375f8aba31a5949b2d2e60acfed6dcc7:tzdata/.pkgfiles
 f:c36968b65461fb7006916e3527fbe309:tzdata/spkgbuild
+f:fe0ca5351baeb0f34fbe82c9175dde1d:tzdata/override
 f:2eb55a1e6a882c0527bec9519f5a709b:glibc/.pkgfiles
 f:9a5997c3452909b1769918c759eff8a2:glibc/glibc-fhs-1.patch
 f:04ac9d3496899dd56d741cd639a71828:glibc/CHANGELOG
@@ -281,6 +282,7 @@ f:347a8b013464979f21063b02edd4ccfb:bison/CHANGELOG
 f:861adcc637b52e9fa0aa9dac2e935be2:bison/spkgbuild
 f:37f5955c1dc37d7ec570aa0d0d29214f:linux-firmware/CHANGELOG
 f:b1056bb104cf5b0195d0af44939021d2:linux-firmware/spkgbuild
+f:fe0eeb0ba704ce1957c40afc6ee7a351:linux-firmware/override
 f:49d4baf3ac49ec0acc58b22ec983401c:bzip2/.pkgfiles
 f:2272e10938ebe8acb6888e7956590842:bzip2/spkgbuild
 f:2db3dc93103349ec8975b536d09f9496:libpsl/.pkgfiles
@@ -296,8 +298,8 @@ f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
 f:28acf778d3f8f79a92cebaa026355b44:grep/spkgbuild
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:c03849b945944fadd5ebaa69cd0583e4:flex/CHANGELOG
-f:ac0310153711c6b2e254799ed62ac783:flex/spkgbuild
+f:68d5cf97b62371ff10f0b455879dc216:flex/CHANGELOG
+f:9b5c8de11483930a333f94c518e59799:flex/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
 f:f7a299fd4fb7730bedb88cab80474a43:python-wheel/CHANGELOG
 f:4ecf94fde225a9ec2c615d040b270de9:python-wheel/spkgbuild
@@ -322,6 +324,7 @@ f:bc0eb9536e58d3d6fe6343eb194ede82:tuner-firmware/override
 f:ba8194afd8105969a536cb881899200b:tuner-firmware/v4l-saa7164-1.0.3.fw
 f:82487e43d74d33bd68582f7fede63421:tcl/.pkgfiles
 f:405358ce61b3b13f13749e8b8073da66:tcl/spkgbuild
+f:b706e00e6b0a3210feb2c6b575a8d4ab:tcl/override
 f:fa1ab5f5a8003c1b0e1faeada8560d8f:libffi/.pkgfiles
 f:2ff21a0529a9906519b68bdc9f417131:libffi/CHANGELOG
 f:8bf7c4c25f72115b9341aa60ce0ee262:libffi/spkgbuild
@@ -347,14 +350,14 @@ f:8ca7e1a9cc2e705e1120644f019e8cac:gawk/.pkgfiles
 f:a31bb0256525ae505ac391fa1e96d32d:gawk/CHANGELOG
 f:b8fd2b3aec21a76d470439836f3de668:gawk/spkgbuild
 f:b85ceec6edf5445016fa2573cec478d0:expat/CHANGELOG
-f:957799fc37f26dc01aae316af9a9b2a6:expat/spkgbuild
-f:295f5946a96ae40947328e15e629e30f:expat/override
+f:09da90cbb5bbdff94dc14090ff59a624:expat/spkgbuild
+f:204dca7669d97f7890d85822ec93f453:expat/override
 f:f74b2a0cf1215e1a469a6734bcfb3d0d:patch/.pkgfiles
 f:c0d9642accb8d5f8a8806c3f489b4c90:patch/CHANGELOG
 f:fc82c6e8418fcc5d0d57906a2d4ef928:patch/spkgbuild
 f:10a2a5088676d29c0049bffb208750da:efivar/.pkgfiles
 f:11b4796b42fc7a16e1c0131eccc1e312:efivar/spkgbuild
-f:c4ad10a134ab722e2f5e696530d63596:efivar/override
+f:c9e5acd1b07f159ecf94d855cbafec50:efivar/override
 f:fe07c432c464e42b023caa057cafb410:expect/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:expect/.nanorc
 f:49906608eb95e6cfccdd90c49b5880e7:expect/CHANGELOG

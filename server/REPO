@@ -131,12 +131,12 @@ f:2198e71661171aba95734cf94ffb58fe:php/post-install.sh
 f:e1007a97d444275b4a98cd559b64ef7e:php/spkgbuild
 f:ccee3b154facffac0d200a451f231f92:php/override
 f:cdbf9b3e951732f764bfbdbbf72f1fc9:radicale/post-upgrade.sh
-f:7766dd49dffaca8dbaa1540dd02624d2:radicale/CHANGELOG
+f:7b5616fd7fea84c34a8670daf5ef08c2:radicale/CHANGELOG
 f:1f6f6181709e035e9125a442d859c556:radicale/radicale
 f:cdbf9b3e951732f764bfbdbbf72f1fc9:radicale/post-install.sh
 f:ba45b98ad6a1419b38d5218c76b1ba50:radicale/config
 f:f6410ce9ac9b667a5150d4893eb55ff6:radicale/users
-f:15aa0895cdf5393ed775ba7f5492b5d9:radicale/spkgbuild
+f:508f6ea9d880333a181af5260292de5d:radicale/spkgbuild
 f:0b43eedc7a0ffa23312207c8196ab128:httpup/CHANGELOG
 f:8753ed845027fab72a271de72c2f4285:httpup/spkgbuild
 f:5aef4007b5b0aee86a7bc3e89e43d365:httpup/override

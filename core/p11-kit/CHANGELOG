@@ -77,3 +77,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 0.25.5 to version 0.26.5
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 03:19:09 AM EST 2026
+
+Version=0.26.6
+Release=2
+
+Synopsis:
+Changed from version 0.26.5 to version 0.26.6

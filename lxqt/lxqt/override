@@ -1,0 +1,6 @@
+# No independent upstream version exists for this locally maintained package.
+source=
+url=$source
+update_repo_skip_status="Manual update"
+update_repo_skip='Locally maintained dependency/firmware bundle with no independently versioned upstream release.'
+unset uversion

@@ -3,7 +3,7 @@
 # depends : python-sphinx
 
 name=python-uproot
-version=3.14.4
+version=5.7.7
 release=2
 
 _name=${name#python-}

@@ -287,3 +287,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 21.1.18 to version 26.0.99.903
+
+----------------------------------------------------------------
+
+Date: Sat Nov 14 03:19:09 AM EST 2026
+
+Version=21.1.26
+Release=1
+
+Synopsis:
+Changed from version 21.1.25 to version 21.1.26

@@ -2,7 +2,7 @@
 # depends : libarchive java-headless
 
 name=libreoffice
-version=26.8.2
+version=26.8.3
 release=3
 source="http://download.documentfoundation.org/$name/stable/$version/rpm/x86_64/LibreOffice_${version}_Linux_x86-64_rpm.tar.gz"
 options="!checksum"
