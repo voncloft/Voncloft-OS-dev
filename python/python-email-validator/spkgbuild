@@ -2,7 +2,7 @@
 # depends : python-dnspython python-idna
 
 name=python-email-validator
-version=2.3.0
+version=2.4.0
 release=3
 
 source="https://github.com/JoshData/${name}/archive/refs/tags/v$version.tar.gz"

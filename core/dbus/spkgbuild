@@ -3,10 +3,13 @@
 
 name=dbus
 version=1.16.4
-release=1
+release=2
 source="https://dbus.freedesktop.org/releases/$name/$name-$version.tar.xz"
 
 build() {
+	local dbus_gid
+	# The daemon account's primary GID is authoritative, even without a group name.
+	dbus_gid=$(id -g messagebus) || return 1
 	cd $name-$version
 
 	mkdir build
@@ -19,7 +22,7 @@ build() {
             .. 
         ninja
         DESTDIR=$PKG ninja install
-        chown -v root:messagebus $PKG/usr/libexec/dbus-daemon-launch-helper    
-	chmod -v      4750       $PKG/usr/libexec/dbus-daemon-launch-helper
+        chown -v "root:$dbus_gid" "$PKG/usr/libexec/dbus-daemon-launch-helper"
+	chmod -v 4750 "$PKG/usr/libexec/dbus-daemon-launch-helper"
 	
 }

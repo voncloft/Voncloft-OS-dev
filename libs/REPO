@@ -507,7 +507,8 @@ f:3dfbdf3b91b0ec315cc8ffe4b459eeb2:libpipeline/spkgbuild
 f:6ca34f8210ed856a1aeb18d3d23cc520:libspectre/.pkgfiles
 f:81a6c6c2cfa799b0fbb2d933d3bbdc8f:libspectre/CHANGELOG
 f:18eecc4cc02f7a3726ad96ca97d967dc:libspectre/spkgbuild
-f:b7815fe56959722fe508bfdd72671bf7:simdutf/spkgbuild
+f:b4bdefe24b4f5762981cb9ca358df0f5:simdutf/CHANGELOG
+f:0d8e2335ffeecaf6321f602383d05e10:simdutf/spkgbuild
 f:108cb593931ee01349654b1e802f64f9:simdutf/override
 f:546b98da6946f7c38ea2107f381a7c16:libspnav/spkgbuild
 f:927af33215eff1be7ee372da43e3342f:libspnav/override
@@ -546,8 +547,8 @@ f:409bf28ce3f633250e20571e35790398:libvpx/spkgbuild
 f:4e91b3323a31c24e873edbea7d9b00df:libvpx/override
 f:f73bc2555810b4587344ad7fb325fef7:libev/spkgbuild
 f:7b885ed4044274869094621585b75786:libical/.pkgfiles
-f:49c7f78d774c43f741764212431d71a6:libical/CHANGELOG
-f:d3851d8d2113709ec7b928f433f755b6:libical/spkgbuild
+f:ceae7ead5b7f815260d74dffa6c7b328:libical/CHANGELOG
+f:5b5a688449ef4ee774926d083c0691d1:libical/spkgbuild
 f:b727b0b5529a429bec82e5ac17e5f5f5:libical/override
 f:18e95956b2ad2879cf9e0f710d1eef9e:libxxf86vm/.pkgfiles
 f:6a744d3f5e69ddc8ec785892f9935654:libxxf86vm/CHANGELOG
@@ -657,6 +658,7 @@ f:d668c5c66d911f2650af6dd34fa93c77:libsm/.pkgfiles
 f:de7b6778e51f5408b4b2d1d22e317d4b:libsm/spkgbuild
 f:a5e4df33ee3c09a24a3657490415c84e:libsm/override
 f:e231b6886a733a7043e89798a1c0e226:sdl/spkgbuild
+f:772b31fc3cd2b6425e9735fd5a1b1724:libjxl/.pkgfiles
 f:b94a891f188b2c48e780f466df488074:libjxl/CHANGELOG
 f:997e6b509bb0a85e47afe0a41bafc73c:libjxl/spkgbuild
 f:dc6880c0b1a8cc2917717e29c9c46151:libjxl/override
@@ -886,8 +888,8 @@ f:57161161e9bb6c74279d3fec1bdb2e88:libburn/spkgbuild
 f:64e7cb299621271393dc53af9d13a21a:tpm2-tss/.pkgfiles
 f:4214d62de0ac81c94bb665fc7d3ee830:tpm2-tss/CHANGELOG
 f:10486f8a16f3ba55548d900685dff012:tpm2-tss/post-install.sh
-f:f4b183e047e7f63dbc4fe076fa0e6cbd:tpm2-tss/spkgbuild
-f:f24e9f276b9f2bf70976b2f3d83f67e9:tpm2-tss/override
+f:61e3bef0db9f1a2392af24bf289be7c8:tpm2-tss/spkgbuild
+f:be502060d4e64284e90218be9487d68b:tpm2-tss/override
 f:2884994e6e4d13108f639a791a36e350:libidn/.pkgfiles
 f:b35c91375840c6c805086d6995736c7e:libidn/CHANGELOG
 f:6f31df29d609b31832dfcdd155814df2:libidn/spkgbuild
@@ -919,8 +921,8 @@ f:aa4209698b59eab66c2dafd4acd02b76:libdvdread/.pkgfiles
 f:c89fbe53b676aa1adeda2a3d10715513:libdvdread/CHANGELOG
 f:5ecb03aea9ec79907e970e9b258a285b:libdvdread/spkgbuild
 f:3592b2f19ba3c00e71291147c4634801:imlib2/.pkgfiles
-f:0b3a4b80ac72a4d52a555a44a57701d1:imlib2/CHANGELOG
-f:c2888e9efba07805760f66387eff2cd3:imlib2/spkgbuild
+f:325f7619786f665c04e952787cf14106:imlib2/CHANGELOG
+f:76ca2c72936fbd12a29b040f5d98a0c2:imlib2/spkgbuild
 f:1a70fc480afbd6dbd9fe8472c706c2df:imlib2/override
 f:fc4a5da4572b08def8fab127cfdeb534:hidapi/.pkgfiles
 f:abd974fdaea1e50de57ef9edf55cd659:hidapi/CHANGELOG
@@ -1107,7 +1109,8 @@ f:668f1192b4c1c775fa9348f23d6a2a09:libdisplay-info/override
 f:2fa23a922489d1c7eeaa1b921090964b:fmt/.pkgfiles
 f:5231efb8e5e311ecd7efffbd9b5267ea:fmt/CHANGELOG
 f:05967bc4ef200ad5f21ce71a037aea27:fmt/spkgbuild
-f:ee4703e47a5310db455181fce9cc57a4:libmodplug/spkgbuild
+f:bf208c8f8161c0396f270e44eccd4fcf:libmodplug/CHANGELOG
+f:ea21d3b989df321f369a9b75379d2996:libmodplug/spkgbuild
 f:f1d84a2c443ee1842c573f36d737f4fa:libmpcdec/spkgbuild
 f:16203112bfae1a61df3ebeabbdeca8b5:libmpcdec/override
 f:526fad57bbadbc43a67ef6b742a2fdee:libheif/CHANGELOG
@@ -1139,8 +1142,8 @@ f:af726e977eed101a30b847d222acd9f6:poppler/.pkgfiles
 f:8877aef84fd4670e61daf8720b8436e3:poppler/CHANGELOG
 f:2618a636d6b3a2c345e9b45e36ccce95:poppler/spkgbuild
 f:fa1ab5f5a8003c1b0e1faeada8560d8f:libffi/.pkgfiles
-f:36cd4a0a2ad452753e54b1ed63447752:libffi/CHANGELOG
-f:c1c22ea2eb9d4ea7381a20945e59fb61:libffi/spkgbuild
+f:29b242b2f00cec630429589991c75ea3:libffi/CHANGELOG
+f:7e072177776eacaf7a45d093dd0a8a7a:libffi/spkgbuild
 f:d4f481733e9ad80b1581b89cfdd168d5:libffi/override
 f:3c7e822fb697b201384d4c562a8096ac:libnotify/.pkgfiles
 f:a64ae8c87f04c1c3fd6818022befa897:libnotify/CHANGELOG
@@ -1198,7 +1201,8 @@ f:9c37c1155d56d7afd4f2e430df00b3e8:fluidsynth/spkgbuild
 f:be22b57369f835a9346ab7aad29e0ba1:libvncserver/spkgbuild
 f:bde56f0a891b904a1c735b3f67f4830b:xapian-core/CHANGELOG
 f:0e674360c04677a87cba527df9978e97:xapian-core/spkgbuild
-f:042ee3df408dfcf59c55fe2fcfb3d666:glycin/spkgbuild
+f:95f85a4fb8b886f174327fa22d28d37b:glycin/.pkgfiles
+f:655a094dcaa27a7279fc90d6d081d952:glycin/spkgbuild
 f:ebb7edcedd884bec54d33d9194e1fb4e:glycin/override
 f:f48d6e40501fc7a0c1d1a96586e82acb:libtirpc/.pkgfiles
 f:3b1135133257e88bb5142b72a1d43819:libtirpc/CHANGELOG

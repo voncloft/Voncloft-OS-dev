@@ -2,7 +2,7 @@
 # depends : python python-urllib3 python-requests
 
 name=python-dropbox
-version=12.2.4
+version=12.2.5
 release=2
 
 _name=dropbox-sdk-python

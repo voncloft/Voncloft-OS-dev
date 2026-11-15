@@ -1,6 +1,42 @@
-source=https://api.github.com/repos/tpm2-software/tpm2-tss/releases/latest
+# Only report uversion; update-repo owns the version= edit.
+# Signed-tag-only releases can lack the tarball used by the recipe.
+source="https://api.github.com/repos/tpm2-software/tpm2-tss/releases?per_page=100"
 url=$source
-get_generic() {
-    uversion=$(python3 -c 'import json; print(json.load(open("index.html"))["tag_name"])') || return 1
-    case "$uversion" in *[!0-9.]*|"") return 1;; esac
+
+get_generic()
+{
+    local detected
+    unset uversion
+    detected=$(python3 - <<'PY'
+import json
+import pathlib
+import re
+import sys
+
+try:
+    releases = json.loads(pathlib.Path('index.html').read_text())
+    if not isinstance(releases, list):
+        raise ValueError('expected GitHub release list')
+    versions = []
+    for release in releases:
+        if release.get('draft') is not False or release.get('prerelease') is not False:
+            continue
+        version = release.get('tag_name', '')
+        if not re.fullmatch(r'[0-9]+(?:\.[0-9]+)+', version):
+            continue
+        archive = f'tpm2-tss-{version}.tar.gz'
+        expected = f'https://github.com/tpm2-software/tpm2-tss/releases/download/{version}/{archive}'
+        if any(asset.get('name') == archive and asset.get('browser_download_url') == expected
+               for asset in release.get('assets', [])):
+            versions.append(version)
+    if not versions:
+        raise ValueError('no stable release with the expected source tarball')
+    print(max(versions, key=lambda value: tuple(map(int, value.split('.')))))
+except (OSError, ValueError, TypeError, AttributeError) as error:
+    print(f'ERROR: Unable to read TPM2-TSS version: {error}', file=sys.stderr)
+    sys.exit(1)
+PY
+    ) || return 1
+    uversion=$detected
+    [ -n "$uversion" ]
 }

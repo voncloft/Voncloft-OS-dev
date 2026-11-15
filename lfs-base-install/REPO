@@ -299,8 +299,8 @@ f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
 f:28acf778d3f8f79a92cebaa026355b44:grep/spkgbuild
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:2f03c221abedd09526d2ebe327d54470:flex/CHANGELOG
-f:20b57870ec8d5f30989e4190ab68a4ee:flex/spkgbuild
+f:3527fce3a33ddf8f792e881d0afc58d5:flex/CHANGELOG
+f:20d6bd01462d10105df68fbebe168cfb:flex/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
 f:f7a299fd4fb7730bedb88cab80474a43:python-wheel/CHANGELOG
 f:4ecf94fde225a9ec2c615d040b270de9:python-wheel/spkgbuild

@@ -101,8 +101,8 @@ f:768b80c6d5aa5e9a626099792c43b89c:autoconf2.13/.pkgfiles
 f:38e3a75f745c5ea07dd635539182bf76:autoconf2.13/spkgbuild
 f:e36aad17cd951db16a5d578357046d52:autoconf2.13/override
 f:457f8d3052d27f14db5edefc95f8129e:pkgconf/.pkgfiles
-f:46d8d564d8707a62f343cb205df950b1:pkgconf/CHANGELOG
-f:3810d3bd911213ddeb2c1240f92dc4f5:pkgconf/spkgbuild
+f:f3675617ea23b6ef5ccb732192208252:pkgconf/CHANGELOG
+f:031a0d0083d633858a2c151b18b3a935:pkgconf/spkgbuild
 f:f91049239b4340e5eecf3e133a9a8674:nasm/.pkgfiles
 f:015116c8bb6008d22362bbf6a96b46fe:nasm/CHANGELOG
 f:a5722920050a673a0957de9f57fcb382:nasm/spkgbuild

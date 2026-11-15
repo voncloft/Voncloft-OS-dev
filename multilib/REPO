@@ -252,7 +252,7 @@ f:719bed0febdc8bba6aeb1738d6cc84c1:lcms2-32/spkgbuild
 f:d1aeb95464e26c27b18375b926faccf2:lcms2-32/override
 f:df94060a008619ac47075fd4e986de66:dbus-32/.pkgfiles
 f:aba9fb91f93cd54ae810a44106fa556f:dbus-32/CHANGELOG
-f:2e4f43f9746c093984a25b0a792c6c79:dbus-32/spkgbuild
+f:712b33d6c250f0a9709cc55379ea5b5f:dbus-32/spkgbuild
 f:69eb5d9d0a91888d46d24aa0e982759b:dbus-32/override
 f:a9973e349f901a2d207188202aef2f94:virtualbox-ose/005-gsoap-build.patch
 f:05784940fcc8f72c1021b3d9bf7202f0:virtualbox-ose/008-no-vboxvideo.patch
@@ -356,8 +356,8 @@ f:f343aff644af8bf96f1b41bc74237ae5:libdrm-32/override
 f:80295208ae8c7341e34e5c8a2be0dc64:playonlinux/CHANGELOG
 f:210862bc23ab286e9e00709b90e008dc:playonlinux/spkgbuild
 f:7e5102b4eff7a8e4287a32f76e111f4f:playonlinux/override
-f:fbdd1133fcb06986e73c7993d3d3ab48:libffi-32/CHANGELOG
-f:45a4c8b5be4666ab26a9235b51a91df7:libffi-32/spkgbuild
+f:d7341d44f3cd2e3d5d096a8999127f06:libffi-32/CHANGELOG
+f:bdb374a80b57ddc141b7f160048adafe:libffi-32/spkgbuild
 f:0f1f76433a806fd869529b35a1393133:libffi-32/override
 f:68e84f92dcef4b1e84710709eea84333:libxxf86vm-32/.pkgfiles
 f:ce302eff2d5deb90f1ef4c8ccbaa7737:libxxf86vm-32/CHANGELOG

@@ -2,7 +2,7 @@
 # depends       : libatasmart libblockdev libgudev polkit
 
 name=udisks2
-version=2.11.2    
+version=2.12.0
 release=1
 backup="etc/udisks2/mount_options.conf.example etc/udisks2/udisks2.conf"
 _name=udisks

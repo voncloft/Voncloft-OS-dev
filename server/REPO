@@ -41,9 +41,9 @@ f:0c4212893556a750d024596d74e4e95d:wireguard/spkgbuild
 f:81ef5394b527e1897e785cb0e188ced5:wireguard/override
 f:e60137753879f141f627014084ab9ab2:blacklist-youtubeads/.pkgfiles
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-upgrade.sh
-f:c201292c532c35d09f2dcba136fc8176:blacklist-youtubeads/CHANGELOG
+f:c768a2ed0a8fc84e451f244a4f706929:blacklist-youtubeads/CHANGELOG
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
-f:be64a1ab1524c2a3f220466908df08d4:blacklist-youtubeads/spkgbuild
+f:eb2241e5d778a8c4bb00fd8b8b9c62b6:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
 f:f2d3339f01a14de76126293501626eb1:homeassistant/CHANGELOG
 f:ef92b27218babee983720b04653b7440:homeassistant/spkgbuild

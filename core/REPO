@@ -755,8 +755,8 @@ f:a023bce71d77f9f56621423075042ad6:tk/.pkgfiles
 f:594a1c0a24fd430b37e3ca169fe7eb10:tk/spkgbuild
 f:1d227f757e482c7405a01319c0f9d79b:tk/override
 f:0c26edb5571e364e46aee6d09c05fc39:udisks2/.pkgfiles
-f:361531694eac8d142f9ac6abdffb8c64:udisks2/CHANGELOG
-f:afe8e7cc807d2f0b377b757e716d8dfe:udisks2/spkgbuild
+f:c6801f23b2ad41ff288f579cde7ee15d:udisks2/CHANGELOG
+f:357dbdc63db9c2dd472d6aa3c3fc348c:udisks2/spkgbuild
 f:aee0b624e58131382a1f26bafaf4f5e7:udisks2/override
 f:0248d0f0f91f255717e239ee65539c85:herbstluftwm/CHANGELOG
 f:137a02d8dd8abd4ad0c062f19aacfd03:herbstluftwm/spkgbuild
@@ -1138,7 +1138,7 @@ f:232228ddc8227ccdf79f76b049322099:smplayer-themes/spkgbuild
 f:d190ad611b34c55e4083c82104256759:dbus/.pkgfiles
 f:a344eb5ba6137f8af519b7e005c1368f:dbus/CHANGELOG
 f:f99af9b4c65d7dc5c6d33f8114b92005:dbus/post-install.sh
-f:20b28b571b4ec2668dd03bf7616df669:dbus/spkgbuild
+f:915c2a61a9fc221503023378ef61e85d:dbus/spkgbuild
 f:4276b51c9c9d5355149c8de5ee5fa2be:dbus/pre-install.sh
 f:df85ba85cabe27ff6a638b1604e85d2e:desktop-file-utils/.pkgfiles
 f:20352e3212dae735fc13f4a4ac53aed7:desktop-file-utils/CHANGELOG
@@ -1682,8 +1682,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:1c14f77ad02fe66589adb913a5dec603:flex/CHANGELOG
-f:50e3cd2be82a7d0761d257a58a19ed3a:flex/spkgbuild
+f:b93a4d6349ff1c3fdd9dcd6266ea570f:flex/CHANGELOG
+f:21008b18443c6733d0de5ac7e0eaf7e6:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch
@@ -2042,7 +2042,7 @@ f:00517037c87b7eca99c7b386c038d79b:ncurses/CHANGELOG
 f:8b4273837f87e9d52be1d6dc4be4d0fc:ncurses/spkgbuild
 f:c4118f4a09cb0692b3c9ec7f2968ff5b:imagemagick7/.pkgfiles
 f:45a9797548dbae39f0e72381935cd35f:imagemagick7/CHANGELOG
-f:3fcfdc411b3d5d8d7cb5601aa6612e0c:imagemagick7/spkgbuild
+f:bcdb0d1199fc5d56f3a2ec162460ff96:imagemagick7/spkgbuild
 f:373952b6aba98a15fb502584ebaa95e6:imagemagick7/override
 f:19c0cf924bb9e7856f8b48702945aa48:unzip/.pkgfiles
 f:01e6b2fcc336999b006986c920f087c4:unzip/unzip-6.0_CVE-2021-4217.patch

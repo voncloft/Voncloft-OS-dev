@@ -3,7 +3,7 @@
 # GLib supplies the GObject Introspection tools on Voncloft OS.
 
 name=libical
-version=4.0.7
+version=4.0.8
 release=2
 source="https://github.com/libical/$name/releases/download/v$version/$name-$version.tar.gz"
 

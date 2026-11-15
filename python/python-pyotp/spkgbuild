@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-pyotp
-version=2.10.0
+version=2.11.2
 release=1
 
 _name=${name#python-}

@@ -2,7 +2,7 @@
 # depends	: libffi
 
 name=libffi-32
-version=3.8.0
+version=3.8.1
 release=1
 _name=${name%-32}
 source="https://github.com/libffi/${_name}/releases/download/v${version}/${_name}-${version}.tar.gz"

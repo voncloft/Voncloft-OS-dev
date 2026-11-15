@@ -156,7 +156,8 @@ f:b005f76211b7e91f5b6c5dc4207939e6:epson-inkjet-printer-escpr/spkgbuild
 f:f884fbf6726f9ab103e2d832d8ad27fe:epson-inkjet-printer-escpr/bug_x86_64.patch
 f:124fcccdb40e0b65999b2d80386b6d41:samba/spkgbuild
 f:83a73c3503007907b7f1ff45fb3f4b68:maven/.pkgfiles
-f:7eee057a44baf52b764eaea363101946:maven/spkgbuild
+f:9b357e061482356bfbb56d6f7f4e0181:maven/CHANGELOG
+f:011402f4b9f878a375cc84a23303e8d8:maven/spkgbuild
 f:53e8fc4ae4ab23b919983f87c91486af:maven/override
 f:d404044a08c7b28376c660d1af5b0a6d:.httpup-urlinfo
 f:c000b5faf4c8278507d27622d1f263d1:flashplugin/CHANGELOG
@@ -229,8 +230,8 @@ f:9b78eec6d1cb62daf7568840b1fd4883:htmlq/spkgbuild
 f:24ea8b83792054dfcc6e59ffffe07b0d:htmlq/override
 f:f6e45406ddf40ea37185fa47512a71e4:djvulibre/CHANGELOG
 f:570ff5628e5dded743b45409c9f860da:djvulibre/spkgbuild
-f:cc834378a1e06fba940467f0082f5a35:inotify-tools/CHANGELOG
-f:eae6a7f9738c800866d4052db21e5811:inotify-tools/spkgbuild
+f:a4c48db998450aa29cde371a0928a2e2:inotify-tools/CHANGELOG
+f:c00f59b6b544e61bde8831bec6d46b24:inotify-tools/spkgbuild
 f:e10125f78449ccedbf2b06f976ed31c0:clazy/CHANGELOG
 f:36bdf7180586d2e28d35d6f424c3fe11:clazy/spkgbuild
 f:5f0d9b274c7362384367a6199d32b199:session-desktop/.pkgfiles

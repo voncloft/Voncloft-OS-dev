@@ -1,9 +1,9 @@
 # description	: Graphics library for fast file loading, saving, rendering and manipulation
-# depends	: libxext libx11 libxcb libtiff libjpeg-turbo libpng freetype2 libraw
+# depends	: libxext libx11 libxcb libtiff libjpeg-turbo libjxl libpng freetype2 libraw pkgconf
 
 name=imlib2
-version=1.12.7
-release=1
+version=1.13.0
+release=2
 source="https://downloads.sourceforge.net/project/enlightenment/imlib2-src/$version/${name}-$version.tar.xz"
 
 build() {

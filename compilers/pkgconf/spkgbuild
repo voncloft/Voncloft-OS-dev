@@ -2,7 +2,7 @@
 # depends	: 
 
 name=pkgconf
-version=3.0.10
+version=3.0.11
 release=3
 source="https://distfiles.dereferenced.org/$name/$name-$version.tar.xz"
 
