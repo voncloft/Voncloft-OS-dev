@@ -1,0 +1,153 @@
+--- a/scratch
++++ b/scratch
+@@ -1101,6 +1101,110 @@
+ 		msg "No matching package found"
+ 	fi
+ }
++scratch_clean() {
++	needroot "Clean package caches"
++	clean_dry_run=0
++	for arg in "$@"; do
++		case "$arg" in
++			-n|--dry-run) clean_dry_run=1;;
++			*) msgerr "Usage: scratch clean [--dry-run]"; return 2;;
++		esac
++	done
++	[ ! -f /etc/scratchpkg.conf ] || . /etc/scratchpkg.conf
++	python3 - "$SOURCE_DIR" "$PACKAGE_DIR" "$clean_dry_run" <<'PYCACHECLEAN'
++import fcntl
++import os
++from pathlib import Path
++import stat
++import sys
++
++# Only archive files directly in the caches; never recurse into directories.
++suffixes = ('.tar', '.tar.gz', '.tar.bz2', '.tar.xz', '.tar.zst', '.tar.lz',
++            '.tar.lzma', '.tar.z', '.tgz', '.tbz', '.tbz2', '.txz', '.tlz',
++            '.tzst', '.zip', '.7z', '.rpm', '.deb', '.whl', '.gem', '.crate',
++            '.jar', '.appimage', '.run')
++protected = {'/', '/bin', '/sbin', '/lib', '/lib32', '/lib64', '/usr',
++             '/usr/bin', '/usr/sbin', '/usr/lib', '/usr/lib32', '/usr/lib64',
++             '/usr/share', '/etc', '/home', '/root', '/opt', '/var', '/var/lib',
++             '/var/cache', '/var/cache/scratchpkg', '/tmp', '/run', '/sources'}
++dry_run = sys.argv[3] == '1'
++caches = []
++seen = set()
++
++def archive(name):
++    if name.endswith('.partial'):
++        name = name[:-len('.partial')]
++    return name.lower().endswith(suffixes)
++
++def human_size(size):
++    for unit in ('B', 'KiB', 'MiB', 'GiB', 'TiB'):
++        if size < 1024 or unit == 'TiB':
++            return f'{size:.1f} {unit}'
++        size /= 1024
++
++try:
++    # Validate and lock both directories before deleting anything. pkgbuild
++    # holds shared locks on these same directory inodes throughout its work.
++    for raw in sys.argv[1:3]:
++        if not raw or not Path(raw).is_absolute():
++            raise ValueError('Cache paths must be nonempty absolute directories')
++        path = Path(raw).resolve()
++        if (str(path) in protected or path.parent == Path('/home')
++                or (path / '.git').exists() or (path / 'spkgbuild').exists()):
++            raise ValueError(f'Refusing to clean a system or repository directory: {path}')
++        if not path.exists():
++            print(f'Cache does not exist; skipping: {path}')
++            continue
++        fd = os.open(path, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
++        identity = (os.fstat(fd).st_dev, os.fstat(fd).st_ino)
++        if identity in seen:
++            os.close(fd)
++            continue
++        try:
++            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
++        except BlockingIOError:
++            os.close(fd)
++            raise ValueError(f'Cache is in use by a package operation: {path}. Try again when it finishes.')
++        seen.add(identity)
++        caches.append((path, fd))
++
++    # Builds started by an older pkgbuild did not take directory locks.
++    legacy_locks = sorted(Path('/tmp').glob('pkgbuild.*.lock'))
++    if legacy_locks:
++        raise ValueError('Package build lock present: ' + str(legacy_locks[0])
++                         + '. Wait for the build to finish or resolve the stale lock.')
++
++    total_count = total_bytes = 0
++    for path, fd in caches:
++        count = size = 0
++        with os.scandir(fd) as entries:
++            for entry in entries:
++                if not archive(entry.name):
++                    continue
++                info = entry.stat(follow_symlinks=False)
++                if not stat.S_ISREG(info.st_mode):
++                    continue
++                if not dry_run:
++                    os.unlink(entry.name, dir_fd=fd)
++                count += 1
++                size += info.st_size
++        total_count += count
++        total_bytes += size
++        verb = 'Would remove' if dry_run else 'Removed'
++        print(f'{path}: {verb} {count} archive(s), {human_size(size)}')
++    if dry_run:
++        print(f'Dry run: {total_count} archive(s), {human_size(total_bytes)}; nothing removed.')
++    else:
++        print(f'Cleaned {total_count} archive(s), {human_size(total_bytes)}. Installed packages are unchanged.')
++except (OSError, ValueError) as error:
++    print(f'==> ERROR: {error}', file=sys.stderr)
++    sys.exit(1)
++finally:
++    for _, fd in caches:
++        os.close(fd)
++PYCACHECLEAN
++}
++
+ scratch_cache() {
+ 	needroot "Clear old caches"
+ 	
+@@ -1534,6 +1638,8 @@
+                              prepare ownership handoffs from built archives
+     outdate                  print outdated ports
+     cache                    print and clear old pkg and src caches
++    clean                    remove all cached source/package archives, including current versions
++                             -n|--dry-run     show cache sizes without deleting files
+     integrity                check installed port integrity
+     dup                      print duplicate ports in repo
+     installed                print all installed ports
+--- a/pkgbuild
++++ b/pkgbuild
+@@ -498,6 +498,19 @@
+ 	echo $opts
+ }
+ 
++lock_caches() {
++	# Coordinate with `scratch clean`, including download-only and install modes.
++	# Lock directories themselves, so no writable lock file is needed in the cache.
++	command -v flock >/dev/null 2>&1 || {
++		msgerr "'flock' from util-linux is required for package cache locking."
++		exit 1
++	}
++	exec 8< "$SOURCE_DIR" || exit 1
++	flock --shared 8 || exit 1
++	exec 9< "$PACKAGE_DIR" || exit 1
++	flock --shared 9 || exit 1
++}
++
+ main() {
+ 	parse_opts $(extract_opts "$@")
+ 	
+@@ -519,6 +532,8 @@
+ 		help
+ 		exit 0
+ 	}
++
++	lock_caches
+ 	
+ 	if [ -f "$PKGBUILD_BSCRIPT" ]; then
+ 		description=$(grep "^# description[[:blank:]]*:" $PKGBUILD_BSCRIPT | sed 's/^# description[[:blank:]]*:[[:blank:]]*//')

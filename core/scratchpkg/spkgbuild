@@ -1,9 +1,9 @@
 # description : A simple package manager for Linux Distribution
-# depends : coreutils httpup libarchive python
+# depends : coreutils httpup libarchive python util-linux
 
 name=scratchpkg
 version=20230109
-release=15
+release=16
 backup="etc/scratchpkg.conf
         etc/scratchpkg.alias
         etc/scratchpkg.repo
@@ -29,6 +29,8 @@ source="$name-$version.tar.gz::$scratchpkg_url/archive/refs/tags/$version.tar.gz
         checked-ownership-handoffs.patch
         canonical-hwdb-trigger.patch
         preserve-failed-cleanup.patch
+        clean-cache.patch
+        cache-cleaning.md
         transaction.py
         transactions.md
         ownership.py
@@ -53,10 +55,12 @@ build() {
     patch --fuzz=0 -p1 < "$SRC/checked-ownership-handoffs.patch"
     patch --fuzz=0 -p1 < "$SRC/canonical-hwdb-trigger.patch"
     patch --fuzz=0 -p1 < "$SRC/preserve-failed-cleanup.patch"
+    patch --fuzz=0 -p1 < "$SRC/clean-cache.patch"
     DESTDIR="$PKG" ./INSTALL.sh
     install -Dm755 "$SRC/ownership.py" "$PKG/usr/lib/scratchpkg/ownership.py"
     install -m755 "$SRC/transaction.py" "$PKG/usr/lib/scratchpkg/transaction.py"
     install -Dm644 "$SRC/transactions.md" "$PKG/usr/share/doc/scratchpkg/transactions.md"
+    install -m644 "$SRC/cache-cleaning.md" "$PKG/usr/share/doc/scratchpkg/cache-cleaning.md"
     install -m755 "$SRC/revdep" "$PKG/usr/bin/revdep"
     install -m644 "$SRC/revdep-runtime-paths.sh" "$PKG/usr/lib/scratchpkg/revdep-runtime-paths.sh"
     install -m644 "$SRC/$name.repo" "$PKG/etc/$name.repo"

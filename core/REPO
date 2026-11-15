@@ -1931,8 +1931,10 @@ f:446ce202b464ac424d44b689f3d46b06:scratchpkg/upgrade-installed-dependencies.pat
 f:acb2d249f4ebdc9c7fcb14bb52206945:scratchpkg/honor-hook-failures.patch
 f:4040065ed2716d2c62182c2e9dd1e9bb:scratchpkg/canonical-shared-ownership.patch
 f:0bd49756f35a528d0e43a6aa9a2bd3b9:scratchpkg/revdep-runtime-paths.sh
+f:7ee253781a28c3a94b79013398bb4ebc:scratchpkg/cache-cleaning.md
 f:d91b0227a6cc0df9c7563168d15e3a8c:scratchpkg/adopt-identical-symlinks.patch
 f:72366256fd5262f75b84b917d0574983:scratchpkg/transactions.md
+f:46bbf24e163d1bece354bcf06908dd7b:scratchpkg/tests/test-cache-clean.py
 f:121748896940a20f0ef5a6fee45eec77:scratchpkg/tests/test-runtime-paths.py
 f:14cf93472c554eae60e4cc72fe5ddea6:scratchpkg/tests/test-cleanup-errors.py
 f:7548f0e711524ad7028b103a96a6207c:scratchpkg/CHANGELOG
@@ -1942,7 +1944,8 @@ f:ee57c17c776153be26674dafd42cb983:scratchpkg/scratchpkg.mask
 f:dcd93abe4f65d4768c618dc6acd4ca1f:scratchpkg/revdep
 f:83d69ada1d9248ce1c157a38b76a0804:scratchpkg/canonical-hwdb-trigger.patch
 f:a1de098fb848a6934d74f507727264b1:scratchpkg/reject-shared-payload.patch
-f:2df6aba49b5f4b28d65048cad35c51d4:scratchpkg/spkgbuild
+f:f0133d7e5c412f70862774007e1344be:scratchpkg/spkgbuild
+f:2a2020e4e03300f36b964c14514e20ef:scratchpkg/clean-cache.patch
 f:ef535b90b72e0491c0941229a8eefee8:scratchpkg/pkgadd-lock-ownership.patch
 f:2c2026e92104bb51cf8e13b8cee4cd9b:scratchpkg/abort-extraction-errors.patch
 f:9dd2f55040469bcd522e2e6f17abca71:scratchpkg/vonos-tool-defaults.patch
