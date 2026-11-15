@@ -1,0 +1,7 @@
+1.0.0-1 (2026-11-15)
+- Initial native Qt6 player: clue navigation, undo/redo, checks, reveals, pause,
+  atomic saved progress, portable saves, and six original offline crosswords.
+- Browse and download Crosshare daily minis and Brendan Emmett Quigley puzzles.
+- Keep downloaded puzzles offline and resume their saved progress.
+- Add clearly labeled official-player links for NYT and TV Guide / TV Insider.
+- Read standard ipuz and Across Lite files; reject unsupported puzzle variants.

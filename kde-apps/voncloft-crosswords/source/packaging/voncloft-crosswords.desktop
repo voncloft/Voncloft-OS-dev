@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Voncloft Crosswords
+GenericName=Crossword Player
+Comment=Find free online crosswords, solve puzzles, and resume offline
+Exec=voncloft-crosswords %f
+Icon=voncloft-crosswords
+Terminal=false
+Categories=Qt;KDE;Game;LogicGame;
+Keywords=crossword;puzzle;word;Across Lite;ipuz;
+MimeType=application/x-voncloft-crossword;application/x-crossword;application/x-ipuz;
+StartupNotify=true

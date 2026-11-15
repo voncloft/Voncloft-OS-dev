@@ -1,0 +1,5 @@
+# Locally maintained application and original puzzle library.
+source=local
+url=$source
+update_repo_skip='Locally maintained native Qt6 crossword app; no separate upstream release.'
+update_repo_skip_status='Local package'

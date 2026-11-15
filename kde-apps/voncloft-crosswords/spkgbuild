@@ -1,0 +1,46 @@
+# description : Native Qt6 crossword player with free online puzzles, offline downloads, clues, hints and saved progress
+# depends : cmake ninja qt6
+
+name=voncloft-crosswords
+version=1.0.0
+release=1
+
+source="source/CMakeLists.txt
+        source/README.md
+        source/LICENSE
+        source/src/puzzle.h
+        source/src/puzzle.cpp
+        source/src/game.h
+        source/src/game.cpp
+        source/src/catalog.h
+        source/src/catalog.cpp
+        source/src/board.h
+        source/src/board.cpp
+        source/src/window.h
+        source/src/window.cpp
+        source/src/main.cpp
+        source/data/puzzles.json
+        source/packaging/voncloft-crosswords.desktop
+        source/packaging/voncloft-crosswords.svg
+        source/packaging/org.voncloft.Crosswords.xml
+        source/tests/crosswords-test.cpp
+        source/tests/standard.puz
+        source/tests/rebus.puz"
+
+KEEP_DOC=yes
+
+build() {
+    : "${SRC:?Scratch source directory is required}"
+    : "${PKG:?Scratch package staging directory is required}"
+    # Scratch stages local inputs by basename. Reconstruct the source tree.
+    for file in $source; do
+        install -Dm644 "$SRC/${file##*/}" "$SRC/$file"
+    done
+    cmake -S "$SRC/source" -B "$SRC/build" -G Ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DBUILD_TESTING=ON
+    cmake --build "$SRC/build" --parallel 4
+    QT_QPA_PLATFORM=offscreen ctest --test-dir "$SRC/build" --output-on-failure
+    DESTDIR="$PKG" cmake --install "$SRC/build"
+}
