@@ -842,8 +842,8 @@ f:0b79fde0f0ae6f08d309e17280459749:kmime/.pkgfiles
 f:094a9bab48737de1ed3263a6b69d8aee:kmime/CHANGELOG
 f:b6ef7a8c2fcdbcd7e35a4bb20809af32:kmime/spkgbuild
 f:46799a005c03c0c1dd7dfa161064d18b:varpeggio/.pkgfiles
-f:8acd26fc85f0a68f09794c130ddf93e7:varpeggio/CHANGELOG
-f:74c9ce27891530132ee92ffc47c3d35c:varpeggio/spkgbuild
+f:4a2a2b48a8a7e002fac1d47018f64400:varpeggio/CHANGELOG
+f:c726145e36ab1de100d6ba95d0650e88:varpeggio/spkgbuild
 f:18f992d77a451565ce3f5755836d5bc6:varpeggio/override
 f:13ff916680930e0942582faf6635f892:varpeggio/.checksums
 f:1f81be6362b2bfeaf093d48e3956cc1d:rocs/CHANGELOG

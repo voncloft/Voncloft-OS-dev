@@ -50,3 +50,5 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.git20261114175612.g17
 bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Changed\ from\ version\ 1.0.git20261111221535.g8e0beca29164280aadd8df4e70cf157236e3cc4d\ to\ version\ 1.0.git20261114175612.g17753a08acaf43fac14e7935f85612a205b6d3b9
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=20261115\| beta/tl-unx/spkgbuild # update-repo-version 20261114 20261115
 bash /usr/libexec/update-repo/changelog beta/tl-unx/spkgbuild Changed\ from\ version\ 20261114\ to\ version\ 20261115
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.2.49.git20261115210102.gdcc4c16ad7351a22646c94b4d8e5d03d981faf35\| kde-apps/varpeggio/spkgbuild # update-repo-version 0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc 0.2.49.git20261115210102.gdcc4c16ad7351a22646c94b4d8e5d03d981faf35
+bash /usr/libexec/update-repo/changelog kde-apps/varpeggio/spkgbuild Changed\ from\ version\ 0.2.48.git20261030083733.g3412b7002e9325b586bf2861941dcbcaa4896cdc\ to\ version\ 0.2.49.git20261115210102.gdcc4c16ad7351a22646c94b4d8e5d03d981faf35
