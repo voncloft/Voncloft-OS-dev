@@ -48,3 +48,5 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=3.0.0\| python/python-sph
 bash /usr/libexec/update-repo/changelog python/python-sphinxcontrib-mermaid/spkgbuild Changed\ from\ version\ 2.1.1\ to\ version\ 3.0.0
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.git20261114175612.g17753a08acaf43fac14e7935f85612a205b6d3b9\| server/blacklist-youtubeads/spkgbuild # update-repo-version 1.0.git20261111221535.g8e0beca29164280aadd8df4e70cf157236e3cc4d 1.0.git20261114175612.g17753a08acaf43fac14e7935f85612a205b6d3b9
 bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Changed\ from\ version\ 1.0.git20261111221535.g8e0beca29164280aadd8df4e70cf157236e3cc4d\ to\ version\ 1.0.git20261114175612.g17753a08acaf43fac14e7935f85612a205b6d3b9
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=20261115\| beta/tl-unx/spkgbuild # update-repo-version 20261114 20261115
+bash /usr/libexec/update-repo/changelog beta/tl-unx/spkgbuild Changed\ from\ version\ 20261114\ to\ version\ 20261115
