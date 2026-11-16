@@ -41,9 +41,9 @@ f:0c4212893556a750d024596d74e4e95d:wireguard/spkgbuild
 f:81ef5394b527e1897e785cb0e188ced5:wireguard/override
 f:e60137753879f141f627014084ab9ab2:blacklist-youtubeads/.pkgfiles
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-upgrade.sh
-f:c768a2ed0a8fc84e451f244a4f706929:blacklist-youtubeads/CHANGELOG
+f:b75df51efa13513efdf0ecf1325f65d5:blacklist-youtubeads/CHANGELOG
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
-f:eb2241e5d778a8c4bb00fd8b8b9c62b6:blacklist-youtubeads/spkgbuild
+f:bb19e1d4c8b4936a4bae1aa37cee24be:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
 f:f2d3339f01a14de76126293501626eb1:homeassistant/CHANGELOG
 f:ef92b27218babee983720b04653b7440:homeassistant/spkgbuild
@@ -113,10 +113,10 @@ f:4f96f4854a82cea84fe2b0ce92c795dc:mariadb/override
 f:7b305ff4127525649f08eac0e370e1a8:mariadb/pre-install.sh
 f:21d0ea24068e51fef54c4f51a1f3f37d:blacklist-hosts/.pkgfiles
 f:d36d8c1ca1e0fc10e6bc24714ac963bf:blacklist-hosts/post-upgrade.sh
-f:4c0aa2048e8ac8c5b080ec5a1df53aad:blacklist-hosts/CHANGELOG
+f:23314bb8ac721e1ca33e20bf39a6bb0f:blacklist-hosts/CHANGELOG
 f:d36d8c1ca1e0fc10e6bc24714ac963bf:blacklist-hosts/post-install.sh
 f:3b365d0e52f2510a3e6f60ae04ec45af:blacklist-hosts/test
-f:2ec1c919ae4a6241c262ab24daf097ea:blacklist-hosts/spkgbuild
+f:633abf01b7d5a9fe55ca77b7f87d64cb:blacklist-hosts/spkgbuild
 f:915ed49eb11eeccfcc4e8b87a5b9c7e2:httpd/post-upgrade.sh
 f:96e267dcf2b286f0e043887315bdf941:httpd/CHANGELOG
 f:01b882c49d81d4f9a48106834fe88e54:httpd/httpd

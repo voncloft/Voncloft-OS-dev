@@ -2,7 +2,7 @@
 # depends : make
 
 name=libunibreak
-version=8.0
+version=8.0.1
 release=2
 options="!checksum"
 source="${name}-${version}.tar.gz::https://github.com/adah1972/${name}/releases/download/libunibreak_8_0/${name}-${version}.tar.gz"

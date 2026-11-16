@@ -2,7 +2,7 @@
 # depends : exiv2 extra-cmake-modules gettext karchive kcodecs kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kde-deps-installer kdoctools kfilemetadata kguiaddons ki18n kiconthemes kio kitemmodels kjobwidgets knewstuff ktextwidgets kwidgetsaddons kxmlgui libkcddb libksane libxml2 libxslt poppler qt6 solid sonnet taglib
 
 name=tellico
-version=4.3
+version=4.3.1
 release=2
 options="!checksum"
 source="${name}-${version}.tar.gz::https://invent.kde.org/office/${name}/-/archive/v${version}/${name}-v${version}.tar.gz"

@@ -678,7 +678,8 @@ f:998b0ba48abf8e36034ec3f5d69325e2:libraw/.pkgfiles
 f:84bceebd3a57187c8c9d806363ca3cf7:libraw/CHANGELOG
 f:9b3febe3433cdbee5ca6cb327d0070dc:libraw/spkgbuild
 f:e71decfa6d11751e470a5f8ef2daf6d0:libraw/override
-f:dab818ec0d756415e532bff079fa0cb4:libunibreak/spkgbuild
+f:72bcc501dc74ba00362b97723ff2e78b:libunibreak/CHANGELOG
+f:a339a7b619eabe5483f8c90572aedcc3:libunibreak/spkgbuild
 f:dffc59afc3efe5fa92b551ed73b792a7:libunibreak/override
 f:09ccc0ed63d89ed5991f34efddac9328:libtheora/.pkgfiles
 f:50dd75ef6e2075bb47c1ff9985f28412:libtheora/CHANGELOG
@@ -845,8 +846,8 @@ f:e3c037aa2629b035c9446d18b8dae4dd:libsndfile/override
 f:217d7339f0216bdc9c5f439811bd0138:libfontenc/.pkgfiles
 f:0484deb866dc52345ff4c8d6310869b8:libfontenc/CHANGELOG
 f:c2b08fffa180ea13ffceeb98f51a83af:libfontenc/spkgbuild
-f:c7746f26c5c8e9ef8d8b5c0eeb92db82:xapp/CHANGELOG
-f:b517d290432e236d459da0275caedeb5:xapp/spkgbuild
+f:cff60d8c8d56df5973459cd297d962d7:xapp/CHANGELOG
+f:4f859e2fd9d945a5d8931da5fc199302:xapp/spkgbuild
 f:ab8ca77860fb35bff9c409b0b1a24e89:libudfread/.pkgfiles
 f:6be33bc2f241870f39e0382e316ae4b8:libudfread/CHANGELOG
 f:61764330cc6547c33b17d38527e7b62b:libudfread/spkgbuild
@@ -925,8 +926,8 @@ f:325f7619786f665c04e952787cf14106:imlib2/CHANGELOG
 f:76ca2c72936fbd12a29b040f5d98a0c2:imlib2/spkgbuild
 f:1a70fc480afbd6dbd9fe8472c706c2df:imlib2/override
 f:fc4a5da4572b08def8fab127cfdeb534:hidapi/.pkgfiles
-f:abd974fdaea1e50de57ef9edf55cd659:hidapi/CHANGELOG
-f:2a35fd11fe02f1620b084d62625ca174:hidapi/spkgbuild
+f:428b6dc49bfd8848d3400d0a4ff892c7:hidapi/CHANGELOG
+f:b6c8f109aa6d6094e5681e0179a51c5e:hidapi/spkgbuild
 f:7a1f7e8cf53008fe948918d028aa21cc:libssh2/.pkgfiles
 f:c3945d3eaff350999b216c0936024d2a:libssh2/spkgbuild
 f:cf323f50fa789e698c367a3bab51aa0b:libnsl/.pkgfiles

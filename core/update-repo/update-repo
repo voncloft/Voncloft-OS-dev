@@ -186,6 +186,9 @@ print_report()
     local mode='Apply updates' entry part
     local -a update_parts
     [ -z "${test_upgrade:-}" ] || mode='Test run'
+    if [ -n "${test_upgrade:-}" ] && [ -n "${apply_after_scan:-}" ]; then
+        mode='Check, then apply'
+    fi
     [ -z "${update_repo_newer_only:-}" ] || mode+=" (newer only)"
     [ "${screen_scan_stopped:-}" != 1 ] || mode+=" (stopped early)"
     printf '%bUpdate report%b\n' "${WHITE:-}" "${NC:-}"
@@ -271,6 +274,9 @@ screen_draw()
     progress=$(check_progress "$current" "${screen_total_packages:-0}")
     mode='Applying updates'
     [ -z "${test_upgrade:-}" ] || mode='Test run'
+    if [ -n "${test_upgrade:-}" ] && [ -n "${apply_after_scan:-}" ]; then
+        mode='Check, then apply'
+    fi
     [ -z "${update_repo_newer_only:-}" ] || mode+=" (newer only)"
     fields=(
         "PPath:     $screen_path"
@@ -1149,11 +1155,26 @@ configure_repo_path()
 
 check_handles()
 {
+        # Decide before processing actions so -t -a works in either order.
+        # A standalone -a still applies the already-saved queue immediately.
+        local option wants_test= wants_apply=
+        unset apply_after_scan
+        for option in "$@"; do
+                case "$option" in
+                        -t) wants_test=1;;
+                        -a) wants_apply=1;;
+                esac
+        done
+        if [ -n "$wants_test" ] && [ -n "$wants_apply" ]; then
+                apply_after_scan=1
+        fi
         while [ "$#" -gt 0 ]; do
                 case $1 in
-                        -a) apply_test_updates || exit $?
-                	apply=1
-                	exit;;
+                        -a) if [ -z "${apply_after_scan:-}" ]; then
+                                apply_test_updates || exit $?
+                                apply=1
+                                exit
+                            fi;;
                         -st) skip_tar=1;;
                         -t) test_upgrade=1;;
                         -n) update_repo_newer_only=1;;
@@ -1200,6 +1221,7 @@ update_to_github()
 apply_test_updates()
 {
 	local package test_upgrade=
+	local scan_missing=${missing:-0} scan_checked=${checked_packages:-0}
 	if [ -f test_updates.sh ];then
 		run_saved_updates || return 1
 		for package in "${screen_pending_order[@]}"; do
@@ -1210,9 +1232,15 @@ apply_test_updates()
 		cat test_updates.sh >> "$repo_root/logs/old-test-updates/$(date +"%Y/%b")/applied_updates-$(date +"%m-%d-%y").sh"
 		rm test_updates.sh
 		count=$screen_apply_total
-		missing=0
-		checked_packages=$screen_apply_total
-		print_stats
+		if [ "${1:-}" = --after-scan ]; then
+			# The combined run reports scan misses and displays its final report once.
+			missing=$scan_missing
+			checked_packages=$scan_checked
+		else
+			missing=0
+			checked_packages=$screen_apply_total
+			print_stats
+		fi
 		if [ -f index.html ];then
 			rm index.html
 		fi
@@ -1227,7 +1255,7 @@ repos()
 }
 help()
 {
-	echo "-a apply test updates"
+	echo "-a apply saved test updates; with -t, finish the scan and then apply automatically"
 	echo "-e edit program"
 	echo "-k keep index.html file for debugging"
 	echo "-l too lazy to run two commands merging apply and upload to github"
@@ -1235,13 +1263,15 @@ help()
 	echo "-all, --all check every category/package in the selected repository without prompting"
 	echo "-p PATH use a different recipe repository (default: $default_repo_root)"
 	echo "-st skip the repository backup (does not enable test mode)"
-	echo "-t save available updates to test_updates.sh without applying them"
+	echo "-t save available updates to test_updates.sh for review (or apply after scanning with -a)"
+	echo "   Example: update-repo --all -st -t -n -a"
 	echo "-n during checks, accept only versions newer than the current recipe"
 	echo "   Without -n, accept any different version, including lower versions."
 	echo "-stu review pending updates saved by a -t run"
 	echo "-utg upload changes to github"
 	echo "-h help"
 	echo "During checks: q stops after the current package and shows the partial report."
+	echo "   Stopping early cancels automatic application; saved updates remain available for review."
 	echo "Finished test report: a applies saved updates; l applies and uploads; q exits."
 }
 show_test_updates()
@@ -1270,6 +1300,8 @@ main()
 	fi
 	if [ -z $test_upgrade ];then
 		echo "Applying updates to repo"
+	elif [ -n "${apply_after_scan:-}" ];then
+		echo "Checking all selected packages before automatically applying saved updates"
 	else
 		echo "Checking for updates - not applying any, test run"
 	fi
@@ -1308,7 +1340,19 @@ main()
 	# Restore and clear the terminal; completion shows only the summary.
 	screen_stop
 	finish_logs	
-	alerts_and_logs
+	alerts_and_logs || return $?
+	if [ -n "${apply_after_scan:-}" ]; then
+		if [ "${screen_scan_stopped:-}" = 1 ]; then
+			echo "Scan stopped; automatic application cancelled. Saved updates remain available for review."
+			unset apply_after_scan
+		else
+			if [ "${count:-0}" -gt 0 ] && [ -s test_updates.sh ]; then
+				apply_test_updates --after-scan || return $?
+			fi
+			# The final report follows the apply phase, without an intermediate pager.
+			unset test_upgrade
+		fi
+	fi
 }
 backup_test()
 {

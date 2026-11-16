@@ -2,7 +2,7 @@
 # depends : python-aiohttp python-babel
 
 name=python-aiogram
-version=3.31.0
+version=3.32.0
 release=3
 
 _name=${name#python-}

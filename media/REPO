@@ -46,8 +46,8 @@ f:4703dc0019932e442486942adb6c90a4:pulseaudio-alsa/asound.conf
 f:4d1860ef3d37b45aaa133384d5c2b8ff:pulseaudio-alsa/CHANGELOG
 f:d417165c676338af1bbebb546ac6ac2b:pulseaudio-alsa/spkgbuild
 f:eaaa0fbf7a195af6e33661e689b77f64:ffmpegthumbnailer/.pkgfiles
-f:b70a6bbb698a988ffa6e61a74be77f08:ffmpegthumbnailer/CHANGELOG
-f:54e1ef35d7c9ed59d284031e6b686599:ffmpegthumbnailer/spkgbuild
+f:9c50976011f629b672744c5d384e7818:ffmpegthumbnailer/CHANGELOG
+f:f072d223f7123e06bba67e81e66e3e93:ffmpegthumbnailer/spkgbuild
 f:daeb4ee3ef63393422019dc155116245:ffmpegthumbnailer/override
 f:ebc4db76aa6bfa8d91b07788bc63e120:x264/.pkgfiles
 f:476fb3f87dc142dfdc6e4e6add6f6d0f:x264/CHANGELOG
@@ -126,8 +126,8 @@ f:10e3b09bd16e20d296bf0730ad57b8de:dav1d/spkgbuild
 f:92d50732a168d922ef043cdbb3817765:dav1d/override
 f:8e8020262a5d505f7dfccb369161bcff:clementine/.pkgfiles
 f:36cf90df14881e995475388f9bee8a1d:clementine/clementine-bundled-mygpo.patch
-f:7be2f4809c57382c1b228f1e68408fa2:clementine/CHANGELOG
-f:536db44c2de80414e8da9943b487fb44:clementine/spkgbuild
+f:5f2f2061fe51f2e9f32a7b212553fd28:clementine/CHANGELOG
+f:fa8deff052ee68611b444639f1218830:clementine/spkgbuild
 f:02e452e1814023db87f41ef14d10c4d9:clementine/override
 f:151c397d2ead9121574bb3921ba332c1:kodi/CHANGELOG
 f:235dbf9617a5fc16a6f5047aa34080f0:kodi/spkgbuild

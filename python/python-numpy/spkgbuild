@@ -2,7 +2,7 @@
 # depends : python cython3 python-meson python-metadata meson ninja pkgconf
 
 name=python-numpy
-version=2.5.4
+version=2.5.5
 release=1
 _name=numpy
 source="https://files.pythonhosted.org/packages/source/n/${_name}/${_name}-${version}.tar.gz"

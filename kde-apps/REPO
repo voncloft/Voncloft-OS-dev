@@ -1149,7 +1149,8 @@ f:63dc5c8c4529b2ef8196c550bca1ff27:kpmcore/CHANGELOG
 f:c8fc68d79176f91a69de74ab790bd243:kpmcore/spkgbuild
 f:798678b52a60907bf632e53b15776f03:ktp-common-internals/CHANGELOG
 f:0f0f08ab9c6687138d94fc437883c74e:ktp-common-internals/spkgbuild
-f:765a1d196fe7e3aa17868465713e117b:tellico/spkgbuild
+f:5879e5719d99f71a83465439c399aa8b:tellico/CHANGELOG
+f:012761be95a2f4333f564651aad3c27e:tellico/spkgbuild
 f:483d300afa0e4c4538f7aeb1548d619b:tellico/override
 f:394ad821ddb3d0108eae169de06e9e0a:dolphin-plugins/.pkgfiles
 f:69a7f2bd785d2afe9dda4f39faf5c512:dolphin-plugins/CHANGELOG

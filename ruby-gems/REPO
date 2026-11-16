@@ -77,8 +77,8 @@ f:e7ed8fc064315c85c8a3702ee0c31dc2:ruby-rspec-core/CHANGELOG
 f:3c4d30adae7a951d88f6432eae5767ae:ruby-rspec-core/spkgbuild
 f:6be5933c9f1332022398d6d1d33896df:ruby-rspec-core/override
 f:71cf2c1cd4452620478b2f45dcfcd0b9:ruby-bundler/.pkgfiles
-f:848b7e53c91e94b0c9055bbd9b04f3db:ruby-bundler/CHANGELOG
-f:73682eda6c0e4a03637fc4238006be1e:ruby-bundler/spkgbuild
+f:7b5125bfcad8631a68eadd7064812c33:ruby-bundler/CHANGELOG
+f:cb574bc8990b03a6c64cac6bc3f5d55d:ruby-bundler/spkgbuild
 f:b338ae2af5d89fef007cc1da2409a38c:ruby-bundler/override
 f:fe2ae5d5c29302c174c40678420aa48d:ruby-rspec-expectations/.pkgfiles
 f:f088bd700f39c93d68b6c13d6643f20e:ruby-rspec-expectations/CHANGELOG

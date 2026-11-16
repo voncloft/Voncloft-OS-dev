@@ -181,8 +181,8 @@ f:c0dd249c01ef3729e2317bd5244c2b9b:openjdk/CHANGELOG
 f:ec42fae2cd9c4afedeab617315cd4f55:openjdk/post-install.sh
 f:2bc6b4a036e1d4285cc61e4c79806f6c:openjdk/spkgbuild
 f:ee6652416ff54d5714d6ac79418ec2c1:openjdk/override
-f:d57b76adf1df7b2613e951c8ad6244ab:flexget/CHANGELOG
-f:9534c32efce07f728798a301764ce154:flexget/spkgbuild
+f:403a7e72ad197bc664f7c7eafaad3ec9:flexget/CHANGELOG
+f:110470f2a26f2cdaacc8b75a933124e1:flexget/spkgbuild
 f:9a0e38db754c2c694d32d1da60f925a9:chessx/CHANGELOG
 f:f2a11913ac7171735704aee73ea0607e:chessx/spkgbuild
 f:5ace2e28de51f7029e4750af377bded3:chessx/override
@@ -230,8 +230,8 @@ f:9b78eec6d1cb62daf7568840b1fd4883:htmlq/spkgbuild
 f:24ea8b83792054dfcc6e59ffffe07b0d:htmlq/override
 f:f6e45406ddf40ea37185fa47512a71e4:djvulibre/CHANGELOG
 f:570ff5628e5dded743b45409c9f860da:djvulibre/spkgbuild
-f:a4c48db998450aa29cde371a0928a2e2:inotify-tools/CHANGELOG
-f:c00f59b6b544e61bde8831bec6d46b24:inotify-tools/spkgbuild
+f:47d1c42d62214941f252f7f961095664:inotify-tools/CHANGELOG
+f:6d74bc097638a762ebdabe0467eccb1c:inotify-tools/spkgbuild
 f:e10125f78449ccedbf2b06f976ed31c0:clazy/CHANGELOG
 f:36bdf7180586d2e28d35d6f424c3fe11:clazy/spkgbuild
 f:5f0d9b274c7362384367a6199d32b199:session-desktop/.pkgfiles

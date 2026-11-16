@@ -746,3 +746,13 @@ Release=4
 
 Synopsis:
 Upgraded from version 2.6.9 to version 4.1.0
+
+----------------------------------------------------------------
+
+Date: Mon Nov 16 01:33:57 PM EST 2026
+
+Version=4.1.0
+Release=1
+
+Synopsis:
+Changed from version 4.0.24 to version 4.1.0
