@@ -40,9 +40,8 @@ f:52a28fb2e1567cd494a85dce2ea6647b:font-jis-misc/CHANGELOG
 f:83320fc077a6dadfb75cca54d7cf8809:font-jis-misc/spkgbuild
 f:dd66e16f6d069a664588f4449cd7ad1b:ghostscript-fonts/spkgbuild
 f:1db3f60925b96e979e3122d2ea8af44f:ghostscript-fonts/override
-f:048d3cf5f26bd458239506ffe9756ee6:freetype2/.pkgfiles
 f:250f3dca42efc1da675b28548420e464:freetype2/CHANGELOG
-f:e530613e1fe4c2c64f37e69d8b3e315b:freetype2/spkgbuild
+f:64fbc458fc73db1846f1dc76609613b3:freetype2/spkgbuild
 f:e74842efcf637a277452517397a56cec:freetype2/override
 f:b4418eb8bf844fee79ab984742be4ef8:siji-font/CHANGELOG
 f:632cf1fd6c074d2526bc05d9eba7d239:siji-font/spkgbuild
@@ -91,9 +90,8 @@ f:0ce38fe94072e6954ce4e102e21c9bbb:harfbuzz-icu/spkgbuild
 f:20cacd1acb17325a213cc9f70234c7c0:harfbuzz-icu/override
 f:a68a0f3009e26bde86518801224d9876:font-adobe-75dpi/CHANGELOG
 f:19335f23fd806d4c8ea381f3fb20e382:font-adobe-75dpi/spkgbuild
-f:be124e88bcf59749db93653fc3562e14:harfbuzz/.pkgfiles
 f:109c9a110accc1b69aac593e86b83343:harfbuzz/CHANGELOG
-f:b61ee9157c6bcb2924c4f51d634f4c23:harfbuzz/spkgbuild
+f:3248655fe49ede3f1cd4eb7332519548:harfbuzz/spkgbuild
 f:cb55bc063f7d44586accacd558882add:harfbuzz/override
 f:41940409dbb628c5feb490bef55ea4f0:ftgl/.pkgfiles
 f:f8d0cd2453e1d28112ba7e22afd7d02c:ftgl/CHANGELOG
@@ -114,9 +112,8 @@ f:e64e45f1cceb3bdda1a5f0e419252256:dejavu-fonts/.pkgfiles
 f:315010f579da76470802ebdc36fff38a:dejavu-fonts/spkgbuild
 f:12c0afb97f51f175cd495e0481e5c246:dejavu-fonts/override
 f:3304c4b0011f457c3a8a394424a2f8b7:.httpup-repo.current
-f:b140af24303778b9e6d5aa0f9e3475f0:fontconfig/.pkgfiles
 f:00bfac683564966c1106d16c02fefa6a:fontconfig/CHANGELOG
-f:1ce5247909e5b9b0b2621351d9497eab:fontconfig/spkgbuild
+f:3afc0a92f539bff0e3976d8117a44fcc:fontconfig/spkgbuild
 f:7030d7ed521457cee89205806ca40d65:fontconfig/override
 f:8e18dbefea39aef5e34207c2cd281116:font-bh-type1/.pkgfiles
 f:61007cc9c5084df496eeab7eb74f5fcf:font-bh-type1/CHANGELOG

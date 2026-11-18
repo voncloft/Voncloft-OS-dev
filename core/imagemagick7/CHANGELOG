@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Changed from version 7.1.2.34 to version 7.1.2.35
+
+----------------------------------------------------------------
+
+Date: Tue Nov 17 03:59:50 EST 2026
+
+Version=7.1.2.36
+Release=3
+
+Synopsis:
+Changed from version 7.1.2.35 to version 7.1.2.36

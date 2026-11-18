@@ -42,9 +42,8 @@ f:54a9e4f59f6265d1fff05a3f3a74a301:xf86-input-wacom/spkgbuild
 f:a71565792751cc8d703603c4eea82060:xf86-input-wacom/override
 f:8d258dcf834016d2e46854c88ad3fca2:.httpup-urlinfo
 f:8b6c79b5055f99289b6927f44cfca71e:gavl/spkgbuild
-f:fb839adca0ca28678718be2727cd8a18:vulkan-loader/.pkgfiles
 f:5081d2e6e1abcc89139529453f4fa8c6:vulkan-loader/CHANGELOG
-f:ceecdeaf6928efd82c63ed0c9a5e9793:vulkan-loader/spkgbuild
+f:03c43ebaf7f3374fa6b534c3d1fdcb63:vulkan-loader/spkgbuild
 f:ab084642ec76c608c1513e5b308e5715:vulkan-loader/override
 f:c3e93c1b71b15096e7a1cf380f3e43a3:xf86-video-fbdev/CHANGELOG
 f:5b2e96ff5d87c3bfdddf12f401c0a498:xf86-video-fbdev/gcc8.diff
@@ -68,12 +67,11 @@ f:1beaead19e06f188db1471e07ae9cdb1:xf86-input-libinput/override
 f:8e3e55061c94c08c868ea45ebe082444:xf86-input-synaptics/50-synaptics.conf
 f:8b8e01ae1d50726314fbcb7bdb11f389:xf86-input-synaptics/CHANGELOG
 f:3bdbfd1fa424ed8ba948656152d7bef1:xf86-input-synaptics/spkgbuild
-f:fb0178f87ba14f028e85701026323583:mesa/.pkgfiles
 f:495117e52b445e33d257c7dc38bfc836:mesa/CHANGELOG
-f:4fd2a67cd3fa6c92930a3bd519e6b9de:mesa/spkgbuild
-f:18f216f3c33a289fca41654ade1b37bf:glu/.pkgfiles
+f:e404b406b86cbfab2be70facdc1a3382:mesa/mesa-32.ini
+f:c18b4429f8ce82ae4d9fd51c436839dd:mesa/spkgbuild
 f:a6f6e602e353b262daffe05dd3160bae:glu/CHANGELOG
-f:6380ca3fb0683b4ab1f218eeb68ede49:glu/spkgbuild
+f:605d78feb63834904988fbf34fb7a9fb:glu/spkgbuild
 f:0f84efa5846f77ebf2b060b1080d446f:xf86-video-amdgpu/readme
 f:96feb8ea27865af93cbf028a6be52f03:xf86-video-amdgpu/CHANGELOG
 f:d95036be90b0f496aaf80a69a176b433:xf86-video-amdgpu/spkgbuild

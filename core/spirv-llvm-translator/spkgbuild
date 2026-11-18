@@ -1,30 +1,63 @@
 # description : llvm translator
-# depends : cmake ninja git libxml2 llvm spirv-tools
+# depends     : cmake ninja git libxml2 llvm spirv-tools
 
 name=spirv-llvm-translator
 version=23.1.3
-release=1
+release=2
 
 _name=SPIRV-LLVM-Translator
 source="https://github.com/KhronosGroup/${_name}/archive/v$version/${_name}-$version.tar.gz"
 options="!checksum"
 
-build()
-{
+build() {
+    # 64-bit build.
     # Use the release's spirv-headers-tag.conf pin; headers are build-only.
     # The SDK headers in /usr may not yet include translator-required extensions.
-	cd "${_name}-${version}"
-	mkdir build &&
-	cd    build &&
+    cd "${_name}-${version}"
+    mkdir build
+    cd build
+    cmake .. \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D BUILD_SHARED_LIBS=ON \
+        -D CMAKE_SKIP_INSTALL_RPATH=ON \
+        -D SPIRV_HEADERS_ENABLE_INSTALL=OFF \
+        -D SPIRV_HEADERS_ENABLE_TESTS=OFF \
+        -G Ninja
+    ninja
 
-	cmake -D CMAKE_INSTALL_PREFIX=/usr                   \
-      -D CMAKE_BUILD_TYPE=Release                    \
-      -D BUILD_SHARED_LIBS=ON                        \
-      -D CMAKE_SKIP_INSTALL_RPATH=ON                 \
-      -D SPIRV_HEADERS_ENABLE_INSTALL=OFF            \
-      -D SPIRV_HEADERS_ENABLE_TESTS=OFF              \
-      -G Ninja ..                                    &&
-	ninja
+    DESTDIR=$PKG ninja install
 
-	DESTDIR=$PKG ninja install
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    cmake .. \
+        -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib32 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_LIBRARY_PATH=/usr/lib32 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DLLVM_DIR=/usr/lib32/cmake/llvm \
+        -DBUILD_SHARED_LIBS=ON \
+        -DSPIRV_HEADERS_ENABLE_INSTALL=OFF \
+        -DSPIRV_HEADERS_ENABLE_TESTS=OFF \
+        -DCMAKE_SKIP_INSTALL_RPATH=ON
+    cmake --build .
+    DESTDIR="$PWD/DESTDIR" cmake --install .
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

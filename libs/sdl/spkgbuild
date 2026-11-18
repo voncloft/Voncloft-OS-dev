@@ -1,18 +1,51 @@
-# description	: Cross-platform library designed to make it easy to write multimedia software
+# depends     : alsa-lib xorg-libraries
+# description : Cross-platform library designed to make it easy to write multimedia software
 
 name=sdl
 version=1.2.15
-release=1
+release=2
 _name=SDL
 source="https://www.libsdl.org/release/${_name}-$version.tar.gz"
 
 build() {
-	cd SDL-$version
+    # 64-bit build.
+    cd SDL-$version
 
-	sed -e '/_XData32/s:register long:register _Xconst long:' \
-	    -i src/video/x11/SDL_x11sym.h
+    sed -e '/_XData32/s:register long:register _Xconst long:' \
+        -i src/video/x11/SDL_x11sym.h
 
-	./configure --prefix=/usr --disable-static
-	make
-	make DESTDIR=$PKG install
+    mkdir -p build
+    cd build
+
+    ../configure \
+        --prefix=/usr \
+        --disable-static
+    make
+    make DESTDIR=$PKG install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    ../configure \
+        --prefix=/usr \
+        --libdir=/usr/lib32 \
+        --host=i686-pc-linux-gnu \
+        --disable-static
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

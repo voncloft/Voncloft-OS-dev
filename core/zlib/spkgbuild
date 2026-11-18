@@ -1,14 +1,43 @@
-# description	: Compression and decompression routines used by some programs
+# depends     :
+# description : Compression and decompression routines used by some programs
 
 name=zlib
 version=1.4
-release=3
+release=4
 source="https://zlib.net/$name-$version.tar.xz"
 
 build() {
+    # 64-bit build.
     cd "$name-$version"
-    ./configure --prefix=/usr
+    mkdir -p build
+    cd build
+
+    ../configure \
+        --prefix=/usr
     make
     make DESTDIR="$PKG" install
-    # The separate zlib-32 package owns the 32-bit runtime.
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    ../configure \
+        --prefix=/usr \
+        --libdir=/usr/lib32
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

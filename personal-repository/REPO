@@ -10,8 +10,8 @@ f:77f0b7652386c2dfc04ea1feb8077b55:.httpup-urlinfo
 f:085705c4ad17ad80619096bee29a0bc7:update-rep-client/update-rep
 f:308cf4fe7c646610c860a26348a1f56e:update-rep-client/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:update-rep-client/override
-f:b3d3d855607110e063bd79b27cfd5187:update-rep-server/update-rep
-f:c47903d8e966c9d7c1a032becde4e5a3:update-rep-server/spkgbuild
+f:c73015f17c79b9e0d10e8f623847901a:update-rep-server/update-rep
+f:b912b1f457c44b31503e8f61f26d4b37:update-rep-server/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:update-rep-server/override
 f:4c54b89390c33b5fbeebb32123c86fa1:changelog/changelog
 f:29f4a7d85d8315d732292ced76e3af54:changelog/spkgbuild

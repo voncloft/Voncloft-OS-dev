@@ -1,12 +1,14 @@
-# description	: Streaming media framework that enables applications to share a common set of plugins
-# depends	: glib meson ninja pkgconf
+# description : Streaming media framework that enables applications to share a common set of plugins
+# depends     : glib meson ninja pkgconf
 
 name=gstreamer
 version=1.28.9
-release=2
+release=3
 source="https://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz"
 options="!checksum"
+
 build() {
+    # 64-bit build.
     cd "$SRC/$name-$version"
     meson setup build \
         --prefix=/usr \
@@ -19,4 +21,36 @@ build() {
         -Dgst_debug=false
     ninja -C build
     DESTDIR="$PKG" ninja -C build install
+
+    # 32-bit build.
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    meson setup .. \
+        --prefix=/usr \
+        --libdir=lib32 \
+        --libexecdir=lib32 \
+        --buildtype=release \
+        --wrap-mode=nofallback \
+        -Dtests=disabled \
+        -Dexamples=disabled \
+        -Ddoc=disabled \
+        -Dbenchmarks=disabled \
+        -Dgst_debug=false \
+        -Dintrospection=disabled
+    ninja
+    DESTDIR="$PWD/DESTDIR" ninja install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

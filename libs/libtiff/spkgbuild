@@ -1,23 +1,60 @@
-# description	: TIFF libraries and associated utilities
-# depends	: cmake ninja
+# description : TIFF libraries and associated utilities
+# depends     : cmake ninja zlib xz libjpeg-turbo
 
 name=libtiff
 version=4.7.2
-release=1
+release=2
 _name=tiff
 source="https://download.osgeo.org/libtiff/${_name}-${version}.tar.gz"
 
 build() {
-	cd tiff-$version
+    # 64-bit build.
+    cd tiff-$version
 
-	mkdir -p build
-	cd build
-	
-	
-cmake -D CMAKE_INSTALL_PREFIX=/usr ..     \
-      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
-      -G Ninja                            \
-      -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/libtiff-4.7.0 
-       ninja
-	DESTDIR=$PKG ninja install
+    mkdir -p build
+    cd build
+
+    cmake .. \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -G Ninja \
+        -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/libtiff-4.7.0
+    ninja
+    DESTDIR=$PKG ninja install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    cmake .. \
+        -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib32 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_LIBRARY_PATH=/usr/lib32 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DBUILD_SHARED_LIBS=ON \
+        -Dtiff-tests=OFF \
+        -Dtiff-contrib=OFF \
+        -Dtiff-tools=OFF \
+        -Dtiff-docs=OFF \
+        -DCMAKE_INSTALL_INCLUDEDIR=include/m32/libtiff
+    cmake --build .
+    DESTDIR="$PWD/DESTDIR" cmake --install .
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    mkdir -p "$PKG/usr/include/m32"
+    cp -a DESTDIR/usr/include/m32/. "$PKG/usr/include/m32/"
+    rm -rf DESTDIR
 }

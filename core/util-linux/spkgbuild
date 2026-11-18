@@ -1,51 +1,81 @@
-# description	: Utilities for handling file systems, consoles, partitions, and messages
-# depends	: pcre2 ncurses zlib readline eudev
+# description : Utilities for handling file systems, consoles, partitions, and messages
+# depends     : pcre2 ncurses zlib readline eudev
 
 name=util-linux
 version=2.42.4
-release=3
+release=4
 source="https://mirrors.edge.kernel.org/pub/linux/utils/${name}/v${version%.*}/${name}-$version.tar.gz"
 #source="https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v${version%.*}/util-linux-${version%.*}.tar.gz"
 options="!checksum"
+
 build() {
-	cd "$SRC"/util-linux*/
+    # 64-bit build.
+    cd "$SRC"/util-linux*/
 
-	mkdir -pv $PKG/var/lib/hwclock
+    mkdir -pv $PKG/var/lib/hwclock
 
-	# SysVinit provides sulogin, last/lastb, utmpdump, mesg and wall.
-	./configure --prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin \
-	            --libdir=/usr/lib ADJTIME_PATH=/var/lib/hwclock/adjtime \
-	            --disable-sulogin    \
-	            --disable-last       \
-	            --disable-utmpdump   \
-	            --disable-mesg       \
-	            --disable-wall       \
-	            --disable-chfn-chsh  \
-	            --disable-login      \
-	            --disable-nologin    \
-	            --disable-su         \
-	            --disable-setpriv    \
-	            --disable-runuser    \
-	            --disable-pylibmount \
-	            --disable-static     \
-	            --without-python     \
-	            --without-systemd    \
-		    --disable-nls        \
-	            --without-systemdsystemunitdir
-	make
-	make DESTDIR=$PKG install
+    # SysVinit provides sulogin, last/lastb, utmpdump, mesg and wall.
+    mkdir -p build
+    cd build
 
-    # Preserve the five installed multilib runtime libraries without replacing
-    # the native tools or architecture-independent development headers.
-    make distclean
-    CC="gcc -m32" CXX="g++ -m32" \
-        PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
-        ./configure --prefix=/usr --libdir=/usr/lib32 \
-        --disable-all-programs --enable-libblkid --enable-libmount \
-        --enable-libuuid --enable-libfdisk --enable-libsmartcols \
-        --disable-static --disable-nls --without-python --without-systemd
+    ../configure \
+        --prefix=/usr \
+        --bindir=/usr/bin \
+        --sbindir=/usr/sbin \
+        --libdir=/usr/lib \
+        ADJTIME_PATH=/var/lib/hwclock/adjtime \
+        --disable-sulogin \
+        --disable-last \
+        --disable-utmpdump \
+        --disable-mesg \
+        --disable-wall \
+        --disable-chfn-chsh \
+        --disable-login \
+        --disable-nologin \
+        --disable-su \
+        --disable-setpriv \
+        --disable-runuser \
+        --disable-pylibmount \
+        --disable-static \
+        --without-python \
+        --without-systemd \
+        --disable-nls \
+        --without-systemdsystemunitdir
     make
-    make DESTDIR="$SRC/stage32" install
-    install -dm755 "$PKG/usr/lib32"
-    cp -a "$SRC/stage32/usr/lib32/." "$PKG/usr/lib32/"
+    make DESTDIR=$PKG install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    ../configure \
+        --prefix=/usr \
+        --libdir=/usr/lib32 \
+        --host=i686-pc-linux-gnu \
+        --disable-all-programs \
+        --enable-libblkid \
+        --enable-libmount \
+        --enable-libuuid \
+        --enable-libfdisk \
+        --enable-libsmartcols \
+        --disable-static \
+        --disable-nls \
+        --without-python \
+        --without-systemd
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-configargparse
-version=1.10.0
+version=1.10.1
 release=3
 
 _name=ConfigArgParse

@@ -1,27 +1,61 @@
 # description : libraries for gslang
-# depends : cmake spirv-headers
+# depends     : cmake spirv-headers ninja
 
 name=spirv-tools
 version=2026.4
-release=1
+release=2
 
 _name=SPIRV-Tools
 source="${_name}-${version}.tar.gz::https://github.com/KhronosGroup/${_name}/archive/refs/tags/v${version}.tar.gz"
 options="!checksum"
-build()
-{
-	cd "${_name}-${version}"
-	mkdir build &&
-cd    build &&
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr     \
-      -D CMAKE_BUILD_TYPE=Release      \
-      -D SPIRV_SKIP_TESTS=ON \
-      -D SPIRV_WERROR=OFF              \
-      -D BUILD_SHARED_LIBS=ON          \
-      -D SPIRV_TOOLS_BUILD_STATIC=OFF  \
-      -D SPIRV-Headers_SOURCE_DIR=/usr \
-      -G Ninja .. 
-	ninja
-      DESTDIR=$PKG ninja install
+build() {
+    # 64-bit build.
+    cd "${_name}-${version}"
+    mkdir build
+    cd build
+    cmake .. \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D SPIRV_SKIP_TESTS=ON \
+        -D SPIRV_WERROR=OFF \
+        -D BUILD_SHARED_LIBS=ON \
+        -D SPIRV_TOOLS_BUILD_STATIC=OFF \
+        -D SPIRV-Headers_SOURCE_DIR=/usr \
+        -G Ninja
+    ninja
+    DESTDIR=$PKG ninja install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    cmake .. \
+        -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib32 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_LIBRARY_PATH=/usr/lib32 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DSPIRV_SKIP_TESTS=ON \
+        -DSPIRV_WERROR=OFF \
+        -DBUILD_SHARED_LIBS=ON \
+        -DSPIRV_TOOLS_BUILD_STATIC=OFF \
+        -DSPIRV-Headers_SOURCE_DIR=/usr
+    cmake --build .
+    DESTDIR="$PWD/DESTDIR" cmake --install .
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

@@ -1,28 +1,56 @@
-# description	: Message bus system, a simple way for applications to talk to one another
-# depends	: expat libx11 libsm libice
+# description : Message bus system, a simple way for applications to talk to one another
+# depends     : expat libx11 libsm libice meson ninja pkgconf
 
 name=dbus
 version=1.16.4
-release=2
+release=3
 source="https://dbus.freedesktop.org/releases/$name/$name-$version.tar.xz"
 
 build() {
-	local dbus_gid
-	# The daemon account's primary GID is authoritative, even without a group name.
-	dbus_gid=$(id -g messagebus) || return 1
-	cd $name-$version
+    # 64-bit build.
+    local dbus_gid
+    # The daemon account's primary GID is authoritative, even without a group name.
+    dbus_gid=$(id -g messagebus) || return 1
+    cd $name-$version
 
-	mkdir build
-	cd build
-	
-	meson setup --prefix=/usr          \
-            --buildtype=release    \
-            --wrap-mode=nofallback \
-            -D systemd=disabled    \
-            .. 
-        ninja
-        DESTDIR=$PKG ninja install
-        chown -v "root:$dbus_gid" "$PKG/usr/libexec/dbus-daemon-launch-helper"
-	chmod -v 4750 "$PKG/usr/libexec/dbus-daemon-launch-helper"
-	
+    mkdir build
+    cd build
+
+    meson setup .. \
+        --prefix=/usr \
+        --buildtype=release \
+        --wrap-mode=nofallback \
+        -D systemd=disabled
+    ninja
+    DESTDIR=$PKG ninja install
+    chown -v "root:$dbus_gid" "$PKG/usr/libexec/dbus-daemon-launch-helper"
+    chmod -v 4750 "$PKG/usr/libexec/dbus-daemon-launch-helper"
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    meson setup .. \
+        --prefix=/usr \
+        --libdir=lib32 \
+        --libexecdir=libexec \
+        --buildtype=release \
+        --wrap-mode=nofallback \
+        -Dsystemd=disabled
+    ninja
+    DESTDIR="$PWD/DESTDIR" ninja install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

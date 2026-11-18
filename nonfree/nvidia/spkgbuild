@@ -1,5 +1,5 @@
 # description : NVIDIA 580 proprietary graphics driver with kernel modules and 64-bit and 32-bit libraries
-# depends : gcc binutils make elfutils kmod gtk3 libglvnd libdrm libxcb libvdpau mesa wayland openssl xorg-libraries libglvnd-32 libdrm-32 libxcb-32 mesa-32 wayland-32 xorg-libraries-32
+# depends : gcc binutils make elfutils kmod gtk3 libglvnd libdrm libxcb libvdpau mesa wayland openssl xorg-libraries
 
 name=nvidia
 version=580.196.07

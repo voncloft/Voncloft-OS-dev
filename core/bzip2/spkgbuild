@@ -1,34 +1,63 @@
-# description	: Programs for compressing and decompressing files
+# depends     :
+# description : Programs for compressing and decompressing files
 
 name=bzip2
 version=1.0.8
-release=1
+release=2
 source="https://www.sourceware.org/pub/${name}/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+    # 64-bit build.
+    cd $name-$version
+    mkdir -p build build32
+    tar --exclude=./build --exclude=./build32 -cf - . | tar -xf - -C build
+    cp -a build/. build32/
+    cd build
 
-	sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
-	sed -i "s@(PREFIX)/man@(PREFIX)/share/man@g" Makefile
+    sed -i 's@\(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
+    sed -i "s@(PREFIX)/man@(PREFIX)/share/man@g" Makefile
 
-	# use our optimization
-	[ "${CFLAGS}" ] && sed -i "s|-O2|${CFLAGS}|g" Makefile
-	[ "${CFLAGS}" ] && sed -i "s|-O2|${CFLAGS}|g" Makefile-libbz2_so
+    # use our optimization
+    [ "${CFLAGS}" ] && sed -i "s|-O2|${CFLAGS}|g" Makefile
+    [ "${CFLAGS}" ] && sed -i "s|-O2|${CFLAGS}|g" Makefile-libbz2_so
 
-	make -f Makefile-libbz2_so
-	make
-	make PREFIX=$PKG/usr install
+    make -f Makefile-libbz2_so
+    make
+    make PREFIX=$PKG/usr install
 
-	mkdir -pv $PKG/bin \
-	          $PKG/lib \
-	          $PKG/usr/lib
+    mkdir -pv $PKG/bin \
+        $PKG/lib \
+        $PKG/usr/lib
 
-	cp -v bzip2-shared $PKG/bin/bzip2
-	cp -av libbz2.so* $PKG/lib
-	ln -sv ../../lib/libbz2.so.1.0 $PKG/usr/lib/libbz2.so
-	rm -v $PKG/usr/bin/bunzip2 \
-	      $PKG/usr/bin/bzcat \
-	      $PKG/usr/bin/bzip2
-	ln -sv bzip2 $PKG/bin/bunzip2
-	ln -sv bzip2 $PKG/bin/bzcat
+    cp -v bzip2-shared $PKG/bin/bzip2
+    cp -av libbz2.so* $PKG/lib
+    ln -sv ../../lib/libbz2.so.1.0 $PKG/usr/lib/libbz2.so
+    rm -v $PKG/usr/bin/bunzip2 \
+        $PKG/usr/bin/bzcat \
+        $PKG/usr/bin/bzip2
+    ln -sv bzip2 $PKG/bin/bunzip2
+    ln -sv bzip2 $PKG/bin/bzcat
+
+    # 32-bit build.
+    cd ../build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    make CC="$CC" CFLAGS="$CFLAGS -D_FILE_OFFSET_BITS=64" libbz2.a
+    install -Dm644 libbz2.a "$PWD/DESTDIR/usr/lib32/libbz2.a"
+    make clean
+    make -f Makefile-libbz2_so CC="$CC" CFLAGS="$CFLAGS -fPIC -D_FILE_OFFSET_BITS=64"
+    cp -a libbz2.so* "$PWD/DESTDIR/usr/lib32/"
+    ln -sf libbz2.so.1.0 "$PWD/DESTDIR/usr/lib32/libbz2.so"
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

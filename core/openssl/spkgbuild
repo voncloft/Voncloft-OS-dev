@@ -1,16 +1,26 @@
 # description : TLS and cryptographic libraries
-# depends : zlib
+# depends     : zlib
 
 name=openssl
 version=4.1.0
-release=2
+release=3
 source="https://github.com/openssl/$name/releases/download/$name-$version/$name-$version.tar.gz"
 backup="etc/ssl/openssl.cnf
         etc/ssl/ct_log_list.cnf"
 
 build() {
+    # 64-bit build.
     cd "$name-$version"
-    ./Configure linux-x86_64 --prefix=/usr --openssldir=/etc/ssl --libdir=lib shared zlib-dynamic
+    mkdir -p build
+    cd build
+
+    ../Configure \
+        linux-x86_64 \
+        --prefix=/usr \
+        --openssldir=/etc/ssl \
+        --libdir=lib \
+        shared \
+        zlib-dynamic
     make
     make DESTDIR="$PKG" MANSUFFIX=ssl install
     rm -f "$PKG/usr/lib/libcrypto.a" "$PKG/usr/lib/libssl.a"
@@ -18,13 +28,50 @@ build() {
         mv "$PKG/usr/share/doc/openssl" "$PKG/usr/share/doc/$name-$version"
     fi
 
-    make distclean
-    CC="gcc -m32" CXX="g++ -m32" \
-        PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig PKG_CONFIG_PATH=/usr/lib32/pkgconfig \
-        ./Configure linux-x86 --prefix=/usr --openssldir=/etc/ssl --libdir=lib32 shared zlib-dynamic
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    ../Configure \
+        linux-x86 \
+        --prefix=/usr \
+        --openssldir=/etc/ssl \
+        --libdir=lib32 \
+        shared \
+        zlib-dynamic
     make
-    make DESTDIR="$SRC/stage32" install_sw
-    install -dm755 "$PKG/usr/lib32"
-    cp -a "$SRC/stage32/usr/lib32/." "$PKG/usr/lib32/"
-    rm -f "$PKG/usr/lib32/libcrypto.a" "$PKG/usr/lib32/libssl.a"
+    make DESTDIR="$PWD/DESTDIR" install_sw
+    rm -f "$PWD/DESTDIR/usr/lib32/libcrypto.a" "$PWD/DESTDIR/usr/lib32/libssl.a"
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    # Keep the generated configuration for each ABI.
+    mv "$PKG/usr/include/openssl/configuration.h" "$PKG/usr/include/openssl/configuration-64.h"
+    install -m644 "DESTDIR/usr/include/openssl/configuration.h" "$PKG/usr/include/openssl/configuration-32.h"
+    printf '%s\n' \
+        '#if defined(__i386__)' \
+        '#include "configuration-32.h"' \
+        '#else' \
+        '#include "configuration-64.h"' \
+        '#endif' > "$PKG/usr/include/openssl/configuration.h"
+    # Keep the generated configuration for each ABI.
+    mv "$PKG/usr/include/openssl/opensslconf.h" "$PKG/usr/include/openssl/opensslconf-64.h"
+    install -m644 "DESTDIR/usr/include/openssl/opensslconf.h" "$PKG/usr/include/openssl/opensslconf-32.h"
+    printf '%s\n' \
+        '#if defined(__i386__)' \
+        '#include "opensslconf-32.h"' \
+        '#else' \
+        '#include "opensslconf-64.h"' \
+        '#endif' > "$PKG/usr/include/openssl/opensslconf.h"
+    rm -rf DESTDIR
 }

@@ -1,21 +1,45 @@
 # description : hardware temp monitor
-# depends : which
+# depends     : which
 
 name=lm-sensors
 version=3.6.2
-release=1
+release=2
 
 _version=${version//./-}
 source="${name}-${version}.tar.gz::https://github.com/hramrach/${name}/archive/refs/tags/V${_version}.tar.gz"
 
-build()
-{
-	cd "$SRC"/lm-sensors*/
-	make PREFIX=/usr        \
-     BUILD_STATIC_LIB=0 \
-     MANDIR=/usr/share/man
+build() {
+    # 64-bit build.
+    cd "$SRC"/lm-sensors*/
+    mkdir -p build build32
+    tar --exclude=./build --exclude=./build32 -cf - . | tar -xf - -C build
+    cp -a build/. build32/
+    cd build
 
-     make DESTDIR=$PKG PREFIX=/usr        \
-     BUILD_STATIC_LIB=0 \
-     MANDIR=/usr/share/man install
+    make PREFIX=/usr \
+        BUILD_STATIC_LIB=0 \
+        MANDIR=/usr/share/man
+
+    make DESTDIR=$PKG PREFIX=/usr \
+        BUILD_STATIC_LIB=0 \
+        MANDIR=/usr/share/man install
+
+    # 32-bit build.
+    cd ../build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    make CC="$CC" PREFIX=/usr LIBDIR=/usr/lib32 BUILD_STATIC_LIB=0 MANDIR=/usr/share/man
+    make CC="$CC" DESTDIR="$PWD/DESTDIR" PREFIX=/usr LIBDIR=/usr/lib32 BUILD_STATIC_LIB=0 MANDIR=/usr/share/man install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

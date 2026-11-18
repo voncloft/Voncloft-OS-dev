@@ -1,0 +1,16 @@
+# description	: Valve's digital software delivery system
+# depends : xorgproto xcb-proto libxau libx11 libxshmfence xdg-user-dirs lsof curl libglvnd mesa alsa-lib
+
+name=steam
+version=1.0.0.87
+release=3
+source="https://repo.steampowered.com/$name/pool/$name/s/$name/${name}_$version.tar.gz"
+
+build() {
+	cd $name-launcher
+	
+	make DESTDIR=$PKG install
+
+	# blank steamdeps because apt-get
+	ln -sf /bin/true $PKG/usr/bin/steamdeps
+}

@@ -8,7 +8,6 @@
 #Core
 /usr/Voncloft-OS/core   https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/core
 /usr/Voncloft-OS/hardware       https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/hardware
-/usr/Voncloft-OS/multilib       https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/multilib
 
 #DE
 /usr/Voncloft-OS/cinnamon     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/cinnamon

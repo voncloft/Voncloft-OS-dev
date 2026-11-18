@@ -1,15 +1,52 @@
-# description	: Plugins for various audio libraries and sound servers
-# depends	: alsa-lib
+# description : Plugins for various audio libraries and sound servers
+# depends     : alsa-lib
 
 name=alsa-plugins
 version=1.2.12
-release=1
+release=2
 source="ftp://ftp.alsa-project.org/pub/plugins/$name-$version.tar.bz2"
 
 build() {
-	cd $name-$version
-	./configure --prefix=/usr --sysconfdir=/etc
-	make
-	make DESTDIR=$PKG install
+    # 64-bit build.
+    cd $name-$version
+    mkdir -p build
+    cd build
 
+    ../configure \
+        --prefix=/usr \
+        --sysconfdir=/etc
+    make
+    make DESTDIR=$PKG install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    ../configure \
+        --prefix=/usr \
+        --libdir=/usr/lib32 \
+        --host=i686-pc-linux-gnu \
+        --sysconfdir=/etc \
+        --disable-static \
+        --disable-jack \
+        --disable-pulse \
+        --disable-samplerate \
+        --disable-lavrate \
+        --disable-avtp
+    make
+    make DESTDIR="$PWD/DESTDIR" install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

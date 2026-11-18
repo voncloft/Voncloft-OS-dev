@@ -1,13 +1,15 @@
-# depends : bison cbindgen elfutils flex glslang libclc libdrm libglvnd libva libvdpau llvm make-ca meson ninja pkgconf python-mako python-packaging python-yaml rust rust-bindgen wayland-protocols xorg-libraries
+# depends     : bison cbindgen elfutils flex glslang libclc libdrm libglvnd libva libvdpau llvm make-ca meson ninja pkgconf python-mako python-packaging python-yaml rust rust-bindgen wayland-protocols xorg-libraries spirv-llvm-translator spirv-tools wayland
 # description : OpenGL compatible 3D graphics library
 
 name=mesa
 version=26.3.0
-release=3
+release=4
 source="https://mesa.freedesktop.org/archive/$name-$version.tar.xz"
+source="$source mesa-32.ini"
 options="!checksum"
 
 build() {
+    # 64-bit build.
     cd "$name-$version"
     # Scratch runs under sudo's restricted PATH; Rust is installed under /opt/rustc.
     export PATH="/opt/rustc/bin:$PATH"
@@ -31,4 +33,40 @@ build() {
         -Dlibunwind=disabled
     ninja -C build
     DESTDIR="$PKG" ninja -C build install
+
+    # 32-bit build.
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+    export BINDGEN_EXTRA_CLANG_ARGS=-m32
+
+    meson setup .. \
+        --cross-file "$SRC/mesa-32.ini" \
+        --prefix=/usr \
+        --libdir=lib32 \
+        --buildtype=release \
+        --wrap-mode=nofallback \
+        -Dplatforms=x11,wayland \
+        -Dgallium-drivers=auto \
+        -Dvulkan-drivers=auto \
+        -Degl=enabled \
+        -Dglvnd=enabled \
+        -Dgles1=disabled \
+        -Dvalgrind=disabled \
+        -Dvideo-codecs=all \
+        -Dlibunwind=disabled
+    ninja
+    DESTDIR="$PWD/DESTDIR" ninja install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

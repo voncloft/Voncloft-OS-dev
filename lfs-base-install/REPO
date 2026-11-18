@@ -146,8 +146,8 @@ f:2169576f90d68be87f8f0ec8fd101eab:linux-desktop/.config
 f:f3962fe7a8cdb902d674369422a3d673:linux-desktop/spkgbuild
 f:262eda046c808cedb749b7f139f4233e:linux-desktop/override
 f:3940f4676826e838e1a6ef73789f0a32:man-db/.pkgfiles
-f:f1813ee90d41118660778b979ec6736c:man-db/CHANGELOG
-f:9ceb0b40f41dbc17d0897fe28a1d7c70:man-db/spkgbuild
+f:78690954467e67a687eda921f28555b7:man-db/CHANGELOG
+f:02422f09fb328a74676425514707257c:man-db/spkgbuild
 f:b9fdfface989f7ea19858a2a8638d461:man-db/override
 f:21bec7e525be46b5990e89b0b52fdb1c:coreutils/.pkgfiles
 f:1a6b5b58f1efbac6cd523bdc177ec870:coreutils/CHANGELOG
@@ -299,8 +299,8 @@ f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
 f:28acf778d3f8f79a92cebaa026355b44:grep/spkgbuild
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:019af9ada2e42bd8b019c499f688648c:flex/CHANGELOG
-f:45562c882c7eb99d2644714231745821:flex/spkgbuild
+f:7accacf6177ddc404ba577f2c1f61a0f:flex/CHANGELOG
+f:7a72b043623ff9e64c97055578e051a1:flex/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
 f:f7a299fd4fb7730bedb88cab80474a43:python-wheel/CHANGELOG
 f:4ecf94fde225a9ec2c615d040b270de9:python-wheel/spkgbuild

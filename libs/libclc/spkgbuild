@@ -1,22 +1,24 @@
 # description : OpenCL built-in libraries for LLVM
-# depends : cmake ninja llvm spirv-llvm-translator
+# depends     : cmake ninja llvm spirv-llvm-translator
 
 name=libclc
 version=23.1.5
-release=1
+release=2
 _name=llvm-project
 source="https://github.com/llvm/${_name}/releases/download/llvmorg-${version}/${_name}-${version}.src.tar.xz"
 options="!checksum"
 
-build()
-{
+build() {
     cd "$SRC/${_name}-${version}.src/${name}"
     # LLVM 23 builds each runtime target separately with an existing Clang.
     # All outputs are target-qualified inside the one libclc package.
     for _target in amdgcn-amd-amdhsa nvptx64-nvidia-cuda \
-                   spirv32-unknown-unknown spirv64-unknown-unknown \
-                   spirv32-unknown-vulkan spirv64-unknown-vulkan; do
-        cmake -S . -B "build-${_target}" -G Ninja \
+        spirv32-unknown-unknown spirv64-unknown-unknown \
+        spirv32-unknown-vulkan spirv64-unknown-vulkan; do
+        cmake \
+            -S . \
+            -B "build-${_target}" \
+            -G Ninja \
             -DCMAKE_INSTALL_PREFIX=/usr \
             -DCMAKE_BUILD_TYPE=Release \
             -DCMAKE_C_COMPILER=clang \
@@ -29,3 +31,5 @@ build()
         DESTDIR="$PKG" ninja -C "build-${_target}" install
     done
 }
+
+# This package already supplies the shared host tool or all required targets.

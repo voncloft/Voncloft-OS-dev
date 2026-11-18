@@ -45,8 +45,8 @@ f:b75df51efa13513efdf0ecf1325f65d5:blacklist-youtubeads/CHANGELOG
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
 f:bb19e1d4c8b4936a4bae1aa37cee24be:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
-f:f2d3339f01a14de76126293501626eb1:homeassistant/CHANGELOG
-f:ef92b27218babee983720b04653b7440:homeassistant/spkgbuild
+f:5fdd53c6b34d9deaf38fc73e2e411eb9:homeassistant/CHANGELOG
+f:40d0f6e0b1403927d2c7ceb1b13d03e7:homeassistant/spkgbuild
 f:901281fc384dea63a384ef8af2777efc:samba/.pkgfiles
 f:98abcdacd06a8e4210d34c58b93464d4:samba/samba
 f:c65f2e42ce19954986906299c2b8851f:samba/post-upgrade.sh
@@ -131,12 +131,12 @@ f:2198e71661171aba95734cf94ffb58fe:php/post-install.sh
 f:e1007a97d444275b4a98cd559b64ef7e:php/spkgbuild
 f:ccee3b154facffac0d200a451f231f92:php/override
 f:cdbf9b3e951732f764bfbdbbf72f1fc9:radicale/post-upgrade.sh
-f:7b5616fd7fea84c34a8670daf5ef08c2:radicale/CHANGELOG
+f:48af7b10d01bf3aca4653d2b243ddc41:radicale/CHANGELOG
 f:1f6f6181709e035e9125a442d859c556:radicale/radicale
 f:cdbf9b3e951732f764bfbdbbf72f1fc9:radicale/post-install.sh
 f:ba45b98ad6a1419b38d5218c76b1ba50:radicale/config
 f:f6410ce9ac9b667a5150d4893eb55ff6:radicale/users
-f:508f6ea9d880333a181af5260292de5d:radicale/spkgbuild
+f:92b44c908d5aa7e91e1b8e71289cfe3e:radicale/spkgbuild
 f:0b43eedc7a0ffa23312207c8196ab128:httpup/CHANGELOG
 f:8753ed845027fab72a271de72c2f4285:httpup/spkgbuild
 f:5aef4007b5b0aee86a7bc3e89e43d365:httpup/override
@@ -153,9 +153,9 @@ f:7af2bc4dd9c88cc95ae96b7c338dd102:toolbox/createpackage
 f:a93c79689c830747b1a04aeeceaf10f8:toolbox/update-lfs-build
 f:87ed823a0a883eeb491aad8e40f13af2:toolbox/update-scratchpkg
 f:3dd4aad9607de44d05d369b8ee95a6ed:toolbox/CHANGELOG
-f:9a31d3a0302b3ab314c056c5e4b91e7a:toolbox/update-rep
+f:f67dbf85a9d188b7a8c6a9f8d3daf2a5:toolbox/update-rep
 f:4c54b89390c33b5fbeebb32123c86fa1:toolbox/changelog
-f:0aa2a2200962ce86c34fd2e7b2854ef5:toolbox/spkgbuild
+f:840954b2958657d59abd717cf59585f1:toolbox/spkgbuild
 f:bc72b9671b5868525d81c846a6694c4c:toolbox/override
 f:36701c59fa6c88d0bf4ab8c90fb8afc6:toolbox/foltotar
 f:569a4fc59438e45704da3df6f43137b6:toolbox/pre-install.sh

@@ -1,9 +1,9 @@
-# depends : libxslt pcre2 python-docutils libffi zlib meson ninja pkgconf python python-mako python-markdown util-linux flex bison
+# depends     : libxslt pcre2 python-docutils libffi zlib meson ninja pkgconf python python-mako python-markdown util-linux flex bison
 # description : GLib libraries and GObject Introspection
 name=glib
 # GLib and GObject Introspection are updated together in this package.
 version=2.90.1+1.86.0
-release=1
+release=2
 _glib_version=${version%%+*}
 _gi_version=${version##*+}
 _gi_name=gobject-introspection
@@ -14,6 +14,12 @@ source="https://download.gnome.org/sources/${name}/${_glib_version%.*}/${name}-$
 noextract="${_gi_name}-${_gi_version}.tar.xz"
 
 build() {
+    # 64-bit build.
+    local saved_PATH="${PATH-}"
+    local saved_LD_LIBRARY_PATH="${LD_LIBRARY_PATH-}"
+    local saved_XDG_DATA_DIRS="${XDG_DATA_DIRS-}"
+    local saved_GI_TYPELIB_PATH="${GI_TYPELIB_PATH-}"
+
     cd "$name-$_glib_version"
 
     # Keep the existing /usr/lib layout; the first pass bootstraps introspection.
@@ -63,8 +69,45 @@ build() {
     done
     test "$(pkg-config --variable=g_ir_scanner gobject-introspection-1.0)" = "$PKG/usr/bin/g-ir-scanner"
     # Meson caches pkg_config_path at initial setup, so update it explicitly.
-    meson setup --reconfigure build -Dintrospection=enabled \
+    meson setup build \
+        --reconfigure \
+        -Dintrospection=enabled \
         -Dpkg_config_path="$PKG_CONFIG_PATH"
     ninja -C build
     DESTDIR="$PKG" ninja -C build install
+
+    # 32-bit build.
+    mkdir -p build32
+    cd build32
+
+    export PATH="$saved_PATH"
+    export LD_LIBRARY_PATH="$saved_LD_LIBRARY_PATH"
+    export XDG_DATA_DIRS="$saved_XDG_DATA_DIRS"
+    export GI_TYPELIB_PATH="$saved_GI_TYPELIB_PATH"
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    meson setup .. \
+        --prefix=/usr \
+        --libdir=lib32 \
+        --libexecdir=lib32 \
+        --buildtype=release \
+        --wrap-mode=nofallback \
+        -Dtests=false \
+        -Dintrospection=disabled \
+        -Dglib_debug=disabled \
+        -Dman-pages=disabled \
+        -Dsysprof=disabled
+    ninja
+    DESTDIR="$PWD/DESTDIR" ninja install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

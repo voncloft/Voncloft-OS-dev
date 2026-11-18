@@ -1,23 +1,53 @@
 # description : generic purpose lossless compression algorithm
-# depends : gcc glibc
+# depends     : gcc glibc cmake ninja
 
 name=brotli
 version=1.2.1
-release=5
+release=6
 
 source="brotli-$version.tar.gz::https://github.com/google/${name}/archive/v$version.tar.gz"
 options="!checksum"
 
 build() {
-	cd $name-$version
-	mkdir build
-	cd build
-	cmake .. \
-	-DCMAKE_BUILD_TYPE=Release \
-	-DCMAKE_INSTALL_PREFIX=/usr \
-    	-DCMAKE_INSTALL_LIBDIR=lib \
-	-DBUILD_SHARED_LIBS=True
+    # 64-bit build.
+    cd $name-$version
+    mkdir build
+    cd build
+    cmake .. \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib \
+        -DBUILD_SHARED_LIBS=True
 
-	make 
-	make DESTDIR=$PKG install
-}	
+    make
+    make DESTDIR=$PKG install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    cmake .. \
+        -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib32 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_LIBRARY_PATH=/usr/lib32 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DBUILD_SHARED_LIBS=ON
+    cmake --build .
+    DESTDIR="$PWD/DESTDIR" cmake --install .
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
+}

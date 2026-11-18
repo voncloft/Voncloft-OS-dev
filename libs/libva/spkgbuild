@@ -1,17 +1,46 @@
-# description	: Library which provides access to hardware accelerated video processing
-# depends	: xorg-libraries libdrm
+# description : Library which provides access to hardware accelerated video processing
+# depends     : xorg-libraries libdrm meson ninja wayland
 name=libva
 version=2.24.1
-release=2
+release=3
 source="https://github.com/intel/${name}/archive/$version/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+    # 64-bit build.
+    cd $name-$version
 
-	mkdir bld
-	cd bld
-	meson setup --prefix=/usr --buildtype=release
-	ninja
-	DESTDIR=$PKG ninja install
+    mkdir build
+    cd build
+    meson setup \
+        --prefix=/usr \
+        --buildtype=release
+    ninja
+    DESTDIR=$PKG ninja install
 
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    meson setup .. \
+        --prefix=/usr \
+        --libdir=lib32 \
+        --libexecdir=lib32 \
+        --buildtype=release \
+        --wrap-mode=nofallback
+    ninja
+    DESTDIR="$PWD/DESTDIR" ninja install
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

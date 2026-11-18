@@ -50,10 +50,9 @@ f:b4588c9b0b2b370b6ab674faeca44c41:xkbcomp/.pkgfiles
 f:cc708168e8b0d3723cfa02b7f8f5a78f:xkbcomp/CHANGELOG
 f:701728659e5e5604c7330dccb5f25c4a:xkbcomp/spkgbuild
 f:b3ad483e9e8bd4dfdb41fe7233012326:xkbcomp/override
-f:36867ac59156894b1a9f668ae4c6787f:llvm/.pkgfiles
 f:295c343dcd457dc534662f011d7cff1a:llvm/llvm-config.h
 f:df5ee6fc6ec5f4140e83d0224f1f606a:llvm/CHANGELOG
-f:e60bf0d7c0ac44b0ba56504254d546a8:llvm/spkgbuild
+f:8f54e9708b415c43f08bda8ac56078a3:llvm/spkgbuild
 f:2466df1745ad3c6b0ce8e69571eaa76c:llvm/override
 f:871ab997ddbbff7d0c9d8b1f54a3dbbc:ruby/.pkgfiles
 f:9ec83e2ad014425df64ab4f0cef0b1d9:ruby/CHANGELOG
@@ -84,12 +83,11 @@ f:457bb0590eb8ddf864d006706c0f2098:gdb/spkgbuild
 f:1c7a10029f94062f0ef3b0da13132afc:autoconf-archive/.pkgfiles
 f:6e4b2778397cdd3d3ceb263f4d6d1795:autoconf-archive/CHANGELOG
 f:99a249a0bbbfe499d4893c107fc27ded:autoconf-archive/spkgbuild
-f:f9db8376de6c878b15963901bb125399:rust/.pkgfiles
 f:efc0440e5ca259e93bcd80f291c0fe25:rust/spkgbuild.1
 f:29f5be29852ef45a9cc2e52fc3f77df9:rust/0001-bootstrap-Change-libexec-dir.patch
 f:2f6e848396c21d830e7c55ce9634468c:rust/CHANGELOG
 f:707ef2e3d130fd97ba1769d8a128b008:rust/0001-cargo-Change-libexec-dir.patch
-f:3e6fc6b630959b2ba18292094706b35f:rust/spkgbuild
+f:232fa499659814cba24fbbd3adbd751a:rust/spkgbuild
 f:9e2fad33a490d0cfd0d7a21ad752afca:rust/override
 f:17bce39decd9d28762bec45f22cdb2b8:rust/spkgbuild-broken-dontknowwhy
 f:70861d1e87e9b6477b3c0481d6207885:rust/0002-compiler-Change-LLVM-targets.patch

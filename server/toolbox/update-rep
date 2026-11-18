@@ -1,5 +1,4 @@
 httpup-repgen /Voncloft-OS/core
-httpup-repgen /Voncloft-OS/multilib
 httpup-repgen /Voncloft-OS/nonfree
 httpup-repgen /Voncloft-OS/qt
 httpup-repgen /Voncloft-OS/lxde

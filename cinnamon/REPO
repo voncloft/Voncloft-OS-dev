@@ -83,7 +83,7 @@ f:8ea9d8770ac61a17fd562ba8537d2ba1:evolution-data-server/spkgbuild
 f:5128723c35abcfd2a0d98905da847dac:rarian/spkgbuild
 f:5ff70c79ad0cc8885898ec288d474543:rarian/override
 f:a82ccb85f0ace22b25bf002e885408db:clutter/spkgbuild
-f:9974bb00b5534b76664a52e7c84fbc80:muffin/CHANGELOG
-f:99d562a18f22e9aab1ae29374cf85b1d:muffin/spkgbuild
+f:1b96074b7fe4fd1db2178b29008e7e0f:muffin/CHANGELOG
+f:d3aa0aecf3ea44c8f5ca3174e5e32bcb:muffin/spkgbuild
 f:a5da7a8359e21530a3962a7db2bec843:muffin/override
 f:9d2de6a845bbeca9cc57857be02da3be:.httpup-repo.current

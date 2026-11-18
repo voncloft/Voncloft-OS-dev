@@ -1,5 +1,0 @@
-# This package has no independent, automatically applicable upstream release.
-source=local
-url=$source
-update_repo_skip='Locally maintained recipe or dependency bundle; no separate upstream release.'
-update_repo_skip_status='Local package'

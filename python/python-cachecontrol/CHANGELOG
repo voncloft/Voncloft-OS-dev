@@ -187,3 +187,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 0.14.3 to version 0.14.4
+
+----------------------------------------------------------------
+
+Date: Tue Nov 17 03:59:50 EST 2026
+
+Version=0.15.0
+Release=3
+
+Synopsis:
+Changed from version 0.14.4 to version 0.15.0

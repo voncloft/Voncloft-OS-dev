@@ -1,21 +1,52 @@
-# description   : The Vulkan-Loader package contains a library which provides the Vulkan API and provides core support for graphics drivers for Vulkan
-# depends       : cmake vulkan-headers xorg-libraries wayland
+# description : The Vulkan-Loader package contains a library which provides the Vulkan API and provides core support for graphics drivers for Vulkan
+# depends     : cmake vulkan-headers xorg-libraries wayland ninja
 
 name=vulkan-loader
 version=1.4.368
-release=1
+release=2
 _name=Vulkan-Loader
 source=" https://github.com/KhronosGroup/${_name}/archive/v${version}/${_name}-${version}.tar.gz"
 options="!checksum"
 
 build() {
-        cd *
-        mkdir build 
-cd    build 
-cmake -D CMAKE_INSTALL_PREFIX=/usr   \
--D CMAKE_BUILD_TYPE=Release    \
--D CMAKE_SKIP_INSTALL_RPATH=ON \
--G Ninja .. 
-ninja
-DESTDIR=$PKG ninja install
+    # 64-bit build.
+    cd "${_name}-${version}"
+    mkdir build
+    cd build
+    cmake .. \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=Release \
+        -D CMAKE_SKIP_INSTALL_RPATH=ON \
+        -G Ninja
+    ninja
+    DESTDIR=$PKG ninja install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    cmake .. \
+        -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib32 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_LIBRARY_PATH=/usr/lib32 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_SKIP_INSTALL_RPATH=ON
+    cmake --build .
+    DESTDIR="$PWD/DESTDIR" cmake --install .
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }

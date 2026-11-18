@@ -1,26 +1,56 @@
-# description	: A fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression
-# depends	: yasm cmake
+# description : A fork of the original IJG libjpeg which uses SIMD to accelerate baseline JPEG compression and decompression
+# depends     : yasm cmake
 
 name=libjpeg-turbo
 version=3.0.1
-release=1
+release=2
 source="https://downloads.sourceforge.net/$name/$name-$version.tar.gz"
 
 build() {
-	cd $name-$version
+    # 64-bit build.
+    cd $name-$version
 
-	mkdir build
-	cd    build
-	
-	
-cmake -D CMAKE_INSTALL_PREFIX=/usr        \
-      -D CMAKE_BUILD_TYPE=RELEASE         \
-      -D ENABLE_STATIC=FALSE              \
-      -D CMAKE_INSTALL_DEFAULT_LIBDIR=lib \
-      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
-      -D CMAKE_SKIP_INSTALL_RPATH=ON      \
-      -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/libjpeg-turbo-3.0.1 \
-	      ..
-	make
-	make DESTDIR=$PKG install
+    mkdir build
+    cd build
+
+    cmake .. \
+        -D CMAKE_INSTALL_PREFIX=/usr \
+        -D CMAKE_BUILD_TYPE=RELEASE \
+        -D ENABLE_STATIC=FALSE \
+        -D CMAKE_INSTALL_DEFAULT_LIBDIR=lib \
+        -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -D CMAKE_SKIP_INSTALL_RPATH=ON \
+        -D CMAKE_INSTALL_DOCDIR=/usr/share/doc/libjpeg-turbo-3.0.1
+    make
+    make DESTDIR=$PKG install
+
+    # 32-bit build.
+    cd ..
+    mkdir -p build32
+    cd build32
+
+    export CC="gcc -m32"
+    export CXX="g++ -m32"
+    export CFLAGS="$CFLAGS -m32"
+    export CXXFLAGS="$CXXFLAGS -m32"
+    export LDFLAGS="$LDFLAGS -m32"
+    export PKG_CONFIG_LIBDIR=/usr/lib32/pkgconfig:/usr/share/pkgconfig
+    export PKG_CONFIG_PATH="$PKG_CONFIG_LIBDIR"
+    unset LIBRARY_PATH CMAKE_PREFIX_PATH
+
+    cmake .. \
+        -G Ninja \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_INSTALL_LIBDIR=lib32 \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_LIBRARY_PATH=/usr/lib32 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+        -DCMAKE_INSTALL_DEFAULT_LIBDIR=lib32 \
+        -DENABLE_STATIC=OFF
+    cmake --build .
+    DESTDIR="$PWD/DESTDIR" cmake --install .
+
+    mkdir -p "$PKG/usr/lib32"
+    cp -a DESTDIR/usr/lib32/. "$PKG/usr/lib32/"
+    rm -rf DESTDIR
 }
