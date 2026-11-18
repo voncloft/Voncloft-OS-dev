@@ -2,7 +2,7 @@
 # depends : python python-cryptography jinja2 python-packaging python-paramiko python-yaml python-resolvelib python-typing_extensions
 
 name=ansible-core
-version=2.22.0
+version=3.10.0.2
 release=1
 
 _name=ansible

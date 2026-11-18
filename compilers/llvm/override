@@ -1,21 +1,37 @@
-# Track the upstream-designated stable release, excluding prereleases.
-source="https://api.github.com/repos/llvm/llvm-project/releases/latest"
+# Read GitHub's stable-release redirect without using the API quota.
+source="https://github.com/llvm/llvm-project/releases/latest"
 url=$source
+update_repo_fetch_kind=headers
 
 get_generic()
 {
     local detected
     unset uversion
-    detected=$(python3 - <<'PYUPSTREAM'
-import json,pathlib,re
-release=json.loads(pathlib.Path('index.html').read_text())
-if release.get('draft') or release.get('prerelease'):
-    raise SystemExit('Upstream response is not a stable release')
-match=re.fullmatch('llvmorg\\-([0-9]+(?:\\.[0-9]+)*)',release.get('tag_name',''))
-if not match: raise SystemExit('No matching stable release tag found')
-print(match[1].replace('.','.'))
-PYUPSTREAM
+    detected=$(python3 - <<'PYVERSION'
+import pathlib
+import re
+import sys
+from urllib.parse import unquote, urlsplit
+
+versions = []
+for line in pathlib.Path('index.html').read_text().splitlines():
+    if not line.lower().startswith('location:'):
+        continue
+    location = urlsplit(line.split(':', 1)[1].strip())
+    if location.netloc != 'github.com':
+        continue
+    match = re.fullmatch(
+        r'/llvm/llvm-project/releases/tag/llvmorg-([0-9]+(?:\.[0-9]+)+)',
+        unquote(location.path),
+    )
+    if match:
+        versions.append(match[1])
+if not versions:
+    print('ERROR: No stable LLVM release found in the redirect headers', file=sys.stderr)
+    sys.exit(1)
+print(max(versions, key=lambda value: tuple(map(int, value.split('.')))))
+PYVERSION
     ) || return 1
+    [ -n "$detected" ] || return 1
     uversion=$detected
-    [ -n "$uversion" ]
 }

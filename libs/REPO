@@ -397,8 +397,8 @@ f:bb1ea40b42a48c8d94c00db7898d91fb:libgit2/.pkgfiles
 f:894a5ac70203d6b43df1e26340b4414c:libgit2/CHANGELOG
 f:aff181e4d6f00dfec100ce876fc6e60f:libgit2/spkgbuild
 f:ac151e32ba475e79ca301066fdbc3cc8:libgit2/override
-f:ea414263d37b824afa3f8d96e3f105ff:libxfont2/CHANGELOG
-f:8f6b269dac7e1c3065960f6334160af9:libxfont2/spkgbuild
+f:47eace88085d53a5d9ca7b85dd81ed2f:libxfont2/CHANGELOG
+f:bab0858bf361dd99b0abcb47f7c36b0b:libxfont2/spkgbuild
 f:c1be35ec65f4e9dcb2c062425aec3e13:libxfont2/override
 f:833ea533d1d7ccc6c26066ed9c5ddc10:libxi/CHANGELOG
 f:b1f76df21e92f369ed9d3ab8d26d903b:libxi/spkgbuild
@@ -563,7 +563,8 @@ f:ebe250fec129077d6e345a57cd8b591f:abseil-cpp/.pkgfiles
 f:72d44caa6e6bd9506b034ab2ca6064d6:abseil-cpp/CHANGELOG
 f:e4b9597f0b138ea13ff5439ae6b261e5:abseil-cpp/spkgbuild
 f:c854b7265bb51c2895f9df78b23a5caf:abseil-cpp/override
-f:4eec6ebad5490020e3d60d6abd80e954:libmatemixer/spkgbuild
+f:709e67ec8eadcf7f1dfcbf977781d3d9:libmatemixer/CHANGELOG
+f:c432561c949345b1f2c25ba82e7e2ab8:libmatemixer/spkgbuild
 f:e12117c6abd826b462aa7f056671b61f:libtiff/CHANGELOG
 f:cd4e5421966cd4e7563be9058da58955:libtiff/spkgbuild
 f:9d0fccdbd8d9057937f5776f348643ea:libtiff/override
@@ -702,8 +703,8 @@ f:6b98075710c16b0d9cf812cbdc90cae4:confuse/spkgbuild
 f:4ff67c317d64f9993b72981342461805:gcab/CHANGELOG
 f:d406ec1dd76bd807cf0f4c96ee6f2c4c:gcab/spkgbuild
 f:36db3a72714ae3e71ab666bced9cd32d:libksba/.pkgfiles
-f:9da4d5ac44b62a7353e45d74247b214a:libksba/CHANGELOG
-f:a522313210c38f0557892ce233116456:libksba/spkgbuild
+f:9635d82d5f780f1208509101bf860bb3:libksba/CHANGELOG
+f:f5357d0b0b914a9bd0160b40ff1d8db3:libksba/spkgbuild
 f:ae0e3c50c1518211c407b50a6785fb7e:libxft/spkgbuild
 f:ff10d397bde10657bc334480b055fc21:libxft/override
 f:0cb21be5d29706914176f4a3513815a8:libappindicator/spkgbuild
@@ -745,8 +746,8 @@ f:b468f309261b478434e79bdb64c9ed2a:librsvg/CHANGELOG
 f:e45f933c032e083c25d4465c3b3a82bc:librsvg/spkgbuild
 f:42f25d1826b482166b5a2653cc8aead8:librsvg/override
 f:0bd895d621700adf117c828d6d5848d9:mariadb/spkgbuild
-f:47cea3f6286bbf3e50146ee61cf2c4c6:libcue/CHANGELOG
-f:905ad04340c7f7fa2b39ec623dd63fba:libcue/spkgbuild
+f:f4dbeee18cb2b2cc0e975735a0e9702a:libcue/CHANGELOG
+f:e62923c7fe504c4de77fde0309d8b8e6:libcue/spkgbuild
 f:affc7c820092dba1118d199a72f71a6d:shapelib/CHANGELOG
 f:f057713d0756fd3d1b13d96e2b838911:shapelib/spkgbuild
 f:5577b567527eb0c29a147b1bb685303d:shapelib/override
@@ -791,8 +792,8 @@ f:147a0fd2b8bebe59d7c02f4ac2501f4d:libxres/CHANGELOG
 f:b0f448abab5805f071532872d0370350:libxres/spkgbuild
 f:6b0d93e7e6d2c7811f954754ec8e1263:libxres/override
 f:7723915618263c159ebe5a156a4939c1:libnfs/.pkgfiles
-f:97970da00eb499412d1e30124edc9f5b:libnfs/CHANGELOG
-f:1f9bb94f2ee2dcd550a8f900d03932d8:libnfs/spkgbuild
+f:7ce20ffdd11c82e8d1a5d2d27041499f:libnfs/CHANGELOG
+f:6d77d4f5de3754b5c8802f0c691bfd32:libnfs/spkgbuild
 f:89a17e765c52f6a1bcc28a278ab8fc46:libblack-hole-solver/.pkgfiles
 f:c16156067cdc912b26a9e05ca8260d13:libblack-hole-solver/CHANGELOG
 f:576c95f8f12b743a303351f73ee0ce74:libblack-hole-solver/spkgbuild
@@ -816,8 +817,8 @@ f:ddd67a8585e39bc088ffa1a8c41512ff:libsndfile/.pkgfiles
 f:6b6ca91a1ec380b41d56771c1df006e5:libsndfile/CHANGELOG
 f:f8c8cb7af983e5527fbac8387303e028:libsndfile/spkgbuild
 f:e3c037aa2629b035c9446d18b8dae4dd:libsndfile/override
-f:0484deb866dc52345ff4c8d6310869b8:libfontenc/CHANGELOG
-f:55cf1f926d66eb2acf7b28ab78f12004:libfontenc/spkgbuild
+f:cb6205cabfaaf011f071671a53587ef3:libfontenc/CHANGELOG
+f:abebd135d600139d0728862fcc598e99:libfontenc/spkgbuild
 f:637c36c0e0ad4d3a430cf365b190fad7:xapp/CHANGELOG
 f:b5f938a2ff40333f5c7e0a644b92b877:xapp/spkgbuild
 f:ab8ca77860fb35bff9c409b0b1a24e89:libudfread/.pkgfiles
@@ -882,7 +883,8 @@ f:f2af210fe64521b12d08f86a341124f2:libnl/spkgbuild
 f:1c48b14cce5172a956b80430d2438fd2:libnl/override
 f:41b31e236b4b444b5e3f2121acde6146:serf/CHANGELOG
 f:973742c697cfc9e6da9183d45b5d005e:serf/spkgbuild
-f:cf603857b71db50cdea5d1dfc43b9e3d:libmateweather/spkgbuild
+f:96234a2924fd109f8933c34be08bad86:libmateweather/CHANGELOG
+f:28094fc247f64211aca092c3405d1d48:libmateweather/spkgbuild
 f:f53e376feb4b5cbbc8b4e2a7acd48f6d:libxss/.pkgfiles
 f:950531c8ee49032d5b0f896162677d1b:libxss/CHANGELOG
 f:2cba3e4ec9ee63cab41e11415629784b:libxss/spkgbuild
@@ -1178,8 +1180,8 @@ f:77f8b2fc90e0d345d29b9ace29f2e686:libdbusmenu/spkgbuild
 f:b58b78da790204a012a0e4e6da79bffe:glibmm/CHANGELOG
 f:e8c1d60ed2f65aa700841ea2d505af91:glibmm/spkgbuild
 f:a33b004442d5b76d0a4cd05ef844e86c:wcslib/spkgbuild
-f:e435f2ef43fbf5863717e2c7abbd7871:libclc/CHANGELOG
-f:beb09fbe549639786c90cc9a5e2f8c5f:libclc/spkgbuild
+f:1cbb2736e3546b32408dd17367138c38:libclc/CHANGELOG
+f:9331197cd9a508000cdba573e2f1848f:libclc/spkgbuild
 f:2d8e81a615d624176ed3dd3cfafd2159:libclc/override
 f:02f53cb3b067123d2b9e8c085816171b:libatomic_ops/.pkgfiles
 f:9cbc46f76d044886c6699f9bdcb146f0:libatomic_ops/CHANGELOG
@@ -1279,7 +1281,8 @@ f:91aad7bb7bb45f687e13e8ad2a71e5e5:libofx/CHANGELOG
 f:267e72b23898eed86dc88d1d4470c175:libofx/spkgbuild
 f:b7cc820dd57fc1ee4a277bbb25fd303b:libxv/spkgbuild
 f:2f696f82a884e4ae0030de849bf251b4:libxv/override
-f:7105a46924a6a6281b409d62e2ef8626:libmatekbd/spkgbuild
+f:59232cc6eaefdb872e386305b736beb4:libmatekbd/CHANGELOG
+f:608ff08d164dc892ca24171bd7c19a84:libmatekbd/spkgbuild
 f:07113a9be1c8e880191d36c5b816373a:libndp/.pkgfiles
 f:ad0567f2bade82575289bb9c3652657b:libndp/CHANGELOG
 f:733a8a491b46aa1a142a2b706abc87fd:libndp/spkgbuild
@@ -1314,8 +1317,8 @@ f:db006280e22e9cd7a1b34bf6e934c0ec:libxrandr/spkgbuild
 f:818c5d9f0f06937be942fee59f6b33c5:libxrandr/override
 f:7c78477f462e96af707404eaae3a6235:sdl3/CHANGELOG
 f:b4dfcd4cbcb45ed7ebc50e41b745a2bc:sdl3/spkgbuild
-f:ad57798c6e63f1ec3faed7144e9f27cb:liblxqt/CHANGELOG
-f:80ea773992aef9be23ee6c93d9799b3d:liblxqt/spkgbuild
+f:028cbdbd57c2ed923108a5f86f424dbf:liblxqt/CHANGELOG
+f:16a7c503c10ed2f0c65203e72e34297c:liblxqt/spkgbuild
 f:8acaf986a40c1ad6d8183862c7671acb:highway/.pkgfiles
 f:e4489bdaddd14dcee28c5609aac733d4:highway/spkgbuild
 f:24c4468f118abd8089feff4b7728d8cd:highway/override

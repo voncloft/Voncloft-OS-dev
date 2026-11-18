@@ -3,7 +3,7 @@
 
 name=scratchpkg
 version=20230109
-release=17
+release=18
 backup="etc/scratchpkg.conf
         etc/scratchpkg.alias
         etc/scratchpkg.repo

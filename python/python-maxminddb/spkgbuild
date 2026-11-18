@@ -2,7 +2,7 @@
 # depends : python libmaxminddb
 
 name=python-maxminddb
-version=3.2.0
+version=3.3.0
 release=3
 
 _name=MaxMind-DB-Reader-python

@@ -2,7 +2,7 @@
 # depends     : cmake ninja llvm spirv-llvm-translator
 
 name=libclc
-version=23.1.5
+version=23.1.6
 release=2
 _name=llvm-project
 source="https://github.com/llvm/${_name}/releases/download/llvmorg-${version}/${_name}-${version}.src.tar.xz"

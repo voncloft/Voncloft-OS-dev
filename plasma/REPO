@@ -255,8 +255,8 @@ f:e2ef8d0d1df3ab95ca0d14c3ab302b6c:plasma-login-manager/spkgbuild
 f:aa6947356dfa2a747552966be3855b7a:plasma-setup/CHANGELOG
 f:df247f848718e240943962169e1405ca:plasma-setup/spkgbuild
 f:ee87fd5f8c1cf861c1a94513398c4ae4:ktextaddons/.pkgfiles
-f:03e76c69afe9bb478ddd63b2c0c51ce9:ktextaddons/CHANGELOG
-f:8698b1638d11c02bee4a4ff50e26dac5:ktextaddons/spkgbuild
+f:1a8371c6e68303f6238ca5b3c724208d:ktextaddons/CHANGELOG
+f:bc83ceff4861cfc1d15ee26e49e33598:ktextaddons/spkgbuild
 f:feecc0216548cfec80cda0f680d4fb47:plasma-activities-stats/.pkgfiles
 f:63b327acabd8e64cd3a88703ec6f8631:plasma-activities-stats/CHANGELOG
 f:8725b0c675549c41c26e1e96e3602014:plasma-activities-stats/spkgbuild

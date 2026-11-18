@@ -2,7 +2,7 @@
 # description : Collection of modular and reusable compiler and toolchain technologies
 
 name=llvm
-version=23.1.5
+version=23.1.6
 release=3
 options="!checksum"
 backup="etc/clang/clang.cfg etc/clang/clang++.cfg"

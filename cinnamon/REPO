@@ -30,8 +30,8 @@ f:33a0008c01d581097d4ac68882fa3509:elogind/post-install.sh
 f:9730cf704f4a4296c5f86092ea96e2f6:elogind/spkgbuild
 f:262d394f8168379d8779d1c9b14d6559:cogl/spkgbuild
 f:8d5cc34a20a9ffbd6c2996e39baac8c9:rest/spkgbuild
-f:4b8c513bf2e5cfdf15bbe7555af60f1b:system-config-printer/CHANGELOG
-f:ea5afab15aacf2bab5585ee58b808178:system-config-printer/spkgbuild
+f:6056fef57e2500011c6e61a35efbb4ac:system-config-printer/CHANGELOG
+f:9c0d2f4a2724ebe48bb43594e5b81793:system-config-printer/spkgbuild
 f:8a85fdd343dedf0a243ec8d5d2ea8cf3:nm-connection-editor/CHANGELOG
 f:aefb029f786b0016dbaaf264955d1ebf:nm-connection-editor/spkgbuild
 f:457d71ebb7e7d055e4a86eefc66431b2:nm-connection-editor/override
@@ -66,10 +66,10 @@ f:9c85f5d2ae19e5a8a2487e5b8e850605:cinnamon-menus/spkgbuild
 f:a4325b711a25e9bf43b791312c92982b:cinnamon-settings-daemon/CHANGELOG
 f:d6648b17ee4eebfb8c9da98befe00b08:cinnamon-settings-daemon/spkgbuild
 f:96954475d3ee9e78b484de4655a28988:cinnamon/0001-cinnamon-settings-don-t-rely-on-the-presence-of-cinn.patch
-f:857d4446c5e6d3b8c45f0b1a0264d473:cinnamon/CHANGELOG
+f:9b516c284a2778e3a0db639b8fee703f:cinnamon/CHANGELOG
 f:b4f0e83c5d4db976c54379148db8b0c6:cinnamon/set_wheel.diff
 f:fb02bc7803ee4b118d06357500e97809:cinnamon/default-theme.patch
-f:088dd718f7497c1ef3c23a0d956858e1:cinnamon/spkgbuild
+f:ea3b26b29bf9ce8f21f4cbbf74b7b035:cinnamon/spkgbuild
 f:beba02387a88d189530458afd59301bc:alacarte/CHANGELOG
 f:d7466dfc919846d137d51c5563a5097f:alacarte/spkgbuild
 f:7f44c96c1d5fb1f296f2bd3192602c27:cinnamon-translations/CHANGELOG

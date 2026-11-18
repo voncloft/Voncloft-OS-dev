@@ -990,8 +990,8 @@ f:86b481048b8e04feb35b10bef941b023:gwenhywfar/override
 f:770f26510439c550832a292efbb286e4:runit/CHANGELOG
 f:1b1b53a2b238d0e2d91d718200bf1d3b:runit/spkgbuild
 f:3d5495c9db45828dea12d1241b9710ba:runit/override
-f:a1abac098fe322c0de0d23ee4e3f2031:webkitgtk/CHANGELOG
-f:96ea950e1e708cd890405eb42c282fee:webkitgtk/spkgbuild
+f:08f50f3ad5a429499d0952944ce34e3a:webkitgtk/CHANGELOG
+f:92c48eed1ae78388b9a7c2064b2a0925:webkitgtk/spkgbuild
 f:6b1d975373f83466f03c9ce146cdc4ed:webkitgtk/override
 f:008239ce3bbdb47b2b2281fcf3e25bc0:imagemagick6/CHANGELOG
 f:828cf532bee9cc8f862b8c5b604c4b2c:imagemagick6/spkgbuild
@@ -1538,9 +1538,9 @@ f:ebba201624090e31347227941b642602:fop/override
 f:60061558183308983e1dc47a32830598:fop/pre-install.sh
 f:da3acd3a32c6f5ce2a4333dbf3a6a2b5:at-spi2-atk/spkgbuild
 f:c7db3fdbc4b95dcf2ad833478600c91c:java-headless/.pkgfiles
-f:97eb0cd29d0b4cd954294be20459414c:java-headless/CHANGELOG
+f:aac8f5da458b20f3e9220440543de4c4:java-headless/CHANGELOG
 f:ecc63553466d7d6321650763d35c9cfe:java-headless/fetch-source.py
-f:fb5adbc3b1fd470e1d5c8822c8fdb305:java-headless/spkgbuild
+f:194412f49fcc21e074465a377fccaa67:java-headless/spkgbuild
 f:c2df983d6a22e450c49e085587aa6424:java-headless/override
 f:b0c5bfffc94b3566af98396753f0cc62:zxing-cpp/.pkgfiles
 f:85ba664f389cb926d80dfb573cc3d5af:zxing-cpp/CHANGELOG
@@ -1879,8 +1879,8 @@ f:f6493461cd9eecd1e4dc01bcd2d39def:iotop-fukt/override
 f:d4b1ff77ab64e6ab30c26f9337e479ae:potrace/spkgbuild
 f:305cb250d232e8c11d6669aa598adeb8:faad2/CHANGELOG
 f:9e5e2e5599fbec2fb9c8d54451fedb25:faad2/spkgbuild
-f:16fc27aeffbbc80dfb3846797afe29ac:hugo/CHANGELOG
-f:5f38f86fd4df80bb25a563fabda2c4cb:hugo/spkgbuild
+f:353116493188b80fee5eae451890e038:hugo/CHANGELOG
+f:b4f5ef7b055fdc2f7fdd3eff6e45ac21:hugo/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:expect/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:expect/.nanorc
 f:49906608eb95e6cfccdd90c49b5880e7:expect/CHANGELOG
@@ -1899,7 +1899,7 @@ f:710ae78b911eb4ef2b418f16a3e59b70:scratchpkg/.pkgfiles
 f:7f6e800d6e898b4d75d3965326691d74:scratchpkg/checked-ownership-handoffs.patch
 f:0bf2840658941a97f189fd2a2dfbbb0a:scratchpkg/adopt-legacy-install.py
 f:73e8e98b74769be6e6eed676905201de:scratchpkg/transaction.py
-f:d0d1e492c33b28296a0266c2f64ea63e:scratchpkg/scratchpkg.repo
+f:aae6c1c4f41b5625f5d7746b88e90acc:scratchpkg/scratchpkg.repo
 f:f87a869774a941a1746d091a87c2b785:scratchpkg/preserve-shared-ownership.patch
 f:2f530d5b0c132755042984664e3aed52:scratchpkg/verify-source-download.patch
 f:f98030ed81d0f9548c7e878fd39614c4:scratchpkg/scratchpkg.conf
@@ -1922,7 +1922,7 @@ f:ee57c17c776153be26674dafd42cb983:scratchpkg/scratchpkg.mask
 f:dcd93abe4f65d4768c618dc6acd4ca1f:scratchpkg/revdep
 f:83d69ada1d9248ce1c157a38b76a0804:scratchpkg/canonical-hwdb-trigger.patch
 f:a1de098fb848a6934d74f507727264b1:scratchpkg/reject-shared-payload.patch
-f:a1665ecfa9b9c2fb5105dac50ef4918f:scratchpkg/spkgbuild
+f:cae81db4e7930efee246be7e8f277d44:scratchpkg/spkgbuild
 f:2a2020e4e03300f36b964c14514e20ef:scratchpkg/clean-cache.patch
 f:ef535b90b72e0491c0941229a8eefee8:scratchpkg/pkgadd-lock-ownership.patch
 f:2c2026e92104bb51cf8e13b8cee4cd9b:scratchpkg/abort-extraction-errors.patch

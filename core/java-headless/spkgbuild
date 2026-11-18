@@ -2,7 +2,7 @@
 # depends : alsa-lib cups giflib lcms2 xorg-libraries python
 
 name=java-headless
-version=27.0.1.0.2
+version=27.0.1.0.3
 release=12
 
 source="${name}-${version}-archive.html::https://jdk.java.net/archive/

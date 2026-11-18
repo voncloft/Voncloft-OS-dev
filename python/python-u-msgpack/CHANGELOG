@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.7.1 to version 2.7.2
+
+----------------------------------------------------------------
+
+Date: Wed Nov 18 03:46:10 EST 2026
+
+Version=5.0.1
+Release=1
+
+Synopsis:
+Changed from version 2.7.2 to version 5.0.1

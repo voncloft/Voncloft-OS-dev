@@ -6,38 +6,43 @@
 #
 
 #Core
-/usr/Voncloft-OS/core   https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/core
-/usr/Voncloft-OS/hardware       https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/hardware
+/sources/Voncloft-OS-dev/core   https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/core
+/sources/Voncloft-OS-dev/hardware       https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/hardware
+/sources/Voncloft-OS-dev/boot-scripts https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/boot-scripts
+#/sources/Voncloft-OS-dev/lfs-base-install       https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/lfs-base-install
 
 #DE
-/usr/Voncloft-OS/cinnamon     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/cinnamon
-/usr/Voncloft-OS/displaym       https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/displaym
-/usr/Voncloft-OS/gnome  https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/gnome
-/usr/Voncloft-OS/kde     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/kde
-/usr/Voncloft-OS/kf5     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/kf5
-/usr/Voncloft-OS/lxde   https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/lxde
-/usr/Voncloft-OS/mate     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/mate
-/usr/Voncloft-OS/plasma     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/plasma
-/usr/Voncloft-OS/qt     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/qt
-/usr/Voncloft-OS/xfce     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/xfce
-/usr/Voncloft-OS/xorg   https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/xorg
+#/sources/Voncloft-OS-dev/cinnamon     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/cinnamon
+/sources/Voncloft-OS-dev/displaym       https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/displaym
+/sources/Voncloft-OS-dev/kde     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/kde
+/sources/Voncloft-OS-dev/kf     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/kf
+/sources/Voncloft-OS-dev/lxde   https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/lxde
+/sources/Voncloft-OS-dev/mate     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/mate
+/sources/Voncloft-OS-dev/plasma     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/plasma
+/sources/Voncloft-OS-dev/qt     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/qt
+/sources/Voncloft-OS-dev/xfce     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/xfce
+/sources/Voncloft-OS-dev/xorg   https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/xorg
 
 #Programming
-/usr/Voncloft-OS/compilers      https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/compilers
-/usr/Voncloft-OS/libs   https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/libs
-/usr/Voncloft-OS/perl     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/perl
-/usr/Voncloft-OS/python https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/python
-/usr/Voncloft-OS/ruby-gems     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/ruby-gems
+/sources/Voncloft-OS-dev/compilers      https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/compilers
+/sources/Voncloft-OS-dev/libs   https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/libs
+/sources/Voncloft-OS-dev/perl     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/perl
+/sources/Voncloft-OS-dev/python https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/python
+/sources/Voncloft-OS-dev/ruby-gems     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/ruby-gems
 
 #Router
-/usr/Voncloft-OS/boot-scripts-server    https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/boot-scripts-server
-/usr/Voncloft-OS/firewall       https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/firewall
-/usr/Voncloft-OS/networking     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/networking
-/usr/Voncloft-OS/server https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/server
+#/sources/Voncloft-OS-dev/boot-scripts-server    https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/boot-scripts-server
+#/sources/Voncloft-OS-dev/firewall       https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/firewall
+/sources/Voncloft-OS-dev/networking     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/networking
+#/sources/Voncloft-OS-dev/server https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/server
 
 #Programs
-/usr/Voncloft-OS/extra  https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/extra
-/usr/Voncloft-OS/fonts  https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/fonts
-/usr/Voncloft-OS/kde-apps     https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/kde-apps
-/usr/Voncloft-OS/media  https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/media
-/usr/Voncloft-OS/nonfree        https://raw.githubusercontent.com/voncloft/Voncloft-OS/master/nonfree
+/sources/Voncloft-OS-dev/extra  https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/extra
+/sources/Voncloft-OS-dev/fonts  https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/fonts
+/sources/Voncloft-OS-dev/kde-apps     https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/kde-apps
+/sources/Voncloft-OS-dev/media  https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/media
+/sources/Voncloft-OS-dev/nonfree        https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/nonfree
+
+#personal
+#/sources/Voncloft-OS-dev/personal-repository	http://voncloft.dnsfor.me/packages/Voncloft-OS-dev/programs
+#/sources/Voncloft-OS-dev/beta	https://raw.githubusercontent.com/voncloft/Voncloft-OS-dev/refs/heads/master/beta

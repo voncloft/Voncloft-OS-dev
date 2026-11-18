@@ -1,6 +1,5 @@
 d:waf
 d:clang
-d:llvm-old-2023-06-07
 d:glslang
 d:zig
 d:ninja
@@ -15,7 +14,6 @@ d:meson
 d:gdb
 d:autoconf-archive
 d:rust
-d:llvm-bak
 d:autoconf2.13
 d:pkgconf
 d:nasm
@@ -29,11 +27,8 @@ d:automake
 d:cmake
 d:luajit
 f:f770061b424d3ee883cf84df10c9e2a3:waf/spkgbuild
-f:84566cb662d2f9dc196c06bfb5f2fb5b:clang/CHANGELOG
-f:ddd1390120a3fc75460ef8c6aa573398:clang/spkgbuild
-f:295c343dcd457dc534662f011d7cff1a:llvm-old-2023-06-07/llvm-config.h
-f:b95ed377b972984664936b466fa73601:llvm-old-2023-06-07/CHANGELOG
-f:49269f887d3a0609924154d337fe13ca:llvm-old-2023-06-07/spkgbuild
+f:9c5c0d9edfefaf2c870fbf7544e11f73:clang/CHANGELOG
+f:0679d3837dd3e1e5c9690f9c4372ebf6:clang/spkgbuild
 f:c2988c5f8608f2d45dfee303b64ba217:glslang/.pkgfiles
 f:175f0f89149984a24eca7be40b866fea:glslang/CHANGELOG
 f:141ad4e95146139f0463b79f2264bbab:glslang/spkgbuild
@@ -52,8 +47,8 @@ f:701728659e5e5604c7330dccb5f25c4a:xkbcomp/spkgbuild
 f:b3ad483e9e8bd4dfdb41fe7233012326:xkbcomp/override
 f:295c343dcd457dc534662f011d7cff1a:llvm/llvm-config.h
 f:df5ee6fc6ec5f4140e83d0224f1f606a:llvm/CHANGELOG
-f:8f54e9708b415c43f08bda8ac56078a3:llvm/spkgbuild
-f:2466df1745ad3c6b0ce8e69571eaa76c:llvm/override
+f:6dfd7226d8d247a067876011204ecdd3:llvm/spkgbuild
+f:d1e32c6cca2a56f5adda4b61f979f485:llvm/override
 f:871ab997ddbbff7d0c9d8b1f54a3dbbc:ruby/.pkgfiles
 f:9ec83e2ad014425df64ab4f0cef0b1d9:ruby/CHANGELOG
 f:9062ce0fc10070888ccd3a6e49cfc407:ruby/spkgbuild
@@ -61,8 +56,8 @@ f:8133a4c0fda56deae172a292888c0dae:ruby/override
 f:7468daddede439947d1a8269c1e7fa3c:corrosion/.pkgfiles
 f:2527cb46ccfb51a24464573374ca8a6d:corrosion/spkgbuild
 f:48836ed2284a7e388522deab27613e41:lld/.pkgfiles
-f:f7e84f444bb12d6321f4880e0af6cb2f:lld/CHANGELOG
-f:3d2ee63ce06f03957420f2f8fc28969d:lld/spkgbuild
+f:4bfc44600bf62ec3f7201cf0f14ace89:lld/CHANGELOG
+f:053508d8f6146f32a05dc0b0a0f936f1:lld/spkgbuild
 f:2b339b8029b83874f9f181bee2a8a083:lld/spkgbuild.save
 f:604a42316c23625b7d6b61d3e5944a53:gcc/.pkgfiles
 f:da96f545b863e57c6ab2598c1ea9a740:gcc/c99
@@ -91,9 +86,6 @@ f:232fa499659814cba24fbbd3adbd751a:rust/spkgbuild
 f:9e2fad33a490d0cfd0d7a21ad752afca:rust/override
 f:17bce39decd9d28762bec45f22cdb2b8:rust/spkgbuild-broken-dontknowwhy
 f:70861d1e87e9b6477b3c0481d6207885:rust/0002-compiler-Change-LLVM-targets.patch
-f:295c343dcd457dc534662f011d7cff1a:llvm-bak/llvm-config.h
-f:b95ed377b972984664936b466fa73601:llvm-bak/CHANGELOG
-f:f102f0604eadeb05a56850ddad9cea3e:llvm-bak/spkgbuild
 f:9ceaee69e62767770eb473d5242db70d:autoconf2.13/autoconf-2.13-consolidated_fixes-1.patch
 f:768b80c6d5aa5e9a626099792c43b89c:autoconf2.13/.pkgfiles
 f:38e3a75f745c5ea07dd635539182bf76:autoconf2.13/spkgbuild

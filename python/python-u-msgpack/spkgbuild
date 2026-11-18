@@ -3,7 +3,7 @@
     # depends : python
 
 name=python-u-msgpack
-version=2.7.2
+version=5.0.1
 release=1
 
 _name=u-msgpack-python
