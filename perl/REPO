@@ -1268,8 +1268,8 @@ f:c0a3c700bde8a9aacafd6832b0b2e728:perl-sub-name/spkgbuild
 f:d0423207bbbdd22c31deba0501f6ebe2:perl-data-messagepack/CHANGELOG
 f:fc951e051dbadce1725c0c8ff82b6807:perl-data-messagepack/spkgbuild
 f:07238d77088137467580147ca4d2a3c8:perl-html-parser/.pkgfiles
-f:e93d894b3677e287b60133c8b1f2c10d:perl-html-parser/CHANGELOG
-f:0388bdd435626d574476248eb5d406a8:perl-html-parser/spkgbuild
+f:d09f8236d912dbf0e6fff4f597fecd47:perl-html-parser/CHANGELOG
+f:6b715c0e0b6c40db1e9278c2bdac7d37:perl-html-parser/spkgbuild
 f:3ebfc7ed1ee5db7422b50113ba7882bb:perl-html-parser/override
 f:8eaf46eba69e7cfbe80af5061cd0d4e5:perl-test-leaktrace/CHANGELOG
 f:ad2f8eb1e4de7b864ab43c37513ca71e:perl-test-leaktrace/spkgbuild

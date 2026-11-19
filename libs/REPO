@@ -746,8 +746,8 @@ f:b468f309261b478434e79bdb64c9ed2a:librsvg/CHANGELOG
 f:e45f933c032e083c25d4465c3b3a82bc:librsvg/spkgbuild
 f:42f25d1826b482166b5a2653cc8aead8:librsvg/override
 f:0bd895d621700adf117c828d6d5848d9:mariadb/spkgbuild
-f:f4dbeee18cb2b2cc0e975735a0e9702a:libcue/CHANGELOG
-f:e62923c7fe504c4de77fde0309d8b8e6:libcue/spkgbuild
+f:24a3681968ea33f0b1a1cd549bb142b2:libcue/CHANGELOG
+f:c22ac206ecee9d6a4e42e4a1d65fc1c5:libcue/spkgbuild
 f:affc7c820092dba1118d199a72f71a6d:shapelib/CHANGELOG
 f:f057713d0756fd3d1b13d96e2b838911:shapelib/spkgbuild
 f:5577b567527eb0c29a147b1bb685303d:shapelib/override
@@ -792,8 +792,8 @@ f:147a0fd2b8bebe59d7c02f4ac2501f4d:libxres/CHANGELOG
 f:b0f448abab5805f071532872d0370350:libxres/spkgbuild
 f:6b0d93e7e6d2c7811f954754ec8e1263:libxres/override
 f:7723915618263c159ebe5a156a4939c1:libnfs/.pkgfiles
-f:7ce20ffdd11c82e8d1a5d2d27041499f:libnfs/CHANGELOG
-f:6d77d4f5de3754b5c8802f0c691bfd32:libnfs/spkgbuild
+f:5e8cab4362bb003c0d3a00d39be5da14:libnfs/CHANGELOG
+f:9e76b6175a49729f1462494061061c0c:libnfs/spkgbuild
 f:89a17e765c52f6a1bcc28a278ab8fc46:libblack-hole-solver/.pkgfiles
 f:c16156067cdc912b26a9e05ca8260d13:libblack-hole-solver/CHANGELOG
 f:576c95f8f12b743a303351f73ee0ce74:libblack-hole-solver/spkgbuild
@@ -1059,8 +1059,8 @@ f:db03b2ebd0922e07729fe469d87fd4e3:libqmi/.pkgfiles
 f:a1f7108c7196742f3086f6ce7857d26c:libqmi/CHANGELOG
 f:308f855826ee76d0acbc1258ce4b51b1:libqmi/spkgbuild
 f:4b9aee026defd80cd348161b7ec896a6:libqmi/override
-f:36a005bda5717debabafa91c70e8827f:libphonenumber/CHANGELOG
-f:42442284a297ac33d58174040b7fcdfa:libphonenumber/spkgbuild
+f:69285e89be62197708e838c9a460015f:libphonenumber/CHANGELOG
+f:da351aeebe5949632e54140c389e5ba5:libphonenumber/spkgbuild
 f:3e01f08dfc3a235949690d53fb837a0f:libftdi-compat/.pkgfiles
 f:0a005deb5d7707d70f7d87dab1f45096:libftdi-compat/spkgbuild
 f:0600b63769b5ee80602f06a8fed45a9a:libbsd/spkgbuild

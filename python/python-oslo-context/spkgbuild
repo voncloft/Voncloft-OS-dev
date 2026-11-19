@@ -2,7 +2,7 @@
 # depends : python-pbr python-debtcollector
 
 name=python-oslo-context
-version=6.5.0
+version=6.6.0
 release=3
 
 _name=oslo.context

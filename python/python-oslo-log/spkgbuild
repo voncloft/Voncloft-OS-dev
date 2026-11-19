@@ -2,7 +2,7 @@
 # depends : python-six python-pbr python-oslo-config python-oslo-context python-oslo-i18n
 
 name=python-oslo-log
-version=8.3.2
+version=8.4.0
 release=3
 
 _name=oslo.log

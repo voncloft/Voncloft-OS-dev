@@ -3,7 +3,7 @@
 
 name=ruby-mize
 _gemname=mize
-version=0.7.0
+version=0.8.0
 release=1
 source="https://rubygems.org/downloads/${_gemname}-${version}.gem"
 options="!checksum"

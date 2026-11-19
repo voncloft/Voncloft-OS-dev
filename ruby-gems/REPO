@@ -23,8 +23,8 @@ d:ruby-sync
 d:ruby-tins
 d:ruby-paint
 f:99d23c3cf4c88225338e838aae039aa8:ruby-term-ansicolor/.pkgfiles
-f:254b50c8edd3cbd1c5d4c190acd88e9e:ruby-term-ansicolor/CHANGELOG
-f:dfca0aecb993eafafa0e4dd90fb4ee9c:ruby-term-ansicolor/spkgbuild
+f:b72c41298803ac46e96b634026074aca:ruby-term-ansicolor/CHANGELOG
+f:925ce6fe77cbca68268bd9788eade6b0:ruby-term-ansicolor/spkgbuild
 f:1f0c77b06ec870ef804498f70c68d4ba:ruby-term-ansicolor/override
 f:738cc6b2b9c0463847db6a8111e23723:ruby-yard/CHANGELOG
 f:2aee10de8435260cd6419c5a0e820e0d:ruby-yard/spkgbuild
@@ -45,7 +45,8 @@ f:6066baa71873fc58998a61403a11f399:ruby-optimist/CHANGELOG
 f:c7ec9eca993619fef0d859a3641e313e:ruby-optimist/spkgbuild
 f:b014735234b1349805cb00a486962ed4:ruby-optimist/override
 f:df251f88dbbfcd0c8dff28fbc5210e53:ruby-mize/.pkgfiles
-f:47d5b6fb16bd849b0a0219d11ce6eaca:ruby-mize/spkgbuild
+f:5c73b1079cb2d0ef050de45bf6fe0e95:ruby-mize/CHANGELOG
+f:e6ba786a95d8187080f61fb8ce9ef5d7:ruby-mize/spkgbuild
 f:981ad0368524ee5ba8afdd4f29ba8fc9:ruby-mize/override
 f:ad569164727106f80f858c5b9edd5a6e:.httpup-urlinfo
 f:324cd596601550c5d5deb3f8c6825be8:ruby-rainbow/.pkgfiles
@@ -96,8 +97,8 @@ f:f47286ed64114423cc7c753aeeed6bf8:ruby-sync/.pkgfiles
 f:eeeab628bacfe7b22c76340d0d5d5ca4:ruby-sync/spkgbuild
 f:d679a4efe99853582542c9f20d1b5063:ruby-sync/override
 f:22bfc49414f9181682d0612681f69093:ruby-tins/.pkgfiles
-f:85d7be4443ce013929593f68c8c9585a:ruby-tins/CHANGELOG
-f:a89e5339a31e8a7b8b63caf451773959:ruby-tins/spkgbuild
+f:8bb3fdc6ad25b2502e9d62eec0046909:ruby-tins/CHANGELOG
+f:0e5b6e516b4afb95cfa37d6348b1fc9a:ruby-tins/spkgbuild
 f:83d2c632eb07c668b8cf304f62b97318:ruby-tins/override
 f:b058930969c537bf93551f383e9db1d7:ruby-paint/.pkgfiles
 f:a8b84df0e71cf0b8b4dcec65520fc2ce:ruby-paint/CHANGELOG

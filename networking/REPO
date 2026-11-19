@@ -91,12 +91,12 @@ f:d99f87761f3044c63f07bb5b3d137329:subversion/CHANGELOG
 f:15bf91541dcfa285c8d096b19e42dff1:subversion/spkgbuild
 f:320310f6302f72e228028e6669342d46:hexchat/CHANGELOG
 f:d43ca277ffa8039548a279a4c114b81b:hexchat/spkgbuild
-f:527573d51919c5780657d3a2de5745e3:bind/CHANGELOG
+f:faa60b6cd5d866eb8381a2002a58637e:bind/CHANGELOG
 f:cd9b62908a6be2bd13619dcda7edcdd4:bind/named.conf
 f:3a7bdc9221be6f91b1b96ba0fe382667:bind/root.hints
 f:78eda3f14608136647796bfb82dd7402:bind/post-install.sh
 f:e868838f27ab81c82dcb63b06155bbb1:bind/127.0.0
-f:3c6aeebad5e2d1a785aa51578d691412:bind/spkgbuild
+f:1aa7d5950aaec60e6ef3d7cd7341af2b:bind/spkgbuild
 f:15337d7f22033ef0b202e71be64e8960:bind/override
 f:05cc26def44480c59e62f87a78868977:tcpdump/CHANGELOG
 f:94a18eebd3b29fdcdfa96c729c16b7dd:tcpdump/spkgbuild

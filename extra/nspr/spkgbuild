@@ -1,7 +1,7 @@
 # description	: Provides a platform-neutral API for system level and libc like functions
 
 name=nspr
-version=4.40
+version=4.41
 release=2
 source="https://archive.mozilla.org/pub/$name/releases/v$version/src/$name-$version.tar.gz"
 options="!checksum"

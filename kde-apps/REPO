@@ -1114,8 +1114,8 @@ f:99116416855393984aa9e7af0be45f97:kvantum/spkgbuild
 f:3060a1b2b9c0a1c9c753dbfbcd155776:akonadi-contacts/.pkgfiles
 f:7dcb4ddc8ef4ea0f35e9bc9a974b0a61:akonadi-contacts/CHANGELOG
 f:38574f20686bd27c7eb639e0f111bf44:akonadi-contacts/spkgbuild
-f:2962854a3d04bfead6ac0cfa1251d8f2:haruna/CHANGELOG
-f:64214a2e68211e142b14ce8adfd24a18:haruna/spkgbuild
+f:e15e64b25030e9cf8f96a2a17431e42f:haruna/CHANGELOG
+f:336b4d69da37726ea253f875e0520dfd:haruna/spkgbuild
 f:6f0fb4fadb4a7f095c1504bc2e5975ce:system-internals-widget/.pkgfiles
 f:ef98391377a723c1dba6ab28ec8843a3:system-internals-widget/source/package/metadata.json
 f:dd64bea3e7afb6b21480c015591944ea:system-internals-widget/source/package/contents/ui/main.qml

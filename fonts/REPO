@@ -112,8 +112,8 @@ f:e64e45f1cceb3bdda1a5f0e419252256:dejavu-fonts/.pkgfiles
 f:315010f579da76470802ebdc36fff38a:dejavu-fonts/spkgbuild
 f:12c0afb97f51f175cd495e0481e5c246:dejavu-fonts/override
 f:3304c4b0011f457c3a8a394424a2f8b7:.httpup-repo.current
-f:00bfac683564966c1106d16c02fefa6a:fontconfig/CHANGELOG
-f:3afc0a92f539bff0e3976d8117a44fcc:fontconfig/spkgbuild
+f:e5a91e4d97ac6ff2faa6943093b9e42f:fontconfig/CHANGELOG
+f:5c33b8d600bfbc0fee368b167f6034ad:fontconfig/spkgbuild
 f:7030d7ed521457cee89205806ca40d65:fontconfig/override
 f:8e18dbefea39aef5e34207c2cd281116:font-bh-type1/.pkgfiles
 f:61007cc9c5084df496eeab7eb74f5fcf:font-bh-type1/CHANGELOG

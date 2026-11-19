@@ -35,9 +35,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:ec8d22f83e239fd78b1c00207a6a1e4c:firefox-bin/CHANGELOG
+f:a8449dbcf4668b7380269ed8db0f0921:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:041cd089c096148288eaf72457a53893:firefox-bin/spkgbuild
+f:2b02173afc4a84b395a5fccb0535fd6c:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -97,9 +97,9 @@ f:9157026032cfa499d823b55b258c8fce:virtualbox-guest-utils/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-utils/override
 f:119f437d4911f637fa586b5eda9aab29:virtualbox-guest-utils/pre-install.sh
 f:89fb28a484e7f5126839e83f10de377a:firefox/pre-upgrade.sh
-f:ba280cdc72924bd15a6aec95afce1438:firefox/CHANGELOG
+f:59a47606ea4c5c0bc6574da96100f74a:firefox/CHANGELOG
 f:37db9ec3cc336d3a09ede8becec2ad69:firefox/fix-ftbfs-newer-cbindgen.patch
-f:b9142273d12d7b604d4caf245defd286:firefox/spkgbuild
+f:84c95fbaa5aa4bfccea0c69c0ba604cb:firefox/spkgbuild
 f:a4a0f7c9c1e3424463670d031976aa67:firefox/override
 f:971c77648caea312fca2d9340c4382a6:firefox/firefox.desktop
 f:75aae82b7b33d79bcec25c8783f3ed5c:spotify/spotify
@@ -137,8 +137,8 @@ f:f1cbcac961f006f8442e698de30f32bc:webtorrent-desktop-bin/spkgbuild
 f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.desktop
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
-f:ce8b434f73f823d129eec59da0328e01:thunderbird-bin/CHANGELOG
-f:582ded41270e27cfb99d39a520e9c1aa:thunderbird-bin/spkgbuild
+f:372f5f1b5949993954c0325d75d05727:thunderbird-bin/CHANGELOG
+f:c744f71cd72c79ae62f4a8db3b1c63ec:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
 f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop
@@ -148,9 +148,9 @@ f:4b1645c2d3f85426435736c60f928375:wps-office/override
 f:229dc3bd6deae0753349dcb8c4e12ebe:pandoc-bin/CHANGELOG
 f:d5d849ae0451b3328acfcf5ba5fd6c5c:pandoc-bin/spkgbuild
 f:893d63e191bf450550d28cdb864170f0:vscode-bin/visual-studio-code-url-handler.desktop
-f:7ac84529b11dbc00108e4c51104a6254:vscode-bin/CHANGELOG
+f:671180e767ea8933f5475d699de3325b:vscode-bin/CHANGELOG
 f:afe04352e57ca51932e0a1b8eb32e25b:vscode-bin/visual-studio-code.desktop
-f:1637d1d081e91f9a35cf113321c20a0d:vscode-bin/spkgbuild
+f:43d0b10ec8e18ef3ac32408e0f14ddd5:vscode-bin/spkgbuild
 f:93babcf9e9fc18636c2ddcff63a99440:vscode-bin/override
 f:2965d6561c4c4473e1e392a20f5e61cb:icecat-bin/icecat.desktop
 f:5c498b31bd52c1f1d92c8d7da27c5d6f:icecat-bin/icecat-safe.desktop

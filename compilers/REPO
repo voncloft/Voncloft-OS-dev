@@ -50,8 +50,8 @@ f:df5ee6fc6ec5f4140e83d0224f1f606a:llvm/CHANGELOG
 f:6dfd7226d8d247a067876011204ecdd3:llvm/spkgbuild
 f:d1e32c6cca2a56f5adda4b61f979f485:llvm/override
 f:871ab997ddbbff7d0c9d8b1f54a3dbbc:ruby/.pkgfiles
-f:9ec83e2ad014425df64ab4f0cef0b1d9:ruby/CHANGELOG
-f:9062ce0fc10070888ccd3a6e49cfc407:ruby/spkgbuild
+f:b07af5118ed555bf4588f1562b16a631:ruby/CHANGELOG
+f:a339bfe720a3fc694bd4f408ae8664f5:ruby/spkgbuild
 f:8133a4c0fda56deae172a292888c0dae:ruby/override
 f:7468daddede439947d1a8269c1e7fa3c:corrosion/.pkgfiles
 f:2527cb46ccfb51a24464573374ca8a6d:corrosion/spkgbuild

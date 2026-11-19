@@ -127,3 +127,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 6.3.0 to version 7.0.0
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 03:41:45 EST 2026
+
+Version=7.1.0
+Release=1
+
+Synopsis:
+Changed from version 7.0.0 to version 7.1.0

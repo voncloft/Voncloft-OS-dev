@@ -2,7 +2,7 @@
 # depends : perl-html-tagset perl-http-message perl-uri
 
 name=perl-html-parser
-version=3.86
+version=3.87
 release=1
 
 _name=HTML-Parser

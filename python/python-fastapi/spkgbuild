@@ -2,7 +2,7 @@
 # depends : python-starlette python-pydantic
 
 name=python-fastapi
-version=0.163.2
+version=0.165.0
 release=1
 
 _name=${name#python-}

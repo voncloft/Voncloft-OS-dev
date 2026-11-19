@@ -147,3 +147,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 11.5.0 to version 14.0.0
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 03:41:45 EST 2026
+
+Version=14.1.0
+Release=1
+
+Synopsis:
+Changed from version 14.0.0 to version 14.1.0

@@ -2,7 +2,7 @@
 # depends	: cmake
 
 name=libcue
-version=2.4.2
+version=2.4.3
 release=2
 source="$name-$version.tar.gz::https://github.com/lipnitsk/${name}/archive/v$version.tar.gz"
 

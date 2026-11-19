@@ -550,8 +550,8 @@ f:50b643d18545869686510f2484927ac1:yaml-cpp/spkgbuild
 f:7ac01c464a20b819f83658dc47184430:vte3/fix-W_EXITCODE.patch
 f:4ddfd8a77bd83c73c2ffc1fe133f540c:vte3/CHANGELOG
 f:0d8184845cc70f9bf2524f7e3f6ab38d:vte3/spkgbuild
-f:5bc8fa0d24352d51d13ae08d9a6f8c3c:opera/CHANGELOG
-f:ec71238f8a258e4ecd9b2dfe113e69f6:opera/spkgbuild
+f:0674feb417aab593ddf33eb07589ce62:opera/CHANGELOG
+f:e4b2d9855e3df28b985c09606a8e0c57:opera/spkgbuild
 f:7941ba1dbf8fbe35c205ec3ce1c24a67:opera/override
 f:3fdde7725b77b708966b6b9e9ad713bb:midori/spkgbuild
 f:ad898472f7538ffc3ff511c055fee535:jwm/jwm.desktop
@@ -984,8 +984,8 @@ f:867099004e9da906d4b8e1ec12feab1a:mitkrb/spkgbuild
 f:f453652cba479b4303e440cdd8ac7f25:mitkrb/override
 f:135d8497f69cc9b5d0b3bccbe545e295:cabextract/CHANGELOG
 f:4034db4379f7f52b0b7b82773b8faf5a:cabextract/spkgbuild
-f:8eab309eb10b3f57a8c87da88cb74daf:gwenhywfar/CHANGELOG
-f:8a9709581136fd3b4193aa40d94fe000:gwenhywfar/spkgbuild
+f:e456701428430ed6a67369c941c3054a:gwenhywfar/CHANGELOG
+f:7409544fa0230ddc319af82e73b5ff3d:gwenhywfar/spkgbuild
 f:86b481048b8e04feb35b10bef941b023:gwenhywfar/override
 f:770f26510439c550832a292efbb286e4:runit/CHANGELOG
 f:1b1b53a2b238d0e2d91d718200bf1d3b:runit/spkgbuild
@@ -1022,7 +1022,8 @@ f:b2bad3c13f5f52c37db2ba233d537e9e:fcron/override
 f:a4e6f75e5a8efe668a97abae653cf69e:fcron/fcrontab
 f:7ee71353e3bdf4583a54165d12b7a67b:fcron/pre-install.sh
 f:48ff9a7a040a60bac31ef7315f826fdc:nss/.pkgfiles
-f:b7a2d50be2d51ad9e3bf7dd384690699:nss/spkgbuild
+f:75214a302bdb761d2f559f14ef2ea1e8:nss/CHANGELOG
+f:47ef67e4eb11b5edcb456d9093a7df64:nss/spkgbuild
 f:09d508c1ab91edae02751f8e2e420eff:nss/override
 f:5624a2fae9fcc9287725c41e4841dbe5:taglib/.pkgfiles
 f:feb0297eb5b79c4b8a3685c8158fe5de:taglib/CHANGELOG
@@ -1188,8 +1189,8 @@ f:89105158c6582eea6efe69723360136d:playerctl/.pkgfiles
 f:35281d904547480dd02fefa0fa948171:playerctl/CHANGELOG
 f:ef3a80d30bf2d785c785cbef8eec9414:playerctl/spkgbuild
 f:3b9d4066d526f240da9cbe435353076a:fbpanel/spkgbuild
-f:04b3f60a1324315dd70b85a95b60c79f:gnutls/CHANGELOG
-f:c1d610d4425e4f30202180344dacc36f:gnutls/spkgbuild
+f:b50b0b50911774cbc2af60dc8c961de6:gnutls/CHANGELOG
+f:572531086b1d756dcc69eb6b7b51156f:gnutls/spkgbuild
 f:1456ecea4258ff3b424ce82fe806d0f0:jasper/.pkgfiles
 f:868fcd714f496d941024bd4bf44cc00e:jasper/CHANGELOG
 f:8c7116ed57f4dbbd14fd923f2d512919:jasper/spkgbuild
@@ -1256,9 +1257,9 @@ f:dd4dae5f2e99e2a39230b4b557d8ed35:poppler-glib/README
 f:1e0e8dc1834849f6e51e9a0b1dcbe93a:poppler-glib/CHANGELOG
 f:03ae9db0b5136601a7809a55761b2905:poppler-glib/spkgbuild
 f:7ae65d151d75cfb3a8c987bd46a19e4d:poppler-glib/override
-f:56301abf908560e49dd2edd051b39dd2:monit/CHANGELOG
+f:e2a8cb5b4b6195a69d09d2c9c84dc5a7:monit/CHANGELOG
 f:75931a3204d9f63944ace164516ff1f1:monit/run
-f:0c4768d24e57f27e0bb06d68d4d4d5d4:monit/spkgbuild
+f:4629c64ec76ca8f682869e6ba3e5dd3f:monit/spkgbuild
 f:ba5beb74609522dbe5a7642c516ec0dc:linux-router/post-upgrade.sh
 f:48d38089759355affe436e80090f4a85:linux-router/CHANGELOG
 f:97837c1f4fb6ccf804b1013d8ada1197:linux-router/post-install.sh
@@ -1448,8 +1449,8 @@ f:81521bf0fe7bbabb202e516d8538dd11:gmrun/CHANGELOG
 f:a8fd3421b163421ea7990668c634d406:gmrun/gcc43.patch
 f:8e38ad46a1ffc313086e14e19f383792:gmrun/spkgbuild
 f:dc9848c0098e5921ecc531f12f8f5665:bind-utils/.pkgfiles
-f:19a3dc744b5dc943a7469e63ca249b6b:bind-utils/CHANGELOG
-f:b0e8364d0fd6b8bf83a72844d4a97d9c:bind-utils/spkgbuild
+f:467fad29d7ecd2a64615e9ac9e2a3955:bind-utils/CHANGELOG
+f:166bfc9d0b5e7f31bf0d24b9b6385934:bind-utils/spkgbuild
 f:3b8c6d8f36e470910b13e141ec7d6e6b:bind-utils/override
 f:4b34b383721d74894194c6e8628dc3a9:post-install.sh
 f:37ba62883540d59cf615bf2b72bff603:sysklogd/.pkgfiles
@@ -1664,8 +1665,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:18f750a03739df81765a9b90a110ba0d:flex/CHANGELOG
-f:2ccc87228f77de9691aba50a8ea00e0a:flex/spkgbuild
+f:caf9d9feb2ddf88256c5da70216e931c:flex/CHANGELOG
+f:9b431823e04098f65788d68a303202b4:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch
@@ -1763,7 +1764,8 @@ f:c0c004c86bf44e6d1ed0dec0e07a244f:vimix-gtk-themes/spkgbuild
 f:a291fa38118cd54fc23dab24caee9a36:vimix-gtk-themes/override
 f:826fae88a435d9278c4f9614991d55a1:docbook2x/docbook2x.datadir.patch
 f:72e35db41b736c17d7d6bb4cc1ab1f16:docbook2x/spkgbuild
-f:f684702256d7f0af3c5f9db89ded0683:htop/spkgbuild
+f:fbb3b2f0b291c02e31374f4dcc28a45b:htop/CHANGELOG
+f:b7875ce1512832fb826a5d59d4900fae:htop/spkgbuild
 f:39c26ebc110a89646307d71a2a188fc1:android-udev/CHANGELOG
 f:d0d076b300f0283de75f7e39aa26c1f4:android-udev/spkgbuild
 f:7c71290e43c6252a234d9149d7300662:android-udev/override

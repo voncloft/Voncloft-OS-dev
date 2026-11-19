@@ -17,3 +17,13 @@ Release=1
 
 Synopsis:
 Track stable BIND branches and keep the source archive aligned with the version.
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 03:41:45 EST 2026
+
+Version=9.20.31
+Release=1
+
+Synopsis:
+Changed from version 9.20.30 to version 9.20.31

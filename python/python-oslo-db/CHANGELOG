@@ -257,3 +257,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 17.2.1 to version 18.1.1
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 03:41:45 EST 2026
+
+Version=18.2.0
+Release=1
+
+Synopsis:
+Changed from version 18.1.1 to version 18.2.0

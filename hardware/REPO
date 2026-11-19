@@ -67,9 +67,9 @@ f:1beaead19e06f188db1471e07ae9cdb1:xf86-input-libinput/override
 f:8e3e55061c94c08c868ea45ebe082444:xf86-input-synaptics/50-synaptics.conf
 f:8b8e01ae1d50726314fbcb7bdb11f389:xf86-input-synaptics/CHANGELOG
 f:3bdbfd1fa424ed8ba948656152d7bef1:xf86-input-synaptics/spkgbuild
-f:495117e52b445e33d257c7dc38bfc836:mesa/CHANGELOG
+f:b874a45891a5215f877eb2da213cafa3:mesa/CHANGELOG
 f:e404b406b86cbfab2be70facdc1a3382:mesa/mesa-32.ini
-f:c18b4429f8ce82ae4d9fd51c436839dd:mesa/spkgbuild
+f:7d10acd40e8ef8768052c9123c069728:mesa/spkgbuild
 f:a6f6e602e353b262daffe05dd3160bae:glu/CHANGELOG
 f:605d78feb63834904988fbf34fb7a9fb:glu/spkgbuild
 f:0f84efa5846f77ebf2b060b1080d446f:xf86-video-amdgpu/readme

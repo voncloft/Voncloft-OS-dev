@@ -41,9 +41,9 @@ f:0c4212893556a750d024596d74e4e95d:wireguard/spkgbuild
 f:81ef5394b527e1897e785cb0e188ced5:wireguard/override
 f:e60137753879f141f627014084ab9ab2:blacklist-youtubeads/.pkgfiles
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-upgrade.sh
-f:47b6f4eebb3dbb07c53846f7a43d2c1e:blacklist-youtubeads/CHANGELOG
+f:1c30fd04977fd3736ca068099a83d508:blacklist-youtubeads/CHANGELOG
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
-f:b25f20b7eb2e7a2e1569832f52139f1b:blacklist-youtubeads/spkgbuild
+f:61dcd94d7e59d942261f65fe867dfdbd:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
 f:5fdd53c6b34d9deaf38fc73e2e411eb9:homeassistant/CHANGELOG
 f:40d0f6e0b1403927d2c7ceb1b13d03e7:homeassistant/spkgbuild
@@ -179,5 +179,5 @@ f:ecc63553466d7d6321650763d35c9cfe:minecraft-server/fetch-source.py
 f:cd19656cc7c340287eddf072d0dfd13f:minecraft-server/minecraft.sh
 f:65f125e2688db6b4a15f41a771fe79ca:minecraft-server/spkgbuild
 f:a77cdf295263d744302164efb18a164a:minecraft-server/override
-f:06531f7fe583e223c64603f8775dc5b2:nginx/CHANGELOG
-f:6b9029b52a5526076e1f36ac80424bf3:nginx/spkgbuild
+f:7f9fcf4e3c539e331712583189aa676d:nginx/CHANGELOG
+f:2c9d92ee1cf2dd86bdf6ed49077d060f:nginx/spkgbuild

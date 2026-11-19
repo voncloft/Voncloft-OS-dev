@@ -2,7 +2,7 @@
 # depends       : nspr sqlite p11-kit
 
 name=nss
-version=3.133
+version=3.134
 release=1
 source="https://archive.mozilla.org/pub/security/${name}/releases/NSS_${version//./_}_RTM/src/${name}-${version}.tar.gz
 https://www.linuxfromscratch.org/patches/blfs/svn/${name}-standalone-1.patch"

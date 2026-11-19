@@ -2,7 +2,7 @@
 # depends       : liburcu libuv json-c nghttp2
 
 name=bind-utils
-version=9.20.30
+version=9.20.31
 release=1
 _name=bind
 source="https://ftp.isc.org/isc/bind9/$version/${_name}-$version.tar.xz"
