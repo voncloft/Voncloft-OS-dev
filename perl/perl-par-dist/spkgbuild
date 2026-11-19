@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-par-dist
-version=0.51
+version=0.53
 release=1
 
 _name=PAR-Dist

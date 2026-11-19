@@ -2,7 +2,7 @@
 # depends : libxml2 perl-alien-build
 
 name=perl-alien-libxml2
-version=0.19
+version=0.20
 release=1
 
 _name=Alien-Libxml2

@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-log-any
-version=1.714
+version=1.720
 release=2
 
 _name=Log-Any

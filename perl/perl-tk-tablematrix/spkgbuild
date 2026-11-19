@@ -2,7 +2,7 @@
 # depends : perl-tk
 
 name=perl-tk-tablematrix
-version=1.26
+version=1.29
 release=22
 
 _name=Tk-TableMatrix

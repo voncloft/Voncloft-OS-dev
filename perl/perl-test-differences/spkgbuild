@@ -2,7 +2,7 @@
 # depends : perl-text-diff
 
 name=perl-test-differences
-version=0.69
+version=0.73
 release=6
 
 _name=Test-Differences

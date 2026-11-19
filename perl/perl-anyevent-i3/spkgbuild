@@ -2,7 +2,7 @@
 # depends : perl perl-anyevent perl-json-xs
 
 name=perl-anyevent-i3
-version=0.17
+version=0.19
 release=6
 
 _name=AnyEvent-I3

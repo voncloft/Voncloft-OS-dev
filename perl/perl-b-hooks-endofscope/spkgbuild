@@ -2,7 +2,7 @@
 # depends : perl-module-implementation perl-module-runtime perl-sub-exporterperl-sub-exporter-progressiveperl-try-tinyperl-variable-magic perl
 
 name=perl-b-hooks-endofscope
-version=0.26
+version=0.28
 release=3
 
 _name=B-Hooks-EndOfScope

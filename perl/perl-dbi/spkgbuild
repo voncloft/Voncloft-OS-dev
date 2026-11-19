@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-dbi
-version=1.643
+version=1.656
 release=2
 
 _name=DBI

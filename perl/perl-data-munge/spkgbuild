@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-data-munge
-version=0.10
+version=0.111
 release=3
 
 _name=Data-Munge

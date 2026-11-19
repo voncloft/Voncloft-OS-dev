@@ -2,7 +2,7 @@
 # depends : perl-importer
 
 name=perl-term-table
-version=0.016
+version=0.028
 release=2
 
 _name=Term-Table

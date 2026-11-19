@@ -2,7 +2,7 @@
 # depends : perl perl-file-pushd perl-module-pluggable
 
 name=perl-devel-patchperl
-version=2.08
+version=2.14
 release=2
 
 _name=Devel-PatchPerl

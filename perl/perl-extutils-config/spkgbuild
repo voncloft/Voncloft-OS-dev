@@ -2,7 +2,7 @@
 # depends : perl-data-dumper
 
 name=perl-extutils-config
-version=0.008
+version=0.010
 release=6
 
 _name=ExtUtils-Config

@@ -2,7 +2,7 @@
 # depends : perl-capture-tiny perl-email-abstract.006 perl-email-address
 
 name=perl-email-sender
-version=2.600
+version=2.603
 release=7
 
 _name=Email-Sender

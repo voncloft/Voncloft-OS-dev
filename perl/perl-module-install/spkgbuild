@@ -2,7 +2,7 @@
 # depends : perl-file-remove perl-json perl-module-build perl-module-scandeps perl-par-dist perl-yaml-tiny
 
 name=perl-module-install
-version=1.19
+version=1.21
 release=4
 
 _name=Module-Install

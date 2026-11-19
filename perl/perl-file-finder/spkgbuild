@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-file-finder
-version=0.53
+version=1.01
 release=7
 
 _name=File-Finder

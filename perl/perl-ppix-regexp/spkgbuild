@@ -2,7 +2,7 @@
 # depends : perl-list-moreutils perl-ppi perl-task-weaken
 
 name=perl-ppix-regexp
-version=0.088
+version=0.092
 release=1
 
 _name=PPIx-Regexp

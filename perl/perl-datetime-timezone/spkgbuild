@@ -2,7 +2,7 @@
 # depends : perl-class-singleton3 perl-params-validate perl-class-load
 
 name=perl-datetime-timezone
-version=2.60
+version=2.72
 release=1
 
 _name=DateTime-TimeZone

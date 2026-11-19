@@ -2,7 +2,7 @@
 # depends : perl-try-tiny
 
 name=perl-test-fatal
-version=0.017
+version=0.019
 release=1
 
 _name=Test-Fatal

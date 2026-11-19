@@ -2,7 +2,7 @@
 # depends : perl-gtk3 imagemagick
 
 name=perl-gtk3-imageview
-version=10
+version=12
 release=1
 
 _name=Gtk3-ImageView

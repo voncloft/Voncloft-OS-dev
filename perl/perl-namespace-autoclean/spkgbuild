@@ -2,7 +2,7 @@
 # depends : perl-b-hooks-endofscope perl-sub-identify perl-namespace-clean
 
 name=perl-namespace-autoclean
-version=0.29
+version=0.31
 release=2
 
 _name=${name#perl-}

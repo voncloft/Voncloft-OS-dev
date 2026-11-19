@@ -2,7 +2,7 @@
 # depends : perl-file-slurp-tiny
 
 name=perl-tree-dag-node
-version=1.32
+version=1.39
 release=2
 
 _name=Tree-DAG_Node

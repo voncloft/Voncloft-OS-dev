@@ -2,7 +2,7 @@
 # depends : perl-datetime perl-datetime-locale
 
 name=perl-datetime-format-strptime
-version=1.79
+version=1.80
 release=4
 
 _name=DateTime-Format-Strptime

@@ -7,3 +7,13 @@ release=4
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:37 AM EST 2026
+
+Version=0.015
+Release=4
+
+Synopsis:
+Changed from version 0.012 to version 0.015

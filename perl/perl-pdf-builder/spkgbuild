@@ -2,7 +2,7 @@
 # depends : perl perl-font-ttf
 
 name=perl-pdf-builder
-version=3.025
+version=3.028
 release=1
 
 _name=PDF-Builder

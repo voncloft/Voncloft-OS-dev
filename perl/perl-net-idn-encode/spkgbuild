@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-net-idn-encode
-version=2.500
+version=2.600
 release=3
 
 _name=Net-IDN-Encode

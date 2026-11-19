@@ -7,3 +7,13 @@ Release=4
 Synopsis:
 Added Changelog to package
 Upgraded from version 2.001003 to version 2.002002
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:37 AM EST 2026
+
+Version=2.002006
+Release=4
+
+Synopsis:
+Changed from version 2.002002 to version 2.002006

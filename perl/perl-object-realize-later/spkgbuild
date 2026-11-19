@@ -1,7 +1,7 @@
 # description : Perl/CPAN Module Object::Realize::Later : Delay construction of real data until used
 
 name=perl-object-realize-later
-version=0.21
+version=4.00
 release=3
 
 _name=Object-Realize-Later

@@ -2,7 +2,7 @@
 # depends : perl-test-utf8
 
 name=perl-test-file
-version=1.993
+version=1.995
 release=1
 
 _name=Test-File

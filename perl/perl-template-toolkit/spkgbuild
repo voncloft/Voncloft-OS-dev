@@ -2,7 +2,7 @@
 # depends : perl-appconfig perl
 
 name=perl-template-toolkit
-version=3.101
+version=3.106
 release=1
 
 _name=Template-Toolkit

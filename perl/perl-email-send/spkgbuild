@@ -2,7 +2,7 @@
 # depends : perl-email-address0 perl-email-simple perl-return-value8
 
 name=perl-email-send
-version=2.201
+version=2.202
 release=4
 
 _name=Email-Send

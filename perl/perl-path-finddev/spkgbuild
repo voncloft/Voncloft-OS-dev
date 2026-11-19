@@ -2,7 +2,7 @@
 # depends : perl-class-tiny perl-path-isdev perl-path-tiny perl-sub-exporter
 
 name=perl-path-finddev
-version=0.5.3
+version=v0.5.3
 release=3
 
 _name=Path-FindDev

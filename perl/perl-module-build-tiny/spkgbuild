@@ -2,7 +2,7 @@
 # depends : perl perl-extutils-config perl-extutils-helpers perl-extutils-installpaths
 
 name=perl-module-build-tiny
-version=0.041
+version=0.053
 release=6
 
 _name=Module-Build-Tiny

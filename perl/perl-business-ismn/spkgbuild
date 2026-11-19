@@ -2,7 +2,7 @@
 # depends : perl perl-tie-cycle
 
 name=perl-business-ismn
-version=1.202
+version=1.205
 release=4
 
 _name=Business-ISMN

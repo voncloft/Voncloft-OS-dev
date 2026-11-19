@@ -2,7 +2,7 @@
 # depends : perl openssl 
 
 name=perl-crypt-openssl-random
-version=0.15
+version=0.17
 release=6
 
 _name=Crypt-OpenSSL-Random

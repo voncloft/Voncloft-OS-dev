@@ -7,3 +7,13 @@ release=2
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:38 AM EST 2026
+
+Version=1.321
+Release=2
+
+Synopsis:
+Changed from version 1.30 to version 1.321

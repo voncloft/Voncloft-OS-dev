@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-yaml
-version=1.30
+version=1.321
 release=2
 
 _name=YAML

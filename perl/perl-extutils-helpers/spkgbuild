@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-extutils-helpers
-version=0.026
+version=0.028
 release=6
 
 _name=ExtUtils-Helpers

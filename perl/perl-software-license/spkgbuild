@@ -1,7 +1,7 @@
 # depends : perl perl-data-section perl-text-template
 
 name=perl-software-license
-version=0.104002
+version=0.104007
 release=3
 
 _name=Software-License

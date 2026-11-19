@@ -2,7 +2,7 @@
 # depends : perl-b-keywords perl-config-tiny perl-exception-class perl-file-homedir
 
 name=perl-perl-critic
-version=1.148
+version=1.156
 release=2
 
 _name=Perl-Critic

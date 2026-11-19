@@ -2,7 +2,7 @@
 # depends : perl-xml-libxml libxslt
 
 name=perl-xml-libxslt
-version=2.002001
+version=2.003000
 release=2
 
 _name=XML-LibXSLT

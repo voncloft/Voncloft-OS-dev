@@ -2,7 +2,7 @@
 # depends : perl perl-json
 
 name=perl-mail-authenticationresults
-version=2.20230112
+version=2.20261029
 release=1
 
 _name=Mail-AuthenticationResults

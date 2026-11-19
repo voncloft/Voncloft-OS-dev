@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-cpan-meta-check
-version=0.017
+version=0.018
 release=6
 
 _name=CPAN-Meta-Check

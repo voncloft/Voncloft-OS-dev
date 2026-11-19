@@ -4,7 +4,7 @@
 name=perl-extutils-depends
 
 name=perl-extutils-depends
-version=0.8001
+version=0.8002
 release=4
 
 _name=ExtUtils-Depends

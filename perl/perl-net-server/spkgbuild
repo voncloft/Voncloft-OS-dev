@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-net-server
-version=2.014
+version=2.018
 release=6
 
 _name=Net-Server

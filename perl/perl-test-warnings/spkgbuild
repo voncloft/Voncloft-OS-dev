@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-test-warnings
-version=0.031
+version=0.038
 release=6
 
 _name=Test-Warnings

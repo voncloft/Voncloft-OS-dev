@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-path-tiny
-version=0.144
+version=0.150
 release=1
 
 _name=Path-Tiny

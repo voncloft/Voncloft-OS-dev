@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-data-uuid
-version=1.226
+version=1.227
 release=8
 
 _name=Data-UUID

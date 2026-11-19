@@ -7,3 +7,13 @@ Release=6
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.200013 to version 1.000
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:38 AM EST 2026
+
+Version=1.001
+Release=6
+
+Synopsis:
+Changed from version 1.000 to version 1.001

@@ -2,7 +2,7 @@
 # depends : perl-devel-stacktrace perl-module-runtime perl-moo
 
 name=perl-throwable
-version=1.000
+version=1.001
 release=6
 
 _name=Throwable

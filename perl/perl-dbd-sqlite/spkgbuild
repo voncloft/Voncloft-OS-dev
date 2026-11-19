@@ -2,7 +2,7 @@
 # depends : perl-dbi sqlite
 
 name=perl-dbd-sqlite
-version=1.72
+version=1.78
 release=1
 
 _name=DBD-SQLite

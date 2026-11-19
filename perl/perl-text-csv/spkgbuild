@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-text-csv
-version=2.02
+version=2.06
 release=4
 
 _name=Text-CSV

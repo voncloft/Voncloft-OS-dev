@@ -2,7 +2,7 @@
 # depends : perl-email-mime-encodings perl-mime-types
 
 name=perl-email-mime
-version=1.953
+version=1.954
 release=1
 
 _name=Email-MIME

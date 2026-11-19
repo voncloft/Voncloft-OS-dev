@@ -1,0 +1,41 @@
+# Track the current stable CPAN distribution, independent of its author.
+# Only report uversion; update-repo owns the version= edit.
+source="https://fastapi.metacpan.org/v1/release/Net-DNS-Resolver-Mock"
+url=$source
+
+get_generic()
+{
+	local detected
+	unset uversion
+	detected=$(python3 - <<'PYUPSTREAM'
+import json
+import pathlib
+import re
+import sys
+from urllib.parse import unquote, urlsplit
+
+project = 'Net-DNS-Resolver-Mock'
+try:
+    release = json.loads(pathlib.Path('index.html').read_text(), parse_float=str)
+    if (release.get('distribution') != project
+            or release.get('maturity') != 'released'
+            or release.get('status') != 'latest'):
+        raise ValueError('No current stable release for ' + project)
+    archive = pathlib.PurePosixPath(release['archive']).name
+    download = urlsplit(release['download_url'])
+    if (download.scheme != 'https' or download.hostname != 'cpan.metacpan.org'
+            or pathlib.PurePosixPath(unquote(download.path)).name != archive):
+        raise ValueError('Unexpected CPAN source archive')
+    match = re.fullmatch(re.escape(project) + r'-(v?[0-9]+(?:\.[0-9]+)*)\.(?:tar\.(?:gz|bz2|xz)|tgz|zip)', archive)
+    if not match:
+        raise ValueError('Unsupported stable archive version: ' + archive)
+    # Use the spelling in the source filename, preserving v prefixes and zeros.
+    print(match[1])
+except (OSError, ValueError, KeyError, TypeError, AttributeError) as error:
+    print('ERROR: ' + str(error), file=sys.stderr)
+    sys.exit(1)
+PYUPSTREAM
+	) || return 1
+	[ -n "$detected" ] || return 1
+	uversion=$detected
+}

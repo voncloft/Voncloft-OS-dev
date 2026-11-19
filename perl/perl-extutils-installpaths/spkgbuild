@@ -2,7 +2,7 @@
 # depends : perl perl-extutils-config
 
 name=perl-extutils-installpaths
-version=0.012
+version=0.015
 release=4
 
 _name=ExtUtils-InstallPaths

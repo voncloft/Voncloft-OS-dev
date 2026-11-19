@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-function-parameters
-version=2.002002
+version=2.002006
 release=4
 
 _name=Function-Parameters

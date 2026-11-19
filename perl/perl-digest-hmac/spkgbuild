@@ -2,7 +2,7 @@
 # depends : perl-digest-sha1 perl
 
 name=perl-digest-hmac
-version=1.04
+version=1.05
 release=9
 
 _name=Digest-HMAC

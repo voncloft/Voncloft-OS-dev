@@ -2,7 +2,7 @@
 # depends : make-ca perl-io-socket-ssl perl-net-http perl-libwww
 
 name=perl-lwp-protocol-https
-version=6.10
+version=6.17
 release=1
 
 _name=LWP-Protocol-https

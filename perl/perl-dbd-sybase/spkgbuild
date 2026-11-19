@@ -2,7 +2,7 @@
 # depends : perl-dbi perl freetds
 
 name=perl-dbd-sybase
-version=1.23
+version=1.27
 release=5
 
 _name=DBD-Sybase

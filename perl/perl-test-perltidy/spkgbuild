@@ -2,7 +2,7 @@
 # depends : perl perl-text-diff perl-file-slurp perl-tidy perl-file-finder
 
 name=perl-test-perltidy
-version=20230226
+version=20260110
 release=5
 
 _name=Test-PerlTidy

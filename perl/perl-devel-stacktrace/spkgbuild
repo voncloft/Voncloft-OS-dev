@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-devel-stacktrace
-version=2.04
+version=2.05
 release=4
 
 _name=Devel-StackTrace

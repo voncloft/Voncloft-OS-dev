@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-cgi-formbuilder
-version=3.10
+version=3.20
 release=3
 
 _name=CGI-FormBuilder

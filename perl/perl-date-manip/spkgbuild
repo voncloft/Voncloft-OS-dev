@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-date-manip
-version=6.91
+version=7.00
 release=1
 
 _name=Date-Manip

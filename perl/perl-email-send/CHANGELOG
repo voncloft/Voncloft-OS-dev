@@ -7,3 +7,13 @@ release=4
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:37 AM EST 2026
+
+Version=2.202
+Release=4
+
+Synopsis:
+Changed from version 2.201 to version 2.202

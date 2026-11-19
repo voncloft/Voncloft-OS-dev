@@ -2,7 +2,7 @@
 # depends : perl-ppi
 
 name=perl-ppix-quotelike
-version=0.023
+version=0.024
 release=1
 
 _name=PPIx-QuoteLike

@@ -2,7 +2,7 @@
 # depends : perl-file-basedir perl-uri
 
 name=perl-file-desktopentry
-version=0.22
+version=0.23
 release=7
 
 _name=File-DesktopEntry

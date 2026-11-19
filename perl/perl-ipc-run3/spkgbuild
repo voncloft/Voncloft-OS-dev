@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-ipc-run3
-version=0.048
+version=0.049
 release=8
 
 _name=IPC-Run3

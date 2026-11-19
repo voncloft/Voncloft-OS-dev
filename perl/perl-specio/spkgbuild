@@ -2,7 +2,7 @@
 # depends : perl-role-tiny perl-test-fatal perl-mro-compat perl-devel-stacktrace
 
 name=perl-specio
-version=0.48
+version=0.53
 release=2
 
 _name=Specio

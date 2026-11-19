@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-file-copy-recursive-reduced
-version=0.006
+version=0.008
 release=4
 
 _name=File-Copy-Recursive-Reduced

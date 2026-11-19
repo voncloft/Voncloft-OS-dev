@@ -2,7 +2,7 @@
 # depends : perl-capture-tiny
 
 name=perl-extutils-cppguess
-version=0.26
+version=0.271
 release=2
 
 _name=ExtUtils-CppGuess

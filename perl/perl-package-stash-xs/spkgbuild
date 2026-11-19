@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-package-stash-xs
-version=0.30
+version=0.32
 release=4
 
 _name=Package-Stash-XS

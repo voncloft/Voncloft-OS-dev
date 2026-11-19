@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-net-openssh
-version=0.83
+version=0.84
 release=1
 
 _name=Net-OpenSSH

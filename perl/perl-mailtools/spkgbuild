@@ -2,7 +2,7 @@
 # depends : perl-timedate
 
 name=perl-mailtools
-version=2.21
+version=2.22
 release=4
 
 _name=MailTools

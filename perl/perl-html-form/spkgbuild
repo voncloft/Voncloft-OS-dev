@@ -2,7 +2,7 @@
 # depends : perl perl-html-parser perl-http-message perl-uri.10
 
 name=perl-html-form
-version=6.11
+version=6.13
 release=7
 
 _name=HTML-Form

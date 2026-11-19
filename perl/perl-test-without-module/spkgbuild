@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-test-without-module
-version=0.21
+version=0.23
 release=6
 
 _name=Test-Without-Module

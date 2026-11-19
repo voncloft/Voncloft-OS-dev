@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-tidy
-version=20230309
+version=20260826
 release=1
 
 _name=Perl-Tidy

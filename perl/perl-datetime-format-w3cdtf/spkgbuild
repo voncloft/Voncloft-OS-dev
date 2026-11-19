@@ -2,7 +2,7 @@
 # depends : perl perl-datetime
 
 name=perl-datetime-format-w3cdtf
-version=0.08
+version=0.09
 release=4
 
 _name=DateTime-Format-W3CDTF

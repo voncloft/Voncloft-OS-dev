@@ -2,7 +2,7 @@
 # depends : perl-gd perl-gdtextutil
 
 name=perl-gdgraph
-version=1.54
+version=1.56
 release=4
 
 _name=GDGraph

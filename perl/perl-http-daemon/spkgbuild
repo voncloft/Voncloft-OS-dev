@@ -2,7 +2,7 @@
 # depends : perl perl-http-date perl-http-message perl-lwp-mediatypes
 
 name=perl-http-daemon
-version=6.16
+version=6.17
 release=2
 
 _name=HTTP-Daemon

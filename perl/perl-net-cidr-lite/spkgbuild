@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-net-cidr-lite
-version=0.22
+version=0.24
 release=9
 
 _name=Net-CIDR-Lite

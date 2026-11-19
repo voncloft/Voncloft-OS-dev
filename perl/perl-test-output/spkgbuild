@@ -2,7 +2,7 @@
 # depends : perl-sub-exporter
 
 name=perl-test-output
-version=1.033
+version=1.036
 release=1
 
 _name=Test-Output

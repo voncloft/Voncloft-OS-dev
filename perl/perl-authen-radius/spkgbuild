@@ -2,7 +2,7 @@
 # depends : perl-data-hexdump
 
 name=perl-authen-radius
-version=0.32
+version=0.37
 release=2
 
 _name=Authen-Radius

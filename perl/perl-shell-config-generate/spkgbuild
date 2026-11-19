@@ -2,7 +2,7 @@
 # depends : perl-shell-guess
 
 name=perl-shell-config-generate
-version=0.34
+version=0.36
 release=2
 
 _name=Shell-Config-Generate

@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-cpan-perl-releases
-version=5.20230423
+version=5.20261022
 release=2
 
 _name=CPAN-Perl-Releases

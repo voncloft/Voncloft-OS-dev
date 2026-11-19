@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-log-log4perl
-version=1.57
+version=1.58
 release=1
 
 _name=Log-Log4perl

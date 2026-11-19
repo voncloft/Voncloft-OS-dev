@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-mozilla-ca
-version=20221114
+version=20261105
 release=3
 
 _name=Mozilla-CA

@@ -2,7 +2,7 @@
 # depends : perl-number-compare perl-text-glob
 
 name=perl-file-find-rule
-version=0.34
+version=0.35
 release=7
 
 _name=File-Find-Rule

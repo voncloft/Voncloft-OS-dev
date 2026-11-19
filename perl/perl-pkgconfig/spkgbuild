@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-pkgconfig
-version=0.25026
+version=0.26026
 release=1
 
 _name=PkgConfig

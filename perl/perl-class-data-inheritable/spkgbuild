@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-class-data-inheritable
-version=0.09
+version=0.10
 release=9
 
 _name=Class-Data-Inheritable

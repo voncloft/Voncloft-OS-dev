@@ -2,7 +2,7 @@
 # depends : perl perl-business-isbn-data
 
 name=perl-business-isbn
-version=3.008
+version=3.014
 release=7
 
 _name=Business-ISBN

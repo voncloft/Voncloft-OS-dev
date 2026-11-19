@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-exporter-tiny
-version=1.006002
+version=1.006003
 release=2
 
 _name=Exporter-Tiny

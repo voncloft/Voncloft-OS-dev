@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-term-readline-gnu
-version=1.45
+version=1.47
 release=4
 
 _name=Term-ReadLine-Gnu

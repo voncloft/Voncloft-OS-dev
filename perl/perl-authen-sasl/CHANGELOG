@@ -7,3 +7,13 @@ release=8
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:36 AM EST 2026
+
+Version=2.2100
+Release=8
+
+Synopsis:
+Changed from version 2.16 to version 2.2100

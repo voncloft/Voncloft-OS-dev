@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-shell-guess
-version=0.09
+version=0.10
 release=3
 
 _name=Shell-Guess

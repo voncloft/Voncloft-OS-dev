@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-regexp-common
-version=2017060201
+version=2024080801
 release=3
 
 _name=Regexp-Common

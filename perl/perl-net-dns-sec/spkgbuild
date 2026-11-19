@@ -2,7 +2,7 @@
 # depends : perl-crypt-openssl-bignum perl-crypt-openssl-dsa perl-crypt-openssl-rsa perl-digest-bubblebabble perl-mime-base32 perl-net-dns perl
 
 name=perl-net-dns-sec
-version=1.20
+version=1.28
 release=1
 
 _name=Net-DNS-SEC

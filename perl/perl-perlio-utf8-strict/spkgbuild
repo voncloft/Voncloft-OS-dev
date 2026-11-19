@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-perlio-utf8-strict
-version=0.009
+version=0.010
 release=6
 
 _name=PerlIO-utf8_strict

@@ -2,7 +2,7 @@
 # depends : perl-libwww perl-html-parser perl-uri perl-http-response-encoding
 
 name=perl-www-mechanize
-version=2.17
+version=2.22
 release=1
 
 _name=WWW-Mechanize

@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-file-slurper
-version=0.013
+version=0.014
 release=4
 
 _name=File-Slurper

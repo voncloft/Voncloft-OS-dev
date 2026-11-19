@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-extutils-libbuilder
-version=0.08
+version=0.09
 release=7
 
 _name=ExtUtils-LibBuilder

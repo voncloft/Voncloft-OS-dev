@@ -2,7 +2,7 @@
 # depends : perl-gd
 
 name=perl-chart
-version=2.403.7
+version=v2.403.9
 release=4
 
 _name=Chart

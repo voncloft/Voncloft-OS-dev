@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-text-bibtex
-version=0.89
+version=1.00
 release=6
 
 _name=Text-BibTeX

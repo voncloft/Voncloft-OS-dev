@@ -2,7 +2,7 @@
 # depends : perl-test-nowarnings perl-test-simple
 
 name=perl-test-deep
-version=1.204
+version=1.205
 release=3
 
 _name=Test-Deep

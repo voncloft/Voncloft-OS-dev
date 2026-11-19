@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-class-methodmaker
-version=2.24
+version=2.25
 release=9
 
 _name=Class-MethodMaker

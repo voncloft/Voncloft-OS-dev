@@ -2,7 +2,7 @@
 # depends : perl perl-capture-tiny perl-cpan-perl-releases perl-devel-patchperl
 
 name=perlbrew
-version=0.96
+version=1.02
 release=1
 
 _name=App-perlbrew

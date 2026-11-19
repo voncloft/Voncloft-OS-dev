@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-crypt-passwdmd5
-version=1.42
+version=1.46
 release=1
 
 _name=Crypt-PasswdMD5

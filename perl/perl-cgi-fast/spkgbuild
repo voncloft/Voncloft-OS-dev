@@ -2,7 +2,7 @@
 # depends : perl perl-cgi perl-fcgi
 
 name=perl-cgi-fast
-version=2.16
+version=2.17
 release=3
 
 _name=CGI-Fast

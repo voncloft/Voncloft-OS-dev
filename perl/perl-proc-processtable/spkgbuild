@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-proc-processtable
-version=0.635
+version=0.637
 release=2
 
 _name=Proc-ProcessTable

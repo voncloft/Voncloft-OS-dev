@@ -2,7 +2,7 @@
 # depends : perl perl-common-sense perl-types-serialiser
 
 name=perl-json-xs
-version=4.03
+version=4.06
 release=4
 
 _name=JSON-XS

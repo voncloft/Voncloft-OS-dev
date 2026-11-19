@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-crypt-cbc
-version=3.04
+version=3.07
 release=4
 
 _name=Crypt-CBC

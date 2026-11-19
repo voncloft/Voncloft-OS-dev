@@ -2,7 +2,7 @@
 # depends : perl-dbi postgresql-libs
 
 name=perl-dbd-pg
-version=3.16.0
+version=3.21.2
 release=2
 
 _name=DBD-Pg

@@ -2,7 +2,7 @@
 # depends : perl-datetime
 
 name=perl-datetime-calendar-julian
-version=0.107
+version=0.108
 release=6
 
 _name=DateTime-Calendar-Julian

@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-variable-magic
-version=0.63
+version=0.65
 release=5
 
 _name=Variable-Magic

@@ -2,7 +2,7 @@
 # depends : glibc
 
 name=perl-crypt-des
-version=2.07
+version=2.09
 release=11
 
 _name=Crypt-DES

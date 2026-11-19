@@ -2,7 +2,7 @@
 # depends : perl-timedate perl-digest-hmac perl-file-remove.20
 
 name=perl-mail-box
-version=3.009
+version=4.02
 release=2
 
 _name=Mail-Box

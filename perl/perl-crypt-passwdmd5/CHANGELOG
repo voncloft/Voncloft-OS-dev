@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 1.41 to version 1.42
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:37 AM EST 2026
+
+Version=1.46
+Release=1
+
+Synopsis:
+Changed from version 1.42 to version 1.46

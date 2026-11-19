@@ -2,7 +2,7 @@
 # depends : perl-email-date-format perl-mailtools perl-mime-types perl
 
 name=perl-mime-lite
-version=3.033
+version=3.038
 release=3
 
 _name=MIME-Lite

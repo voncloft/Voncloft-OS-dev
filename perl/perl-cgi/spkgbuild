@@ -2,7 +2,7 @@
 # depends : perl perl-html-parser
 
 name=perl-cgi
-version=4.56
+version=5.02
 release=1
 
 _name=CGI

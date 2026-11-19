@@ -2,7 +2,7 @@
 # depends : glibc
 
 name=perl-io-tty
-version=1.17
+version=1.31
 release=10
 
 _name=IO-Tty

@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-mime-types
-version=2.24
+version=2.30
 release=1
 
 _name=MIME-Types

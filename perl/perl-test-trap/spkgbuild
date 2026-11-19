@@ -2,7 +2,7 @@
 # depends : perl perl-data-dump
 
 name=perl-test-trap
-version=0.3.5
+version=v0.3.5
 release=3
 
 _name=Test-Trap

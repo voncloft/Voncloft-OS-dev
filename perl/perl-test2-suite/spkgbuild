@@ -2,7 +2,7 @@
 # depends : perl-module-pluggable perl-importer perl-scope-guard perl-sub-info
 
 name=perl-test2-suite
-version=0.000153
+version=0.000163
 release=1
 
 _name=Test2-Suite

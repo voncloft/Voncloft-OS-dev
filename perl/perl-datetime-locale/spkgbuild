@@ -2,7 +2,7 @@
 # depends : perl-params-validate perl-list-moreutils
 
 name=perl-datetime-locale
-version=1.38
+version=1.47
 release=2
 
 _name=DateTime-Locale

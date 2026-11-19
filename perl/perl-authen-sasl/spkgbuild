@@ -2,7 +2,7 @@
 # depends : python perl-inc-latest perl-module-install
 
 name=perl-authen-sasl
-version=2.16
+version=2.2100
 release=8
 
 _name=Authen-SASL

@@ -2,7 +2,7 @@
 # depends : graphviz perl-file-which perl-ipc-run perl-libwww perl-parse-recdescent
 
 name=perl-graphviz
-version=2.25
+version=2.26
 release=6
 
 _name=GraphViz

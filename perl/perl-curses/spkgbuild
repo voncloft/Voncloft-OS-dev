@@ -2,7 +2,7 @@
 # depends : perl ncurses
 
 name=perl-curses
-version=1.44
+version=1.46
 release=8
 
 _name=Curses

@@ -1,7 +1,7 @@
 # description : Perl/CPAN Module Mail::Sendmail : Simple platform independent mailer
 
 name=perl-mail-sendmail
-version=0.80
+version=0.83
 release=11
 
 _name=Mail-Sendmail

@@ -7,3 +7,13 @@ release=1
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:38 AM EST 2026
+
+Version=3.0801
+Release=1
+
+Synopsis:
+Changed from version 3.0800 to version 3.0801

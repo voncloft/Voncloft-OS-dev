@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-capture-tiny
-version=0.48
+version=0.50
 release=4
 
 _name=Capture-Tiny

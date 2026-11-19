@@ -1,0 +1,58 @@
+# This legacy distribution has no MetaCPAN latest-release entry.
+# Match only its stable source archives in the upstream author directory.
+# Only report uversion; update-repo owns the version= edit.
+source="https://cpan.metacpan.org/authors/id/R/RA/RAAB/"
+url=$source
+
+get_generic()
+{
+	local detected
+	unset uversion
+	detected=$(python3 - <<'PYUPSTREAM'
+import pathlib
+import re
+import subprocess
+import sys
+from html.parser import HTMLParser
+from urllib.parse import unquote, urljoin, urlsplit
+
+project = 'SGMLSpm'
+base = 'https://cpan.metacpan.org/authors/id/R/RA/RAAB/'
+
+class Archives(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.versions = set()
+
+    def handle_starttag(self, tag, attributes):
+        if tag != 'a':
+            return
+        href = dict(attributes).get('href')
+        if not href:
+            return
+        target = urlsplit(urljoin(base, href))
+        origin = urlsplit(base)
+        if (target.scheme != origin.scheme or target.netloc != origin.netloc
+                or target.path.rsplit('/', 1)[0] + '/' != origin.path):
+            return
+        filename = unquote(target.path.rsplit('/', 1)[-1])
+        match = re.fullmatch(re.escape(project) + r'-(v?[0-9]+(?:\.[0-9]+)*)\.(?:tar\.(?:gz|bz2|xz)|tgz|zip)', filename)
+        if match:
+            self.versions.add(match[1])
+
+try:
+    parser = Archives()
+    parser.feed(pathlib.Path('index.html').read_text())
+    if not parser.versions:
+        raise ValueError('No stable source releases found for ' + project)
+    versions = subprocess.run(['sort', '-V'], input='\n'.join(parser.versions) + '\n',
+                              text=True, capture_output=True, check=True).stdout.splitlines()
+    print(versions[-1])
+except (OSError, ValueError, subprocess.SubprocessError) as error:
+    print('ERROR: ' + str(error), file=sys.stderr)
+    sys.exit(1)
+PYUPSTREAM
+	) || return 1
+	[ -n "$detected" ] || return 1
+	uversion=$detected
+}

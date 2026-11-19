@@ -2,7 +2,7 @@
 # depends : perl-class-accessor perl-class-data-inheritable perl-digest-hmac perl-digest-sha1 perl-uri perl-libwww perl-file-slurp-tiny
 
 name=perl-net-oauth
-version=0.28
+version=0.33
 release=10
 
 _name=Net-OAuth

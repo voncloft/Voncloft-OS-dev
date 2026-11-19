@@ -1,7 +1,7 @@
 # description : Perl/CPAN Module Mail::Box::Parser::C : extends MailBox with the speed of C
 
 name=perl-mail-box-parser-c
-version=3.010
+version=4.01
 release=8
 
 _name=Mail-Box-Parser-C

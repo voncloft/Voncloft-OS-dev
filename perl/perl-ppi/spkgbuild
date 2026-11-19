@@ -2,7 +2,7 @@
 # depends : perl-clone perl-io-string perl-list-moreutils perl-params-util perl-task-weaken
 
 name=perl-ppi
-version=1.276
+version=1.291
 release=2
 
 _name=PPI

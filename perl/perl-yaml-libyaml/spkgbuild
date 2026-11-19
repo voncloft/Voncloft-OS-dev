@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-yaml-libyaml
-version=0.86
+version=v0.910.0
 release=5
 
 _name=YAML-LibYAML

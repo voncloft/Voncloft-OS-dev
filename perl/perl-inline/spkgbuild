@@ -2,7 +2,7 @@
 # depends : perl perl-parse-recdescent
 
 name=perl-inline
-version=0.86
+version=0.87
 release=2
 
 _name=Inline

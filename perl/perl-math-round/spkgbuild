@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-math-round
-version=0.07
+version=0.08
 release=4
 
 _name=Math-Round

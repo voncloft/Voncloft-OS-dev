@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-module-find
-version=0.16
+version=0.17
 release=6
 
 _name=Module-Find

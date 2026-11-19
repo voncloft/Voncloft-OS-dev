@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-test-simple
-version=1.302195
+version=1.302226
 release=1
 
 _name=Test-Simple

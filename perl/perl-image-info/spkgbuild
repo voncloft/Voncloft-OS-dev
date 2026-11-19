@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-image-info
-version=1.43
+version=1.45
 release=4
 
 _name=Image-Info

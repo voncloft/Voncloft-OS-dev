@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-yaml-tiny
-version=1.74
+version=1.76
 release=4
 
 _name=YAML-Tiny

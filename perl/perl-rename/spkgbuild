@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-rename
-version=1.14
+version=1.15
 release=5
 
 _name=${name#perl-}

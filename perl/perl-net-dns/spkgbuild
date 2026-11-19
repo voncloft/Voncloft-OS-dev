@@ -2,7 +2,7 @@
 # depends : perl-digest-hmac perl-net-ip
 
 name=perl-net-dns
-version=1.37
+version=1.57
 release=1
 
 _name=Net-DNS

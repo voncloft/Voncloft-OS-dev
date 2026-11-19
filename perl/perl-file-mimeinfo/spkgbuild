@@ -2,7 +2,7 @@
 # depends : perl-encode-locale perl-file-basedir perl-file-desktopentry shared-mime-info
 
 name=perl-file-mimeinfo
-version=0.33
+version=0.37
 release=1
 
 _name=File-MimeInfo

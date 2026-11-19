@@ -2,7 +2,7 @@
 # depends : perl-datetime-timezone perl-datetime-locale
 
 name=perl-datetime
-version=1.59
+version=1.68
 release=1
 
 _name=DateTime

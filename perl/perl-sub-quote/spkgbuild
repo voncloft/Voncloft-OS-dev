@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-sub-quote
-version=2.006008
+version=2.006009
 release=3
 
 _name=Sub-Quote

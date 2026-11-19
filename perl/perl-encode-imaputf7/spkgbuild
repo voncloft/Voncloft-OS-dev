@@ -1,7 +1,7 @@
 # description : Modification of UTF-7 encoding for IMAP
 
 name=perl-encode-imaputf7
-version=1.05
+version=1.07
 release=4
 
 _name=Encode-IMAPUTF7

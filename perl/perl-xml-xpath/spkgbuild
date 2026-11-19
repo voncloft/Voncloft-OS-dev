@@ -2,7 +2,7 @@
 # depends : perl perl-xml-parser
 
 name=perl-xml-xpath
-version=1.48
+version=1.49
 release=3
 
 _name=XML-XPath

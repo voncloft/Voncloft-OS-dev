@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.89 to version 0.96
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:36 AM EST 2026
+
+Version=1.02
+Release=1
+
+Synopsis:
+Changed from version 0.96 to version 1.02

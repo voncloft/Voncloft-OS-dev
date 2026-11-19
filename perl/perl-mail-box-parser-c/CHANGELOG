@@ -7,3 +7,13 @@ Release=8
 Synopsis:
 Added Changelog to package
 Upgraded from version 3.008 to version 3.010
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 04:46:37 AM EST 2026
+
+Version=4.01
+Release=8
+
+Synopsis:
+Changed from version 3.010 to version 4.01

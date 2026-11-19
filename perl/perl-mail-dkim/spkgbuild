@@ -2,7 +2,7 @@
 # depends : perl-crypt-openssl-rsa perl-mail-authenticationresults perl-mailtools
 
 name=perl-mail-dkim
-version=1.20230212
+version=1.20261116
 release=1
 
 _name=Mail-DKIM

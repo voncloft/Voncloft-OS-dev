@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-test-manifest
-version=2.023
+version=2.026
 release=2
 
 _name=Test-Manifest

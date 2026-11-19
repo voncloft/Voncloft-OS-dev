@@ -2,7 +2,7 @@
 # depends : gnupg perl-math-bigint perl-moo perl-moox-handlesvia perl-moox-late
 
 name=perl-gnupg-interface
-version=1.02
+version=1.07
 release=1
 
 _name=GnuPG-Interface

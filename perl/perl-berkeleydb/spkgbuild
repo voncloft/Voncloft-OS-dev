@@ -2,7 +2,7 @@
 # depends : perl db
 
 name=perl-berkeleydb
-version=0.65
+version=0.67
 release=9
 
 _name=BerkeleyDB

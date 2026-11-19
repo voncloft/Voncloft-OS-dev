@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-business-issn
-version=1.005
+version=1.008
 release=4
 
 _name=Business-ISSN

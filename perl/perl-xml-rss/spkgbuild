@@ -2,7 +2,7 @@
 # depends : perl-datetime perl-datetime-format-mail perl-datetime-format-w3 cdtf
 
 name=perl-xml-rss
-version=1.62
+version=1.65
 release=4
 
 _name=XML-RSS

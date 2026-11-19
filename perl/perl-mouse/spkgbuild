@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-mouse
-version=2.5.10
+version=v2.6.2
 release=2
 
 _name=Mouse
