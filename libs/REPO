@@ -703,8 +703,8 @@ f:6b98075710c16b0d9cf812cbdc90cae4:confuse/spkgbuild
 f:4ff67c317d64f9993b72981342461805:gcab/CHANGELOG
 f:d406ec1dd76bd807cf0f4c96ee6f2c4c:gcab/spkgbuild
 f:36db3a72714ae3e71ab666bced9cd32d:libksba/.pkgfiles
-f:9635d82d5f780f1208509101bf860bb3:libksba/CHANGELOG
-f:f5357d0b0b914a9bd0160b40ff1d8db3:libksba/spkgbuild
+f:8f6e3b555f6e1ec481623c87995d479f:libksba/CHANGELOG
+f:e8fd81639f26c856af29bae6ba3aee9b:libksba/spkgbuild
 f:ae0e3c50c1518211c407b50a6785fb7e:libxft/spkgbuild
 f:ff10d397bde10657bc334480b055fc21:libxft/override
 f:0cb21be5d29706914176f4a3513815a8:libappindicator/spkgbuild
@@ -1229,8 +1229,8 @@ f:22ae1ac2b6626f1f9f5fa2b94ee72809:libxfce4ui/spkgbuild
 f:2d4290331c80fe67b9b3717f92403848:libgtop/CHANGELOG
 f:1f58fcc6179601c2f76133d1be2545e5:libgtop/spkgbuild
 f:e3b49a59454c477a6d5d31d669001f32:libmicrohttpd/.pkgfiles
-f:3c4b6cd16b61ca37e83988af0f2613c0:libmicrohttpd/CHANGELOG
-f:f0f7412435a5cf8a6ab2a4ac73f70790:libmicrohttpd/spkgbuild
+f:dc9c5dfe425de1ca870532e48ea09209:libmicrohttpd/CHANGELOG
+f:123d5155091759bc97eaac358e6379fd:libmicrohttpd/spkgbuild
 f:34d34e099d543154d1cfebb4cfb24bcc:liblzf/spkgbuild
 f:f8f33d5b5a92b9185de61ff7496d6f72:sqlcipher/CHANGELOG
 f:17150368d214eae01cd95f54f955a701:sqlcipher/spkgbuild

@@ -35,9 +35,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:a8449dbcf4668b7380269ed8db0f0921:firefox-bin/CHANGELOG
+f:5696fbc6076afd4582edad296031e466:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:2b02173afc4a84b395a5fccb0535fd6c:firefox-bin/spkgbuild
+f:49fe188278f4b27d18886eeb8eb190cd:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -88,8 +88,8 @@ f:0cd132121d49f59b13b6c0e31f356950:virtualbox-extpack/spkgbuild
 f:c4f42c28ce27f98b4dc9b32e21657882:virtualbox-extpack/override
 f:3b71d64afb426ccbefd0d66d06279c4a:virtualbox-extpack/pre-install.sh
 f:76e5fb76ed1bb9e020a82fe5cbe3ba97:discord/.pkgfiles
-f:96c26786748aa67728f74f4649eea3f7:discord/CHANGELOG
-f:104c4c122845eae04599e581771ac25d:discord/spkgbuild
+f:5bcb322dfe445e87e249f19456eb7d9b:discord/CHANGELOG
+f:1f041d6303e51f6f54e1ca6962333eaf:discord/spkgbuild
 f:9a4184349c8a0766d970edd695eebc78:discord/override
 f:05c708d759c1059ebec598477e4bf2b3:virtualbox-guest-utils/CHANGELOG
 f:9710904e9e86ec3da272cbe9fe48dbf8:virtualbox-guest-utils/60-vboxguest.rules
@@ -137,8 +137,8 @@ f:f1cbcac961f006f8442e698de30f32bc:webtorrent-desktop-bin/spkgbuild
 f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.desktop
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
-f:372f5f1b5949993954c0325d75d05727:thunderbird-bin/CHANGELOG
-f:c744f71cd72c79ae62f4a8db3b1c63ec:thunderbird-bin/spkgbuild
+f:c3111532177f3e099b8e67a7edb54e6e:thunderbird-bin/CHANGELOG
+f:767df33115b65b66bc9256b5fb7fc2db:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
 f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop
@@ -187,8 +187,8 @@ f:5468a271f8dd7467a74ca5fad373d61a:tuner/test/hcw85bda.inf
 f:3cacc7260237251c571f96d0c2d2c032:tuner/spkgbuild
 f:8e144e8be84d549ca2c26ec0537ab820:tuner/override
 f:c771d5a17259a49b46e4fb5fdaa6556f:.httpup-repo.current
-f:e36d0290f52fa6084827b248a190f53e:dropbox/CHANGELOG
+f:e7b5c72573c69e3ac514031d63d000cb:dropbox/CHANGELOG
 f:2be5a57e477adf82a7d9b7fe77f22086:dropbox/dropbox.png
 f:f3350cc0fb7b5f4fb6f2c0adda7e1260:dropbox/dropbox.desktop
-f:b6ffc94c456215cd598c4244af37c09a:dropbox/spkgbuild
+f:1927299fd83819f1d63955a721ad2462:dropbox/spkgbuild
 f:079ec530bf52604c0a14099ebba01248:dropbox/override

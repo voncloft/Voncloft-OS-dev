@@ -3,7 +3,7 @@
 
 name=thunderbird-bin
 # Include the build ID so daily Nightlies are distinct package/cache versions.
-version=162.0a1.20261118100949
+version=162.0a1.20261119095903
 release=2
 _name=${name%-bin}
 _version=${version%.*}

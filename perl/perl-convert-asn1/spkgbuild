@@ -1,7 +1,7 @@
 # description : Perl/CPAN Module Convert::ASN1 : Standard endecode of ASN1 structures
 
 name=perl-convert-asn1
-version=0.36
+version=0.37
 release=6
 
 _name=Convert-ASN1

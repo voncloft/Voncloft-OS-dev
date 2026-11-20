@@ -681,8 +681,8 @@ f:c62d58ef1e5168c1dcc98bbe4848ee17:gdbm/CHANGELOG
 f:30baeaaa0c6a6e6be8cf56a875726619:gdbm/fix-build-with-gcc10.patch
 f:7c029f38945e4d14055175e26063f641:gdbm/spkgbuild
 f:e5b52950970f3aefec72e64496ae6e7a:umockdev/.pkgfiles
-f:43ddde84ebcdda10267324e0abe79a41:umockdev/CHANGELOG
-f:6d28ca015ac3e1eb045095520c1b4416:umockdev/spkgbuild
+f:9ac8528bd07873d269ad9110f23af02b:umockdev/CHANGELOG
+f:12b35033965df715233792da1b6b0e5a:umockdev/spkgbuild
 f:e84ae19a046b36c5db33dc843366b43a:umockdev/override
 f:cd1e4cf8399858aa0307cb798e5a55bf:fwis/.pkgfiles
 f:a433b40ab4416774d201314c1e4ae8f2:fwis/fwis
@@ -1164,8 +1164,8 @@ f:473a5218938895558ef90d6f420f36af:boost/CHANGELOG
 f:c0a56321b48642da8138d9f5c76ac504:boost/spkgbuild
 f:3fb4e49b3cdcfd582f66518f6f1a1060:boost/override
 f:782559ddc05a71495dd0286b92312ad7:conky/.pkgfiles
-f:c248ee002051b999c375c9a9bce1b809:conky/CHANGELOG
-f:6e3296f36869d8956420211b61305142:conky/spkgbuild
+f:d16f310ca254debde24046b04b59002a:conky/CHANGELOG
+f:a9103d3ff00d867a1b8be4cd505c90f9:conky/spkgbuild
 f:b4ae39ab442b1a522f20c67efb2ccf9f:elinks/spkgbuild
 f:d42500b7a326a548fa0b631fb5b280a3:elinks/override
 f:c580262d1326041f784374916b4801b0:simplescreenrecorder/CHANGELOG
@@ -1665,8 +1665,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:caf9d9feb2ddf88256c5da70216e931c:flex/CHANGELOG
-f:9b431823e04098f65788d68a303202b4:flex/spkgbuild
+f:c16d6b6210ff24872f595759b2899967:flex/CHANGELOG
+f:138efeac68a0868d6ec3f86717d66db2:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch

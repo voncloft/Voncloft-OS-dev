@@ -66,10 +66,10 @@ f:9c85f5d2ae19e5a8a2487e5b8e850605:cinnamon-menus/spkgbuild
 f:a4325b711a25e9bf43b791312c92982b:cinnamon-settings-daemon/CHANGELOG
 f:d6648b17ee4eebfb8c9da98befe00b08:cinnamon-settings-daemon/spkgbuild
 f:96954475d3ee9e78b484de4655a28988:cinnamon/0001-cinnamon-settings-don-t-rely-on-the-presence-of-cinn.patch
-f:9b516c284a2778e3a0db639b8fee703f:cinnamon/CHANGELOG
+f:5e4c5276d3041ecb530df7d6c6461e82:cinnamon/CHANGELOG
 f:b4f0e83c5d4db976c54379148db8b0c6:cinnamon/set_wheel.diff
 f:fb02bc7803ee4b118d06357500e97809:cinnamon/default-theme.patch
-f:ea3b26b29bf9ce8f21f4cbbf74b7b035:cinnamon/spkgbuild
+f:e6437f535d63b715f8b249795524df70:cinnamon/spkgbuild
 f:beba02387a88d189530458afd59301bc:alacarte/CHANGELOG
 f:d7466dfc919846d137d51c5563a5097f:alacarte/spkgbuild
 f:7f44c96c1d5fb1f296f2bd3192602c27:cinnamon-translations/CHANGELOG
@@ -83,7 +83,7 @@ f:8ea9d8770ac61a17fd562ba8537d2ba1:evolution-data-server/spkgbuild
 f:5128723c35abcfd2a0d98905da847dac:rarian/spkgbuild
 f:5ff70c79ad0cc8885898ec288d474543:rarian/override
 f:a82ccb85f0ace22b25bf002e885408db:clutter/spkgbuild
-f:364f1ebf6f749bad4b038daacaa34781:muffin/CHANGELOG
-f:389305a3a2c2a25a3d29c429e896900a:muffin/spkgbuild
+f:44122fd4c82bf28350e2e7127edb237d:muffin/CHANGELOG
+f:d606084bb005e806717d8b87bd7ace34:muffin/spkgbuild
 f:a5da7a8359e21530a3962a7db2bec843:muffin/override
 f:9d2de6a845bbeca9cc57857be02da3be:.httpup-repo.current

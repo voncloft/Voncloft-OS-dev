@@ -277,3 +277,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 5.6.2 to version 5.9.2
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 11:28:10 PM EST 2026
+
+Version=5.9.3
+Release=3
+
+Synopsis:
+Changed from version 5.9.2 to version 5.9.3

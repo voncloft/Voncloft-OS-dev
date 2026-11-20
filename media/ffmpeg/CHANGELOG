@@ -127,3 +127,13 @@ Release=4
 
 Synopsis:
 Align the source, Chromium patch, and documentation with the selected FFmpeg release.
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 11:28:10 PM EST 2026
+
+Version=9.1
+Release=4
+
+Synopsis:
+Changed from version 9.0.2 to version 9.1

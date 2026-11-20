@@ -105,10 +105,10 @@ f:14817664930759de0ad6b401935ed927:monitor_process/spkgbuild
 f:bc72b9671b5868525d81c846a6694c4c:monitor_process/override
 f:7dcc5e2b309c9c085a987d6832601c5b:mariadb/mysql
 f:257b9ba750181e419a80447d25eb598f:mariadb/post-upgrade.sh
-f:fc06523405d943f4481bc07e03abad4c:mariadb/CHANGELOG
+f:a4ed5f411f6c18ed0bb08cc9de34bd24:mariadb/CHANGELOG
 f:4453595e194cb89b26d9b66dc9117d71:mariadb/post-install.sh
 f:41363cceaba8869e89e712eba4d426b2:mariadb/my.cnf
-f:8ab5dce6769bb2dbc0158e9aa13776ff:mariadb/spkgbuild
+f:0201dae47fd4560783c1b3f64c0399f6:mariadb/spkgbuild
 f:4f96f4854a82cea84fe2b0ce92c795dc:mariadb/override
 f:7b305ff4127525649f08eac0e370e1a8:mariadb/pre-install.sh
 f:21d0ea24068e51fef54c4f51a1f3f37d:blacklist-hosts/.pkgfiles
@@ -126,9 +126,9 @@ f:2a424710304fdd98868c6511c4814d41:httpd/pre-install.sh
 f:db198aa502f71742e5768904a88ecd30:php/.pkgfiles
 f:44d2be15152b16a9dddf9113ab2c80cb:php/php-fpm
 f:3c11643c3f50fc89aaf0a6f75987d71c:php/post-upgrade.sh
-f:6b1a42e19c519c68acd152ba82a64265:php/CHANGELOG
+f:5cd67115740de55468551b4e3f7441c7:php/CHANGELOG
 f:2198e71661171aba95734cf94ffb58fe:php/post-install.sh
-f:e1007a97d444275b4a98cd559b64ef7e:php/spkgbuild
+f:899921e0fb02d57e451c7d64f278873c:php/spkgbuild
 f:ccee3b154facffac0d200a451f231f92:php/override
 f:cdbf9b3e951732f764bfbdbbf72f1fc9:radicale/post-upgrade.sh
 f:48af7b10d01bf3aca4653d2b243ddc41:radicale/CHANGELOG

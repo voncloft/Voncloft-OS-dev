@@ -72,8 +72,8 @@ f:80e2e4837454bf6bc6f5d5af2ee133b2:phonon/.pkgfiles
 f:3bff822cfae06fc40b8d34c38ba9de73:phonon/spkgbuild
 f:f18c95b5e492428187905654112cb674:.httpup-urlinfo
 f:44936f6927809764784656870c1f7e86:ffmpeg/.pkgfiles
-f:ccc29212be219c982b3bcafcc8e45c57:ffmpeg/CHANGELOG
-f:c07a58faaf5142d7c2ab06f8c4fae596:ffmpeg/spkgbuild
+f:0708d73ae748bc0943f3034aa44f11d0:ffmpeg/CHANGELOG
+f:92656073731db865d2ac0780ea1e6518:ffmpeg/spkgbuild
 f:dedc508b381b744af0d80e93ef45e5ac:ffmpeg/override
 f:7dcdc322ba5632b156b324b0c2f5d19b:graphite2/.pkgfiles
 f:106866dcc34c544fa57fb8c57c80deae:graphite2/CHANGELOG

@@ -512,3 +512,81 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.47\| perl/perl-yaml-syc
 bash /usr/libexec/update-repo/changelog perl/perl-yaml-syck/spkgbuild Changed\ from\ version\ 1.34\ to\ version\ 1.47
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.76\| perl/perl-yaml-tiny/spkgbuild # update-repo-version 1.74 1.76
 bash /usr/libexec/update-repo/changelog perl/perl-yaml-tiny/spkgbuild Changed\ from\ version\ 1.74\ to\ version\ 1.76
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=20261119\| beta/tl-unx/spkgbuild # update-repo-version 20261118 20261119
+bash /usr/libexec/update-repo/changelog beta/tl-unx/spkgbuild Changed\ from\ version\ 20261118\ to\ version\ 20261119
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.8.3\| cinnamon/cinnamon/spkgbuild # update-repo-version 6.8.2 6.8.3
+bash /usr/libexec/update-repo/changelog cinnamon/cinnamon/spkgbuild Changed\ from\ version\ 6.8.2\ to\ version\ 6.8.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.8.5\| cinnamon/muffin/spkgbuild # update-repo-version 6.8.4 6.8.5
+bash /usr/libexec/update-repo/changelog cinnamon/muffin/spkgbuild Changed\ from\ version\ 6.8.4\ to\ version\ 6.8.5
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.5.1\| compilers/cmake/spkgbuild # update-repo-version 4.5.0 4.5.1
+bash /usr/libexec/update-repo/changelog compilers/cmake/spkgbuild Changed\ from\ version\ 4.5.0\ to\ version\ 4.5.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=20261119202111.g96f7b297326e9fd454b7186c6858b2773f94a0dc\| compilers/luajit/spkgbuild # update-repo-version 20261111083541.g63c8f1a9b479ba5518cf6a170ff7729178bc3cfd 20261119202111.g96f7b297326e9fd454b7186c6858b2773f94a0dc
+bash /usr/libexec/update-repo/changelog compilers/luajit/spkgbuild Changed\ from\ version\ 20261111083541.g63c8f1a9b479ba5518cf6a170ff7729178bc3cfd\ to\ version\ 20261119202111.g96f7b297326e9fd454b7186c6858b2773f94a0dc
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.26.1\| core/conky/spkgbuild # update-repo-version 1.26.0 1.26.1
+bash /usr/libexec/update-repo/changelog core/conky/spkgbuild Changed\ from\ version\ 1.26.0\ to\ version\ 1.26.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.7.2\| core/flex/spkgbuild # update-repo-version 2.7.1 2.7.2
+bash /usr/libexec/update-repo/changelog core/flex/spkgbuild Changed\ from\ version\ 2.7.1\ to\ version\ 2.7.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.20.0\| core/umockdev/spkgbuild # update-repo-version 0.19.9 0.20.0
+bash /usr/libexec/update-repo/changelog core/umockdev/spkgbuild Changed\ from\ version\ 0.19.9\ to\ version\ 0.20.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=26.1117.31558\| extra/chatgpt-desktop/spkgbuild # update-repo-version 26.1111.71704 26.1117.31558
+bash /usr/libexec/update-repo/changelog extra/chatgpt-desktop/spkgbuild Changed\ from\ version\ 26.1111.71704\ to\ version\ 26.1117.31558
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=15.2.0\| fonts/harfbuzz/spkgbuild # update-repo-version 15.1.0 15.2.0
+bash /usr/libexec/update-repo/changelog fonts/harfbuzz/spkgbuild Changed\ from\ version\ 15.1.0\ to\ version\ 15.2.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.4.369\| hardware/vulkan-headers/spkgbuild # update-repo-version 1.4.368 1.4.369
+bash /usr/libexec/update-repo/changelog hardware/vulkan-headers/spkgbuild Changed\ from\ version\ 1.4.368\ to\ version\ 1.4.369
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.7.2\| lfs-base-install/flex/spkgbuild # update-repo-version 2.7.1 2.7.2
+bash /usr/libexec/update-repo/changelog lfs-base-install/flex/spkgbuild Changed\ from\ version\ 2.7.1\ to\ version\ 2.7.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.9.1\| libs/libksba/spkgbuild # update-repo-version 1.9.0 1.9.1
+bash /usr/libexec/update-repo/changelog libs/libksba/spkgbuild Changed\ from\ version\ 1.9.0\ to\ version\ 1.9.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.11\| libs/libmicrohttpd/spkgbuild # update-repo-version 1.0.10 1.0.11
+bash /usr/libexec/update-repo/changelog libs/libmicrohttpd/spkgbuild Changed\ from\ version\ 1.0.10\ to\ version\ 1.0.11
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=9.1\| media/ffmpeg/spkgbuild # update-repo-version 9.0.2 9.1
+bash /usr/libexec/update-repo/changelog media/ffmpeg/spkgbuild Changed\ from\ version\ 9.0.2\ to\ version\ 9.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.170\| nonfree/discord/spkgbuild # update-repo-version 1.0.169 1.0.170
+bash /usr/libexec/update-repo/changelog nonfree/discord/spkgbuild Changed\ from\ version\ 1.0.169\ to\ version\ 1.0.170
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=280.4.5053\| nonfree/dropbox/spkgbuild # update-repo-version 280.3.5020 280.4.5053
+bash /usr/libexec/update-repo/changelog nonfree/dropbox/spkgbuild Changed\ from\ version\ 280.3.5020\ to\ version\ 280.4.5053
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=163.0a1.20261119211919\| nonfree/firefox-bin/spkgbuild # update-repo-version 162.0a1.20261118215316 163.0a1.20261119211919
+bash /usr/libexec/update-repo/changelog nonfree/firefox-bin/spkgbuild Changed\ from\ version\ 162.0a1.20261118215316\ to\ version\ 163.0a1.20261119211919
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=162.0a1.20261119095903\| nonfree/thunderbird-bin/spkgbuild # update-repo-version 162.0a1.20261118100949 162.0a1.20261119095903
+bash /usr/libexec/update-repo/changelog nonfree/thunderbird-bin/spkgbuild Changed\ from\ version\ 162.0a1.20261118100949\ to\ version\ 162.0a1.20261119095903
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.37\| perl/perl-convert-asn1/spkgbuild # update-repo-version 0.36 0.37
+bash /usr/libexec/update-repo/changelog perl/perl-convert-asn1/spkgbuild Changed\ from\ version\ 0.36\ to\ version\ 0.37
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=5.20261119\| perl/perl-cpan-perl-releases/spkgbuild # update-repo-version 5.20261022 5.20261119
+bash /usr/libexec/update-repo/changelog perl/perl-cpan-perl-releases/spkgbuild Changed\ from\ version\ 5.20261022\ to\ version\ 5.20261119
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.19\| perl/perl-datetime-format-iso8601/spkgbuild # update-repo-version 0.16 0.19
+bash /usr/libexec/update-repo/changelog perl/perl-datetime-format-iso8601/spkgbuild Changed\ from\ version\ 0.16\ to\ version\ 0.19
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.12\| perl/perl-sub-spkgbuild/spkgbuild # update-repo-version 0.09 0.12
+bash /usr/libexec/update-repo/changelog perl/perl-sub-spkgbuild/spkgbuild Changed\ from\ version\ 0.09\ to\ version\ 0.12
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=3.33.0\| python/python-aiogram/spkgbuild # update-repo-version 3.32.0 3.33.0
+bash /usr/libexec/update-repo/changelog python/python-aiogram/spkgbuild Changed\ from\ version\ 3.32.0\ to\ version\ 3.33.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.118.0\| python/python-aws-sam-translator/spkgbuild # update-repo-version 1.117.0 1.118.0
+bash /usr/libexec/update-repo/changelog python/python-aws-sam-translator/spkgbuild Changed\ from\ version\ 1.117.0\ to\ version\ 1.118.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.44.7\| python/python-boto3/spkgbuild # update-repo-version 1.44.6 1.44.7
+bash /usr/libexec/update-repo/changelog python/python-boto3/spkgbuild Changed\ from\ version\ 1.44.6\ to\ version\ 1.44.7
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.44.7\| python/python-botocore/spkgbuild # update-repo-version 1.44.6 1.44.7
+bash /usr/libexec/update-repo/changelog python/python-botocore/spkgbuild Changed\ from\ version\ 1.44.6\ to\ version\ 1.44.7
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.61.0\| python/python-cfn-lint/spkgbuild # update-repo-version 1.60.1 1.61.0
+bash /usr/libexec/update-repo/changelog python/python-cfn-lint/spkgbuild Changed\ from\ version\ 1.60.1\ to\ version\ 1.61.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.10.2\| python/python-configargparse/spkgbuild # update-repo-version 1.10.1 1.10.2
+bash /usr/libexec/update-repo/changelog python/python-configargparse/spkgbuild Changed\ from\ version\ 1.10.1\ to\ version\ 1.10.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=5.9.3\| python/python-flask-security-too/spkgbuild # update-repo-version 5.9.2 5.9.3
+bash /usr/libexec/update-repo/changelog python/python-flask-security-too/spkgbuild Changed\ from\ version\ 5.9.2\ to\ version\ 5.9.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.170.16\| python/python-hypothesis/spkgbuild # update-repo-version 6.170.15 6.170.16
+bash /usr/libexec/update-repo/changelog python/python-hypothesis/spkgbuild Changed\ from\ version\ 6.170.15\ to\ version\ 6.170.16
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.48\| python/python-jsonpatch/spkgbuild # update-repo-version 1.47 1.48
+bash /usr/libexec/update-repo/changelog python/python-jsonpatch/spkgbuild Changed\ from\ version\ 1.47\ to\ version\ 1.48
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=5.19.0\| python/python-keystoneauth1/spkgbuild # update-repo-version 5.18.1 5.19.0
+bash /usr/libexec/update-repo/changelog python/python-keystoneauth1/spkgbuild Changed\ from\ version\ 5.18.1\ to\ version\ 5.19.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.24.0\| python/python-openstacksdk/spkgbuild # update-repo-version 4.22.0 4.24.0
+bash /usr/libexec/update-repo/changelog python/python-openstacksdk/spkgbuild Changed\ from\ version\ 4.22.0\ to\ version\ 4.24.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=7.3.0\| python/python-pylast/spkgbuild # update-repo-version 7.2.0 7.3.0
+bash /usr/libexec/update-repo/changelog python/python-pylast/spkgbuild Changed\ from\ version\ 7.2.0\ to\ version\ 7.3.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.6.1\| python/python-typeguard/spkgbuild # update-repo-version 4.6.0 4.6.1
+bash /usr/libexec/update-repo/changelog python/python-typeguard/spkgbuild Changed\ from\ version\ 4.6.0\ to\ version\ 4.6.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=3.3.2\| python/python-xlsxwriter/spkgbuild # update-repo-version 3.3.1 3.3.2
+bash /usr/libexec/update-repo/changelog python/python-xlsxwriter/spkgbuild Changed\ from\ version\ 3.3.1\ to\ version\ 3.3.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=13.2.1\| server/mariadb/spkgbuild # update-repo-version 13.2.0 13.2.1
+bash /usr/libexec/update-repo/changelog server/mariadb/spkgbuild Changed\ from\ version\ 13.2.0\ to\ version\ 13.2.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=8.4.28\| server/php/spkgbuild # update-repo-version 8.4.27 8.4.28
+bash /usr/libexec/update-repo/changelog server/php/spkgbuild Changed\ from\ version\ 8.4.27\ to\ version\ 8.4.28

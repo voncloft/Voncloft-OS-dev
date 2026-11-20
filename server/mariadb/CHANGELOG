@@ -66,3 +66,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 12.3.3 to version 13.2.0
+
+----------------------------------------------------------------
+
+Date: Thu Nov 19 11:28:10 PM EST 2026
+
+Version=13.2.1
+Release=1
+
+Synopsis:
+Changed from version 13.2.0 to version 13.2.1

@@ -2,7 +2,7 @@
 # depends : python python-flask python-flask-login python-flask-mail python-flask-principal
 
 name=python-flask-security-too
-version=5.9.2
+version=5.9.3
 release=3
 
 _name=flask-security

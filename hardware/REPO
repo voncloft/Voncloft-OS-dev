@@ -28,8 +28,8 @@ f:6912799edf45bc2421a7e81d646fdf0d:xf86-video-nouveau/readme
 f:d02c81a0ef2c5c2209529689b375297b:xf86-video-nouveau/CHANGELOG
 f:4e2f9fef4b2a2b070fdf925067052c09:xf86-video-nouveau/spkgbuild
 f:f754bb3d513b19809b1aaabeeca2edc4:vulkan-headers/.pkgfiles
-f:40d42cfb7a9f98d9f01c49b50f8700be:vulkan-headers/CHANGELOG
-f:9032ef36a574417e0391fb6ffc862575:vulkan-headers/spkgbuild
+f:22131841fc60437611d7f110a3e628c2:vulkan-headers/CHANGELOG
+f:37f943e21b2b8fc646534e9c7fb30d52:vulkan-headers/spkgbuild
 f:cc2996282c11caaa8fe95ccd81424c3f:vulkan-headers/override
 f:98002aa12a48bc71b3c48b6e64ef9e17:xf86-video-vmware/.pkgfiles
 f:3c1279952caa185185ffd035e48aae04:xf86-video-vmware/readme

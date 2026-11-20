@@ -122,13 +122,13 @@ f:168a474af7ca2e0b08d990552c4879ba:automake/.pkgfiles
 f:8ace17af17ea4bba59c69d616c0319c8:automake/CHANGELOG
 f:5685d46b96bfd64121fad31152bb5b4e:automake/spkgbuild
 f:e976867c08a51955dbcf2a3a808290dc:cmake/.pkgfiles
-f:b757d8098d85210064819e23c7fc592d:cmake/CHANGELOG
+f:3a99e34f519bd0817b2c50195ef7b794:cmake/CHANGELOG
 f:8ba3c9f07f4f88b451083053325a1552:cmake/override-old
-f:4c6e1764041bbe0920e3fa414fb3fabe:cmake/spkgbuild
+f:f02686bc7b31b998841e5383231ad237:cmake/spkgbuild
 f:4f6f8e00ae4fe46df19791b5183c3c11:cmake/override
 f:cea1e92da5e154b5f073e610a3ee238a:.httpup-repo.current
 f:277b0ccff30b904ac06222a46022afeb:luajit/.pkgfiles
-f:749689748588add5da8b02b304590864:luajit/CHANGELOG
-f:2e58d09c0595ba51b03584a44fc92edd:luajit/spkgbuild
+f:73cd1be58a4a8b1b750e04ee1b22c53e:luajit/CHANGELOG
+f:2b4ef59b43939e7901162f7a9ee604ad:luajit/spkgbuild
 f:81b617dd0290cebc4ebbbf2eaad8faf3:luajit/override
 f:0af6e871d68b3e9318d7e7cd6c905ad6:luajit/.checksums
