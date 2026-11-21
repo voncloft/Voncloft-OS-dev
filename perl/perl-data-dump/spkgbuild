@@ -2,7 +2,7 @@
 # depends : perl
 
 name=perl-data-dump
-version=1.25
+version=1.26
 release=6
 
 _name=Data-Dump

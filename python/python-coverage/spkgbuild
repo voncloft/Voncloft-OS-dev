@@ -2,7 +2,7 @@
 # depends : python-setuptools
 
 name=python-coverage
-version=7.17.3
+version=7.17.4
 release=1
 
 _name=coveragepy

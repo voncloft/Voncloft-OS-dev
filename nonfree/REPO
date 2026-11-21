@@ -35,9 +35,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:5696fbc6076afd4582edad296031e466:firefox-bin/CHANGELOG
+f:b84e5906162657baf6abcce49be4b43c:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:49fe188278f4b27d18886eeb8eb190cd:firefox-bin/spkgbuild
+f:fed071d74f9ca4b42c9363359f6388fc:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -137,8 +137,8 @@ f:f1cbcac961f006f8442e698de30f32bc:webtorrent-desktop-bin/spkgbuild
 f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.desktop
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
-f:c3111532177f3e099b8e67a7edb54e6e:thunderbird-bin/CHANGELOG
-f:767df33115b65b66bc9256b5fb7fc2db:thunderbird-bin/spkgbuild
+f:9fbded3273ce6f2a97dac309a00785d2:thunderbird-bin/CHANGELOG
+f:be48ff2d5d28c4d5b1ba506cf74a0f0b:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
 f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop

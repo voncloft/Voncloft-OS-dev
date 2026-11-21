@@ -2,7 +2,7 @@
 # depends : perl perl-font-ttf
 
 name=perl-pdf-api2
-version=2.048
+version=2.049
 release=1
 
 _name=PDF-API2

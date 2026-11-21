@@ -460,8 +460,8 @@ f:84dd410942db26ce25145af3483c9e1f:libgudev/CHANGELOG
 f:c52f22c7c85d292fb70087e4e46f02ff:libgudev/spkgbuild
 f:3de490f6d32211f869600bd6926a1481:libgudev/override
 f:e122c9815283568e6701b1e57f227fcc:gpgme/.pkgfiles
-f:a4965bec473af67c6211bcc7bd2345ef:gpgme/CHANGELOG
-f:41f5274f57a9e12e5bdcb1f4292be407:gpgme/spkgbuild
+f:84ad89bf149df066fa55e6a45f3a6ab6:gpgme/CHANGELOG
+f:3a84484a0941ebb2ec6a8d695d3a5930:gpgme/spkgbuild
 f:235d4b5760e9d8fb3de84b267063ed81:xsimd/spkgbuild
 f:b188f556eb8b99e0342e31bfe2976cfd:exiv2/.pkgfiles
 f:2b509a0b5f9eac989793f3b8c9d85411:exiv2/CHANGELOG
@@ -633,8 +633,8 @@ f:c9167fc50b6822f374bf67d1ee0de403:yaml/spkgbuild
 f:20aaac08a545de3cfadf6e23512a7973:libssh/.pkgfiles
 f:db1b0b757cbda9c55a8ec9fc44fbfbd0:libssh/spkgbuild
 f:f69e2dc78b2daa3b813487c85fc46e97:libseccomp/.pkgfiles
-f:5e25834188dbe177394beef926df641f:libseccomp/CHANGELOG
-f:6cf3f3d3901194e71a3e4adff0a97a82:libseccomp/spkgbuild
+f:bfb1cfb45a870944b73ffc59e4426183:libseccomp/CHANGELOG
+f:bbfad71e35a843c8501992522ae88936:libseccomp/spkgbuild
 f:785aa311f69dd9dc2df77cb11b727ec6:libseccomp/override
 f:b2f8a9129067cec930a1b1d3882d5a6d:libsm/spkgbuild
 f:a5e4df33ee3c09a24a3657490415c84e:libsm/override

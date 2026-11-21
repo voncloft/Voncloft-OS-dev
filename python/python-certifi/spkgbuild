@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-certifi
-version=2026.10.23
+version=2026.11.20
 release=3
 
 source="https://github.com/certifi/${name}/archive/${version}/${name}-${version}.tar.gz"

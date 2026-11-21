@@ -2,7 +2,7 @@
 # depends : gnupg libassuan libgpg-error make
 
 name=gpgme
-version=2.2.0
+version=2.3.1
 release=1
 
 source="$name-$version.tar.bz2::https://gnupg.org/ftp/gcrypt/${name}/${name}-$version.tar.bz2"
