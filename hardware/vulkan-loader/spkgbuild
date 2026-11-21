@@ -2,7 +2,7 @@
 # depends     : cmake vulkan-headers xorg-libraries wayland ninja
 
 name=vulkan-loader
-version=1.4.368
+version=1.4.369
 release=2
 _name=Vulkan-Loader
 source=" https://github.com/KhronosGroup/${_name}/archive/v${version}/${_name}-${version}.tar.gz"

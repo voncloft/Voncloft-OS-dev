@@ -1,0 +1,248 @@
+--- a/src/sync/sync.cpp
++++ b/src/sync/sync.cpp
+@@ -72,6 +72,17 @@
+     connect(&AudioManager::instance(), &AudioManager::entryChanged, this, &Sync::reportPlaybackStatus);
+     connect(this, &Sync::syncEnabledChanged, this, [this]() { m_presenceRetryAfter = 0; reportPlaybackStatus(); });
+     presenceTimer->start();
++    m_autoSyncTimer.setSingleShot(true);
++    connect(&m_autoSyncTimer, &QTimer::timeout, this, &Sync::runAutomaticSync);
++    m_pollTimer.setInterval(30000);
++    connect(&m_pollTimer, &QTimer::timeout, this, [this]() {
++        if (!m_autoSyncTimer.isActive()) {
++            runAutomaticSync();
++        }
++    });
++    connect(this, &Sync::syncEnabledChanged, this, &Sync::scheduleSync);
++    connect(this, &Sync::credentialsChanged, this, &Sync::scheduleSync);
++    m_pollTimer.start();
+     retrieveCredentialsFromConfig();
+ }
+ 
+@@ -479,6 +490,9 @@
+ 
+ void Sync::clearSettings()
+ {
++    m_autoSyncTimer.stop();
++    m_pendingAutomaticSync = false;
++    m_retrySeconds = 30;
+     if (m_gpodder) {
+         m_gpodder->deleteLater();
+         m_gpodder = nullptr;
+@@ -861,6 +875,8 @@
+         Q_EMIT abortSync();
+     }
+ 
++    m_pendingAutomaticSync = false;
++    m_autoSyncTimer.stop();
+     m_syncStatus = status;
+ 
+     if (status == SyncUtils::SyncStatus::PushAllSync) {
+@@ -881,6 +897,16 @@
+         }
+         m_syncStatus = SyncStatus::NoSync;
+         Q_EMIT syncProgressChanged();
++        if (job->error()) {
++            m_pendingAutomaticSync = true;
++            m_autoSyncTimer.start(m_retrySeconds * 1000);
++            m_retrySeconds = qMin(300, m_retrySeconds * 2);
++        } else {
++            m_retrySeconds = 30;
++            if (m_pendingAutomaticSync) {
++                m_autoSyncTimer.start(2000);
++            }
++        }
+     });
+     syncJob->start();
+ }
+@@ -900,40 +926,32 @@
+     doSync(SyncStatus::PushAllSync, false);
+ }
+ 
++void Sync::scheduleSync()
++{
++    if (!m_syncEnabled || !m_allowSyncActionLogging) {
++        return;
++    }
++    m_pendingAutomaticSync = true;
++    if (!m_autoSyncTimer.isActive()) {
++        m_autoSyncTimer.start(2000);
++    }
++}
++
++void Sync::runAutomaticSync()
++{
++    if (!m_syncEnabled || !m_gpodder || m_password.isEmpty()
++        || !NetworkConnectionManager::instance().feedUpdatesAllowed()) {
++        return;
++    }
++    if (m_syncStatus != SyncStatus::NoSync) {
++        return;
++    }
++    doRegularSync(false);
++}
++
+ void Sync::doQuickSync()
+ {
+-    if (!SettingsManager::self()->syncWhenPlayerstateChanges()) {
+-        return;
+-    }
+-
+-    // since this method is supposed to be called automatically, we cannot check
+-    // the network state from the UI, so we have to do it here
+-    if (!NetworkConnectionManager::instance().feedUpdatesAllowed()) {
+-        qCDebug(kastsSync) << "Not uploading episode actions on metered connection due to settings";
+-        return;
+-    }
+-
+-    if (!m_syncEnabled || !m_gpodder || m_syncStatus != SyncStatus::NoSync) {
+-        return;
+-    }
+-
+-    if (m_provider == Provider::GPodderNet && (m_username.isEmpty() || m_device.isEmpty())) {
+-        return;
+-    }
+-
+-    if (m_provider == Provider::GPodderNextcloud && (m_username.isEmpty() || m_hostname.isEmpty())) {
+-        return;
+-    }
+-
+-    m_syncStatus = SyncStatus::UploadOnlySync;
+-
+-    SyncJob *syncJob = new SyncJob(m_syncStatus, m_gpodder, m_device, false, this);
+-    connect(this, &Sync::abortSync, syncJob, &SyncJob::abort);
+-    connect(syncJob, &SyncJob::finished, this, [this]() {
+-        // don't do error reporting or status updates on quick upload-only syncs
+-        m_syncStatus = SyncStatus::NoSync;
+-    });
+-    syncJob->start();
++    scheduleSync();
+ }
+ 
+ void Sync::applySubscriptionChangesLocally(const QStringList &addList, const QStringList &removeList)
+@@ -1042,6 +1060,7 @@
+         query.bindValue(QStringLiteral(":timestamp"), QDateTime::currentSecsSinceEpoch());
+         Database::instance().execute(query);
+         Database::instance().commit();
++        scheduleSync();
+         qCDebug(kastsSync) << "Logged a feed add action for" << url;
+     }
+ }
+@@ -1058,6 +1077,7 @@
+         query.bindValue(QStringLiteral(":timestamp"), QDateTime::currentSecsSinceEpoch());
+         Database::instance().execute(query);
+         Database::instance().commit();
++        scheduleSync();
+         qCDebug(kastsSync) << "Logged a feed remove action for feeduid" << feeduid;
+     }
+ }
+@@ -1120,6 +1140,7 @@
+             qCDebug(kastsSync) << "Logged an episode play action for" << entryuids[i] << "play position changed:" << started_sec << position_sec;
+         }
+         Database::instance().commit();
++        scheduleSync();
+     }
+ }
+ 
+@@ -1171,6 +1192,7 @@
+             Database::instance().execute(query);
+         }
+         Database::instance().commit();
++        scheduleSync();
+     }
+ }
+ 
+--- a/src/sync/sync.h
++++ b/src/sync/sync.h
+@@ -13,6 +13,7 @@
+ #include <KFormat>
+ 
+ #include <QNetworkAccessManager>
++#include <QTimer>
+ 
+ #include "error.h"
+ #include "sync/syncutils.h"
+@@ -94,7 +95,9 @@
+     Q_INVOKABLE void doRegularSync(bool forceFetchAll = false); // regular sync; can be forced to update all feeds
+     Q_INVOKABLE void doForceSync(); // force a full re-sync with the server; discarding local eposide acions
+     Q_INVOKABLE void doSyncPushAll(); // upload all local episode states to the server; this will likely overwrite all actions stored on the server
+-    Q_INVOKABLE void doQuickSync(); // only upload pending local episode actions; intended to be run directly after an episode action has been created
++    Q_INVOKABLE void doQuickSync(); // schedule an automatic bidirectional sync after local changes
++
++    void scheduleSync();
+ 
+     // Next are some generic methods to store and apply local changes to be synced
+     void storeAddFeedAction(const QString &url);
+@@ -126,6 +129,12 @@
+ 
+ private:
+     Sync();
++
++    void runAutomaticSync();
++    QTimer m_autoSyncTimer;
++    QTimer m_pollTimer;
++    bool m_pendingAutomaticSync = false;
++    int m_retrySeconds = 30;
+ 
+     void reportPlaybackStatus();
+     QNetworkAccessManager *m_presenceNetwork = nullptr;
+--- a/src/models/queuemodel.cpp
++++ b/src/models/queuemodel.cpp
+@@ -22,6 +22,7 @@
+ #include "entry.h"
+ #include "objectslogging.h"
+ #include "settingsmanager.h"
++#include "sync/sync.h"
+ 
+ QueueModel::QueueModel(QObject *parent)
+     : AbstractEpisodeModel(parent)
+@@ -151,6 +152,7 @@
+     Q_EMIT timeLeftChanged();
+     qCDebug(kastsQueueModel) << "Added entry at from-to positions:" << beginQueueIndex << endQueueIndex;
+     qCDebug(kastsQueueModel) << "m_queue is now:" << m_queue;
++    Sync::instance().scheduleSync();
+ }
+ 
+ void QueueModel::removeFromQueue(const QList<qint64> &entryuids)
+@@ -224,6 +226,7 @@
+ 
+     qCDebug(kastsQueueModel) << "m_queue is now:" << m_queue;
+     Q_EMIT timeLeftChanged();
++    Sync::instance().scheduleSync();
+ }
+ 
+ void QueueModel::moveQueueItem(const qint64 from, const qint64 to_orig)
+@@ -242,6 +245,7 @@
+ 
+     // Send this signal mainly to inform AudioManager about a change in the queue
+     Q_EMIT DataManager::instance().entryQueueStatusChanged(true, QList<qint64>());
++    Sync::instance().scheduleSync();
+ }
+ 
+ Entry *QueueModel::getQueueEntry(int index) const
+@@ -303,6 +307,7 @@
+     endResetModel();
+ 
+     qCDebug(kastsQueueModel) << "Queue was sorted";
++    Sync::instance().scheduleSync();
+ }
+ 
+ void QueueModel::updateQueueListnrs() const
+--- a/src/audiomanager.cpp
++++ b/src/audiomanager.cpp
+@@ -459,6 +459,8 @@
+     if (d->m_readyToPlay) {
+         d->m_isSeekable = true;
+         d->m_player.pause();
++        d->m_lastSignificantPosition = -2 * d->m_significantInterval;
++        savePlayPositionToDB(position(), d->m_entryuid);
+     }
+ }
+ 
+@@ -484,6 +486,7 @@
+ void AudioManager::seek(const qint64 position)
+ {
+     qCDebug(kastsAudio) << "AudioManager::seek" << position;
++    d->m_lastSignificantPosition = -2 * d->m_significantInterval;
+ 
+     // if there is still a pending seek, then we simply update that pending
+     // value, and then manually send the positionChanged signal to have the UI

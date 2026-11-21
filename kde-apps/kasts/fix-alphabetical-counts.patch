@@ -1,0 +1,12 @@
+--- a/src/qml/FeedListDelegate.qml
++++ b/src/qml/FeedListDelegate.qml
+@@ -25,7 +25,8 @@
+     required property int row
+ 
+     property int feedSorting: (Controls.ApplicationWindow.window as Main) ? (Controls.ApplicationWindow.window as Main).feedSorting : 0 // need to do this check because the window becomes null just before delegate destruction
+-    property var countProperty: (feedSorting === FeedsProxyModel.UnreadDescending || feedSorting === FeedsProxyModel.UnreadAscending) ? feed.unreadEntryCount : ((feedSorting === FeedsProxyModel.NewDescending || feedSorting === FeedsProxyModel.NewAscending) ? feed.newEntryCount : ((feedSorting === FeedsProxyModel.FavoriteDescending || feedSorting === FeedsProxyModel.FavoriteAscending) ? feed.favoriteEntryCount : 0))
++    // Alphabetical sorting still shows the number of unplayed episodes.
++    property var countProperty: (feedSorting === FeedsProxyModel.UnreadDescending || feedSorting === FeedsProxyModel.UnreadAscending) ? feed.unreadEntryCount : ((feedSorting === FeedsProxyModel.NewDescending || feedSorting === FeedsProxyModel.NewAscending) ? feed.newEntryCount : ((feedSorting === FeedsProxyModel.FavoriteDescending || feedSorting === FeedsProxyModel.FavoriteAscending) ? feed.favoriteEntryCount : feed.unreadEntryCount))
+     property int borderWidth: 1
+     implicitWidth: root.cardSize + 2 * root.cardMargin
+     implicitHeight: root.cardSize + 2 * root.cardMargin

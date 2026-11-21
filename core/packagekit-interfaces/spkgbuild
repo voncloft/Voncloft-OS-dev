@@ -3,7 +3,7 @@
 # note : Interface XML only; this package does not provide a PackageKit daemon or backend.
 
 name=packagekit-interfaces
-version=1.4.0
+version=1.4.1
 release=1
 _name=PackageKit
 source="PackageKit-$version.tar.gz::https://github.com/PackageKit/${_name}/archive/refs/tags/v$version.tar.gz"

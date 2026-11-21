@@ -1,0 +1,161 @@
+--- a/src/sync/sync.cpp
++++ b/src/sync/sync.cpp
+@@ -65,24 +65,13 @@
+         presenceConfig.sync();
+     }
+     m_presenceNetwork = new QNetworkAccessManager(this);
+-    auto *presenceTimer = new QTimer(this);
+-    presenceTimer->setInterval(15000);
+-    connect(presenceTimer, &QTimer::timeout, this, &Sync::reportPlaybackStatus);
+     connect(&AudioManager::instance(), &AudioManager::playbackStateChanged, this, &Sync::reportPlaybackStatus);
+     connect(&AudioManager::instance(), &AudioManager::entryChanged, this, &Sync::reportPlaybackStatus);
+     connect(this, &Sync::syncEnabledChanged, this, [this]() { m_presenceRetryAfter = 0; reportPlaybackStatus(); });
+-    presenceTimer->start();
+     m_autoSyncTimer.setSingleShot(true);
+     connect(&m_autoSyncTimer, &QTimer::timeout, this, &Sync::runAutomaticSync);
+-    m_pollTimer.setInterval(30000);
+-    connect(&m_pollTimer, &QTimer::timeout, this, [this]() {
+-        if (!m_autoSyncTimer.isActive()) {
+-            runAutomaticSync();
+-        }
+-    });
+     connect(this, &Sync::syncEnabledChanged, this, &Sync::scheduleSync);
+     connect(this, &Sync::credentialsChanged, this, &Sync::scheduleSync);
+-    m_pollTimer.start();
+     retrieveCredentialsFromConfig();
+ }
+ 
+@@ -939,8 +928,11 @@
+ 
+ void Sync::runAutomaticSync()
+ {
+-    if (!m_syncEnabled || !m_gpodder || m_password.isEmpty()
+-        || !NetworkConnectionManager::instance().feedUpdatesAllowed()) {
++    if (!m_syncEnabled || !m_gpodder || m_password.isEmpty() || !m_pendingAutomaticSync) {
++        return;
++    }
++    if (!NetworkConnectionManager::instance().feedUpdatesAllowed()) {
++        m_autoSyncTimer.start(30000);
+         return;
+     }
+     if (m_syncStatus != SyncStatus::NoSync) {
+@@ -1140,7 +1132,6 @@
+             qCDebug(kastsSync) << "Logged an episode play action for" << entryuids[i] << "play position changed:" << started_sec << position_sec;
+         }
+         Database::instance().commit();
+-        scheduleSync();
+     }
+ }
+ 
+--- a/src/sync/sync.h
++++ b/src/sync/sync.h
+@@ -132,7 +132,6 @@
+ 
+     void runAutomaticSync();
+     QTimer m_autoSyncTimer;
+-    QTimer m_pollTimer;
+     bool m_pendingAutomaticSync = false;
+     int m_retrySeconds = 30;
+ 
+--- a/src/datamanager.cpp
++++ b/src/datamanager.cpp
+@@ -646,7 +646,7 @@
+     }
+ }
+ 
+-void DataManager::bulkSetPlayPositions(const QList<qint64> &playPositions, const QList<qint64> &entryuids) const
++void DataManager::bulkSetPlayPositions(const QList<qint64> &playPositions, const QList<qint64> &entryuids, bool syncChange) const
+ {
+     Q_ASSERT(playPositions.count() == entryuids.count());
+ 
+@@ -667,6 +667,9 @@
+     // Also store position change to make sure that it can be synced to
+     // e.g. gpodder
+     Sync::instance().storePlayEpisodeActions(entryuids, playPositions, playPositions);
++    if (syncChange) {
++        Sync::instance().scheduleSync();
++    }
+ }
+ 
+ void DataManager::bulkSetEnclosureDurations(const QList<qint64> &durations, const QList<qint64> &entryuids) const
+--- a/src/datamanager.h
++++ b/src/datamanager.h
+@@ -70,7 +70,7 @@
+     Q_INVOKABLE void bulkQueueStatus(bool state, const QList<qint64> &entryuids) const;
+     Q_INVOKABLE void bulkDownloadEnclosures(const QList<qint64> &entryuids) const;
+     Q_INVOKABLE void bulkDeleteEnclosures(const QList<qint64> &entryuids) const;
+-    Q_INVOKABLE void bulkSetPlayPositions(const QList<qint64> &playPositions, const QList<qint64> &entryuids) const;
++    Q_INVOKABLE void bulkSetPlayPositions(const QList<qint64> &playPositions, const QList<qint64> &entryuids, bool syncChange = true) const;
+     Q_INVOKABLE void bulkSetEnclosureDurations(const QList<qint64> &durations, const QList<qint64> &entryuids) const;
+     Q_INVOKABLE void bulkSetEnclosureSizes(const QList<qint64> &sizes, const QList<qint64> &entryuids) const;
+     Q_INVOKABLE void bulkSetEnclosureStatuses(const QList<Enclosure::Status> &statuses, const QList<qint64> &entryuids) const;
+--- a/src/audiomanager.cpp
++++ b/src/audiomanager.cpp
+@@ -22,6 +22,7 @@
+ #include "models/errorlogmodel.h"
+ #include "queuemodel.h"
+ #include "settingsmanager.h"
++#include "sync/sync.h"
+ #include "utils/networkconnectionmanager.h"
+ 
+ class AudioManagerPrivate
+@@ -461,6 +462,7 @@
+         d->m_player.pause();
+         d->m_lastSignificantPosition = -2 * d->m_significantInterval;
+         savePlayPositionToDB(position(), d->m_entryuid);
++        Sync::instance().scheduleSync();
+     }
+ }
+ 
+@@ -486,6 +488,7 @@
+ void AudioManager::seek(const qint64 position)
+ {
+     qCDebug(kastsAudio) << "AudioManager::seek" << position;
++    Sync::instance().scheduleSync();
+     d->m_lastSignificantPosition = -2 * d->m_significantInterval;
+ 
+     // if there is still a pending seek, then we simply update that pending
+@@ -663,7 +666,7 @@
+             d->m_lastSignificantPosition = position;
+ 
+             // Also make sure to save the current play position to the database
+-            DataManager::instance().bulkSetPlayPositions(QList<qint64>({position}), QList<qint64>({entryuid}));
++            DataManager::instance().bulkSetPlayPositions(QList<qint64>({position}), QList<qint64>({entryuid}), false);
+         }
+     }
+ }
+--- a/src/fetcher.cpp
++++ b/src/fetcher.cpp
+@@ -59,9 +59,9 @@
+     fetch(urls);
+ }
+ 
+-void Fetcher::fetchAll()
+-{
+-    if (Sync::instance().syncEnabled() && SettingsManager::self()->syncWhenUpdatingFeeds()) {
++void Fetcher::fetchAll(bool sync)
++{
++    if (sync && Sync::instance().syncEnabled() && SettingsManager::self()->syncWhenUpdatingFeeds()) {
+         Sync::instance().doRegularSync(true);
+     } else {
+         QStringList urls;
+@@ -259,7 +259,7 @@
+     // by another 10 minutes due to a difference of just a few milliseconds
+     if (QDateTime::currentDateTimeUtc().addSecs(5) > m_updateTriggerTime) {
+         qCDebug(kastsFetcher) << "Trigger for feed update has been reached; updating feeds now";
+-        QTimer::singleShot(0, this, &Fetcher::fetchAll);
++        QTimer::singleShot(0, this, [this]() { fetchAll(false); });
+ 
+         // set next update time
+         m_updateTriggerTime =
+--- a/src/fetcher.h
++++ b/src/fetcher.h
+@@ -46,7 +46,7 @@
+ 
+     Q_INVOKABLE void fetch(const QString &url);
+     Q_INVOKABLE void fetch(const QStringList &urls);
+-    Q_INVOKABLE void fetchAll();
++    Q_INVOKABLE void fetchAll(bool sync = true);
+     Q_INVOKABLE QString image(const QString &url);
+ 
+     EnclosureDownloadJob *enqueueEnclosureDownload(const qint64 entryuid, const QString &url, const QString &path, const QString &title);

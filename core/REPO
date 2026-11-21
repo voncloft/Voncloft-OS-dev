@@ -513,8 +513,8 @@ f:93ee51a5fdf05fa731fdc5f4b3c27444:stfl/CHANGELOG
 f:72372abfb5ee1ce5f12912323df830d3:stfl/spkgbuild
 f:2ec02ebbbb76b046df6877ed35eb05de:stfl/override
 f:54745ccaec31b1ae034406411bb5d083:graphviz/.pkgfiles
-f:d3e97ffd1c556ca0e413197f9aa12c8b:graphviz/CHANGELOG
-f:decc01b0f2c6163387a4f8de51393844:graphviz/spkgbuild
+f:f20507a5e56fdcba35d1e1a26b804a64:graphviz/CHANGELOG
+f:b2cf20fbf7112be7379987aefb7d83a1:graphviz/spkgbuild
 f:dde6b899fb1a8e8bd9895aec233a71b6:texinfo/.pkgfiles
 f:344bcc0cb9cbd78f984334f57f9bee9d:texinfo/CHANGELOG
 f:1120c55985bc9cef774852353913f723:texinfo/spkgbuild
@@ -1430,7 +1430,8 @@ f:9aa88bd68153028f348ec9a1884906e2:numactl/spkgbuild
 f:99e74379c16c3eb48383c6595428184b:mlt/CHANGELOG
 f:9b1ed193d0bfbd0f31cd0552add7169e:mlt/spkgbuild
 f:e383a5473908854dad9dec41596da596:packagekit-interfaces/.pkgfiles
-f:377d7460d94e9e2b2e96c628c1b71f84:packagekit-interfaces/spkgbuild
+f:472c9dca3d831e18c6245fdb8e7d16de:packagekit-interfaces/CHANGELOG
+f:82218287e9ae4aeb74cdc54a63ccb2d2:packagekit-interfaces/spkgbuild
 f:105259a7afcd158026163fd0f01ecd38:sudo/.pkgfiles
 f:4753d21ad864a99780eebcaa5959f791:sudo/CHANGELOG
 f:39e65caf258a38aebfe847a89ac5822f:sudo/sudo
@@ -1665,8 +1666,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:c16d6b6210ff24872f595759b2899967:flex/CHANGELOG
-f:138efeac68a0868d6ec3f86717d66db2:flex/spkgbuild
+f:900e37e7804a9b24f4a81ede1ff1fe19:flex/CHANGELOG
+f:05e3c98047403d289490a878d1e8586d:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch

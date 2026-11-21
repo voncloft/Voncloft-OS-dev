@@ -4544,8 +4544,8 @@ f:4fba6e62239b6ea402bb3fa2152fea88:python-pymediainfo/spkgbuild
 f:d0ac97b4aabc739d3b09c78ac0f990c5:python-memcached/CHANGELOG
 f:9744f25ae229c0a48e943bc56c14a4fd:python-memcached/spkgbuild
 f:ac6d28e57eced0c73ed8273a3816d63b:python-memcached/override
-f:7acb98898b1b46b2c4c0b40f37a13322:python-hypothesis/CHANGELOG
-f:c13fec9d196db47fbd7e28dd00e87343:python-hypothesis/spkgbuild
+f:053b0db6bedb1f0b86689bb8c236a301:python-hypothesis/CHANGELOG
+f:8da462c1a752bcf63693804035577b84:python-hypothesis/spkgbuild
 f:cc6cc74c6429c92298d62653efbe5eae:python-attrs/CHANGELOG
 f:47308d889e9fcc6c564023e49a1549c3:python-attrs/spkgbuild
 f:48cb205ba14f9d8a9e921f6973e71f52:python-xmlschema/CHANGELOG

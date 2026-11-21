@@ -1,0 +1,144 @@
+--- a/src/sync/sync.cpp
++++ b/src/sync/sync.cpp
+@@ -9,6 +9,13 @@
+ #include "synclogging.h"
+ 
+ #include <QDateTime>
++#include <QJsonDocument>
++#include <QJsonObject>
++#include <QNetworkAccessManager>
++#include <QNetworkReply>
++#include <QUuid>
++#include <KConfigGroup>
++#include <KSharedConfig>
+ #include <QDir>
+ #include <QFile>
+ #include <QFileInfo>
+@@ -50,7 +57,87 @@
+     connect(this, &Sync::error, &ErrorLogModel::instance(), &ErrorLogModel::monitorErrorMessages);
+     connect(&AudioManager::instance(), &AudioManager::playbackStateChanged, this, &Sync::doQuickSync);
+ 
++    KConfigGroup presenceConfig(KSharedConfig::openConfig(), QStringLiteral("Synchronization"));
++    m_presenceInstance = presenceConfig.readEntry("playerInstance", QString());
++    if (m_presenceInstance.isEmpty()) {
++        m_presenceInstance = QStringLiteral("kasts-") + QUuid::createUuid().toString(QUuid::WithoutBraces);
++        presenceConfig.writeEntry("playerInstance", m_presenceInstance);
++        presenceConfig.sync();
++    }
++    m_presenceNetwork = new QNetworkAccessManager(this);
++    auto *presenceTimer = new QTimer(this);
++    presenceTimer->setInterval(15000);
++    connect(presenceTimer, &QTimer::timeout, this, &Sync::reportPlaybackStatus);
++    connect(&AudioManager::instance(), &AudioManager::playbackStateChanged, this, &Sync::reportPlaybackStatus);
++    connect(&AudioManager::instance(), &AudioManager::entryChanged, this, &Sync::reportPlaybackStatus);
++    connect(this, &Sync::syncEnabledChanged, this, [this]() { m_presenceRetryAfter = 0; reportPlaybackStatus(); });
++    presenceTimer->start();
+     retrieveCredentialsFromConfig();
++}
++
++void Sync::reportPlaybackStatus()
++{
++    if (!m_syncEnabled || m_provider != Provider::GPodderNet || m_hostname.isEmpty() || m_username.isEmpty() || m_password.isEmpty()
++        || m_presenceBusy || QDateTime::currentSecsSinceEpoch() < m_presenceRetryAfter) {
++        return;
++    }
++    QUrl url(m_hostname);
++    if (!url.isValid() || url.host().isEmpty() || !url.userInfo().isEmpty()
++        || (url.scheme() != QLatin1String("http") && url.scheme() != QLatin1String("https"))) {
++        return;
++    }
++    QString path = url.path();
++    while (path.endsWith(QLatin1Char('/'))) {
++        path.chop(1);
++    }
++    url.setPath(path + QStringLiteral("/api/2/presence/") + m_username + QLatin1Char('/') + m_presenceInstance + QStringLiteral(".json"));
++    url.setQuery(QString());
++    url.setFragment(QString());
++    auto &audio = AudioManager::instance();
++    QString state = QStringLiteral("stopped");
++    if (audio.playbackState() == KMediaSession::PlaybackState::PlayingState) {
++        state = QStringLiteral("playing");
++    } else if (audio.playbackState() == KMediaSession::PlaybackState::PausedState) {
++        state = QStringLiteral("paused");
++    }
++    QJsonObject payload{{QStringLiteral("device"), m_device},
++                        {QStringLiteral("client"), QStringLiteral("Kasts")},
++                        {QStringLiteral("caption"), QStringLiteral("Kasts on %1").arg(QSysInfo::machineHostName().left(60))},
++                        {QStringLiteral("state"), state},
++                        {QStringLiteral("position"), qMax<qint64>(0, audio.position() / 1000)},
++                        {QStringLiteral("duration"), qMax<qint64>(0, audio.duration() / 1000)}};
++    QSqlQuery query;
++    query.prepare(QStringLiteral("SELECT f.url AS podcast, e.id AS guid, c.url AS episode, e.title, f.name AS podcast_title "
++                                 "FROM Entries e JOIN Feeds f ON f.feeduid=e.feeduid JOIN Enclosures c ON c.entryuid=e.entryuid WHERE e.entryuid=? LIMIT 1;"));
++    query.addBindValue(audio.entryuid());
++    // Use the same numeric entry/feed joins as the shared-queue protocol.
++    if (!query.exec() || !query.next()) {
++        payload.insert(QStringLiteral("state"), QStringLiteral("stopped"));
++    } else {
++        QJsonObject item;
++        for (const QString &key : {QStringLiteral("podcast"), QStringLiteral("episode"), QStringLiteral("guid"), QStringLiteral("title"), QStringLiteral("podcast_title")}) {
++            const int length = (key == QLatin1String("title") || key == QLatin1String("podcast_title")) ? 512 : 2000;
++            item.insert(key, query.value(key).toString().left(length));
++        }
++        payload.insert(QStringLiteral("item"), item);
++    }
++    QNetworkRequest request(url);
++    request.setTransferTimeout(10000);
++    request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::ManualRedirectPolicy);
++    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
++    request.setRawHeader("Authorization", "Basic " + (m_username + QLatin1Char(':') + m_password).toUtf8().toBase64());
++    m_presenceBusy = true;
++    QNetworkReply *reply = m_presenceNetwork->post(request, QJsonDocument(payload).toJson(QJsonDocument::Compact));
++    connect(reply, &QNetworkReply::finished, this, [this, reply]() {
++        m_presenceBusy = false;
++        const int code = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
++        if (code == 404 || code == 501) {
++            m_presenceRetryAfter = QDateTime::currentSecsSinceEpoch() + 300;
++        } else if (code != 200) {
++            m_presenceRetryAfter = QDateTime::currentSecsSinceEpoch() + 15;
++        }
++        reply->deleteLater();
++    });
+ }
+ 
+ void Sync::retrieveCredentialsFromConfig()
+--- a/src/sync/sync.h
++++ b/src/sync/sync.h
+@@ -11,6 +11,8 @@
+ #include <QQmlEngine>
+ 
+ #include <KFormat>
++
++#include <QNetworkAccessManager>
+ 
+ #include "error.h"
+ #include "sync/syncutils.h"
+@@ -125,6 +127,12 @@
+ private:
+     Sync();
+ 
++    void reportPlaybackStatus();
++    QNetworkAccessManager *m_presenceNetwork = nullptr;
++    QString m_presenceInstance;
++    bool m_presenceBusy = false;
++    qint64 m_presenceRetryAfter = 0;
++
+     void clearSettings();
+     void savePasswordToKeyChain(const QString &username, const QString &password);
+     void savePasswordToFile(const QString &username, const QString &password);
+@@ -139,13 +147,13 @@
+ 
+     GPodder *m_gpodder = nullptr;
+ 
+-    bool m_syncEnabled;
++    bool m_syncEnabled = false;
+     QString m_username;
+     QString m_password;
+     QString m_device;
+     QString m_deviceName;
+     QString m_hostname;
+-    SyncUtils::Provider m_provider;
++    SyncUtils::Provider m_provider = SyncUtils::Provider::GPodderNet;
+ 
+     QVector<SyncUtils::Device> m_deviceList;
+ 

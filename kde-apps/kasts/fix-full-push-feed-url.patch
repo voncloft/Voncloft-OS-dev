@@ -1,0 +1,28 @@
+--- a/src/sync/sync.cpp
++++ b/src/sync/sync.cpp
+@@ -1091,7 +1091,10 @@
+     QList<SyncUtils::EpisodeAction> actions;
+ 
+     QSqlQuery query;
+-    query.prepare(QStringLiteral("SELECT * FROM Enclosures INNER JOIN Entries ON Enclosures.entryuid = Entries.entryuid;"));
++    query.prepare(QStringLiteral("SELECT Entries.entryuid, Entries.feeduid, Entries.id, Entries.read, Enclosures.url, "
++                                 "Enclosures.duration, Enclosures.playposition, Feeds.url AS feed "
++                                 "FROM Enclosures INNER JOIN Entries ON Enclosures.entryuid = Entries.entryuid "
++                                 "INNER JOIN Feeds ON Feeds.feeduid = Entries.feeduid;"));
+     Database::instance().execute(query);
+     while (query.next()) {
+         qulonglong position_sec = query.value(QStringLiteral("playposition")).toInt() / 1000;
+--- a/src/sync/syncjob.cpp
++++ b/src/sync/syncjob.cpp
+@@ -768,6 +768,11 @@
+ {
+     QList<EpisodeAction> localEpisodeActions;
+     QSqlQuery query;
++    // Recover full-push actions created before the podcast feed URL was selected.
++    query.prepare(QStringLiteral("UPDATE EpisodeActions SET podcast = (SELECT Feeds.url FROM Feeds WHERE Feeds.feeduid = EpisodeActions.feeduid) "
++                                 "WHERE (podcast IS NULL OR podcast = '') "
++                                 "AND EXISTS (SELECT 1 FROM Feeds WHERE Feeds.feeduid = EpisodeActions.feeduid AND Feeds.url IS NOT NULL AND Feeds.url <> '');"));
++    Database::instance().execute(query);
+     query.prepare(QStringLiteral("SELECT * FROM EpisodeActions;"));
+     Database::instance().execute(query);
+     while (query.next()) {

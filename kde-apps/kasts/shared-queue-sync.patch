@@ -1,0 +1,643 @@
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -41,6 +41,7 @@
+     models/podcastsearchmodel.cpp
+     sync/sync.cpp
+     sync/syncjob.cpp
++    sync/queuesyncjob.cpp
+     sync/syncutils.cpp
+     sync/gpodder/gpodder.cpp
+     sync/gpodder/genericrequest.cpp
+--- a/src/datamanager.cpp
++++ b/src/datamanager.cpp
+@@ -466,7 +466,7 @@
+     bulkMarkRead(state, getEntryuidsFromModelIndexList(list));
+ }
+ 
+-void DataManager::bulkMarkRead(bool state, const QList<qint64> &entryuids) const
++void DataManager::bulkMarkRead(bool state, const QList<qint64> &entryuids, bool updateQueue) const
+ {
+     QSet<qint64> feeduids;
+ 
+@@ -501,7 +501,9 @@
+     // Follow-up actions in case entry is marked as read
+     if (state) {
+         // 1) Remove item from queue (will also automatically 2) unset the new status)
+-        bulkQueueStatus(false, entryuids);
++        if (updateQueue) {
++            bulkQueueStatus(false, entryuids);
++        }
+ 
+         // 5) Delete episode if that setting is set
+         if (SettingsManager::self()->autoDeleteOnPlayed() == 1) {
+@@ -874,3 +876,11 @@
+     }
+     return query.value(QStringLiteral("feeduid")).toLongLong();
+ }
++
++void DataManager::registerSyncedEntry(qint64 entryuid, qint64 feeduid)
++{
++    if (!m_entries.contains(entryuid)) {
++        m_entries[entryuid] = nullptr;
++    }
++    Q_EMIT feedEntriesUpdated(feeduid);
++}
+--- a/src/datamanager.h
++++ b/src/datamanager.h
+@@ -46,6 +46,7 @@
+     // returns a list because there can be more than one result per input value
+     QList<QList<qint64>> findEntryuids(const QStringList &ids, const QStringList &enclosureUrls = QStringList()) const;
+ 
++    void registerSyncedEntry(qint64 entryuid, qint64 feeduid);
+     Q_INVOKABLE void addFeed(const QString &url);
+     void addFeeds(const QStringList &urls, const bool fetch);
+     Q_INVOKABLE void removeFeed(Feed *feed);
+@@ -63,7 +64,7 @@
+     Q_INVOKABLE void exportFeeds(const QString &path);
+     Q_INVOKABLE bool feedExists(const QString &url);
+ 
+-    Q_INVOKABLE void bulkMarkRead(bool state, const QList<qint64> &entryuids) const;
++    Q_INVOKABLE void bulkMarkRead(bool state, const QList<qint64> &entryuids, bool updateQueue = true) const;
+     Q_INVOKABLE void bulkMarkNew(bool state, const QList<qint64> &entryuids) const;
+     Q_INVOKABLE void bulkMarkFavorite(bool state, const QList<qint64> &entryuids) const;
+     Q_INVOKABLE void bulkQueueStatus(bool state, const QList<qint64> &entryuids) const;
+--- a/src/models/queuemodel.cpp
++++ b/src/models/queuemodel.cpp
+@@ -11,6 +11,7 @@
+ 
+ #include <KFormat>
+ #include <QSqlQuery>
++#include <QSqlDatabase>
+ #include <qabstractitemmodel.h>
+ #include <qhashfunctions.h>
+ #include <utility>
+@@ -316,3 +317,51 @@
+     }
+     Database::instance().commit();
+ }
++
++bool QueueModel::replaceQueueForSync(const QList<qint64> &expected, const QList<qint64> &desired)
++{
++    if (m_queue != expected) {
++        return false;
++    }
++    const qint64 playing = AudioManager::instance().entryuid();
++    QSqlDatabase db = QSqlDatabase::database();
++    if (!db.transaction()) {
++        return false;
++    }
++    QSqlQuery query;
++    if (!query.exec(QStringLiteral("DELETE FROM Queue;"))
++        || !query.prepare(QStringLiteral("INSERT INTO Queue (listnr, entryuid, playing) VALUES (?, ?, ?);"))) {
++        db.rollback();
++        return false;
++    }
++    for (qsizetype i = 0; i < desired.size(); ++i) {
++        query.bindValue(0, i);
++        query.bindValue(1, desired[i]);
++        query.bindValue(2, desired[i] == playing);
++        if (!query.exec()) {
++            db.rollback();
++            return false;
++        }
++    }
++    if (!db.commit()) {
++        db.rollback();
++        return false;
++    }
++    beginResetModel();
++    m_queue = desired;
++    endResetModel();
++    QList<qint64> removed;
++    for (qint64 uid : expected) {
++        if (!desired.contains(uid)) {
++            removed.append(uid);
++        }
++    }
++    Q_EMIT DataManager::instance().entryQueueStatusChanged(false, removed);
++    Q_EMIT DataManager::instance().entryQueueStatusChanged(true, desired);
++    Q_EMIT queueSorted();
++    Q_EMIT timeLeftChanged();
++    if (playing != 0 && !desired.contains(playing)) {
++        AudioManager::instance().setEntryuid(desired.isEmpty() ? 0 : desired.first());
++    }
++    return true;
++}
+--- a/src/models/queuemodel.h
++++ b/src/models/queuemodel.h
+@@ -48,6 +48,7 @@
+ 
+     Q_INVOKABLE QItemSelection createSelection(int rowa, int rowb);
+ 
++    bool replaceQueueForSync(const QList<qint64> &expected, const QList<qint64> &desired);
+     void addToQueue(const QList<qint64> &entryuids);
+     void removeFromQueue(const QList<qint64> &entryuids);
+     Q_INVOKABLE void moveQueueItem(const qint64 from, const qint64 to);
+--- a/src/sync/gpodder/gpodder.cpp
++++ b/src/sync/gpodder/gpodder.cpp
+@@ -45,6 +45,23 @@
+     , m_hostname(hostname)
+     , m_provider(provider)
+ {
++}
++
++QString GPodder::queueSyncScope(const QString &device)
++{
++    return QStringLiteral("%1/api/2/queue/%2/%3.json").arg(baseUrl(), m_username, device);
++}
++
++QNetworkReply *GPodder::queueRequest(const QString &device, const QJsonObject &payload)
++{
++    QNetworkRequest request{QUrl(queueSyncScope(device))};
++    request.setTransferTimeout();
++    addAuthentication(request);
++    if (payload.isEmpty()) {
++        return Fetcher::instance().get(request);
++    }
++    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
++    return Fetcher::instance().post(request, QJsonDocument(payload).toJson(QJsonDocument::Compact));
+ }
+ 
+ LoginRequest *GPodder::login()
+--- a/src/sync/gpodder/gpodder.h
++++ b/src/sync/gpodder/gpodder.h
+@@ -7,12 +7,14 @@
+ #pragma once
+ 
+ #include <QNetworkRequest>
++#include <QJsonObject>
+ #include <QObject>
+ #include <QString>
+ #include <QVector>
+ 
+ #include "sync/syncutils.h"
+ 
++class QNetworkReply;
+ class LoginRequest;
+ class LogoutRequest;
+ class DeviceRequest;
+@@ -32,6 +34,8 @@
+     GPodder(const QString &username, const QString &password, QObject *parent = nullptr);
+     GPodder(const QString &username, const QString &password, const QString &hostname, const SyncUtils::Provider provider, QObject *parent = nullptr);
+ 
++    QNetworkReply *queueRequest(const QString &device, const QJsonObject &payload = {});
++    QString queueSyncScope(const QString &device);
+     LoginRequest *login();
+     LogoutRequest *logout();
+     DeviceRequest *getDevices();
+--- /dev/null
++++ b/src/sync/queuesyncjob.cpp
+@@ -0,0 +1,222 @@
++// SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
++#include "queuesyncjob.h"
++#include "gpodder/gpodder.h"
++#include "database.h"
++#include "datamanager.h"
++#include "models/queuemodel.h"
++#include <KLocalizedString>
++#include <QCryptographicHash>
++#include <QDateTime>
++#include <QJsonArray>
++#include <QJsonDocument>
++#include <QJsonObject>
++#include <QSettings>
++#include <QSqlDatabase>
++#include <QSqlQuery>
++#include <QSet>
++#include <QTimer>
++#include <QUrl>
++
++namespace {
++bool validUrl(const QString &text)
++{
++    const QUrl url(text);
++    return text.size() <= 8192 && url.isValid() && !url.host().isEmpty()
++        && (url.scheme() == QStringLiteral("https") || url.scheme() == QStringLiteral("http"));
++}
++
++bool queueSnapshot(QJsonArray &items, QList<qint64> &ids)
++{
++    QSqlQuery query;
++    if (!query.exec(QStringLiteral("SELECT q.entryuid, f.url AS podcast, e.id AS guid, c.url AS episode, e.title, f.name AS podcast_title, e.created, c.duration "
++                                  "FROM Queue q JOIN Entries e ON e.entryuid=q.entryuid JOIN Feeds f ON f.feeduid=e.feeduid "
++                                  "JOIN Enclosures c ON c.entryuid=e.entryuid ORDER BY q.listnr;"))) {
++        return false;
++    }
++    while (query.next()) {
++        QJsonObject item;
++        for (const QString &key : {QStringLiteral("podcast"), QStringLiteral("episode"), QStringLiteral("guid"), QStringLiteral("title"), QStringLiteral("podcast_title")}) {
++            item.insert(key, query.value(key).toString());
++        }
++        if (!validUrl(item.value(QStringLiteral("podcast")).toString()) || !validUrl(item.value(QStringLiteral("episode")).toString())) {
++            return false;
++        }
++        item.insert(QStringLiteral("published"), qMax<qint64>(0, query.value(QStringLiteral("created")).toLongLong()));
++        item.insert(QStringLiteral("duration"), qMax<qint64>(0, query.value(QStringLiteral("duration")).toLongLong()));
++        items.append(item);
++        ids.append(query.value(QStringLiteral("entryuid")).toLongLong());
++    }
++    return ids == QueueModel::instance().queue();
++}
++
++qint64 resolveEntry(const QJsonObject &item, bool &imported)
++{
++    const QString podcast = item.value(QStringLiteral("podcast")).toString();
++    const QString episode = item.value(QStringLiteral("episode")).toString();
++    const QString guid = item.value(QStringLiteral("guid")).toString();
++    QSqlQuery query;
++    if (!query.prepare(QStringLiteral("SELECT e.entryuid FROM Entries e JOIN Feeds f ON f.feeduid=e.feeduid "
++                                      "JOIN Enclosures c ON c.entryuid=e.entryuid WHERE f.url=:podcast "
++                                      "AND ((:guid<>'' AND e.id=:guid) OR c.url=:episode) LIMIT 1;"))) {
++        return 0;
++    }
++    query.bindValue(QStringLiteral(":podcast"), podcast);
++    query.bindValue(QStringLiteral(":guid"), guid);
++    query.bindValue(QStringLiteral(":episode"), episode);
++    if (!query.exec()) {
++        return 0;
++    }
++    if (query.next()) {
++        return query.value(0).toLongLong();
++    }
++    query.finish();
++    DataManager::instance().addFeeds(QStringList{podcast}, false);
++    if (!query.prepare(QStringLiteral("SELECT feeduid FROM Feeds WHERE url=?;"))) {
++        return 0;
++    }
++    query.addBindValue(podcast);
++    if (!query.exec() || !query.next()) {
++        return 0;
++    }
++    const qint64 feeduid = query.value(0).toLongLong();
++    query.finish();
++    QSqlDatabase db = QSqlDatabase::database();
++    if (!db.transaction()) {
++        return 0;
++    }
++    const qint64 published = item.value(QStringLiteral("published")).toInteger();
++    bool ok = query.prepare(QStringLiteral("INSERT INTO Entries (feeduid,id,title,content,created,updated,link,read,new,hasEnclosure,image,favorite,playposition,removed) "
++                                          "VALUES (?,?,?,'',?,?,'',0,0,1,'',0,0,0);"));
++    query.addBindValue(feeduid);
++    query.addBindValue(guid.isEmpty() ? episode : guid);
++    query.addBindValue(item.value(QStringLiteral("title")).toString(episode));
++    query.addBindValue(published);
++    query.addBindValue(published);
++    ok = ok && query.exec();
++    const qint64 entryuid = ok ? query.lastInsertId().toLongLong() : 0;
++    ok = ok && query.prepare(QStringLiteral("INSERT INTO Enclosures (entryuid,feeduid,url,duration,size,type,playposition,downloaded) VALUES (?,?,?,?,0,'audio/mpeg',0,0);"));
++    query.addBindValue(entryuid);
++    query.addBindValue(feeduid);
++    query.addBindValue(episode);
++    query.addBindValue(item.value(QStringLiteral("duration")).toInteger());
++    ok = ok && query.exec();
++    if (!ok || !db.commit()) {
++        db.rollback();
++        return 0;
++    }
++    DataManager::instance().registerSyncedEntry(entryuid, feeduid);
++    imported = true;
++    return entryuid;
++}
++}
++
++QueueSyncJob::QueueSyncJob(GPodder *gpodder, const QString &device, QObject *parent)
++    : KJob(parent), m_gpodder(gpodder), m_device(device)
++{
++}
++
++void QueueSyncJob::fail(const QString &message)
++{
++    setError(KJob::UserDefinedError);
++    setErrorText(message);
++    emitResult();
++}
++
++void QueueSyncJob::abort()
++{
++    m_aborted = true;
++    if (m_reply) {
++        m_reply->abort();
++    }
++}
++
++void QueueSyncJob::start()
++{
++    QTimer::singleShot(0, this, [this]() {
++        if (m_aborted) {
++            fail(i18n("Queue synchronization was aborted."));
++            return;
++        }
++        QJsonArray local;
++        QList<qint64> before;
++        if (!queueSnapshot(local, before)) {
++            fail(i18n("Could not read the local queue safely."));
++            return;
++        }
++        const QString group = QStringLiteral("VonQueue/v1/")
++            + QString::fromLatin1(QCryptographicHash::hash(m_gpodder->queueSyncScope(m_device).toUtf8(), QCryptographicHash::Sha256).toHex());
++        QSettings state;
++        state.beginGroup(group);
++        QJsonObject payload;
++        payload.insert(QStringLiteral("base_revision"), state.contains(QStringLiteral("revision"))
++                           ? QJsonValue(state.value(QStringLiteral("revision")).toLongLong()) : QJsonValue(QJsonValue::Null));
++        payload.insert(QStringLiteral("items"), local);
++        m_reply = m_gpodder->queueRequest(m_device, payload);
++        QNetworkReply *reply = m_reply;
++        connect(reply, &QNetworkReply::finished, this, [this, reply, before, group]() {
++            const auto error = reply->error();
++            const QString errorText = reply->errorString();
++            const QByteArray data = reply->readAll();
++            reply->deleteLater();
++            if (error) {
++                fail(errorText);
++                return;
++            }
++            QJsonParseError parseError;
++            const QJsonObject response = QJsonDocument::fromJson(data, &parseError).object();
++            const QJsonValue revision = response.value(QStringLiteral("revision"));
++            if (parseError.error || response.value(QStringLiteral("protocol")).toString() != QStringLiteral("vonqueue-v1")
++                || !revision.isDouble() || revision.toInteger(-1) < 0 || !response.value(QStringLiteral("items")).isArray()) {
++                fail(i18n("The server returned an invalid shared queue."));
++                return;
++            }
++            const QJsonArray items = response.value(QStringLiteral("items")).toArray();
++            if (items.size() > 50000) {
++                fail(i18n("The shared queue is too large."));
++                return;
++            }
++            QSet<QString> seen;
++            for (const QJsonValue &value : items) {
++                const QJsonObject item = value.toObject();
++                const QString podcast = item.value(QStringLiteral("podcast")).toString();
++                const QString episode = item.value(QStringLiteral("episode")).toString();
++                const QString guid = item.value(QStringLiteral("guid")).toString();
++                const QString key = podcast + QLatin1Char('\n') + (guid.isEmpty() ? episode : guid);
++                if (!validUrl(podcast) || !validUrl(episode) || seen.contains(key)
++                    || item.value(QStringLiteral("duration")).toInteger(-1) < 0 || item.value(QStringLiteral("published")).toInteger(-1) < 0) {
++                    fail(i18n("The server returned an invalid shared queue."));
++                    return;
++                }
++                seen.insert(key);
++            }
++            if (QueueModel::instance().queue() != before) {
++                fail(i18n("The queue changed during synchronization. Please sync again."));
++                return;
++            }
++            QList<qint64> desired;
++            QSet<qint64> ids;
++            for (const QJsonValue &value : items) {
++                const qint64 entryuid = resolveEntry(value.toObject(), m_importedEpisodes);
++                if (entryuid <= 0 || ids.contains(entryuid)) {
++                    fail(i18n("Could not restore an episode in the shared queue."));
++                    return;
++                }
++                ids.insert(entryuid);
++                desired.append(entryuid);
++            }
++            if (!QueueModel::instance().replaceQueueForSync(before, desired)) {
++                fail(i18n("The queue changed during synchronization or could not be saved. Please sync again."));
++                return;
++            }
++            QSettings state;
++            state.beginGroup(group);
++            state.setValue(QStringLiteral("revision"), revision.toInteger());
++            state.sync();
++            if (state.status() != QSettings::NoError) {
++                fail(i18n("Could not save the queue synchronization revision."));
++                return;
++            }
++            emitResult();
++        });
++    });
++}
+--- /dev/null
++++ b/src/sync/queuesyncjob.h
+@@ -0,0 +1,22 @@
++// SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
++#pragma once
++#include <KJob>
++#include <QPointer>
++#include <QNetworkReply>
++#include <QString>
++class GPodder;
++class QueueSyncJob : public KJob
++{
++public:
++    QueueSyncJob(GPodder *gpodder, const QString &device, QObject *parent);
++    void start() override;
++    void abort();
++    bool importedEpisodes() const { return m_importedEpisodes; }
++private:
++    void fail(const QString &message);
++    bool m_aborted = false;
++    bool m_importedEpisodes = false;
++    GPodder *m_gpodder;
++    QString m_device;
++    QPointer<QNetworkReply> m_reply;
++};
+--- a/src/sync/sync.cpp
++++ b/src/sync/sync.cpp
+@@ -862,7 +862,7 @@
+     m_allowSyncActionLogging = true;
+ }
+ 
+-void Sync::applyEpisodeActionsLocally(const QHash<QString, QHash<qint64, EpisodeAction>> &episodeActionHash)
++void Sync::applyEpisodeActionsLocally(const QHash<QString, QHash<qint64, EpisodeAction>> &episodeActionHash, bool sharedQueue)
+ {
+     m_allowSyncActionLogging = false;
+ 
+@@ -903,9 +903,11 @@
+         qCDebug(kastsSync) << "episodes that need their position altered (position list):" << positions;
+         qCDebug(kastsSync) << "episodes that need to be added to the queue" << queueUids;
+ 
+-        DataManager::instance().bulkMarkRead(true, playedUids);
++        DataManager::instance().bulkMarkRead(true, playedUids, !sharedQueue);
+         DataManager::instance().bulkSetPlayPositions(positions, playUids);
+-        DataManager::instance().bulkQueueStatus(true, queueUids);
++        if (!sharedQueue) {
++            DataManager::instance().bulkQueueStatus(true, queueUids);
++        }
+ 
+         // Finally update the play position of the currently playing track, if it's needed
+         qint64 playingIndex = playUids.indexOf(AudioManager::instance().entryuid());
+--- a/src/sync/sync.h
++++ b/src/sync/sync.h
+@@ -100,7 +100,7 @@
+     void storePlayedEpisodeActions(const QList<qint64> &entryuids);
+     void storePlayEpisodeActions(const QList<qint64> &entryuids, const QList<qint64> &startPositions, const QList<qint64> &endPositions);
+     void applySubscriptionChangesLocally(const QStringList &addList, const QStringList &removeList);
+-    void applyEpisodeActionsLocally(const QHash<QString, QHash<qint64, SyncUtils::EpisodeAction>> &episodeActionHash);
++    void applyEpisodeActionsLocally(const QHash<QString, QHash<qint64, SyncUtils::EpisodeAction>> &episodeActionHash, bool sharedQueue = false);
+ 
+ Q_SIGNALS:
+     void syncEnabledChanged();
+--- a/src/sync/syncjob.cpp
++++ b/src/sync/syncjob.cpp
+@@ -5,6 +5,9 @@
+  */
+ 
+ #include "syncjob.h"
++#include "queuesyncjob.h"
++#include <QJsonDocument>
++#include <QNetworkReply>
+ #include "synclogging.h"
+ 
+ #include <QDateTime>
+@@ -44,7 +47,29 @@
+ 
+ void SyncJob::start()
+ {
+-    QTimer::singleShot(0, this, &SyncJob::doSync);
++    if (m_syncStatus == SyncStatus::UploadOnlySync || Sync::instance().provider() != Provider::GPodderNet) {
++        QTimer::singleShot(0, this, &SyncJob::doSync);
++        return;
++    }
++    QNetworkReply *reply = m_gpodder->queueRequest(m_device);
++    connect(this, &SyncJob::aborting, reply, &QNetworkReply::abort);
++    connect(reply, &QNetworkReply::finished, this, [this, reply]() {
++        const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
++        if (m_abort) {
++            Q_EMIT infoMessage(this, getProgressMessage(Aborted));
++            emitResult();
++        } else if (status == 404 || status == 501) {
++            doSync();
++        } else if (reply->error()) {
++            setError(SyncJobError::InternalDataError);
++            setErrorText(reply->errorString());
++            emitResult();
++        } else {
++            m_queueSyncSupported = QJsonDocument::fromJson(reply->readAll()).object().value(QStringLiteral("protocol")).toString() == QStringLiteral("vonqueue-v1");
++            doSync();
++        }
++        reply->deleteLater();
++    });
+ }
+ 
+ void SyncJob::abort()
+@@ -106,7 +131,7 @@
+ 
+ void SyncJob::doRegularSync()
+ {
+-    setTotalAmount(KJob::Unit::Items, 8);
++    setTotalAmount(KJob::Unit::Items, m_queueSyncSupported ? 9 : 8);
+     setProcessedAmount(KJob::Unit::Items, 0);
+     Q_EMIT infoMessage(this, getProgressMessage(Started));
+ 
+@@ -422,6 +447,10 @@
+ 
+ void SyncJob::fetchRemoteEpisodeActions()
+ {
++    if (m_queueSyncSupported && !m_queueSynced) {
++        syncQueueThenEpisodeActions();
++        return;
++    }
+     qCDebug(kastsSync) << "Start syncing episode states";
+     Q_EMIT infoMessage(this, getProgressMessage(EpisodeDownload));
+ 
+@@ -444,6 +473,10 @@
+         return;
+     }
+     // Check the gpodder service for episode action updates
++    if (m_queueImportedEpisodes) {
++        episodeTimestamp = 0;
++        m_queueImportedEpisodes = false;
++    }
+     EpisodeActionRequest *epRequest = m_gpodder->getEpisodeActions(episodeTimestamp, (episodeTimestamp == 0));
+     connect(this, &SyncJob::aborting, epRequest, &EpisodeActionRequest::abort);
+     connect(epRequest, &EpisodeActionRequest::finished, this, [this, epRequest]() {
+@@ -558,7 +591,7 @@
+         setProcessedAmount(KJob::Unit::Items, processedAmount(KJob::Unit::Items) + 1);
+         Q_EMIT infoMessage(this, getProgressMessage(ApplyEpisodeActions));
+ 
+-        Sync::instance().applyEpisodeActionsLocally(m_remoteEpisodeActionHash);
++        Sync::instance().applyEpisodeActionsLocally(m_remoteEpisodeActionHash, m_queueSyncSupported);
+ 
+         // Upload the local changes to the server
+         QList<EpisodeAction> localEpisodeActionList = createListFromHash(localEpisodeActionHash);
+@@ -588,9 +621,7 @@
+ 
+         removeAppliedEpisodeActionsFromDB();
+ 
+-        setProcessedAmount(KJob::Unit::Items, processedAmount(KJob::Unit::Items) + 1);
+-        Q_EMIT infoMessage(this, getProgressMessage(Finished));
+-        emitResult();
++        finishSuccessfully();
+         return;
+     }
+ 
+@@ -622,7 +653,7 @@
+ 
+         if (episodeActionList.count() > startIndex + maxAmountEpisodeUploads) {
+             // Still episodeActions remaining to be uploaded
+-            QTimer::singleShot(0, this, [this, &episodeActionList, startIndex]() {
++            QTimer::singleShot(0, this, [this, episodeActionList, startIndex]() {
+                 uploadEpisodeActionsPartial(episodeActionList, startIndex + maxAmountEpisodeUploads);
+             });
+         } else {
+@@ -633,14 +664,40 @@
+ 
+             removeAppliedEpisodeActionsFromDB();
+ 
++            finishSuccessfully();
++        }
++    });
++}
++
++void SyncJob::finishSuccessfully()
++{
++    setProcessedAmount(KJob::Unit::Items, totalAmount(KJob::Unit::Items));
++    Q_EMIT infoMessage(this, getProgressMessage(Finished));
++    emitResult();
++}
++
++void SyncJob::syncQueueThenEpisodeActions()
++{
++    Q_EMIT infoMessage(this, i18n("(Step %1 of %2) Synchronizing shared queue", processedAmount(KJob::Unit::Items), totalAmount(KJob::Unit::Items)));
++    auto *job = new QueueSyncJob(m_gpodder, m_device, this);
++    connect(this, &SyncJob::aborting, job, &QueueSyncJob::abort);
++    connect(job, &KJob::result, this, [this](KJob *job) {
++        if (m_abort) {
++            Q_EMIT infoMessage(this, getProgressMessage(Aborted));
++            emitResult();
++        } else if (job->error()) {
++            setError(SyncJobError::InternalDataError);
++            setErrorText(job->errorText());
++            Q_EMIT infoMessage(this, getProgressMessage(Error));
++            emitResult();
++        } else {
++            m_queueSynced = true;
++            m_queueImportedEpisodes = static_cast<QueueSyncJob *>(job)->importedEpisodes();
+             setProcessedAmount(KJob::Unit::Items, processedAmount(KJob::Unit::Items) + 1);
+-            Q_EMIT infoMessage(this, getProgressMessage(Finished));
+-
+-            // This is the final exit point for the Job unless an error or abort occured
+-            qCDebug(kastsSync) << "Syncing finished";
+-            emitResult();
++            fetchRemoteEpisodeActions();
+         }
+     });
++    job->start();
+ }
+ 
+ void SyncJob::updateDBTimestamp(const qulonglong &timestamp, const QString &timestampLabel)
+--- a/src/sync/syncjob.h
++++ b/src/sync/syncjob.h
+@@ -57,6 +57,8 @@
+ 
+ private:
+     void doSync();
++    void syncQueueThenEpisodeActions();
++    void finishSuccessfully();
+ 
+     void doRegularSync(); // regular sync; can be forced to update all feeds
+     void doForceSync(); // force a full re-sync with the server; discarding local eposide acions
+@@ -90,6 +92,9 @@
+     QString m_device;
+     bool m_forceFetchAll = false;
+     bool m_abort = false;
++    bool m_queueSyncSupported = false;
++    bool m_queueSynced = false;
++    bool m_queueImportedEpisodes = false;
+ 
+     // internal variables used while syncing
+     QStringList m_feedsToBeUpdatedSubs;

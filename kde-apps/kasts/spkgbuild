@@ -3,13 +3,29 @@
 
 name=kasts
 version=26.08.3
-release=1
+release=8
 
-source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz"
+source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz
+        fix-full-push-durationdb.patch
+        fix-full-push-feed-url.patch
+        shared-queue-sync.patch
+        fix-subscription-removal.patch
+        live-playback-status.patch
+        fix-alphabetical-counts.patch
+        automatic-library-sync.patch
+        event-driven-sync.patch"
 options="!checksum"
 
 build() {
     cd "kasts-$version"
+    patch --batch --fuzz=0 -Np1 -i "$SRC/fix-full-push-durationdb.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/fix-full-push-feed-url.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/shared-queue-sync.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/fix-subscription-removal.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/live-playback-status.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/fix-alphabetical-counts.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/automatic-library-sync.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/event-driven-sync.patch" || return 1
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install

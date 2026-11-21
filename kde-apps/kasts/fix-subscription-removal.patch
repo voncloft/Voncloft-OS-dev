@@ -1,0 +1,93 @@
+--- a/src/datamanager.cpp
++++ b/src/datamanager.cpp
+@@ -156,6 +156,7 @@
+     for (Feed *feed : feeds) {
+         if (feed) {
+             const qint16 feeduid = feed->feeduid();
++            const QString feedUrl = feed->url();
+ 
+             qCDebug(kastsDataManager) << "deleting feed" << feeduid << "with url" << feeduid;
+ 
+@@ -243,7 +244,7 @@
+ 
+             // Save this action to the database (including timestamp) in order to be
+             // able to sync with remote services
+-            Sync::instance().storeRemoveFeedAction(feeduid);
++            Sync::instance().storeRemoveFeedAction(feeduid, feedUrl);
+ 
+             Q_EMIT feedRemoved(feeduid);
+         }
+--- a/src/sync/sync.h
++++ b/src/sync/sync.h
+@@ -96,7 +96,7 @@
+ 
+     // Next are some generic methods to store and apply local changes to be synced
+     void storeAddFeedAction(const QString &url);
+-    void storeRemoveFeedAction(const qint64 &feeduid);
++    void storeRemoveFeedAction(const qint64 &feeduid, const QString &url);
+     void storePlayedEpisodeActions(const QList<qint64> &entryuids);
+     void storePlayEpisodeActions(const QList<qint64> &entryuids, const QList<qint64> &startPositions, const QList<qint64> &endPositions);
+     void applySubscriptionChangesLocally(const QStringList &addList, const QStringList &removeList);
+--- a/src/sync/sync.cpp
++++ b/src/sync/sync.cpp
+@@ -959,15 +959,14 @@
+     }
+ }
+ 
+-void Sync::storeRemoveFeedAction(const qint64 &feeduid)
++void Sync::storeRemoveFeedAction(const qint64 &feeduid, const QString &url)
+ {
+     if (syncEnabled() && m_allowSyncActionLogging) {
+         Database::instance().transaction();
+         QSqlQuery query;
+-        query.prepare(
+-            QStringLiteral("INSERT INTO FeedActions (feeduid, url, action, timestamp) SELECT :feeduid, Feeds.url, :action, :timestamp FROM Feeds WHERE "
+-                           "Feeds.feeduid = :feeduid;"));
++        query.prepare(QStringLiteral("INSERT INTO FeedActions (feeduid, url, action, timestamp) VALUES (:feeduid, :url, :action, :timestamp);"));
+         query.bindValue(QStringLiteral(":feeduid"), feeduid);
++        query.bindValue(QStringLiteral(":url"), url);
+         query.bindValue(QStringLiteral(":action"), QStringLiteral("remove"));
+         query.bindValue(QStringLiteral(":timestamp"), QDateTime::currentSecsSinceEpoch());
+         Database::instance().execute(query);
+--- a/src/sync/syncjob.h
++++ b/src/sync/syncjob.h
+@@ -64,6 +64,7 @@
+     void doForceSync(); // force a full re-sync with the server; discarding local eposide acions
+     void doQuickSync(); // only upload pending local episode actions; intended to be run directly after an episode action has been created
+ 
++    void uploadQuickEpisodeActions();
+     void syncSubscriptions();
+     void uploadSubscriptions(const QStringList &localAddFeedUrlList, const QStringList &localRemoveFeedUrlList);
+     void fetchModifiedSubscriptions();
+--- a/src/sync/syncjob.cpp
++++ b/src/sync/syncjob.cpp
+@@ -165,7 +165,10 @@
+     QStringList removeList = localChanges.second;
+     removeSubscriptionChangeConflicts(addList, removeList);
+     uploadSubscriptions(addList, removeList);
+-
++}
++
++void SyncJob::uploadQuickEpisodeActions()
++{
+     // Quick sync of local episodeActions
+     // store these actions in member variable to be able to delete these exact same changes from DB when processed
+     m_localEpisodeActions = getLocalEpisodeActions();
+@@ -347,6 +350,8 @@
+         // if this is not a quick upload only sync, continue with the feed updates
+         if (m_syncStatus != SyncStatus::UploadOnlySync) {
+             QTimer::singleShot(0, this, &SyncJob::fetchModifiedSubscriptions);
++        } else {
++            QTimer::singleShot(0, this, &SyncJob::uploadQuickEpisodeActions);
+         }
+ 
+         // Delete the uploaded changes from the database
+@@ -397,6 +402,8 @@
+ 
+             if (m_syncStatus != SyncStatus::UploadOnlySync) {
+                 QTimer::singleShot(0, this, &SyncJob::fetchModifiedSubscriptions);
++            } else {
++                QTimer::singleShot(0, this, &SyncJob::uploadQuickEpisodeActions);
+             }
+         });
+     }
