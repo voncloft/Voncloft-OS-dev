@@ -64,3 +64,17 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.0.4\| python/python-yam
 bash /usr/libexec/update-repo/changelog python/python-yaml/spkgbuild Changed\ from\ version\ 6.0.3\ to\ version\ 6.0.4
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=6.1\| python/python-zope-location/spkgbuild # update-repo-version 6.0 6.1
 bash /usr/libexec/update-repo/changelog python/python-zope-location/spkgbuild Changed\ from\ version\ 6.0\ to\ version\ 6.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=20261121\| beta/tl-unx/spkgbuild # update-repo-version 20261120 20261121
+bash /usr/libexec/update-repo/changelog beta/tl-unx/spkgbuild Changed\ from\ version\ 20261120\ to\ version\ 20261121
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=163.0a1.20261121093549\| nonfree/firefox-bin/spkgbuild # update-repo-version 163.0a1.20261120213402 163.0a1.20261121093549
+bash /usr/libexec/update-repo/changelog nonfree/firefox-bin/spkgbuild Changed\ from\ version\ 163.0a1.20261120213402\ to\ version\ 163.0a1.20261121093549
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=163.0a1.20261121105230\| nonfree/thunderbird-bin/spkgbuild # update-repo-version 163.0a1.20261120065003 163.0a1.20261121105230
+bash /usr/libexec/update-repo/changelog nonfree/thunderbird-bin/spkgbuild Changed\ from\ version\ 163.0a1.20261120065003\ to\ version\ 163.0a1.20261121105230
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.12\| perl/perl-sub-spkgbuild/spkgbuild # update-repo-version 0.09 0.12
+bash /usr/libexec/update-repo/changelog perl/perl-sub-spkgbuild/spkgbuild Changed\ from\ version\ 0.09\ to\ version\ 0.12
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.5.2\| python/python-poetry/spkgbuild # update-repo-version 2.5.1 2.5.2
+bash /usr/libexec/update-repo/changelog python/python-poetry/spkgbuild Changed\ from\ version\ 2.5.1\ to\ version\ 2.5.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=7.1.1\| python/python-watchdog/spkgbuild # update-repo-version 7.1.0 7.1.1
+bash /usr/libexec/update-repo/changelog python/python-watchdog/spkgbuild Changed\ from\ version\ 7.1.0\ to\ version\ 7.1.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.git20261120185418.gebc1ff705cea65ece1399bec263eeb2af4e31701\| server/blacklist-youtubeads/spkgbuild # update-repo-version 1.0.git20261118165855.gfbd27b42aa348e5e3be26b6cca2206c272909361 1.0.git20261120185418.gebc1ff705cea65ece1399bec263eeb2af4e31701
+bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Changed\ from\ version\ 1.0.git20261118165855.gfbd27b42aa348e5e3be26b6cca2206c272909361\ to\ version\ 1.0.git20261120185418.gebc1ff705cea65ece1399bec263eeb2af4e31701

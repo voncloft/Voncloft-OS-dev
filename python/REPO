@@ -3258,8 +3258,8 @@ f:516e51497ccfca1f2b7b0fd8c41b30ed:python-parsedatetime/CHANGELOG
 f:bcd9ef8270650076f617a909da64b305:python-parsedatetime/spkgbuild
 f:7a0f1fe9abbcf7e6562a1d6c36342a1e:python-pasta/CHANGELOG
 f:df0ebb37026b9fe251ddc8423b8a31b5:python-pasta/spkgbuild
-f:3bce14d154cc0e4a3e1c62900ff73a15:python-watchdog/CHANGELOG
-f:abb54a4dffb0f9190c5793f64a90d02b:python-watchdog/spkgbuild
+f:100c8bf445d1218d157454684cefd8ba:python-watchdog/CHANGELOG
+f:496b3f911fe735216a2428495f8ee5b7:python-watchdog/spkgbuild
 f:e14166e1e198527d055ef7bca11fb955:python-simplespectral/CHANGELOG
 f:835eba673dda3c0940c55cafcbe49ab3:python-simplespectral/spkgbuild
 f:d0aca2fb1718c9f4fba17f25f2304580:python-js2py/CHANGELOG
@@ -4896,8 +4896,8 @@ f:e536b631470b5bc7f691937d5a9d3d0c:python-keystoneauth1/spkgbuild
 f:32710d487c456aa0b95ffddf8e065c65:python-jaraco/CHANGELOG
 f:6699323a0de22431d8021207e47d368f:python-jaraco/spkgbuild
 f:62b3164882a6dc7fc8b983c8a6f13456:python-jaraco/override
-f:66f90eb97f16670b583e8c720255c30a:python-poetry/CHANGELOG
-f:15ebfc94f624c8d6b1f8fcd2510d7e65:python-poetry/spkgbuild
+f:33ca7b0b13f01de8c79610ff9452d7dd:python-poetry/CHANGELOG
+f:d0795ba87417c829b58b442f8b7d1125:python-poetry/spkgbuild
 f:616a1e9a22dc2f17d22155c1be338f87:python-pytest-tornado/CHANGELOG
 f:440dd61ba659d49815af4b4fd017245e:python-pytest-tornado/spkgbuild
 f:fa076112a13fd832fa0abed1959443a1:python-caja/CHANGELOG
