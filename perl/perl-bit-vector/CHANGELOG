@@ -7,3 +7,13 @@ release=11
 Synopsis:
 Added Changelog to package
 Fixed URL
+
+----------------------------------------------------------------
+
+Date: Sun Nov 22 03:43:46 EST 2026
+
+Version=7.5
+Release=11
+
+Synopsis:
+Changed from version 7.4 to version 7.5

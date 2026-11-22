@@ -2214,8 +2214,8 @@ f:859f954633a41ee55ff207185e107470:perl-scalar-list-utils/.pkgfiles
 f:05c87c2ed70111d0b34bf1dd77f2dfd5:perl-scalar-list-utils/CHANGELOG
 f:cb84ee5cf36fae748293eb628b8853bb:perl-scalar-list-utils/spkgbuild
 f:32daade33ec8aa896048d6a6b356c03b:perl-scalar-list-utils/override
-f:1fb754ca36cc7bc20e33c3dfc4bc1e5c:perl-bit-vector/CHANGELOG
-f:f0587f5ba9cd63a9dd8610b20cc5da21:perl-bit-vector/spkgbuild
+f:bb91df3138642faede8b17fe27096315:perl-bit-vector/CHANGELOG
+f:1651707c5db74e36d95af75b977a3cd4:perl-bit-vector/spkgbuild
 f:3b0b818bc75de7002d8879340b4bc46b:perl-bit-vector/override
 f:f87f105b5d53dc965427441ef2174ed1:perl-xml-parser/CHANGELOG
 f:bcb0a1028e73847dbac92ff7d3866afe:perl-xml-parser/spkgbuild

@@ -537,3 +537,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 0.46.2 to version 0.62.0
+
+----------------------------------------------------------------
+
+Date: Sun Nov 22 03:43:46 EST 2026
+
+Version=0.64.0
+Release=3
+
+Synopsis:
+Changed from version 0.62.0 to version 0.64.0

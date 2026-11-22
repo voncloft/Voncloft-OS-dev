@@ -2,7 +2,7 @@
 # depends : perl-carp-clan
 
 name=perl-bit-vector
-version=7.4
+version=7.5
 release=11
 
 _name=Bit-Vector

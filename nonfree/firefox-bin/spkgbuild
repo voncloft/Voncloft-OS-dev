@@ -3,7 +3,7 @@
 
 name=firefox-bin
 # Include the build ID so daily Nightlies are distinct package/cache versions.
-version=163.0a1.20261121093549
+version=163.0a1.20261121200250
 release=2
 _name=${name%-bin}
 _version=${version%.*}

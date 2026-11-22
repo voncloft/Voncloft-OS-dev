@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-filelock
-version=4.2.12
+version=4.3.0
 release=5
 
 _name=py-filelock

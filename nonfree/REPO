@@ -35,9 +35,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:bcd13cc9227de40ef532531e72aec0d2:firefox-bin/CHANGELOG
+f:3cd9c3672d10e5e74eabd8951972a67c:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:ee069154f3b88b70ee7fd4c83e6389d4:firefox-bin/spkgbuild
+f:99c6e17ac3e0aa715f2670326cc40c9f:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop

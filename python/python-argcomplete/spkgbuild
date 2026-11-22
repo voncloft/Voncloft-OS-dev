@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-argcomplete
-version=3.7.2
+version=3.8.0
 release=1
 
 _name=${name#python-}
