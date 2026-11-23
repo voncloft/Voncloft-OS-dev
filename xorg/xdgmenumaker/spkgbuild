@@ -1,7 +1,7 @@
 # description	: A command line tool that generates XDG menus for several window managers
 
 name=xdgmenumaker
-version=2.5
+version=2.6
 release=1
 source="https://github.com/gapan/${name}/archive/$version/$name-$version.tar.gz"
 

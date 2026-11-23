@@ -116,8 +116,8 @@ f:f0d0bfbd67ca8605d8ccdcf8bf4131cb:xkbutils/spkgbuild
 f:fe166f1bdbfa524c8d72fa4ff91cd763:xcb-util-image/.pkgfiles
 f:00a9d044ed17a96be8f0835aa6321e6d:xcb-util-image/CHANGELOG
 f:9bc16beb349297356d4859b43bdbd935:xcb-util-image/spkgbuild
-f:e1e0953b770040b388be27effe5d692d:xdgmenumaker/CHANGELOG
-f:42ebdcce98ec69e4629aad666dc749d9:xdgmenumaker/spkgbuild
+f:298f0d3ba13adff0978b6cfae219b7c3:xdgmenumaker/CHANGELOG
+f:e6cb6923401f21df51d7917d5007bac6:xdgmenumaker/spkgbuild
 f:646d92f8fff97d67831066da1dc07251:tty-clock/spkgbuild
 f:8aa3e85f5f251ad3e9217e7d5e1daa31:xorg-libraries/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:xorg-libraries/override

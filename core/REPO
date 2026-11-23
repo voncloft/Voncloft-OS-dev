@@ -1006,9 +1006,9 @@ f:133693fab2bd010a5213309f6192fd40:dash/spkgbuild
 f:e180301a32ea424f1eeffd066eaa1df7:iana-etc/.pkgfiles
 f:f20f387259d20577e4ab57239994bfcb:iana-etc/protocols
 f:85bd5b886c1f93353f3a885fa05bbdc3:iana-etc/services
-f:7912b3494792cf4b9d59b69b2c5fb54b:iana-etc/CHANGELOG
+f:24fcfe109e872daa69f6abebfc8faaba:iana-etc/CHANGELOG
 f:d6b011b611df75cfa3b42b933250c1a8:iana-etc/update.sh
-f:dbeb05cd7c694f8eaeccce9fa4b20f29:iana-etc/spkgbuild
+f:a06c71610cd026d3f680100ab7fe6c6d:iana-etc/spkgbuild
 f:7c58c2ddc8d578edfb75f92c103b5428:iana-etc/override
 f:3ed68d1e2536e259ed784b698e558da5:fcron/.pkgfiles
 f:9d68dd3a9dc9b6fa6d16dae91d9bd2e2:fcron/fcron_start
@@ -1164,8 +1164,8 @@ f:473a5218938895558ef90d6f420f36af:boost/CHANGELOG
 f:c0a56321b48642da8138d9f5c76ac504:boost/spkgbuild
 f:3fb4e49b3cdcfd582f66518f6f1a1060:boost/override
 f:782559ddc05a71495dd0286b92312ad7:conky/.pkgfiles
-f:d16f310ca254debde24046b04b59002a:conky/CHANGELOG
-f:a9103d3ff00d867a1b8be4cd505c90f9:conky/spkgbuild
+f:66f95bf711286aedde53c0eefc9f4ce0:conky/CHANGELOG
+f:3d0e36d8189f24c88bddbeedddc1241c:conky/spkgbuild
 f:b4ae39ab442b1a522f20c67efb2ccf9f:elinks/spkgbuild
 f:d42500b7a326a548fa0b631fb5b280a3:elinks/override
 f:c580262d1326041f784374916b4801b0:simplescreenrecorder/CHANGELOG
@@ -1291,8 +1291,8 @@ f:375f8aba31a5949b2d2e60acfed6dcc7:tzdata/.pkgfiles
 f:a8bf1fbaff4c375397de1cecb3504d67:tzdata/CHANGELOG
 f:71bcb4f45fee2a3d15556dae5e0147e2:tzdata/spkgbuild
 f:75c8f7eb491e63a6552e6b8ac70c1fcd:tzdata/override
-f:b9e4b411cb3261f9ea68417875136be8:redis/CHANGELOG
-f:dd9c86e6c2d40eedbb9639414508c801:redis/spkgbuild
+f:01afc9f343ceb3762746674f35562bf8:redis/CHANGELOG
+f:6e24292befaaafceef54a9a2dfa5cdb1:redis/spkgbuild
 f:95932dc5885dc32a94da6763113d6a5a:pop-icon-theme/CHANGELOG
 f:361884e219259c6dca78750dde4b030c:pop-icon-theme/spkgbuild
 f:adfaa350e0fefbc9a69e4697578991d9:pop-icon-theme/override
@@ -1666,8 +1666,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:900e37e7804a9b24f4a81ede1ff1fe19:flex/CHANGELOG
-f:05e3c98047403d289490a878d1e8586d:flex/spkgbuild
+f:f943febae838c244fef5ac5ff459c350:flex/CHANGELOG
+f:069eb36960f1f40d64b76a2ca64ae3e6:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch
@@ -1712,8 +1712,8 @@ f:8ec2cb22c89367459bae1bbaebd2b738:gc/override
 f:10937437f0a646b63202b2d80b797027:elfutils/CHANGELOG
 f:cf70476d770cf6bad459591b5142bfe7:elfutils/spkgbuild
 f:49197277cda290071c43f91e7988ca78:at-spi2-core/.pkgfiles
-f:281e156e962a7c6a828838760282f141:at-spi2-core/CHANGELOG
-f:a00431dcabcec473380844082bc16961:at-spi2-core/spkgbuild
+f:5b5216e61cb303f1254cc2b0267175c1:at-spi2-core/CHANGELOG
+f:3239434b63d24bfe40400a1307b76434:at-spi2-core/spkgbuild
 f:0cf5f3a71d23e7bf86880fcf309c1c4a:at-spi2-core/override
 f:76aa7f046bf3c9e32043cc59c914f48d:util-linux/CHANGELOG
 f:da84f41a9d8826153b684db87f2411bd:util-linux/spkgbuild
@@ -2210,8 +2210,8 @@ f:55fc7bcfb155ac3106dd4aed2e6bf910:shadow/login
 f:a205549bec2e6990af562d02b3fc3298:shadow/passwd
 f:651dd39e74b086fa23e8c8cf915224a6:shadow/chage
 f:a647a87ebd460912bf80a62a8c66d2ac:shadow/chpasswd
-f:e83f5a3fbfaa8c46714a6469db84bb61:shadow/CHANGELOG
-f:23946510d702e1af072a2ac15ce41e28:shadow/spkgbuild
+f:68494949afea465641d0c1ffee4d97d4:shadow/CHANGELOG
+f:9b6d94878fa6fbf891433a4d6161f6e9:shadow/spkgbuild
 f:67bfdee60d1f31efc42ea724c5da9cad:shadow/su
 f:428a8549a687546f5520be7ecc560507:shadow/override
 f:5ce8418cdf6429b3e73601e6f8cb7ebb:.httpup-repo.current

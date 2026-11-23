@@ -165,9 +165,9 @@ f:d356c711b851a3bb91ff08749568859c:torrents/gettorrents
 f:f69934646fb9fd76705ac6b36ff185f8:torrents/spkgbuild
 f:bc72b9671b5868525d81c846a6694c4c:torrents/override
 f:fcc3e56a9dd90b4b33ed3adb5b2d4e3c:postfix/post-upgrade.sh
-f:db6bcd7f1633cdab746b20810bc99dd2:postfix/CHANGELOG
+f:1602b2ddd56d04cf2b083450c20dacb5:postfix/CHANGELOG
 f:d7ecf376ff1dbee70335d1c57b565e38:postfix/post-install.sh
-f:764f057688cc97c73a33644822c7c159:postfix/spkgbuild
+f:9f69eddaad5f584e79531441f2850d4f:postfix/spkgbuild
 f:2f10db001686e24dd9ac31f4aa57dc23:postfix/postfix
 f:a3ff08bd47351d46202719a46207f6c8:postfix/pre-install.sh
 f:edd34e233104f53f208ffb3bfe3b0188:berkeley-db/spkgbuild

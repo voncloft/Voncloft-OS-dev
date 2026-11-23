@@ -2,7 +2,7 @@
 # depends : python tmux
 
 name=python-libtmux
-version=0.64.0
+version=0.67.1
 release=3
 
 _name=${name#python-}

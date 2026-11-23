@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Changed from version 2.56.3 to version 2.48.2
+
+----------------------------------------------------------------
+
+Date: Mon Nov 23 03:46:38 EST 2026
+
+Version=2.62.2
+Release=1
+
+Synopsis:
+Changed from version 2.62.1 to version 2.62.2

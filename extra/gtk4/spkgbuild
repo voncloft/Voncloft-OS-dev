@@ -4,7 +4,7 @@
 # depends :	glib
 
 name=gtk4
-version=4.24.1
+version=4.24.2
 release=1
 
 _name=gtk

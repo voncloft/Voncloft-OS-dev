@@ -2,7 +2,7 @@
   # depends : python-setuptools python-zope-interface
 
 name=python-zope-exceptions
-version=6.0
+version=6.1
 release=3
 
 _name=zope.exceptions

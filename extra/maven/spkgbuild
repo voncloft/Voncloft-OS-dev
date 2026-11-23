@@ -2,7 +2,7 @@
 # depends : java-headless bash
 
 name=maven
-version=3.10.1
+version=3.10.2
 release=1
 _name=apache-maven
 source="https://archive.apache.org/dist/maven/${name}-3/$version/binaries/${_name}-$version-bin.tar.gz"

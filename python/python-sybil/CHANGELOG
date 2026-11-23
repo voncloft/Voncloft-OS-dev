@@ -187,3 +187,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 9.1.0 to version 10.1.0
+
+----------------------------------------------------------------
+
+Date: Mon Nov 23 03:46:38 EST 2026
+
+Version=10.2.0
+Release=1
+
+Synopsis:
+Changed from version 10.1.0 to version 10.2.0

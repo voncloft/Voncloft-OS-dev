@@ -2,7 +2,7 @@
 # depends : perl-mailtools perl-io-stringy perl-convert-binhex
 
 name=perl-mime-tools
-version=5.522
+version=5.523
 release=8
 
 _name=MIME-tools

@@ -299,8 +299,8 @@ f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
 f:28acf778d3f8f79a92cebaa026355b44:grep/spkgbuild
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:2b1dd3fac639b2e4d10a183d2f8f89c6:flex/CHANGELOG
-f:cf0450057be577de5d9e166d5d6d7bd3:flex/spkgbuild
+f:f7a6a7b589425fed9a20b985ca4d2bb1:flex/CHANGELOG
+f:f0c312e26a9ae4aab9514f3cab9aa559:flex/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
 f:f7a299fd4fb7730bedb88cab80474a43:python-wheel/CHANGELOG
 f:4ecf94fde225a9ec2c615d040b270de9:python-wheel/spkgbuild
@@ -433,6 +433,6 @@ f:db74b1d4ac6285174de1adbe3e6c63d3:sysvinit/.pkgfiles
 f:7791663bc75a6cc875dfb9d680c5a197:sysvinit/CHANGELOG
 f:29aab96fb49a4d5c6bbc626e8b3cf3e3:sysvinit/spkgbuild
 f:3659389e9cc289225ff3c26ceb069f70:shadow/.pkgfiles
-f:22f53c56d3157f0ce2c55650581f9cec:shadow/CHANGELOG
-f:6aa9c6403a287619c0b3c23f4c873929:shadow/spkgbuild
+f:0b89780e0a3a2dc4311af833978cd9f6:shadow/CHANGELOG
+f:de9dafaa288d6d0d42a8b69ccaf85a21:shadow/spkgbuild
 f:1730a9c510bd0476be8267ff6b2a3ac1:.httpup-repo.current

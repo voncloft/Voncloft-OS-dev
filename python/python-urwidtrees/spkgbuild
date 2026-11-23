@@ -2,7 +2,7 @@
 # depends : python python-urwid>=1.1.0
 
 name=python-urwidtrees
-version=1.1.0
+version=1.1.1
 release=5
 
 _name=${name#python-}

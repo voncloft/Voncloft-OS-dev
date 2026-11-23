@@ -766,8 +766,8 @@ f:8d5e1202244263b841686c88c9ee4ea1:perl-x11-protocol/override
 f:1ba22d60d3dfcb031f7ae547f9655e36:perl-http-daemon/CHANGELOG
 f:162443ff5220c56e20cee426dd039c04:perl-http-daemon/spkgbuild
 f:14337f2b7ee759aabdac6df63f19e57b:perl-http-daemon/override
-f:6e4778a40d261e920e385e07d48a8fcd:perl-mime-tools/CHANGELOG
-f:b63890ca11de1891abd49e7000a6f776:perl-mime-tools/spkgbuild
+f:8d400daab3a5c72c94c60397eb94541f:perl-mime-tools/CHANGELOG
+f:1c0ee9ad348ad8bbbd0e4b0e08756938:perl-mime-tools/spkgbuild
 f:3c4a21171df58a02160be5366abee73e:perl-mime-tools/override
 f:27edbad1fb0acf9354a91725dabd5c4a:perl-gssapi/spkgbuild
 f:7fb6151f7afcb3f41163db8432951c69:perl-gssapi/override
@@ -1457,8 +1457,8 @@ f:f2d533210d0c60fce05099fdafa2c235:perl-xml-libxml/override
 f:64263f4d32c100459313b1692b907d3c:perl-file-which/CHANGELOG
 f:9b459a7223775a5dab69d42dea6241ef:perl-file-which/spkgbuild
 f:9192721f96f791c102e766f34dc47ace:perl-file-which/override
-f:291b9b49ba0cf8ce2f95eaeb951aee43:perl-data-dump/CHANGELOG
-f:8138c4e73e855c2e9f72b402354ab52a:perl-data-dump/spkgbuild
+f:7767edfab1c834feae4059dec5d17982:perl-data-dump/CHANGELOG
+f:e83609615f78837e888dc39011fc423e:perl-data-dump/spkgbuild
 f:358231005cec8e58cd7573492b74d331:perl-data-dump/override
 f:bdf0d578c9f3efa23b0f0954328ef46f:perl-html-tree/CHANGELOG
 f:d23f178bfacdd1019c39d88910b18f02:perl-html-tree/spkgbuild

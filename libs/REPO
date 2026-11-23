@@ -907,8 +907,8 @@ f:3b5d704654cfaa80a274e990a47e23c9:libnsl/CHANGELOG
 f:75a55a676dc7c60a7ec1afe5742a4542:libnsl/post-install.sh
 f:3dfc6578a9d5c7d4e12336401ae0867e:libnsl/spkgbuild
 f:e9a9b860e1410986d18f94c3bdef99ef:openexr/.pkgfiles
-f:cc53d28066576ef74e261741baa31434:openexr/CHANGELOG
-f:edc05ebc7ba225fdf6f668ae197367cb:openexr/spkgbuild
+f:5b614590f062834c0b12a6bf1ac51247:openexr/CHANGELOG
+f:cba47345f13a88c42e316c5e1a4b9601:openexr/spkgbuild
 f:856de5e5c68e73813398468b65f9cfc6:openexr/override
 f:ac064aa02db6d8c0b41230dca7fa53f7:aqbanking/CHANGELOG
 f:f5a0cdecb643149ebe78cacdd9a60b6a:aqbanking/spkgbuild
@@ -1154,8 +1154,8 @@ f:f8192b09e9318f1aee131926fdd1b258:apr-util/spkgbuild
 f:eb313b589dbcb2b21fb3f1fba3631d03:libxkbfile/CHANGELOG
 f:7f3d2d650cc0f6fc81daeb144c518592:libxkbfile/spkgbuild
 f:d900f3857ae5cb8bc35e48bb1f1c2b78:libxkbfile/override
-f:faa2f8a846f2fb247c7fedaf0b29f91e:fluidsynth/CHANGELOG
-f:9c37c1155d56d7afd4f2e430df00b3e8:fluidsynth/spkgbuild
+f:942752d301ba299ee2e1712dc5e365f3:fluidsynth/CHANGELOG
+f:1077a1dac946a89c2be043fe9ce72cdf:fluidsynth/spkgbuild
 f:be22b57369f835a9346ab7aad29e0ba1:libvncserver/spkgbuild
 f:bde56f0a891b904a1c735b3f67f4830b:xapian-core/CHANGELOG
 f:0e674360c04677a87cba527df9978e97:xapian-core/spkgbuild
