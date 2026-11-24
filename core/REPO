@@ -559,8 +559,8 @@ f:0c4fd3df3bde11be9b013de2a35e4383:jwm/CHANGELOG
 f:5a2f313b14776cc8dff7b02670647789:jwm/spkgbuild
 f:bb57ef365b2177b536cf07fd5f2506ec:jwm/override
 f:7467e2646fd67befffdb2496d03e7267:kmod/.nanorc
-f:c5e64f0875d0224254cbb378479989a1:kmod/CHANGELOG
-f:6bd9e74fa2d39125d963a75a4dc51fe5:kmod/spkgbuild
+f:6103a0333fbc9ef037cfca9792e84e2d:kmod/CHANGELOG
+f:e3b7a66f2baaba7d3c7e2ffec261ee09:kmod/spkgbuild
 f:9ce688c3bf43329f5250bde849633bd8:cython3/.pkgfiles
 f:59b7093de9f7f86eca139d7d03056b9e:cython3/CHANGELOG
 f:33f3dfd5aaefb6ced25c78625b668f4d:cython3/spkgbuild
@@ -808,8 +808,8 @@ f:eb8251ee1afe036e58e30dffa9f33954:base/override
 f:47be2d34daff1ea3291d148b030a8c9d:celt/.pkgfiles
 f:9aa57b5fe52d10eef0a50e25c11407b2:celt/spkgbuild
 f:27dd07e32659d7a127aa71a348fb9194:geos/.pkgfiles
-f:ee1d56c0a52a7c2f9d22965599f3b636:geos/CHANGELOG
-f:3803264a1ad8dfa5873e320a36fd512b:geos/spkgbuild
+f:ab993ee84b7d8f18eebef34b8d28b752:geos/CHANGELOG
+f:a82a79987419b0d027c921ad3c605ca0:geos/spkgbuild
 f:e65fd2360318b7b7f582ec93015b00b3:ssh-askpass/CHANGELOG
 f:bdb7ac1bd3aeeb4aa6a4cc2dba14136c:ssh-askpass/spkgbuild
 f:e50cfd0c49ad8011c8a2c6fc5a4bf7e0:ssh-askpass/override
@@ -1224,8 +1224,8 @@ f:c85777895294f25f338c436ac5fda12b:gnupg/CHANGELOG
 f:eedaff03e9e43da9ccad600fd5823683:gnupg/spkgbuild
 f:12918d4c350fc9336d067e6682737c49:gnupg/override
 f:cadcb63b9bc269a457a70c58f0d97367:zstd/.pkgfiles
-f:0d5be0c2825343f377c4f94556807964:zstd/CHANGELOG
-f:4761f93b157c5cecfcc1bcf532906b48:zstd/spkgbuild
+f:9955cd43e1f9de5b8c8fd2f72f7e1ed6:zstd/CHANGELOG
+f:d7b271a68e60ed2967bd516c979b21b8:zstd/spkgbuild
 f:42668f29c45c9b3dd51ce28e1193a4d4:ranger/CHANGELOG
 f:26e5f89278d8b7225add9d42bb3ad64e:ranger/spkgbuild
 f:2417d60b9c3b3120185fd6ba9e944dc4:ranger/override
@@ -1550,8 +1550,8 @@ f:a74a3601266b567397c61bb58cfe890c:zxing-cpp/spkgbuild
 f:20cc1625a8a81a301590f1cbf3e67e86:zxing-cpp/override
 f:660b167947fd255267fc6de6093abadd:cryptsetup/.pkgfiles
 f:5bc8a15b1f11f4e1b59f73e9c3120d67:cryptsetup/readme
-f:d1a3ef9a0bcee458dec823a5e57b8b69:cryptsetup/CHANGELOG
-f:18f83a87bea221a4be13fefe9d2ee232:cryptsetup/spkgbuild
+f:8b13adf2783b2edc1d8f800322366747:cryptsetup/CHANGELOG
+f:deedafd855d2828356d79fc05e573f36:cryptsetup/spkgbuild
 f:07c61fc3f1a280cd47ba971e0cbd7589:bzip2/spkgbuild
 f:cd1112c58df931bd11dd1e75d909141b:obmenu/spkgbuild
 f:4032aa371c3227645bc628a5cc2a198e:obmenu/override
@@ -1666,8 +1666,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:f943febae838c244fef5ac5ff459c350:flex/CHANGELOG
-f:069eb36960f1f40d64b76a2ca64ae3e6:flex/spkgbuild
+f:57919e1d6d14407e3d65f58aeb45a67f:flex/CHANGELOG
+f:fdaa4f69cb50168a9d5c17bf131be958:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch
@@ -1718,8 +1718,8 @@ f:0cf5f3a71d23e7bf86880fcf309c1c4a:at-spi2-core/override
 f:76aa7f046bf3c9e32043cc59c914f48d:util-linux/CHANGELOG
 f:da84f41a9d8826153b684db87f2411bd:util-linux/spkgbuild
 f:9732b2c807cdd4fced7e19561bc8995f:util-linux/override
-f:25e4ff7f80c3cd5db30c253aa4302e72:parallel/CHANGELOG
-f:2e6daf77264219d3253d5bd8b268bc94:parallel/spkgbuild
+f:b04bb36bb37f55d61126d484b1762f6c:parallel/CHANGELOG
+f:abb28582c89ff90249f60f7db870db30:parallel/spkgbuild
 f:6ffae4e94dc420f60c49e1399294c8c9:parallel/override
 f:fa74d49d781054ad87b3f524057ddcd2:dos2unix/.pkgfiles
 f:ba697c49cc0d437e9a652e97a0b1e58b:dos2unix/CHANGELOG

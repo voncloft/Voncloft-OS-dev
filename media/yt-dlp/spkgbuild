@@ -2,7 +2,7 @@
 # depends : ffmpeg python
 
 name=yt-dlp
-version=2026.10.26
+version=2026.11.23
 release=1
 
 source="yt-dlp-$version::https://github.com/yt-dlp/${name}/releases/download/$version/yt-dlp"

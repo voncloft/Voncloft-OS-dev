@@ -907,3 +907,13 @@ Release=2
 
 Synopsis:
 Upgraded from version 2025.5.1 to version 2026.8.0
+
+----------------------------------------------------------------
+
+Date: Tue Nov 24 03:46:11 EST 2026
+
+Version=2026.11.0
+Release=2
+
+Synopsis:
+Changed from version 2026.8.0 to version 2026.11.0

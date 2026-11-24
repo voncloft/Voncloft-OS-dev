@@ -704,8 +704,8 @@ f:1a142889657749714db321f364181483:perl-io-tty/override
 f:b60592423eadbf1985e3317e3feaf741:perl-pod-coverage/CHANGELOG
 f:da9a60df7c89cee355dfdc77a612c556:perl-pod-coverage/spkgbuild
 f:c3bef2b2b032290fe842a839479a5a87:perl-pod-coverage/override
-f:59455f917fee279cfd3d70d167435933:perl-business-isbn-data/CHANGELOG
-f:a29a75d69847d1660fc6bade36292dda:perl-business-isbn-data/spkgbuild
+f:e947596906437a598f2aa1fbcc9878db:perl-business-isbn-data/CHANGELOG
+f:a1170ad52affedaba8c450cb5465aa15:perl-business-isbn-data/spkgbuild
 f:1611f1e223d28ec76386256ea36156a4:perl-business-isbn-data/override
 f:cf30d3fcb6e88730db18d3aee00ff464:perl-role-tiny/.pkgfiles
 f:a586bca3f605d5aa06aede4de748399a:perl-role-tiny/CHANGELOG
@@ -1457,8 +1457,8 @@ f:f2d533210d0c60fce05099fdafa2c235:perl-xml-libxml/override
 f:64263f4d32c100459313b1692b907d3c:perl-file-which/CHANGELOG
 f:9b459a7223775a5dab69d42dea6241ef:perl-file-which/spkgbuild
 f:9192721f96f791c102e766f34dc47ace:perl-file-which/override
-f:7767edfab1c834feae4059dec5d17982:perl-data-dump/CHANGELOG
-f:e83609615f78837e888dc39011fc423e:perl-data-dump/spkgbuild
+f:2539a38cea8511dde1cc8c7032c61090:perl-data-dump/CHANGELOG
+f:2c13bb83e01e1d63f3c8ba8e994a342c:perl-data-dump/spkgbuild
 f:358231005cec8e58cd7573492b74d331:perl-data-dump/override
 f:bdf0d578c9f3efa23b0f0954328ef46f:perl-html-tree/CHANGELOG
 f:d23f178bfacdd1019c39d88910b18f02:perl-html-tree/spkgbuild

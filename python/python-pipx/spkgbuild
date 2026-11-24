@@ -2,7 +2,7 @@
 # depends : python python-userpath python-argcomplete
 
 name=python-pipx
-version=1.18.19
+version=1.19.1
 release=1
 
 _name=${name#python-}

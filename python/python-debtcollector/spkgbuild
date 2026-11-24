@@ -2,7 +2,7 @@
 # depends : python-six python-pbr python-babel python-wrapt
 
 name=python-debtcollector
-version=3.1.0
+version=3.2.0
 release=3
 
 _name=${name#python-}

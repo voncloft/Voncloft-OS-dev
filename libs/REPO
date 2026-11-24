@@ -512,8 +512,8 @@ f:517f437ecfcd95bff85296e1dd4aff4a:lzo/spkgbuild
 f:00539c6d3a044f15aed1ca1b4b2a08d8:oniguruma/.pkgfiles
 f:48d9dcc5e437c3e9e29ab48e0acd035f:oniguruma/CHANGELOG
 f:81246f98b06183da004e8e435d69bd32:oniguruma/spkgbuild
-f:02b5bdf626586c8186881ee7c39c12a9:libxfce4util/CHANGELOG
-f:a49333a64fca2432bf2f092e47b502eb:libxfce4util/spkgbuild
+f:f55e14eddf04a284ebb5d4a0e8f247c4:libxfce4util/CHANGELOG
+f:60a82b5112d788900c8a89400aa424a3:libxfce4util/spkgbuild
 f:1bd7c491a647611ec07a32373cccee6a:libxcvt/.pkgfiles
 f:ff7a1ea9847f5a67050767a2422967df:libxcvt/CHANGELOG
 f:79b5a6b22f197c0ad21ebd9d6c18d915:libxcvt/spkgbuild
@@ -681,8 +681,8 @@ f:fcd6515962b376624de7136f7e2260ad:liblastfm-qt5/CHANGELOG
 f:41b9096e38fbb00369f6fceab3352532:liblastfm-qt5/spkgbuild
 f:08cb270b5d563934659ad1add12e3058:zug/spkgbuild
 f:2a79229dfa08b19f1b6b30e5572ea792:libtorrent-rasterbar/.pkgfiles
-f:99c8adddcc865883eea2d67cc66789e3:libtorrent-rasterbar/CHANGELOG
-f:6ec72faf392bdcde16a9a51c3d35681f:libtorrent-rasterbar/spkgbuild
+f:5a9dfc1250e97b4157a29e1f4207bf73:libtorrent-rasterbar/CHANGELOG
+f:eb808a517e0eac6567efdcf371f302f9:libtorrent-rasterbar/spkgbuild
 f:3b796652e834d7dab52ff00a536c5441:rinutils/.pkgfiles
 f:9c0c0fa8da78b0447ddfef1295fe0dc7:rinutils/CHANGELOG
 f:bea7e49b53966aa96efec0ba17a798ac:rinutils/spkgbuild
@@ -1015,9 +1015,9 @@ f:20e65cc9a8f2b5c7260b77d2a2d45a08:ostree/.pkgfiles
 f:6bb54ad29203613adf4579d12b98d693:ostree/CHANGELOG
 f:e62776c90b2fb0008bc67ecb207998af:ostree/spkgbuild
 f:6d0fc50e6cc7011f44d035c8f1199ac1:ostree/override
-f:b1f8bf0af85ee878adcad019d76642a8:libtorrent/CHANGELOG
+f:931611e0a05874fb05a248ba8673b047:libtorrent/CHANGELOG
 f:e4ea060a5287b6dc181f43ab2f69d503:libtorrent/fix-build-with-boost-1.72.0.patch
-f:06fbef8fb18fc59407dd3b68bbf4a78c:libtorrent/spkgbuild
+f:0c508d18a72790337a9c6e6523b48d14:libtorrent/spkgbuild
 f:7cf4f54e3aaf07b3979731654c5f19da:libnvme/.pkgfiles
 f:df55389b9d7c041b374ed616baa5578b:libnvme/CHANGELOG
 f:310e11599d0baed5f15e46c83393c669:libnvme/spkgbuild
@@ -1147,8 +1147,8 @@ f:7da6b5ebdc39e32fafd7d64ea45360c7:libmad/spkgbuild
 f:6da42780d47bfcdce4851d57f23267ce:libmad/override
 f:848d2ab736c31b5bbf589cb92c260ad8:zita-resampler/CHANGELOG
 f:ff477ff0470f97373453493dbe37673f:zita-resampler/spkgbuild
-f:e0ebc889cb92f65cd14b3da21bbeb09d:expat/CHANGELOG
-f:4cb9c8336c9286df9d149014d10e9181:expat/spkgbuild
+f:606f9da5c19396c912f96e5ab60e4c9f:expat/CHANGELOG
+f:63938e196e34845e75947e9b34401821:expat/spkgbuild
 f:1b4908f3638e666d78cf55d64d977ca0:apr-util/CHANGELOG
 f:f8192b09e9318f1aee131926fdd1b258:apr-util/spkgbuild
 f:eb313b589dbcb2b21fb3f1fba3631d03:libxkbfile/CHANGELOG

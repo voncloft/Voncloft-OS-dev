@@ -1,0 +1,142 @@
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -96,6 +96,7 @@
+         qml/Mobile/BottomToolbar.qml
+         qml/QueuePage.qml
+         qml/EpisodeListPage.qml
++        qml/ContinueListeningPage.qml
+         qml/DownloadListPage.qml
+         qml/ErrorList.qml
+         qml/ErrorListOverlay.qml
+--- a/src/models/episodeproxymodel.cpp
++++ b/src/models/episodeproxymodel.cpp
+@@ -5,10 +5,51 @@
+  */
+ 
+ #include "models/episodeproxymodel.h"
++#include "database.h"
++#include "datamanager.h"
++#include <QSqlQuery>
+ 
+ EpisodeProxyModel::EpisodeProxyModel(QObject *parent)
+     : AbstractEpisodeProxyModel(parent)
+ {
+     m_episodeModel = &EpisodeModel::instance();
+     setSourceModel(m_episodeModel);
++    connect(&DataManager::instance(), &DataManager::entryPlayPositionsChanged, this, &EpisodeProxyModel::refreshContinueListening);
++    connect(&DataManager::instance(), &DataManager::entryReadStatusChanged, this, &EpisodeProxyModel::refreshContinueListening);
++    connect(&DataManager::instance(), &DataManager::enclosureDurationsChanged, this, &EpisodeProxyModel::refreshContinueListening);
++    connect(m_episodeModel, &QAbstractItemModel::modelReset, this, &EpisodeProxyModel::refreshContinueListening);
+ }
++
++void EpisodeProxyModel::setContinueListening(bool enabled)
++{
++    if (m_continueListening == enabled) {
++        return;
++    }
++    m_continueListening = enabled;
++    refreshContinueListening();
++    Q_EMIT continueListeningChanged();
++}
++
++void EpisodeProxyModel::refreshContinueListening()
++{
++    m_unfinished.clear();
++    if (m_continueListening) {
++        QSqlQuery query;
++        query.prepare(QStringLiteral("SELECT DISTINCT Entries.entryuid FROM Entries JOIN Enclosures ON Entries.entryuid=Enclosures.entryuid "
++                                     "WHERE Entries.read=0 AND Enclosures.playposition>0 "
++                                     "AND (Enclosures.duration<=0 OR Enclosures.playposition<Enclosures.duration*1000)"));
++        Database::instance().execute(query);
++        while (query.next()) {
++            m_unfinished.insert(query.value(0).toLongLong());
++        }
++    }
++    invalidateFilter();
++}
++
++bool EpisodeProxyModel::filterAcceptsRow(int row, const QModelIndex &parent) const
++{
++    if (m_continueListening && !m_unfinished.contains(sourceModel()->data(sourceModel()->index(row, 0, parent), AbstractEpisodeModel::EntryuidRole).toLongLong())) {
++        return false;
++    }
++    return AbstractEpisodeProxyModel::filterAcceptsRow(row, parent);
++}
+--- a/src/models/episodeproxymodel.h
++++ b/src/models/episodeproxymodel.h
+@@ -7,6 +7,7 @@
+ #pragma once
+ 
+ #include <QObject>
++#include <QSet>
+ #include <QQmlEngine>
+ 
+ #include "models/abstractepisodeproxymodel.h"
+@@ -16,10 +17,19 @@
+ {
+     Q_OBJECT
+     QML_ELEMENT
++    Q_PROPERTY(bool continueListening READ continueListening WRITE setContinueListening NOTIFY continueListeningChanged)
+ 
+ public:
+     explicit EpisodeProxyModel(QObject *parent = nullptr);
+ 
++    bool continueListening() const { return m_continueListening; }
++    void setContinueListening(bool enabled);
++    bool filterAcceptsRow(int row, const QModelIndex &parent) const override;
++Q_SIGNALS:
++    void continueListeningChanged();
+ private:
++    void refreshContinueListening();
++    bool m_continueListening = false;
++    QSet<qint64> m_unfinished;
+     EpisodeModel *m_episodeModel;
+ };
+--- /dev/null
++++ b/src/qml/ContinueListeningPage.qml
+@@ -0,0 +1,28 @@
++// SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
++pragma ComponentBehavior: Bound
++import QtQuick
++import org.kde.kirigami as Kirigami
++import org.kde.ki18n
++import org.kde.kasts
++
++Kirigami.ScrollablePage {
++    title: KI18n.i18n("Continue listening")
++    GenericEntryListView {
++        id: episodes
++        anchors.fill: parent
++        reuseItems: true
++        model: EpisodeProxyModel {
++            continueListening: true
++        }
++        delegate: GenericEntryDelegate {
++            listViewObject: episodes
++        }
++        Kirigami.PlaceholderMessage {
++            anchors.centerIn: parent
++            width: Math.min(parent.width, Kirigami.Units.gridUnit * 20)
++            visible: episodes.count === 0
++            text: KI18n.i18n("No unfinished episodes")
++            explanation: KI18n.i18n("Episodes you start listening to will appear here until you finish them.")
++        }
++    }
++}
+--- a/src/qml/KastsGlobalDrawer.qml
++++ b/src/qml/KastsGlobalDrawer.qml
+@@ -74,6 +74,14 @@
+                     Kirigami.NavigationTabButton {
+                         Layout.fillWidth: true
+                         display: root.buttonDisplayMode
++                        text: KI18n.i18n("Continue listening")
++                        icon.name: "media-playback-start"
++                        checked: (root.Controls.ApplicationWindow.window as Main).currentPage == "ContinueListeningPage" && !root.settingsOpened
++                        onClicked: (root.Controls.ApplicationWindow.window as Main).pushPage("ContinueListeningPage")
++                    }
++                    Kirigami.NavigationTabButton {
++                        Layout.fillWidth: true
++                        display: root.buttonDisplayMode
+                         text: KI18n.i18nc("@title of page showing the list queued items; this is the noun 'the queue', not the verb", "Queue")
+                         icon.name: "source-playlist"
+                         checked: (root.Controls.ApplicationWindow.window as Main).currentPage == "QueuePage" && !root.settingsOpened

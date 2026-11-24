@@ -108,8 +108,8 @@ f:fbed267f5a91553e82296d1854136051:python-packaging/CHANGELOG
 f:e79eff497a88ab566b32b462259d6c07:python-packaging/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:kmod/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:kmod/.nanorc
-f:c5e64f0875d0224254cbb378479989a1:kmod/CHANGELOG
-f:25a70b00b477987d9367fe94cabc0fd9:kmod/spkgbuild
+f:c2eca516b64f790a7aa8100da02b362d:kmod/CHANGELOG
+f:b4ea88c41e9080c6dbff69290b6647f5:kmod/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-flit/.pkgfiles
 f:caa4da5b0eeed9cce86a3490c944e8c8:python-flit/CHANGELOG
 f:59ca3bb4e46a7cb4c53655a4f56d28c4:python-flit/spkgbuild
@@ -218,8 +218,8 @@ f:d6c598646e8405f39a48fdc2228b71df:udev-lfs/CHANGELOG
 f:00feba2b6b2799a025f144ab13427635:udev-lfs/spkgbuild
 f:6fef1724f9ee5abc917f77dd38932867:udev-lfs/override
 f:cadcb63b9bc269a457a70c58f0d97367:zstd/.pkgfiles
-f:0d5be0c2825343f377c4f94556807964:zstd/CHANGELOG
-f:1d3b2a995d0bfe06d7b7c74f6b5c1d62:zstd/spkgbuild
+f:9955cd43e1f9de5b8c8fd2f72f7e1ed6:zstd/CHANGELOG
+f:40d4a7acdfd0533afdcfbc70dc195931:zstd/spkgbuild
 f:eb73737a9b5c135e4ffa1c06768bcadc:lfs-base/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:lfs-base/override
 f:664b2c752dd6a57663aa6a11e9b01614:groff/.pkgfiles
@@ -249,8 +249,8 @@ f:3d333df77302ed89e06a4a8539943b7d:gcc/c89
 f:3a1292193e3657288db8896780f365a3:gcc/CHANGELOG
 f:b9019db6a35d360c55bcc9d68b52ee63:gcc/spkgbuild
 f:c3265ca11bed27e9fe4c509729dc2827:meson/.pkgfiles
-f:cc672e021709e0ddbef912e3bad0970f:meson/CHANGELOG
-f:c09825c3b3e2092d825a7ed18bc0981b:meson/spkgbuild
+f:c0c9b270a40983d3a0fd67841c63d3b5:meson/CHANGELOG
+f:327a2bcd935a153ac232f83be4d8f160:meson/spkgbuild
 f:fe07c432c464e42b023caa057cafb410:markupsafe/.pkgfiles
 f:7467e2646fd67befffdb2496d03e7267:markupsafe/.nanorc
 f:359588e4b00d1ccdf4e1539af3453cb8:markupsafe/CHANGELOG
@@ -299,8 +299,8 @@ f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
 f:28acf778d3f8f79a92cebaa026355b44:grep/spkgbuild
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:f7a6a7b589425fed9a20b985ca4d2bb1:flex/CHANGELOG
-f:f0c312e26a9ae4aab9514f3cab9aa559:flex/spkgbuild
+f:459aaafd71a7e0d7a03c718d4f35c495:flex/CHANGELOG
+f:a6dced10eb466ec8dbc555c4ea8e337f:flex/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
 f:f7a299fd4fb7730bedb88cab80474a43:python-wheel/CHANGELOG
 f:4ecf94fde225a9ec2c615d040b270de9:python-wheel/spkgbuild
@@ -351,8 +351,8 @@ f:51fc6d41b3fa835f7e959803191bd555:findutils/spkgbuild
 f:8ca7e1a9cc2e705e1120644f019e8cac:gawk/.pkgfiles
 f:3184b465b72398952cebfedb174c6f5a:gawk/CHANGELOG
 f:0800c0b7b9c333e73aaec31ae2ce8ac0:gawk/spkgbuild
-f:b85ceec6edf5445016fa2573cec478d0:expat/CHANGELOG
-f:09da90cbb5bbdff94dc14090ff59a624:expat/spkgbuild
+f:c229e312ff38d795bfa397dc4411ca34:expat/CHANGELOG
+f:e028994809f608e8237812a7c7ac3579:expat/spkgbuild
 f:204dca7669d97f7890d85822ec93f453:expat/override
 f:f74b2a0cf1215e1a469a6734bcfb3d0d:patch/.pkgfiles
 f:c0d9642accb8d5f8a8806c3f489b4c90:patch/CHANGELOG

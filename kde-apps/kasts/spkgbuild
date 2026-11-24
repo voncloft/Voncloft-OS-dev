@@ -3,7 +3,7 @@
 
 name=kasts
 version=26.08.3
-release=8
+release=9
 
 source="https://download.kde.org/stable/release-service/$version/src/${name}-$version.tar.xz
         fix-full-push-durationdb.patch
@@ -13,7 +13,8 @@ source="https://download.kde.org/stable/release-service/$version/src/${name}-$ve
         live-playback-status.patch
         fix-alphabetical-counts.patch
         automatic-library-sync.patch
-        event-driven-sync.patch"
+        event-driven-sync.patch
+        continue-listening.patch"
 options="!checksum"
 
 build() {
@@ -26,7 +27,9 @@ build() {
     patch --batch --fuzz=0 -Np1 -i "$SRC/fix-alphabetical-counts.patch" || return 1
     patch --batch --fuzz=0 -Np1 -i "$SRC/automatic-library-sync.patch" || return 1
     patch --batch --fuzz=0 -Np1 -i "$SRC/event-driven-sync.patch" || return 1
+    patch --batch --fuzz=0 -Np1 -i "$SRC/continue-listening.patch" || return 1
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install
+    #fuckxy
 }

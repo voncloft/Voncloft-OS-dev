@@ -2,7 +2,7 @@
 # depends : certifi urllib3
 
 name=sentry-sdk
-version=3.0.0
+version=3.0.1
 release=1
 
 _name=sentry-python

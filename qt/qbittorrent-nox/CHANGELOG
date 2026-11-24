@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 4.2.5 to version 5.3.0
+
+----------------------------------------------------------------
+
+Date: Tue Nov 24 03:46:11 EST 2026
+
+Version=5.3.1
+Release=1
+
+Synopsis:
+Changed from version 5.3.0 to version 5.3.1

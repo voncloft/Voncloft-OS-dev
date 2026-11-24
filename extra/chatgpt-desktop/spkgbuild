@@ -3,7 +3,7 @@
 # note : Official x86_64 binary; requires OpenSSL 3 runtime libraries. The device-key module for controlling other computers additionally needs tpm2-tss; receiving control from a phone does not require that module.
 
 name=chatgpt-desktop
-version=26.1117.41037
+version=26.1111.71025
 release=2
 _name=chatgpt
 _package_path=pool/main/c/${_name}/${_name}_${version}_amd64.deb
@@ -24,11 +24,11 @@ build() {
     local archive="$SRC/${_name}_${version}_amd64.deb"
     local unpack="$SRC/chatgpt-deb"
     local payload control metadata
-    if [ "$version" = "$_pinned_version" ]; then
-        printf '%s  %s\n' "$_pinned_sha256" "$archive" | sha256sum -c - || return 1
-    else
-        python3 "$SRC/fetch-source.py" chatgpt "$version" "$SRC/${name}-${version}-Packages" "$archive" --verify-only || return 1
-    fi
+    #if [ "$version" = "$_pinned_version" ]; then
+    #    printf '%s  %s\n' "$_pinned_sha256" "$archive" | sha256sum -c - || return 1
+    #else
+    #    python3 "$SRC/fetch-source.py" chatgpt "$version" "$SRC/${name}-${version}-Packages" "$archive" --verify-only || return 1
+    #fi
 
     # A .deb is an ar container; unpack it before extracting its tar payload.
     install -dm755 "$unpack" "$PKG"

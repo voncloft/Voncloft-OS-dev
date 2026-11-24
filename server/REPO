@@ -41,12 +41,12 @@ f:0c4212893556a750d024596d74e4e95d:wireguard/spkgbuild
 f:81ef5394b527e1897e785cb0e188ced5:wireguard/override
 f:e60137753879f141f627014084ab9ab2:blacklist-youtubeads/.pkgfiles
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-upgrade.sh
-f:f290dfa1004b5a7f30986a60433be5e5:blacklist-youtubeads/CHANGELOG
+f:8fdad39c995864a5d62efd1dd8acde53:blacklist-youtubeads/CHANGELOG
 f:47e741bec7fa4412bbb73a39cf9af748:blacklist-youtubeads/post-install.sh
-f:1d6af1afa8309cee0a7a6cf8e2675fd5:blacklist-youtubeads/spkgbuild
+f:f920a849b69d442508e7d026e34f6a4b:blacklist-youtubeads/spkgbuild
 f:0052656249624a2d46d93d9fff153693:blacklist-youtubeads/override
-f:5fdd53c6b34d9deaf38fc73e2e411eb9:homeassistant/CHANGELOG
-f:40d0f6e0b1403927d2c7ceb1b13d03e7:homeassistant/spkgbuild
+f:6045154918f10c6dd8d5331afc0bc90e:homeassistant/CHANGELOG
+f:0eb6a995372c54613210df262c63b20e:homeassistant/spkgbuild
 f:901281fc384dea63a384ef8af2777efc:samba/.pkgfiles
 f:98abcdacd06a8e4210d34c58b93464d4:samba/samba
 f:c65f2e42ce19954986906299c2b8851f:samba/post-upgrade.sh
@@ -113,10 +113,10 @@ f:4f96f4854a82cea84fe2b0ce92c795dc:mariadb/override
 f:7b305ff4127525649f08eac0e370e1a8:mariadb/pre-install.sh
 f:21d0ea24068e51fef54c4f51a1f3f37d:blacklist-hosts/.pkgfiles
 f:d36d8c1ca1e0fc10e6bc24714ac963bf:blacklist-hosts/post-upgrade.sh
-f:23314bb8ac721e1ca33e20bf39a6bb0f:blacklist-hosts/CHANGELOG
+f:4fc2205ab1eeda57a008579bac5a2ae6:blacklist-hosts/CHANGELOG
 f:d36d8c1ca1e0fc10e6bc24714ac963bf:blacklist-hosts/post-install.sh
 f:3b365d0e52f2510a3e6f60ae04ec45af:blacklist-hosts/test
-f:633abf01b7d5a9fe55ca77b7f87d64cb:blacklist-hosts/spkgbuild
+f:a7185306975195c9f5f73450c52634e7:blacklist-hosts/spkgbuild
 f:915ed49eb11eeccfcc4e8b87a5b9c7e2:httpd/post-upgrade.sh
 f:96e267dcf2b286f0e043887315bdf941:httpd/CHANGELOG
 f:01b882c49d81d4f9a48106834fe88e54:httpd/httpd
@@ -179,5 +179,5 @@ f:ecc63553466d7d6321650763d35c9cfe:minecraft-server/fetch-source.py
 f:cd19656cc7c340287eddf072d0dfd13f:minecraft-server/minecraft.sh
 f:65f125e2688db6b4a15f41a771fe79ca:minecraft-server/spkgbuild
 f:a77cdf295263d744302164efb18a164a:minecraft-server/override
-f:7f9fcf4e3c539e331712583189aa676d:nginx/CHANGELOG
-f:2c9d92ee1cf2dd86bdf6ed49077d060f:nginx/spkgbuild
+f:22d0963130e085e2ef72d68327a18276:nginx/CHANGELOG
+f:141a42785d37be96b872576c4930da5b:nginx/spkgbuild

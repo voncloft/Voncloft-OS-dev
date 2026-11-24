@@ -2,7 +2,7 @@
 # description : A stream oriented C library for parsing XML
 
 name=expat
-version=2.10.0
+version=2.11.0
 release=3
 source="https://sourceforge.net/projects/${name}/files/${name}/$version/${name}-$version.tar.xz"
 

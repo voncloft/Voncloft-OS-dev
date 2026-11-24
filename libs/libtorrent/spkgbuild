@@ -2,7 +2,7 @@
 # depends	: boost python cmake
 
 name=libtorrent
-version=2.1.2
+version=2.1.3
 release=1
 source="https://github.com/arvidn/${name}/archive/refs/tags/v$version.tar.gz"
 
