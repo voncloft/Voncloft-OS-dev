@@ -1171,7 +1171,7 @@ f:e1df0620d14c930af093c750bad03b05:kasts/live-playback-status.patch
 f:9819548489b035a1ecea767563418bfe:kasts/fix-subscription-removal.patch
 f:96cfaa0590fc77022ef65b67d06c0dfc:kasts/fix-full-push-durationdb.patch
 f:2b00278a3de821ef022cc320b8a5ef3d:kasts/automatic-library-sync.patch
-f:d1d76bc27357e02d238da1af9924042a:kasts/spkgbuild
+f:04b02850bddcc6aaaf6951d312c9e7ef:kasts/spkgbuild
 f:1b7734ae179bd0b8cc4f5f068cda2e58:kasts/shared-queue-sync.patch
 f:95cde6e61e55c56506ab849ce0f3164f:kweathercore/CHANGELOG
 f:bbc36fddbfbf86600f80828835532668:kweathercore/spkgbuild

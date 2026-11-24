@@ -31,5 +31,4 @@ build() {
     plasma-package-installer
     cd build
     make DESTDIR="$PKG" install
-    #fuckxy
 }
