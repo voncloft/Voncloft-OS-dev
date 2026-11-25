@@ -2,7 +2,7 @@
 # depends : python-cbor python-cffi python-click python-cryptography
 
 name=python-pynitrokey
-version=0.14.1
+version=0.15.0
 release=3
 
 _name=${name#python-}

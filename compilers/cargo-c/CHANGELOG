@@ -7,3 +7,13 @@ Release=1
 Synopsis:
 Added Changelog to package
 Upgraded from version 0.10.14 to version 0.10.26
+
+----------------------------------------------------------------
+
+Date: Wed Nov 25 03:47:39 EST 2026
+
+Version=0.10.28
+Release=3
+
+Synopsis:
+Changed from version 0.10.26 to version 0.10.28

@@ -207,7 +207,8 @@ f:21926b318d7ecd15a531ffae0cd7146e:vidtomp3/CHANGELOG
 f:f1739fcafcb78fde77578cc276f1ff06:vidtomp3/vidtomp3
 f:182d294f6367ebed6cc4e144c9695dcb:vidtomp3/spkgbuild
 f:bc0eb9536e58d3d6fe6343eb194ede82:vidtomp3/override
-f:2bf7828368f07554044a6a6dab4d496e:setconf/spkgbuild
+f:dc6b6224358eb0cea491582ebbcb4604:setconf/CHANGELOG
+f:9272504831d975edc357a4db6f623bda:setconf/spkgbuild
 f:c4706731fd2d48fe0fc161790e923298:openapi-generator/.pkgfiles
 f:d72d74c554cb4fa3ebea7ba060025a07:openapi-generator/CHANGELOG
 f:b0d2060c2b9c79d2a3bab2f5f8e39fc8:openapi-generator/spkgbuild
@@ -215,9 +216,9 @@ f:da1b5902f72a6c090245f59a03f70cc0:ncdu/.pkgfiles
 f:002e9e75bec3c438a483188239234c4d:ncdu/CHANGELOG
 f:4976ceaca0aba4697c0460f2955d0a95:ncdu/spkgbuild
 f:955fe04a643d009e711c09e943166854:chatgpt-desktop/.pkgfiles
-f:ef520e13e5c57df28f9b9aa3791d495a:chatgpt-desktop/CHANGELOG
+f:2cf340d526079d2fcb95c728c3a01dab:chatgpt-desktop/CHANGELOG
 f:ecc63553466d7d6321650763d35c9cfe:chatgpt-desktop/fetch-source.py
-f:afbedf38dbfdbf982cdded2756e3ceb0:chatgpt-desktop/spkgbuild
+f:cfc43adc871b620d1f9ae0b7ebc46629:chatgpt-desktop/spkgbuild
 f:564b761682562cfcdf0e3c62c8d2b870:chatgpt-desktop/override
 f:64040a51058c820808dc5643c166221a:qemu/.pkgfiles
 f:c513ed180d302664da7897bf6ce0cf0a:qemu/CHANGELOG

@@ -3,7 +3,7 @@
 # note : SysVinit build supports per-user Flatpak installs; privileged system helper disabled.
 
 name=flatpak
-version=1.18.4
+version=1.18.6
 release=1
 backup="etc/profile.d/flatpak.csh etc/profile.d/flatpak.sh"
 

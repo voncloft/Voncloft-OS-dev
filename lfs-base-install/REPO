@@ -281,8 +281,8 @@ f:1b5599b8522571ed5c331cbd4b316be4:sed/spkgbuild
 f:2218eb3541c6a8c1241db5707f7760cd:bison/.pkgfiles
 f:347a8b013464979f21063b02edd4ccfb:bison/CHANGELOG
 f:861adcc637b52e9fa0aa9dac2e935be2:bison/spkgbuild
-f:af749e965c9a1ab3b7b8b23ab27bd127:linux-firmware/CHANGELOG
-f:ed38c5e6544bcf1bdbf37eb503fd6796:linux-firmware/spkgbuild
+f:a33001717777a2926ba7b32184442d98:linux-firmware/CHANGELOG
+f:9aa7cec94c1bb58a9b26247c6b470a21:linux-firmware/spkgbuild
 f:fe0eeb0ba704ce1957c40afc6ee7a351:linux-firmware/override
 f:49d4baf3ac49ec0acc58b22ec983401c:bzip2/.pkgfiles
 f:2272e10938ebe8acb6888e7956590842:bzip2/spkgbuild
@@ -299,8 +299,8 @@ f:f38e0ee4cf4bf21f71391c3a2f4b19ab:grep/.pkgfiles
 f:f16eda02021ba4abc1125db5ceb32804:grep/CHANGELOG
 f:28acf778d3f8f79a92cebaa026355b44:grep/spkgbuild
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:459aaafd71a7e0d7a03c718d4f35c495:flex/CHANGELOG
-f:a6dced10eb466ec8dbc555c4ea8e337f:flex/spkgbuild
+f:452c9a08c8c56597982b6bda531870c2:flex/CHANGELOG
+f:ee42ca30145f38079182b9fd848d7301:flex/spkgbuild
 f:7db40f3d28095d80d2ff349e9a7e94c8:python-wheel/.pkgfiles
 f:f7a299fd4fb7730bedb88cab80474a43:python-wheel/CHANGELOG
 f:4ecf94fde225a9ec2c615d040b270de9:python-wheel/spkgbuild

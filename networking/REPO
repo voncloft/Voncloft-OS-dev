@@ -115,8 +115,8 @@ f:ef06c0c62ef268cb974e7aa5a2adea04:openvpn/post-upgrade.sh
 f:71e68322f2e6f539394eb1df8ba21e59:openvpn/CHANGELOG
 f:d18dce76462cdf0fb6d05986ec9a9985:openvpn/post-install.sh
 f:956174ddff79011a9241f768d18d4c9c:openvpn/spkgbuild
-f:2d0906d8d6f272e9dff444c96cc5a644:filezilla/CHANGELOG
-f:4ec68bcfa36cbc9dfc247217de26ed85:filezilla/spkgbuild
+f:d4aa1a84b5ab6d14ee1915d33732d12a:filezilla/CHANGELOG
+f:51469b482c2c3dae13bd42750e7ab0c8:filezilla/spkgbuild
 f:adaf50db315d001ee2747db32e66a77c:filezilla/override
 f:6eb2e845fc4cc15794076e14226b25d2:filezilla/missing-list-include.patch
 f:0d9abc4e18522e7da53d956e31c4d1c6:libnftnl/CHANGELOG

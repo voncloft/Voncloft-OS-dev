@@ -2,7 +2,7 @@
 # depends : python
 
 name=setconf
-version=0.7.7
+version=0.7.8
 release=2
 options="!checksum"
 source="https://setconf.roboticoverlords.org/${name}-${version}.tar.xz"

@@ -427,8 +427,8 @@ f:920b24ef7c382b1a0a8ad938f34a8738:libxfont/spkgbuild
 f:4d2881b9400c8911327930205d31cf25:libxfont/override
 f:b3d05bee8b11ed6f417529a82c212213:libpcap/.pkgfiles
 f:3ee31165d569dbcf29057a9ca581878d:libpcap/libpcap-1.9.1-enable_bluetooth-1.patch
-f:02d23510a91e3a04aa4bdd81e545d2eb:libpcap/CHANGELOG
-f:4895b22319348adb5be78fa1e50bfb1c:libpcap/spkgbuild
+f:2ad185f54fd8e4e59d8360b4804811ef:libpcap/CHANGELOG
+f:53bf91b2e0571e5be1d4b5c51bdde62e:libpcap/spkgbuild
 f:fb65e56448dff03ef3f6b6d241d7b003:libxxf86dga/CHANGELOG
 f:35112cc77827ffb3f34cc00fd640c288:libxxf86dga/spkgbuild
 f:dc3da7206dbdb95610e7d38be34c90a6:libxxf86dga/override
@@ -819,8 +819,8 @@ f:f8c8cb7af983e5527fbac8387303e028:libsndfile/spkgbuild
 f:e3c037aa2629b035c9446d18b8dae4dd:libsndfile/override
 f:cb6205cabfaaf011f071671a53587ef3:libfontenc/CHANGELOG
 f:abebd135d600139d0728862fcc598e99:libfontenc/spkgbuild
-f:637c36c0e0ad4d3a430cf365b190fad7:xapp/CHANGELOG
-f:b5f938a2ff40333f5c7e0a644b92b877:xapp/spkgbuild
+f:64060993a62c83308eebf511f5351f48:xapp/CHANGELOG
+f:28d1e0991bcb2424004cd2b21edd4d5a:xapp/spkgbuild
 f:ab8ca77860fb35bff9c409b0b1a24e89:libudfread/.pkgfiles
 f:6be33bc2f241870f39e0382e316ae4b8:libudfread/CHANGELOG
 f:61764330cc6547c33b17d38527e7b62b:libudfread/spkgbuild
@@ -938,8 +938,8 @@ f:97935a4fc180c3831f7d02c9ac52f819:libavif/.pkgfiles
 f:a4e624133ed5cc7b4b78a579ddcf436a:libavif/CHANGELOG
 f:f2e436a87eac6a138adf2a40d2876bb6:libavif/spkgbuild
 f:de9342a994d7b736baee6ee74677cacd:libavif/override
-f:9e8073cd18e6ba7993d9f3d305b5476e:hdf5/CHANGELOG
-f:d32244b7ccad774c8ad6f5786a605a3b:hdf5/spkgbuild
+f:a2d90e05b54b1a415a3beb782e665513:hdf5/CHANGELOG
+f:1ba44f53ba59bdb1493cd6cde677bd63:hdf5/spkgbuild
 f:a815623b10cf06cf766ab8304131818e:libressl/CHANGELOG
 f:aa178e316f5fa2ea7dbf2254e224bdc9:libressl/spkgbuild
 f:2003485810c47572b014c99af2a0dac2:netcdf/spkgbuild
@@ -1290,8 +1290,8 @@ f:d75486d8417dedb04f0497f9779584d0:libndp/override
 f:3cbf819c914deadaa45ad05ae97eadba:leptonica/.pkgfiles
 f:01ea695ca9504e9c406ee4c6e7c46757:leptonica/spkgbuild
 f:b43394e7d5580cac99ac73485b969626:flatpak/.pkgfiles
-f:c2ef7a30dd9ba6fb1d35d3ac17fdeda2:flatpak/CHANGELOG
-f:220482fd888a1ce6f88b1b5b91efe5dd:flatpak/spkgbuild
+f:0e64c8412369f5b2778fbccd7000702b:flatpak/CHANGELOG
+f:e6928060eddcf69afd94bb8910368f31:flatpak/spkgbuild
 f:3a13e0e447390ee67298b221fa21eb8b:flatpak/override
 f:0006c70321a47f637fdc4c9176bb4caf:libmng/.pkgfiles
 f:19b3e00d381b6ffbde04c972044d1651:libmng/spkgbuild

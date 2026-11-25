@@ -2,7 +2,7 @@
 # depends : boost eigen exiv2 extra-cmake-modules ffmpeg fftw fontconfig freetype2 fribidi giflib harfbuzz immer kcolorscheme kcompletion kconfig kcoreaddons kcrash kde-deps-installer kguiaddons ki18n kitemviews kwidgetsaddons lager lcms2 libheif libjpeg-turbo libjxl libkdcraw libmypaint libpng libtiff libunibreak libwebp libxi opencolorio openexr openjpeg2 poppler qt6 sdl2 xsimd zlib zug
 
 name=krita
-version=6.0.4.1
+version=6.0.5
 release=2
 options="!checksum"
 source="${name}-${version}.tar.xz::https://download.kde.org/stable/${name}/${version}/${name}-${version}.tar.xz"

@@ -751,7 +751,8 @@ f:06b43eeaa6fe529d2f36524c427783ea:kde-dev-scripts/CHANGELOG
 f:eea3d1885a20cf086405cf5fe082ca66:kde-dev-scripts/spkgbuild
 f:1fec064b95cb43a90340384ea5f949d3:kbreakout/CHANGELOG
 f:12aee84277e15e36a26efcefc56f731e:kbreakout/spkgbuild
-f:62ef1f51bce2d2ab5ce487d294a8e514:krita/spkgbuild
+f:ccf3af63fb618cc203eca7829e5fdc67:krita/CHANGELOG
+f:d0fd353a053577ded271cbf70ef57090:krita/spkgbuild
 f:9506eb590421ce676e99b9d3750fe035:kcolorpicker/.pkgfiles
 f:349f3b3c5ad3212bf0b440db86cedfb8:kcolorpicker/spkgbuild
 f:2e38f161a560033b16ce061f1bd6fec9:konversation/CHANGELOG

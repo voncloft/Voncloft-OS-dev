@@ -65,8 +65,8 @@ f:3d333df77302ed89e06a4a8539943b7d:gcc/c89
 f:3a1292193e3657288db8896780f365a3:gcc/CHANGELOG
 f:228abb98261752cfa509d2dd71fc87fc:gcc/spkgbuild
 f:f220f0337914010336a396c277f55a31:cargo-c/.pkgfiles
-f:97c1b8c9244b450831ff54b14e556bdf:cargo-c/CHANGELOG
-f:763ea667abc0e1876f39a92bb5e39083:cargo-c/spkgbuild
+f:1274d746f7eb335f68161177d1a241c4:cargo-c/CHANGELOG
+f:ffb54bd5c669258c21419a1e0fc31218:cargo-c/spkgbuild
 f:826e05f0dbb1b7e733d1f6b6e867b853:cargo-c/override
 f:c3265ca11bed27e9fe4c509729dc2827:meson/.pkgfiles
 f:7893637470ba6c7ac8439cf8b479700c:meson/CHANGELOG
