@@ -1,0 +1,2 @@
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.2.0.git20261127080801.ga5096ad10ea8051aeb2a61521498cdf836c06080\| kde-apps/smarthome/spkgbuild # update-repo-version 0.2.0.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76 0.2.0.git20261127080801.ga5096ad10ea8051aeb2a61521498cdf836c06080
+bash /usr/libexec/update-repo/changelog kde-apps/smarthome/spkgbuild Changed\ from\ version\ 0.2.0.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76\ to\ version\ 0.2.0.git20261127080801.ga5096ad10ea8051aeb2a61521498cdf836c06080

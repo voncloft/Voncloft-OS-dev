@@ -1,13 +1,14 @@
 # description : Govee lighting and BroadLink infrared controller with saved remotes, schedules, presence detection, and audio-reactive lighting
-# depends : inetutils kde-deps-installer pulseaudio python-broadlink qt6
+# depends : inetutils kde-deps-installer pulseaudio openssl python-broadlink qt6
 
 name=smarthome
-version=0.1.3.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76
-release=2
+version=0.2.0.git20261127080801.ga5096ad10ea8051aeb2a61521498cdf836c06080
+release=1
 _commit=${version##*.g}
 _name=Smarthome
 source="$name-$_commit.tar.gz::https://github.com/voncloft/${_name}/archive/$_commit.tar.gz
-        unified-diagnostics.patch"
+        unified-diagnostics.patch
+        phone-sync.patch"
 
 build() {
     cd "Smarthome-$_commit"
@@ -16,6 +17,10 @@ build() {
     # Skip the compatibility patch once the unified view is in the GitHub source.
     if grep -q 'createDiagnosticsWidget' infraredpanel.h; then
         patch -Np1 -i "$SRC/unified-diagnostics.patch"
+    fi
+    # Local companion-sync patch until the updated source is pushed upstream.
+    if ! grep -q 'class PhoneSync' phonesync.h 2>/dev/null; then
+        patch -Np1 -i "$SRC/phone-sync.patch"
     fi
     plasma-package-installer -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_BINDIR=bin
     DESTDIR="$PKG" cmake --install build

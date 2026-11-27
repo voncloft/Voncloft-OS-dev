@@ -70,3 +70,27 @@ Release=2
 
 Synopsis:
 Upgraded from version 0.1.3.git20261029055756.g825ff0d1ca2d86194f4b326fdd8e7fde680c494c to version 0.1.3.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76
+
+
+Date: 2026-11-27
+
+smarthome
+Version=0.2.0.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76
+Release=1
+
+Synopsis:
+Add private HTTPS Android pairing, two-way routine synchronization with conflict
+preservation, a single schedule owner, and automatic cross-device bulb-state
+refresh. Keep desktop controls, presence, PulseAudio and infrared functionality.
+The local patch makes this package buildable before the source repo is pushed.
+Add the OpenSSL runtime requirement for the private sync certificate.
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 03:08:33 AM EST 2026
+
+Version=0.2.0.git20261127080801.ga5096ad10ea8051aeb2a61521498cdf836c06080
+Release=1
+
+Synopsis:
+Changed from version 0.2.0.git20261029061343.ge5b6d03616d9b30743cc397fbc9dc459afc72e76 to version 0.2.0.git20261127080801.ga5096ad10ea8051aeb2a61521498cdf836c06080

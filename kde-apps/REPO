@@ -575,12 +575,13 @@ f:bcbff4e695965438d93f83e4fc942c60:kshisen/CHANGELOG
 f:a5ce789e65588ef971363bfb4539b2e3:kshisen/spkgbuild
 f:7198491f5a70499c1f675b297ed11354:optiimage/spkgbuild
 f:e8befe5d142b44fe0961930d179302a6:optiimage/override
-f:be4cc4b3a5cb15f6422a94c3cdcdd1f6:smarthome/.pkgfiles
+f:151baa469b9fcc639c7257cc0baa5659:smarthome/.pkgfiles
 f:ae348dbe86cb6f16064c771cfdbee6cb:smarthome/unified-diagnostics.patch
-f:a6305e21f1d6e02a0fd12df0dd9f98ec:smarthome/CHANGELOG
-f:eebf6f75b895e41993bf28cbaa0f4671:smarthome/spkgbuild
+f:ba05fe203fc36897367b82e33af96c64:smarthome/phone-sync.patch
+f:3833df94a4c03928f6b3ce1f206b072a:smarthome/CHANGELOG
+f:ebda17e53034c97256091cda695c0335:smarthome/spkgbuild
 f:97f6880e943c206fcf87a9d567103d49:smarthome/override
-f:0717f771e977a5da7f018670e536e29e:smarthome/.checksums
+f:737d45eecde3a1040aa6c1bb12351692:smarthome/.checksums
 f:5fd0108d95f580bdaa3ee2e113dc7d49:calindori/CHANGELOG
 f:05b501c79cbec57c6f42ac69669a0a84:calindori/spkgbuild
 f:09413898d894c1080c2d9f9680b03bec:krecorder/CHANGELOG
