@@ -378,8 +378,8 @@ f:b4a7dd4ca51e36ca8a1c6dca9be5b7aa:libx11/CHANGELOG
 f:ea89cd732696793293dcb327187e6ed5:libx11/spkgbuild
 f:da5757663d3e7a92cb5fa953bc71b809:libx11/override
 f:b85754471ef9b23c59c65eb752b05268:tesseract/.pkgfiles
-f:ef4446a6ea31c5d76f4b3a32839567bd:tesseract/CHANGELOG
-f:91f4f69460decbfe554aa5fd75c893d6:tesseract/spkgbuild
+f:31cccbb9805e4e09796e4c5be8482036:tesseract/CHANGELOG
+f:ef38b9608ddfa112d273c44d124316ea:tesseract/spkgbuild
 f:7504d4116624f57cf07351931f17874f:tesseract/override
 f:91fcf99fbe327b32a871b947b2135d2d:libpgm/CHANGELOG
 f:b9e34d9ac441b86f4b52d74dff6e3e3a:libpgm/spkgbuild

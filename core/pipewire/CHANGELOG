@@ -797,3 +797,13 @@ Release=1
 
 Synopsis:
 Upgraded from version 1.6.10 to version 1.6.11
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 06:55:38 AM EST 2026
+
+Version=1.6.12
+Release=3
+
+Synopsis:
+Changed from version 1.6.11 to version 1.6.12

@@ -2,7 +2,7 @@
 # depends	: alsa-lib avahi bluez dbus elogind fdk-aac ffmpeg glib gst-plugins-base gstreamer libcanberra libdrm libsndfile libusb libx11 libxfixes meson ncurses ninja openssl opus pkgconf pulseaudio readline sbc udev
 
 name=pipewire
-version=1.6.11
+version=1.6.12
 release=3
 source="https://github.com/PipeWire/${name}/archive/$version/$name-$version.tar.gz"
 backup="etc/security/limits.d/25-pw-rlimits.conf"

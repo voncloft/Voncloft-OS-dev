@@ -2,7 +2,7 @@
 # depends : inetutils kde-deps-installer pulseaudio openssl python-broadlink qt6
 
 name=smarthome
-version=0.2.0.git20261127080801.ga5096ad10ea8051aeb2a61521498cdf836c06080
+version=0.2.0.git20261127084138.gcb070b6cc6a5de9f7e4b8575b2264ce900709332
 release=1
 _commit=${version##*.g}
 _name=Smarthome

@@ -1,7 +1,7 @@
 # description : Just-in-time compiler and drop-in replacement for Lua 5.1.
 
 name=luajit
-version=20261119202111.g96f7b297326e9fd454b7186c6858b2773f94a0dc
+version=20261126101019.g3bfb8fa4ab970b36d42d108ead04e92341c49998
 release=2
 _name=LuaJIT
 _commit=${version##*.g}

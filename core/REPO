@@ -550,8 +550,8 @@ f:50b643d18545869686510f2484927ac1:yaml-cpp/spkgbuild
 f:7ac01c464a20b819f83658dc47184430:vte3/fix-W_EXITCODE.patch
 f:4ddfd8a77bd83c73c2ffc1fe133f540c:vte3/CHANGELOG
 f:0d8184845cc70f9bf2524f7e3f6ab38d:vte3/spkgbuild
-f:0674feb417aab593ddf33eb07589ce62:opera/CHANGELOG
-f:e4b2d9855e3df28b985c09606a8e0c57:opera/spkgbuild
+f:35fd9dcb22184b5a39719c07fe96cf19:opera/CHANGELOG
+f:313942a5ec198d6506a765c3b7fccc3a:opera/spkgbuild
 f:7941ba1dbf8fbe35c205ec3ce1c24a67:opera/override
 f:3fdde7725b77b708966b6b9e9ad713bb:midori/spkgbuild
 f:ad898472f7538ffc3ff511c055fee535:jwm/jwm.desktop
@@ -696,8 +696,8 @@ f:ada280965521b01a912d9387af7845fb:speex/spkgbuild
 f:12fbfb6a05779a38de6bf5ccc33e00f5:emacs/CHANGELOG
 f:b1a7ae566e577a065d915a9d6f892fbd:emacs/spkgbuild
 f:3c234c60546c19d475710f0dfad22d8b:pipewire/.pkgfiles
-f:117bdada12e85fe3e8d3455e87f17f8c:pipewire/CHANGELOG
-f:7ff17b4c17ae3cbffacfc32c5bd157e9:pipewire/spkgbuild
+f:1ffcd2f643cf2737c401a11c37fb9e77:pipewire/CHANGELOG
+f:95b0532feaad05eeccd0f133115ad4ef:pipewire/spkgbuild
 f:05ae364f6c418725e62daa5c4adf5718:giflib/.pkgfiles
 f:b01d70fc6bf9f3c3ffe36b25f2abd84e:giflib/CHANGELOG
 f:51cd8da99cfac2fa165a3e745e861bb5:giflib/spkgbuild
@@ -1088,8 +1088,8 @@ f:7091f9a6d97006299a1f27a665b638b6:cowsay/cowsay.patch
 f:9934f245a04686416a496a42340c93ee:terminator/CHANGELOG
 f:c8377d21bc349c5c08909b45874eb6ab:terminator/spkgbuild
 f:c34e67d0e10d234583e06a8b73d77430:terminator/override
-f:3d60f0ab64d8f7cd35c5694969ebd80f:weechat/CHANGELOG
-f:8a021662a30ebf8723411d9b68e66d75:weechat/spkgbuild
+f:55251232f0ef65d14129c1b872b85b1a:weechat/CHANGELOG
+f:c3c29b876797819b8bf98e43324cd4c7:weechat/spkgbuild
 f:facdd75441705344c13b69d57749054a:transmission-gtk/CHANGELOG
 f:b021e2d314659b667a5dcf1bd1692da5:transmission-gtk/spkgbuild
 f:e332ca2a618a00eb159e1dfb38bc271e:transmission-gtk/override
@@ -1666,8 +1666,8 @@ f:9d166198852232934f8001d50552afea:yelp-tools/spkgbuild
 f:eca42e3356b6dd0c13ceaf010b4664c9:cdparanoia/spkgbuild
 f:ebc40759b3fdc4fb15ba39ce5062e715:cdparanoia/override
 f:b7a1d1b0d928b3721270c0a44cb67a79:flex/.pkgfiles
-f:d9424e82d7391d4a5d0885d7bd176d1f:flex/CHANGELOG
-f:6503110234ab034198d018b61203f075:flex/spkgbuild
+f:383dd4eec4924cd7021353da579c0707:flex/CHANGELOG
+f:47e9cc846b0059bc8659c68a63e00f86:flex/spkgbuild
 f:f3e0eb6014974090dd2593151485e75c:ntfs-3g/readme
 f:cec64449ba3c6fb8ec03ba068dcd2e5d:ntfs-3g/CHANGELOG
 f:b45f7d933eaefbfb55a6a4d345cc2262:ntfs-3g/ntfs-3g-2016.2.22-security_fix-1.patch

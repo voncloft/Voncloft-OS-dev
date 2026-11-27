@@ -578,8 +578,8 @@ f:e8befe5d142b44fe0961930d179302a6:optiimage/override
 f:151baa469b9fcc639c7257cc0baa5659:smarthome/.pkgfiles
 f:ae348dbe86cb6f16064c771cfdbee6cb:smarthome/unified-diagnostics.patch
 f:ba05fe203fc36897367b82e33af96c64:smarthome/phone-sync.patch
-f:3833df94a4c03928f6b3ce1f206b072a:smarthome/CHANGELOG
-f:ebda17e53034c97256091cda695c0335:smarthome/spkgbuild
+f:300db8b04a3676d9d5e7b919c6720d23:smarthome/CHANGELOG
+f:df57739997b19931ef78e79692d5c3d4:smarthome/spkgbuild
 f:97f6880e943c206fcf87a9d567103d49:smarthome/override
 f:737d45eecde3a1040aa6c1bb12351692:smarthome/.checksums
 f:5fd0108d95f580bdaa3ee2e113dc7d49:calindori/CHANGELOG

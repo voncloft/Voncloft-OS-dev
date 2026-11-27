@@ -210,8 +210,8 @@ f:bc0eb9536e58d3d6fe6343eb194ede82:vidtomp3/override
 f:dc6b6224358eb0cea491582ebbcb4604:setconf/CHANGELOG
 f:9272504831d975edc357a4db6f623bda:setconf/spkgbuild
 f:c4706731fd2d48fe0fc161790e923298:openapi-generator/.pkgfiles
-f:d72d74c554cb4fa3ebea7ba060025a07:openapi-generator/CHANGELOG
-f:b0d2060c2b9c79d2a3bab2f5f8e39fc8:openapi-generator/spkgbuild
+f:5d444c85a65750555cbc59caf227ce16:openapi-generator/CHANGELOG
+f:fe1526a69ca402ac5e9eda38134df124:openapi-generator/spkgbuild
 f:da1b5902f72a6c090245f59a03f70cc0:ncdu/.pkgfiles
 f:002e9e75bec3c438a483188239234c4d:ncdu/CHANGELOG
 f:4976ceaca0aba4697c0460f2955d0a95:ncdu/spkgbuild

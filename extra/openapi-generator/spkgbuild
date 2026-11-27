@@ -3,7 +3,7 @@
 # note : Generator upgrades do not rebuild the installed Qt libraries.
 
 name=openapi-generator
-version=7.27.0
+version=7.28.0
 release=2
 source="https://repo.maven.apache.org/maven2/org/openapitools/openapi-generator-cli/$version/openapi-generator-cli-$version.jar"
 options="!checksum"
