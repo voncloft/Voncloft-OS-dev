@@ -3,7 +3,7 @@
 
 name=kde-updater
 version=1.0.0
-release=1
+release=2
 source="$name"
 
 build() {

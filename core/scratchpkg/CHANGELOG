@@ -96,3 +96,25 @@ Release=6
 
 Synopsis:
 Upgraded from version 20211214 to version 20220110
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 2026 EST
+
+Version=20230109
+Release=19
+
+Synopsis:
+Prefix outdated package names with the selected repository in brackets.
+Preserve version details, colors, masked flags, and newer-installed flags.
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 2026 EST
+
+Version=20230109
+Release=20
+
+Synopsis:
+Sort outdated output alphabetically by repository, then by package name.
+Keep colored output, update flags, and exit status unchanged.

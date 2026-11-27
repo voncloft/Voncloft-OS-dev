@@ -1,0 +1,53 @@
+--- a/scratch
++++ b/scratch
+@@ -911,10 +911,10 @@
+ 	return "$error"
+ }
+ 
+-scratch_outdate() {
++outdate_report() {
+ 	for pkg in $(allinstalled); do
+-		if [ "$(getportpath $pkg)" ]; then
+-			. $(getportpath $pkg)/$BUILD_SCRIPT
++		if outdate_port=$(getportpath "$pkg"); then
++			. "$outdate_port/$BUILD_SCRIPT"
+ 			if [ -z "$name" ] || [ -z "$version" ]; then
+ 				continue
+ 			fi
+@@ -924,10 +924,12 @@
+ 			if [[ -f "$MASK_FILE" ]] && [[ $(grep -Ev '^(#|$| )' $MASK_FILE | grep -Fx "$pkg" ) ]]; then
+ 				ITSLOCK="[masked]"
+ 			fi
++			outdate_repo=${outdate_port%/*}
++			outdate_repo=${outdate_repo##*/}
+ 			#outdatemsg="$name $iversion-$irelease => $version-$release $ITSLOCK"
+ 			#newerinstmsg="$name $iversion-$irelease => $version-$release [newer installed] $ITSLOCK"
+-			outdatemsg="$name ${RED}$iversion-$irelease${CRESET} => ${GREEN}$version-$release${CRESET} ${CYAN}$ITSLOCK${CRESET}"
+-                        newerinstmsg="$name ${RED}$iversion-$irelease${CRESET} => ${GREEN}$version-$release${CRESET} ${YELLOW}[newer installed]${CRESET} ${CYAN}$ITSLOCK${CRESET}"
++			outdatemsg="${PURPLE}[$outdate_repo]${CRESET} $name ${RED}$iversion-$irelease${CRESET} => ${GREEN}$version-$release${CRESET} ${CYAN}$ITSLOCK${CRESET}"
++                        newerinstmsg="${PURPLE}[$outdate_repo]${CRESET} $name ${RED}$iversion-$irelease${CRESET} => ${GREEN}$version-$release${CRESET} ${YELLOW}[newer installed]${CRESET} ${CYAN}$ITSLOCK${CRESET}"
+ 
+ 			if [ "$version" !=  "$iversion" ]; then
+ 				vercomp $version $iversion
+@@ -948,12 +950,20 @@
+ 					OUTDATE=yes
+ 				fi
+ 			fi
+-			unset ITSLOCK name version
++			unset ITSLOCK name version outdate_port outdate_repo
+ 		fi
+ 	done
+ 	
+ 	[ ! "$OUTDATE" ] && msg "All packages are up to date."
+ }
++scratch_outdate() {
++	outdate_output=$(outdate_report)
++	outdate_status=$?
++	# Exclude the closing bracket so kde sorts before kde-apps, with or without colors.
++	printf '%s\n' "$outdate_output" | LC_ALL=C sort -t ']' -k1,1 -k2,2 || return $?
++	return "$outdate_status"
++}
++
+ 
+ scratch_search() {
+ 	needarg $@

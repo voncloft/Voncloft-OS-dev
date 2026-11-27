@@ -78,10 +78,24 @@ outside-package 1-1 => 2-1
         ['upgrade', '-y', *repo_options, '--exclude=masked-app,gcc', 'kate', 'kwin', 'kio'],
     ], calls
     checks.append('ALL combines only the three KDE folders into one ordered Scratch transaction')
+    prefixed = ''.join(
+        f"[{('plasma' if line.startswith('kwin ') else 'kf' if line.startswith('kio ') else 'kde-apps')}] {line}\n"
+        for line in output.splitlines()
+    )
+    result, calls = run('4\n', data=prefixed)
+    assert result.returncode == 0, result.stderr
+    assert calls == [
+        ['outdate', '--nocolor', *repo_options],
+        ['upgrade', '-y', *repo_options, '--exclude=masked-app,gcc', 'kate', 'kwin', 'kio'],
+    ], calls
+    checks.append('repository prefixes preserve the upgrade targets and mask/newer filters')
+    result, calls = run(args=('--list',), data=prefixed)
+    assert result.returncode == 0 and len(calls) == 1 and 'kate  1-1 => 2-1' in result.stdout
+    checks.append('prefixed list mode never upgrades')
     result, calls = run(args=('--list',))
     assert result.returncode == 0 and len(calls) == 1 and 'kate  1-1 => 2-1' in result.stdout
     checks.append('list mode never upgrades')
-    for data, status in [('All packages are up to date.', 0), ('masked-app 1-1 => 2-1 [masked]', 1)]:
+    for data, status in [('All packages are up to date.', 0), ('masked-app 1-1 => 2-1 [masked]', 1), ('[kde-apps] masked-app 1-1 => 2-1 [masked]', 1)]:
         result, calls = run(data=data, status=status)
         assert result.returncode == 0 and len(calls) == 1 and 'No eligible upgrades' in result.stdout
     checks.append('empty and fully masked selections do nothing')

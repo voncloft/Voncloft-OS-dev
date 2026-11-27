@@ -17,3 +17,13 @@ Release=1
 
 Synopsis:
 Changed from version 3.7.6 to version 3.7.7
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 2026 EST
+
+Version=3.7.7
+Release=2
+
+Synopsis:
+Corrected FUSE and OpenSSH dependency names and declared Meson, Ninja, and pkgconf build dependencies.

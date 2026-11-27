@@ -4,7 +4,7 @@
 # description : Background integration service for KDE Telepathy messaging and presence handling
 
 name=ktp-kded-module
-version=25.12.3
+version=26.04.3
 release=1
 
 source="https://download.kde.org/Attic/release-service/$version/src/${name}-$version.tar.xz"

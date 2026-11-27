@@ -4,7 +4,7 @@
 # description : Utility for formatting floppy disks and checking them for errors
 
 name=kfloppy
-version=25.12.3
+version=26.04.3
 release=1
 
 source="https://download.kde.org/Attic/release-service/$version/src/${name}-$version.tar.xz"

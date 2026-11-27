@@ -2288,8 +2288,8 @@ f:87f321b2294ecbb80ebab2e8f2b865eb:python-pytest-checkdocs/spkgbuild
 f:24b13fbaebadefcd2a8729202494cec4:python-dogpile.cache/CHANGELOG
 f:c599d71125a31b5fc11b73a32931e529:python-dogpile.cache/spkgbuild
 f:e5204b36044a7e5db2935a0e1fbc6eaa:python-dogpile.cache/override
-f:2a089447515857af14ce200887f8832c:python-httpx/CHANGELOG
-f:e8288ad5c10151911cc9cbc75081caec:python-httpx/spkgbuild
+f:54ab977e3f21e468de2087cf69809207:python-httpx/CHANGELOG
+f:f295ea51290570a2b3ccd555a0b0486d:python-httpx/spkgbuild
 f:b9e86d2d9c941e7fa51b24f7ed80a3ad:python-wstools/CHANGELOG
 f:424edb2bc65ed4b45dd2c6787576c89e:python-wstools/spkgbuild
 f:ff2703286d4fb673cc15366ece4e2a56:python-zope-testing/CHANGELOG
@@ -4433,8 +4433,8 @@ f:d1bd3acdbdbbc82c730de80aa94a2708:python-gobject2/spkgbuild
 f:a56c05c50a387686eb051d59f57c9c9d:python-gobject2/override
 f:a1eac7fffbff75f17afe294fb32813be:python-libarchive-c/CHANGELOG
 f:c4f72af556152565bdb1dd1a2dfaadb2:python-libarchive-c/spkgbuild
-f:278ec69375d5344ba9f429510ece479d:python-kaitaistruct/CHANGELOG
-f:ac102d91f4637c03964a640d098568c3:python-kaitaistruct/spkgbuild
+f:20ed5d5d006872b0f36a4497d1c5b2e9:python-kaitaistruct/CHANGELOG
+f:9ce7771b6dc961eff6227d09cd9f689c:python-kaitaistruct/spkgbuild
 f:79533bc6d3d497d06eb9c0e1af134d22:python-oslo-concurrency/CHANGELOG
 f:df588a5ed6c22842bcfd4cc6b344c1bc:python-oslo-concurrency/spkgbuild
 f:8a3a23e7b0850a2fdd4bb693eaf51a1c:python-jmespath/CHANGELOG
@@ -4891,8 +4891,8 @@ f:71e0075c7379d9033f7694b5f8627641:python-pyamf/CHANGELOG
 f:db240e46a9aefcd4cc004a84b52f1217:python-pyamf/spkgbuild
 f:f8e2f2cd4f1729c418628468b8cedcad:python-helper/CHANGELOG
 f:ae77e6041c1e534b8b50efc1316f4dbf:python-helper/spkgbuild
-f:d55c444d39da56f35ff87f0aec8f36a5:python-keystoneauth1/CHANGELOG
-f:e536b631470b5bc7f691937d5a9d3d0c:python-keystoneauth1/spkgbuild
+f:c96f777bc4900ef9d1ea0b8af4cb7b2a:python-keystoneauth1/CHANGELOG
+f:73d9cae90e2444127a3026033fd82e3d:python-keystoneauth1/spkgbuild
 f:32710d487c456aa0b95ffddf8e065c65:python-jaraco/CHANGELOG
 f:6699323a0de22431d8021207e47d368f:python-jaraco/spkgbuild
 f:62b3164882a6dc7fc8b983c8a6f13456:python-jaraco/override

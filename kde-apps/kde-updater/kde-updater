@@ -84,7 +84,12 @@ outdated=$(scratch outdate --nocolor "${repo_options[@]}") || status=$?
 # Scratch returns 1 when updates exist; other failures must not start upgrades.
 (( status <= 1 )) || die "Scratch could not check updates (exit $status)."
 saw_record=0
-while read -r name installed arrow available notes; do
+while IFS= read -r line; do
+    # Accept Scratch output with or without the repository prefix.
+    if [[ $line == \[*\]\ * ]]; then
+        line=${line#*] }
+    fi
+    read -r name installed arrow available notes <<< "$line"
     [[ $arrow == '=>' && -n $installed && -n $available ]] || continue
     saw_record=1
     [[ $name =~ ^[a-zA-Z0-9][a-zA-Z0-9+_.-]*$ ]] || continue

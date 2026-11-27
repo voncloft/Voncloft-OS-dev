@@ -8,3 +8,33 @@ Synopsis:
 Port removed OpenCV C APIs to their C++ equivalents, require the contributed
 ML module, and select the OpenCV 5 CMake configuration for rebuilding.
 
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 03:30:10 AM EST 2026
+
+Version=9.2.0
+Release=3
+
+Synopsis:
+Changed from version 9.1.0 to version 9.2.0
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 03:30:17 AM EST 2026
+
+Version=9.2.0
+Release=3
+
+Synopsis:
+Changed from version 9.1.0 to version 9.2.0
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 03:34:15 AM EST 2026
+
+Version=9.2.0
+Release=3
+
+Synopsis:
+Changed from version 9.1.0 to version 9.2.0

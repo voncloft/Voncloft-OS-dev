@@ -704,8 +704,8 @@ f:1a142889657749714db321f364181483:perl-io-tty/override
 f:b60592423eadbf1985e3317e3feaf741:perl-pod-coverage/CHANGELOG
 f:da9a60df7c89cee355dfdc77a612c556:perl-pod-coverage/spkgbuild
 f:c3bef2b2b032290fe842a839479a5a87:perl-pod-coverage/override
-f:e947596906437a598f2aa1fbcc9878db:perl-business-isbn-data/CHANGELOG
-f:a1170ad52affedaba8c450cb5465aa15:perl-business-isbn-data/spkgbuild
+f:bb71ff7412e144626f6eaa5e19845dd4:perl-business-isbn-data/CHANGELOG
+f:ad085a5f607c96b02e65e3ca90495c07:perl-business-isbn-data/spkgbuild
 f:1611f1e223d28ec76386256ea36156a4:perl-business-isbn-data/override
 f:cf30d3fcb6e88730db18d3aee00ff464:perl-role-tiny/.pkgfiles
 f:a586bca3f605d5aa06aede4de748399a:perl-role-tiny/CHANGELOG

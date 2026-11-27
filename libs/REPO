@@ -746,8 +746,8 @@ f:b468f309261b478434e79bdb64c9ed2a:librsvg/CHANGELOG
 f:e45f933c032e083c25d4465c3b3a82bc:librsvg/spkgbuild
 f:42f25d1826b482166b5a2653cc8aead8:librsvg/override
 f:0bd895d621700adf117c828d6d5848d9:mariadb/spkgbuild
-f:24a3681968ea33f0b1a1cd549bb142b2:libcue/CHANGELOG
-f:c22ac206ecee9d6a4e42e4a1d65fc1c5:libcue/spkgbuild
+f:2d3fb8748afe58a4ba577a457c777625:libcue/CHANGELOG
+f:5cf4193b098e4983f4ab951fed28bf8a:libcue/spkgbuild
 f:affc7c820092dba1118d199a72f71a6d:shapelib/CHANGELOG
 f:f057713d0756fd3d1b13d96e2b838911:shapelib/spkgbuild
 f:5577b567527eb0c29a147b1bb685303d:shapelib/override

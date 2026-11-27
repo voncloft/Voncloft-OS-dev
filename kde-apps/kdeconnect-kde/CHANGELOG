@@ -517,3 +517,13 @@ Release=2
 
 Synopsis:
 Changed from version 26.08.2 to version 26.08.3
+
+----------------------------------------------------------------
+
+Date: Fri Nov 27 2026 EST
+
+Version=26.08.3
+Release=2
+
+Synopsis:
+Added sshfs as a runtime dependency for browsing phone files from Dolphin.

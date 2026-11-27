@@ -4,7 +4,7 @@
 # description : Contact list interface for viewing online status and starting KDE Telepathy conversations
 
 name=ktp-contact-list
-version=25.12.3
+version=26.04.3
 release=1
 
 source="https://download.kde.org/Attic/release-service/$version/src/${name}-$version.tar.xz"

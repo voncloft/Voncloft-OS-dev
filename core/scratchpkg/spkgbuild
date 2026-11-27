@@ -3,7 +3,7 @@
 
 name=scratchpkg
 version=20230109
-release=18
+release=20
 backup="etc/scratchpkg.conf
         etc/scratchpkg.alias
         etc/scratchpkg.repo
@@ -30,6 +30,7 @@ source="$name-$version.tar.gz::$scratchpkg_url/archive/refs/tags/$version.tar.gz
         canonical-hwdb-trigger.patch
         preserve-failed-cleanup.patch
         clean-cache.patch
+        outdate-repository.patch
         cache-cleaning.md
         transaction.py
         transactions.md
@@ -56,6 +57,7 @@ build() {
     patch --fuzz=0 -p1 < "$SRC/canonical-hwdb-trigger.patch"
     patch --fuzz=0 -p1 < "$SRC/preserve-failed-cleanup.patch"
     patch --fuzz=0 -p1 < "$SRC/clean-cache.patch"
+    patch --fuzz=0 -p1 < "$SRC/outdate-repository.patch"
     DESTDIR="$PKG" ./INSTALL.sh
     install -Dm755 "$SRC/ownership.py" "$PKG/usr/lib/scratchpkg/ownership.py"
     install -m755 "$SRC/transaction.py" "$PKG/usr/lib/scratchpkg/transaction.py"

@@ -4,7 +4,7 @@
 # description : Interface for receiving and monitoring file transfers through KDE Telepathy
 
 name=ktp-filetransfer-handler
-version=25.12.3
+version=26.04.3
 release=1
 
 source="https://download.kde.org/Attic/release-service/$version/src/${name}-$version.tar.xz"

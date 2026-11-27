@@ -35,9 +35,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:c8ced4df3d1e2ad000c7cac6794f674f:firefox-bin/CHANGELOG
+f:d7ee271423d7d79e901846bc1f3ede78:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:2b6712ee61f24bfb0c6346c6ed1aac02:firefox-bin/spkgbuild
+f:4298f846265671d1e8bbb6c9050a672d:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -114,9 +114,9 @@ f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-modules/override
 f:501ab7b371ea0ac9bbebc886be9f3027:virtualbox-guest-modules/vboxvideo-upstream.conf
 f:91891835ddaa34a41d7020775b14ede6:iridium/spkgbuild
 f:04aef81e9ba3f11efd4297bac65ef249:iridium/override
-f:324c8a8ac973ba25d8f1cb00325d6e0a:telegram-desktop-bin/CHANGELOG
+f:ac2512ec5212842b5f3b4122b82bea39:telegram-desktop-bin/CHANGELOG
 f:fa93a0c669b5f0cd8b9be4c8eecf5cdd:telegram-desktop-bin/telegram-desktop-bin.desktop
-f:641de7ffef6617155f14403042f254ec:telegram-desktop-bin/spkgbuild
+f:474740c99e3330cd65bd59e26c341042:telegram-desktop-bin/spkgbuild
 f:2a9ba90f79c0467d2e20c12555555345:telegram-desktop-bin/override
 f:fd276e6e7f51042ee7802de8f8ea8310:steam/.pkgfiles
 f:ec7e1b906b3f93bd8a58e964a09dff84:steam/CHANGELOG
@@ -137,8 +137,8 @@ f:f1cbcac961f006f8442e698de30f32bc:webtorrent-desktop-bin/spkgbuild
 f:aa18de49bc5722d70ff79518c951d1ca:webtorrent-desktop-bin/webtorrent-desktop.desktop
 f:245bc9b7b3c504d8962e417a2eb8d56d:thunderbird-bin/.pkgfiles
 f:d37290df93e059605b7c699918494d51:thunderbird-bin/thunderbird.sh
-f:5e08e849977164a51f374cb929dad47c:thunderbird-bin/CHANGELOG
-f:fd06bfd2fb319ca34827a3aadf3a682c:thunderbird-bin/spkgbuild
+f:25a157c78e4af34aa91db1cb7fc2298f:thunderbird-bin/CHANGELOG
+f:0db2001eaf6506957883dd2834a23fee:thunderbird-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:thunderbird-bin/test.sh
 f:f01b732a1fd84881006e7771f28911c1:thunderbird-bin/override
 f:1d10560b4fa80518df3c516a6c0b7156:thunderbird-bin/thunderbird.desktop
