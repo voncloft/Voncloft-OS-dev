@@ -496,8 +496,8 @@ f:3dfbdf3b91b0ec315cc8ffe4b459eeb2:libpipeline/spkgbuild
 f:6ca34f8210ed856a1aeb18d3d23cc520:libspectre/.pkgfiles
 f:81a6c6c2cfa799b0fbb2d933d3bbdc8f:libspectre/CHANGELOG
 f:18eecc4cc02f7a3726ad96ca97d967dc:libspectre/spkgbuild
-f:b4bdefe24b4f5762981cb9ca358df0f5:simdutf/CHANGELOG
-f:0d8e2335ffeecaf6321f602383d05e10:simdutf/spkgbuild
+f:3ae8c6dece31ba974476a80eea83f209:simdutf/CHANGELOG
+f:96fa3b38a0f980165079d2db772c21cf:simdutf/spkgbuild
 f:108cb593931ee01349654b1e802f64f9:simdutf/override
 f:546b98da6946f7c38ea2107f381a7c16:libspnav/spkgbuild
 f:927af33215eff1be7ee372da43e3342f:libspnav/override
@@ -572,8 +572,8 @@ f:2788c686cf1da69e605b9ae9ba2edd1a:eigen/CHANGELOG
 f:4d402ce6ce511717709f1b3d4c3bb5c7:eigen/spkgbuild
 f:ba13f2560160c8bfd38025281c4b577d:libdbusmenu-glib/spkgbuild
 f:6a67a7d3aa1df02f3013ddf95f856fd9:libdbusmenu-glib/override
-f:e8001d0de2ed4839e27119c3446dd50d:glib/CHANGELOG
-f:912aec79a6993090bfdc3c55b678df76:glib/spkgbuild
+f:d22d34ffb67b6491fee71346062e0111:glib/CHANGELOG
+f:120ef06c68dcda6c016e42f2a38323ec:glib/spkgbuild
 f:386f5c3e1bd2afff268c61a34fa65ef8:glib/override
 f:a221652c98575179869f27ae19231dfa:libcanberra/.pkgfiles
 f:7456078fb359cea04a3fc28fca534406:libcanberra/spkgbuild
@@ -961,8 +961,8 @@ f:804c49de0dcb3cb33ea0f71801f4cf93:libaec/override
 f:7ca622e051ac738fc9df8d4039ab651c:nettle/CHANGELOG
 f:572541e06e5b3ac86d1ccafd573f8ebd:nettle/spkgbuild
 f:15625a5c7b2874ac21b4276b7dee75bc:libdbi/spkgbuild
-f:995a0571aec3eef550332bf9ac21e733:libstatgrab/CHANGELOG
-f:a9a32945996a8e7d0f9f03d1a87dfef4:libstatgrab/spkgbuild
+f:f55f94e799b78698835a65934088b1d9:libstatgrab/CHANGELOG
+f:56e82f26277d3e01a864eef31617d686:libstatgrab/spkgbuild
 f:734274271e568b4ccb3350ff951cd2e7:libqaccessibilityclient/.pkgfiles
 f:1be366eb580472f492fb831d4404e6e0:libqaccessibilityclient/spkgbuild
 f:74a57abfaad7d419f6ea8fcc238d3c0c:libtasn1/CHANGELOG
@@ -1104,8 +1104,8 @@ f:da0e79ef8ca25dc6499a74d1b5ff2ee9:freerdp/override
 f:af726e977eed101a30b847d222acd9f6:poppler/.pkgfiles
 f:8877aef84fd4670e61daf8720b8436e3:poppler/CHANGELOG
 f:2618a636d6b3a2c345e9b45e36ccce95:poppler/spkgbuild
-f:29b242b2f00cec630429589991c75ea3:libffi/CHANGELOG
-f:52983dd71aa89ff38698cac9b2667d98:libffi/spkgbuild
+f:995ea1c20092666247ed5590ee3aa583:libffi/CHANGELOG
+f:1883feefaac3f0b138011a3576254c17:libffi/spkgbuild
 f:d4f481733e9ad80b1581b89cfdd168d5:libffi/override
 f:3c7e822fb697b201384d4c562a8096ac:libnotify/.pkgfiles
 f:a64ae8c87f04c1c3fd6818022befa897:libnotify/CHANGELOG

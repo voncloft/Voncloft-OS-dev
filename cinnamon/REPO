@@ -72,8 +72,8 @@ f:fb02bc7803ee4b118d06357500e97809:cinnamon/default-theme.patch
 f:fc083226b9c4a181e4c9ab9dec2c8513:cinnamon/spkgbuild
 f:beba02387a88d189530458afd59301bc:alacarte/CHANGELOG
 f:d7466dfc919846d137d51c5563a5097f:alacarte/spkgbuild
-f:7f44c96c1d5fb1f296f2bd3192602c27:cinnamon-translations/CHANGELOG
-f:1c6b4652f4d64c8f7de80520f496a722:cinnamon-translations/spkgbuild
+f:16dbb4670b3c94feb9bf2b94de7e5d66:cinnamon-translations/CHANGELOG
+f:bf4c9181c1dd899346ae4d6fb16e5a31:cinnamon-translations/spkgbuild
 f:56f4501fc06cbac4be6a17b3a6c83f7c:cjs/CHANGELOG
 f:ed3e9468ef6558a9327bff25dbc9918e:cjs/spkgbuild
 f:680c88b9a9d9364168b5322866743d5d:nautilus/CHANGELOG

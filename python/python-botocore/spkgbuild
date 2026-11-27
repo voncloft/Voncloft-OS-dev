@@ -2,7 +2,7 @@
 # depends : python-dateutil python-jmespath python-docutils python-urllib3
 
 name=python-botocore
-version=1.44.11
+version=1.44.12
 release=1
 
 _name=${name#python-}

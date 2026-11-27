@@ -1164,8 +1164,8 @@ f:473a5218938895558ef90d6f420f36af:boost/CHANGELOG
 f:c0a56321b48642da8138d9f5c76ac504:boost/spkgbuild
 f:3fb4e49b3cdcfd582f66518f6f1a1060:boost/override
 f:782559ddc05a71495dd0286b92312ad7:conky/.pkgfiles
-f:66f95bf711286aedde53c0eefc9f4ce0:conky/CHANGELOG
-f:3d0e36d8189f24c88bddbeedddc1241c:conky/spkgbuild
+f:b8eed8d97eb614bf137243097cbca9e1:conky/CHANGELOG
+f:6dbfbcb0eb74b402d68235ad739a7a4a:conky/spkgbuild
 f:b4ae39ab442b1a522f20c67efb2ccf9f:elinks/spkgbuild
 f:d42500b7a326a548fa0b631fb5b280a3:elinks/override
 f:c580262d1326041f784374916b4801b0:simplescreenrecorder/CHANGELOG

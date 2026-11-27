@@ -2,7 +2,7 @@
 # description : GLib libraries and GObject Introspection
 name=glib
 # GLib and GObject Introspection are updated together in this package.
-version=2.90.1+1.86.0
+version=2.90.2+1.86.0
 release=2
 _glib_version=${version%%+*}
 _gi_version=${version##*+}

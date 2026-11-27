@@ -35,9 +35,9 @@ f:5808f91768336b5955b5dfe2defa4b47:veracrypt/veracrypt.desktop
 f:e52ede116b005c6519db81c23ad3af2c:veracrypt/spkgbuild
 f:210b0e70cbe6645148e668bf611413b6:veracrypt/override
 f:245bc9b7b3c504d8962e417a2eb8d56d:firefox-bin/.pkgfiles
-f:6f9185599e21836ee3d0b1e0e545f179:firefox-bin/CHANGELOG
+f:c8ced4df3d1e2ad000c7cac6794f674f:firefox-bin/CHANGELOG
 f:4752384683559bd2f99eeffadd562fd8:firefox-bin/firefox.sh
-f:1be79d9e944b598803c7f3c7853e70fa:firefox-bin/spkgbuild
+f:2b6712ee61f24bfb0c6346c6ed1aac02:firefox-bin/spkgbuild
 f:7c2feb0ad1c87bbfc0af9bab6a71745e:firefox-bin/test.sh
 f:264f0a8917320c778e970b9fde7ebc32:firefox-bin/override
 f:7f63cf72653d9333387424148067a4a9:firefox-bin/firefox.desktop
@@ -88,8 +88,8 @@ f:0cd132121d49f59b13b6c0e31f356950:virtualbox-extpack/spkgbuild
 f:c4f42c28ce27f98b4dc9b32e21657882:virtualbox-extpack/override
 f:3b71d64afb426ccbefd0d66d06279c4a:virtualbox-extpack/pre-install.sh
 f:76e5fb76ed1bb9e020a82fe5cbe3ba97:discord/.pkgfiles
-f:5bcb322dfe445e87e249f19456eb7d9b:discord/CHANGELOG
-f:1f041d6303e51f6f54e1ca6962333eaf:discord/spkgbuild
+f:e6ed612c6d2e1ae90cf05df89795cc26:discord/CHANGELOG
+f:e027c96d58d08a029ce926d5f9892ce9:discord/spkgbuild
 f:9a4184349c8a0766d970edd695eebc78:discord/override
 f:05c708d759c1059ebec598477e4bf2b3:virtualbox-guest-utils/CHANGELOG
 f:9710904e9e86ec3da272cbe9fe48dbf8:virtualbox-guest-utils/60-vboxguest.rules
@@ -97,9 +97,9 @@ f:9157026032cfa499d823b55b258c8fce:virtualbox-guest-utils/spkgbuild
 f:22ddedc71b0342aca887499b5789c416:virtualbox-guest-utils/override
 f:119f437d4911f637fa586b5eda9aab29:virtualbox-guest-utils/pre-install.sh
 f:89fb28a484e7f5126839e83f10de377a:firefox/pre-upgrade.sh
-f:b6df03a1005f6ac5b878eb56664bcba8:firefox/CHANGELOG
+f:c0b80329d92b963b99bf9f8d366e7214:firefox/CHANGELOG
 f:37db9ec3cc336d3a09ede8becec2ad69:firefox/fix-ftbfs-newer-cbindgen.patch
-f:dd3ee0b3ee8d54546da0b38c516a9880:firefox/spkgbuild
+f:53931772b9adb2d899648410519f1394:firefox/spkgbuild
 f:a4a0f7c9c1e3424463670d031976aa67:firefox/override
 f:971c77648caea312fca2d9340c4382a6:firefox/firefox.desktop
 f:75aae82b7b33d79bcec25c8783f3ed5c:spotify/spotify
@@ -148,9 +148,9 @@ f:4b1645c2d3f85426435736c60f928375:wps-office/override
 f:229dc3bd6deae0753349dcb8c4e12ebe:pandoc-bin/CHANGELOG
 f:d5d849ae0451b3328acfcf5ba5fd6c5c:pandoc-bin/spkgbuild
 f:893d63e191bf450550d28cdb864170f0:vscode-bin/visual-studio-code-url-handler.desktop
-f:671180e767ea8933f5475d699de3325b:vscode-bin/CHANGELOG
+f:450555404c13e080e6aac82878f340fe:vscode-bin/CHANGELOG
 f:afe04352e57ca51932e0a1b8eb32e25b:vscode-bin/visual-studio-code.desktop
-f:43d0b10ec8e18ef3ac32408e0f14ddd5:vscode-bin/spkgbuild
+f:219525118456e8835ba51f3fe1d32e1a:vscode-bin/spkgbuild
 f:93babcf9e9fc18636c2ddcff63a99440:vscode-bin/override
 f:2965d6561c4c4473e1e392a20f5e61cb:icecat-bin/icecat.desktop
 f:5c498b31bd52c1f1d92c8d7da27c5d6f:icecat-bin/icecat-safe.desktop

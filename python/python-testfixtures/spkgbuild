@@ -2,7 +2,7 @@
 # depends : python
 
 name=python-testfixtures
-version=12.4.0
+version=12.5.0
 release=1
 
 _name=${name#python-}

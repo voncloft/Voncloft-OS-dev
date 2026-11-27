@@ -217,3 +217,13 @@ Release=3
 
 Synopsis:
 Upgraded from version 8.1.0 to version 10.5.0
+
+----------------------------------------------------------------
+
+Date: Thu Nov 26 03:43:58 EST 2026
+
+Version=10.6.0
+Release=3
+
+Synopsis:
+Changed from version 10.5.0 to version 10.6.0

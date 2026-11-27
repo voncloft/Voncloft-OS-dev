@@ -124,8 +124,8 @@ f:0812bc025eae1f2232f62075fcc9f0a9:dav1d/spkgbuild
 f:92d50732a168d922ef043cdbb3817765:dav1d/override
 f:8e8020262a5d505f7dfccb369161bcff:clementine/.pkgfiles
 f:36cf90df14881e995475388f9bee8a1d:clementine/clementine-bundled-mygpo.patch
-f:5f2f2061fe51f2e9f32a7b212553fd28:clementine/CHANGELOG
-f:fa8deff052ee68611b444639f1218830:clementine/spkgbuild
+f:a33b6696c4f8616ca4ef5f818b9c670a:clementine/CHANGELOG
+f:85e8b38feac44bfba6c7096ee9bfc71a:clementine/spkgbuild
 f:02e452e1814023db87f41ef14d10c4d9:clementine/override
 f:151c397d2ead9121574bb3921ba332c1:kodi/CHANGELOG
 f:235dbf9617a5fc16a6f5047aa34080f0:kodi/spkgbuild

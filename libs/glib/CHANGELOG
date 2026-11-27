@@ -16,3 +16,13 @@ Release=4
 
 Synopsis:
 Upgraded from version 2.84.3 to version 2.90.1
+
+----------------------------------------------------------------
+
+Date: Thu Nov 26 03:43:58 EST 2026
+
+Version=2.90.2+1.86.0
+Release=2
+
+Synopsis:
+Changed from version 2.90.1+1.86.0 to version 2.90.2+1.86.0
