@@ -144,6 +144,24 @@ def terminal(label, root, repo, flags, action):
         assert sent_scan_q and sent_report_action
     return output
 
+# Directory names containing updater filenames must remain byte-for-byte intact.
+for name in ['perl-sub-override', 'spkgbuild-helper', 'override-tools']:
+    root, repo = fixture('filename-in-package')
+    package = repo / 'core' / name
+    package.mkdir()
+    (package / 'spkgbuild').write_text(f'name={name}\nversion=1\nrelease=1\n'
+        'source="https://example.invalid/$name-$version.tar.xz"\nbuild() { :; }\n')
+    (package / 'override').write_text('source="file://$repo_root/upstream-listing"\n'
+        'url=$source\nget_generic() { uversion=2; }\n')
+    p, _ = run('scan', root, repo, ['-s', '-st', '-t', '-n'], f'core/{name}\n')
+    assert p.returncode == 0, p.stderr
+    queue = (repo / 'test_updates.sh').read_text()
+    assert f'core/{name}/spkgbuild' in queue, queue
+    p, _ = run('apply', root, repo, ['-a'])
+    assert p.returncode == 0 and version(repo, name) == '2', (p.stdout, p.stderr)
+    assert events(repo) == [f'apply:core/{name}/spkgbuild'], events(repo)
+    passed(f'queued scan/apply preserves package directory {name}')
+
 flags = ['--all', '-st', '-t', '-n', '-a']
 root, repo = fixture('combined')
 (repo / 'test_updates.sh').write_text(f'touch "{repo}/stale-applied"\n')

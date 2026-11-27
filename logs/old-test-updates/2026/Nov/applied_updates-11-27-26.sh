@@ -56,3 +56,21 @@ sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.0.0\| python/python-kai
 bash /usr/libexec/update-repo/changelog python/python-kaitaistruct/spkgbuild Changed\ from\ version\ 0.12\ to\ version\ 2.0.0
 sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=5.20.0\| python/python-keystoneauth1/spkgbuild # update-repo-version 5.19.0 5.20.0
 bash /usr/libexec/update-repo/changelog python/python-keystoneauth1/spkgbuild Changed\ from\ version\ 5.19.0\ to\ version\ 5.20.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.26.0\| python/python-openstacksdk/spkgbuild # update-repo-version 4.25.0 4.26.0
+bash /usr/libexec/update-repo/changelog python/python-openstacksdk/spkgbuild Changed\ from\ version\ 4.25.0\ to\ version\ 4.26.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=4.7.1\| python/python-osc-lib/spkgbuild # update-repo-version 4.7.0 4.7.1
+bash /usr/libexec/update-repo/changelog python/python-osc-lib/spkgbuild Changed\ from\ version\ 4.7.0\ to\ version\ 4.7.1
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.12\| perl/perl-sub-override/spkgbuild # update-repo-version 0.09 0.12
+bash /usr/libexec/update-repo/changelog perl/perl-sub-override/spkgbuild Changed\ from\ version\ 0.09\ to\ version\ 0.12
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=10.18.3\| python/python-pikepdf/spkgbuild # update-repo-version 10.18.2 10.18.3
+bash /usr/libexec/update-repo/changelog python/python-pikepdf/spkgbuild Changed\ from\ version\ 10.18.2\ to\ version\ 10.18.3
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=2.12.2\| python/python-pyotp/spkgbuild # update-repo-version 2.12.1 2.12.2
+bash /usr/libexec/update-repo/changelog python/python-pyotp/spkgbuild Changed\ from\ version\ 2.12.1\ to\ version\ 2.12.2
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=3.2.0\| python/python-semver/spkgbuild # update-repo-version 3.1.2 3.2.0
+bash /usr/libexec/update-repo/changelog python/python-semver/spkgbuild Changed\ from\ version\ 3.1.2\ to\ version\ 3.2.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.14.0\| python/python-xcffib/spkgbuild # update-repo-version 1.13.0 1.14.0
+bash /usr/libexec/update-repo/changelog python/python-xcffib/spkgbuild Changed\ from\ version\ 1.13.0\ to\ version\ 1.14.0
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=0.9.46\| ruby-gems/ruby-yard/spkgbuild # update-repo-version 0.9.45 0.9.46
+bash /usr/libexec/update-repo/changelog ruby-gems/ruby-yard/spkgbuild Changed\ from\ version\ 0.9.45\ to\ version\ 0.9.46
+sed -i -e s\|\^\[\[:space:\]\]\*version=.\*\$\|version=1.0.git20261126155719.gf70e151aa46ec795a8b2eaddcaab4c4e9f3f3d1c\| server/blacklist-youtubeads/spkgbuild # update-repo-version 1.0.git20261123180003.gae6c69798e9549faa42ddea86a100f25ba55eefc 1.0.git20261126155719.gf70e151aa46ec795a8b2eaddcaab4c4e9f3f3d1c
+bash /usr/libexec/update-repo/changelog server/blacklist-youtubeads/spkgbuild Changed\ from\ version\ 1.0.git20261123180003.gae6c69798e9549faa42ddea86a100f25ba55eefc\ to\ version\ 1.0.git20261126155719.gf70e151aa46ec795a8b2eaddcaab4c4e9f3f3d1c

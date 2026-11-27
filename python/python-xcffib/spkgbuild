@@ -2,7 +2,7 @@
 # depends : python-six python-cffi libxcb
 
 name=python-xcffib
-version=1.13.0
+version=1.14.0
 release=1
 
 _name=${name#python-}

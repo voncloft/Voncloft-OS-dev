@@ -3,7 +3,7 @@
 
 _name=yard
 name=ruby-yard
-version=0.9.45
+version=0.9.46
 release=1
 options="!emptydirs"
 source="https://rubygems.org/downloads/$_name-$version.gem"

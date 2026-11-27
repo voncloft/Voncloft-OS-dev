@@ -1625,8 +1625,8 @@ f:8383e0de52bf7efc15a178ae20a3a0ae:perl-return-value/override
 f:96444a108dd0a6ce768bf2344b9dc7a0:perl-image-sane/CHANGELOG
 f:d018a0eb8a5489ab0611bac62dc07f82:perl-image-sane/spkgbuild
 f:f3183d978fefa861b50f1206def8f108:perl-image-sane/override
-f:063ad717ef086e0be6695a38c9de2b17:perl-sub-override/CHANGELOG
-f:fe6f2f04942ed00f1be835ef823ad3ee:perl-sub-override/spkgbuild
+f:babfca69378accd81c2a58f6e10638e3:perl-sub-override/CHANGELOG
+f:7ad361784aaf0205ff3bb8c013c024f2:perl-sub-override/spkgbuild
 f:09fb7d1c36b24f6afaf6b0cc244995d0:perl-sub-override/override
 f:b82824142e5f2c4955be535a57dfd1d5:perl-app-cli/CHANGELOG
 f:f34cede8f7133fe95477fa830f455c3d:perl-app-cli/spkgbuild

@@ -682,7 +682,7 @@ get_source_listing_version()
 }
 check_manual_upd()
 {
-	update=$(echo $ppath | sed "s/spkgbuild/override/g")
+	update="${ppath%/*}/override"
 	if [ -f "$update" ];then
 		return 1
 	else
@@ -938,7 +938,7 @@ grep_retry()
 perform_override()
 {
         get_url $check_override
-	fix_spkgbuild=$(echo $ppath | sed 's/override/spkgbuild/g')
+	fix_spkgbuild="${ppath%/*}/spkgbuild"
         echo -e "${YELLOW}PPath:     $fix_spkgbuild${NC}"
         echo -e "${YELLOW}URL:       $url${NC}"
         echo -e "${GREEN}Filename:  $name${NC}"
@@ -947,7 +947,7 @@ perform_override()
         alter_per_url
         echo -e "${PINK}New URL:   $url${NC}"
 	cmd_torun
-        ppath=$(echo $ppath | sed 's/override/spkgbuild/g')
+        ppath="${ppath%/*}/spkgbuild"
         echo -e "${PURPLE}Command:   $cmd${NC}"
         echo -e "${BLUE}Upgraded:  $uversion${NC}"
 }
@@ -1118,7 +1118,7 @@ create_table()
 		echo -e '<table border = "2" width="600px"><caption>'$title $(date +"%m-%d-%y") $(date "+%H")'</caption>' >> "$table_log"
 		echo '<tr><td align=center>Package Path</td><td align=center>Old Version</td><td align=center>New Version</td><td align=center>Changelog</td><td align=center>spkgbuild</td></tr>' >> "$table_log"
 	fi
-	spkg_dir=$(echo $1 | sed "s/\/spkgbuild//g")
+	spkg_dir="${1%/spkgbuild}"
 	changelog="http://voncloft.dnsfor.me/repository/REPOS/$spkg_dir/CHANGELOG"
         echo '<tr><td align=center>'$1'</td><td align=center>'$2'</td><td align=center>'$3'</td><td align=center><a href='$changelog'>Changelog</a></td><td align=center><a href=http://voncloft.dnsfor.me/repository/REPOS/'$1'>spkgbuild</a></td></tr>' >> "$table_log"
 }

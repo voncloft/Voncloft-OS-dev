@@ -2,7 +2,7 @@
 # depends : dnsmasq
 
 name=blacklist-youtubeads
-version=1.0.git20261123180003.gae6c69798e9549faa42ddea86a100f25ba55eefc
+version=1.0.git20261126155719.gf70e151aa46ec795a8b2eaddcaab4c4e9f3f3d1c
 release=2
 
 _commit=${version##*.g}

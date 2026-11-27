@@ -1566,8 +1566,8 @@ f:f46a1d2629c45420753f002ddd136c5c:python-keras-applications/CHANGELOG
 f:0aa4daa596a4ce7de18e63296c11a5e6:python-keras-applications/spkgbuild
 f:2ab9c749a5e31f01b54907e11f9e4daa:python-ipy/CHANGELOG
 f:1942eec9d242ec55393d91c6cc09f5d1:python-ipy/spkgbuild
-f:296998a36e18a8f7a5ed795ed62689e5:python-pyotp/CHANGELOG
-f:8868bbaef41dc7810331057cf2b1e741:python-pyotp/spkgbuild
+f:3cc8f7e3aee234d94992d80fda7ea8bd:python-pyotp/CHANGELOG
+f:10ec660873e71e5bffce856fb7bd8d9e:python-pyotp/spkgbuild
 f:ab6734291e1085ec903397a46f0735d6:python-pyotp/override
 f:6b10f348f66502285c2ff7f95ef530bc:python-qiniu/CHANGELOG
 f:475d8f69563ef0e2a515b12988284df7:python-qiniu/spkgbuild
@@ -1609,8 +1609,8 @@ f:9ae229c58d99d034b98f3f2031364ad9:python-packaging/.pkgfiles
 f:00f87fe92184422b00d0918d080c0c30:python-packaging/CHANGELOG
 f:49029df9e81e34279209b5f467c763b1:python-packaging/spkgbuild
 f:83b066f6298e02afccb8cc23c0c30db0:python-packaging/override
-f:9b9a949bf4870430676b9f5f333996a8:python-xcffib/CHANGELOG
-f:62c90f1cfa783402ef58a01cc07cba99:python-xcffib/spkgbuild
+f:ddbec2cb5c28ac2658bc7bf08ed5bcd7:python-xcffib/CHANGELOG
+f:4f8a7b177ee1c2a8ce03e4af687f8c47:python-xcffib/spkgbuild
 f:eebb8eca16201add41b3afd39d0b8fef:python-oslo-utils/CHANGELOG
 f:2ec853d948de30b8c843ef3d1464c4ea:python-oslo-utils/spkgbuild
 f:d8663862117111e6fce01bfddfb36f9d:python-crc16/CHANGELOG
@@ -2628,8 +2628,8 @@ f:9181672bbc402332e196fb096f3122b1:python-magic/spkgbuild
 f:340914eece39e820b9c66a02fb92cf4b:python-magic/override
 f:de9f7d7bac9489a7cfebc38ef3d479d6:python-btchip/CHANGELOG
 f:732107bc92fb6661ba646fd4a5979302:python-btchip/spkgbuild
-f:5b7e4b488cdc2adbf2c29ccb37c2f4d3:python-semver/CHANGELOG
-f:e2e779d110c7ca4fb703171f8911b7cb:python-semver/spkgbuild
+f:82c11631d54601c09a64575404e3ef37:python-semver/CHANGELOG
+f:2580cf4834131c77483f3b982092c0d2:python-semver/spkgbuild
 f:c3d142d25bcbcfec2ec1b4059126859b:python-dephell-pythons/CHANGELOG
 f:deb050f9be105dbfa724d57289ada097:python-dephell-pythons/spkgbuild
 f:64a3e6284a51c946b429486508d5cde8:python-dephell-pythons/override
@@ -3163,8 +3163,8 @@ f:620b75984d769908fe8b608ad3bc371c:python-testing.postgresql/CHANGELOG
 f:ba2ec9945e4015a512c4e1ad0afbcc20:python-testing.postgresql/spkgbuild
 f:b4f2d2e1e7ccaa8602f05e1da97d4b75:python-service_identity/CHANGELOG
 f:e6b479b47ff35100ba15a230024a6b69:python-service_identity/spkgbuild
-f:2fc7155fcd01b58338db15cb17519dfe:python-osc-lib/CHANGELOG
-f:3f0bb455d800e43b409af1b987fe6f22:python-osc-lib/spkgbuild
+f:d77c4c3496794df7ddc19cf103a3082c:python-osc-lib/CHANGELOG
+f:0c70d27e2e7f4398bafe92dbefd614b3:python-osc-lib/spkgbuild
 f:c6b5d205d9e2db4699b56ababd71496e:python-asynctest/CHANGELOG
 f:5129b5a17d266fcc97a4a4176804c5ba:python-asynctest/spkgbuild
 f:94113e035e192296fc4f5a41dad70e00:python-pysolr/CHANGELOG
@@ -3525,8 +3525,8 @@ f:f3dea90ecbf941a893ded0dce948c737:pycairo/pre-upgrade.sh
 f:f635561426658f8cf846fbedd799a935:pycairo/CHANGELOG
 f:ed937361aa2e80cb13a758c3101ae653:pycairo/spkgbuild
 f:1a974f2f8a9a49b8523e1e6b0f3aa81d:pycairo/override
-f:c7253aa075bdd22f5a86502d025eb081:python-openstacksdk/CHANGELOG
-f:40bcd82eeeece2c3617fa204615797b0:python-openstacksdk/spkgbuild
+f:741a3036f5cf3ad0b083b5f217438574:python-openstacksdk/CHANGELOG
+f:77fe42db67e6a8f18914893559db2906:python-openstacksdk/spkgbuild
 f:5e13f21392e430f1b52d5dd2c0853e29:python-click-log/CHANGELOG
 f:e64aad4072d7f0ac8b7a1bea965196b2:python-click-log/spkgbuild
 f:45b5f762338360e276ab0c39d44f8f5e:python-flask-socketio/CHANGELOG
@@ -3610,8 +3610,8 @@ f:64e02627ce44ea82c77e11bb9075f227:python-pytest-xprocess/CHANGELOG
 f:7138157ce1209e2fea1b5b943933fdbb:python-pytest-xprocess/spkgbuild
 f:8207f1302e3f9d56d01d45bb113daaaa:python-signedjson/CHANGELOG
 f:7ca701047fdd1b44e46a35dd20b8db05:python-signedjson/spkgbuild
-f:37d8074288dfa69bb89c7bae20fa5fcd:python-pikepdf/CHANGELOG
-f:fe53eb2c1a5e512499cf5614343d6397:python-pikepdf/spkgbuild
+f:a5c616f7c44d86e1a46924206fe9b78c:python-pikepdf/CHANGELOG
+f:de363de94d1d6f097569cd385825f3b1:python-pikepdf/spkgbuild
 f:8673de2c204224916051a526738481b8:python-mocket/CHANGELOG
 f:676dc7a228ff77c362b791ba6211296a:python-mocket/spkgbuild
 f:9be56965b874de9f62ecea1f8f6ed946:python-flake8-typing-imports/CHANGELOG
